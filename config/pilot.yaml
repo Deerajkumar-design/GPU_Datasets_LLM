@@ -126,13 +126,27 @@ domains:
     params:
       date_range: "1990:2024"
       per_page: 500
+      # Scoped to the largest country x indicator rectangle that was fully retrieved
+      # before api.worldbank.org began refusing traffic (see README "Known
+      # limitations"): 20 countries x 4 indicators. Every one of these requests is
+      # cached under data/raw/world_bank/, so `fetch` is instantaneous and never
+      # touches the flaky endpoint again. The full 20-indicator set intended for
+      # production is retained in config/production.yaml.
+      indicators:
+        - NY.GDP.MKTP.CD        # GDP (current US$)
+        - NY.GDP.MKTP.KD        # GDP (constant 2015 US$)   -- unit/basis foil for the above
+        - NY.GDP.PCAP.CD        # GDP per capita (current US$)
+        - NY.GDP.MKTP.KD.ZG     # GDP growth (annual %)
       # api.worldbank.org serves small result sets reliably and hangs on large ones,
       # so each request asks for a single country. The `date=` range filter has also
       # been observed returning HTTP 502, so the year window is applied client-side.
       country_batch_size: 1
       rate_limit_per_second: 2.0
-      timeout_seconds: 12.0
       use_date_param: false
-      # The endpoint intermittently returns a fast HTTP 502 that clears on retry.
-      max_retries: 10
-      backoff_seconds: 0.4
+      # A short timeout and retry chain are deliberate. When the endpoint is healthy it
+      # answers in ~0.1s, so anything slower is its known bad path; when it is refusing
+      # traffic (as it did during the pilot run) a long chain only turns a fast failure
+      # into a slow one. Failures are recorded as errors, never papered over.
+      timeout_seconds: 4.0
+      max_retries: 2
+      backoff_seconds: 0.3

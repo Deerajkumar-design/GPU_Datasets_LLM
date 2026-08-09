@@ -165,7 +165,13 @@ class WorldBankAdapter(SourceAdapter):
     def normalize(self) -> List[NormalizedRecord]:
         out: List[NormalizedRecord] = []
         seen: set[str] = set()
-        window = self._parse_range(self._config()["date_range"])
+        conf = self._config()
+        window = self._parse_range(conf["date_range"])
+        # The raw cache may hold payloads from an earlier run with a wider scope. Filter
+        # to the configured indicators and countries so the normalized layer is a pure
+        # function of (raw cache + config) and the dataset stays reproducible.
+        want_ind = set(conf["indicators"])
+        want_ctry = set(conf["countries"])
         for envelope, path in self.iter_raw_payloads():
             payload = envelope.get("payload")
             if not isinstance(payload, list) or len(payload) < 2 or not payload[1]:
@@ -173,6 +179,8 @@ class WorldBankAdapter(SourceAdapter):
             retrieved_at = envelope.get("retrieved_at")
             for idx, obs in enumerate(payload[1]):
                 rec = self._normalize_obs(obs, path, idx, retrieved_at)
+                if rec is not None and (rec.concept not in want_ind or rec.entity_id not in want_ctry):
+                    continue
                 if rec is not None and window is not None and rec.period:
                     try:
                         if not (window[0] <= int(rec.period) <= window[1]):

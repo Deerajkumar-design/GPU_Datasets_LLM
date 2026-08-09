@@ -109,15 +109,21 @@ class DistractorSelector:
         for dtype, items in buckets.items():
             items.sort(key=lambda c: c.record.record_id)
             rng.shuffle(items)
-            # Within the strongest tiers, put explicitly named foils first: the question
-            # text already references them, so they must be present even at 4K.
+            # Within each tier, put explicitly named foils first: the question text
+            # already references them by name, so they must be present even at 4K or the
+            # question would describe a context that does not exist.
+            def _foil_key(entity_id, concept, period):
+                # Periods are None for records with no period (FDA products, trial arms);
+                # both sides are normalized so those foils are not silently missed.
+                return (entity_id, concept, period or None)
+
             explicit = {
-                (c.get("entity_id"), c.get("concept"), c.get("period"))
+                _foil_key(c.get("entity_id"), c.get("concept"), c.get("period"))
                 for c in (family.target_conditions.get("explicit_foils") or [])
             }
             if explicit:
-                items.sort(key=lambda c: (c.record.entity_id, c.record.concept, c.record.period or "")
-                           not in explicit)
+                items.sort(key=lambda c: _foil_key(
+                    c.record.entity_id, c.record.concept, c.record.period) not in explicit)
 
         return self._interleave(buckets, limit)
 

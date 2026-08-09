@@ -160,3 +160,28 @@ def test_selector_interleaves_tiers_rather_than_draining_one(cfg):
     head = DistractorSelector(cfg, pool).build(_family(pool))[:12]
     kinds = {c.distractor_type for c in head}
     assert len(kinds) >= 3, f"expected a mix of tiers early, got {kinds}"
+
+
+def test_explicitly_named_foils_are_placed_first(cfg):
+    """A question that names a competing record by value must actually contain it.
+
+    Foils with no period (FDA products, trial arms) are the case an earlier key
+    mismatch silently dropped: the condition carried ``None`` while the record was
+    compared as ``""``.
+    """
+    target = rec("TGT", period=None)
+    foil = rec("FOIL", period=None, entity="E1", concept="c2")
+    filler = [rec(f"Z{i}", entity=f"E{i + 5}", concept="c9", period=None, value=1e6 + i)
+              for i in range(40)]
+    pool = RecordPool([target, foil] + filler)
+    fam = _family(pool, gold_evidence_ids=["TGT"],
+                  target_conditions={
+                      "records": [{"entity_id": "E1", "concept": "c1", "period": None,
+                                   "unit": "USD", "version": "v1"}],
+                      "explicit_foils": [{"entity_id": "E1", "concept": "c2", "period": None}],
+                  })
+    ordered = DistractorSelector(cfg, pool).build(fam)
+    same_tier = [c for c in ordered if c.distractor_type is
+                 next(x.distractor_type for x in ordered if x.record.record_id == "FOIL")]
+    assert same_tier[0].record.record_id == "FOIL", \
+        "a foil named in the question must lead its tier so it survives the shortest context"

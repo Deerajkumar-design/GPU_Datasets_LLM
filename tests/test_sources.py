@@ -118,6 +118,12 @@ def test_sec_adapter_rejects_placeholder_user_agent(cfg):
 
 def test_malformed_records_are_skipped_not_guessed_at(cfg, data_root):
     """Rows missing the fields needed to re-verify them must be dropped, not imputed."""
+    # Declare the synthetic indicator/country in scope; the adapter filters the raw
+    # cache to the configured scope, so an undeclared indicator would be dropped for
+    # that reason instead of for being malformed, and the test would prove nothing.
+    cfg.domains[Domain.WORLD_BANK].params.update(
+        {"indicators": ["X.Y"], "countries": ["USA"], "date_range": "1960:2024"}
+    )
     path = data_root / "raw" / "world_bank" / "malformed.json"
     path.write_text(json.dumps({
         "request_url": "https://api.worldbank.org/v2/test",

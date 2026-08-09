@@ -314,10 +314,29 @@ form: 10-K
 
 ## 12. Known limitations
 
-1. **World Bank API instability.** `api.worldbank.org` returns HTTP 502 for `date=` range
-   queries and hangs on large result sets. The adapter works around both (one country per
-   request, year window applied client-side), but retrieval is slow and the World Bank
-   pool is the thinnest of the four. See the pilot report for what this cost.
+1. **World Bank API instability — the one real source blocker in this pilot.**
+   `api.worldbank.org` behaved badly throughout the run, in three distinct ways:
+   * `date=YYYY:YYYY` range queries return **HTTP 502** while the same query without the
+     filter returns 200 — so the year window is applied client-side instead;
+   * large result sets **hang** rather than erroring (1 country × 66 years is fine,
+     5 countries times out) — so each request asks for a single country;
+   * under sustained use the endpoint starts refusing traffic entirely, returning fast
+     502s to everything.
+
+   The adapter works around the first two. The third is not something a client can fix.
+   The pilot therefore uses the largest fully-retrieved rectangle — **4 of the 20 intended
+   indicators × 20 countries**, 1990–2024. That is enough to exercise every World Bank
+   question type (the four indicators include the `NY.GDP.MKTP.CD` / `NY.GDP.MKTP.KD`
+   current-vs-constant pair that drives unit binding, and 80 genuine null observations
+   that drive abstention), but it is the thinnest of the four domain pools and it costs
+   the cross-indicator per-capita template, which needs `SP.POP.TOTL`.
+
+   `config/pilot.yaml` is scoped to exactly that rectangle, and the World Bank
+   `normalize()` filters the raw cache to the configured indicators and countries — so
+   the normalized layer is a pure function of (cache + config) and re-running `fetch`
+   costs nothing. `config/production.yaml` retains the full intended 20-indicator set.
+   The other three sources (SEC, openFDA, ClinicalTrials.gov) were fully available and
+   fast: 259,528 / 960 / 2,400 raw records in under 11 seconds combined.
 2. **Distractor pool depth bounds the maximum length.** A 128K context needs on the order
    of 2,000 authentic records. Families whose domain pool is shallow legitimately produce
    fewer variants; these are recorded, not padded.
