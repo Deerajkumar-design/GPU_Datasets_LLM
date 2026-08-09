@@ -187,3 +187,41 @@ def test_unanswerable_families_are_genuinely_unanswerable(built):
             if r.value is not None
         ]
         assert not matches, f"{fam.question_family_id} is answerable after all: {matches[:2]}"
+
+
+def test_content_hash_is_stable_across_runs(cfg):
+    """Reruns must reproduce content exactly, timestamps aside.
+
+    Raw file hashes cannot express this: every run stamps a fresh `generated_at`, so a
+    file-level comparison always differs even when questions, gold answers and contexts
+    are identical. The content hash strips wall-clock fields and is the check that
+    actually means something.
+    """
+    from longctx_dataset.storage.io import sha256_jsonl_content
+
+    stage_normalize(cfg, log=lambda *_: None)
+    stage_generate_questions(cfg, log=lambda *_: None)
+    stage_build_contexts(cfg, log=lambda *_: None)
+    first = (sha256_jsonl_content(families_path(cfg)), sha256_jsonl_content(instances_path(cfg)))
+
+    stage_generate_questions(cfg, log=lambda *_: None)
+    stage_build_contexts(cfg, log=lambda *_: None)
+    second = (sha256_jsonl_content(families_path(cfg)), sha256_jsonl_content(instances_path(cfg)))
+
+    assert first == second, "same seed + config + raw cache must reproduce identical content"
+    assert all(h for h in first)
+
+
+def test_content_hash_changes_with_the_seed(cfg):
+    from longctx_dataset.storage.io import sha256_jsonl_content
+
+    stage_normalize(cfg, log=lambda *_: None)
+    stage_generate_questions(cfg, log=lambda *_: None)
+    stage_build_contexts(cfg, log=lambda *_: None)
+    first = sha256_jsonl_content(instances_path(cfg))
+
+    cfg.seed += 4242
+    cfg.config_hash = cfg.compute_hash()
+    stage_generate_questions(cfg, log=lambda *_: None)
+    stage_build_contexts(cfg, log=lambda *_: None)
+    assert sha256_jsonl_content(instances_path(cfg)) != first

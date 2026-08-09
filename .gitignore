@@ -23,3 +23,6 @@ data/normalized/**
 # Pilot contexts are large (128K-token strings).
 data/pilot/instances.jsonl
 data/pilot/*.parquet
+
+# Generated JSON Schemas are derived from schemas.py; regenerate with `export-schemas`.
+data/schemas/

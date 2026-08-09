@@ -124,7 +124,11 @@ domains:
       ENTITY_UNIT_BINDING: 0.15
       UNANSWERABLE: 0.20
     params:
-      date_range: "1990:2024"
+      # The full span the cached payloads cover. A wider window is strictly better here:
+      # it deepens the distractor pool for the 128K contexts, and the genuine null
+      # observations that make unanswerable questions authentic are concentrated in the
+      # earlier decades, where World Bank coverage of some countries begins later.
+      date_range: "1960:2024"
       per_page: 500
       # Scoped to the largest country x indicator rectangle that was fully retrieved
       # before api.worldbank.org began refusing traffic (see README "Known

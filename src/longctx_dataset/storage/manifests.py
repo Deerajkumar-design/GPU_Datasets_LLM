@@ -71,6 +71,11 @@ class DatasetManifest(BaseModel):
     platform: str = Field(default_factory=platform.platform)
 
     counts: Dict[str, int] = Field(default_factory=dict)
+    content_sha256: Dict[str, Optional[str]] = Field(
+        default_factory=dict,
+        description="Per-output hash of content with wall-clock fields removed. This is "
+        "the hash to compare when checking that a rerun reproduced the dataset.",
+    )
     files: List[FileEntry] = Field(default_factory=list)
     source_retrievals: List[SourceRetrieval] = Field(default_factory=list)
     stage_timings_seconds: Dict[str, float] = Field(default_factory=dict)

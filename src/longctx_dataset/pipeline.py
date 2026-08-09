@@ -15,7 +15,8 @@ from .config import PipelineConfig, git_commit
 from .normalize.common import RecordPool
 from .schemas import Domain, Instance, NormalizedRecord, QuestionFamily, UnavailableVariant
 from .sources import SourceBlocked, get_adapter
-from .storage.io import iter_models, read_models, write_jsonl, write_json, write_parquet
+from .storage.io import (iter_models, read_models, sha256_jsonl_content, write_jsonl,
+                         write_json, write_parquet)
 from .storage.manifests import DatasetManifest, SourceRetrieval, utc_now
 
 
@@ -292,6 +293,11 @@ def build_manifest(cfg: PipelineConfig, timings: Optional[Dict[str, float]] = No
         counts=counts,
         source_retrievals=load_retrievals(cfg),
         stage_timings_seconds=timings or {},
+        content_sha256={
+            "question_families": sha256_jsonl_content(families_path(cfg)),
+            "instances": sha256_jsonl_content(instances_path(cfg)),
+            "unavailable_variants": sha256_jsonl_content(unavailable_path(cfg)),
+        },
     )
     for p in (families_path(cfg), instances_path(cfg), unavailable_path(cfg)):
         man.add_file(p, root=cfg.data_root.parent if cfg.data_root.parent != Path(".") else None)

@@ -196,12 +196,20 @@ tokenizer means changing the config and re-running `build-contexts` — no code 
 | config hash over the parsed config (not the YAML bytes) | `PipelineConfig.compute_hash()` |
 | git commit, generator + schema version, tokenizer id | `generation_metadata`, manifest |
 | source retrieval timestamps and request URLs | `raw_reference`, `source_provenance` |
-| SHA-256 of every output file | `data/manifests/<name>_manifest.json` |
+| SHA-256 of every output file | `manifest.files[]` |
+| **timestamp-independent content hash** of each output | `manifest.content_sha256` |
 | SHA-256 of every context string and of each gold block | `Instance.context_sha256`, `lineage.gold_block_sha256` |
 
 Sub-seeds are *derived* rather than drawn from one global RNG, so adding or reordering a
 template does not silently change every other template's output. All JSON is written with
-sorted keys, so two runs with the same seed produce byte-identical files.
+sorted keys.
+
+**How to actually check a rerun.** Compare `manifest.content_sha256`, not the file
+hashes. Every run stamps a fresh `generated_at` into `generation_metadata`, so raw file
+hashes always differ even when nothing meaningful changed. The content hash strips
+wall-clock fields and covers everything a rerun must reproduce exactly — questions, gold
+answers, evidence, contexts and their ordering. Verified in this pilot: across two runs
+with the same seed and raw cache, all 192 context strings were byte-identical.
 
 ## 9. Running the pilot
 

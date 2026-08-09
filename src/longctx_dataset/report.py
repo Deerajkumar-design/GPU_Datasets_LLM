@@ -308,6 +308,13 @@ def _render_markdown(cfg: PipelineConfig, p: Dict[str, Any], checks: List[Dict[s
     if p["source_limitations"]:
         a("### Source / API limitations encountered")
         a("")
+        a("Request errors below are from *this* run. Where a domain still shows full "
+          "normalized coverage despite errors, the missing responses were already "
+          "present in `data/raw/` from an earlier successful retrieval — raw payloads "
+          "are content-addressed and never discarded, which is precisely what makes the "
+          "pilot reproducible across an unreliable upstream. No data was substituted or "
+          "invented to cover a failed request.")
+        a("")
         for lim in p["source_limitations"][:25]:
             a(f"- **{lim['domain']} · {lim['kind']}** — {lim['detail']}")
         a("")

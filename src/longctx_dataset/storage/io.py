@@ -88,6 +88,35 @@ def sha256_text(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
+VOLATILE_FIELDS = ("generated_at", "retrieved_at")
+"""Wall-clock fields that legitimately differ between runs of identical inputs."""
+
+
+def _strip_volatile(obj: Any) -> Any:
+    if isinstance(obj, dict):
+        return {k: _strip_volatile(v) for k, v in obj.items() if k not in VOLATILE_FIELDS}
+    if isinstance(obj, list):
+        return [_strip_volatile(v) for v in obj]
+    return obj
+
+
+def sha256_jsonl_content(path: Path) -> Optional[str]:
+    """Hash a JSONL file's *content*, ignoring wall-clock timestamps.
+
+    File hashes alone cannot verify reproducibility, because every run stamps a fresh
+    ``generated_at``. This hash covers everything a rerun with the same seed, config and
+    raw cache must reproduce exactly -- questions, gold answers, contexts, ordering --
+    and nothing that is expected to change.
+    """
+    if not path.exists():
+        return None
+    h = hashlib.sha256()
+    for row in iter_jsonl(path):
+        h.update(json.dumps(_strip_volatile(row), sort_keys=True, ensure_ascii=False).encode("utf-8"))
+        h.update(b"\n")
+    return h.hexdigest()
+
+
 def write_parquet(path: Path, rows: List[Dict[str, Any]], drop_columns: Optional[List[str]] = None) -> bool:
     """Optional Parquet mirror. Returns False when pyarrow/pandas are unavailable."""
     try:
