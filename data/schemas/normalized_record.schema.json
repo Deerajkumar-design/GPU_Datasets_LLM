@@ -1,0 +1,237 @@
+{
+  "$defs": {
+    "Domain": {
+      "description": "Domains with an implemented source adapter.",
+      "enum": [
+        "SEC",
+        "FDA",
+        "CLINICAL_TRIALS",
+        "WORLD_BANK",
+        "EXTENSION"
+      ],
+      "title": "Domain",
+      "type": "string"
+    },
+    "RawReference": {
+      "additionalProperties": false,
+      "description": "Pointer back into the raw layer so any record can be re-verified.",
+      "properties": {
+        "raw_file": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Path (relative to the data root) of the cached raw payload.",
+          "title": "Raw File"
+        },
+        "raw_pointer": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "JSON-pointer-ish path locating the record inside the payload.",
+          "title": "Raw Pointer"
+        },
+        "retrieved_at": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "UTC ISO-8601 timestamp of retrieval.",
+          "title": "Retrieved At"
+        },
+        "source_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "API endpoint or document URL the record was derived from.",
+          "title": "Source Url"
+        }
+      },
+      "title": "RawReference",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "A single atomic fact, in a common envelope shared across every domain.\n\nOne record must be small enough to be rendered into a context as a self-contained\n``<RECORD>`` block, and complete enough that a human can re-verify it from the\nprimary source without consulting anything else.",
+  "properties": {
+    "concept": {
+      "description": "Canonical field/concept key, e.g. 'us-gaap:Revenues'.",
+      "title": "Concept",
+      "type": "string"
+    },
+    "concept_label": {
+      "description": "Human-readable concept name.",
+      "title": "Concept Label",
+      "type": "string"
+    },
+    "domain": {
+      "$ref": "#/$defs/Domain"
+    },
+    "entity_id": {
+      "description": "Canonical source-side entity key (CIK, NCT ID, ISO3, application number).",
+      "title": "Entity Id",
+      "type": "string"
+    },
+    "entity_name": {
+      "title": "Entity Name",
+      "type": "string"
+    },
+    "metadata": {
+      "description": "Source-specific fields preserved verbatim.",
+      "title": "Metadata",
+      "type": "object"
+    },
+    "period": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Canonical period label, e.g. 'FY2024', '2024', '2024-Q3'.",
+      "title": "Period"
+    },
+    "period_end": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Period End"
+    },
+    "period_start": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Period Start"
+    },
+    "raw_reference": {
+      "$ref": "#/$defs/RawReference"
+    },
+    "record_id": {
+      "description": "Globally unique, stable, deterministic ID.",
+      "title": "Record Id",
+      "type": "string"
+    },
+    "record_type": {
+      "description": "Adapter-specific record family, e.g. 'xbrl_fact'.",
+      "title": "Record Type",
+      "type": "string"
+    },
+    "schema_version": {
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "source": {
+      "description": "Concrete source name, e.g. 'SEC_EDGAR_XBRL'.",
+      "title": "Source",
+      "type": "string"
+    },
+    "unit": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Unit string, e.g. 'USD', 'percent', 'mg'.",
+      "title": "Unit"
+    },
+    "value": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "integer"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "The fact value. Numeric where the source is numeric.",
+      "title": "Value"
+    },
+    "value_numeric": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Numeric projection of `value`, when one exists.",
+      "title": "Value Numeric"
+    },
+    "version": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Revision discriminator: accession number, label version, amendment tag.",
+      "title": "Version"
+    }
+  },
+  "required": [
+    "record_id",
+    "domain",
+    "source",
+    "entity_id",
+    "entity_name",
+    "record_type",
+    "concept",
+    "concept_label",
+    "value"
+  ],
+  "title": "NormalizedRecord",
+  "type": "object"
+}

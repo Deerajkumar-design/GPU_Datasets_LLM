@@ -208,9 +208,14 @@ def _pick_examples(families, inst_by_family, n: int) -> List[Dict[str, Any]]:
     for f in families:
         by_type[f.question_type].append(f)
     for qt in EXAMPLE_PREFERENCE:
-        pool = sorted(by_type.get(qt, []), key=lambda f: f.question_family_id)
-        if pool and len(chosen) < n:
-            chosen.append(pool[len(chosen) % len(pool)])
+        candidates = sorted(by_type.get(qt, []), key=lambda f: f.question_family_id)
+        # Prefer a domain not already represented, so the examples span sources as well
+        # as question types.
+        shown_domains = {f.domain for f in chosen}
+        pick = next((f for f in candidates if f.domain not in shown_domains), None) or (
+            candidates[0] if candidates else None)
+        if pick is not None and len(chosen) < n:
+            chosen.append(pick)
 
     out = []
     for fam in chosen:

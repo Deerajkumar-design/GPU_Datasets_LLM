@@ -1,0 +1,639 @@
+{
+  "$defs": {
+    "AnswerType": {
+      "enum": [
+        "NUMERIC",
+        "PERCENT",
+        "INTEGER",
+        "STRING",
+        "DATE",
+        "CATEGORICAL",
+        "INSUFFICIENT_EVIDENCE"
+      ],
+      "title": "AnswerType",
+      "type": "string"
+    },
+    "ContextStats": {
+      "additionalProperties": false,
+      "description": "Measured properties of one built context.",
+      "properties": {
+        "context_length_nominal": {
+          "title": "Context Length Nominal",
+          "type": "integer"
+        },
+        "context_tokens_actual": {
+          "title": "Context Tokens Actual",
+          "type": "integer"
+        },
+        "fill_ratio": {
+          "title": "Fill Ratio",
+          "type": "number"
+        },
+        "n_records_after_target": {
+          "title": "N Records After Target",
+          "type": "integer"
+        },
+        "n_records_before_target": {
+          "title": "N Records Before Target",
+          "type": "integer"
+        },
+        "n_records_total": {
+          "title": "N Records Total",
+          "type": "integer"
+        },
+        "target_evidence_end_token": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Target Evidence End Token"
+        },
+        "target_evidence_start_token": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Target Evidence Start Token"
+        },
+        "target_position_ok": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Target Position Ok"
+        },
+        "target_position_relative": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Target Position Relative"
+        },
+        "target_position_tolerance": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Target Position Tolerance"
+        },
+        "tokenizer_id": {
+          "title": "Tokenizer Id",
+          "type": "string"
+        },
+        "tokenizer_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Tokenizer Version"
+        }
+      },
+      "required": [
+        "context_length_nominal",
+        "context_tokens_actual",
+        "fill_ratio",
+        "tokenizer_id",
+        "n_records_total",
+        "n_records_before_target",
+        "n_records_after_target"
+      ],
+      "title": "ContextStats",
+      "type": "object"
+    },
+    "DistractorRef": {
+      "additionalProperties": false,
+      "description": "One inserted non-gold record, with the reason it was chosen.",
+      "properties": {
+        "distractor_type": {
+          "$ref": "#/$defs/DistractorType"
+        },
+        "position_index": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "0-based index of the record within the rendered context.",
+          "title": "Position Index"
+        },
+        "record_id": {
+          "title": "Record Id",
+          "type": "string"
+        },
+        "relationship_to_target": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "title": "Relationship To Target",
+          "type": "object"
+        },
+        "side": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "'before' or 'after' the gold block.",
+          "title": "Side"
+        }
+      },
+      "required": [
+        "record_id",
+        "distractor_type"
+      ],
+      "title": "DistractorRef",
+      "type": "object"
+    },
+    "DistractorType": {
+      "description": "Why a non-gold record was placed into the context.\n\nThe taxonomy is deliberately about the *relationship to the target*, not about\nsurface form, because that is what makes evidence selection hard.",
+      "enum": [
+        "WRONG_ENTITY",
+        "WRONG_PERIOD",
+        "WRONG_VERSION",
+        "WRONG_FIELD",
+        "WRONG_UNIT",
+        "NEAR_MATCH_VALUE",
+        "OTHER_SAME_DOMAIN"
+      ],
+      "title": "DistractorType",
+      "type": "string"
+    },
+    "Domain": {
+      "description": "Domains with an implemented source adapter.",
+      "enum": [
+        "SEC",
+        "FDA",
+        "CLINICAL_TRIALS",
+        "WORLD_BANK",
+        "EXTENSION"
+      ],
+      "title": "Domain",
+      "type": "string"
+    },
+    "GenerationMetadata": {
+      "additionalProperties": false,
+      "description": "Everything required to reproduce this family bit-for-bit.",
+      "properties": {
+        "config_hash": {
+          "title": "Config Hash",
+          "type": "string"
+        },
+        "generated_at": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Generated At"
+        },
+        "generator_version": {
+          "default": "0.1.0",
+          "title": "Generator Version",
+          "type": "string"
+        },
+        "git_commit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Git Commit"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        },
+        "schema_version": {
+          "default": "1.0.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "seed": {
+          "title": "Seed",
+          "type": "integer"
+        },
+        "template_id": {
+          "title": "Template Id",
+          "type": "string"
+        },
+        "template_version": {
+          "default": "1.0.0",
+          "title": "Template Version",
+          "type": "string"
+        },
+        "tokenizer_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Tokenizer Id"
+        }
+      },
+      "required": [
+        "template_id",
+        "seed",
+        "config_hash"
+      ],
+      "title": "GenerationMetadata",
+      "type": "object"
+    },
+    "QuestionType": {
+      "description": "The five question categories the study distinguishes.",
+      "enum": [
+        "DIRECT_RETRIEVAL",
+        "RETRIEVAL_CALCULATION",
+        "TEMPORAL_VERSION",
+        "ENTITY_UNIT_BINDING",
+        "UNANSWERABLE"
+      ],
+      "title": "QuestionType",
+      "type": "string"
+    },
+    "SourceProvenance": {
+      "additionalProperties": false,
+      "description": "Where the family's data came from, at API-call granularity.",
+      "properties": {
+        "api_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Api Version"
+        },
+        "endpoint": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Endpoint"
+        },
+        "license_note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "License Note"
+        },
+        "record_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Record Ids",
+          "type": "array"
+        },
+        "request_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Request Url"
+        },
+        "retrieved_at": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Retrieved At"
+        },
+        "source": {
+          "title": "Source",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source"
+      ],
+      "title": "SourceProvenance",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "One (question family x context length) row -- what the LLM will eventually see.",
+  "properties": {
+    "answer_type": {
+      "$ref": "#/$defs/AnswerType"
+    },
+    "answer_unit": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Answer Unit"
+    },
+    "answerable": {
+      "title": "Answerable",
+      "type": "boolean"
+    },
+    "context": {
+      "title": "Context",
+      "type": "string"
+    },
+    "context_length_nominal": {
+      "title": "Context Length Nominal",
+      "type": "integer"
+    },
+    "context_record_ids": {
+      "description": "Rendered record IDs in context order. Nesting is verified on this.",
+      "items": {
+        "type": "string"
+      },
+      "title": "Context Record Ids",
+      "type": "array"
+    },
+    "context_sha256": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Context Sha256"
+    },
+    "context_tokens_actual": {
+      "title": "Context Tokens Actual",
+      "type": "integer"
+    },
+    "distractor_counts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "title": "Distractor Counts",
+      "type": "object"
+    },
+    "distractors": {
+      "items": {
+        "$ref": "#/$defs/DistractorRef"
+      },
+      "title": "Distractors",
+      "type": "array"
+    },
+    "domain": {
+      "$ref": "#/$defs/Domain"
+    },
+    "generation_metadata": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/GenerationMetadata"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "gold_answer": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "integer"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Gold Answer"
+    },
+    "gold_answer_normalized": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "integer"
+        },
+        {
+          "type": "string"
+        }
+      ],
+      "title": "Gold Answer Normalized"
+    },
+    "gold_evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Gold Evidence Ids",
+      "type": "array"
+    },
+    "instance_id": {
+      "title": "Instance Id",
+      "type": "string"
+    },
+    "lineage": {
+      "description": "Nesting lineage: the shorter variant this context extends.",
+      "title": "Lineage",
+      "type": "object"
+    },
+    "numeric_tolerance": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Numeric Tolerance"
+    },
+    "question": {
+      "title": "Question",
+      "type": "string"
+    },
+    "question_family_id": {
+      "title": "Question Family Id",
+      "type": "string"
+    },
+    "question_type": {
+      "$ref": "#/$defs/QuestionType"
+    },
+    "schema_version": {
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "source_provenance": {
+      "items": {
+        "$ref": "#/$defs/SourceProvenance"
+      },
+      "title": "Source Provenance",
+      "type": "array"
+    },
+    "stats": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ContextStats"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "target_evidence_end_token": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Target Evidence End Token"
+    },
+    "target_evidence_start_token": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Target Evidence Start Token"
+    },
+    "target_position_relative": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Target Position Relative"
+    },
+    "tokenizer": {
+      "title": "Tokenizer",
+      "type": "string"
+    },
+    "tokenizer_version": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Tokenizer Version"
+    }
+  },
+  "required": [
+    "instance_id",
+    "question_family_id",
+    "domain",
+    "question_type",
+    "question",
+    "context_length_nominal",
+    "context_tokens_actual",
+    "tokenizer",
+    "answerable",
+    "gold_answer",
+    "gold_answer_normalized",
+    "answer_type",
+    "context"
+  ],
+  "title": "Instance",
+  "type": "object"
+}

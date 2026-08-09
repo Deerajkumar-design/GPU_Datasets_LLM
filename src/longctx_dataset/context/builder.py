@@ -263,14 +263,13 @@ class ContextBuilder:
             window = state.pending[:BALANCE_WINDOW]
             affordable = [i for i in window if cand_tokens[i] <= budget]
             if not affordable:
-                # Nothing in the window fits; if nothing at all fits, growth is done.
-                if all(cand_tokens[i] > budget for i in state.pending):
+                # Nothing in the window fits the remaining budget. Reach past it for the
+                # next candidate that does -- but never drop the oversized ones, because
+                # a record too large for this length will fit comfortably at the next.
+                nxt = next((i for i in state.pending if cand_tokens[i] <= budget), None)
+                if nxt is None:
                     break
-                # Otherwise advance past the oversized head and retry.
-                state.pending = [i for i in state.pending if cand_tokens[i] <= budget] or []
-                if not state.pending:
-                    break
-                continue
+                affordable = [nxt]
 
             to_before = state.tokens_before <= state.tokens_after
             deficit = abs(state.tokens_after - state.tokens_before)

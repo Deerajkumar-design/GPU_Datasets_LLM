@@ -274,3 +274,26 @@ def test_changing_the_tokenizer_changes_measured_lengths_not_gold(cfg):
     assert {i.tokenizer for i in a} == {"whitespace:v1"}
     assert {i.tokenizer for i in b} == {"tiktoken:cl100k_base"}
     assert [i.gold_answer_normalized for i in a] == [i.gold_answer_normalized for i in b]
+
+
+def test_oversized_candidates_are_retained_for_longer_variants(cfg):
+    """A record too large for 4K must still be available at 8K.
+
+    Regression guard: an earlier look-ahead implementation pruned candidates that did
+    not fit the *current* budget, permanently shrinking the pool and causing premature
+    POOL_EXHAUSTED at the longer lengths.
+    """
+    records = [rec("TGT", value=42.0)]
+    # A handful of very large records interleaved with ordinary ones.
+    for i in range(200):
+        pad = "x" * (1200 if i % 7 == 0 else 10)
+        records.append(rec(f"R{i}", period=f"CY{1800 + i}", value=float(i), entity=f"E{pad[:40]}{i}"))
+    pool = RecordPool(records)
+    cfg.context.lengths = [512, 1024, 2048, 4096]
+    b = ContextBuilder(cfg, pool, get_tokenizer(cfg.tokenizer))
+    instances, _ = b.build_family(answerable_family(pool))
+    assert len(instances) >= 3
+    assert check_nesting(instances) == []
+    # Every length must still fill honestly rather than starving on a pruned pool.
+    for inst in instances:
+        assert inst.context_tokens_actual >= cfg.context.min_fill_ratio * inst.context_length_nominal

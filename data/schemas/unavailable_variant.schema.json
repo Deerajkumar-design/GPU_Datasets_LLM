@@ -1,0 +1,72 @@
+{
+  "$defs": {
+    "Domain": {
+      "description": "Domains with an implemented source adapter.",
+      "enum": [
+        "SEC",
+        "FDA",
+        "CLINICAL_TRIALS",
+        "WORLD_BANK",
+        "EXTENSION"
+      ],
+      "title": "Domain",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "description": "A context length that could NOT be built honestly.\n\nRecording these is mandatory: the alternative is padding with filler, which would\nsilently corrupt the independent variable of the experiment.",
+  "properties": {
+    "context_length_nominal": {
+      "title": "Context Length Nominal",
+      "type": "integer"
+    },
+    "domain": {
+      "$ref": "#/$defs/Domain"
+    },
+    "question_family_id": {
+      "title": "Question Family Id",
+      "type": "string"
+    },
+    "reason": {
+      "title": "Reason",
+      "type": "string"
+    },
+    "reason_code": {
+      "title": "Reason Code",
+      "type": "string"
+    },
+    "records_available": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Records Available"
+    },
+    "tokens_achieved": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Tokens Achieved"
+    }
+  },
+  "required": [
+    "question_family_id",
+    "domain",
+    "context_length_nominal",
+    "reason_code",
+    "reason"
+  ],
+  "title": "UnavailableVariant",
+  "type": "object"
+}
