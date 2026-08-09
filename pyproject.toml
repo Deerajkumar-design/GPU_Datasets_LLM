@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "longctx-dataset"
+version = "0.1.0"
+description = "Reproducible generation of long-context, same-domain-interference QA datasets from authoritative primary sources."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Long-Context Hallucination Study" }]
+
+dependencies = [
+  "pydantic>=2.4",
+  "requests>=2.28",
+  "PyYAML>=6.0",
+  "tiktoken>=0.5",
+]
+
+[project.optional-dependencies]
+parquet = ["pyarrow>=12", "pandas>=2.0"]
+hf = ["transformers>=4.35"]
+dev = ["pytest>=7.4", "pytest-cov>=4.1"]
+
+[project.scripts]
+longctx-dataset = "longctx_dataset.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+  "network: test requires live network access (deselected by default via -m 'not network')",
+]
+addopts = "-m 'not network'"

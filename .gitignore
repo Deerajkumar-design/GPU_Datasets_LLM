@@ -1,0 +1,25 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.env
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Raw API payloads can be large; regenerate with `fetch`.
+data/raw/**
+!data/raw/.gitkeep
+
+# Normalized layer is derived; regenerate with `normalize`.
+data/normalized/**
+!data/normalized/.gitkeep
+
+# Pilot contexts are large (128K-token strings).
+data/pilot/instances.jsonl
+data/pilot/*.parquet
