@@ -1,0 +1,463 @@
+{
+ "request_url": "https://api.fda.gov/drug/drugsfda.json?search=products.active_ingredients.name%3A%22PREDNISONE%22&limit=100",
+ "status": 200,
+ "retrieved_at": "2026-08-09T03:34:15Z",
+ "payload": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-08-07",
+   "results": {
+    "skip": 0,
+    "limit": 100,
+    "total": 123
+   }
+  },
+  "results": [
+   {
+    "submissions": [
+     {
+      "submission_type": "SUPPL",
+      "submission_number": "54",
+      "submission_status": "AP",
+      "submission_status_date": "20090313",
+      "submission_class_code": "LABELING",
+      "submission_class_code_description": "Labeling"
+     },
+     {
+      "submission_type": "SUPPL",
+      "submission_number": "60",
+      "submission_status": "AP",
+      "submission_status_date": "20090313",
+      "review_priority": "STANDARD",
+      "submission_class_code": "LABELING",
+      "submission_class_code_description": "Labeling"
+     },
+     {
+      "submission_type": "SUPPL",
+      "submission_number": "52",
+      "submission_status": "AP",
+      "submission_status_date": "19890406",
+      "review_priority": "STANDARD",
+      "submission_class_code": "MANUF (CMC)",
+      "submission_class_code_description": "Manufacturing (CMC)"
+     },
+     {
+      "submission_type": "SUPPL",
+      "submission_number": "44",
+      "submission_status": "AP",
+      "submission_status_date": "19790425",
+      "review_priority": "STANDARD",
+      "submission_class_code": "MANUF (CMC)",
+      "submission_class_code_description": "Manufacturing (CMC)"
+     },
+     {
+      "submission_type": "SUPPL",
+      "submission_number": "50",
+      "submission_status": "AP",
+      "submission_status_date": "20090313",
+      "submission_class_code": "LABELING",
+      "submission_class_code_description": "Labeling"
+     },
+     {
+      "submission_type": "SUPPL",
+      "submission_number": "42",
+      "submission_status": "AP",
+      "submission_status_date": "19781018",
+      "submission_class_code": "LABELING",
+      "submission_class_code_description": "Labeling"
+     }
+    ],
+    "application_number": "NDA009986",
+    "sponsor_name": "PHARMACIA AND UPJOHN",
+    "products": [
+     {
+      "product_number": "008",
+      "reference_drug": "Yes",
+      "brand_name": "DELTASONE",
+      "active_ingredients": [
+       {
+        "name": "PREDNISONE",
+        "strength": "50MG **Federal Register determination that product was not discontinued or withdrawn for safety or effectiveness reasons**"
+       }
+      ],
+      "reference_standard": "No",
+      "dosage_form": "TABLET",
+      "route": "ORAL",
+      "marketing_status": "Discontinued"
+     },
+     {
+      "product_number": "006",
+      "reference_drug": "Yes",
+      "brand_name": "DELTASONE",
+      "active_ingredients": [
+       {
+        "name": "PREDNISONE",
+        "strength": "10MG **Federal Register determination that product was not discontinued or withdrawn for safety or effectiveness reasons**"
+       }
+      ],
+      "reference_standard": "No",
+      "dosage_form": "TABLET",
+      "route": "ORAL",
+      "marketing_status": "Discontinued"
+     },
+     {
+      "product_number": "002",
+      "reference_drug": "Yes",
+      "brand_name": "DELTASONE",
+      "active_ingredients": [
+       {
+        "name": "PREDNISONE",
+        "strength": "5MG **Federal Register determination that product was not discontinued or withdrawn for safety or effectiveness reasons**"
+       }
+      ],
+      "reference_standard": "No",
+      "dosage_form": "TABLET",
+      "route": "ORAL",
+      "marketing_status": "Discontinued"
+     },
+     {
+      "product_number": "007",
+      "reference_drug": "Yes",
+      "brand_name": "DELTASONE",
+      "active_ingredients": [
+       {
+        "name": "PREDNISONE",
+        "strength": "20MG **Federal Register determination that product was not discontinued or withdrawn for safety or effectiveness reasons**"
+       }
+      ],
+      "reference_standard": "No",
+      "dosage_form": "TABLET",
+      "route": "ORAL",
+      "marketing_status": "Discontinued"
+     },
+     {
+      "product_number": "005",
+      "reference_drug": "Yes",
+      "brand_name": "DELTASONE",
+      "active_ingredients": [
+       {
+        "name": "PREDNISONE",
+        "strength": "2.5MG **Federal Register determination that product was not discontinued or withdrawn for safety or effectiveness reasons**"
+       }
+      ],
+      "reference_standard": "No",
+      "dosage_form": "TABLET",
+      "route": "ORAL",
+      "marketing_status": "Discontinued"
+     }
+    ]
+   },
+   {
+    "submissions": [
+     {
+      "submission_type": "SUPPL",
+      "submission_number": "18",
+      "submission_status": "AP",
+      "submission_status_date": "20230417",
+      "review_priority": "UNKNOWN",
+      "submission_class_code": "MANUF (CMC)",
+      "submission_class_code_description": "Manufacturing (CMC)"
+     },
+     {
+      "submission_type": "SUPPL",
+      "submission_number": "3",
+      "submission_status": "AP",
+      "submission_status_date": "20050629",
+      "submission_class_code": "S",
+      "submission_class_code_description": "Supplement"
+     },
+     {
+      "submission_type": "SUPPL",
+      "submission_number": "20",
+      "submission_status": "AP",
+      "submission_status_date": "20240605",
+      "review_priority": "STANDARD",
+      "submission_class_code": "LABELING",
+      "submission_class_code_description": "Labeling"
+     },
+     {
+      "submission_type": "ORIG",
+      "submission_number": "1",
+      "submission_status": "AP",
+      "submission_status_date": "20010829",
+      "application_docs": [
+       {
+        "id": "29940",
+        "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2001/40362ltr.pdf",
+        "date": "20010829",
+        "type": "Letter"
+       }
+      ]
+     },
+     {
+      "submission_type": "SUPPL",
+      "submission_number": "4",
+      "submission_status": "AP",
+      "submission_status_date": "20050629",
+      "submission_class_code": "LABELING",
+      "submission_class_code_description": "Labeling"
+     },
+     {
+      "submission_type": "SUPPL",
+      "submission_number": "2",
+      "submission_status": "AP",
+      "submission_status_date": "20040511",
+      "submission_class_code": "LABELING",
+      "submission_class_code_description": "Labeling"
+     }
+    ],
+    "application_number": "ANDA040362",
+    "sponsor_name": "JUBILANT CADISTA",
+    "openfda": {},
+    "products": [
+     {
+      "product_number": "005",
+      "reference_drug": "No",
+      "brand_name": "PREDNISONE",
+      "active_ingredients": [
+       {
+        "name": "PREDNISONE",
+        "strength": "50MG"
+       }
+      ],
+      "reference_standard": "No",
+      "dosage_form": "TABLET",
+      "route": "ORAL",
+      "marketing_status": "Prescription",
+      "te_code": "AB"
+     },
+     {
+      "product_number": "003",
+      "reference_drug": "No",
+      "brand_name": "PREDNISONE",
+      "active_ingredients": [
+       {
+        "name": "PREDNISONE",
+        "strength": "20MG"
+       }
+      ],
+      "reference_standard": "No",
+      "dosage_form": "TABLET",
+      "route": "ORAL",
+      "marketing_status": "Prescription",
+      "te_code": "AB"
+     },
+     {
+      "product_number": "001",
+      "reference_drug": "No",
+      "brand_name": "PREDNISONE",
+      "active_ingredients": [
+       {
+        "name": "PREDNISONE",
+        "strength": "10MG"
+       }
+      ],
+      "reference_standard": "No",
+      "dosage_form": "TABLET",
+      "route": "ORAL",
+      "marketing_status": "Prescription",
+      "te_code": "AB"
+     },
+     {
+      "product_number": "004",
+      "reference_drug": "No",
+      "brand_name": "PREDNISONE",
+      "active_ingredients": [
+       {
+        "name": "PREDNISONE",
+        "strength": "2.5MG"
+       }
+      ],
+      "reference_standard": "No",
+      "dosage_form": "TABLET",
+      "route": "ORAL",
+      "marketing_status": "Prescription",
+      "te_code": "AB"
+     },
+     {
+      "product_number": "002",
+      "reference_drug": "No",
+      "brand_name": "PREDNISONE",
+      "active_ingredients": [
+       {
+        "name": "PREDNISONE",
+        "strength": "5MG"
+       }
+      ],
+      "reference_standard": "No",
+      "dosage_form": "TABLET",
+      "route": "ORAL",
+      "marketing_status": "Prescription",
+      "te_code": "AB"
+     }
+    ]
+   },
+   {
+    "submissions": [
+     {
+      "submission_type": "ORIG",
+      "submission_number": "1",
+      "submission_status": "AP",
+      "submission_status_date": "19740226"
+     },
+     {
+      "submission_type": "SUPPL",
+      "submission_number": "20",
+      "submission_status": "AP",
+      "submission_status_date": "19870305",
+      "submission_class_code": "MANUF (CMC)",
+      "submission_class_code_description": "Manufacturing (CMC)"
+     },
+     {
+      "submission_type": "SUPPL",
+      "submission_number": "57",
+      "submission_status": "AP",
+      "submission_status_date": "20240531",
+      "review_priority": "STANDARD",
+      "submission_class_code": "LABELING",
+      "submission_class_code_description": "Labeling"
+     },
+     {
+      "submission_type": "SUPPL",
+      "submission_number": "39",
+      "submission_status": "AP",
+      "submission_status_date": "19971118",
+      "submission_class_code": "MANUF (CMC)",
+      "submission_class_code_description": "Manufacturing (CMC)"
+     },
+     {
+      "submission_type": "SUPPL",
+      "submission_number": "37",
+      "submission_status": "AP",
+      "submission_status_date": "19940209",
+      "submission_class_code": "LABELING",
+      "submission_class_code_description": "Labeling"
+     },
+     {
+      "submission_type": "SUPPL",
+      "submission_number": "29",
+      "submission_status": "AP",
+      "submission_status_date": "19890925",
+      "submission_class_code": "MANUF (CMC)",
+      "submission_class_code_description": "Manufacturing (CMC)"
+     }
+    ],
+    "application_number": "ANDA083677",
+    "sponsor_name": "MYLAN",
+    "openfda": {
+     "application_number": [
+      "ANDA083677"
+     ],
+     "brand_name": [
+      "PREDNISONE"
+     ],
+     "generic_name": [
+      "PREDNISONE"
+     ],
+     "manufacturer_name": [
+      "Mylan Pharmaceuticals Inc."
+     ],
+     "product_ndc": [
+      "0378-0642",
+      "0378-0640",
+      "0378-0641"
+     ],
+     "product_type": [
+      "HUMAN PRESCRIPTION DRUG"
+     ],
+     "route": [
+      "ORAL"
+     ],
+     "substance_name": [
+      "PREDNISONE"
+     ],
+     "rxcui": [
+      "198145",
+      "312615",
+      "312617"
+     ],
+     "spl_id": [
+      "f7cba7fb-7b9f-4464-a702-5c4f818aeb5f"
+     ],
+     "spl_set_id": [
+      "fec09050-5ac2-451b-a2b9-5a21b2def212"
+     ],
+     "package_ndc": [
+      "0378-0640-01",
+      "0378-0640-10",
+      "0378-0641-01",
+      "0378-0641-10",
+      "0378-0642-01",
+      "0378-0642-05",
+      "0378-0642-10"
+     ],
+     "nui": [
+      "N0000175576",
+      "N0000175450"
+     ],
+     "pharm_class_epc": [
+      "Corticosteroid [EPC]"
+     ],
+     "pharm_class_moa": [
+      "Corticosteroid Hormone Receptor Agonists [MoA]"
+     ],
+     "unii": [
+      "VB0R961HZT"
+     ]
+    },
+    "products": [
+     {
+      "product_number": "002",
+      "reference_drug": "No",
+      "brand_name": "PREDNISONE",
+      "active_ingredients": [
+       {
+        "name": "PREDNISONE",
+        "strength": "5MG"
+       }
+      ],
+      "reference_standard": "No",
+      "dosage_form": "TABLET",
+      "route": "ORAL",
+      "marketing_status": "Prescription",
+      "te_code": "AB"
+     },
+     {
+      "product_number": "003",
+      "reference_drug": "No",
+      "brand_name": "PREDNISONE",
+      "active_ingredients": [
+       {
+        "name": "PREDNISONE",
+        "strength": "10MG"
+       }
+      ],
+      "reference_standard": "No",
+      "dosage_form": "TABLET",
+      "route": "ORAL",
+      "marketing_status": "Prescription",
+      "te_code": "AB"
+     },
+     {
+      "product_number": "001",
+      "reference_drug": "No",
+      "brand_name": "PREDNISONE",
+      "active_ingredients": [
+       {
+        "name": "PREDNISONE",
+        "strength": "20MG"
+       }
+      ],
+      "reference_standard": "No",
+      "dosage_form": "TABLET",
+      "route": "ORAL",
+      "marketing_status": "Prescription",
+      "te_code": "AB"
+     }
+    ]
+   }
+  ]
+ }
+}

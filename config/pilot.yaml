@@ -1,0 +1,135 @@
+# Pilot configuration: a small, rigorously validated dataset used to decide whether the
+# pipeline is ready to scale to the 500-family production run.
+#
+# Deliberately small (32 question families) so every family can be inspected by hand.
+
+name: pilot
+seed: 20240817
+data_root: data
+output_subdir: pilot
+schema_version: "1.0.0"
+write_parquet: true
+
+tokenizer:
+  # Configurable on purpose: the model under test is not yet chosen, so no tokenizer is
+  # treated as scientifically authoritative. Swap this id and re-run `build-contexts`.
+  id: "tiktoken:cl100k_base"
+  fallback_id: "whitespace:v1"
+  allow_fallback: false
+
+context:
+  lengths: [4096, 8192, 16384, 32768, 65536, 131072]
+  target_position: 0.50
+  position_tolerance: 0.05
+  # A variant below this fill ratio is recorded as UNAVAILABLE rather than padded.
+  min_fill_ratio: 0.95
+
+http:
+  timeout_seconds: 45.0
+  max_retries: 4
+  backoff_seconds: 1.5
+  # SEC requires a real contact address. Set SEC_USER_AGENT in the environment;
+  # it always overrides whatever appears here.
+  sec_user_agent: "${SEC_USER_AGENT}"
+  sec_rate_limit_per_second: 8.0
+  openfda_api_key: "${OPENFDA_API_KEY}"
+  default_rate_limit_per_second: 5.0
+  cache_enabled: true
+
+validation:
+  fail_on: ["CRITICAL"]
+  numeric_recompute_rel_tolerance: 1.0e-9
+  require_all_question_types: true
+  max_leakage_value_rel_tolerance: 1.0e-6
+
+domains:
+  SEC:
+    enabled: true
+    n_families: 8
+    question_type_mix:
+      DIRECT_RETRIEVAL: 0.20
+      RETRIEVAL_CALCULATION: 0.30
+      TEMPORAL_VERSION: 0.15
+      ENTITY_UNIT_BINDING: 0.15
+      UNANSWERABLE: 0.20
+    params:
+      companies:
+        "0000320193": "Apple Inc."
+        "0000789019": "Microsoft Corporation"
+        "0001018724": "Amazon.com, Inc."
+        "0000021344": "The Coca-Cola Company"
+        "0000104169": "Walmart Inc."
+        "0000200406": "Johnson & Johnson"
+        "0000078003": "Pfizer Inc."
+        "0000019617": "JPMorgan Chase & Co."
+
+  FDA:
+    enabled: true
+    n_families: 8
+    question_type_mix:
+      DIRECT_RETRIEVAL: 0.20
+      RETRIEVAL_CALCULATION: 0.30
+      TEMPORAL_VERSION: 0.15
+      ENTITY_UNIT_BINDING: 0.15
+      UNANSWERABLE: 0.20
+    params:
+      limit_per_ingredient: 100
+      ingredients:
+        - "METFORMIN HYDROCHLORIDE"
+        - "ATORVASTATIN CALCIUM"
+        - "LISINOPRIL"
+        - "AMLODIPINE BESYLATE"
+        - "LEVOTHYROXINE SODIUM"
+        - "OMEPRAZOLE"
+        - "SERTRALINE HYDROCHLORIDE"
+        - "GABAPENTIN"
+        - "IBUPROFEN"
+        - "AMOXICILLIN"
+        - "PREDNISONE"
+        - "WARFARIN SODIUM"
+        - "MONTELUKAST SODIUM"
+        - "LOSARTAN POTASSIUM"
+        - "CIPROFLOXACIN HYDROCHLORIDE"
+
+  CLINICAL_TRIALS:
+    enabled: true
+    n_families: 8
+    question_type_mix:
+      DIRECT_RETRIEVAL: 0.20
+      RETRIEVAL_CALCULATION: 0.30
+      TEMPORAL_VERSION: 0.15
+      ENTITY_UNIT_BINDING: 0.15
+      UNANSWERABLE: 0.20
+    params:
+      page_size: 100
+      max_pages_per_query: 3
+      overall_status: "COMPLETED"
+      queries:
+        - "metformin"
+        - "atorvastatin"
+        - "pembrolizumab"
+        - "insulin glargine"
+        - "semaglutide"
+        - "rivaroxaban"
+        - "aspirin"
+        - "tranexamic acid"
+
+  WORLD_BANK:
+    enabled: true
+    n_families: 8
+    question_type_mix:
+      DIRECT_RETRIEVAL: 0.20
+      RETRIEVAL_CALCULATION: 0.30
+      TEMPORAL_VERSION: 0.15
+      ENTITY_UNIT_BINDING: 0.15
+      UNANSWERABLE: 0.20
+    params:
+      date_range: "1990:2024"
+      per_page: 500
+      # api.worldbank.org serves small result sets reliably and hangs on large ones,
+      # so each request asks for a single country. The `date=` range filter has also
+      # been observed returning HTTP 502, so the year window is applied client-side.
+      country_batch_size: 1
+      rate_limit_per_second: 2.0
+      timeout_seconds: 12.0
+      use_date_param: false

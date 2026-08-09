@@ -1,0 +1,2053 @@
+{
+ "request_url": "https://clinicaltrials.gov/api/v2/studies?query.term=semaglutide&pageSize=100&countTotal=true&filter.overallStatus=COMPLETED",
+ "status": 200,
+ "retrieved_at": "2026-08-09T03:34:18Z",
+ "payload": {
+  "studies": [
+   {
+    "protocolSection": {
+     "identificationModule": {
+      "nctId": "NCT04865744",
+      "orgStudyIdInfo": {
+       "id": "Sema21"
+      },
+      "organization": {
+       "fullName": "University of Tartu",
+       "class": "OTHER"
+      },
+      "briefTitle": "The Effect of Semaglutide on Pituitary Function",
+      "officialTitle": "The Effect of Semaglutide on Pituitary Function"
+     },
+     "statusModule": {
+      "statusVerifiedDate": "2023-02",
+      "overallStatus": "COMPLETED",
+      "expandedAccessInfo": {
+       "hasExpandedAccess": false
+      },
+      "startDateStruct": {
+       "date": "2021-05-19",
+       "type": "ACTUAL"
+      },
+      "primaryCompletionDateStruct": {
+       "date": "2021-09-23",
+       "type": "ACTUAL"
+      },
+      "completionDateStruct": {
+       "date": "2021-09-30",
+       "type": "ACTUAL"
+      },
+      "studyFirstSubmitDate": "2021-04-28",
+      "studyFirstSubmitQcDate": "2021-04-28",
+      "studyFirstPostDateStruct": {
+       "date": "2021-04-29",
+       "type": "ACTUAL"
+      },
+      "lastUpdateSubmitDate": "2023-02-19",
+      "lastUpdatePostDateStruct": {
+       "date": "2023-02-22",
+       "type": "ACTUAL"
+      }
+     },
+     "sponsorCollaboratorsModule": {
+      "responsibleParty": {
+       "type": "PRINCIPAL_INVESTIGATOR",
+       "investigatorFullName": "Vallo Volke",
+       "investigatorTitle": "Professor",
+       "investigatorAffiliation": "University of Tartu"
+      },
+      "leadSponsor": {
+       "name": "University of Tartu",
+       "class": "OTHER"
+      }
+     },
+     "oversightModule": {
+      "oversightHasDmc": false,
+      "isFdaRegulatedDrug": false,
+      "isFdaRegulatedDevice": false
+     },
+     "descriptionModule": {
+      "briefSummary": "The primary aim of the study is to describe the effect of a single oral dose of semaglutide 7 mg on growth hormone secretion.",
+      "detailedDescription": "The randomized blinded placebo-controlled clinical trial is conducted on 10 healthy volunteers.\n\n5 study subjects receive once 7 mg of oral semaglutide and once placebo. 5 study subjects receive once 14 mg of oral semaglutide and once placebo. The study group and order of administration of study medication are decided on randomization. The placebo and oral semaglutide are administered at least 4 weeks apart.\n\nBlood samples are taken before and during 4 hours after the study medication administration (at 60, 90, 120, 150, 180, and 240 minutes after study medication administration).\n\nThe primary endpoint is the peak value of growth hormone measured during the 4 hours after study medication administration."
+     },
+     "conditionsModule": {
+      "conditions": [
+       "Healthy"
+      ]
+     },
+     "designModule": {
+      "studyType": "INTERVENTIONAL",
+      "phases": [
+       "PHASE4"
+      ],
+      "designInfo": {
+       "allocation": "RANDOMIZED",
+       "interventionModel": "CROSSOVER",
+       "interventionModelDescription": "Blinded Randomised Single-group Crossover",
+       "primaryPurpose": "DIAGNOSTIC",
+       "maskingInfo": {
+        "masking": "DOUBLE",
+        "whoMasked": [
+         "PARTICIPANT",
+         "CARE_PROVIDER"
+        ]
+       }
+      },
+      "enrollmentInfo": {
+       "count": 10,
+       "type": "ACTUAL"
+      }
+     },
+     "armsInterventionsModule": {
+      "armGroups": [
+       {
+        "label": "Oral semaglutide 7 mg",
+        "type": "ACTIVE_COMPARATOR",
+        "description": "The semaglutide 7 mg tablet taken orally with upto120 ml of water.",
+        "interventionNames": [
+         "Drug: Semaglutide 7 MG Oral Tablet"
+        ]
+       },
+       {
+        "label": "Placebo",
+        "type": "PLACEBO_COMPARATOR",
+        "description": "The placebo tablet taken orally with 120 ml of water.",
+        "interventionNames": [
+         "Drug: Placebo"
+        ]
+       },
+       {
+        "label": "Oral semaglutide 14 mg",
+        "type": "ACTIVE_COMPARATOR",
+        "description": "The semaglutide 14 mg tablet taken with upto 120 ml of water.",
+        "interventionNames": [
+         "Drug: Semaglutide 14 MG Oral Tablet"
+        ]
+       }
+      ],
+      "interventions": [
+       {
+        "type": "DRUG",
+        "name": "Semaglutide 7 MG Oral Tablet",
+        "description": "Semaglutide 7 mg oral tablet taken after an overnight fast with up to 120 ml of water.",
+        "armGroupLabels": [
+         "Oral semaglutide 7 mg"
+        ],
+        "otherNames": [
+         "Rybelsus 7 mg"
+        ]
+       },
+       {
+        "type": "DRUG",
+        "name": "Placebo",
+        "description": "Placebo tablet is taken after an overnight fast with up to120 ml of water.",
+        "armGroupLabels": [
+         "Placebo"
+        ]
+       },
+       {
+        "type": "DRUG",
+        "name": "Semaglutide 14 MG Oral Tablet",
+        "description": "Semaglutide 14 mg oral tablet taken after an overnight fast with up to 120 ml water.",
+        "armGroupLabels": [
+         "Oral semaglutide 14 mg"
+        ],
+        "otherNames": [
+         "Rybelsus 14 mg"
+        ]
+       }
+      ]
+     },
+     "outcomesModule": {
+      "primaryOutcomes": [
+       {
+        "measure": "Growth hormone peak",
+        "description": "Maximum concentration measured after study medication administration.",
+        "timeFrame": "60, 90, 120, 150, 180 and 240 minutes after study medication administration"
+       }
+      ],
+      "secondaryOutcomes": [
+       {
+        "measure": "Cortisol peak",
+        "description": "Maximum concentration measured after study medication administration.",
+        "timeFrame": "60, 90, 120, 150, 180 and 240 minutes after study medication administration"
+       },
+       {
+        "measure": "Adrenocorticotropin (ACTH) peak",
+        "description": "Maximum concentration measured after study medication administration.",
+        "timeFrame": "60, 90, 120, 150, 180 and 240 minutes after study medication administration"
+       },
+       {
+        "measure": "Aldosterone peak",
+        "description": "Maximum concentration measured after study medication administration.",
+        "timeFrame": "60, 90, 120, 150, 180 and 240 minutes after study medication administration"
+       },
+       {
+        "measure": "Glucose nadir",
+        "description": "Lowest glucose concentration measured after study medication administration",
+        "timeFrame": "60, 90, 120, 150, 180 and 240 minutes after study medication administration"
+       },
+       {
+        "measure": "C-peptide peak",
+        "description": "Maximum concentration measured after study medication administration.",
+        "timeFrame": "60, 90, 120, 150, 180 and 240 minutes after study medication administration"
+       },
+       {
+        "measure": "Copeptin peak",
+        "description": "Maximum concentration measured after study medication administration",
+        "timeFrame": "60, 90, 120, 150, 180 and 240 minutes after study medication administration"
+       }
+      ],
+      "otherOutcomes": [
+       {
+        "measure": "Nausea",
+        "description": "The intensity of nausea on a 0-10 points visual analog scale, where 0 indicates no nausea and 10 worst imaginable nausea.",
+        "timeFrame": "60, 90, 120, 150, 180 and 240 minutes after study medication administration"
+       },
+       {
+        "measure": "Heart rate",
+        "description": "The change in heart rate compared to baseline",
+        "timeFrame": "60, 90, 120, 150, 180 and 240 minutes after study medication administration"
+       },
+       {
+        "measure": "Blood pressure",
+        "description": "The change in blood pressure compared to baseline",
+        "timeFrame": "60, 90, 120, 150, 180 and 240 minutes after study medication administration"
+       }
+      ]
+     },
+     "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Age 18-50 years\n* The body weight \\>65 kg\n\nExclusion Criteria:\n\n* presence of chronic illness\n* the daily use of medications\n* pregnancy\n* lactation.",
+      "healthyVolunteers": true,
+      "sex": "ALL",
+      "minimumAge": "18 Years",
+      "maximumAge": "50 Years",
+      "stdAges": [
+       "ADULT"
+      ]
+     },
+     "contactsLocationsModule": {
+      "overallOfficials": [
+       {
+        "name": "Vallo Volke, MD, PhD",
+        "affiliation": "University of Tartu",
+        "role": "PRINCIPAL_INVESTIGATOR"
+       }
+      ],
+      "locations": [
+       {
+        "facility": "Tartu University Hospital",
+        "city": "Tartu",
+        "zip": "51004",
+        "country": "Estonia",
+        "geoPoint": {
+         "lat": 58.38062,
+         "lon": 26.72509
+        }
+       }
+      ]
+     },
+     "ipdSharingStatementModule": {
+      "ipdSharing": "NO"
+     }
+    },
+    "derivedSection": {
+     "miscInfoModule": {
+      "versionHolder": "2026-08-07"
+     },
+     "interventionBrowseModule": {
+      "meshes": [
+       {
+        "id": "C000591245",
+        "term": "semaglutide"
+       },
+       {
+        "id": "D013607",
+        "term": "Tablets"
+       }
+      ],
+      "ancestors": [
+       {
+        "id": "D004304",
+        "term": "Dosage Forms"
+       },
+       {
+        "id": "D004364",
+        "term": "Pharmaceutical Preparations"
+       }
+      ]
+     }
+    },
+    "hasResults": false
+   },
+   {
+    "protocolSection": {
+     "identificationModule": {
+      "nctId": "NCT05302596",
+      "orgStudyIdInfo": {
+       "id": "STUDY00005760"
+      },
+      "secondaryIdInfos": [
+       {
+        "id": "UL1TR001412",
+        "type": "NIH",
+        "link": "https://reporter.nih.gov/quickSearch/UL1TR001412"
+       }
+      ],
+      "organization": {
+       "fullName": "State University of New York at Buffalo",
+       "class": "OTHER"
+      },
+      "briefTitle": "Semaglutide Use in Elderly Obese Patients",
+      "officialTitle": "Preserving Lean Body Mass During Weight Loss In Elderly Obese Patients With GLP-1 Receptor Agonist Treatment"
+     },
+     "statusModule": {
+      "statusVerifiedDate": "2025-03",
+      "overallStatus": "COMPLETED",
+      "expandedAccessInfo": {
+       "hasExpandedAccess": false
+      },
+      "startDateStruct": {
+       "date": "2022-09-01",
+       "type": "ACTUAL"
+      },
+      "primaryCompletionDateStruct": {
+       "date": "2023-10-23",
+       "type": "ACTUAL"
+      },
+      "completionDateStruct": {
+       "date": "2024-10-30",
+       "type": "ACTUAL"
+      },
+      "studyFirstSubmitDate": "2022-03-21",
+      "studyFirstSubmitQcDate": "2022-03-21",
+      "studyFirstPostDateStruct": {
+       "date": "2022-03-31",
+       "type": "ACTUAL"
+      },
+      "resultsFirstSubmitDate": "2025-03-31",
+      "resultsFirstSubmitQcDate": "2025-03-31",
+      "resultsFirstPostDateStruct": {
+       "date": "2025-04-17",
+       "type": "ACTUAL"
+      },
+      "lastUpdateSubmitDate": "2025-03-31",
+      "lastUpdatePostDateStruct": {
+       "date": "2025-04-17",
+       "type": "ACTUAL"
+      }
+     },
+     "sponsorCollaboratorsModule": {
+      "responsibleParty": {
+       "type": "PRINCIPAL_INVESTIGATOR",
+       "investigatorFullName": "Husam A Ghanim",
+       "investigatorTitle": "Research Associate Professor",
+       "investigatorAffiliation": "State University of New York at Buffalo"
+      },
+      "leadSponsor": {
+       "name": "State University of New York at Buffalo",
+       "class": "OTHER"
+      },
+      "collaborators": [
+       {
+        "name": "National Center for Advancing Translational Sciences (NCATS)",
+        "class": "NIH"
+       }
+      ]
+     },
+     "oversightModule": {
+      "oversightHasDmc": false,
+      "isFdaRegulatedDrug": true,
+      "isFdaRegulatedDevice": false,
+      "isUsExport": true
+     },
+     "descriptionModule": {
+      "briefSummary": "This is a single-center, prospective, controlled, randomized and open label study to investigate the effect of the semaglutide addition to standard of care weight loss intervention (personalized lifestyle and exercise) in elderly obese subjects on body weight and body composition as assessed by DEXA.",
+      "detailedDescription": "This will be a single center, prospective, open label, randomized and controlled pilot study to investigate the effects of semaglutide addition to a standard weight loss intervention program for 16 weeks on body weight and composition, adipose tissue metabolism and muscle strength compared to the standard weight loss program alone in elderly obese patients.\n\nEligible and qualified patients will be randomized 1:1 in pairs (8 pairs) matched by age and BMI within 5% and by gender to one of two open-label interventions. Priority of enrollment will be to match already existing and non-matched pair(s) before starting new ones. However, participants will not need to wait until they are matched to be enrolled in the study. The two open-label interventions are:\n\n1. Control group: Standard of care weight loss program that includes lifestyle changes and personalized exercise and dietary education.\n2. Semaglutide group: semaglutide (up to 1mg) once weekly injection added to the standard of care weight loss program. Semaglutide dose will be started at 0.25 mg dose during the baseline visit and doubled every 2 weeks up to 1mg dose or up to maximum tolerable dose. Patients will be instructed on how to inject themselves with the drug and how to increase the dose. During dose escalation, we will be monitoring the subject more extensively (4 weeks and 8 weeks), compared to clinical practice, for any side effects including if they experience any GI side effects, and subjects will be kept at the maximum tolerable dose up to 1mg/week.\n\nAt the baseline visit, and for all other visits, patients will come fasting (10 -12 hours) to the research center. Patients will visit the research center at 4 weeks (safety visit), 8 weeks and at 16 weeks (final study assessment visit). Blood (about 25 ml), body weight and other vitals, adverse events including hypoglycemia (blood sugar \\<70 mg/dl) will be collected at all visits. Fat biopsy aspiration, DEXA scans, muscle strength measurement and age-appropriate quality of life questionnaire (Quality of Life Enjoyment and Satisfaction Questionnaire - Short Form (Q-LES-Q-SF) will be performed at 0- and 16-weeks visits.\n\nAll patients will receive instructions at the beginning of the study on weight loss nutritional program and appropriate physical activity to be performed for the next 16 weeks. The program will be based, in-part, on dietary and exercise habits collected at screening visit. For the entire duration of the study, participants will maintain a daily diary to document food and exercise activities to ensure compliance with lifestyle program provided. At the 4- and 8-weeks visits, the daily diary will be reviewed for food and exercise activities, and instructions will be provided again to reinforce intervention.\n\nPatients will be provided with glucose meter and glucose strips to measure fingerpick blood glucose. For the entire duration of the study, patients will be asked to measure their blood sugars at least one time after exercise and to record any hypoglycemic events (glucose \\<70mg/dl) in their diary, Patients will be instructed to record any other untoward side effects like nausea, vomiting, changes in appetite and other experiences in the diary. Patients will be instructed to call the Diabetes Center to speak to a study investigator directly in case of any problem or untoward side effects.\n\nthey have a question or side effects.\n\nStandard of care weight loss program:\n\nAll patients will be instructed to implement dietary and exercise program for the next 16 weeks and to record their activities on daily food and exercise diary provided.\n\n1. Energy intake should be reduced by 500-750kcal/day.\n2. Dietary fat should be reduced to 30% of total energy intake maximally.\n3. Meal replacements (if used) will be consumed during breakfast and lunch.\n4. Dinner consisted of conventional food and participants will be encouraged to eat fruits and vegetables within their calorie limit.\n5. Participants should ingest 1.0-1.5g of protein/kg/day and spread consumption equally throughout the day. A leucine-enriched balanced amino acid supplement can be used.\n6. Subjects will be instructed to perform aerobic, muscle-strengthening, flexibility, and balance exercises. Minimally, this should include moderate-intensity aerobic activity for 30 minutes five days per week or vigorous-intensity aerobic activity for 20 minutes three days a week, 10-15 repetitions of 8-10 major muscle group strengthening exercises two or more nonconsecutive days each week, 10 minutes of flexibility activities at least two days a week, and balance exercises three times a week for fall prevention."
+     },
+     "conditionsModule": {
+      "conditions": [
+       "Obesity",
+       "Aging"
+      ],
+      "keywords": [
+       "Body composition",
+       "Adipose tissue",
+       "semaglutide"
+      ]
+     },
+     "designModule": {
+      "studyType": "INTERVENTIONAL",
+      "phases": [
+       "PHASE2"
+      ],
+      "designInfo": {
+       "allocation": "RANDOMIZED",
+       "interventionModel": "PARALLEL",
+       "interventionModelDescription": "Single-center, prospective, controlled, randomized and open label study",
+       "primaryPurpose": "TREATMENT",
+       "maskingInfo": {
+        "masking": "NONE"
+       }
+      },
+      "enrollmentInfo": {
+       "count": 16,
+       "type": "ACTUAL"
+      }
+     },
+     "armsInterventionsModule": {
+      "armGroups": [
+       {
+        "label": "Semaglutide",
+        "type": "EXPERIMENTAL",
+        "description": "Semaglutide, added to standard of care, starting dose of 0.25mg titrated up to 1mg dose. for a total of 16 weeks.",
+        "interventionNames": [
+         "Drug: Semaglutide Pen Injector"
+        ]
+       },
+       {
+        "label": "standard of care only",
+        "type": "NO_INTERVENTION",
+        "description": "Standard of Care (SOC) weight loss intervention alone (personalized lifestyle and exercise)"
+       }
+      ],
+      "interventions": [
+       {
+        "type": "DRUG",
+        "name": "Semaglutide Pen Injector",
+        "description": "semaglutide (up to 1mg) once weekly injection added to the standard of care weight loss program. Semaglutide dose will be started at 0.25 mg dose during the baseline visit and doubled every 2 weeks up to 1mg dose or up to maximum tolerable dose for total of 16 weeks of intervention",
+        "armGroupLabels": [
+         "Semaglutide"
+        ],
+        "otherNames": [
+         "Ozempic"
+        ]
+       }
+      ]
+     },
+     "outcomesModule": {
+      "primaryOutcomes": [
+       {
+        "measure": "Body Composition as Total Fat Mass/ Total Fat-free Mass Ratio",
+        "description": "total fat mass/total fat-free mass ratio reported as arbitrary units (ratio), calculated by dividing total fat mass by total fat-free mass (lean mass) at baseline and at 16 weeks in both groups. Primary measurements of fat and fat-free mass is done using DEXA",
+        "timeFrame": "16 weeks"
+       },
+       {
+        "measure": "Body Weight",
+        "description": "body weight reported in Kg at at baseline and at 16 weeks in both groups",
+        "timeFrame": "16 weeks"
+       }
+      ],
+      "secondaryOutcomes": [
+       {
+        "measure": "Total Fat Mass",
+        "description": "total fat mass reported in Kg and measured using DEXA at baseline and at 16 weeks in both groups",
+        "timeFrame": "16 weeks"
+       },
+       {
+        "measure": "Total Fat-free Mass (Lean Mass)",
+        "description": "total fat-free mass (lean mass) reported in Kg and measured using DEXA at baseline and at 16 weeks in both groups",
+        "timeFrame": "16 weeks"
+       }
+      ]
+     },
+     "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Males and females age: \u226565 years\n2. BMI \u226530 Kg/m2 AND waist circumference for women: \\> 80 cm and for men: \\> 90 cm\n3. Stable body weight (no more than \u00b13 kg change during the 3 months prior to screening)\n4. Able to participate in personalized physical activities and dietary instructions.\n5. Participant must be able to read, write, and understand the English language and be able to provide written consent.\n\nExclusion Criteria:\n\n1. Current diagnosis of weight changing condition including cancer, gastrointestinal conditions or eating disorders\n2. GLP-1R agonists use within last 6 months\n3. Diagnosis of type 1 or 2 diabetes\n4. Impaired cognitive function (VA-St. Louis University Mental Survey (VA-SLUMS) score \u2264 19)\n5. History of chronic/idiopathic acute pancreatitis\n6. Personal/family history of medullary thyroid carcinoma or multiple endocrine neoplasia syndrome type 2\n7. Previous surgical treatment for obesity\n8. Smoking or use of any nicotine products\n9. Use of any medication that could interfere with trial results especially weight management drugs\n10. Anticipated change in lifestyle (e.g., dietary, exercise or sleeping pattern) other than provided by the study.\n11. Hepatic disease or cirrhosis\n12. Aspartate Aminotransferase (AST) \\> 3X Upper limit of normal (ULN) and/or Alanine aminotransferase (ALT) \\> 3X ULN\n13. Inability to give informed consent\n14. History of gastroparesis\n15. History of serious hypersensitivity reaction to these agents\n16. Alcoholism\n17. Patients with retinopathy\n18. Participation in any other concurrent interventional clinical trial -",
+      "healthyVolunteers": true,
+      "sex": "ALL",
+      "minimumAge": "65 Years",
+      "stdAges": [
+       "OLDER_ADULT"
+      ]
+     },
+     "contactsLocationsModule": {
+      "overallOfficials": [
+       {
+        "name": "Husam A Ghanim, PhD",
+        "affiliation": "State University of NY at Buffalo",
+        "role": "PRINCIPAL_INVESTIGATOR"
+       }
+      ],
+      "locations": [
+       {
+        "facility": "Diabetes and Endocrinology Research Center",
+        "city": "Buffalo",
+        "state": "New York",
+        "zip": "14221",
+        "country": "United States",
+        "geoPoint": {
+         "lat": 42.88645,
+         "lon": -78.87837
+        }
+       }
+      ]
+     },
+     "ipdSharingStatementModule": {
+      "ipdSharing": "NO"
+     }
+    },
+    "resultsSection": {
+     "participantFlowModule": {
+      "groups": [
+       {
+        "id": "FG000",
+        "title": "Semaglutide",
+        "description": "Semaglutide, added to standard of care, starting dose of 0.25mg titrated up to 1mg dose. for a total of 16 weeks.\n\nSemaglutide Pen Injector: semaglutide (up to 1mg) once weekly injection added to the standard of care weight loss program. Semaglutide dose will be started at 0.25 mg dose during the baseline visit and doubled every 2 weeks up to 1mg dose or up to maximum tolerable dose for total of 16 weeks of intervention"
+       },
+       {
+        "id": "FG001",
+        "title": "Standard of Care Only",
+        "description": "Standard of Care (SOC) weight loss intervention alone (personalized lifestyle and exercise)"
+       }
+      ],
+      "periods": [
+       {
+        "title": "Overall Study",
+        "milestones": [
+         {
+          "type": "STARTED",
+          "achievements": [
+           {
+            "groupId": "FG000",
+            "numSubjects": "8"
+           },
+           {
+            "groupId": "FG001",
+            "numSubjects": "8"
+           }
+          ]
+         },
+         {
+          "type": "COMPLETED",
+          "achievements": [
+           {
+            "groupId": "FG000",
+            "numSubjects": "7"
+           },
+           {
+            "groupId": "FG001",
+            "numSubjects": "7"
+           }
+          ]
+         },
+         {
+          "type": "NOT COMPLETED",
+          "achievements": [
+           {
+            "groupId": "FG000",
+            "numSubjects": "1"
+           },
+           {
+            "groupId": "FG001",
+            "numSubjects": "1"
+           }
+          ]
+         }
+        ],
+        "dropWithdraws": [
+         {
+          "type": "Withdrawal by Subject",
+          "reasons": [
+           {
+            "groupId": "FG000",
+            "numSubjects": "1"
+           },
+           {
+            "groupId": "FG001",
+            "numSubjects": "1"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     "baselineCharacteristicsModule": {
+      "groups": [
+       {
+        "id": "BG000",
+        "title": "Semaglutide",
+        "description": "Semaglutide, added to standard of care, starting dose of 0.25mg titrated up to 1mg dose. for a total of 16 weeks.\n\nSemaglutide Pen Injector: semaglutide (up to 1mg) once weekly injection added to the standard of care weight loss program. Semaglutide dose will be started at 0.25 mg dose during the baseline visit and doubled every 2 weeks up to 1mg dose or up to maximum tolerable dose for total of 16 weeks of intervention"
+       },
+       {
+        "id": "BG001",
+        "title": "Standard of Care Only",
+        "description": "Standard of Care (SOC) weight loss intervention alone (personalized lifestyle and exercise)"
+       },
+       {
+        "id": "BG002",
+        "title": "Total",
+        "description": "Total of all reporting groups"
+       }
+      ],
+      "denoms": [
+       {
+        "units": "Participants",
+        "counts": [
+         {
+          "groupId": "BG000",
+          "value": "7"
+         },
+         {
+          "groupId": "BG001",
+          "value": "7"
+         },
+         {
+          "groupId": "BG002",
+          "value": "14"
+         }
+        ]
+       }
+      ],
+      "measures": [
+       {
+        "title": "Age, Continuous",
+        "paramType": "MEAN",
+        "dispersionType": "STANDARD_DEVIATION",
+        "unitOfMeasure": "years",
+        "classes": [
+         {
+          "categories": [
+           {
+            "measurements": [
+             {
+              "groupId": "BG000",
+              "value": "70.0",
+              "spread": "5.0"
+             },
+             {
+              "groupId": "BG001",
+              "value": "69.7",
+              "spread": "5.1"
+             },
+             {
+              "groupId": "BG002",
+              "value": "69.8",
+              "spread": "4.9"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "title": "Sex: Female, Male",
+        "paramType": "COUNT_OF_PARTICIPANTS",
+        "unitOfMeasure": "Participants",
+        "classes": [
+         {
+          "categories": [
+           {
+            "title": "Female",
+            "measurements": [
+             {
+              "groupId": "BG000",
+              "value": "5"
+             },
+             {
+              "groupId": "BG001",
+              "value": "5"
+             },
+             {
+              "groupId": "BG002",
+              "value": "10"
+             }
+            ]
+           },
+           {
+            "title": "Male",
+            "measurements": [
+             {
+              "groupId": "BG000",
+              "value": "2"
+             },
+             {
+              "groupId": "BG001",
+              "value": "2"
+             },
+             {
+              "groupId": "BG002",
+              "value": "4"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "title": "Race (NIH/OMB)",
+        "paramType": "COUNT_OF_PARTICIPANTS",
+        "unitOfMeasure": "Participants",
+        "classes": [
+         {
+          "categories": [
+           {
+            "title": "American Indian or Alaska Native",
+            "measurements": [
+             {
+              "groupId": "BG000",
+              "value": "0"
+             },
+             {
+              "groupId": "BG001",
+              "value": "0"
+             },
+             {
+              "groupId": "BG002",
+              "value": "0"
+             }
+            ]
+           },
+           {
+            "title": "Asian",
+            "measurements": [
+             {
+              "groupId": "BG000",
+              "value": "0"
+             },
+             {
+              "groupId": "BG001",
+              "value": "0"
+             },
+             {
+              "groupId": "BG002",
+              "value": "0"
+             }
+            ]
+           },
+           {
+            "title": "Native Hawaiian or Other Pacific Islander",
+            "measurements": [
+             {
+              "groupId": "BG000",
+              "value": "0"
+             },
+             {
+              "groupId": "BG001",
+              "value": "0"
+             },
+             {
+              "groupId": "BG002",
+              "value": "0"
+             }
+            ]
+           },
+           {
+            "title": "Black or African American",
+            "measurements": [
+             {
+              "groupId": "BG000",
+              "value": "0"
+             },
+             {
+              "groupId": "BG001",
+              "value": "0"
+             },
+             {
+              "groupId": "BG002",
+              "value": "0"
+             }
+            ]
+           },
+           {
+            "title": "White",
+            "measurements": [
+             {
+              "groupId": "BG000",
+              "value": "7"
+             },
+             {
+              "groupId": "BG001",
+              "value": "7"
+             },
+             {
+              "groupId": "BG002",
+              "value": "14"
+             }
+            ]
+           },
+           {
+            "title": "More than one race",
+            "measurements": [
+             {
+              "groupId": "BG000",
+              "value": "0"
+             },
+             {
+              "groupId": "BG001",
+              "value": "0"
+             },
+             {
+              "groupId": "BG002",
+              "value": "0"
+             }
+            ]
+           },
+           {
+            "title": "Unknown or Not Reported",
+            "measurements": [
+             {
+              "groupId": "BG000",
+              "value": "0"
+             },
+             {
+              "groupId": "BG001",
+              "value": "0"
+             },
+             {
+              "groupId": "BG002",
+              "value": "0"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "title": "Region of Enrollment",
+        "paramType": "NUMBER",
+        "unitOfMeasure": "participants",
+        "classes": [
+         {
+          "title": "United States",
+          "categories": [
+           {
+            "measurements": [
+             {
+              "groupId": "BG000",
+              "value": "7"
+             },
+             {
+              "groupId": "BG001",
+              "value": "7"
+             },
+             {
+              "groupId": "BG002",
+              "value": "14"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "title": "Body mass index (BMI)",
+        "paramType": "MEAN",
+        "dispersionType": "STANDARD_DEVIATION",
+        "unitOfMeasure": "Kg/m^2",
+        "classes": [
+         {
+          "categories": [
+           {
+            "measurements": [
+             {
+              "groupId": "BG000",
+              "value": "38.2",
+              "spread": "4.7"
+             },
+             {
+              "groupId": "BG001",
+              "value": "37.0",
+              "spread": "4.3"
+             },
+             {
+              "groupId": "BG002",
+              "value": "37.8",
+              "spread": "4.4"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "title": "Weight",
+        "paramType": "MEAN",
+        "dispersionType": "STANDARD_DEVIATION",
+        "unitOfMeasure": "Kg",
+        "classes": [
+         {
+          "categories": [
+           {
+            "measurements": [
+             {
+              "groupId": "BG000",
+              "value": "107.8",
+              "spread": "19.8"
+             },
+             {
+              "groupId": "BG001",
+              "value": "100.0",
+              "spread": "17.8"
+             },
+             {
+              "groupId": "BG002",
+              "value": "103.9",
+              "spread": "19.5"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "title": "Total Fat Mass",
+        "paramType": "MEAN",
+        "dispersionType": "STANDARD_DEVIATION",
+        "unitOfMeasure": "Kg",
+        "classes": [
+         {
+          "categories": [
+           {
+            "measurements": [
+             {
+              "groupId": "BG000",
+              "value": "52.1",
+              "spread": "8.9"
+             },
+             {
+              "groupId": "BG001",
+              "value": "47.8",
+              "spread": "9.3"
+             },
+             {
+              "groupId": "BG002",
+              "value": "50.0",
+              "spread": "9.0"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "title": "Total Fat-Free Mass",
+        "paramType": "MEAN",
+        "dispersionType": "STANDARD_DEVIATION",
+        "unitOfMeasure": "Kg",
+        "classes": [
+         {
+          "categories": [
+           {
+            "measurements": [
+             {
+              "groupId": "BG000",
+              "value": "51.0",
+              "spread": "11.4"
+             },
+             {
+              "groupId": "BG001",
+              "value": "47.8",
+              "spread": "6.4"
+             },
+             {
+              "groupId": "BG002",
+              "value": "49.4",
+              "spread": "8.7"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     "outcomeMeasuresModule": {
+      "outcomeMeasures": [
+       {
+        "type": "PRIMARY",
+        "title": "Body Composition as Total Fat Mass/ Total Fat-free Mass Ratio",
+        "description": "total fat mass/total fat-free mass ratio reported as arbitrary units (ratio), calculated by dividing total fat mass by total fat-free mass (lean mass) at baseline and at 16 weeks in both groups. Primary measurements of fat and fat-free mass is done using DEXA",
+        "reportingStatus": "POSTED",
+        "paramType": "MEAN",
+        "dispersionType": "Standard Error",
+        "unitOfMeasure": "Arbitrary units (ratio)",
+        "timeFrame": "16 weeks",
+        "groups": [
+         {
+          "id": "OG000",
+          "title": "Semaglutide",
+          "description": "Semaglutide, added to standard of care, starting dose of 0.25mg titrated up to 1mg dose. for a total of 16 weeks.\n\nSemaglutide Pen Injector: semaglutide (up to 1mg) once weekly injection added to the standard of care weight loss program. Semaglutide dose will be started at 0.25 mg dose during the baseline visit and doubled every 2 weeks up to 1mg dose or up to maximum tolerable dose for total of 16 weeks of intervention"
+         },
+         {
+          "id": "OG001",
+          "title": "Standard of Care Only",
+          "description": "Standard of Care (SOC) weight loss intervention alone (personalized lifestyle and exercise)"
+         }
+        ],
+        "denoms": [
+         {
+          "units": "Participants",
+          "counts": [
+           {
+            "groupId": "OG000",
+            "value": "7"
+           },
+           {
+            "groupId": "OG001",
+            "value": "7"
+           }
+          ]
+         }
+        ],
+        "classes": [
+         {
+          "title": "Baseline",
+          "categories": [
+           {
+            "measurements": [
+             {
+              "groupId": "OG000",
+              "value": "1.04",
+              "spread": "0.07"
+             },
+             {
+              "groupId": "OG001",
+              "value": "1.0",
+              "spread": "0.07"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "title": "16 Weeks",
+          "categories": [
+           {
+            "measurements": [
+             {
+              "groupId": "OG000",
+              "value": "0.96",
+              "spread": "0.06"
+             },
+             {
+              "groupId": "OG001",
+              "value": "0.99",
+              "spread": "0.07"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "PRIMARY",
+        "title": "Body Weight",
+        "description": "body weight reported in Kg at at baseline and at 16 weeks in both groups",
+        "reportingStatus": "POSTED",
+        "paramType": "MEAN",
+        "dispersionType": "Standard Error",
+        "unitOfMeasure": "Kg",
+        "timeFrame": "16 weeks",
+        "groups": [
+         {
+          "id": "OG000",
+          "title": "Semaglutide",
+          "description": "Semaglutide, added to standard of care, starting dose of 0.25mg titrated up to 1mg dose. for a total of 16 weeks.\n\nSemaglutide Pen Injector: semaglutide (up to 1mg) once weekly injection added to the standard of care weight loss program. Semaglutide dose will be started at 0.25 mg dose during the baseline visit and doubled every 2 weeks up to 1mg dose or up to maximum tolerable dose for total of 16 weeks of intervention"
+         },
+         {
+          "id": "OG001",
+          "title": "Standard of Care Only",
+          "description": "Standard of Care (SOC) weight loss intervention alone (personalized lifestyle and exercise)"
+         }
+        ],
+        "denoms": [
+         {
+          "units": "Participants",
+          "counts": [
+           {
+            "groupId": "OG000",
+            "value": "7"
+           },
+           {
+            "groupId": "OG001",
+            "value": "7"
+           }
+          ]
+         }
+        ],
+        "classes": [
+         {
+          "title": "Baseline",
+          "categories": [
+           {
+            "measurements": [
+             {
+              "groupId": "OG000",
+              "value": "107.8",
+              "spread": "7.7"
+             },
+             {
+              "groupId": "OG001",
+              "value": "100.0",
+              "spread": "6.7"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "title": "16 weeks",
+          "categories": [
+           {
+            "measurements": [
+             {
+              "groupId": "OG000",
+              "value": "99.7",
+              "spread": "7.2"
+             },
+             {
+              "groupId": "OG001",
+              "value": "97.1",
+              "spread": "7.5"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "SECONDARY",
+        "title": "Total Fat Mass",
+        "description": "total fat mass reported in Kg and measured using DEXA at baseline and at 16 weeks in both groups",
+        "reportingStatus": "POSTED",
+        "paramType": "MEAN",
+        "dispersionType": "Standard Error",
+        "unitOfMeasure": "Kg",
+        "timeFrame": "16 weeks",
+        "groups": [
+         {
+          "id": "OG000",
+          "title": "Semaglutide",
+          "description": "Semaglutide, added to standard of care, starting dose of 0.25mg titrated up to 1mg dose. for a total of 16 weeks.\n\nSemaglutide Pen Injector: semaglutide (up to 1mg) once weekly injection added to the standard of care weight loss program. Semaglutide dose will be started at 0.25 mg dose during the baseline visit and doubled every 2 weeks up to 1mg dose or up to maximum tolerable dose for total of 16 weeks of intervention"
+         },
+         {
+          "id": "OG001",
+          "title": "Standard of Care Only",
+          "description": "Standard of Care (SOC) weight loss intervention alone (personalized lifestyle and exercise)"
+         }
+        ],
+        "denoms": [
+         {
+          "units": "Participants",
+          "counts": [
+           {
+            "groupId": "OG000",
+            "value": "7"
+           },
+           {
+            "groupId": "OG001",
+            "value": "7"
+           }
+          ]
+         }
+        ],
+        "classes": [
+         {
+          "title": "Baseline",
+          "categories": [
+           {
+            "measurements": [
+             {
+              "groupId": "OG000",
+              "value": "52.1",
+              "spread": "3.6"
+             },
+             {
+              "groupId": "OG001",
+              "value": "47.8",
+              "spread": "3.9"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "title": "16 weeks",
+          "categories": [
+           {
+            "measurements": [
+             {
+              "groupId": "OG000",
+              "value": "46.8",
+              "spread": "3.6"
+             },
+             {
+              "groupId": "OG001",
+              "value": "46.3",
+              "spread": "4.1"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "SECONDARY",
+        "title": "Total Fat-free Mass (Lean Mass)",
+        "description": "total fat-free mass (lean mass) reported in Kg and measured using DEXA at baseline and at 16 weeks in both groups",
+        "reportingStatus": "POSTED",
+        "paramType": "MEAN",
+        "dispersionType": "Standard Error",
+        "unitOfMeasure": "Kg",
+        "timeFrame": "16 weeks",
+        "groups": [
+         {
+          "id": "OG000",
+          "title": "Semaglutide",
+          "description": "Semaglutide, added to standard of care, starting dose of 0.25mg titrated up to 1mg dose. for a total of 16 weeks.\n\nSemaglutide Pen Injector: semaglutide (up to 1mg) once weekly injection added to the standard of care weight loss program. Semaglutide dose will be started at 0.25 mg dose during the baseline visit and doubled every 2 weeks up to 1mg dose or up to maximum tolerable dose for total of 16 weeks of intervention"
+         },
+         {
+          "id": "OG001",
+          "title": "Standard of Care Only",
+          "description": "Standard of Care (SOC) weight loss intervention alone (personalized lifestyle and exercise)"
+         }
+        ],
+        "denoms": [
+         {
+          "units": "Participants",
+          "counts": [
+           {
+            "groupId": "OG000",
+            "value": "7"
+           },
+           {
+            "groupId": "OG001",
+            "value": "7"
+           }
+          ]
+         }
+        ],
+        "classes": [
+         {
+          "title": "baseline",
+          "categories": [
+           {
+            "measurements": [
+             {
+              "groupId": "OG000",
+              "value": "51.0",
+              "spread": "4.2"
+             },
+             {
+              "groupId": "OG001",
+              "value": "47.8",
+              "spread": "2.2"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "title": "16 weeks",
+          "categories": [
+           {
+            "measurements": [
+             {
+              "groupId": "OG000",
+              "value": "49.5",
+              "spread": "4.0"
+             },
+             {
+              "groupId": "OG001",
+              "value": "47.0",
+              "spread": "2.4"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     "adverseEventsModule": {
+      "frequencyThreshold": "0",
+      "timeFrame": "16 weeks",
+      "eventGroups": [
+       {
+        "id": "EG000",
+        "title": "Semaglutide",
+        "description": "Semaglutide, added to standard of care, starting dose of 0.25mg titrated up to 1mg dose. for a total of 16 weeks.\n\nSemaglutide Pen Injector: semaglutide (up to 1mg) once weekly injection added to the standard of care weight loss program. Semaglutide dose will be started at 0.25 mg dose during the baseline visit and doubled every 2 weeks up to 1mg dose or up to maximum tolerable dose for total of 16 weeks of intervention",
+        "deathsNumAffected": 0,
+        "deathsNumAtRisk": 7,
+        "seriousNumAffected": 0,
+        "seriousNumAtRisk": 7,
+        "otherNumAffected": 5,
+        "otherNumAtRisk": 7
+       },
+       {
+        "id": "EG001",
+        "title": "Standard of Care Only",
+        "description": "Standard of Care (SOC) weight loss intervention alone (personalized lifestyle and exercise)",
+        "deathsNumAffected": 0,
+        "deathsNumAtRisk": 7,
+        "seriousNumAffected": 0,
+        "seriousNumAtRisk": 7,
+        "otherNumAffected": 1,
+        "otherNumAtRisk": 7
+       }
+      ],
+      "otherEvents": [
+       {
+        "term": "Gastrointestinal side effects: constipation",
+        "organSystem": "Gastrointestinal disorders",
+        "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+        "notes": "constipation",
+        "stats": [
+         {
+          "groupId": "EG000",
+          "numEvents": 4,
+          "numAffected": 4,
+          "numAtRisk": 7
+         },
+         {
+          "groupId": "EG001",
+          "numEvents": 1,
+          "numAffected": 1,
+          "numAtRisk": 7
+         }
+        ]
+       },
+       {
+        "term": "GI side effects: Nausea",
+        "organSystem": "Gastrointestinal disorders",
+        "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+        "notes": "Nausea",
+        "stats": [
+         {
+          "groupId": "EG000",
+          "numEvents": 2,
+          "numAffected": 2,
+          "numAtRisk": 7
+         },
+         {
+          "groupId": "EG001",
+          "numEvents": 1,
+          "numAffected": 1,
+          "numAtRisk": 7
+         }
+        ]
+       },
+       {
+        "term": "GI side effects: Vomiting",
+        "organSystem": "Gastrointestinal disorders",
+        "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+        "notes": "Vomiting",
+        "stats": [
+         {
+          "groupId": "EG000",
+          "numEvents": 1,
+          "numAffected": 1,
+          "numAtRisk": 7
+         },
+         {
+          "groupId": "EG001",
+          "numEvents": 0,
+          "numAffected": 0,
+          "numAtRisk": 7
+         }
+        ]
+       }
+      ]
+     },
+     "moreInfoModule": {
+      "certainAgreement": {
+       "piSponsorEmployee": true
+      },
+      "pointOfContact": {
+       "title": "Husam Ghanim",
+       "organization": "State University of NY at Buffalo",
+       "email": "ghanim@buffalo.edu",
+       "phone": "7168818924"
+      }
+     }
+    },
+    "documentSection": {
+     "largeDocumentModule": {
+      "largeDocs": [
+       {
+        "typeAbbrev": "Prot_SAP",
+        "hasProtocol": true,
+        "hasSap": true,
+        "hasIcf": false,
+        "label": "Study Protocol and Statistical Analysis Plan",
+        "date": "2022-11-22",
+        "uploadDate": "2025-03-31T10:58",
+        "filename": "Prot_SAP_000.pdf",
+        "size": 805619
+       },
+       {
+        "typeAbbrev": "ICF",
+        "hasProtocol": false,
+        "hasSap": false,
+        "hasIcf": true,
+        "label": "Informed Consent Form",
+        "date": "2023-03-06",
+        "uploadDate": "2025-03-26T13:31",
+        "filename": "ICF_001.pdf",
+        "size": 393807
+       }
+      ]
+     }
+    },
+    "derivedSection": {
+     "miscInfoModule": {
+      "versionHolder": "2026-08-07"
+     },
+     "conditionBrowseModule": {
+      "meshes": [
+       {
+        "id": "D009765",
+        "term": "Obesity"
+       }
+      ],
+      "ancestors": [
+       {
+        "id": "D050177",
+        "term": "Overweight"
+       },
+       {
+        "id": "D044343",
+        "term": "Overnutrition"
+       },
+       {
+        "id": "D009748",
+        "term": "Nutrition Disorders"
+       },
+       {
+        "id": "D009750",
+        "term": "Nutritional and Metabolic Diseases"
+       },
+       {
+        "id": "D001835",
+        "term": "Body Weight"
+       },
+       {
+        "id": "D012816",
+        "term": "Signs and Symptoms"
+       },
+       {
+        "id": "D013568",
+        "term": "Pathological Conditions, Signs and Symptoms"
+       }
+      ]
+     },
+     "interventionBrowseModule": {
+      "meshes": [
+       {
+        "id": "C000591245",
+        "term": "semaglutide"
+       }
+      ]
+     }
+    },
+    "hasResults": true
+   },
+   {
+    "protocolSection": {
+     "identificationModule": {
+      "nctId": "NCT01686945",
+      "orgStudyIdInfo": {
+       "id": "NN9924-3991"
+      },
+      "secondaryIdInfos": [
+       {
+        "id": "2012-000361-20",
+        "type": "EUDRACT_NUMBER"
+       },
+       {
+        "id": "U1111-1127-4408",
+        "type": "OTHER",
+        "domain": "WHO"
+       }
+      ],
+      "organization": {
+       "fullName": "Novo Nordisk A/S",
+       "class": "INDUSTRY"
+      },
+      "briefTitle": "Investigation on Safety, Tolerability, Pharmacokinetics and Pharmacodynamics of Multiple Doses of a Long-acting GLP-1 Analogue in Healthy Male Subjects and Male Subjects With Type 2 Diabetes",
+      "officialTitle": "Investigation on Safety, Tolerability, Pharmacokinetics and Pharmacodynamics of Multiple Doses of a Long-acting GLP-1 Analogue in Healthy Male Subjects and Male Subjects With Type 2 Diabetes"
+     },
+     "statusModule": {
+      "statusVerifiedDate": "2019-01",
+      "overallStatus": "COMPLETED",
+      "expandedAccessInfo": {
+       "hasExpandedAccess": false
+      },
+      "startDateStruct": {
+       "date": "2012-09-19",
+       "type": "ACTUAL"
+      },
+      "primaryCompletionDateStruct": {
+       "date": "2013-04-08",
+       "type": "ACTUAL"
+      },
+      "completionDateStruct": {
+       "date": "2013-04-08",
+       "type": "ACTUAL"
+      },
+      "studyFirstSubmitDate": "2012-09-13",
+      "studyFirstSubmitQcDate": "2012-09-13",
+      "studyFirstPostDateStruct": {
+       "date": "2012-09-18",
+       "type": "ESTIMATED"
+      },
+      "lastUpdateSubmitDate": "2019-01-02",
+      "lastUpdatePostDateStruct": {
+       "date": "2019-01-04",
+       "type": "ACTUAL"
+      }
+     },
+     "sponsorCollaboratorsModule": {
+      "responsibleParty": {
+       "type": "SPONSOR"
+      },
+      "leadSponsor": {
+       "name": "Novo Nordisk A/S",
+       "class": "INDUSTRY"
+      }
+     },
+     "oversightModule": {
+      "oversightHasDmc": false
+     },
+     "descriptionModule": {
+      "briefSummary": "This trial is conducted in Europe. The aim of the trial is to investigate safety, tolerability, pharmacokinetics (the exposure of the trial drug in the body), and pharmacodynamics (the effect of the investigated drug on the body) of multiple doses of a long-acting GLP-1 analogue (oral semaglutide) and a carrier in healthy male subjects and male subjects with type 2 diabetes (T2D)."
+     },
+     "conditionsModule": {
+      "conditions": [
+       "Diabetes",
+       "Diabetes Mellitus, Type 2",
+       "Healthy"
+      ]
+     },
+     "designModule": {
+      "studyType": "INTERVENTIONAL",
+      "phases": [
+       "PHASE1"
+      ],
+      "designInfo": {
+       "allocation": "RANDOMIZED",
+       "interventionModel": "PARALLEL",
+       "primaryPurpose": "TREATMENT",
+       "maskingInfo": {
+        "masking": "DOUBLE",
+        "whoMasked": [
+         "PARTICIPANT",
+         "INVESTIGATOR"
+        ]
+       }
+      },
+      "enrollmentInfo": {
+       "count": 107,
+       "type": "ACTUAL"
+      }
+     },
+     "armsInterventionsModule": {
+      "armGroups": [
+       {
+        "label": "Healthy - 20 mg",
+        "type": "EXPERIMENTAL",
+        "interventionNames": [
+         "Drug: semaglutide",
+         "Drug: placebo"
+        ]
+       },
+       {
+        "label": "Healthy - 40 mg",
+        "type": "EXPERIMENTAL",
+        "interventionNames": [
+         "Drug: semaglutide",
+         "Drug: placebo"
+        ]
+       },
+       {
+        "label": "Healthy - 60 mg",
+        "type": "EXPERIMENTAL",
+        "interventionNames": [
+         "Drug: semaglutide",
+         "Drug: placebo"
+        ]
+       },
+       {
+        "label": "T2D - 20/40/60 mg",
+        "type": "EXPERIMENTAL",
+        "interventionNames": [
+         "Drug: semaglutide",
+         "Drug: placebo"
+        ]
+       }
+      ],
+      "interventions": [
+       {
+        "type": "DRUG",
+        "name": "semaglutide",
+        "description": "Start doses of 5 mg and 10 mg with end dose of 20 mg. For oral administration.",
+        "armGroupLabels": [
+         "Healthy - 20 mg"
+        ]
+       },
+       {
+        "type": "DRUG",
+        "name": "semaglutide",
+        "description": "Start doses of 5 mg and 10 mg with end doses of either 20 mg or 40 mg. For oral administration.",
+        "armGroupLabels": [
+         "Healthy - 40 mg"
+        ]
+       },
+       {
+        "type": "DRUG",
+        "name": "semaglutide",
+        "description": "Start doses of 5 mg and 10 mg with end doses of either 20 mg, 40 mg or 60 mg. For oral administration.",
+        "armGroupLabels": [
+         "Healthy - 60 mg",
+         "T2D - 20/40/60 mg"
+        ]
+       },
+       {
+        "type": "DRUG",
+        "name": "placebo",
+        "description": "Placebo semaglutide. For oral administration.",
+        "armGroupLabels": [
+         "Healthy - 20 mg",
+         "Healthy - 40 mg",
+         "Healthy - 60 mg",
+         "T2D - 20/40/60 mg"
+        ]
+       },
+       {
+        "type": "DRUG",
+        "name": "placebo",
+        "description": "Placebo semaglutide with carrier. For oral administration.",
+        "armGroupLabels": [
+         "Healthy - 20 mg",
+         "Healthy - 40 mg",
+         "Healthy - 60 mg",
+         "T2D - 20/40/60 mg"
+        ]
+       }
+      ]
+     },
+     "outcomesModule": {
+      "primaryOutcomes": [
+       {
+        "measure": "Number of treatment emergent adverse events (TEAEs) recorded",
+        "timeFrame": "From the time of first dosing and until completion of the post treatment follow-up visits (Day 90 to 104)"
+       }
+      ],
+      "secondaryOutcomes": [
+       {
+        "measure": "Area under the plasma concentration curve over the dosing interval (0-24 hours)",
+        "timeFrame": "After the last 3 daily doses for semaglutide and carrier"
+       },
+       {
+        "measure": "Change from baseline in fasting plasma glucose (FPG)",
+        "timeFrame": "Week 0, week 10 (Day 69)"
+       },
+       {
+        "measure": "Change from baseline in C-peptide",
+        "timeFrame": "Week 0, week 10 (Day 69)"
+       },
+       {
+        "measure": "Change from baseline in insulin",
+        "timeFrame": "Week 0, week 10 (Day 69)"
+       },
+       {
+        "measure": "Change from baseline in glucagon",
+        "timeFrame": "Week 0, week 10 (Day 69)"
+       },
+       {
+        "measure": "Change from baseline in glycosylated haemoglobin type A1c (HbA1c)",
+        "timeFrame": "Week 0, week 10 (Day 69)"
+       }
+      ]
+     },
+     "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Male subject, who is considered to be generally healthy, based on the medical history, physical examination, and the results of vital signs, electrocardiogram (ECG) and laboratory safety tests performed during the screening visit, as judged by the investigator. This also applies to subjects with T2D, except for the underlying diabetes with or without associated hyperlipidaemia and/or hypertension\n* Body mass index (BMI): a) Healthy subjects: above or equal to 20 and below 30 kg/m\\^2. b) Subjects with T2D: BMI above or equal to 20 and below or equal to 37 kg/m\\^2\n* Glycosylated haemoglobin (HbA1c): a) Healthy subjects: below 6.0%. b) Subjects with T2D: between 6.5 and 9.0% (both inclusive)\n* Additional inclusion criterion only for subjects with T2D: Male subjects with T2D (diagnosed within the past 10 years) treated with diet and exercise and/or who have been on stable doses of metformin for at least 12 weeks prior to Visit 3 (Day -1 or 0) and for whom no changes in treatment are planned for the trial period\n\nExclusion Criteria:\n\n* History of, or presence of, cancer, diabetes (only for healthy subjects) or any clinically significant cardiovascular (only for healthy subjects), respiratory, metabolic, renal, hepatic, gastro-intestinal (GI), endocrinological (except diabetes in subjects with T2D), haematological, dermatological, venereal, neurological, psychiatric diseases or other major disorders, as judged by the investigator\n* Blood pressure in supine position at the screening examination above: a) 140 mmHg systolic and/or above 90 mmHg diastolic for healthy subjects. b) 160 mmHg systolic and/or above 95 mmHg diastolic for subjects with T2D\n* Use of prescription or non-prescription medicinal products (except routine vitamins) within three weeks preceding the dosing. Occasional use of paracetamol or acetylsalicylic acid is permitted. a. For subjects with T2D: Any other current diabetes treatment apart from metformin (e.g. treatment with incretin mimetics, Dipeptidyl Peptidase-IV (DPP-IV) inhibitors, insulin secretagogues, insulin or thiazolidinediones (TZDs)). Use of blood lipidregulating agents, as well as blood pressure regulating, and thrombo-embolic agents is allowed\n* Exclusion criteria only for subjects with T2D:\n* Proliferative retinopathy or maculopathy requiring acute treatment as determined by funduscopy/fundus photography and judged by the investigator. If subject presents a medical certificate for funduscopy/fundus photography performed within last 3 months this can substitute the funduscopy/fundus photography at screening\n* Nephropathy stages 3 to 5, i.e. estimated glomerular filtration rate (eGFR) below 60. The eGFRshould be determined using the Modification of Diet in Renal Disease 4-variable method encompassing creatinine, age, gender, and race\n* Diabetic peripheral neuropathy using the 10 g Semmes-Weinstein monofilament examination at the great toe or plantar aspect of the fifth metatarsal\n* Clinically significant active cardiovascular disease including history of myocardial infarction and/or heart failure (New York Heart Association (NYHA) class III and IV1) at the discretion of the investigator",
+      "healthyVolunteers": true,
+      "sex": "MALE",
+      "minimumAge": "18 Years",
+      "maximumAge": "64 Years",
+      "stdAges": [
+       "ADULT"
+      ]
+     },
+     "contactsLocationsModule": {
+      "overallOfficials": [
+       {
+        "name": "Global Clinical Registry (GCR, 1452)",
+        "affiliation": "Novo Nordisk A/S",
+        "role": "STUDY_DIRECTOR"
+       }
+      ],
+      "locations": [
+       {
+        "facility": "Novo Nordisk Investigational Site",
+        "city": "Berlin",
+        "zip": "14050",
+        "country": "Germany",
+        "geoPoint": {
+         "lat": 52.52437,
+         "lon": 13.41053
+        }
+       }
+      ]
+     },
+     "referencesModule": {
+      "references": [
+       {
+        "pmid": "30566096",
+        "type": "RESULT",
+        "citation": "Seco A, Aparicio S, Gonzalez-Camejo J, Jimenez-Benitez A, Mateo O, Mora JF, Noriega-Hevia G, Sanchis-Perucho P, Serna-Garcia R, Zamorano-Lopez N, Gimenez JB, Ruiz-Martinez A, Aguado D, Barat R, Borras L, Bouzas A, Marti N, Paches M, Ribes J, Robles A, Ruano MV, Serralta J, Ferrer J. Resource recovery from sulphate-rich sewage through an innovative anaerobic-based water resource recovery facility (WRRF). Water Sci Technol. 2018 Dec;78(9):1925-1936. doi: 10.2166/wst.2018.492."
+       },
+       {
+        "pmid": "30565096",
+        "type": "DERIVED",
+        "citation": "Granhall C, Donsmark M, Blicher TM, Golor G, Sondergaard FL, Thomsen M, Baekdal TA. Safety and Pharmacokinetics of Single and Multiple Ascending Doses of the Novel Oral Human GLP-1 Analogue, Oral Semaglutide, in Healthy Subjects and Subjects with Type 2 Diabetes. Clin Pharmacokinet. 2019 Jun;58(6):781-791. doi: 10.1007/s40262-018-0728-4."
+       }
+      ],
+      "seeAlsoLinks": [
+       {
+        "label": "Clinical Trials at Novo Nordisk",
+        "url": "http://novonordisk-trials.com"
+       }
+      ]
+     }
+    },
+    "derivedSection": {
+     "miscInfoModule": {
+      "versionHolder": "2026-08-07"
+     },
+     "conditionBrowseModule": {
+      "meshes": [
+       {
+        "id": "D003920",
+        "term": "Diabetes Mellitus"
+       },
+       {
+        "id": "D003924",
+        "term": "Diabetes Mellitus, Type 2"
+       }
+      ],
+      "ancestors": [
+       {
+        "id": "D044882",
+        "term": "Glucose Metabolism Disorders"
+       },
+       {
+        "id": "D008659",
+        "term": "Metabolic Diseases"
+       },
+       {
+        "id": "D009750",
+        "term": "Nutritional and Metabolic Diseases"
+       },
+       {
+        "id": "D004700",
+        "term": "Endocrine System Diseases"
+       }
+      ]
+     },
+     "interventionBrowseModule": {
+      "meshes": [
+       {
+        "id": "C000591245",
+        "term": "semaglutide"
+       }
+      ]
+     }
+    },
+    "hasResults": false
+   },
+   {
+    "protocolSection": {
+     "identificationModule": {
+      "nctId": "NCT03600480",
+      "orgStudyIdInfo": {
+       "id": "NN9838-4395"
+      },
+      "secondaryIdInfos": [
+       {
+        "id": "U1111-1203-6796",
+        "type": "OTHER",
+        "domain": "World Health Organization (WHO)"
+       }
+      ],
+      "organization": {
+       "fullName": "Novo Nordisk A/S",
+       "class": "INDUSTRY"
+      },
+      "briefTitle": "A Research Study of How NNC0174-0833 Taken With Semaglutide Works in People Who Are Overweight or Obese",
+      "officialTitle": "Investigation of Safety, Tolerability, Pharmacokinetics and Pharmacodynamics of Multiple Dosing of NNC0174-0833 in Combination With Semaglutide in Subjects Being Overweight or With Obesity"
+     },
+     "statusModule": {
+      "statusVerifiedDate": "2021-11",
+      "overallStatus": "COMPLETED",
+      "expandedAccessInfo": {
+       "hasExpandedAccess": false
+      },
+      "startDateStruct": {
+       "date": "2018-07-25",
+       "type": "ACTUAL"
+      },
+      "primaryCompletionDateStruct": {
+       "date": "2020-06-12",
+       "type": "ACTUAL"
+      },
+      "completionDateStruct": {
+       "date": "2020-06-12",
+       "type": "ACTUAL"
+      },
+      "studyFirstSubmitDate": "2018-07-17",
+      "studyFirstSubmitQcDate": "2018-07-17",
+      "studyFirstPostDateStruct": {
+       "date": "2018-07-26",
+       "type": "ACTUAL"
+      },
+      "lastUpdateSubmitDate": "2021-11-16",
+      "lastUpdatePostDateStruct": {
+       "date": "2021-11-17",
+       "type": "ACTUAL"
+      }
+     },
+     "sponsorCollaboratorsModule": {
+      "responsibleParty": {
+       "type": "SPONSOR"
+      },
+      "leadSponsor": {
+       "name": "Novo Nordisk A/S",
+       "class": "INDUSTRY"
+      }
+     },
+     "oversightModule": {
+      "oversightHasDmc": false,
+      "isFdaRegulatedDrug": true,
+      "isFdaRegulatedDevice": false
+     },
+     "descriptionModule": {
+      "briefSummary": "The aim of this study is to find out how NNC0174-0833 taken with semaglutide works in people who are overweight or obese. Both study medicines have been investigated on their own. The study also looks at how the study medicines behave in participant's body and how they are removed from the participant's body. Participants will get 1 of the following 2 treatments - which treatment any participant gets is decided by chance: Semaglutide (a new medicine) and NNC0174-0833 (a potential new medicine), or semaglutide and placebo (a \"dummy medicine similar to the study medicine but without active ingredients). Participants will get 2 injections per week for 20 weeks. A study nurse at the clinic will inject the medicine with a needle in a skin fold in the participant's stomach area. The study will last for about 16 months, but duration of participation for any participant will last up to about 7.5 months. Participants will have 28 clinic visits with the study staff and some will be overnight visits. Participants will be asked about their health, medical history and habits including mental health questionnaires."
+     },
+     "conditionsModule": {
+      "conditions": [
+       "Obesity",
+       "Overweight"
+      ]
+     },
+     "designModule": {
+      "studyType": "INTERVENTIONAL",
+      "phases": [
+       "PHASE1"
+      ],
+      "designInfo": {
+       "allocation": "RANDOMIZED",
+       "interventionModel": "PARALLEL",
+       "primaryPurpose": "TREATMENT",
+       "maskingInfo": {
+        "masking": "QUADRUPLE",
+        "maskingDescription": "Sponsor staff involved in the clinical trial is masked according to company standard procedures",
+        "whoMasked": [
+         "PARTICIPANT",
+         "CARE_PROVIDER",
+         "INVESTIGATOR",
+         "OUTCOMES_ASSESSOR"
+        ]
+       }
+      },
+      "enrollmentInfo": {
+       "count": 96,
+       "type": "ACTUAL"
+      }
+     },
+     "armsInterventionsModule": {
+      "armGroups": [
+       {
+        "label": "NNC0174-0833+Semaglutide",
+        "type": "EXPERIMENTAL",
+        "description": "Participants will receive increasing doses of NNC0174-0833 along with semaglutide. The treatment period from first treatment (Day 1) to end of the treatment (Day 141) will be 20 weeks.",
+        "interventionNames": [
+         "Drug: NNC0174-0833",
+         "Drug: Semaglutide"
+        ]
+       },
+       {
+        "label": "Placebo (NNC0174-0833)+Semaglutide",
+        "type": "ACTIVE_COMPARATOR",
+        "description": "Participants will receive placebo (NNC0174-0833) along with semaglutide. The treatment period from first treatment (Day 1) to end of the treatment (Day 141) will be 20 weeks",
+        "interventionNames": [
+         "Drug: Semaglutide",
+         "Drug: Placebo (NNC0174-0833)"
+        ]
+       }
+      ],
+      "interventions": [
+       {
+        "type": "DRUG",
+        "name": "NNC0174-0833",
+        "description": "Participants will receive increasing dose levels of 0.16 mg, 0.3 mg, 0.6 mg, 1.2 mg, 2.4 mg or 4.5 mg of NNC0174-0833 (subcutaneous \\[s.c.\\], in a lifted fold of the abdominal skin) injection once weekly starting with a very low dose and then escalated every 4 weeks to a slightly higher dose each time. Each participant will only be given one dose level.",
+        "armGroupLabels": [
+         "NNC0174-0833+Semaglutide"
+        ]
+       },
+       {
+        "type": "DRUG",
+        "name": "Semaglutide",
+        "description": "Participants will receive 2.4 mg of semaglutide (s.c., in a lifted fold of the abdominal skin) injection once weekly starting with a very low dose and then escalated every 4 weeks to a slightly higher dose each time.",
+        "armGroupLabels": [
+         "NNC0174-0833+Semaglutide",
+         "Placebo (NNC0174-0833)+Semaglutide"
+        ]
+       },
+       {
+        "type": "DRUG",
+        "name": "Placebo (NNC0174-0833)",
+        "description": "Participants will receive once weekly injections of NNC0174-0833 matched placebo.",
+        "armGroupLabels": [
+         "Placebo (NNC0174-0833)+Semaglutide"
+        ]
+       }
+      ]
+     },
+     "outcomesModule": {
+      "primaryOutcomes": [
+       {
+        "measure": "Number of treatment emergent adverse events (TEAEs)",
+        "description": "Count of events",
+        "timeFrame": "From first administration of NNC0174-0833 (Day 1) to completion of the post-treatment follow-up (Day 176)"
+       }
+      ],
+      "secondaryOutcomes": [
+       {
+        "measure": "AUC0-168h,AM833,SS: the area under the NNC0174-0833 plasma concentration-time curve from 0 to 168 hours at steady state",
+        "description": "Measured in nmol\\*h/L",
+        "timeFrame": "From last dose (Day 134) until end of treatment (Day 141)"
+       },
+       {
+        "measure": "Cmax,AM833,SS: the maximum concentration of NNC0174-0833 in plasma at steady state",
+        "description": "Measured in nmol/L",
+        "timeFrame": "From last dose (Day 134) until end of treatment (Day 141)"
+       },
+       {
+        "measure": "AUC0-168h,sema,SS: the area under the semaglutide plasma concentration-time curve from 0 to 168 hours at steady state",
+        "description": "Measured in nmol\\*h/L",
+        "timeFrame": "From last dose (Day 134) until end of treatment (Day 141)"
+       },
+       {
+        "measure": "Cmax,sema,SS: the maximum concentration of semaglutide in plasma at steady state",
+        "description": "Measured in nmol/L",
+        "timeFrame": "From last dose (Day 134) until end of treatment (Day 141)"
+       }
+      ]
+     },
+     "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Male or female of non-childbearing potential, aged 18-55 years (both inclusive) at the time of signing informed consent.\n* Body mass index (BMI) between 27.0 and 39.9 kg/sqm (both inclusive) at screening. Overweight should be due to excess adipose tissue, as judged by the investigator.\n\nExclusion Criteria:\n\n* Any disorder at screening which in the investigator's opinion might jeopardise subject's safety or compliance with the protocol.\n* Male subject who is not sexually abstinent or surgically sterilised (vasectomy) and is sexually active with female partner(s) of childbearing potential and is not using a highly effective method of contraception (such as condom with spermicide) combined with a highly effective method of contraception for their non-pregnant female partner(s) (Pearl Index below 1%, such as implants, injectables, oral contraceptives, intrauterine devices, diaphragm or cervical cap+spermicide), and/or intend to donate sperm in the period from screening until 3 months following administration of the last dose of investigational medical product.",
+      "healthyVolunteers": false,
+      "sex": "ALL",
+      "minimumAge": "18 Years",
+      "maximumAge": "55 Years",
+      "stdAges": [
+       "ADULT"
+      ]
+     },
+     "contactsLocationsModule": {
+      "overallOfficials": [
+       {
+        "name": "Clinical Reporting Anchor and Disclosure 1452",
+        "affiliation": "Novo Nordisk A/S",
+        "role": "STUDY_DIRECTOR"
+       }
+      ],
+      "locations": [
+       {
+        "facility": "Novo Nordisk Investigational Site",
+        "city": "Overland Park",
+        "state": "Kansas",
+        "zip": "66212",
+        "country": "United States",
+        "geoPoint": {
+         "lat": 38.98223,
+         "lon": -94.67079
+        }
+       }
+      ]
+     },
+     "referencesModule": {
+      "references": [
+       {
+        "pmid": "33894838",
+        "type": "RESULT",
+        "citation": "Enebo LB, Berthelsen KK, Kankam M, Lund MT, Rubino DM, Satylganova A, Lau DCW. Safety, tolerability, pharmacokinetics, and pharmacodynamics of concomitant administration of multiple doses of cagrilintide with semaglutide 2.4 mg for weight management: a randomised, controlled, phase 1b trial. Lancet. 2021 May 8;397(10286):1736-1748. doi: 10.1016/S0140-6736(21)00845-X. Epub 2021 Apr 22."
+       }
+      ]
+     },
+     "ipdSharingStatementModule": {
+      "ipdSharing": "YES",
+      "description": "According to the Novo Nordisk disclosure commitment on novonordisktrials.com",
+      "url": "http://novonordisk-trials.com"
+     }
+    },
+    "derivedSection": {
+     "miscInfoModule": {
+      "versionHolder": "2026-08-07"
+     },
+     "conditionBrowseModule": {
+      "meshes": [
+       {
+        "id": "D009765",
+        "term": "Obesity"
+       },
+       {
+        "id": "D050177",
+        "term": "Overweight"
+       }
+      ],
+      "ancestors": [
+       {
+        "id": "D044343",
+        "term": "Overnutrition"
+       },
+       {
+        "id": "D009748",
+        "term": "Nutrition Disorders"
+       },
+       {
+        "id": "D009750",
+        "term": "Nutritional and Metabolic Diseases"
+       },
+       {
+        "id": "D001835",
+        "term": "Body Weight"
+       },
+       {
+        "id": "D012816",
+        "term": "Signs and Symptoms"
+       },
+       {
+        "id": "D013568",
+        "term": "Pathological Conditions, Signs and Symptoms"
+       }
+      ]
+     },
+     "interventionBrowseModule": {
+      "meshes": [
+       {
+        "id": "C000591245",
+        "term": "semaglutide"
+       }
+      ]
+     }
+    },
+    "hasResults": false
+   }
+  ]
+ }
+}

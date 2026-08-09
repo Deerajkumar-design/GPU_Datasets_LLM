@@ -1,0 +1,7167 @@
+{
+ "request_url": "https://api.worldbank.org/v2/country/USA;CHN;JPN;DEU;IND/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+ "status": 200,
+ "retrieved_at": "2026-08-09T04:07:16Z",
+ "payload": [
+  {
+   "page": 1,
+   "pages": 1,
+   "per_page": 447,
+   "total": 447
+  },
+  [
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2025",
+    "value": 5059.62596411213,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2024",
+    "value": 4925.43644992666,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2023",
+    "value": 4876.2992959843,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2022",
+    "value": 4730.83484836107,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2021",
+    "value": 4287.17313995098,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2020",
+    "value": 3853.70288774146,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2019",
+    "value": 4106.94856160358,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2018",
+    "value": 3860.95353090726,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2017",
+    "value": 3798.88326174526,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2016",
+    "value": 3521.46943457574,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2015",
+    "value": 3288.22269725538,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2014",
+    "value": 3441.06808464008,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2013",
+    "value": 3566.60284506078,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2012",
+    "value": 3632.27254030331,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2011",
+    "value": 3579.46442466152,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2010",
+    "value": 3065.68348377765,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2009",
+    "value": 2218.48541852977,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2008",
+    "value": 2124.55483920618,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2007",
+    "value": 1823.21976255073,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2006",
+    "value": 1558.31562847163,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2005",
+    "value": 1238.21447629488,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2004",
+    "value": 1126.84004447173,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2003",
+    "value": 1043.2105838671,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2002",
+    "value": 881.002913569131,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2001",
+    "value": 732.307093405708,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2000",
+    "value": 763.711124950924,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1999",
+    "value": 657.268934667018,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1998",
+    "value": 454.877800792123,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1997",
+    "value": 1044.60674832472,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1996",
+    "value": 1118.92133024129,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1995",
+    "value": 1011.22614205568,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1994",
+    "value": 899.793982949817,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1993",
+    "value": 817.395116417856,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1992",
+    "value": 673.67103954742,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1991",
+    "value": 624.387495384411,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1990",
+    "value": 578.420121135382,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1989",
+    "value": 524.143027322576,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1988",
+    "value": 476.662483405818,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1987",
+    "value": 437.60655039936,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1986",
+    "value": 469.834241253429,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1985",
+    "value": 511.400883618027,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1984",
+    "value": 519.774063103241,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1983",
+    "value": 507.682945653414,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1982",
+    "value": 577.745632722784,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1981",
+    "value": 560.830336032961,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1980",
+    "value": 486.620172021155,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1979",
+    "value": 353.424175826329,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1978",
+    "value": 362.483779779007,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1977",
+    "value": 330.670214101079,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1976",
+    "value": 275.713167824796,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1975",
+    "value": 231.060120618497,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1974",
+    "value": 200.710984454591,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1973",
+    "value": 129.886231088685,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1972",
+    "value": 90.1147549138956,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1971",
+    "value": 78.5428393869752,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1970",
+    "value": 79.118823484002,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1969",
+    "value": 74.0988114128793,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1968",
+    "value": 64.6547730642556,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1967",
+    "value": 53.2051866988581,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1966",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1965",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1964",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1963",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1962",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1961",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1960",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2024",
+    "value": 25103.565661423,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2023",
+    "value": 22145.2660647429,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2022",
+    "value": 18891.2121169279,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2021",
+    "value": 18635.5104895754,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2020",
+    "value": 16150.9304813473,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2019",
+    "value": 15874.5220531254,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2018",
+    "value": 15658.210586693,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2017",
+    "value": 13913.3415190124,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2016",
+    "value": 12464.0121044827,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2015",
+    "value": 12637.5220324406,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2014",
+    "value": 14262.2841914116,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2013",
+    "value": 13621.9023794031,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2012",
+    "value": 13087.420943321,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2011",
+    "value": 13867.6669408192,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2010",
+    "value": 12567.7317676382,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2009",
+    "value": 11556.3026866026,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2008",
+    "value": 14048.5604672654,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2007",
+    "value": 11272.5293683383,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2006",
+    "value": 9068.85528307627,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2005",
+    "value": 8043.92332253757,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2004",
+    "value": 6711.72715262967,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2003",
+    "value": 5720.81366178104,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2002",
+    "value": 5223.45178967082,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2001",
+    "value": 5015.23790036613,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2000",
+    "value": 4520.64100449111,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1999",
+    "value": 4415.50067547826,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1998",
+    "value": 4533.5356551781,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1997",
+    "value": 4137.00831823145,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1996",
+    "value": 4163.51195431959,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1995",
+    "value": 3700.95956775144,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1994",
+    "value": 2874.83163555069,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1993",
+    "value": 2497.13055936127,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1992",
+    "value": 2459.02068468253,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1991",
+    "value": 2235.54108862522,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1990",
+    "value": 1731.2095094382,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2024",
+    "value": 86169.6641581917,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2023",
+    "value": 82586.7847707894,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2022",
+    "value": 78008.6895811877,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2021",
+    "value": 71441.2319805947,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2020",
+    "value": 64465.2971415748,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2019",
+    "value": 65227.9565911038,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2018",
+    "value": 62875.6661382728,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2017",
+    "value": 60047.7190728307,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2016",
+    "value": 57976.628204291,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2015",
+    "value": 56849.4697923159,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2014",
+    "value": 55153.3940182967,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2013",
+    "value": 53297.3862901595,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2012",
+    "value": 51708.3940614082,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2011",
+    "value": 50024.8812320773,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2010",
+    "value": 48642.6312088213,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2009",
+    "value": 47194.9500893872,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2008",
+    "value": 48570.0594269601,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2007",
+    "value": 48050.227412195,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2006",
+    "value": 46301.9876485519,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2005",
+    "value": 44123.3996470026,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2004",
+    "value": 41724.6411982614,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2003",
+    "value": 39490.3023903176,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2002",
+    "value": 37997.7424300242,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2001",
+    "value": 37133.6203973517,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2000",
+    "value": 36329.9702595751,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "1999",
+    "value": 34515.3813073394,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "1998",
+    "value": 32853.6725949234,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "1997",
+    "value": 31459.1299691554,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "1996",
+    "value": 29967.7127181749,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "1995",
+    "value": 28690.8757013347,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "1994",
+    "value": 27694.853416234,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "1993",
+    "value": 26387.2937338171,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "1992",
+    "value": 25418.9907763319,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "1991",
+    "value": 24342.2589048189,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "1990",
+    "value": 23888.6000088133,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2025",
+    "value": 28419.5777395638,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2024",
+    "value": 25103.565661423,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2023",
+    "value": 22145.2660647429,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2022",
+    "value": 18891.2121169279,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2021",
+    "value": 18635.5104895754,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2020",
+    "value": 16150.9304813473,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2019",
+    "value": 15874.5220531254,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2018",
+    "value": 15658.210586693,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2017",
+    "value": 13913.3415190124,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2016",
+    "value": 12464.0121044827,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2015",
+    "value": 12637.5220324406,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2014",
+    "value": 14262.2841914116,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2013",
+    "value": 13621.9023794031,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2012",
+    "value": 13087.420943321,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2011",
+    "value": 13867.6669408192,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2010",
+    "value": 12567.7317676382,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2009",
+    "value": 11556.3026866026,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2008",
+    "value": 14048.5604672654,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2007",
+    "value": 11272.5293683383,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2006",
+    "value": 9068.85528307627,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2005",
+    "value": 8043.92332253757,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2004",
+    "value": 6711.72715262967,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2003",
+    "value": 5720.81366178104,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2002",
+    "value": 5223.45178967082,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2001",
+    "value": 5015.23790036613,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2000",
+    "value": 4520.64100449111,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1999",
+    "value": 4415.50067547826,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1998",
+    "value": 4533.5356551781,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1997",
+    "value": 4137.00831823145,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1996",
+    "value": 4163.51195431959,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1995",
+    "value": 3700.95956775144,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1994",
+    "value": 2874.83163555069,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1993",
+    "value": 2497.13055936127,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1992",
+    "value": 2459.02068468253,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1991",
+    "value": 2235.54108862522,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1990",
+    "value": 1731.2095094382,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1989",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1988",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1987",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1986",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1985",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1984",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1983",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1982",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1981",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1980",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1979",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1978",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1977",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1976",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1975",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1974",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1973",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1972",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1971",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1970",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1969",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1968",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1967",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1966",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1965",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1964",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1963",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1962",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1961",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1960",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2024",
+    "value": 4925.43644992666,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2023",
+    "value": 4876.2992959843,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2022",
+    "value": 4730.83484836107,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2021",
+    "value": 4287.17313995098,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2020",
+    "value": 3853.70288774146,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2019",
+    "value": 4106.94856160358,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2018",
+    "value": 3860.95353090726,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2017",
+    "value": 3798.88326174526,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2016",
+    "value": 3521.46943457574,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2015",
+    "value": 3288.22269725538,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2014",
+    "value": 3441.06808464008,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2013",
+    "value": 3566.60284506078,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2012",
+    "value": 3632.27254030331,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2011",
+    "value": 3579.46442466152,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2010",
+    "value": 3065.68348377765,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2009",
+    "value": 2218.48541852977,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2008",
+    "value": 2124.55483920618,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2007",
+    "value": 1823.21976255073,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2006",
+    "value": 1558.31562847163,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2005",
+    "value": 1238.21447629488,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2004",
+    "value": 1126.84004447173,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2003",
+    "value": 1043.2105838671,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2002",
+    "value": 881.002913569131,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2001",
+    "value": 732.307093405708,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2000",
+    "value": 763.711124950924,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1999",
+    "value": 657.268934667018,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1998",
+    "value": 454.877800792123,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1997",
+    "value": 1044.60674832472,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1996",
+    "value": 1118.92133024129,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1995",
+    "value": 1011.22614205568,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1994",
+    "value": 899.793982949817,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1993",
+    "value": 817.395116417856,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1992",
+    "value": 673.67103954742,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1991",
+    "value": 624.387495384411,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.PCAP.CD",
+     "value": "GDP per capita (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1990",
+    "value": 578.420121135382,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2024",
+    "value": 1396301788461.69,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2023",
+    "value": 1371166925749.88,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2022",
+    "value": 1319101183380.15,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2021",
+    "value": 1186509691086.73,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2020",
+    "value": 1059054842698.48,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2019",
+    "value": 1119099871350.2,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2018",
+    "value": 1042271532988.63,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2017",
+    "value": 1015618744159.73,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2016",
+    "value": 931877364037.698,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2015",
+    "value": 860854232686.214,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2014",
+    "value": 890814755533.537,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2013",
+    "value": 912524136718.018,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2012",
+    "value": 917869913332.649,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2011",
+    "value": 892969104563.171,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2010",
+    "value": 755094157621.936,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2009",
+    "value": 539580085612.401,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2008",
+    "value": 510228634992.258,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2007",
+    "value": 432216737774.861,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2006",
+    "value": 364570515618.357,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2005",
+    "value": 285868619196.085,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2004",
+    "value": 256836875295.452,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2003",
+    "value": 234772463823.808,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2002",
+    "value": 195660611165.183,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2001",
+    "value": 160446947784.909,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2000",
+    "value": 165021012077.81,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1999",
+    "value": 140001351215.462,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1998",
+    "value": 95445547872.715,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1997",
+    "value": 215748998609.635,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1996",
+    "value": 227369679374.973,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1995",
+    "value": 202132028723.115,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1994",
+    "value": 176892143931.505,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1993",
+    "value": 158006700301.533,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1992",
+    "value": 128026966579.964,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1991",
+    "value": 116621996217.133,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1990",
+    "value": 106140727333.636,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2024",
+    "value": 1238260376381.51,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2023",
+    "value": 1178929850175.16,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2022",
+    "value": 1122268412650.2,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2021",
+    "value": 1065709127396.86,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2020",
+    "value": 1027656193885.38,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2019",
+    "value": 1049330233997.45,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2018",
+    "value": 999178586309.021,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2017",
+    "value": 950021694164.001,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2016",
+    "value": 904181621780.388,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2015",
+    "value": 860854232686.214,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2014",
+    "value": 820828013230.588,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2013",
+    "value": 781691320690.699,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2012",
+    "value": 740537688618.414,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2011",
+    "value": 698422460479.197,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2010",
+    "value": 657835433773.518,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2009",
+    "value": 619291626017.383,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2008",
+    "value": 591893632243.067,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2007",
+    "value": 558318040161.892,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2006",
+    "value": 525006275302.523,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2005",
+    "value": 497631790442.44,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2004",
+    "value": 470829486219.898,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2003",
+    "value": 448277224148.753,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2002",
+    "value": 427825582126.161,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2001",
+    "value": 409404526219.842,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2000",
+    "value": 395012382597.556,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1999",
+    "value": 376488874892.846,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1998",
+    "value": 373533751956.055,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1997",
+    "value": 429975448805.372,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1996",
+    "value": 410674256276.219,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1995",
+    "value": 380895160093.945,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1994",
+    "value": 351963716551.494,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1993",
+    "value": 327286415428.63,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1992",
+    "value": 307321553097.314,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1991",
+    "value": 288571594912.183,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "ID",
+     "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "1990",
+    "value": 269915108912.607,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2024",
+    "value": 658084600079.586,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2023",
+    "value": 638740867489.057,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2022",
+    "value": 637150470884.733,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2021",
+    "value": 605337233054.782,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2020",
+    "value": 566120997479.772,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2019",
+    "value": 577884228677.544,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2018",
+    "value": 552573816155.989,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2017",
+    "value": 520089746650.75,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2016",
+    "value": 494605411858.337,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2015",
+    "value": 480054118583.367,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2014",
+    "value": 459682079851.439,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2013",
+    "value": 442340098156.254,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2012",
+    "value": 439333996551.267,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2011",
+    "value": 432791139408.41,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2010",
+    "value": 411181642127.603,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2009",
+    "value": 398551823849.317,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2008",
+    "value": 388394800371.402,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2007",
+    "value": 372083512402.176,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2006",
+    "value": 348521872927.444,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2005",
+    "value": 328168510412.522,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2004",
+    "value": 317805438387.054,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2003",
+    "value": 302410346199.761,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2002",
+    "value": 292117946677.278,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2001",
+    "value": 286667833930.23,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2000",
+    "value": 283174187558.032,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1999",
+    "value": 270575301764.16,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1998",
+    "value": 258431144714.153,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1997",
+    "value": 247015068311.447,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1996",
+    "value": 232246717071.23,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1995",
+    "value": 218906804615.997,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1994",
+    "value": 202823584825.574,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1993",
+    "value": 192628157713.225,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1992",
+    "value": 185686615837.644,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1991",
+    "value": 181131204775.169,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1990",
+    "value": 194797367584.792,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2024",
+    "value": 22731468331925.1,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2023",
+    "value": 22113788823329.1,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2022",
+    "value": 21483388181185,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2021",
+    "value": 20954452976799.5,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2020",
+    "value": 19740041204593.2,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2019",
+    "value": 20159639089819,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2018",
+    "value": 19651869117636.5,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2017",
+    "value": 19085691123385.5,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2016",
+    "value": 18627887993795.5,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2015",
+    "value": 18295019000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2014",
+    "value": 17771549056393.4,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2013",
+    "value": 17334068402849.7,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2012",
+    "value": 16974575729644.7,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2011",
+    "value": 16594704135237.8,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2010",
+    "value": 16339094225608.8,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2009",
+    "value": 15910281498142.2,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2008",
+    "value": 16331051067547.5,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2007",
+    "value": 16312522122670.3,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2006",
+    "value": 15992063823764.9,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2005",
+    "value": 15558822251170.7,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2004",
+    "value": 15035068144287,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2003",
+    "value": 14477988212190.1,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2002",
+    "value": 14084248131472.2,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2001",
+    "value": 13848757307490.4,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2000",
+    "value": 13717679619695.1,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "1999",
+    "value": 13180243872422.8,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "1998",
+    "value": 12577957790986.1,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "1997",
+    "value": 12038266260881.9,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "1996",
+    "value": 11525703481707.7,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "1995",
+    "value": 11106673921189.1,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "1994",
+    "value": 10816317372731.7,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "1993",
+    "value": 10397403618008.9,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "1992",
+    "value": 10118950749880,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "1991",
+    "value": 9774639354974.79,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.KD",
+     "value": "GDP (constant 2015 US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "1990",
+    "value": 9785238027483.98,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2024",
+    "value": 917767106146.761,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2023",
+    "value": 812451193396.143,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2022",
+    "value": 695607470875.276,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2021",
+    "value": 689170230665.35,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2020",
+    "value": 605914237903.742,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2019",
+    "value": 602683770144.88,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2018",
+    "value": 594616632477.019,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2017",
+    "value": 528356723263.073,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2016",
+    "value": 473259623976.262,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2015",
+    "value": 480054118583.367,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2014",
+    "value": 542134167178.627,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2013",
+    "value": 518179836405.36,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2012",
+    "value": 498148649702.66,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2011",
+    "value": 527848543023.469,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2010",
+    "value": 478111630683.514,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2009",
+    "value": 440891472247.096,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2008",
+    "value": 535612030671.888,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2007",
+    "value": 429715132137.503,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2006",
+    "value": 345897630736.173,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2005",
+    "value": 306999913150.525,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2004",
+    "value": 256268656145.134,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2003",
+    "value": 218561225998.47,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2002",
+    "value": 199694463255.567,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2001",
+    "value": 191823200371.284,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "2000",
+    "value": 172953527033.013,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1999",
+    "value": 170704452714.673,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1998",
+    "value": 175282269666.801,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1997",
+    "value": 159893964916.817,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1996",
+    "value": 160813026223.063,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1995",
+    "value": 142838527115.448,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1994",
+    "value": 110803635287.621,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1993",
+    "value": 96043157272.862,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1992",
+    "value": 94337050693.2727,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1991",
+    "value": 85500935934.9901,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "PL",
+     "value": "Poland"
+    },
+    "countryiso3code": "POL",
+    "date": "1990",
+    "value": 65977748210.5263,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2024",
+    "value": 29298013000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2023",
+    "value": 27811517000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2022",
+    "value": 26054614000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2021",
+    "value": 23725645000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2020",
+    "value": 21375281000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2019",
+    "value": 21539982000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2018",
+    "value": 20656516000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2017",
+    "value": 19612102000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2016",
+    "value": 18804913000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2015",
+    "value": 18295019000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2014",
+    "value": 17608138000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2013",
+    "value": 16880683000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2012",
+    "value": 16253970000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2011",
+    "value": 15599732000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2010",
+    "value": 15048971000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2009",
+    "value": 14478067000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2008",
+    "value": 14769862000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2007",
+    "value": 14474228000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2006",
+    "value": 13815583000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2005",
+    "value": 13039197000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2004",
+    "value": 12217196000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2003",
+    "value": 11456450000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2002",
+    "value": 10929108000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2001",
+    "value": 10581929000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "2000",
+    "value": 10250952000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "1999",
+    "value": 9631172000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "1998",
+    "value": 9062817000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "1997",
+    "value": 8577552000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "1996",
+    "value": 8073122000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "1995",
+    "value": 7639749000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "1994",
+    "value": 7287236000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "1993",
+    "value": 6858559000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "1992",
+    "value": 6520327000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "1991",
+    "value": 6158129000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   },
+   {
+    "indicator": {
+     "id": "NY.GDP.MKTP.CD",
+     "value": "GDP (current US$)"
+    },
+    "country": {
+     "id": "US",
+     "value": "United States"
+    },
+    "countryiso3code": "USA",
+    "date": "1990",
+    "value": 5963144000000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+   }
+  ]
+ ]
+}
