@@ -171,6 +171,9 @@ domains:
       rate_limit_per_second: 2.0
       timeout_seconds: 12.0
       use_date_param: false
+      # The endpoint intermittently returns a fast HTTP 502 that clears on retry.
+      max_retries: 10
+      backoff_seconds: 0.4
       countries:
         - USA
         - CHN

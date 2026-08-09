@@ -206,6 +206,29 @@ def test_insufficient_pool_marks_variants_unavailable_without_padding(cfg):
         assert inst.context_tokens_actual >= cfg.context.min_fill_ratio * inst.context_length_nominal
 
 
+def test_position_unsatisfiable_variants_are_reported_not_emitted(cfg):
+    """When whole records cannot place the evidence at the target depth, say so.
+
+    At very short targets one record is a large fraction of the context, so the
+    position tolerance is sometimes arithmetically unreachable. Such a variant must be
+    recorded as unavailable rather than emitted out of spec -- that is what lets the
+    target-position check stay an absolute invariant for everything emitted.
+    """
+    # One oversized gold record plus a couple of distractors in a tiny budget.
+    big = rec("TGT", value=42.0, concept="c1")
+    pool = RecordPool([big] + [rec(f"P{i}", period=f"CY{1900 + i}") for i in range(40)])
+    cfg.context.lengths = [200, 4096]
+    cfg.context.min_fill_ratio = 0.5
+    b = ContextBuilder(cfg, pool, get_tokenizer(cfg.tokenizer))
+    instances, unavailable = b.build_family(answerable_family(pool))
+    reasons = {u.reason_code for u in unavailable}
+    assert reasons <= {"POSITION_TOLERANCE_UNSATISFIABLE", "POOL_EXHAUSTED"}
+    for inst in instances:
+        assert check_target_position(inst, cfg.context.target_position,
+                                     cfg.context.position_tolerance) == [], \
+            "an emitted instance must always satisfy the position invariant"
+
+
 def test_empty_pool_yields_no_instances_at_all(cfg):
     pool = RecordPool([rec("TGT", value=42.0)])
     b = ContextBuilder(cfg, pool, get_tokenizer(cfg.tokenizer))

@@ -76,6 +76,11 @@ class WorldBankAdapter(SourceAdapter):
             # Healthy responses arrive in ~0.1s; anything slower is the endpoint's known
             # slow path, so failing fast and retrying beats waiting out a long timeout.
             timeout_seconds=float(self.params.get("timeout_seconds", 12.0)),
+            # The endpoint intermittently returns a fast HTTP 502 that succeeds on an
+            # immediate retry, so this adapter retries often and quickly rather than
+            # backing off into minutes.
+            max_retries=int(self.params.get("max_retries", 10)),
+            backoff_seconds=float(self.params.get("backoff_seconds", 0.4)),
         )
 
     def _config(self) -> Dict[str, Any]:

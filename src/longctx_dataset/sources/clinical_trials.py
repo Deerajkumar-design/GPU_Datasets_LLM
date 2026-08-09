@@ -212,20 +212,23 @@ class ClinicalTrialsAdapter(SourceAdapter):
                            rtype="trial_field", numeric=float(len(arms)), unit="arms",
                            pointer="armsInterventionsModule.armGroups"))
         for i, arm in enumerate(arms):
-            if not isinstance(arm, dict) or not arm.get("label"):
+            # A record is only emitted when the registry actually states the value.
+            # Substituting a placeholder like "UNSPECIFIED" would invent a source fact
+            # and could become a gold answer that the primary source never asserted.
+            if not isinstance(arm, dict) or not arm.get("label") or not arm.get("type"):
                 continue
             recs.append(mk(
-                "arm.type", f"Arm group type: {arm.get('label')}", str(arm.get("type") or "UNSPECIFIED"),
+                "arm.type", f"Arm group type: {arm.get('label')}", str(arm["type"]),
                 rtype="trial_arm", extra={"arm_label": arm.get("label"), "arm_index": i,
                                           "arm_interventions": arm.get("interventionNames") or []},
                 pointer=f"armsInterventionsModule.armGroups[{i}]", key_parts=(arm.get("label"), i),
             ))
 
         for i, iv in enumerate(_dig(proto, "armsInterventionsModule.interventions") or []):
-            if not isinstance(iv, dict) or not iv.get("name"):
+            if not isinstance(iv, dict) or not iv.get("name") or not iv.get("type"):
                 continue
             recs.append(mk(
-                "intervention.type", f"Intervention: {iv.get('name')}", str(iv.get("type") or "OTHER"),
+                "intervention.type", f"Intervention: {iv.get('name')}", str(iv["type"]),
                 rtype="trial_intervention",
                 extra={"intervention_name": iv.get("name"), "intervention_index": i,
                        "arm_group_labels": iv.get("armGroupLabels") or []},
@@ -234,11 +237,11 @@ class ClinicalTrialsAdapter(SourceAdapter):
 
         for kind, key in (("primary", "primaryOutcomes"), ("secondary", "secondaryOutcomes")):
             for i, oc in enumerate(_dig(proto, f"outcomesModule.{key}") or []):
-                if not isinstance(oc, dict) or not oc.get("measure"):
+                if not isinstance(oc, dict) or not oc.get("measure") or not oc.get("timeFrame"):
                     continue
                 recs.append(mk(
                     f"outcome.{kind}.timeframe", f"{kind.capitalize()} outcome timeframe: {oc.get('measure')}",
-                    str(oc.get("timeFrame") or "(not specified)"),
+                    str(oc["timeFrame"]),
                     rtype="trial_outcome",
                     extra={"outcome_measure": oc.get("measure"), "outcome_kind": kind, "outcome_index": i},
                     pointer=f"outcomesModule.{key}[{i}]", key_parts=(kind, i),

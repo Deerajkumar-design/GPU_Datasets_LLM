@@ -137,8 +137,15 @@ def test_format_number_avoids_scientific_notation():
 
 
 def test_tolerance_reflects_presented_precision():
+    """Tolerance is half the last place of the *rendered* answer, never relative.
+
+    A relative tolerance would scale with magnitude: 1e-9 of a $420bn revenue line is
+    +/- $420, which would accept a demonstrably wrong figure.
+    """
     assert numeric_tolerance_for(5.93, 2) == 0.005
-    assert numeric_tolerance_for(1000.0, None) < 1e-5
+    assert numeric_tolerance_for(1000.0, None) == 0.5          # rendered as an integer
+    assert numeric_tolerance_for(420315000000.0, None) == 0.5  # magnitude does not widen it
+    assert numeric_tolerance_for(1.2345678, None) == 0.5e-6    # rendered at six decimals
 
 
 def test_epoch_days_handles_partial_and_invalid_dates():

@@ -96,14 +96,16 @@ def format_number(value: float, decimals: Optional[int] = None) -> str:
 
 
 def numeric_tolerance_for(value: float, decimals: Optional[int]) -> float:
-    """Grading tolerance implied by how the answer is presented.
+    """Grading tolerance implied by how the answer is presented -- half of its last place.
 
-    A value rounded to N decimals can only be graded to half of the last place; an
-    unrounded lookup gets a tiny relative tolerance to absorb float representation.
+    ``format_number`` renders an integral value as a plain integer and everything else
+    at six decimals, so the tolerance follows that rather than a relative epsilon. A
+    relative tolerance would be badly wrong for large figures: 1e-9 of a $420bn revenue
+    line is +/- $420, which would silently accept a wrong answer.
     """
     if decimals is not None:
         return 0.5 * (10.0**-decimals)
-    return max(abs(value) * 1e-9, 1e-9)
+    return 0.5 if float(value).is_integer() else 0.5e-6
 
 
 # --------------------------------------------------------------------------------------

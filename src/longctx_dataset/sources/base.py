@@ -94,9 +94,13 @@ class HTTPClient:
         headers: Optional[Dict[str, str]] = None,
         rate_limit_per_second: Optional[float] = None,
         timeout_seconds: Optional[float] = None,
+        max_retries: Optional[int] = None,
+        backoff_seconds: Optional[float] = None,
     ):
         self.cfg = cfg
         self.timeout = timeout_seconds or cfg.http.timeout_seconds
+        self.max_retries = max_retries or cfg.http.max_retries
+        self.backoff = cfg.http.backoff_seconds if backoff_seconds is None else backoff_seconds
         self.raw_dir = cfg.raw_dir / raw_subdir
         self.raw_dir.mkdir(parents=True, exist_ok=True)
         self.session = requests.Session()
@@ -131,7 +135,7 @@ class HTTPClient:
             return envelope.get("payload"), cache
 
         last_exc: Optional[Exception] = None
-        for attempt in range(self.cfg.http.max_retries):
+        for attempt in range(self.max_retries):
             self.limiter.wait()
             try:
                 resp = self.session.get(url, params=params, timeout=self.timeout)
@@ -157,11 +161,14 @@ class HTTPClient:
                 return payload, cache
             except (requests.RequestException, ValueError) as exc:
                 last_exc = exc
-                if attempt < self.cfg.http.max_retries - 1:
-                    time.sleep(self.cfg.http.backoff_seconds * (2**attempt))
+                if attempt < self.max_retries - 1:
+                    # Capped exponential backoff: an endpoint that fails fast and
+                    # transiently is best served by retrying quickly, not by doubling
+                    # into minutes.
+                    time.sleep(min(self.backoff * (2**attempt), 8.0))
         raise SourceBlocked(
             self.raw_dir.name,
-            f"GET {url} failed after {self.cfg.http.max_retries} attempts: {last_exc}",
+            f"GET {url} failed after {self.max_retries} attempts: {last_exc}",
         )
 
     # Raw payloads can be tens of megabytes; normalization asks for the request URL once
