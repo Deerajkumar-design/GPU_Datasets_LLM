@@ -1,0 +1,7 @@
+{
+ "request_url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=GDP&vintage_date=2022-06-29&cosd=1990-01-01",
+ "status": 200,
+ "retrieved_at": "2026-08-09T17:59:35Z",
+ "content_type": "text/csv",
+ "payload": "observation_date,GDP_20220629\n2020-01-01,21481.367\n2020-04-01,19477.444\n2020-07-01,21138.574\n2020-10-01,21477.597\n2021-01-01,22038.226\n2021-04-01,22740.959\n2021-07-01,23202.344\n2021-10-01,24002.815"
+}

@@ -32,8 +32,12 @@ class Domain(str, enum.Enum):
     SEC = "SEC"
     FDA = "FDA"
     CLINICAL_TRIALS = "CLINICAL_TRIALS"
+    FRED = "FRED"
+    # Retired from the active experiment: the World Bank Indicators endpoint proved too
+    # unreliable to depend on. The adapter and its data are retained so previously
+    # generated datasets stay loadable and the domain can be revived if the API recovers.
     WORLD_BANK = "WORLD_BANK"
-    # Reserved for the fifth production slot (NASA / FRED / NIST / regulatory / ...).
+    # Reserved for a future fifth domain (NASA / NIST / regulatory / mathematics / ...).
     EXTENSION = "EXTENSION"
 
 

@@ -1,0 +1,344 @@
+<RECORD id="FRED-PAYEMS-2003-02-01-latest-add82792" source="FRED_STLOUISFED">
+entity: United States [US]
+field: All Employees, Total Nonfarm (Seasonally Adjusted) [PAYEMS]
+period: 2003-02-01
+unit: Thousands of Persons
+value: 130441.0
+version: latest
+</RECORD>
+<RECORD id="FRED-PAUR-2011-09-01-latest-ee547e7b" source="FRED_STLOUISFED">
+entity: Pennsylvania [PA]
+field: Unemployment Rate (Seasonally Adjusted) [PAUR]
+period: 2011-09-01
+unit: Percent
+value: 7.8
+version: latest
+</RECORD>
+<RECORD id="FRED-NYUR-2002-04-01-latest-1e51b3ee" source="FRED_STLOUISFED">
+entity: New York [NY]
+field: Unemployment Rate (Seasonally Adjusted) [NYUR]
+period: 2002-04-01
+unit: Percent
+value: 6.3
+version: latest
+</RECORD>
+<RECORD id="FRED-NYUR-2021-08-01-latest-a0aebe8d" source="FRED_STLOUISFED">
+entity: New York [NY]
+field: Unemployment Rate (Seasonally Adjusted) [NYUR]
+period: 2021-08-01
+unit: Percent
+value: 6.8
+version: latest
+</RECORD>
+<RECORD id="FRED-DGS10-2019-05-02-latest-eafacbcb" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (Not Seasonally Adjusted) [DGS10]
+period: 2019-05-02
+unit: Percent
+value: 2.55
+version: latest
+</RECORD>
+<RECORD id="FRED-PAYEMS-2019-03-01-latest-59b85cd1" source="FRED_STLOUISFED">
+entity: United States [US]
+field: All Employees, Total Nonfarm (Seasonally Adjusted) [PAYEMS]
+period: 2019-03-01
+unit: Thousands of Persons
+value: 150295.0
+version: latest
+</RECORD>
+<RECORD id="FRED-CAUR-2003-07-01-latest-8a11ec61" source="FRED_STLOUISFED">
+entity: California [CA]
+field: Unemployment Rate (Seasonally Adjusted) [CAUR]
+period: 2003-07-01
+unit: Percent
+value: 7.0
+version: latest
+</RECORD>
+<RECORD id="FRED-PAUR-2017-03-01-latest-c931b1f7" source="FRED_STLOUISFED">
+entity: Pennsylvania [PA]
+field: Unemployment Rate (Seasonally Adjusted) [PAUR]
+period: 2017-03-01
+unit: Percent
+value: 5.1
+version: latest
+</RECORD>
+<RECORD id="FRED-PAYEMS-2020-03-01-2021-04-29-49354056" source="FRED_STLOUISFED">
+entity: United States [US]
+field: All Employees, Total Nonfarm (Seasonally Adjusted) [PAYEMS]
+period: 2020-03-01
+unit: Thousands of Persons
+value: 150840.0
+version: vintage:2021-04-29
+</RECORD>
+<RECORD id="FRED-GDPC1-2020-07-01-latest-09b0e29c" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Gross Domestic Product (Seasonally Adjusted Annual Rate) [GDPC1]
+period: 2020-07-01
+unit: Billions of Chained 2017 Dollars
+value: 20558.879
+version: latest
+</RECORD>
+<RECORD id="FRED-PAYEMS-2017-07-01-latest-1cbce1f4" source="FRED_STLOUISFED">
+entity: United States [US]
+field: All Employees, Total Nonfarm (Seasonally Adjusted) [PAYEMS]
+period: 2017-07-01
+unit: Thousands of Persons
+value: 146772.0
+version: latest
+</RECORD>
+<RECORD id="FRED-PAYEMS-2020-06-01-latest-fc33eec8" source="FRED_STLOUISFED">
+entity: United States [US]
+field: All Employees, Total Nonfarm (Seasonally Adjusted) [PAYEMS]
+period: 2020-06-01
+unit: Thousands of Persons
+value: 137671.0
+version: latest
+</RECORD>
+<RECORD id="FRED-DGS10-1990-10-23-latest-a896b06a" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (Not Seasonally Adjusted) [DGS10]
+period: 1990-10-23
+unit: Percent
+value: 8.65
+version: latest
+</RECORD>
+<RECORD id="FRED-PAUR-1993-05-01-latest-80b20a00" source="FRED_STLOUISFED">
+entity: Pennsylvania [PA]
+field: Unemployment Rate (Seasonally Adjusted) [PAUR]
+period: 1993-05-01
+unit: Percent
+value: 6.9
+version: latest
+</RECORD>
+<RECORD id="FRED-DGS10-2010-07-27-latest-b3353f16" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (Not Seasonally Adjusted) [DGS10]
+period: 2010-07-27
+unit: Percent
+value: 3.08
+version: latest
+</RECORD>
+<RECORD id="FRED-DGS10-1990-02-14-latest-95abcd82" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (Not Seasonally Adjusted) [DGS10]
+period: 1990-02-14
+unit: Percent
+value: 8.36
+version: latest
+</RECORD>
+<RECORD id="FRED-PAYEMS-2018-10-01-latest-f68d5482" source="FRED_STLOUISFED">
+entity: United States [US]
+field: All Employees, Total Nonfarm (Seasonally Adjusted) [PAYEMS]
+period: 2018-10-01
+unit: Thousands of Persons
+value: 149527.0
+version: latest
+</RECORD>
+<RECORD id="FRED-PAYEMS-2020-03-01-latest-c12aef71" source="FRED_STLOUISFED">
+entity: United States [US]
+field: All Employees, Total Nonfarm (Seasonally Adjusted) [PAYEMS]
+period: 2020-03-01
+unit: Thousands of Persons
+value: 150895.0
+version: latest
+</RECORD>
+<RECORD id="FRED-TXUR-1994-02-01-latest-8f6db96c" source="FRED_STLOUISFED">
+entity: Texas [TX]
+field: Unemployment Rate (Seasonally Adjusted) [TXUR]
+period: 1994-02-01
+unit: Percent
+value: 7.0
+version: latest
+</RECORD>
+<RECORD id="FRED-CAUR-1998-10-01-latest-e1f4da39" source="FRED_STLOUISFED">
+entity: California [CA]
+field: Unemployment Rate (Seasonally Adjusted) [CAUR]
+period: 1998-10-01
+unit: Percent
+value: 5.9
+version: latest
+</RECORD>
+<RECORD id="FRED-PAYEMS-2014-10-01-latest-e1a02af9" source="FRED_STLOUISFED">
+entity: United States [US]
+field: All Employees, Total Nonfarm (Seasonally Adjusted) [PAYEMS]
+period: 2014-10-01
+unit: Thousands of Persons
+value: 139798.0
+version: latest
+</RECORD>
+<RECORD id="FRED-PAYNSA-2020-03-01-latest-01e51bbe" source="FRED_STLOUISFED">
+entity: United States [US]
+field: All Employees, Total Nonfarm (Not Seasonally Adjusted) [PAYNSA]
+period: 2020-03-01
+unit: Thousands of Persons
+value: 149952.0
+version: latest
+</RECORD>
+<RECORD id="FRED-PAYNSA-2000-07-01-latest-c72206bd" source="FRED_STLOUISFED">
+entity: United States [US]
+field: All Employees, Total Nonfarm (Not Seasonally Adjusted) [PAYNSA]
+period: 2000-07-01
+unit: Thousands of Persons
+value: 131997.0
+version: latest
+</RECORD>
+<RECORD id="FRED-FLUR-1993-11-01-latest-8c496684" source="FRED_STLOUISFED">
+entity: Florida [FL]
+field: Unemployment Rate (Seasonally Adjusted) [FLUR]
+period: 1993-11-01
+unit: Percent
+value: 7.1
+version: latest
+</RECORD>
+<RECORD id="FRED-NYUR-2020-07-01-latest-7f0c9d16" source="FRED_STLOUISFED">
+entity: New York [NY]
+field: Unemployment Rate (Seasonally Adjusted) [NYUR]
+period: 2020-07-01
+unit: Percent
+value: 12.6
+version: latest
+</RECORD>
+<RECORD id="FRED-PAYNSA-2008-12-01-latest-1bc3d724" source="FRED_STLOUISFED">
+entity: United States [US]
+field: All Employees, Total Nonfarm (Not Seasonally Adjusted) [PAYNSA]
+period: 2008-12-01
+unit: Thousands of Persons
+value: 135713.0
+version: latest
+</RECORD>
+<RECORD id="FRED-PAYNSA-2019-05-01-latest-81eeb6db" source="FRED_STLOUISFED">
+entity: United States [US]
+field: All Employees, Total Nonfarm (Not Seasonally Adjusted) [PAYNSA]
+period: 2019-05-01
+unit: Thousands of Persons
+value: 151096.0
+version: latest
+</RECORD>
+<RECORD id="FRED-DGS10-2014-09-02-latest-c3619441" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (Not Seasonally Adjusted) [DGS10]
+period: 2014-09-02
+unit: Percent
+value: 2.42
+version: latest
+</RECORD>
+<RECORD id="FRED-CAUR-1993-12-01-latest-c2cfba83" source="FRED_STLOUISFED">
+entity: California [CA]
+field: Unemployment Rate (Seasonally Adjusted) [CAUR]
+period: 1993-12-01
+unit: Percent
+value: 9.3
+version: latest
+</RECORD>
+<RECORD id="FRED-ILUR-2003-10-01-latest-22aa41a6" source="FRED_STLOUISFED">
+entity: Illinois [IL]
+field: Unemployment Rate (Seasonally Adjusted) [ILUR]
+period: 2003-10-01
+unit: Percent
+value: 6.8
+version: latest
+</RECORD>
+<RECORD id="FRED-TXUR-2001-05-01-latest-e4cb0451" source="FRED_STLOUISFED">
+entity: Texas [TX]
+field: Unemployment Rate (Seasonally Adjusted) [TXUR]
+period: 2001-05-01
+unit: Percent
+value: 4.6
+version: latest
+</RECORD>
+<RECORD id="FRED-DGS10-2020-12-03-latest-7feab9da" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (Not Seasonally Adjusted) [DGS10]
+period: 2020-12-03
+unit: Percent
+value: 0.92
+version: latest
+</RECORD>
+<RECORD id="FRED-DGS10-1995-11-30-latest-2a30e9cc" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (Not Seasonally Adjusted) [DGS10]
+period: 1995-11-30
+unit: Percent
+value: 5.76
+version: latest
+</RECORD>
+<RECORD id="FRED-DGS10-2021-01-11-latest-63ce92ac" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (Not Seasonally Adjusted) [DGS10]
+period: 2021-01-11
+unit: Percent
+value: 1.15
+version: latest
+</RECORD>
+<RECORD id="FRED-DGS10-2005-05-06-latest-973d394d" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (Not Seasonally Adjusted) [DGS10]
+period: 2005-05-06
+unit: Percent
+value: 4.28
+version: latest
+</RECORD>
+<RECORD id="FRED-FLUR-2024-09-01-latest-da55b11b" source="FRED_STLOUISFED">
+entity: Florida [FL]
+field: Unemployment Rate (Seasonally Adjusted) [FLUR]
+period: 2024-09-01
+unit: Percent
+value: 3.5
+version: latest
+</RECORD>
+<RECORD id="FRED-TXUR-2014-12-01-latest-e981a9d7" source="FRED_STLOUISFED">
+entity: Texas [TX]
+field: Unemployment Rate (Seasonally Adjusted) [TXUR]
+period: 2014-12-01
+unit: Percent
+value: 4.6
+version: latest
+</RECORD>
+<RECORD id="FRED-PAYEMS-2018-04-01-latest-4d04f34b" source="FRED_STLOUISFED">
+entity: United States [US]
+field: All Employees, Total Nonfarm (Seasonally Adjusted) [PAYEMS]
+period: 2018-04-01
+unit: Thousands of Persons
+value: 148420.0
+version: latest
+</RECORD>
+<RECORD id="FRED-PAYNSA-2014-10-01-latest-1ef97ba1" source="FRED_STLOUISFED">
+entity: United States [US]
+field: All Employees, Total Nonfarm (Not Seasonally Adjusted) [PAYNSA]
+period: 2014-10-01
+unit: Thousands of Persons
+value: 140848.0
+version: latest
+</RECORD>
+<RECORD id="FRED-DGS10-1991-07-18-latest-d8f3472b" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (Not Seasonally Adjusted) [DGS10]
+period: 1991-07-18
+unit: Percent
+value: 8.31
+version: latest
+</RECORD>
+<RECORD id="FRED-NYUR-1999-02-01-latest-29df9d31" source="FRED_STLOUISFED">
+entity: New York [NY]
+field: Unemployment Rate (Seasonally Adjusted) [NYUR]
+period: 1999-02-01
+unit: Percent
+value: 5.3
+version: latest
+</RECORD>
+<RECORD id="FRED-PAYNSA-2013-09-01-latest-3b3e5bf1" source="FRED_STLOUISFED">
+entity: United States [US]
+field: All Employees, Total Nonfarm (Not Seasonally Adjusted) [PAYNSA]
+period: 2013-09-01
+unit: Thousands of Persons
+value: 137077.0
+version: latest
+</RECORD>
+<RECORD id="FRED-PAYEMS-2003-04-01-latest-faa1710f" source="FRED_STLOUISFED">
+entity: United States [US]
+field: All Employees, Total Nonfarm (Seasonally Adjusted) [PAYEMS]
+period: 2003-04-01
+unit: Thousands of Persons
+value: 130173.0
+version: latest
+</RECORD>

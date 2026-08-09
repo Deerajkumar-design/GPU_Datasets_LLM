@@ -68,6 +68,42 @@ def _is_unit_variant(record: NormalizedRecord, target: NormalizedRecord) -> bool
     return record.unit != target.unit
 
 
+def _family(record: NormalizedRecord) -> Optional[str]:
+    """Declared grouping of series that measure the same underlying quantity.
+
+    Sources publish one quantity under several identifiers -- seasonally adjusted and
+    not, nominal and chained-dollar, daily and monthly, national and per-state. Those
+    share a family, which lets the taxonomy see them as competing measurements of one
+    thing rather than as unrelated fields.
+    """
+    fam = record.metadata.get("series_family")
+    return str(fam) if fam else None
+
+
+def _same_measure(record: NormalizedRecord, target: NormalizedRecord) -> bool:
+    """Same concept code, or two concept codes declared to measure the same quantity."""
+    if record.concept == target.concept:
+        return True
+    fam = _family(record)
+    return bool(fam) and fam == _family(target)
+
+
+def _basis_differs(record: NormalizedRecord, target: NormalizedRecord) -> bool:
+    """Same quantity, different measurement basis: unit, seasonal adjustment, frequency.
+
+    All three change the number a correct answer must report, so confusing them is a
+    unit error rather than a field error. Monthly GS10 is an average of daily DGS10;
+    quoting one for the other is wrong in exactly the way WRONG_UNIT describes.
+    """
+    if record.unit != target.unit:
+        return True
+    for key in ("seasonal_adjustment", "frequency"):
+        a, b = record.metadata.get(key), target.metadata.get(key)
+        if a is not None and b is not None and a != b:
+            return True
+    return False
+
+
 @dataclass(frozen=True)
 class RelationshipFlags:
     """Exactly how a distractor relates to the target it competes with."""
@@ -153,18 +189,27 @@ def classify_distractor(
             different_metric=not same_metric, value_within_5_percent=near,
         )
 
+        same_measure = _same_measure(record, tgt)
+
         if same_entity and same_metric and same_period and same_unit and not same_version:
             dtype = DistractorType.WRONG_VERSION
         elif same_entity and same_metric and same_period and not same_unit:
             dtype = DistractorType.WRONG_UNIT
-        elif same_entity and same_period and _is_unit_variant(record, tgt):
-            # Same quantity, same entity and period, different measurement basis --
-            # e.g. GDP in current vs constant US$, which sources publish under distinct
-            # concept codes but which interfere exactly like a unit mismatch.
+        elif (
+            same_entity and same_period and not same_metric
+            and same_measure and _basis_differs(record, tgt)
+        ):
+            # Same quantity for the same entity and period, published on a different
+            # basis -- seasonally adjusted vs not, nominal vs chained dollars, daily vs
+            # monthly. Distinct concept codes, but the interference is a unit mismatch.
             dtype = DistractorType.WRONG_UNIT
-        elif same_entity and same_metric and not same_period:
+        elif same_entity and same_period and _is_unit_variant(record, tgt):
+            # Label-based fallback for sources that encode the basis in the concept
+            # label's trailing parenthetical rather than in a declared family.
+            dtype = DistractorType.WRONG_UNIT
+        elif same_entity and same_measure and not same_period:
             dtype = DistractorType.WRONG_PERIOD
-        elif same_metric and same_period and not same_entity:
+        elif same_measure and same_period and not same_entity:
             dtype = DistractorType.WRONG_ENTITY
         elif same_entity and not same_metric:
             dtype = DistractorType.WRONG_FIELD

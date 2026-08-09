@@ -20,9 +20,16 @@ data/raw/**
 data/normalized/**
 !data/normalized/.gitkeep
 
-# Pilot contexts are large (128K-token strings).
+# Generated contexts are large (128K-token strings); regenerate with `build-contexts`.
 data/pilot/instances.jsonl
 data/pilot/*.parquet
+data/fred_pilot/instances.jsonl
+data/fred_pilot/*.parquet
+data/preproduction/
+data/production/
+
+# The human-audit package IS committed on purpose: the .txt files are the exact
+# model-facing contexts a reviewer must read, and they are the deliverable of this phase.
 
 # Generated JSON Schemas are derived from schemas.py; regenerate with `export-schemas`.
 data/schemas/

@@ -1,0 +1,492 @@
+{
+  "blockers": [
+    {
+      "detail": "12 families are prepared in data/audit with unticked checklists. Nothing automated can decide whether the questions read naturally or whether the 128K contexts are meaningfully harder than the 4K ones.",
+      "item": "Human audit not yet performed",
+      "severity": "BLOCKING"
+    },
+    {
+      "detail": "tokenizer.id is still the placeholder tiktoken:cl100k_base. Token counts are the independent variable, so this must match the model under test before any dataset intended for the experiment is generated.",
+      "item": "Target tokenizer not selected",
+      "severity": "BLOCKING"
+    },
+    {
+      "detail": "Present in 3/10 FRED families and 2/32 existing-pilot families at 4K. It is structurally scarce: a revision conflict only exists where a source genuinely restated a value. Widening FRED's vintage_series/vintage_dates to more genuinely revised series would raise it; adding vintages for never-revised series would only pad the count and is deliberately not done.",
+      "item": "WRONG_VERSION coverage remains narrow",
+      "severity": "ADVISORY"
+    },
+    {
+      "detail": "Observations and vintages come from the API, but descriptive series attributes are operator-supplied from the config catalog and stamped metadata_source=operator_catalog. Setting FRED_API_KEY sources them from /fred/series with no code change.",
+      "item": "FRED running keyless",
+      "severity": "ADVISORY"
+    },
+    {
+      "detail": "Its Indicators API returned HTTP 502 for date-range queries, hung on large result sets, and eventually refused traffic. It is absent from both the pre-production and production configs; the adapter and its data are retained so earlier datasets stay reproducible.",
+      "item": "World Bank removed from the active experiment",
+      "severity": "RESOLVED"
+    }
+  ],
+  "distractor_distribution": {
+    "before_fred_existing_pilot": {
+      "NEAR_MATCH_VALUE": 2689,
+      "OTHER_SAME_DOMAIN": 38500,
+      "WRONG_ENTITY": 15546,
+      "WRONG_FIELD": 8533,
+      "WRONG_PERIOD": 4776,
+      "WRONG_UNIT": 48,
+      "WRONG_VERSION": 57
+    },
+    "combined": {
+      "NEAR_MATCH_VALUE": 3908,
+      "OTHER_SAME_DOMAIN": 49047,
+      "WRONG_ENTITY": 15695,
+      "WRONG_FIELD": 15430,
+      "WRONG_PERIOD": 12689,
+      "WRONG_UNIT": 166,
+      "WRONG_VERSION": 132
+    },
+    "family_presence_at_4k": {
+      "existing_pilot": {
+        "families": 32,
+        "present": {
+          "NEAR_MATCH_VALUE": 18,
+          "OTHER_SAME_DOMAIN": 32,
+          "WRONG_ENTITY": 30,
+          "WRONG_FIELD": 31,
+          "WRONG_PERIOD": 17,
+          "WRONG_UNIT": 4,
+          "WRONG_VERSION": 2
+        }
+      },
+      "fred_pilot": {
+        "families": 10,
+        "present": {
+          "NEAR_MATCH_VALUE": 3,
+          "OTHER_SAME_DOMAIN": 10,
+          "WRONG_ENTITY": 1,
+          "WRONG_FIELD": 9,
+          "WRONG_PERIOD": 10,
+          "WRONG_UNIT": 9,
+          "WRONG_VERSION": 3
+        }
+      }
+    },
+    "fred_pilot_only": {
+      "NEAR_MATCH_VALUE": 1219,
+      "OTHER_SAME_DOMAIN": 10547,
+      "WRONG_ENTITY": 149,
+      "WRONG_FIELD": 6897,
+      "WRONG_PERIOD": 7913,
+      "WRONG_UNIT": 118,
+      "WRONG_VERSION": 75
+    },
+    "scarce_class_focus": {
+      "WRONG_UNIT": {
+        "existing_pilot_families_containing_at_4k": 4,
+        "existing_pilot_families_total": 32,
+        "existing_pilot_placements": 48,
+        "fred_families_containing_at_4k": 9,
+        "fred_families_total": 10,
+        "fred_placements": 118
+      },
+      "WRONG_VERSION": {
+        "existing_pilot_families_containing_at_4k": 2,
+        "existing_pilot_families_total": 32,
+        "existing_pilot_placements": 57,
+        "fred_families_containing_at_4k": 3,
+        "fred_families_total": 10,
+        "fred_placements": 75
+      }
+    },
+    "taxonomy": {
+      "NEAR_MATCH_VALUE": "Numerically within 5% of a target value while being a different fact -- a plausible-looking wrong answer.",
+      "OTHER_SAME_DOMAIN": "A real record from the same primary source with no closer relationship to the target.",
+      "WRONG_ENTITY": "Same metric and period, a different entity (other company, country, trial, product).",
+      "WRONG_FIELD": "Same entity, a different field/concept.",
+      "WRONG_PERIOD": "Same entity and metric, a different period (other year, quarter, or instant).",
+      "WRONG_UNIT": "Same entity, metric and period, reported in a different unit or measurement basis.",
+      "WRONG_VERSION": "Same entity, metric, period and unit, but a different filing/revision/submission version."
+    }
+  },
+  "fred_adapter": {
+    "api_key_present": false,
+    "backend_available_with_key": "fred_api",
+    "backend_used": "fredgraph_csv",
+    "domain": "FRED",
+    "endpoints": [
+      "https://fred.stlouisfed.org/graph/fredgraph.csv (current vintage)",
+      "https://alfred.stlouisfed.org/graph/alfredgraph.csv (vintage/ALFRED)",
+      "https://api.stlouisfed.org/fred (used automatically when FRED_API_KEY is set)"
+    ],
+    "errors": 0,
+    "first_party": true,
+    "metadata_caveat": "Descriptive series attributes (title, units, frequency, seasonal adjustment) are operator-supplied from the config catalog while running keyless, and every record is stamped metadata_source=operator_catalog. Observation values, dates and vintages always come from the API. Setting FRED_API_KEY sources the attributes from /fred/series with no code change.",
+    "normalized_by_record_type": {
+      "fred_observation": 19470,
+      "fred_vintage_observation": 1052,
+      "observation_missing": 403
+    },
+    "normalized_records": 20925,
+    "raw_payloads": 48,
+    "raw_records": 27085,
+    "requests": 48,
+    "series_in_catalog": 23,
+    "status": "IMPLEMENTED_AND_VALIDATED",
+    "third_party_scraping": false,
+    "vintage_dates": [
+      "2021-04-29",
+      "2021-07-29",
+      "2022-06-29",
+      "2023-09-28",
+      "2025-03-27"
+    ],
+    "vintage_series": [
+      "GDP",
+      "GDPC1",
+      "PAYEMS",
+      "UNRATE",
+      "CPIAUCSL"
+    ]
+  },
+  "fred_pilot": {
+    "answerable": 8,
+    "config": "config/fred_pilot.yaml",
+    "config_hash": "8c72bbbd80ade192",
+    "context_lengths": [
+      4096,
+      8192,
+      16384,
+      32768,
+      65536,
+      131072
+    ],
+    "families": 10,
+    "families_by_question_type": {
+      "DIRECT_RETRIEVAL": 2,
+      "ENTITY_UNIT_BINDING": 2,
+      "RETRIEVAL_CALCULATION": 3,
+      "TEMPORAL_VERSION": 1,
+      "UNANSWERABLE": 2
+    },
+    "instances": 60,
+    "seed": 20240817,
+    "target_position": {
+      "max": 0.5112,
+      "mean": 0.5008,
+      "median": 0.5001,
+      "min": 0.4907,
+      "n": 48,
+      "p25": 0.4996,
+      "p75": 0.5021
+    },
+    "token_stats_by_length": {
+      "131072": {
+        "max": 129757.0,
+        "mean": 129676.0,
+        "median": 129661.0,
+        "min": 129609.0,
+        "n": 10,
+        "p25": 129646.0,
+        "p75": 129695.0
+      },
+      "16384": {
+        "max": 16203.0,
+        "mean": 16175.8,
+        "median": 16174.0,
+        "min": 16130.0,
+        "n": 10,
+        "p25": 16161.0,
+        "p75": 16198.0
+      },
+      "32768": {
+        "max": 32438.0,
+        "mean": 32384.6,
+        "median": 32389.0,
+        "min": 32344.0,
+        "n": 10,
+        "p25": 32351.0,
+        "p75": 32399.0
+      },
+      "4096": {
+        "max": 4050.0,
+        "mean": 4015.7,
+        "median": 4000.0,
+        "min": 3988.0,
+        "n": 10,
+        "p25": 3992.0,
+        "p75": 4047.0
+      },
+      "65536": {
+        "max": 64846.0,
+        "mean": 64824.5,
+        "median": 64829.0,
+        "min": 64788.0,
+        "n": 10,
+        "p25": 64804.0,
+        "p75": 64843.0
+      },
+      "8192": {
+        "max": 8106.0,
+        "mean": 8067.0,
+        "median": 8057.0,
+        "min": 8022.0,
+        "n": 10,
+        "p25": 8043.0,
+        "p75": 8098.0
+      }
+    },
+    "unanswerable": 2,
+    "unavailable_variants": 0
+  },
+  "generated_at": "2026-08-09T18:16:43Z",
+  "git_commit": "2fe50bc2caec6f81d2fff6ca749abcd2dc8223b9",
+  "human_audit_package": {
+    "checklist_items": 15,
+    "directory": "data/audit",
+    "domains_audited": [
+      "SEC",
+      "FDA",
+      "CLINICAL_TRIALS",
+      "FRED"
+    ],
+    "families": [
+      {
+        "answerable": true,
+        "audit_markdown": "CT_0001.md",
+        "context_128k": "CT_0001_128K.txt",
+        "context_4k": "CT_0001_4K.txt",
+        "dataset": "pilot",
+        "domain": "CLINICAL_TRIALS",
+        "question_family_id": "CT_0001",
+        "question_type": "DIRECT_RETRIEVAL"
+      },
+      {
+        "answerable": true,
+        "audit_markdown": "FDA_0003.md",
+        "context_128k": "FDA_0003_128K.txt",
+        "context_4k": "FDA_0003_4K.txt",
+        "dataset": "pilot",
+        "domain": "FDA",
+        "question_family_id": "FDA_0003",
+        "question_type": "ENTITY_UNIT_BINDING"
+      },
+      {
+        "answerable": true,
+        "audit_markdown": "FRED_0007.md",
+        "context_128k": "FRED_0007_128K.txt",
+        "context_4k": "FRED_0007_4K.txt",
+        "dataset": "fred_pilot",
+        "domain": "FRED",
+        "question_family_id": "FRED_0007",
+        "question_type": "RETRIEVAL_CALCULATION"
+      },
+      {
+        "answerable": true,
+        "audit_markdown": "SEC_0006.md",
+        "context_128k": "SEC_0006_128K.txt",
+        "context_4k": "SEC_0006_4K.txt",
+        "dataset": "pilot",
+        "domain": "SEC",
+        "question_family_id": "SEC_0006",
+        "question_type": "TEMPORAL_VERSION"
+      },
+      {
+        "answerable": false,
+        "audit_markdown": "CT_0007.md",
+        "context_128k": "CT_0007_128K.txt",
+        "context_4k": "CT_0007_4K.txt",
+        "dataset": "pilot",
+        "domain": "CLINICAL_TRIALS",
+        "question_family_id": "CT_0007",
+        "question_type": "UNANSWERABLE"
+      },
+      {
+        "answerable": false,
+        "audit_markdown": "CT_0008.md",
+        "context_128k": "CT_0008_128K.txt",
+        "context_4k": "CT_0008_4K.txt",
+        "dataset": "pilot",
+        "domain": "CLINICAL_TRIALS",
+        "question_family_id": "CT_0008",
+        "question_type": "UNANSWERABLE"
+      },
+      {
+        "answerable": true,
+        "audit_markdown": "FDA_0001.md",
+        "context_128k": "FDA_0001_128K.txt",
+        "context_4k": "FDA_0001_4K.txt",
+        "dataset": "pilot",
+        "domain": "FDA",
+        "question_family_id": "FDA_0001",
+        "question_type": "DIRECT_RETRIEVAL"
+      },
+      {
+        "answerable": true,
+        "audit_markdown": "FRED_0003.md",
+        "context_128k": "FRED_0003_128K.txt",
+        "context_4k": "FRED_0003_4K.txt",
+        "dataset": "fred_pilot",
+        "domain": "FRED",
+        "question_family_id": "FRED_0003",
+        "question_type": "ENTITY_UNIT_BINDING"
+      },
+      {
+        "answerable": true,
+        "audit_markdown": "SEC_0004.md",
+        "context_128k": "SEC_0004_128K.txt",
+        "context_4k": "SEC_0004_4K.txt",
+        "dataset": "pilot",
+        "domain": "SEC",
+        "question_family_id": "SEC_0004",
+        "question_type": "RETRIEVAL_CALCULATION"
+      },
+      {
+        "answerable": true,
+        "audit_markdown": "FDA_0006.md",
+        "context_128k": "FDA_0006_128K.txt",
+        "context_4k": "FDA_0006_4K.txt",
+        "dataset": "pilot",
+        "domain": "FDA",
+        "question_family_id": "FDA_0006",
+        "question_type": "TEMPORAL_VERSION"
+      },
+      {
+        "answerable": true,
+        "audit_markdown": "FRED_0001.md",
+        "context_128k": "FRED_0001_128K.txt",
+        "context_4k": "FRED_0001_4K.txt",
+        "dataset": "fred_pilot",
+        "domain": "FRED",
+        "question_family_id": "FRED_0001",
+        "question_type": "DIRECT_RETRIEVAL"
+      },
+      {
+        "answerable": true,
+        "audit_markdown": "SEC_0003.md",
+        "context_128k": "SEC_0003_128K.txt",
+        "context_4k": "SEC_0003_4K.txt",
+        "dataset": "pilot",
+        "domain": "SEC",
+        "question_family_id": "SEC_0003",
+        "question_type": "ENTITY_UNIT_BINDING"
+      }
+    ],
+    "index_json": "data/audit/audit_index.json",
+    "index_markdown": "data/audit/audit_index.md",
+    "n_families": 12,
+    "status": "PENDING_HUMAN_REVIEW"
+  },
+  "phase": "pre-production dataset audit and FRED extension",
+  "preproduction_config": {
+    "allocation": {
+      "per_domain": {
+        "CLINICAL_TRIALS": 25,
+        "FDA": 25,
+        "FRED": 25,
+        "SEC": 25
+      },
+      "per_question_type": {
+        "DIRECT_RETRIEVAL": 20,
+        "ENTITY_UNIT_BINDING": 15,
+        "RETRIEVAL_CALCULATION": 30,
+        "TEMPORAL_VERSION": 15,
+        "UNANSWERABLE": 20
+      },
+      "total": 100
+    },
+    "config_hash": "6e5a10fbd10145b4",
+    "context_lengths": [
+      4096,
+      8192,
+      16384,
+      32768,
+      65536,
+      131072
+    ],
+    "min_fill_ratio": 0.95,
+    "note": "Explicit question_type_counts are used because 30% of 25 is 7.5: no per-domain rounding of the fractional mix reaches the global target, so counts are stated per domain and chosen to sum exactly to 20/30/15/15/20.",
+    "path": "config/preproduction.yaml",
+    "position_tolerance": 0.05,
+    "status": "PREPARED_AND_VALIDATED_NOT_GENERATED",
+    "target_position": 0.5
+  },
+  "preserved_artifacts": {
+    "note": "The previously validated 32-family pilot was not modified. Retrieval records are now written per config name, so this phase could not overwrite the earlier provenance file.",
+    "paths": [
+      "data/pilot/",
+      "data/reports/pilot_report.md",
+      "data/reports/pilot_validation.json",
+      "data/manifests/pilot_manifest.json",
+      "data/manifests/source_retrievals.json"
+    ]
+  },
+  "production_config": {
+    "allocation": {
+      "per_domain": {
+        "CLINICAL_TRIALS": 125,
+        "FDA": 125,
+        "FRED": 125,
+        "SEC": 125
+      },
+      "per_question_type": {
+        "DIRECT_RETRIEVAL": 100,
+        "ENTITY_UNIT_BINDING": 76,
+        "RETRIEVAL_CALCULATION": 148,
+        "TEMPORAL_VERSION": 76,
+        "UNANSWERABLE": 100
+      },
+      "total": 500
+    },
+    "config_hash": "c3fa532bc2ceddd8",
+    "extension_slot_retained": true,
+    "path": "config/production.yaml",
+    "status": "PREPARED_NOT_GENERATED",
+    "world_bank_removed": true
+  },
+  "scope_note": "Dataset generation and audit preparation only. No LLM has been run, no semantic judge exists, no hallucination scoring or statistical analysis has been performed, and neither the 100-family nor the 500-family dataset has been generated.",
+  "tokenizer_readiness": {
+    "after_changing_it": "re-run build-contexts (and validate); question families are unaffected",
+    "code_changes_required": "none",
+    "current_value": "tiktoken:cl100k_base",
+    "field_to_change": "tokenizer.id",
+    "files_to_change": [
+      "config/preproduction.yaml",
+      "config/production.yaml"
+    ],
+    "guard": "allow_fallback is false, so an unavailable tokenizer raises rather than silently mis-measuring every context length.",
+    "id_format": "backend:name",
+    "status": "READY_CONFIG_ONLY_SWITCH",
+    "supported_backends": {
+      "hf": "hf:<model-id>, e.g. hf:meta-llama/Llama-3.1-8B (needs the 'hf' extra)",
+      "tiktoken": "tiktoken:<encoding>, e.g. tiktoken:cl100k_base, tiktoken:o200k_base",
+      "whitespace": "whitespace:v1 - approximate, offline testing only"
+    },
+    "verified": "Three backends were driven through the real context builder by changing only tokenizer.id: cl100k_base, o200k_base and whitespace:v1 each produced valid nested contexts, each instance recorded the tokenizer actually used, and the gold answers were identical across all three."
+  },
+  "validation": {
+    "existing_pilot_unchanged": {
+      "counts": {
+        "critical_failed": 0,
+        "failed": 0,
+        "passed": 22,
+        "skipped": 0,
+        "total": 22,
+        "warning_failed": 0
+      },
+      "has_critical_failures": false
+    },
+    "fred_pilot": {
+      "counts": {
+        "critical_failed": 0,
+        "failed": 0,
+        "passed": 22,
+        "skipped": 0,
+        "total": 22,
+        "warning_failed": 0
+      },
+      "failed_checks": [],
+      "has_critical_failures": false
+    },
+    "note": "Validation rules were not weakened for FRED; the same 22 checks ran."
+  }
+}

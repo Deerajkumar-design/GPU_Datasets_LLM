@@ -1,0 +1,274 @@
+<RECORD id="CT-NCT00672386-design-masking-14569e41" source="CLINICALTRIALS_GOV_V2">
+entity: A Study of the Safety and Effectiveness of a R256918 in Patients With Type 2 Diabetes [NCT00672386]
+field: Masking [design.masking]
+value: QUADRUPLE
+version: lastupdate:2014-07-14
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT03416127-outcome-secondary-timefr-secondary-10-5da1c47a" source="CLINICALTRIALS_GOV_V2">
+entity: Effect of Propolis or Metformin Administration on Glycemic Control in Patients With Type 2 Diabetes Mellitus [NCT03416127]
+field: Secondary outcome timeframe: Body Mass Index [outcome.secondary.timeframe]
+value: Week 12
+version: lastupdate:2022-11-07
+outcome: Body Mass Index
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT02339493-enrollment-count-cff28d9d" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 458.0
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT02339493-outcome-secondary-timefr-secondary-3-5ea58f43" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Secondary outcome timeframe: Frequency of all cause mortality at 90 days [outcome.secondary.timeframe]
+value: 90 days
+version: lastupdate:2018-10-31
+outcome: Frequency of all cause mortality at 90 days
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT06699355-arm-type-Atorvastatin-0-9b0b45f7" source="CLINICALTRIALS_GOV_V2">
+entity: A Study to Evaluate the Drug-Drug Interaction Between Enlicitide Decanoate (MK-0616) and Atorvastatin in Healthy Adult Participants (MK-0616-024) [NCT06699355]
+field: Arm group type: Atorvastatin [arm.type]
+value: EXPERIMENTAL
+version: lastupdate:2024-11-21
+arm: Atorvastatin
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT02584842-eligibility-sex-df40da0a" source="CLINICALTRIALS_GOV_V2">
+entity: Rivaroxaban in Endovenous Laser Ablation With and Without Miniphlebectomy [NCT02584842]
+field: Eligible sex [eligibility.sex]
+value: ALL
+version: lastupdate:2015-10-23
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT00809965-arm-type-Rivaroxaban-2-5-mg-bid-0-53bec034" source="CLINICALTRIALS_GOV_V2">
+entity: An Efficacy and Safety Study for Rivaroxaban in Patients With Acute Coronary Syndrome [NCT00809965]
+field: Arm group type: Rivaroxaban 2.5 mg bid [arm.type]
+value: EXPERIMENTAL
+version: lastupdate:2014-09-17
+arm: Rivaroxaban 2.5 mg bid
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT02339493-eligibility-minimum-age-115a2098" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Minimum eligible age [eligibility.minimum_age]
+value: 21 Years
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT02339493-study-phase-26839c70" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Study phase [study.phase]
+value: NA
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT03189719-enrollment-count-dc1e6067" source="CLINICALTRIALS_GOV_V2">
+entity: First-line Esophageal Carcinoma Study With Pembrolizumab Plus Chemo vs. Chemo (MK-3475-590/KEYNOTE-590) [NCT03189719]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 749.0
+version: lastupdate:2024-10-15
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT05373186-design-allocation-4e8457e2" source="CLINICALTRIALS_GOV_V2">
+entity: A Trial Investigating the Pharmacodynamics of BC Combo THDB0207 Compared With Humalog® Mix25 and Simultaneous Injections of Humalog® and Lantus® in Healthy Chinese Volunteers [NCT05373186]
+field: Allocation [design.allocation]
+value: RANDOMIZED
+version: lastupdate:2023-10-12
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT00934323-arm-type-TR-sequential-group-0-ddb0a038" source="CLINICALTRIALS_GOV_V2">
+entity: Dose Proportionality Study About Amaryl M Slow Release (SR) 1/500 mg [NCT00934323]
+field: Arm group type: TR sequential group [arm.type]
+value: EXPERIMENTAL
+version: lastupdate:2009-07-08
+arm: TR sequential group
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT02950220-enrollment-count-186cb402" source="CLINICALTRIALS_GOV_V2">
+entity: Pembrolizumab and Ibrutinib in Treating Patients With Relapsed or Refractory Non-Hodgkin Lymphoma [NCT02950220]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 2.0
+version: lastupdate:2019-07-30
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT02339493-arm-type-Control-Group-1-eb2e257e" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Arm group type: Control Group [arm.type]
+value: NO_INTERVENTION
+version: lastupdate:2018-10-31
+arm: Control Group
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT02339493-study-primary-completion-53eb7086" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Primary completion date [study.primary_completion_date]
+period: 2018
+value: 2018-02
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT02301780-enrollment-count-f494f14d" source="CLINICALTRIALS_GOV_V2">
+entity: Combined Multi-marker Screening and Treatment With Aspirin for Pre-eclampsia Prevention [NCT02301780]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 2.0
+version: lastupdate:2016-11-09
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT04873245-study-completion-date-db22db13" source="CLINICALTRIALS_GOV_V2">
+entity: Lifestyle Counseling and Medication for Adolescent Weight Management [NCT04873245]
+field: Study completion date [study.completion_date]
+period: 2026
+value: 2026-06-30
+version: lastupdate:2026-07-02
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT02339493-eligibility-sex-9f0cbd6e" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Eligible sex [eligibility.sex]
+value: ALL
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT01708369-eligibility-maximum-age-b00bb352" source="CLINICALTRIALS_GOV_V2">
+entity: Alcohol Inhibits Drug Metabolism by Carboxylesterases [NCT01708369]
+field: Maximum eligible age [eligibility.maximum_age]
+value: 45 Years
+version: lastupdate:2012-10-16
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT02357212-arms-count-24f82402" source="CLINICALTRIALS_GOV_V2">
+entity: Early Invasive Versus Conservative Therapy in Women With an Acute Coronary Syndrome [NCT02357212]
+field: Number of arm groups [arms.count]
+unit: arms
+value: 2.0
+version: lastupdate:2015-02-16
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT03638778-design-intervention-mode-54dee47b" source="CLINICALTRIALS_GOV_V2">
+entity: Research Study Comparing Different Tablets With the Study Medicine Semaglutide in Healthy Men [NCT03638778]
+field: Intervention model [design.intervention_model]
+value: PARALLEL
+version: lastupdate:2019-11-14
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT01206972-arm-type-Arm-2-1-83850215" source="CLINICALTRIALS_GOV_V2">
+entity: Dose-confirmatory Bridging Study in Total Knee Replacement [NCT01206972]
+field: Arm group type: Arm 2 [arm.type]
+value: EXPERIMENTAL
+version: lastupdate:2017-01-18
+arm: Arm 2
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT02339493-study-start-date-68ca50a2" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Study start date [study.start_date]
+period: 2016
+value: 2016-05
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT02339493-design-primary-purpose-540bb2d2" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Primary purpose [design.primary_purpose]
+value: PREVENTION
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT02339493-study-last-update-posted-df46f3ec" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Last update posted date [study.last_update_posted_date]
+period: 2018
+value: 2018-10-31
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT02229292-design-intervention-mode-c56b0ba4" source="CLINICALTRIALS_GOV_V2">
+entity: Prevention of Intraoperative Bleeding and Postoperative Swelling in Orthognathic Surgery Through the Use of Tranexamic Acid [NCT02229292]
+field: Intervention model [design.intervention_model]
+value: PARALLEL
+version: lastupdate:2017-03-10
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT01468987-arms-count-b6109d8f" source="CLINICALTRIALS_GOV_V2">
+entity: A Study in Participants With Type 2 Diabetes Mellitus [NCT01468987]
+field: Number of arm groups [arms.count]
+unit: arms
+value: 2.0
+version: lastupdate:2018-04-17
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT03552757-outcome-secondary-timefr-secondary-18-38777745" source="CLINICALTRIALS_GOV_V2">
+entity: Research Study Investigating How Well Semaglutide Works in People With Type 2 Diabetes Suffering From Overweight or Obesity [NCT03552757]
+field: Secondary outcome timeframe: Change in Total Cholesterol [outcome.secondary.timeframe]
+value: Baseline (week 0) to week 68
+version: lastupdate:2021-11-09
+outcome: Change in Total Cholesterol
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT02339493-design-allocation-9c4943e5" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Allocation [design.allocation]
+value: RANDOMIZED
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT01855100-study-primary-completion-b7404d54" source="CLINICALTRIALS_GOV_V2">
+entity: Belgian Real Life Non-interventional Study (NIS) in Patients Treated With Xarelto Following an Acute Deep Vein Thrombosis (DVT) [NCT01855100]
+field: Primary completion date [study.primary_completion_date]
+period: 2014
+value: 2014-11
+version: lastupdate:2017-01-18
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT01210755-study-study-type-7d42c5d1" source="CLINICALTRIALS_GOV_V2">
+entity: Study in Healthy Volunteers of the Reversion by Haemostatic Drugs of the Anticoagulant Effect of New Anti-thrombotics [NCT01210755]
+field: Study type [study.study_type]
+value: INTERVENTIONAL
+version: lastupdate:2011-07-01
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT00405418-arm-type-1-0-c192d7ff" source="CLINICALTRIALS_GOV_V2">
+entity: Lantus Versus Levemir Treat-To-Target [NCT00405418]
+field: Arm group type: 1 [arm.type]
+value: EXPERIMENTAL
+version: lastupdate:2009-09-15
+arm: 1
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT00650767-outcome-secondary-timefr-secondary-101-161214cc" source="CLINICALTRIALS_GOV_V2">
+entity: A Study of ARRY-438162 in Patients With Rheumatoid Arthritis [NCT00650767]
+field: Secondary outcome timeframe: SF-36 Health Questionnaire - Version 2 (SF-36v2) - Social Functioning [outcome.secondary.timeframe]
+value: Week 12
+version: lastupdate:2020-12-01
+outcome: SF-36 Health Questionnaire - Version 2 (SF-36v2) - Social Functioning
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT02339493-eligibility-healthy-volu-6796fcb1" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Accepts healthy volunteers [eligibility.healthy_volunteers]
+value: No
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT02176681-study-study-type-93755d47" source="CLINICALTRIALS_GOV_V2">
+entity: A Prospective, Multicenter, Randomized, Open-label Study of 12 Week Duration to Evaluate the Effect of VILDagliptin Added to Insulin on Glycaemic Control in haemoDIALyzed Patients With Type 2 Diabetes: Probe Analysis of CGM [NCT02176681]
+field: Study type [study.study_type]
+value: INTERVENTIONAL
+version: lastupdate:2026-03-16
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT02221180-enrollment-count-0cb69d44" source="CLINICALTRIALS_GOV_V2">
+entity: Bioequivalence Study of Metformin Component of Fixed Dose Combination (FDC) Immediate Release (IR) Tablet of Canagliflozin and Metformin Compared to Metformin IR Tablet Co-administered With Canagliflozin in Healthy Fed and Fasted Participants [NCT02221180]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 2.0
+version: lastupdate:2014-11-25
+status: COMPLETED
+</RECORD>

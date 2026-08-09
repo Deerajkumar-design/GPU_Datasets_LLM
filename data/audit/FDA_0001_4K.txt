@@ -1,0 +1,323 @@
+<RECORD id="FDA-ANDA075747-001-product-dosage-form-fa29c67e" source="OPENFDA_DRUGSFDA">
+entity: CIPROFLOXACIN HYDROCHLORIDE (ANDA075747, product 001) [ANDA075747/001]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: SUN PHARM INDS LTD
+</RECORD>
+<RECORD id="FDA-ANDA202859-001-product-dosage-form-c8e507fd" source="OPENFDA_DRUGSFDA">
+entity: MONTELUKAST SODIUM (ANDA202859, product 001) [ANDA202859/001]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: PHARMOBEDIENT
+</RECORD>
+<RECORD id="FDA-ANDA080352-005-product-route-7cf6aea7" source="OPENFDA_DRUGSFDA">
+entity: PREDNISONE (ANDA080352, product 005) [ANDA080352/005]
+field: Route of administration [product.route]
+value: ORAL
+dosage_form: TABLET
+route: ORAL
+sponsor: HIKMA
+</RECORD>
+<RECORD id="FDA-NDA206977-015-product-marketing-status-fc51bfee" source="OPENFDA_DRUGSFDA">
+entity: TIROSINT-SOL (NDA206977, product 015) [NDA206977/015]
+field: Marketing status [product.marketing_status]
+value: Prescription
+dosage_form: SOLUTION
+route: ORAL
+sponsor: IBSA
+</RECORD>
+<RECORD id="FDA-ANDA062099-002-product-dosage-form-52823874" source="OPENFDA_DRUGSFDA">
+entity: TRIMOX (ANDA062099, product 002) [ANDA062099/002]
+field: Dosage form [product.dosage_form]
+value: FOR SUSPENSION
+dosage_form: FOR SUSPENSION
+route: ORAL
+sponsor: APOTHECON
+</RECORD>
+<RECORD id="FDA-ANDA075410-submission-SUPPL-64-31c24a2f" source="OPENFDA_DRUGSFDA">
+entity: LANNETT CO INC application ANDA075410 [ANDA075410]
+field: SUPPL submission 64 status date [submission.status_date]
+period: 2020
+value: 2020-12-01
+version: SUPPL-64
+sponsor: LANNETT CO INC
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-ANDA201508-001-product-dosage-form-2d202cd1" source="OPENFDA_DRUGSFDA">
+entity: MONTELUKAST SODIUM (ANDA201508, product 001) [ANDA201508/001]
+field: Dosage form [product.dosage_form]
+value: TABLET, CHEWABLE
+dosage_form: TABLET, CHEWABLE
+route: ORAL
+sponsor: APOTEX INC
+</RECORD>
+<RECORD id="FDA-ANDA077516-002-product-dosage-form-beeab27d" source="OPENFDA_DRUGSFDA">
+entity: AMLODIPINE BESYLATE (ANDA077516, product 002) [ANDA077516/002]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: STRIDES PHARMA
+</RECORD>
+<RECORD id="FDA-ANDA217081-003-product-dosage-form-3f9cb2f5" source="OPENFDA_DRUGSFDA">
+entity: ATORVASTATIN CALCIUM (ANDA217081, product 003) [ANDA217081/003]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: MANKIND PHARMA
+</RECORD>
+<RECORD id="FDA-ANDA211330-submission-ORIG-1-4a19d4cf" source="OPENFDA_DRUGSFDA">
+entity: PAI HOLDINGS PHARM application ANDA211330 [ANDA211330]
+field: ORIG submission 1 status date [submission.status_date]
+period: 2019
+value: 2019-12-03
+version: ORIG-1
+sponsor: PAI HOLDINGS PHARM
+submission_type: ORIG
+</RECORD>
+<RECORD id="FDA-NDA019888-submission-SUPPL-45-ebd969af" source="OPENFDA_DRUGSFDA">
+entity: ALMATICA application NDA019888 [NDA019888]
+field: SUPPL submission 45 status date [submission.status_date]
+period: 2009
+value: 2009-05-20
+version: SUPPL-45
+sponsor: ALMATICA
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-NDA050725-001-product-dosage-form-02b14abd" source="OPENFDA_DRUGSFDA">
+entity: AUGMENTIN '200' (NDA050725, product 001) [NDA050725/001]
+field: Dosage form [product.dosage_form]
+value: FOR SUSPENSION
+dosage_form: FOR SUSPENSION
+route: ORAL
+sponsor: US ANTIBIOTICS
+</RECORD>
+<RECORD id="FDA-ANDA075994-001-product-marketing-status-d354b821" source="OPENFDA_DRUGSFDA">
+entity: LISINOPRIL (ANDA075994, product 001) [ANDA075994/001]
+field: Marketing status [product.marketing_status]
+value: Prescription
+dosage_form: TABLET
+route: ORAL
+sponsor: CHARTWELL RX
+</RECORD>
+<RECORD id="FDA-ANDA090295-002-product-reference-drug-0559cf3a" source="OPENFDA_DRUGSFDA">
+entity: METFORMIN HYDROCHLORIDE (ANDA090295, product 002) [ANDA090295/002]
+field: Reference listed drug [product.reference_drug]
+value: No
+dosage_form: TABLET, EXTENDED RELEASE
+route: ORAL
+sponsor: MARKSANS PHARMA
+</RECORD>
+<RECORD id="FDA-ANDA070469-001-product-brand-name-97a4942c" source="OPENFDA_DRUGSFDA">
+entity: IBUPROHM (ANDA070469, product 001) [ANDA070469/001]
+field: Brand name [product.brand_name]
+value: IBUPROHM
+dosage_form: TABLET
+route: ORAL
+sponsor: OHM LABS
+</RECORD>
+<RECORD id="FDA-ANDA070469-001-product-reference-standa-4f1be279" source="OPENFDA_DRUGSFDA">
+entity: IBUPROHM (ANDA070469, product 001) [ANDA070469/001]
+field: Reference standard [product.reference_standard]
+value: No
+dosage_form: TABLET
+route: ORAL
+sponsor: OHM LABS
+</RECORD>
+<RECORD id="FDA-ANDA213385-001-product-dosage-form-2db5c493" source="OPENFDA_DRUGSFDA">
+entity: PREDNISONE (ANDA213385, product 001) [ANDA213385/001]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: AMNEAL
+</RECORD>
+<RECORD id="FDA-ANDA070469-001-product-reference-drug-dc8927f4" source="OPENFDA_DRUGSFDA">
+entity: IBUPROHM (ANDA070469, product 001) [ANDA070469/001]
+field: Reference listed drug [product.reference_drug]
+value: No
+dosage_form: TABLET
+route: ORAL
+sponsor: OHM LABS
+</RECORD>
+<RECORD id="FDA-ANDA070469-001-product-route-2bde7278" source="OPENFDA_DRUGSFDA">
+entity: IBUPROHM (ANDA070469, product 001) [ANDA070469/001]
+field: Route of administration [product.route]
+value: ORAL
+dosage_form: TABLET
+route: ORAL
+sponsor: OHM LABS
+</RECORD>
+<RECORD id="FDA-ANDA070469-001-product-dosage-form-e9aaf9f1" source="OPENFDA_DRUGSFDA">
+entity: IBUPROHM (ANDA070469, product 001) [ANDA070469/001]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: OHM LABS
+</RECORD>
+<RECORD id="FDA-NDA206977-014-product-marketing-status-7f96aa81" source="OPENFDA_DRUGSFDA">
+entity: TIROSINT-SOL (NDA206977, product 014) [NDA206977/014]
+field: Marketing status [product.marketing_status]
+value: Prescription
+dosage_form: SOLUTION
+route: ORAL
+sponsor: IBSA
+</RECORD>
+<RECORD id="FDA-NDA205003-003-product-dosage-form-3b1e45ef" source="OPENFDA_DRUGSFDA">
+entity: PRESTALIA (NDA205003, product 003) [NDA205003/003]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: ADHERA
+</RECORD>
+<RECORD id="FDA-NDA019787-submission-SUPPL-27-22336e41" source="OPENFDA_DRUGSFDA">
+entity: VIATRIS application NDA019787 [NDA019787]
+field: SUPPL submission 27 status date [submission.status_date]
+period: 2003
+value: 2003-12-03
+version: SUPPL-27
+sponsor: VIATRIS
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-ANDA070469-001-product-marketing-status-3fefbf2f" source="OPENFDA_DRUGSFDA">
+entity: IBUPROHM (ANDA070469, product 001) [ANDA070469/001]
+field: Marketing status [product.marketing_status]
+value: Discontinued
+dosage_form: TABLET
+route: ORAL
+sponsor: OHM LABS
+</RECORD>
+<RECORD id="FDA-ANDA064139-submission-SUPPL-15-3cf897ab" source="OPENFDA_DRUGSFDA">
+entity: CHARTWELL RX application ANDA064139 [ANDA064139]
+field: SUPPL submission 15 status date [submission.status_date]
+period: 2024
+value: 2024-04-25
+version: SUPPL-15
+sponsor: CHARTWELL RX
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-ANDA075978-002-product-reference-drug-d48b81fa" source="OPENFDA_DRUGSFDA">
+entity: METFORMIN HYDROCHLORIDE (ANDA075978, product 002) [ANDA075978/002]
+field: Reference listed drug [product.reference_drug]
+value: No
+dosage_form: TABLET
+route: ORAL
+sponsor: HERITAGE PHARMA
+</RECORD>
+<RECORD id="FDA-NDA020402-submission-SUPPL-27-2740f2f2" source="OPENFDA_DRUGSFDA">
+entity: HALEON US HOLDINGS application NDA020402 [NDA020402]
+field: SUPPL submission 27 status date [submission.status_date]
+period: 2011
+value: 2011-04-20
+version: SUPPL-27
+sponsor: HALEON US HOLDINGS
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-ANDA078053-001-product-dosage-form-59ac3767" source="OPENFDA_DRUGSFDA">
+entity: SERTRALINE HYDROCHLORIDE (ANDA078053, product 001) [ANDA078053/001]
+field: Dosage form [product.dosage_form]
+value: CONCENTRATE
+dosage_form: CONCENTRATE
+route: ORAL
+sponsor: RANBAXY LABS LTD
+</RECORD>
+<RECORD id="FDA-ANDA087772-submission-SUPPL-5-56d31a1e" source="OPENFDA_DRUGSFDA">
+entity: WATSON LABS application ANDA087772 [ANDA087772]
+field: SUPPL submission 5 status date [submission.status_date]
+period: 1986
+value: 1986-09-04
+version: SUPPL-5
+sponsor: WATSON LABS
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-ANDA078183-submission-SUPPL-2-6c700c47" source="OPENFDA_DRUGSFDA">
+entity: RISING application ANDA078183 [ANDA078183]
+field: SUPPL submission 2 status date [submission.status_date]
+period: 2007
+value: 2007-11-28
+version: SUPPL-2
+sponsor: RISING
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-ANDA076164-006-product-dosage-form-2b97928f" source="OPENFDA_DRUGSFDA">
+entity: LISINOPRIL (ANDA076164, product 006) [ANDA076164/006]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: PRINSTON INC
+</RECORD>
+<RECORD id="FDA-ANDA070469-001-strength-IBUPROFEN-0-12832db6" source="OPENFDA_DRUGSFDA">
+entity: IBUPROHM (ANDA070469, product 001) [ANDA070469/001]
+field: Strength of IBUPROFEN [product.active_ingredient_strength]
+unit: MG
+value: 400MG
+dosage_form: TABLET
+route: ORAL
+sponsor: OHM LABS
+</RECORD>
+<RECORD id="FDA-ANDA065109-submission-ORIG-1-ff41e8dd" source="OPENFDA_DRUGSFDA">
+entity: SUN PHARM INDS LTD application ANDA065109 [ANDA065109]
+field: ORIG submission 1 status date [submission.status_date]
+period: 2002
+value: 2002-11-04
+version: ORIG-1
+sponsor: SUN PHARM INDS LTD
+submission_type: ORIG
+</RECORD>
+<RECORD id="FDA-ANDA207891-001-product-dosage-form-c35a696d" source="OPENFDA_DRUGSFDA">
+entity: OMEPRAZOLE (ANDA207891, product 001) [ANDA207891/001]
+field: Dosage form [product.dosage_form]
+value: TABLET, DELAYED RELEASE
+dosage_form: TABLET, DELAYED RELEASE
+route: ORAL
+sponsor: SUN PHARM
+</RECORD>
+<RECORD id="FDA-ANDA078226-003-product-dosage-form-c842c37e" source="OPENFDA_DRUGSFDA">
+entity: AMLODIPINE BESYLATE (ANDA078226, product 003) [ANDA078226/003]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: ZYDUS PHARMS USA
+</RECORD>
+<RECORD id="FDA-ANDA214859-submission-ORIG-1-9b2251cf" source="OPENFDA_DRUGSFDA">
+entity: AUROBINDO PHARMA LIMITED application ANDA214859 [ANDA214859]
+field: ORIG submission 1 status date [submission.status_date]
+period: 2026
+value: 2026-02-24
+version: ORIG-1
+sponsor: AUROBINDO PHARMA LIMITED
+submission_type: ORIG
+</RECORD>
+<RECORD id="FDA-ANDA076442-003-product-reference-drug-41aff04c" source="OPENFDA_DRUGSFDA">
+entity: SERTRALINE HYDROCHLORIDE (ANDA076442, product 003) [ANDA076442/003]
+field: Reference listed drug [product.reference_drug]
+value: No
+dosage_form: TABLET
+route: ORAL
+sponsor: SCIEGEN PHARMS
+</RECORD>
+<RECORD id="FDA-NDA019777-002-product-dosage-form-ae366249" source="OPENFDA_DRUGSFDA">
+entity: ZESTRIL (NDA019777, product 002) [NDA019777/002]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: TWI PHARMS
+</RECORD>
+<RECORD id="FDA-ANDA076754-001-product-reference-standa-2ba3687b" source="OPENFDA_DRUGSFDA">
+entity: CIPROFLOXACIN HYDROCHLORIDE (ANDA076754, product 001) [ANDA076754/001]
+field: Reference standard [product.reference_standard]
+value: No
+dosage_form: SOLUTION/DROPS
+route: OPHTHALMIC
+sponsor: THE J MOLNER
+</RECORD>

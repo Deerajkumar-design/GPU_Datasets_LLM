@@ -71,9 +71,22 @@ def build_parser() -> argparse.ArgumentParser:
     sp = add_common(sub.add_parser("report", help="write the pilot report (markdown + json)"))
     sp.add_argument("--examples", type=int, default=4, help="representative families to include")
 
+    sp = add_common(sub.add_parser("audit", help="assemble the human-audit package"))
+    sp.add_argument("--also", action="append", default=[],
+                    help="additional config(s) whose datasets should be sampled too "
+                         "(repeatable, e.g. --also config/fred_pilot.yaml)")
+    sp.add_argument("--n", type=int, default=12, help="how many families to sample")
+    sp.add_argument("--out", default="data/audit", help="output directory")
+
     sp = add_common(sub.add_parser("build-pilot", help="end-to-end: fetch -> ... -> report"), True)
     sp.add_argument("--skip-fetch", action="store_true", help="reuse cached raw payloads")
     sp.add_argument("--strict", action="store_true")
+
+    sp = add_common(sub.add_parser("readiness", help="write the pre-production readiness report"))
+    sp.add_argument("--fred-config", default="config/fred_pilot.yaml")
+    sp.add_argument("--preproduction", default="config/preproduction.yaml")
+    sp.add_argument("--production", default="config/production.yaml")
+    sp.add_argument("--audit-dir", default="data/audit")
 
     sp = sub.add_parser("export-schemas", help="write JSON Schema for every public model")
     sp.add_argument("--out", default="data/schemas", help="output directory")
@@ -201,6 +214,32 @@ def cmd_build_pilot(args) -> int:
     return 1 if failed else 0
 
 
+def cmd_audit(args) -> int:
+    from .audit import build_audit_package
+
+    cfgs = [load_config(args.config)] + [load_config(p) for p in args.also]
+    _section(f"AUDIT  ({', '.join(c.name for c in cfgs)})")
+    summary = build_audit_package(cfgs, Path(args.out), n_families=args.n,
+                                  seed=cfgs[0].seed, log=_log)
+    _log(f"\n  {summary['n_families']} families -> {args.out}")
+    _log(f"  index -> {Path(args.out) / 'audit_index.md'}")
+    _log("  checklist status: PENDING_HUMAN_REVIEW (intentionally unticked)")
+    return 0
+
+
+def cmd_readiness(args) -> int:
+    from .readiness import build_readiness
+
+    pilot = load_config(args.config)
+    fred = load_config(args.fred_config)
+    _section("PRE-PRODUCTION READINESS")
+    md, js = build_readiness(pilot, fred, args.preproduction, args.production,
+                             Path(args.audit_dir), pilot.report_dir, log=_log)
+    _log(f"  markdown -> {md}")
+    _log(f"  json     -> {js}")
+    return 0
+
+
 def cmd_export_schemas(args) -> int:
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
@@ -244,6 +283,8 @@ COMMANDS = {
     "validate": cmd_validate,
     "report": cmd_report,
     "build-pilot": cmd_build_pilot,
+    "audit": cmd_audit,
+    "readiness": cmd_readiness,
     "export-schemas": cmd_export_schemas,
     "stats": cmd_stats,
 }

@@ -1,0 +1,336 @@
+<RECORD id="FDA-ANDA076089-submission-SUPPL-49-4ca3e904" source="OPENFDA_DRUGSFDA">
+entity: IVAX SUB TEVA PHARMS application ANDA076089 [ANDA076089]
+field: SUPPL submission 49 status date [submission.status_date]
+period: 2022
+value: 2022-12-19
+version: SUPPL-49
+sponsor: IVAX SUB TEVA PHARMS
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-ANDA207740-001-product-marketing-status-5573b103" source="OPENFDA_DRUGSFDA">
+entity: OMEPRAZOLE (ANDA207740, product 001) [ANDA207740/001]
+field: Marketing status [product.marketing_status]
+value: Over-the-counter
+dosage_form: TABLET, DELAYED RELEASE
+route: ORAL
+sponsor: DR REDDYS
+</RECORD>
+<RECORD id="FDA-ANDA090752-submission-SUPPL-4-94425196" source="OPENFDA_DRUGSFDA">
+entity: CHINA RESOURCES application ANDA090752 [ANDA090752]
+field: SUPPL submission 4 status date [submission.status_date]
+period: 2018
+value: 2018-04-23
+version: SUPPL-4
+sponsor: CHINA RESOURCES
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-ANDA078787-submission-SUPPL-16-fa736d16" source="OPENFDA_DRUGSFDA">
+entity: AUROBINDO PHARMA application ANDA078787 [ANDA078787]
+field: SUPPL submission 16 status date [submission.status_date]
+period: 2018
+value: 2018-04-23
+version: SUPPL-16
+sponsor: AUROBINDO PHARMA
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-NDA020364-submission-SUPPL-54-5efd296d" source="OPENFDA_DRUGSFDA">
+entity: SANDOZ application NDA020364 [NDA020364]
+field: SUPPL submission 54 status date [submission.status_date]
+period: 2011
+value: 2011-10-28
+version: SUPPL-54
+sponsor: SANDOZ
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-ANDA087773-submission-SUPPL-19-79e5d621" source="OPENFDA_DRUGSFDA">
+entity: WATSON LABS application ANDA087773 [ANDA087773]
+field: SUPPL submission 19 status date [submission.status_date]
+period: 1998
+value: 1998-02-03
+version: SUPPL-19
+sponsor: WATSON LABS
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-ANDA091672-submission-SUPPL-13-d2a17abd" source="OPENFDA_DRUGSFDA">
+entity: GLENMARK PHARMS LTD application ANDA091672 [ANDA091672]
+field: SUPPL submission 13 status date [submission.status_date]
+period: 2018
+value: 2018-06-07
+version: SUPPL-13
+sponsor: GLENMARK PHARMS LTD
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-ANDA217995-001-product-dosage-form-5f0bf34b" source="OPENFDA_DRUGSFDA">
+entity: GABAPENTIN (ANDA217995, product 001) [ANDA217995/001]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: RISING
+</RECORD>
+<RECORD id="FDA-ANDA078787-submission-SUPPL-25-13696e41" source="OPENFDA_DRUGSFDA">
+entity: AUROBINDO PHARMA application ANDA078787 [ANDA078787]
+field: SUPPL submission 25 status date [submission.status_date]
+period: 2018
+value: 2018-04-23
+version: SUPPL-25
+sponsor: AUROBINDO PHARMA
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-NDA021540-submission-SUPPL-42-9f676982" source="OPENFDA_DRUGSFDA">
+entity: PHARMACIA application NDA021540 [NDA021540]
+field: SUPPL submission 42 status date [submission.status_date]
+period: 2018
+value: 2018-09-12
+version: SUPPL-42
+sponsor: PHARMACIA
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-ANDA075876-submission-SUPPL-40-3f4db5f3" source="OPENFDA_DRUGSFDA">
+entity: STRIDES PHARMA application ANDA075876 [ANDA075876]
+field: SUPPL submission 40 status date [submission.status_date]
+period: 2018
+value: 2018-05-31
+version: SUPPL-40
+sponsor: STRIDES PHARMA
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-ANDA202024-submission-SUPPL-19-fb7cb852" source="OPENFDA_DRUGSFDA">
+entity: AMNEAL PHARMS application ANDA202024 [ANDA202024]
+field: SUPPL submission 19 status date [submission.status_date]
+period: 2025
+value: 2025-09-16
+version: SUPPL-19
+sponsor: AMNEAL PHARMS
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-ANDA072300-submission-SUPPL-2-5adadc9b" source="OPENFDA_DRUGSFDA">
+entity: CONTRACT PHARMACAL application ANDA072300 [ANDA072300]
+field: SUPPL submission 2 status date [submission.status_date]
+period: 2016
+value: 2016-05-09
+version: SUPPL-2
+sponsor: CONTRACT PHARMACAL
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-ANDA078394-submission-SUPPL-15-a5b56dae" source="OPENFDA_DRUGSFDA">
+entity: WATSON LABS application ANDA078394 [ANDA078394]
+field: SUPPL submission 15 status date [submission.status_date]
+period: 2018
+value: 2018-09-18
+version: SUPPL-15
+sponsor: WATSON LABS
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-ANDA077809-submission-SUPPL-6-e5de88e1" source="OPENFDA_DRUGSFDA">
+entity: ANI PHARMS application ANDA077809 [ANDA077809]
+field: SUPPL submission 6 status date [submission.status_date]
+period: 2018
+value: 2018-10-18
+version: SUPPL-6
+sponsor: ANI PHARMS
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-ANDA090752-submission-SUPPL-3-747491d6" source="OPENFDA_DRUGSFDA">
+entity: CHINA RESOURCES application ANDA090752 [ANDA090752]
+field: SUPPL submission 3 status date [submission.status_date]
+period: 2018
+value: 2018-04-23
+version: SUPPL-3
+sponsor: CHINA RESOURCES
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-NDA022056-submission-SUPPL-22-ab6b18da" source="OPENFDA_DRUGSFDA">
+entity: AZURITY application NDA022056 [NDA022056]
+field: SUPPL submission 22 status date [submission.status_date]
+period: 2018
+value: 2018-06-07
+version: SUPPL-22
+sponsor: AZURITY
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-ANDA209306-submission-SUPPL-2-0f6073e3" source="OPENFDA_DRUGSFDA">
+entity: LUPIN application ANDA209306 [ANDA209306]
+field: SUPPL submission 2 status date [submission.status_date]
+period: 2021
+value: 2021-11-12
+version: SUPPL-2
+sponsor: LUPIN
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-ANDA209306-submission-SUPPL-4-b374311f" source="OPENFDA_DRUGSFDA">
+entity: LUPIN application ANDA209306 [ANDA209306]
+field: SUPPL submission 4 status date [submission.status_date]
+period: 2024
+value: 2024-09-26
+version: SUPPL-4
+sponsor: LUPIN
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-ANDA209306-submission-ORIG-1-0b1fd305" source="OPENFDA_DRUGSFDA">
+entity: LUPIN application ANDA209306 [ANDA209306]
+field: ORIG submission 1 status date [submission.status_date]
+period: 2018
+value: 2018-08-24
+version: ORIG-1
+sponsor: LUPIN
+submission_type: ORIG
+</RECORD>
+<RECORD id="FDA-ANDA209306-submission-SUPPL-3-819059ae" source="OPENFDA_DRUGSFDA">
+entity: LUPIN application ANDA209306 [ANDA209306]
+field: SUPPL submission 3 status date [submission.status_date]
+period: 2021
+value: 2021-11-12
+version: SUPPL-3
+sponsor: LUPIN
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-ANDA075593-001-product-route-61eb500b" source="OPENFDA_DRUGSFDA">
+entity: CIPROFLOXACIN HYDROCHLORIDE (ANDA075593, product 001) [ANDA075593/001]
+field: Route of administration [product.route]
+value: ORAL
+dosage_form: TABLET
+route: ORAL
+sponsor: DR REDDYS LABS LTD
+</RECORD>
+<RECORD id="FDA-ANDA076515-submission-SUPPL-29-b88342ac" source="OPENFDA_DRUGSFDA">
+entity: SANDOZ application ANDA076515 [ANDA076515]
+field: SUPPL submission 29 status date [submission.status_date]
+period: 2018
+value: 2018-06-07
+version: SUPPL-29
+sponsor: SANDOZ
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-ANDA078394-submission-SUPPL-16-7503f184" source="OPENFDA_DRUGSFDA">
+entity: WATSON LABS application ANDA078394 [ANDA078394]
+field: SUPPL submission 16 status date [submission.status_date]
+period: 2018
+value: 2018-09-21
+version: SUPPL-16
+sponsor: WATSON LABS
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-NDA020829-submission-SUPPL-69-d9271ede" source="OPENFDA_DRUGSFDA">
+entity: ORGANON application NDA020829 [NDA020829]
+field: SUPPL submission 69 status date [submission.status_date]
+period: 2016
+value: 2016-12-13
+version: SUPPL-69
+sponsor: ORGANON
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-ANDA217279-002-product-reference-drug-de274abb" source="OPENFDA_DRUGSFDA">
+entity: AMLODIPINE BESYLATE AND ATORVASTATIN CALCIUM (ANDA217279, product 002) [ANDA217279/002]
+field: Reference listed drug [product.reference_drug]
+value: No
+dosage_form: TABLET
+route: ORAL
+sponsor: ALEMBIC
+</RECORD>
+<RECORD id="FDA-ANDA075757-submission-SUPPL-49-657ac41a" source="OPENFDA_DRUGSFDA">
+entity: SANDOZ application ANDA075757 [ANDA075757]
+field: SUPPL submission 49 status date [submission.status_date]
+period: 2018
+value: 2018-06-07
+version: SUPPL-49
+sponsor: SANDOZ
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-NDA020387-submission-SUPPL-15-3ddeb441" source="OPENFDA_DRUGSFDA">
+entity: ORGANON application NDA020387 [NDA020387]
+field: SUPPL submission 15 status date [submission.status_date]
+period: 2003
+value: 2003-09-30
+version: SUPPL-15
+sponsor: ORGANON
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-ANDA075410-submission-SUPPL-48-ae44bab3" source="OPENFDA_DRUGSFDA">
+entity: LANNETT CO INC application ANDA075410 [ANDA075410]
+field: SUPPL submission 48 status date [submission.status_date]
+period: 2015
+value: 2015-02-27
+version: SUPPL-48
+sponsor: LANNETT CO INC
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-ANDA076477-submission-SUPPL-15-71b0f291" source="OPENFDA_DRUGSFDA">
+entity: SUN PHARM INDS LTD application ANDA076477 [ANDA076477]
+field: SUPPL submission 15 status date [submission.status_date]
+period: 2021
+value: 2021-06-08
+version: SUPPL-15
+sponsor: SUN PHARM INDS LTD
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-NDA205649-submission-SUPPL-10-df5e23a8" source="OPENFDA_DRUGSFDA">
+entity: ASTRAZENECA AB application NDA205649 [NDA205649]
+field: SUPPL submission 10 status date [submission.status_date]
+period: 2018
+value: 2018-10-26
+version: SUPPL-10
+sponsor: ASTRAZENECA AB
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-ANDA078677-001-product-marketing-status-2c82ca15" source="OPENFDA_DRUGSFDA">
+entity: SERTRALINE HYDROCHLORIDE (ANDA078677, product 001) [ANDA078677/001]
+field: Marketing status [product.marketing_status]
+value: Prescription
+dosage_form: TABLET
+route: ORAL
+sponsor: REYOUNG
+</RECORD>
+<RECORD id="FDA-ANDA070481-submission-SUPPL-36-643140b1" source="OPENFDA_DRUGSFDA">
+entity: STRIDES PHARMA INTL application ANDA070481 [ANDA070481]
+field: SUPPL submission 36 status date [submission.status_date]
+period: 1998
+value: 1998-11-05
+version: SUPPL-36
+sponsor: STRIDES PHARMA INTL
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-ANDA203270-submission-SUPPL-8-c0824180" source="OPENFDA_DRUGSFDA">
+entity: AUROBINDO PHARMA application ANDA203270 [ANDA203270]
+field: SUPPL submission 8 status date [submission.status_date]
+period: 2018
+value: 2018-06-07
+version: SUPPL-8
+sponsor: AUROBINDO PHARMA
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-ANDA090335-submission-SUPPL-4-bcef0c0f" source="OPENFDA_DRUGSFDA">
+entity: PHARMOBEDIENT application ANDA090335 [ANDA090335]
+field: SUPPL submission 4 status date [submission.status_date]
+period: 2023
+value: 2023-05-23
+version: SUPPL-4
+sponsor: PHARMOBEDIENT
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-ANDA090150-003-product-dosage-form-e15e1b85" source="OPENFDA_DRUGSFDA">
+entity: LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE (ANDA090150, product 003) [ANDA090150/003]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: APOTEX
+</RECORD>
+<RECORD id="FDA-ANDA076719-submission-SUPPL-11-0b760386" source="OPENFDA_DRUGSFDA">
+entity: COREPHARMA application ANDA076719 [ANDA076719]
+field: SUPPL submission 11 status date [submission.status_date]
+period: 2018
+value: 2018-04-02
+version: SUPPL-11
+sponsor: COREPHARMA
+submission_type: SUPPL
+</RECORD>
+<RECORD id="FDA-ANDA211314-submission-ORIG-1-cc104db7" source="OPENFDA_DRUGSFDA">
+entity: STRIDES PHARMA application ANDA211314 [ANDA211314]
+field: ORIG submission 1 status date [submission.status_date]
+period: 2018
+value: 2018-10-16
+version: ORIG-1
+sponsor: STRIDES PHARMA
+submission_type: ORIG
+</RECORD>

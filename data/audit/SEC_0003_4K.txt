@@ -1,0 +1,276 @@
+<RECORD id="SEC-0000078003-NetCashProvidedByUsedInI-USD-2024-01-01-2024-06-30-0000078003-24-000166-0743c738" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: PFIZER INC [0000078003]
+field: Net Cash Provided by (Used in) Investing Activities [us-gaap:NetCashProvidedByUsedInInvestingActivities]
+period: 2024-01-01..2024-06-30
+unit: USD
+value: 6332000000.0
+version: 10-Q|0000078003-24-000166
+form: 10-Q
+accession: 0000078003-24-000166
+fiscal_year: 2024
+fiscal_period: Q2
+</RECORD>
+<RECORD id="SEC-0000789019-NetIncomeLoss-USD-CY2012Q2-0001193125-13-455144-2f004069" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Net Income (Loss) Attributable to Parent [us-gaap:NetIncomeLoss]
+period: CY2012Q2
+unit: USD
+value: -492000000.0
+version: 8-K|0001193125-13-455144
+form: 8-K
+accession: 0001193125-13-455144
+fiscal_year: 2013
+fiscal_period: FY
+</RECORD>
+<RECORD id="SEC-0000078003-AccountsPayableCurrent-USD-AS-OF-2023-12-31-0000078003-24-000039-a7e09d7e" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: PFIZER INC [0000078003]
+field: Accounts Payable, Current [us-gaap:AccountsPayableCurrent]
+period: AS_OF_2023-12-31
+unit: USD
+value: 6710000000.0
+version: 10-K|0000078003-24-000039
+form: 10-K
+accession: 0000078003-24-000039
+fiscal_year: 2023
+fiscal_period: FY
+</RECORD>
+<RECORD id="SEC-0000078003-CashAndCashEquivalentsAt-USD-CY2017Q2I-0000078003-17-000039-e2b08448" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: PFIZER INC [0000078003]
+field: Cash and Cash Equivalents, at Carrying Value [us-gaap:CashAndCashEquivalentsAtCarryingValue]
+period: CY2017Q2I
+unit: USD
+value: 2585000000.0
+version: 10-Q|0000078003-17-000039
+form: 10-Q
+accession: 0000078003-17-000039
+fiscal_year: 2017
+fiscal_period: Q2
+</RECORD>
+<RECORD id="SEC-0000320193-NetCashProvidedByUsedInI-USD-CY2010-0001193125-13-170623-96380c75" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: Apple Inc. [0000320193]
+field: Net Cash Provided by (Used in) Investing Activities [us-gaap:NetCashProvidedByUsedInInvestingActivities]
+period: CY2010
+unit: USD
+value: -13854000000.0
+version: 8-K|0001193125-13-170623
+form: 8-K
+accession: 0001193125-13-170623
+fiscal_year: 2012
+fiscal_period: FY
+</RECORD>
+<RECORD id="SEC-0001018724-NetCashProvidedByUsedInI-USD-CY2010Q2-0001193125-11-197823-0a85eed9" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: AMAZON COM INC [0001018724]
+field: Net Cash Provided by (Used in) Investing Activities [us-gaap:NetCashProvidedByUsedInInvestingActivities]
+period: CY2010Q2
+unit: USD
+value: -475000000.0
+version: 10-Q|0001193125-11-197823
+form: 10-Q
+accession: 0001193125-11-197823
+fiscal_year: 2011
+fiscal_period: Q2
+</RECORD>
+<RECORD id="SEC-0000078003-NetCashProvidedByUsedInI-USD-CY2013-0000078003-16-000077-1f2c84e8" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: PFIZER INC [0000078003]
+field: Net Cash Provided by (Used in) Investing Activities [us-gaap:NetCashProvidedByUsedInInvestingActivities]
+period: CY2013
+unit: USD
+value: -10544000000.0
+version: 10-K|0000078003-16-000077
+form: 10-K
+accession: 0000078003-16-000077
+fiscal_year: 2015
+fiscal_period: FY
+</RECORD>
+<RECORD id="SEC-0000320193-CommonStockSharesOutstan-shares-CY2022Q4I-0000320193-23-000006-a00bed87" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: Apple Inc. [0000320193]
+field: Common Stock, Shares, Outstanding [us-gaap:CommonStockSharesOutstanding]
+period: CY2022Q4I
+unit: shares
+value: 15842407000.0
+version: 10-Q|0000320193-23-000006
+form: 10-Q
+accession: 0000320193-23-000006
+fiscal_year: 2023
+fiscal_period: Q1
+</RECORD>
+<RECORD id="SEC-0000078003-NetCashProvidedByUsedInI-USD-CY2012Q1-0000078003-13-000013-6cc9370d" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: PFIZER INC [0000078003]
+field: Net Cash Provided by (Used in) Investing Activities [us-gaap:NetCashProvidedByUsedInInvestingActivities]
+period: CY2012Q1
+unit: USD
+value: 451000000.0
+version: 10-Q|0000078003-13-000013
+form: 10-Q
+accession: 0000078003-13-000013
+fiscal_year: 2013
+fiscal_period: Q1
+</RECORD>
+<RECORD id="SEC-0000078003-PropertyPlantAndEquipmen-USD-CY2009Q4I-0001193125-11-048877-91794694" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: PFIZER INC [0000078003]
+field: Property, Plant and Equipment, Net [us-gaap:PropertyPlantAndEquipmentNet]
+period: CY2009Q4I
+unit: USD
+value: 22780000000.0
+version: 10-K|0001193125-11-048877
+form: 10-K
+accession: 0001193125-11-048877
+fiscal_year: 2010
+fiscal_period: FY
+</RECORD>
+<RECORD id="SEC-0000021344-NetCashProvidedByUsedInI-USD-CY2010-0000021344-13-000052-602a9189" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: COCA COLA CO [0000021344]
+field: Net Cash Provided by (Used in) Investing Activities [us-gaap:NetCashProvidedByUsedInInvestingActivities]
+period: CY2010
+unit: USD
+value: -4405000000.0
+version: 8-K|0000021344-13-000052
+form: 8-K
+accession: 0000021344-13-000052
+fiscal_year: 2012
+fiscal_period: FY
+</RECORD>
+<RECORD id="SEC-0000078003-NetCashProvidedByUsedInI-USD-CY2010-0000078003-13-000006-0cfaf545" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: PFIZER INC [0000078003]
+field: Net Cash Provided by (Used in) Investing Activities [us-gaap:NetCashProvidedByUsedInInvestingActivities]
+period: CY2010
+unit: USD
+value: -492000000.0
+version: 10-K|0000078003-13-000006
+form: 10-K
+accession: 0000078003-13-000006
+fiscal_year: 2012
+fiscal_period: FY
+</RECORD>
+<RECORD id="SEC-0000104169-NetCashProvidedByUsedInI-USD-CY2010-0000104169-13-000011-007a3078" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: WALMART INC. [0000104169]
+field: Net Cash Provided by (Used in) Investing Activities [us-gaap:NetCashProvidedByUsedInInvestingActivities]
+period: CY2010
+unit: USD
+value: -12193000000.0
+version: 10-K|0000104169-13-000011
+form: 10-K
+accession: 0000104169-13-000011
+fiscal_year: 2012
+fiscal_period: FY
+</RECORD>
+<RECORD id="SEC-0000019617-NetCashProvidedByUsedInI-USD-CY2010-0000019617-13-000221-e125e029" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: JPMORGAN CHASE & CO [0000019617]
+field: Net Cash Provided by (Used in) Investing Activities [us-gaap:NetCashProvidedByUsedInInvestingActivities]
+period: CY2010
+unit: USD
+value: 54002000000.0
+version: 10-K|0000019617-13-000221
+form: 10-K
+accession: 0000019617-13-000221
+fiscal_year: 2012
+fiscal_period: FY
+</RECORD>
+<RECORD id="SEC-0000789019-OperatingIncomeLoss-USD-CY2010Q1-0001193125-11-115186-30378dca" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Operating Income (Loss) [us-gaap:OperatingIncomeLoss]
+period: CY2010Q1
+unit: USD
+value: 5173000000.0
+version: 10-Q|0001193125-11-115186
+form: 10-Q
+accession: 0001193125-11-115186
+fiscal_year: 2011
+fiscal_period: Q3
+</RECORD>
+<RECORD id="SEC-0000078003-PropertyPlantAndEquipmen-USD-AS-OF-2014-12-31-0000078003-16-000077-1b8411dc" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: PFIZER INC [0000078003]
+field: Property, Plant and Equipment, Net [us-gaap:PropertyPlantAndEquipmentNet]
+period: AS_OF_2014-12-31
+unit: USD
+value: 11762000000.0
+version: 10-K|0000078003-16-000077
+form: 10-K
+accession: 0000078003-16-000077
+fiscal_year: 2015
+fiscal_period: FY
+</RECORD>
+<RECORD id="SEC-0000078003-NetCashProvidedByUsedInI-USD-CY2023-0000078003-26-000026-3a573e2b" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: PFIZER INC [0000078003]
+field: Net Cash Provided by (Used in) Investing Activities [us-gaap:NetCashProvidedByUsedInInvestingActivities]
+period: CY2023
+unit: USD
+value: -32278000000.0
+version: 10-K|0000078003-26-000026
+form: 10-K
+accession: 0000078003-26-000026
+fiscal_year: 2025
+fiscal_period: FY
+</RECORD>
+<RECORD id="SEC-0001018724-NetCashProvidedByUsedInI-USD-CY2010-0001193125-13-028520-68e9bb0f" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: AMAZON COM INC [0001018724]
+field: Net Cash Provided by (Used in) Investing Activities [us-gaap:NetCashProvidedByUsedInInvestingActivities]
+period: CY2010
+unit: USD
+value: -3360000000.0
+version: 10-K|0001193125-13-028520
+form: 10-K
+accession: 0001193125-13-028520
+fiscal_year: 2012
+fiscal_period: FY
+</RECORD>
+<RECORD id="SEC-0000789019-NetCashProvidedByUsedInI-USD-CY2010-0001193125-12-316848-24efaeac" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Net Cash Provided by (Used in) Investing Activities [us-gaap:NetCashProvidedByUsedInInvestingActivities]
+period: CY2010
+unit: USD
+value: -11314000000.0
+version: 10-K|0001193125-12-316848
+form: 10-K
+accession: 0001193125-12-316848
+fiscal_year: 2012
+fiscal_period: FY
+</RECORD>
+<RECORD id="SEC-0000021344-WeightedAverageNumberOfS-shares-2019-01-01-2019-09-27-0000021344-20-000046-95127d4f" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: COCA COLA CO [0000021344]
+field: Weighted Average Number of Shares Outstanding, Basic [us-gaap:WeightedAverageNumberOfSharesOutstandingBasic]
+period: 2019-01-01..2019-09-27
+unit: shares
+value: 4273000000.0
+version: 10-Q|0000021344-20-000046
+form: 10-Q
+accession: 0000021344-20-000046
+fiscal_year: 2020
+fiscal_period: Q3
+</RECORD>
+<RECORD id="SEC-0000078003-PaymentsToAcquirePropert-USD-2012-01-01-2012-09-30-0000078003-12-000008-5c9254cf" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: PFIZER INC [0000078003]
+field: Payments to Acquire Property, Plant, and Equipment [us-gaap:PaymentsToAcquirePropertyPlantAndEquipment]
+period: 2012-01-01..2012-09-30
+unit: USD
+value: 833000000.0
+version: 10-Q|0000078003-12-000008
+form: 10-Q
+accession: 0000078003-12-000008
+fiscal_year: 2012
+fiscal_period: Q3
+</RECORD>
+<RECORD id="SEC-0000104169-LongTermDebtNoncurrent-USD-CY2010Q1I-0001193125-11-158587-bd42b397" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: WALMART INC. [0000104169]
+field: Long-term Debt, Excluding Current Maturities [us-gaap:LongTermDebtNoncurrent]
+period: CY2010Q1I
+unit: USD
+value: 32668000000.0
+version: 10-Q|0001193125-11-158587
+form: 10-Q
+accession: 0001193125-11-158587
+fiscal_year: 2011
+fiscal_period: Q1
+</RECORD>
+<RECORD id="SEC-0000078003-NetCashProvidedByUsedInI-USD-2024-01-01-2024-09-29-0000078003-24-000191-f86f143d" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: PFIZER INC [0000078003]
+field: Net Cash Provided by (Used in) Investing Activities [us-gaap:NetCashProvidedByUsedInInvestingActivities]
+period: 2024-01-01..2024-09-29
+unit: USD
+value: 4275000000.0
+version: 10-Q|0000078003-24-000191
+form: 10-Q
+accession: 0000078003-24-000191
+fiscal_year: 2024
+fiscal_period: Q3
+</RECORD>

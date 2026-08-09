@@ -44,7 +44,7 @@ def test_pipeline_covers_all_question_types(built):
 def test_every_domain_contributes_families(built):
     _, families = built
     assert {f.domain for f in families} == {
-        Domain.SEC, Domain.FDA, Domain.CLINICAL_TRIALS, Domain.WORLD_BANK}
+        Domain.SEC, Domain.FDA, Domain.CLINICAL_TRIALS, Domain.FRED, Domain.WORLD_BANK}
 
 
 def test_no_duplicate_questions_within_a_domain(built):

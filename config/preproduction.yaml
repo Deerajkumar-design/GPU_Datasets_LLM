@@ -1,38 +1,36 @@
-# Production configuration: the intended 500-question-family dataset.
+# Pre-production configuration: 100 question families across the four ACTIVE domains.
 #
-# NOT YET GENERATED. This file exists so the pilot and pre-production runs can be judged
-# against the exact target they must scale to, and so scaling stays a config change
-# rather than a code change.
+# NOT YET GENERATED. This file is prepared and validated only; generating it is a
+# separate, explicit step (see README "Scaling").
 #
-# Domain allocation: 125 families each across the four ACTIVE domains.
-#   SEC 125 · FDA 125 · ClinicalTrials 125 · FRED 125 = 500
+# World Bank is deliberately absent. Its Indicators API returned HTTP 502 for date-range
+# queries, hung on large result sets, and eventually refused traffic outright during the
+# pilot. The adapter and its data are retained in the repository so earlier datasets stay
+# reproducible, but the domain is not part of the active experiment.
 #
-# World Bank was REMOVED from the active experiment. Its Indicators API returned HTTP 502
-# for date-range queries, hung on large result sets, and eventually refused traffic during
-# the pilot. The adapter and its normalized data are retained in the repository so earlier
-# datasets remain reproducible, and the domain can be revived by re-enabling it here if
-# the endpoint recovers -- but nothing in the active plan depends on it.
-#
-# At 125 families per domain the fractional mix rounds exactly onto the design target,
-# so no explicit question_type_counts override is needed here (unlike preproduction,
-# where 30% of 25 is 7.5):
-#   DIRECT_RETRIEVAL       100  (20%)
-#   RETRIEVAL_CALCULATION  148  (30%)   <- 37 per domain
-#   TEMPORAL_VERSION        76  (15%)
-#   ENTITY_UNIT_BINDING     76  (15%)
-#   UNANSWERABLE           100  (20%)
-#
-# A fifth domain can still be added later; see the EXTENSION slot at the bottom.
+# Question-type totals land EXACTLY on the design target:
+#   DIRECT_RETRIEVAL       20   (20%)
+#   RETRIEVAL_CALCULATION  30   (30%)
+#   TEMPORAL_VERSION       15   (15%)
+#   ENTITY_UNIT_BINDING    15   (15%)
+#   UNANSWERABLE           20   (20%)
+# Explicit `question_type_counts` are used rather than fractions because 30% of 25 is
+# 7.5: no per-domain rounding of the fractional mix can hit the global target, so the
+# counts are stated per domain and chosen to sum correctly.
 
-name: production
+name: preproduction
 seed: 20240817
 data_root: data
-output_subdir: production
+output_subdir: preproduction
 schema_version: "1.1.0"
 write_parquet: true
 
 tokenizer:
-  # Set this to the tokenizer of the model actually under test before generating.
+  # >>> SET THIS BEFORE GENERATING <<<
+  # Token counts are the independent variable of the experiment, so this must match the
+  # tokenizer of the model actually under test. Changing this one field and re-running
+  # `build-contexts` is the whole switch -- no code change. See
+  # data/reports/preproduction_readiness.md section "Tokenizer readiness".
   id: "tiktoken:cl100k_base"
   fallback_id: "whitespace:v1"
   allow_fallback: false
@@ -48,10 +46,7 @@ http:
   max_retries: 5
   backoff_seconds: 2.0
   sec_user_agent: "${SEC_USER_AGENT}"
-  sec_rate_limit_per_second: 8.0
   openfda_api_key: "${OPENFDA_API_KEY}"
-  # Optional. Without it the FRED adapter uses the keyless first-party
-  # St. Louis Fed CSV endpoints and marks series attributes operator-supplied.
   fred_api_key: "${FRED_API_KEY}"
   default_rate_limit_per_second: 5.0
   cache_enabled: true
@@ -65,119 +60,121 @@ validation:
 domains:
   SEC:
     enabled: true
-    n_families: 125
-    question_type_mix:
-      DIRECT_RETRIEVAL: 0.20
-      RETRIEVAL_CALCULATION: 0.30
-      TEMPORAL_VERSION: 0.15
-      ENTITY_UNIT_BINDING: 0.15
-      UNANSWERABLE: 0.20
+    n_families: 25
+    # Entity pool widened below; 25 families need distinct filers to avoid repetition.
+    question_type_counts:
+      DIRECT_RETRIEVAL: 5
+      RETRIEVAL_CALCULATION: 8
+      TEMPORAL_VERSION: 4
+      ENTITY_UNIT_BINDING: 3
+      UNANSWERABLE: 5
     params:
-      # Scale the entity pool with the family count: ~40 large filers give enough
-      # distinct concept x period x version facts to fill 128K without reuse.
       companies:
-        "0000320193": "Apple Inc."
-        "0000789019": "Microsoft Corporation"
-        "0001018724": "Amazon.com, Inc."
-        "0000021344": "The Coca-Cola Company"
-        "0000104169": "Walmart Inc."
-        "0000200406": "Johnson & Johnson"
-        "0000078003": "Pfizer Inc."
-        "0000019617": "JPMorgan Chase & Co."
-        "0000051143": "International Business Machines Corporation"
-        "0000012927": "The Boeing Company"
-        "0000040545": "General Electric Company"
-        "0000093410": "Chevron Corporation"
-        "0000034088": "Exxon Mobil Corporation"
-        "0000080424": "The Procter & Gamble Company"
-        "0000063908": "McDonald's Corporation"
-        "0000029534": "Dollar General Corporation"
-        "0000318154": "Amgen Inc."
-        "0000097745": "Thermo Fisher Scientific Inc."
-        "0000320187": "NIKE, Inc."
-        "0001045810": "NVIDIA Corporation"
+        0000320193: Apple Inc.
+        0000789019: Microsoft Corporation
+        0001018724: Amazon.com, Inc.
+        '0000021344': The Coca-Cola Company
+        0000104169: Walmart Inc.
+        '0000200406': Johnson & Johnson
+        0000078003: Pfizer Inc.
+        0000019617: JPMorgan Chase & Co.
+        '0000051143': International Business Machines Corporation
+        0000012927: The Boeing Company
+        '0000040545': General Electric Company
+        0000093410: Chevron Corporation
+        0000034088: Exxon Mobil Corporation
+        0000080424: The Procter & Gamble Company
+        0000063908: McDonald's Corporation
+        0000029534: Dollar General Corporation
+        0000318154: Amgen Inc.
+        0000097745: Thermo Fisher Scientific Inc.
+        0000320187: NIKE, Inc.
+        0001045810: NVIDIA Corporation
+
 
   FDA:
     enabled: true
-    n_families: 125
-    question_type_mix:
-      DIRECT_RETRIEVAL: 0.20
-      RETRIEVAL_CALCULATION: 0.30
-      TEMPORAL_VERSION: 0.15
-      ENTITY_UNIT_BINDING: 0.15
-      UNANSWERABLE: 0.20
+    n_families: 25
+    # Ingredient list drives application/product breadth.
+    question_type_counts:
+      DIRECT_RETRIEVAL: 5
+      RETRIEVAL_CALCULATION: 8
+      TEMPORAL_VERSION: 3
+      ENTITY_UNIT_BINDING: 4
+      UNANSWERABLE: 5
     params:
       limit_per_ingredient: 100
-      # Broadened ingredient list; each yields dozens of applications and hundreds of
-      # near-duplicate products (same ingredient, different strength/form/route/sponsor).
       ingredients:
-        - "METFORMIN HYDROCHLORIDE"
-        - "ATORVASTATIN CALCIUM"
-        - "LISINOPRIL"
-        - "AMLODIPINE BESYLATE"
-        - "LEVOTHYROXINE SODIUM"
-        - "OMEPRAZOLE"
-        - "SERTRALINE HYDROCHLORIDE"
-        - "GABAPENTIN"
-        - "IBUPROFEN"
-        - "AMOXICILLIN"
-        - "PREDNISONE"
-        - "WARFARIN SODIUM"
-        - "MONTELUKAST SODIUM"
-        - "LOSARTAN POTASSIUM"
-        - "CIPROFLOXACIN HYDROCHLORIDE"
-        - "HYDROCHLOROTHIAZIDE"
-        - "SIMVASTATIN"
-        - "METOPROLOL TARTRATE"
-        - "FUROSEMIDE"
-        - "TRAMADOL HYDROCHLORIDE"
-        - "ALBUTEROL SULFATE"
-        - "FLUOXETINE HYDROCHLORIDE"
-        - "PANTOPRAZOLE SODIUM"
-        - "ESCITALOPROM OXALATE"
-        - "CLOPIDOGREL BISULFATE"
+      - METFORMIN HYDROCHLORIDE
+      - ATORVASTATIN CALCIUM
+      - LISINOPRIL
+      - AMLODIPINE BESYLATE
+      - LEVOTHYROXINE SODIUM
+      - OMEPRAZOLE
+      - SERTRALINE HYDROCHLORIDE
+      - GABAPENTIN
+      - IBUPROFEN
+      - AMOXICILLIN
+      - PREDNISONE
+      - WARFARIN SODIUM
+      - MONTELUKAST SODIUM
+      - LOSARTAN POTASSIUM
+      - CIPROFLOXACIN HYDROCHLORIDE
+      - HYDROCHLOROTHIAZIDE
+      - SIMVASTATIN
+      - METOPROLOL TARTRATE
+      - FUROSEMIDE
+      - TRAMADOL HYDROCHLORIDE
+      - ALBUTEROL SULFATE
+      - FLUOXETINE HYDROCHLORIDE
+      - PANTOPRAZOLE SODIUM
+      - ESCITALOPROM OXALATE
+      - CLOPIDOGREL BISULFATE
+
 
   CLINICAL_TRIALS:
     enabled: true
-    n_families: 125
-    question_type_mix:
-      DIRECT_RETRIEVAL: 0.20
-      RETRIEVAL_CALCULATION: 0.30
-      TEMPORAL_VERSION: 0.15
-      ENTITY_UNIT_BINDING: 0.15
-      UNANSWERABLE: 0.20
+    n_families: 25
+    # Query list drives trial breadth.
+    question_type_counts:
+      DIRECT_RETRIEVAL: 5
+      RETRIEVAL_CALCULATION: 7
+      TEMPORAL_VERSION: 4
+      ENTITY_UNIT_BINDING: 4
+      UNANSWERABLE: 5
     params:
       page_size: 100
       max_pages_per_query: 5
-      overall_status: "COMPLETED"
+      overall_status: COMPLETED
       queries:
-        - "metformin"
-        - "atorvastatin"
-        - "pembrolizumab"
-        - "insulin glargine"
-        - "semaglutide"
-        - "rivaroxaban"
-        - "aspirin"
-        - "tranexamic acid"
-        - "nivolumab"
-        - "dapagliflozin"
-        - "apixaban"
-        - "sacubitril valsartan"
-        - "tocilizumab"
-        - "remdesivir"
-        - "denosumab"
-        - "ustekinumab"
+      - metformin
+      - atorvastatin
+      - pembrolizumab
+      - insulin glargine
+      - semaglutide
+      - rivaroxaban
+      - aspirin
+      - tranexamic acid
+      - nivolumab
+      - dapagliflozin
+      - apixaban
+      - sacubitril valsartan
+      - tocilizumab
+      - remdesivir
+      - denosumab
+      - ustekinumab
 
 
   FRED:
     enabled: true
-    n_families: 125
-    question_type_mix:
-      DIRECT_RETRIEVAL: 0.20
-      RETRIEVAL_CALCULATION: 0.30
-      TEMPORAL_VERSION: 0.15
-      ENTITY_UNIT_BINDING: 0.15
-      UNANSWERABLE: 0.20
+    n_families: 25
+    # Vintage series/dates are what make TEMPORAL_VERSION and WRONG_VERSION real here.
+    question_type_counts:
+      DIRECT_RETRIEVAL: 5
+      RETRIEVAL_CALCULATION: 7
+      TEMPORAL_VERSION: 4
+      ENTITY_UNIT_BINDING: 4
+      UNANSWERABLE: 5
     params:
       observation_start: '1990-01-01'
       rate_limit_per_second: 4.0
@@ -379,34 +376,11 @@ domains:
         family: industrial_production
         geo_code: US
         geo_name: United States
-      # For 125 FRED families, widen `vintage_series` and `vintage_dates` before running:
-      # vintages are what supply authentic WRONG_VERSION interference, and only genuinely
-      # revised series should be added. Do not add vintages for market rates such as
-      # DGS10, which are never revised -- that would pad the counts without adding any
-      # real conflict.
 
-  # -------------------------------------------------------------------------------
-  # Fifth-domain extension slot -- retained so a fifth source can be added without
-  # restructuring anything. Disabled until an adapter is registered under
-  # Domain.EXTENSION. Candidates, in rough order of fit:
-  #
-  #   nasa        NASA exoplanet archive / POWER -- dense numeric, many near-duplicate
-  #               measurements of the same object by different instruments.
-  #   nist        NIST reference data -- units and isotopes give strong unit binding.
-  #   regulatory  eCFR / Federal Register -- versioned regulation text.
-  #   mathematics deterministic generated problems -- unlimited scale, no API risk.
-  #
-  # FRED is no longer a candidate here: it was promoted to a first-class active domain.
-  # See README "How to add a new source adapter".
-  # -------------------------------------------------------------------------------
+  # Fifth-domain slot retained for later (NASA / NIST / eCFR / mathematics). Disabled
+  # until an adapter is registered under Domain.EXTENSION; see README section 14.
   EXTENSION:
     enabled: false
     n_families: 0
-    question_type_mix:
-      DIRECT_RETRIEVAL: 0.20
-      RETRIEVAL_CALCULATION: 0.30
-      TEMPORAL_VERSION: 0.15
-      ENTITY_UNIT_BINDING: 0.15
-      UNANSWERABLE: 0.20
     params:
       extension_source: "UNSET"

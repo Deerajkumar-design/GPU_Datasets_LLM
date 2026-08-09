@@ -128,12 +128,31 @@ live APIs have moved on.
 
 ### Implemented adapters
 
-| domain | source | credentials |
-|---|---|---|
-| `SEC` | [SEC EDGAR XBRL company facts](https://data.sec.gov/api/xbrl/companyfacts/) | **`SEC_USER_AGENT` required** (real contact address) |
-| `FDA` | [openFDA Drugs@FDA](https://api.fda.gov/drug/drugsfda.json) | none (optional `OPENFDA_API_KEY` raises rate limits) |
-| `CLINICAL_TRIALS` | [ClinicalTrials.gov API v2](https://clinicaltrials.gov/api/v2/studies) | none |
-| `WORLD_BANK` | [World Bank Indicators API v2](https://api.worldbank.org/v2/) | none |
+| domain | source | credentials | status |
+|---|---|---|---|
+| `SEC` | [SEC EDGAR XBRL company facts](https://data.sec.gov/api/xbrl/companyfacts/) | **`SEC_USER_AGENT` required** (real contact address) | active |
+| `FDA` | [openFDA Drugs@FDA](https://api.fda.gov/drug/drugsfda.json) | none (optional `OPENFDA_API_KEY` raises rate limits) | active |
+| `CLINICAL_TRIALS` | [ClinicalTrials.gov API v2](https://clinicaltrials.gov/api/v2/studies) | none | active |
+| `FRED` | [FRED](https://fred.stlouisfed.org/graph/fredgraph.csv) + [ALFRED vintages](https://alfred.stlouisfed.org/) (St. Louis Fed) | none; optional `FRED_API_KEY` upgrades metadata | active |
+| `WORLD_BANK` | [World Bank Indicators API v2](https://api.worldbank.org/v2/) | none | **retired** |
+
+**World Bank is retired from the active experiment.** Its API returned HTTP 502 for
+date-range queries, hung on large result sets, and eventually refused traffic outright.
+The adapter and its normalized data are retained so previously generated datasets stay
+reproducible, and it can be revived by re-enabling it in a config — but nothing in the
+active plan depends on it.
+
+**FRED runs on two first-party backends.** With `FRED_API_KEY` set it uses the JSON API,
+which returns series metadata alongside observations. Without a key it uses the keyless
+St. Louis Fed CSV endpoints, which return observations and genuine ALFRED vintages but no
+descriptive metadata; those attributes then come from a catalog in the config and every
+record is stamped `metadata_source: "operator_catalog"` so the distinction is explicit.
+Switching backends needs no code change.
+
+FRED is the only source here where the *same* observation legitimately carries different
+values depending on when you asked — GDP for 2021-Q1 read 22048.894 in the April-2021
+vintage and 22656.793 in March-2025. That is authentic `WRONG_VERSION` interference, and
+it is why FRED replaced World Bank rather than simply filling the gap.
 
 SEC publishes a hard rate limit and requires a descriptive User-Agent containing a
 **reachable** address. This project will not fabricate one: if `SEC_USER_AGENT` is unset
@@ -185,8 +204,17 @@ tokenizer:
 
 Every instance records the tokenizer id and version actually used. `whitespace:v1` is a
 dependency-free approximation that keeps the unit tests offline; it flags itself as
-`is_approximate` so nothing downstream can mistake it for a real tokenizer. Changing the
-tokenizer means changing the config and re-running `build-contexts` — no code changes.
+`is_approximate` so nothing downstream can mistake it for a real tokenizer.
+
+**Switching to the tested model's tokenizer is a one-field change.** Set `tokenizer.id`
+in `config/preproduction.yaml` and `config/production.yaml`, then re-run
+`build-contexts` (question families are unaffected — only measured lengths change).
+No code change is required: the only tokenizer name anywhere in `src/` is the default
+value of that config field. This was verified by driving `cl100k_base`, `o200k_base` and
+`whitespace:v1` through the real context builder; each produced valid nested contexts,
+each instance recorded the tokenizer actually used, and gold answers were identical.
+`allow_fallback: false` means an unavailable tokenizer raises rather than silently
+mis-measuring every context. See `data/reports/preproduction_readiness.md` §7.
 
 ## 8. Reproducibility
 
@@ -235,6 +263,18 @@ python -m longctx_dataset report             --config config/pilot.yaml
 
 python -m longctx_dataset stats          --config config/pilot.yaml
 python -m longctx_dataset export-schemas --out data/schemas
+```
+
+Two commands support review rather than generation:
+
+```bash
+# Assemble the human-audit package: ~12 families across the active domains, each with
+# its exact 4K and 128K model-facing contexts and an unticked manual checklist.
+python -m longctx_dataset audit --config config/pilot.yaml \
+    --also config/fred_pilot.yaml --n 12 --out data/audit
+
+# Write the pre-production readiness report (markdown + json).
+python -m longctx_dataset readiness --config config/pilot.yaml
 ```
 
 `--domain SEC,FDA` restricts `fetch`/`normalize` to specific sources.
@@ -322,7 +362,7 @@ form: 10-K
 
 ## 12. Known limitations
 
-1. **World Bank API instability — the one real source blocker in this pilot.**
+1. **World Bank API instability — which is why the domain was retired.**
    `api.worldbank.org` behaved badly throughout the run, in three distinct ways:
    * `date=YYYY:YYYY` range queries return **HTTP 502** while the same query without the
      filter returns 200 — so the year window is applied client-side instead;
@@ -360,30 +400,56 @@ form: 10-K
 6. **Question wording is templated.** Phrasings are natural but not linguistically varied;
    this is a deliberate trade for gold-answer determinism.
 7. **No semantic judge, no scoring, no analysis.** Out of scope by design.
-8. **The fifth production domain is unbound.** `config/production.yaml` reserves 100
-   families for it; no adapter is registered yet.
+8. **FRED `WRONG_VERSION` coverage is still narrow** — present in 3/10 FRED families at
+   4K. It is structurally scarce: a revision conflict only exists where the source
+   genuinely restated a value. Widening `vintage_series` raises it honestly; adding
+   vintages for never-revised series would not.
+9. **FRED contributes little `WRONG_ENTITY`** (1/10 families) — it is mostly national
+   series. SEC, FDA and ClinicalTrials cover that class well (30/32 families), so the
+   combined dataset is balanced even though FRED alone is not.
+10. **The human audit is not done.** `data/audit/` is prepared with unticked checklists.
+11. **The fifth `EXTENSION` domain is unbound.** The slot is retained in
+    `config/production.yaml` at 0 families; no adapter is registered yet.
 
 ## 13. Scaling to 500 question families
 
-`config/production.yaml` already encodes the target: 500 families, 100 per domain across
-five domains, with the 20/30/15/15/20 question-type mix. Scaling is a config change, not
-a code change. Before running it:
+Two configs are prepared and validated, neither generated:
+
+| config | families | allocation |
+|---|---|---|
+| `config/preproduction.yaml` | 100 | 25 each × SEC, FDA, ClinicalTrials, FRED |
+| `config/production.yaml` | 500 | 125 each × SEC, FDA, ClinicalTrials, FRED |
+
+Both hit the 20/30/15/15/20 question-type target exactly. Pre-production uses explicit
+`question_type_counts` rather than fractions because 30% of 25 is 7.5 — no per-domain
+rounding reaches the global target, so the counts are stated per domain and chosen to sum
+correctly. At 125 per domain the fractional mix rounds exactly, so production keeps it.
+
+Scaling is a config change, not a code change. Before running either:
 
 1. **Set the tokenizer** to the model actually under test.
 2. **Deepen the entity pools** — production config already widens SEC to 20 filers, FDA to
    25 ingredients, ClinicalTrials to 16 queries, and World Bank to 30 countries × 20
    indicators. Roughly, a 128K context consumes ~2,000 records, so each domain needs a
    pool comfortably larger than that after exclusions.
-3. **Choose and register the fifth domain** (see §14). FRED is the strongest candidate:
-   its vintage/revision series give a first-class original-vs-revised axis, which is the
-   scarcest question type today.
-4. **Budget the World Bank fetch** generously given the API's current state.
+3. **Complete the human audit** in `data/audit/` — the checklists are deliberately
+   unticked, and automated validation cannot answer them.
+4. **Widen FRED's vintages** if more `WRONG_VERSION` interference is wanted: add
+   genuinely revised series to `vintage_series`/`vintage_dates`. Do **not** add vintages
+   for never-revised series such as `DGS10` — that pads counts without adding conflict.
 5. **Run `validate` and require a zero exit** before treating the output as a dataset.
 
 ```bash
 export SEC_USER_AGENT="…"
-python -m longctx_dataset build-pilot --config config/production.yaml
+# optional, upgrades FRED series metadata:
+export FRED_API_KEY="…"
+
+python -m longctx_dataset build-pilot --config config/preproduction.yaml   # 100 families
+python -m longctx_dataset build-pilot --config config/production.yaml      # 500 families
 ```
+
+The fifth-domain `EXTENSION` slot remains available (NASA, NIST, eCFR, mathematics);
+see §14.
 
 ## 14. Adding a new source adapter
 
@@ -412,8 +478,8 @@ flowchart TD
         S1["SEC EDGAR<br/>XBRL company facts"]
         S2["openFDA<br/>Drugs@FDA"]
         S3["ClinicalTrials.gov<br/>API v2"]
-        S4["World Bank<br/>Indicators v2"]
-        S5["extension slot<br/>(FRED / NASA / NIST …)"]
+        S4["FRED + ALFRED<br/>St. Louis Fed"]
+        S5["extension slot<br/>(NASA / NIST / eCFR …)"]
     end
 
     S1 & S2 & S3 & S4 & S5 -->|"fetch<br/>rate-limited, cached"| RAW["data/raw/<br/>verbatim payloads<br/>content-addressed by URL"]
@@ -438,13 +504,15 @@ flowchart TD
 ## 16. Repository layout
 
 ```
-config/           pilot.yaml, production.yaml
+config/           pilot.yaml, fred_pilot.yaml, preproduction.yaml, production.yaml
 src/longctx_dataset/
   cli.py            subcommands, one per stage
   config.py         typed config + stable config hash
   schemas.py        versioned Pydantic models + JSON Schema export
   pipeline.py       stage orchestration
   report.py         pilot report (markdown + json)
+  audit.py          human-audit package (artifacts + exact contexts + checklists)
+  readiness.py      pre-production readiness report
   sources/          base.py (adapter contract, HTTP, registry) + one module per source
   normalize/        record ID generation, value coercion, indexed RecordPool
   questions/        base.py (templates, seeding, calculations) + per-domain templates
@@ -453,7 +521,7 @@ src/longctx_dataset/
   validation/       gold.py, leakage.py, contexts.py, dataset.py, result.py
   storage/          io.py (deterministic JSONL/JSON), manifests.py
 tests/            unit + integration, offline, with authentic fixtures
-data/             raw/ normalized/ pilot/ manifests/ reports/
+data/             raw/ normalized/ pilot/ fred_pilot/ audit/ manifests/ reports/
 ```
 
 ## 17. Licence and data terms

@@ -1,0 +1,263 @@
+<RECORD id="CT-NCT03952975-eligibility-healthy-volu-93fe56c9" source="CLINICALTRIALS_GOV_V2">
+entity: Optimal Timing for Performing Loop Electrosurgical Excision Procedure [NCT03952975]
+field: Accepts healthy volunteers [eligibility.healthy_volunteers]
+value: Yes
+version: lastupdate:2019-10-15
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT01823510-outcome-secondary-timefr-secondary-1-5f5aa0d2" source="CLINICALTRIALS_GOV_V2">
+entity: Ticagrelor Versus Clopidogrel in Type 2 Diabetic Patients [NCT01823510]
+field: Secondary outcome timeframe: P2Y12 Reaction Unit (PRU) [outcome.secondary.timeframe]
+value: up to 7 days
+version: lastupdate:2017-12-08
+outcome: P2Y12 Reaction Unit (PRU)
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT03535883-eligibility-healthy-volu-7d9beb8e" source="CLINICALTRIALS_GOV_V2">
+entity: The Safety of Thoracentesis, Tunneled Pleural Catheter, and Chest Tubes in Patients Taking Novel Oral Anti-Coagulants [NCT03535883]
+field: Accepts healthy volunteers [eligibility.healthy_volunteers]
+value: No
+version: lastupdate:2023-10-13
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT01907048-eligibility-healthy-volu-3de121d1" source="CLINICALTRIALS_GOV_V2">
+entity: Patient and Physician Knowledge of Key Safety Messages [NCT01907048]
+field: Accepts healthy volunteers [eligibility.healthy_volunteers]
+value: No
+version: lastupdate:2021-04-08
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT05996848-eligibility-healthy-volu-0cf1608b" source="CLINICALTRIALS_GOV_V2">
+entity: A Research Study to See How Well CagriSema Helps People in China With Excess Body Weight Lose Weight [NCT05996848]
+field: Accepts healthy volunteers [eligibility.healthy_volunteers]
+value: No
+version: lastupdate:2026-01-09
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT02832544-study-completion-date-ec0be7f9" source="CLINICALTRIALS_GOV_V2">
+entity: INVestIgation of rheumatiC AF Treatment Using Vitamin K Antagonists, Rivaroxaban or Aspirin Studies, Non-Inferiority [NCT02832544]
+field: Study completion date [study.completion_date]
+period: 2022
+value: 2022-08-18
+version: lastupdate:2022-10-05
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT03535883-study-primary-completion-4c237390" source="CLINICALTRIALS_GOV_V2">
+entity: The Safety of Thoracentesis, Tunneled Pleural Catheter, and Chest Tubes in Patients Taking Novel Oral Anti-Coagulants [NCT03535883]
+field: Primary completion date [study.primary_completion_date]
+period: 2020
+value: 2020-01-01
+version: lastupdate:2023-10-13
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT03535883-study-study-type-9c83778f" source="CLINICALTRIALS_GOV_V2">
+entity: The Safety of Thoracentesis, Tunneled Pleural Catheter, and Chest Tubes in Patients Taking Novel Oral Anti-Coagulants [NCT03535883]
+field: Study type [study.study_type]
+value: OBSERVATIONAL
+version: lastupdate:2023-10-13
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT04175665-eligibility-minimum-age-537ca1d7" source="CLINICALTRIALS_GOV_V2">
+entity: Real-world Health Outcomes in Canadian Patients Using Semaglutide [NCT04175665]
+field: Minimum eligible age [eligibility.minimum_age]
+value: 18 Years
+version: lastupdate:2020-02-21
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT07625709-arms-count-2c9090c8" source="CLINICALTRIALS_GOV_V2">
+entity: EFFECT OF TRANEXAMIC ACID ON PERIOPERATIVE BLOOD LOSS IN REAMED INTRAMEDULLARY NAILING OF DIAPHYSEAL FEMORAL AND TIBIAL FRACTURES: A PROSPECTIVE COMPARATIVE STUDY [NCT07625709]
+field: Number of arm groups [arms.count]
+unit: arms
+value: 2.0
+version: lastupdate:2026-06-04
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT05607160-study-overall-status-0c37945d" source="CLINICALTRIALS_GOV_V2">
+entity: A Study to Observe How Insulin Glargine 300 U/ml is Working and is Tolerated in Elderly Patients ≥75 Years of Age With Type 2 Diabetes [NCT05607160]
+field: Overall recruitment status [study.overall_status]
+value: COMPLETED
+version: lastupdate:2024-04-12
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT03535883-study-last-update-posted-7b553849" source="CLINICALTRIALS_GOV_V2">
+entity: The Safety of Thoracentesis, Tunneled Pleural Catheter, and Chest Tubes in Patients Taking Novel Oral Anti-Coagulants [NCT03535883]
+field: Last update posted date [study.last_update_posted_date]
+period: 2023
+value: 2023-10-13
+version: lastupdate:2023-10-13
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT02301780-enrollment-count-f494f14d" source="CLINICALTRIALS_GOV_V2">
+entity: Combined Multi-marker Screening and Treatment With Aspirin for Pre-eclampsia Prevention [NCT02301780]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 2.0
+version: lastupdate:2016-11-09
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT00135057-study-first-posted-date-8c4d6afa" source="CLINICALTRIALS_GOV_V2">
+entity: Insulin Glulisine in Adult Subjects With Type 2 Diabetes Receiving Insulin Glargine as Basal Insulin [NCT00135057]
+field: Study first posted date [study.first_posted_date]
+period: 2005
+value: 2005-08-25
+version: lastupdate:2011-01-11
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT04100447-arms-count-e1a8d6b5" source="CLINICALTRIALS_GOV_V2">
+entity: A Study to Evaluate the Safety, Tolerability and Efficacy of LB1148 for Subjects Undergoing Elective Bowel Resection [NCT04100447]
+field: Number of arm groups [arms.count]
+unit: arms
+value: 1.0
+version: lastupdate:2020-12-04
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT02950220-enrollment-count-186cb402" source="CLINICALTRIALS_GOV_V2">
+entity: Pembrolizumab and Ibrutinib in Treating Patients With Relapsed or Refractory Non-Hodgkin Lymphoma [NCT02950220]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 2.0
+version: lastupdate:2019-07-30
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT02294474-study-phase-bed475ce" source="CLINICALTRIALS_GOV_V2">
+entity: Comparison of SAR342434 to Humalog as the Rapid Acting Insulin in Adult Patients With Type 2 Diabetes Mellitus Also Using Insulin Glargine [NCT02294474]
+field: Study phase [study.phase]
+value: PHASE3
+version: lastupdate:2018-01-18
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT03535883-study-overall-status-409b9971" source="CLINICALTRIALS_GOV_V2">
+entity: The Safety of Thoracentesis, Tunneled Pleural Catheter, and Chest Tubes in Patients Taking Novel Oral Anti-Coagulants [NCT03535883]
+field: Overall recruitment status [study.overall_status]
+value: COMPLETED
+version: lastupdate:2023-10-13
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT03535883-eligibility-minimum-age-152e1f02" source="CLINICALTRIALS_GOV_V2">
+entity: The Safety of Thoracentesis, Tunneled Pleural Catheter, and Chest Tubes in Patients Taking Novel Oral Anti-Coagulants [NCT03535883]
+field: Minimum eligible age [eligibility.minimum_age]
+value: 18 Years
+version: lastupdate:2023-10-13
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT06351748-eligibility-healthy-volu-1bcc64ed" source="CLINICALTRIALS_GOV_V2">
+entity: Real-world Study of CHina Ozempic cLinicAl pRactice in Patients With Type 2 Diabetes (SCHOLAR) [NCT06351748]
+field: Accepts healthy volunteers [eligibility.healthy_volunteers]
+value: No
+version: lastupdate:2025-04-16
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT03228771-eligibility-minimum-age-d5415e71" source="CLINICALTRIALS_GOV_V2">
+entity: Socket Augmentation Using Atorvastatin With Or Without PRGF (Clinical and Histomorphometric Study) [NCT03228771]
+field: Minimum eligible age [eligibility.minimum_age]
+value: 20 Years
+version: lastupdate:2018-09-24
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT00395772-eligibility-healthy-volu-1daa2576" source="CLINICALTRIALS_GOV_V2">
+entity: Once-daily Oral Direct Factor Xa Inhibitor BAY59-7939 in Patients With Acute Symptomatic Deep-vein Thrombosis [NCT00395772]
+field: Accepts healthy volunteers [eligibility.healthy_volunteers]
+value: No
+version: lastupdate:2014-10-28
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT03535883-study-condition-1-60ee7624" source="CLINICALTRIALS_GOV_V2">
+entity: The Safety of Thoracentesis, Tunneled Pleural Catheter, and Chest Tubes in Patients Taking Novel Oral Anti-Coagulants [NCT03535883]
+field: Studied condition [study.condition]
+value: Thoracic Effusion
+version: lastupdate:2023-10-13
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT03535883-eligibility-sex-a932bb05" source="CLINICALTRIALS_GOV_V2">
+entity: The Safety of Thoracentesis, Tunneled Pleural Catheter, and Chest Tubes in Patients Taking Novel Oral Anti-Coagulants [NCT03535883]
+field: Eligible sex [eligibility.sex]
+value: ALL
+version: lastupdate:2023-10-13
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT03535883-outcome-primary-timefram-primary-0-1a749532" source="CLINICALTRIALS_GOV_V2">
+entity: The Safety of Thoracentesis, Tunneled Pleural Catheter, and Chest Tubes in Patients Taking Novel Oral Anti-Coagulants [NCT03535883]
+field: Primary outcome timeframe: Risk of bleeding [outcome.primary.timeframe]
+value: 2 years
+version: lastupdate:2023-10-13
+outcome: Risk of bleeding
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT01686945-arms-count-bbf2431f" source="CLINICALTRIALS_GOV_V2">
+entity: Investigation on Safety, Tolerability, Pharmacokinetics and Pharmacodynamics of Multiple Doses of a Long-acting GLP-1 Analogue in Healthy Male Subjects and Male Subjects With Type 2 Diabetes [NCT01686945]
+field: Number of arm groups [arms.count]
+unit: arms
+value: 4.0
+version: lastupdate:2019-01-04
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT03444376-outcome-primary-timefram-primary-1-46c84b23" source="CLINICALTRIALS_GOV_V2">
+entity: The Combination of GX-188E Vaccination and Pembrolizumab in Patients With HPV 16 and/or 18+ Advanced Cervical Cancer [NCT03444376]
+field: Primary outcome timeframe: ORR for Efficacy (Part B&C) [outcome.primary.timeframe]
+value: within 24 weeks
+version: lastupdate:2025-07-30
+outcome: ORR for Efficacy (Part B&C)
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT03766308-eligibility-minimum-age-cf06dd10" source="CLINICALTRIALS_GOV_V2">
+entity: The Clinical Study of the Effect of Highland Barley Diet on Blood Glucose in Patients With Type 2 Diabetes Mellitus [NCT03766308]
+field: Minimum eligible age [eligibility.minimum_age]
+value: 18 Years
+version: lastupdate:2021-09-01
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT03535883-arms-count-5a2142c7" source="CLINICALTRIALS_GOV_V2">
+entity: The Safety of Thoracentesis, Tunneled Pleural Catheter, and Chest Tubes in Patients Taking Novel Oral Anti-Coagulants [NCT03535883]
+field: Number of arm groups [arms.count]
+unit: arms
+value: 2.0
+version: lastupdate:2023-10-13
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT07375654-study-last-update-posted-8a193737" source="CLINICALTRIALS_GOV_V2">
+entity: Combined Use of Cyclosporine and Metformin in Treatment of Psoriasis vs Cyclosporine Alone [NCT07375654]
+field: Last update posted date [study.last_update_posted_date]
+period: 2026
+value: 2026-01-29
+version: lastupdate:2026-01-29
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT01728636-study-first-posted-date-a8d9e040" source="CLINICALTRIALS_GOV_V2">
+entity: The Use of Tranexamic Acid to Reduce Perioperative Blood Loss During High Risk Spine Fusion Surgery [NCT01728636]
+field: Study first posted date [study.first_posted_date]
+period: 2012
+value: 2012-11-20
+version: lastupdate:2021-01-26
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT02302716-eligibility-healthy-volu-0ba12748" source="CLINICALTRIALS_GOV_V2">
+entity: A Study of LY2963016 Compared to LANTUS® in Adult Participants With Type 2 Diabetes Mellitus [NCT02302716]
+field: Accepts healthy volunteers [eligibility.healthy_volunteers]
+value: No
+version: lastupdate:2017-10-24
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT03535883-study-start-date-53677555" source="CLINICALTRIALS_GOV_V2">
+entity: The Safety of Thoracentesis, Tunneled Pleural Catheter, and Chest Tubes in Patients Taking Novel Oral Anti-Coagulants [NCT03535883]
+field: Study start date [study.start_date]
+period: 2017
+value: 2017-10-30
+version: lastupdate:2023-10-13
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT03535883-study-first-posted-date-f37ab202" source="CLINICALTRIALS_GOV_V2">
+entity: The Safety of Thoracentesis, Tunneled Pleural Catheter, and Chest Tubes in Patients Taking Novel Oral Anti-Coagulants [NCT03535883]
+field: Study first posted date [study.first_posted_date]
+period: 2018
+value: 2018-05-24
+version: lastupdate:2023-10-13
+status: COMPLETED
+</RECORD>
+<RECORD id="CT-NCT01709513-enrollment-count-9b22a7f8" source="CLINICALTRIALS_GOV_V2">
+entity: Study of Alirocumab (REGN727/SAR236553) in Patients With Primary Hypercholesterolemia and Moderate, High, or Very High Cardiovascular (CV) Risk, Who Are Intolerant to Statins (ODYSSEY ALTERNATIVE) [NCT01709513]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 314.0
+version: lastupdate:2020-06-23
+status: COMPLETED
+</RECORD>

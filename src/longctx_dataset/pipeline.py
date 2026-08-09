@@ -41,8 +41,24 @@ def unavailable_path(cfg: PipelineConfig) -> Path:
     return cfg.out_dir / "unavailable_variants.jsonl"
 
 
+LEGACY_RETRIEVALS = "source_retrievals.json"
+
+
 def retrievals_path(cfg: PipelineConfig) -> Path:
-    return cfg.manifest_dir / "source_retrievals.json"
+    """Per-config retrieval record.
+
+    Scoped by config name so a later phase cannot overwrite an earlier phase's
+    provenance. Reads fall back to the legacy shared filename so datasets generated
+    before this split keep resolving; writes always go to the scoped path.
+    """
+    scoped = cfg.manifest_dir / f"{cfg.name}_source_retrievals.json"
+    if not scoped.exists() and (cfg.manifest_dir / LEGACY_RETRIEVALS).exists():
+        return cfg.manifest_dir / LEGACY_RETRIEVALS
+    return scoped
+
+
+def retrievals_write_path(cfg: PipelineConfig) -> Path:
+    return cfg.manifest_dir / f"{cfg.name}_source_retrievals.json"
 
 
 def manifest_path(cfg: PipelineConfig) -> Path:
@@ -127,7 +143,7 @@ def _merge_retrievals(cfg: PipelineConfig, new: List[SourceRetrieval]) -> List[S
     for sr in new:
         existing[sr.domain] = sr.model_dump(mode="json")
     merged = [existing[k] for k in sorted(existing)]
-    write_json(path, merged)
+    write_json(retrievals_write_path(cfg), merged)
     return [SourceRetrieval.model_validate(r) for r in merged]
 
 

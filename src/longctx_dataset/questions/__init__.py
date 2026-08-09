@@ -25,7 +25,8 @@ from .base import (  # noqa: F401
 )
 
 # Import for side-effect registration.
-from . import sec_templates, fda_templates, clinical_templates, world_bank_templates  # noqa: F401,E402
+from . import (sec_templates, fda_templates, clinical_templates, fred_templates,  # noqa: F401,E402
+               world_bank_templates)
 
 DEFAULT_MIX: Dict[QuestionType, float] = {
     QuestionType.DIRECT_RETRIEVAL: 0.20,
@@ -60,8 +61,16 @@ def generate_families_for_domain(
     if total <= 0:
         return []
 
-    mix = domain_cfg.question_type_mix or DEFAULT_MIX
-    budget = allocate_counts(mix, total)
+    if domain_cfg.question_type_counts:
+        budget = {k: v for k, v in domain_cfg.question_type_counts.items() if v > 0}
+        declared = sum(budget.values())
+        if declared != total:
+            raise ValueError(
+                f"{domain.value}: question_type_counts sum to {declared} but n_families is "
+                f"{total}; the two must agree or the mix silently drifts"
+            )
+    else:
+        budget = allocate_counts(domain_cfg.question_type_mix or DEFAULT_MIX, total)
     ctx = TemplateContext(cfg, pool, domain, git_sha=git_sha)
     families: List[QuestionFamily] = []
     seen_questions: set = set()

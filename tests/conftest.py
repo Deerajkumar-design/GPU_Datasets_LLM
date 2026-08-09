@@ -18,6 +18,49 @@ from longctx_dataset.schemas import Domain, QuestionType
 
 FIXTURE_RAW = Path(__file__).parent / "fixtures" / "raw"
 
+# Mirrors config/fred_pilot.yaml, trimmed to the series present in the committed
+# fixtures. Descriptive attributes are operator-supplied exactly as in production, so
+# the tests exercise the real keyless code path.
+FRED_TEST_PARAMS = {
+    "observation_start": "2018-01-01",
+    "vintage_series": ["GDP", "PAYEMS"],
+    "vintage_dates": ["2021-04-29", "2021-07-29", "2022-06-29", "2023-09-28", "2025-03-27"],
+    "vintage_observation_start": "2020-01-01",
+    "series": [
+        {"id": "UNRATE", "title": "Unemployment Rate", "units": "Percent", "frequency": "Monthly",
+         "seasonal_adjustment": "Seasonally Adjusted", "family": "unemployment_rate",
+         "geo_code": "US", "geo_name": "United States"},
+        {"id": "UNRATENSA", "title": "Unemployment Rate", "units": "Percent", "frequency": "Monthly",
+         "seasonal_adjustment": "Not Seasonally Adjusted", "family": "unemployment_rate",
+         "geo_code": "US", "geo_name": "United States"},
+        {"id": "GDP", "title": "Gross Domestic Product", "units": "Billions of Dollars",
+         "frequency": "Quarterly", "seasonal_adjustment": "Seasonally Adjusted Annual Rate",
+         "family": "gross_domestic_product", "geo_code": "US", "geo_name": "United States"},
+        {"id": "GDPC1", "title": "Gross Domestic Product",
+         "units": "Billions of Chained 2017 Dollars", "frequency": "Quarterly",
+         "seasonal_adjustment": "Seasonally Adjusted Annual Rate",
+         "family": "gross_domestic_product", "geo_code": "US", "geo_name": "United States"},
+        {"id": "PAYEMS", "title": "All Employees, Total Nonfarm", "units": "Thousands of Persons",
+         "frequency": "Monthly", "seasonal_adjustment": "Seasonally Adjusted",
+         "family": "nonfarm_payrolls", "geo_code": "US", "geo_name": "United States"},
+        {"id": "CAUR", "title": "Unemployment Rate", "units": "Percent", "frequency": "Monthly",
+         "seasonal_adjustment": "Seasonally Adjusted", "family": "unemployment_rate",
+         "geo_code": "CA", "geo_name": "California"},
+        {"id": "TXUR", "title": "Unemployment Rate", "units": "Percent", "frequency": "Monthly",
+         "seasonal_adjustment": "Seasonally Adjusted", "family": "unemployment_rate",
+         "geo_code": "TX", "geo_name": "Texas"},
+        {"id": "DGS10", "title": "Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity",
+         "units": "Percent", "frequency": "Daily", "seasonal_adjustment": "Not Seasonally Adjusted",
+         "family": "treasury_10y", "geo_code": "US", "geo_name": "United States"},
+        {"id": "GS10", "title": "Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity",
+         "units": "Percent", "frequency": "Monthly", "seasonal_adjustment": "Not Seasonally Adjusted",
+         "family": "treasury_10y", "geo_code": "US", "geo_name": "United States"},
+        {"id": "FEDFUNDS", "title": "Federal Funds Effective Rate", "units": "Percent",
+         "frequency": "Monthly", "seasonal_adjustment": "Not Seasonally Adjusted",
+         "family": "fed_funds_rate", "geo_code": "US", "geo_name": "United States"},
+    ],
+}
+
 # Small enough to build quickly, still exercising every nesting step.
 TEST_LENGTHS = [512, 1024, 2048]
 
@@ -71,6 +114,7 @@ def cfg(data_root: Path) -> PipelineConfig:
             # The committed World Bank fixture's genuine null observations sit in the
             # 1960s, so the test window starts there rather than at the pilot's 1990.
             Domain.WORLD_BANK: _domain_cfg(date_range="1960:2024"),
+            Domain.FRED: _domain_cfg(**FRED_TEST_PARAMS),
         },
     )
     # SEC's availability gate must not block offline normalization tests.

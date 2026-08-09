@@ -1,0 +1,439 @@
+{
+  "checklist": [
+    "Question is grammatically clear",
+    "Exact entity/period/version/field is unambiguous",
+    "Gold answer is correct",
+    "Gold evidence directly supports the answer",
+    "Calculation is correct if applicable",
+    "4K context is answerable when answerable=true",
+    "128K context is answerable when answerable=true",
+    "Unanswerable context genuinely lacks required evidence",
+    "Distractors are realistic same-domain competitors",
+    "Distractors do not accidentally reveal the answer",
+    "128K context is meaningfully more competitive than 4K",
+    "No malformed/unnatural record formatting",
+    "Record IDs are usable for later evidence selection",
+    "No obvious question-template artifacts make the answer trivial",
+    "No source-specific information leaks the answer outside intended evidence"
+  ],
+  "checklist_status": "PENDING_HUMAN_REVIEW",
+  "datasets": [
+    {
+      "config": "config/pilot.yaml",
+      "name": "pilot"
+    },
+    {
+      "config": "config/fred_pilot.yaml",
+      "name": "fred_pilot"
+    }
+  ],
+  "domains_audited": [
+    "SEC",
+    "FDA",
+    "CLINICAL_TRIALS",
+    "FRED"
+  ],
+  "families": [
+    {
+      "answerable": true,
+      "audit_markdown": "CT_0001.md",
+      "checklist_items": 15,
+      "checklist_status": "PENDING_HUMAN_REVIEW",
+      "context_128k": "CT_0001_128K.txt",
+      "context_128k_tokens": 129929,
+      "context_4k": "CT_0001_4K.txt",
+      "context_4k_tokens": 4012,
+      "dataset": "pilot",
+      "distractor_counts_128k": {
+        "NEAR_MATCH_VALUE": 2,
+        "OTHER_SAME_DOMAIN": 585,
+        "WRONG_ENTITY": 446,
+        "WRONG_FIELD": 39
+      },
+      "distractor_counts_4k": {
+        "NEAR_MATCH_VALUE": 2,
+        "OTHER_SAME_DOMAIN": 12,
+        "WRONG_ENTITY": 11,
+        "WRONG_FIELD": 8
+      },
+      "domain": "CLINICAL_TRIALS",
+      "gold_answer": "24",
+      "gold_answer_normalized": 24.0,
+      "question_family_id": "CT_0001",
+      "question_type": "DIRECT_RETRIEVAL",
+      "records_128k": 1073,
+      "records_4k": 34,
+      "target_position_128k": 0.49965365699728315,
+      "target_position_4k": 0.4824277168494516,
+      "template_id": "CT_DIRECT_ENROLLMENT"
+    },
+    {
+      "answerable": true,
+      "audit_markdown": "FDA_0003.md",
+      "checklist_items": 15,
+      "checklist_status": "PENDING_HUMAN_REVIEW",
+      "context_128k": "FDA_0003_128K.txt",
+      "context_128k_tokens": 129923,
+      "context_4k": "FDA_0003_4K.txt",
+      "context_4k_tokens": 4058,
+      "dataset": "pilot",
+      "distractor_counts_128k": {
+        "OTHER_SAME_DOMAIN": 648,
+        "WRONG_ENTITY": 482,
+        "WRONG_FIELD": 6
+      },
+      "distractor_counts_4k": {
+        "OTHER_SAME_DOMAIN": 21,
+        "WRONG_ENTITY": 9,
+        "WRONG_FIELD": 6
+      },
+      "domain": "FDA",
+      "gold_answer": "40MG",
+      "gold_answer_normalized": "40MG",
+      "question_family_id": "FDA_0003",
+      "question_type": "ENTITY_UNIT_BINDING",
+      "records_128k": 1137,
+      "records_4k": 37,
+      "target_position_128k": 0.49975370026862065,
+      "target_position_4k": 0.49568753080335143,
+      "template_id": "FDA_STRENGTH_PRODUCT_BINDING"
+    },
+    {
+      "answerable": true,
+      "audit_markdown": "FRED_0007.md",
+      "checklist_items": 15,
+      "checklist_status": "PENDING_HUMAN_REVIEW",
+      "context_128k": "FRED_0007_128K.txt",
+      "context_128k_tokens": 129757,
+      "context_4k": "FRED_0007_4K.txt",
+      "context_4k_tokens": 4032,
+      "dataset": "fred_pilot",
+      "distractor_counts_128k": {
+        "OTHER_SAME_DOMAIN": 525,
+        "WRONG_FIELD": 396,
+        "WRONG_PERIOD": 389,
+        "WRONG_UNIT": 2
+      },
+      "distractor_counts_4k": {
+        "OTHER_SAME_DOMAIN": 16,
+        "WRONG_FIELD": 13,
+        "WRONG_PERIOD": 9,
+        "WRONG_UNIT": 1
+      },
+      "domain": "FRED",
+      "gold_answer": "-0.42%",
+      "gold_answer_normalized": -0.42,
+      "question_family_id": "FRED_0007",
+      "question_type": "RETRIEVAL_CALCULATION",
+      "records_128k": 1314,
+      "records_4k": 41,
+      "target_position_128k": 0.4997533851738249,
+      "target_position_4k": 0.5023561507936508,
+      "template_id": "FRED_PERCENT_CHANGE"
+    },
+    {
+      "answerable": true,
+      "audit_markdown": "SEC_0006.md",
+      "checklist_items": 15,
+      "checklist_status": "PENDING_HUMAN_REVIEW",
+      "context_128k": "SEC_0006_128K.txt",
+      "context_128k_tokens": 130262,
+      "context_4k": "SEC_0006_4K.txt",
+      "context_4k_tokens": 3984,
+      "dataset": "pilot",
+      "distractor_counts_128k": {
+        "NEAR_MATCH_VALUE": 39,
+        "OTHER_SAME_DOMAIN": 300,
+        "WRONG_ENTITY": 1,
+        "WRONG_FIELD": 228,
+        "WRONG_PERIOD": 169
+      },
+      "distractor_counts_4k": {
+        "NEAR_MATCH_VALUE": 2,
+        "OTHER_SAME_DOMAIN": 7,
+        "WRONG_ENTITY": 1,
+        "WRONG_FIELD": 6,
+        "WRONG_PERIOD": 6
+      },
+      "domain": "SEC",
+      "gold_answer": "-16,276,000,000",
+      "gold_answer_normalized": -16276000000.0,
+      "question_family_id": "SEC_0006",
+      "question_type": "TEMPORAL_VERSION",
+      "records_128k": 738,
+      "records_4k": 23,
+      "target_position_128k": 0.5004183875573843,
+      "target_position_4k": 0.5021335341365462,
+      "template_id": "SEC_QUARTER_VS_ANNUAL_FRAME"
+    },
+    {
+      "answerable": false,
+      "audit_markdown": "CT_0007.md",
+      "checklist_items": 15,
+      "checklist_status": "PENDING_HUMAN_REVIEW",
+      "context_128k": "CT_0007_128K.txt",
+      "context_128k_tokens": 129983,
+      "context_4k": "CT_0007_4K.txt",
+      "context_4k_tokens": 4008,
+      "dataset": "pilot",
+      "distractor_counts_128k": {
+        "NEAR_MATCH_VALUE": 3,
+        "OTHER_SAME_DOMAIN": 579,
+        "WRONG_ENTITY": 441,
+        "WRONG_FIELD": 30
+      },
+      "distractor_counts_4k": {
+        "NEAR_MATCH_VALUE": 3,
+        "OTHER_SAME_DOMAIN": 13,
+        "WRONG_ENTITY": 8,
+        "WRONG_FIELD": 12
+      },
+      "domain": "CLINICAL_TRIALS",
+      "gold_answer": null,
+      "gold_answer_normalized": "INSUFFICIENT_EVIDENCE",
+      "question_family_id": "CT_0007",
+      "question_type": "UNANSWERABLE",
+      "records_128k": 1053,
+      "records_4k": 36,
+      "target_position_128k": null,
+      "target_position_4k": null,
+      "template_id": "CT_UNANSWERABLE_FIELD_ABSENT"
+    },
+    {
+      "answerable": false,
+      "audit_markdown": "CT_0008.md",
+      "checklist_items": 15,
+      "checklist_status": "PENDING_HUMAN_REVIEW",
+      "context_128k": "CT_0008_128K.txt",
+      "context_128k_tokens": 129910,
+      "context_4k": "CT_0008_4K.txt",
+      "context_4k_tokens": 4057,
+      "dataset": "pilot",
+      "distractor_counts_128k": {
+        "NEAR_MATCH_VALUE": 3,
+        "OTHER_SAME_DOMAIN": 609,
+        "WRONG_ENTITY": 462,
+        "WRONG_FIELD": 17
+      },
+      "distractor_counts_4k": {
+        "NEAR_MATCH_VALUE": 2,
+        "OTHER_SAME_DOMAIN": 9,
+        "WRONG_ENTITY": 12,
+        "WRONG_FIELD": 12
+      },
+      "domain": "CLINICAL_TRIALS",
+      "gold_answer": null,
+      "gold_answer_normalized": "INSUFFICIENT_EVIDENCE",
+      "question_family_id": "CT_0008",
+      "question_type": "UNANSWERABLE",
+      "records_128k": 1091,
+      "records_4k": 35,
+      "target_position_128k": null,
+      "target_position_4k": null,
+      "template_id": "CT_UNANSWERABLE_FIELD_ABSENT"
+    },
+    {
+      "answerable": true,
+      "audit_markdown": "FDA_0001.md",
+      "checklist_items": 15,
+      "checklist_status": "PENDING_HUMAN_REVIEW",
+      "context_128k": "FDA_0001_128K.txt",
+      "context_128k_tokens": 129847,
+      "context_4k": "FDA_0001_4K.txt",
+      "context_4k_tokens": 3994,
+      "dataset": "pilot",
+      "distractor_counts_128k": {
+        "OTHER_SAME_DOMAIN": 693,
+        "WRONG_ENTITY": 526,
+        "WRONG_FIELD": 6
+      },
+      "distractor_counts_4k": {
+        "OTHER_SAME_DOMAIN": 18,
+        "WRONG_ENTITY": 14,
+        "WRONG_FIELD": 6
+      },
+      "domain": "FDA",
+      "gold_answer": "TABLET",
+      "gold_answer_normalized": "TABLET",
+      "question_family_id": "FDA_0001",
+      "question_type": "DIRECT_RETRIEVAL",
+      "records_128k": 1226,
+      "records_4k": 39,
+      "target_position_128k": 0.4999383890270857,
+      "target_position_4k": 0.492363545317977,
+      "template_id": "FDA_DIRECT_PRODUCT_ATTRIBUTE"
+    },
+    {
+      "answerable": true,
+      "audit_markdown": "FRED_0003.md",
+      "checklist_items": 15,
+      "checklist_status": "PENDING_HUMAN_REVIEW",
+      "context_128k": "FRED_0003_128K.txt",
+      "context_128k_tokens": 129649,
+      "context_4k": "FRED_0003_4K.txt",
+      "context_4k_tokens": 3992,
+      "dataset": "fred_pilot",
+      "distractor_counts_128k": {
+        "OTHER_SAME_DOMAIN": 555,
+        "WRONG_FIELD": 410,
+        "WRONG_PERIOD": 417,
+        "WRONG_UNIT": 6
+      },
+      "distractor_counts_4k": {
+        "OTHER_SAME_DOMAIN": 16,
+        "WRONG_FIELD": 11,
+        "WRONG_PERIOD": 13,
+        "WRONG_UNIT": 2
+      },
+      "domain": "FRED",
+      "gold_answer": "149,952",
+      "gold_answer_normalized": 149952.0,
+      "question_family_id": "FRED_0003",
+      "question_type": "ENTITY_UNIT_BINDING",
+      "records_128k": 1389,
+      "records_4k": 43,
+      "target_position_128k": 0.5000617050652145,
+      "target_position_4k": 0.49787074148296595,
+      "template_id": "FRED_BASIS_BINDING"
+    },
+    {
+      "answerable": true,
+      "audit_markdown": "SEC_0004.md",
+      "checklist_items": 15,
+      "checklist_status": "PENDING_HUMAN_REVIEW",
+      "context_128k": "SEC_0004_128K.txt",
+      "context_128k_tokens": 130220,
+      "context_4k": "SEC_0004_4K.txt",
+      "context_4k_tokens": 4051,
+      "dataset": "pilot",
+      "distractor_counts_128k": {
+        "NEAR_MATCH_VALUE": 123,
+        "OTHER_SAME_DOMAIN": 247,
+        "WRONG_ENTITY": 6,
+        "WRONG_FIELD": 189,
+        "WRONG_PERIOD": 189
+      },
+      "distractor_counts_4k": {
+        "NEAR_MATCH_VALUE": 4,
+        "OTHER_SAME_DOMAIN": 5,
+        "WRONG_ENTITY": 6,
+        "WRONG_FIELD": 2,
+        "WRONG_PERIOD": 6
+      },
+      "domain": "SEC",
+      "gold_answer": "5.93%",
+      "gold_answer_normalized": 5.93,
+      "question_family_id": "SEC_0004",
+      "question_type": "RETRIEVAL_CALCULATION",
+      "records_128k": 756,
+      "records_4k": 25,
+      "target_position_128k": 0.4996083550913838,
+      "target_position_4k": 0.4798815107380894,
+      "template_id": "SEC_OPERATING_MARGIN"
+    },
+    {
+      "answerable": true,
+      "audit_markdown": "FDA_0006.md",
+      "checklist_items": 15,
+      "checklist_status": "PENDING_HUMAN_REVIEW",
+      "context_128k": "FDA_0006_128K.txt",
+      "context_128k_tokens": 129852,
+      "context_4k": "FDA_0006_4K.txt",
+      "context_4k_tokens": 4002,
+      "dataset": "pilot",
+      "distractor_counts_128k": {
+        "OTHER_SAME_DOMAIN": 1014,
+        "WRONG_ENTITY": 202,
+        "WRONG_PERIOD": 3
+      },
+      "distractor_counts_4k": {
+        "OTHER_SAME_DOMAIN": 17,
+        "WRONG_ENTITY": 17,
+        "WRONG_PERIOD": 3
+      },
+      "domain": "FDA",
+      "gold_answer": "2018-08-24",
+      "gold_answer_normalized": "2018-08-24",
+      "question_family_id": "FDA_0006",
+      "question_type": "TEMPORAL_VERSION",
+      "records_128k": 1220,
+      "records_4k": 38,
+      "target_position_128k": 0.49984982903613345,
+      "target_position_4k": 0.5131184407796102,
+      "template_id": "FDA_ORIGINAL_VS_SUPPLEMENT"
+    },
+    {
+      "answerable": true,
+      "audit_markdown": "FRED_0001.md",
+      "checklist_items": 15,
+      "checklist_status": "PENDING_HUMAN_REVIEW",
+      "context_128k": "FRED_0001_128K.txt",
+      "context_128k_tokens": 129609,
+      "context_4k": "FRED_0001_4K.txt",
+      "context_4k_tokens": 4048,
+      "dataset": "fred_pilot",
+      "distractor_counts_128k": {
+        "OTHER_SAME_DOMAIN": 552,
+        "WRONG_FIELD": 409,
+        "WRONG_PERIOD": 417,
+        "WRONG_UNIT": 1,
+        "WRONG_VERSION": 5
+      },
+      "distractor_counts_4k": {
+        "OTHER_SAME_DOMAIN": 16,
+        "WRONG_FIELD": 10,
+        "WRONG_PERIOD": 15,
+        "WRONG_UNIT": 1,
+        "WRONG_VERSION": 1
+      },
+      "domain": "FRED",
+      "gold_answer": "150,895",
+      "gold_answer_normalized": 150895.0,
+      "question_family_id": "FRED_0001",
+      "question_type": "DIRECT_RETRIEVAL",
+      "records_128k": 1385,
+      "records_4k": 44,
+      "target_position_128k": 0.5000578663518737,
+      "target_position_4k": 0.5098814229249012,
+      "template_id": "FRED_DIRECT_OBSERVATION"
+    },
+    {
+      "answerable": true,
+      "audit_markdown": "SEC_0003.md",
+      "checklist_items": 15,
+      "checklist_status": "PENDING_HUMAN_REVIEW",
+      "context_128k": "SEC_0003_128K.txt",
+      "context_128k_tokens": 130234,
+      "context_4k": "SEC_0003_4K.txt",
+      "context_4k_tokens": 3953,
+      "dataset": "pilot",
+      "distractor_counts_128k": {
+        "NEAR_MATCH_VALUE": 12,
+        "OTHER_SAME_DOMAIN": 321,
+        "WRONG_ENTITY": 7,
+        "WRONG_FIELD": 243,
+        "WRONG_PERIOD": 154
+      },
+      "distractor_counts_4k": {
+        "NEAR_MATCH_VALUE": 2,
+        "OTHER_SAME_DOMAIN": 4,
+        "WRONG_ENTITY": 6,
+        "WRONG_FIELD": 5,
+        "WRONG_PERIOD": 5
+      },
+      "domain": "SEC",
+      "gold_answer": "-492,000,000",
+      "gold_answer_normalized": -492000000.0,
+      "question_family_id": "SEC_0003",
+      "question_type": "ENTITY_UNIT_BINDING",
+      "records_128k": 738,
+      "records_4k": 23,
+      "target_position_128k": 0.5004914231306725,
+      "target_position_4k": 0.4948140652668859,
+      "template_id": "SEC_ENTITY_BINDING"
+    }
+  ],
+  "generated_at": "2026-08-09T18:11:13Z",
+  "n_families": 12,
+  "seed": 20240817
+}

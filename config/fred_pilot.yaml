@@ -1,0 +1,120 @@
+# FRED pilot: a small, independently validated dataset for the new FRED adapter.
+#
+# Writes to its own output_subdir and its own manifest/report names, so the previously
+# validated 32-family pilot under data/pilot/ is left completely untouched.
+
+name: fred_pilot
+seed: 20240817
+data_root: data
+output_subdir: fred_pilot
+schema_version: "1.1.0"
+write_parquet: true
+
+tokenizer:
+  # See README "Tokenizer configuration" and data/reports/preproduction_readiness.md.
+  # This is the single field to change once the tested model is chosen.
+  id: "tiktoken:cl100k_base"
+  fallback_id: "whitespace:v1"
+  allow_fallback: false
+
+context:
+  lengths: [4096, 8192, 16384, 32768, 65536, 131072]
+  target_position: 0.50
+  position_tolerance: 0.05
+  min_fill_ratio: 0.95
+
+http:
+  timeout_seconds: 45.0
+  max_retries: 4
+  backoff_seconds: 1.5
+  sec_user_agent: "${SEC_USER_AGENT}"
+  openfda_api_key: "${OPENFDA_API_KEY}"
+  # Optional. Absent, the adapter uses the keyless first-party St. Louis Fed CSV
+  # endpoints and marks descriptive series attributes as operator-supplied.
+  fred_api_key: "${FRED_API_KEY}"
+  default_rate_limit_per_second: 5.0
+  cache_enabled: true
+
+validation:
+  fail_on: ["CRITICAL"]
+  numeric_recompute_rel_tolerance: 1.0e-9
+  require_all_question_types: true
+  max_leakage_value_rel_tolerance: 1.0e-6
+
+domains:
+  FRED:
+    enabled: true
+    n_families: 10
+    question_type_mix:
+      DIRECT_RETRIEVAL: 0.20
+      RETRIEVAL_CALCULATION: 0.30
+      TEMPORAL_VERSION: 0.15
+      ENTITY_UNIT_BINDING: 0.15
+      UNANSWERABLE: 0.20
+    params:
+      observation_start: "1990-01-01"
+      rate_limit_per_second: 4.0
+      # ALFRED vintages: the same observation date as it stood on each of these dates.
+      # These are authentic revisions, not manufactured conflicts -- e.g. GDP for
+      # 2021-Q1 reads 22048.894 in the 2021-04-29 vintage and 22656.793 in 2025-03-27.
+      vintage_series: ["GDP", "GDPC1", "PAYEMS", "UNRATE", "CPIAUCSL"]
+      vintage_dates: ["2021-04-29", "2021-07-29", "2022-06-29", "2023-09-28", "2025-03-27"]
+      # Vintage records are limited to recent observations; older observations are
+      # stable across these vintages and would only bloat the pool.
+      vintage_observation_start: "2018-01-01"
+      # Series catalog. `family` groups series measuring the same quantity, which is
+      # what lets the taxonomy recognise a seasonally-adjusted vs unadjusted pair as a
+      # unit/basis conflict rather than an unrelated field.
+      # Descriptive attributes are operator-supplied while running keyless; every record
+      # is stamped metadata_source=operator_catalog to keep that explicit.
+      series:
+        - {id: UNRATE,   title: "Unemployment Rate", units: "Percent", frequency: Monthly,
+           seasonal_adjustment: "Seasonally Adjusted",     family: unemployment_rate, geo_code: US, geo_name: "United States"}
+        - {id: UNRATENSA, title: "Unemployment Rate", units: "Percent", frequency: Monthly,
+           seasonal_adjustment: "Not Seasonally Adjusted", family: unemployment_rate, geo_code: US, geo_name: "United States"}
+        - {id: CPIAUCSL, title: "Consumer Price Index for All Urban Consumers: All Items in U.S. City Average",
+           units: "Index 1982-1984=100", frequency: Monthly,
+           seasonal_adjustment: "Seasonally Adjusted",     family: cpi_all_items, geo_code: US, geo_name: "United States"}
+        - {id: CPIAUCNS, title: "Consumer Price Index for All Urban Consumers: All Items in U.S. City Average",
+           units: "Index 1982-1984=100", frequency: Monthly,
+           seasonal_adjustment: "Not Seasonally Adjusted", family: cpi_all_items, geo_code: US, geo_name: "United States"}
+        - {id: PAYEMS,   title: "All Employees, Total Nonfarm", units: "Thousands of Persons", frequency: Monthly,
+           seasonal_adjustment: "Seasonally Adjusted",     family: nonfarm_payrolls, geo_code: US, geo_name: "United States"}
+        - {id: PAYNSA,   title: "All Employees, Total Nonfarm", units: "Thousands of Persons", frequency: Monthly,
+           seasonal_adjustment: "Not Seasonally Adjusted", family: nonfarm_payrolls, geo_code: US, geo_name: "United States"}
+        - {id: HOUST,    title: "New Privately-Owned Housing Units Started: Total Units",
+           units: "Thousands of Units", frequency: Monthly,
+           seasonal_adjustment: "Seasonally Adjusted Annual Rate", family: housing_starts, geo_code: US, geo_name: "United States"}
+        - {id: HOUSTNSA, title: "New Privately-Owned Housing Units Started: Total Units",
+           units: "Thousands of Units", frequency: Monthly,
+           seasonal_adjustment: "Not Seasonally Adjusted", family: housing_starts, geo_code: US, geo_name: "United States"}
+        - {id: GDP,      title: "Gross Domestic Product", units: "Billions of Dollars", frequency: Quarterly,
+           seasonal_adjustment: "Seasonally Adjusted Annual Rate", family: gross_domestic_product, geo_code: US, geo_name: "United States"}
+        - {id: GDPC1,    title: "Gross Domestic Product", units: "Billions of Chained 2017 Dollars", frequency: Quarterly,
+           seasonal_adjustment: "Seasonally Adjusted Annual Rate", family: gross_domestic_product, geo_code: US, geo_name: "United States"}
+        - {id: PCE,      title: "Personal Consumption Expenditures", units: "Billions of Dollars", frequency: Monthly,
+           seasonal_adjustment: "Seasonally Adjusted Annual Rate", family: personal_consumption, geo_code: US, geo_name: "United States"}
+        - {id: PCEC96,   title: "Personal Consumption Expenditures", units: "Billions of Chained 2017 Dollars", frequency: Monthly,
+           seasonal_adjustment: "Seasonally Adjusted Annual Rate", family: personal_consumption, geo_code: US, geo_name: "United States"}
+        - {id: DGS10,    title: "Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity",
+           units: "Percent", frequency: Daily,   seasonal_adjustment: "Not Seasonally Adjusted", family: treasury_10y, geo_code: US, geo_name: "United States"}
+        - {id: WGS10YR,  title: "Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity",
+           units: "Percent", frequency: Weekly,  seasonal_adjustment: "Not Seasonally Adjusted", family: treasury_10y, geo_code: US, geo_name: "United States"}
+        - {id: GS10,     title: "Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity",
+           units: "Percent", frequency: Monthly, seasonal_adjustment: "Not Seasonally Adjusted", family: treasury_10y, geo_code: US, geo_name: "United States"}
+        - {id: CAUR, title: "Unemployment Rate", units: "Percent", frequency: Monthly,
+           seasonal_adjustment: "Seasonally Adjusted", family: unemployment_rate, geo_code: CA, geo_name: "California"}
+        - {id: TXUR, title: "Unemployment Rate", units: "Percent", frequency: Monthly,
+           seasonal_adjustment: "Seasonally Adjusted", family: unemployment_rate, geo_code: TX, geo_name: "Texas"}
+        - {id: NYUR, title: "Unemployment Rate", units: "Percent", frequency: Monthly,
+           seasonal_adjustment: "Seasonally Adjusted", family: unemployment_rate, geo_code: NY, geo_name: "New York"}
+        - {id: FLUR, title: "Unemployment Rate", units: "Percent", frequency: Monthly,
+           seasonal_adjustment: "Seasonally Adjusted", family: unemployment_rate, geo_code: FL, geo_name: "Florida"}
+        - {id: ILUR, title: "Unemployment Rate", units: "Percent", frequency: Monthly,
+           seasonal_adjustment: "Seasonally Adjusted", family: unemployment_rate, geo_code: IL, geo_name: "Illinois"}
+        - {id: PAUR, title: "Unemployment Rate", units: "Percent", frequency: Monthly,
+           seasonal_adjustment: "Seasonally Adjusted", family: unemployment_rate, geo_code: PA, geo_name: "Pennsylvania"}
+        - {id: FEDFUNDS, title: "Federal Funds Effective Rate", units: "Percent", frequency: Monthly,
+           seasonal_adjustment: "Not Seasonally Adjusted", family: fed_funds_rate, geo_code: US, geo_name: "United States"}
+        - {id: INDPRO, title: "Industrial Production: Total Index", units: "Index 2017=100", frequency: Monthly,
+           seasonal_adjustment: "Seasonally Adjusted", family: industrial_production, geo_code: US, geo_name: "United States"}

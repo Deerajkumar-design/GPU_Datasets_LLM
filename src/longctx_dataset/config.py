@@ -89,6 +89,13 @@ class DomainConfig(BaseModel):
     enabled: bool = True
     n_families: int = 0
     question_type_mix: Dict[QuestionType, float] = Field(default_factory=dict)
+    question_type_counts: Dict[QuestionType, int] = Field(
+        default_factory=dict,
+        description="Explicit per-type family counts. Overrides question_type_mix when "
+        "set. Needed when a fractional target is not reachable by rounding within one "
+        "domain -- 30% of 25 is 7.5 -- but the totals across domains must still land "
+        "exactly on the design.",
+    )
     params: Dict[str, Any] = Field(default_factory=dict)
 
 
@@ -101,6 +108,9 @@ class HTTPConfig(BaseModel):
     sec_user_agent: Optional[str] = None
     sec_rate_limit_per_second: float = 8.0
     openfda_api_key: Optional[str] = None
+    # Optional: upgrades the FRED adapter from the keyless CSV endpoints to the
+    # JSON API, which supplies authoritative series metadata.
+    fred_api_key: Optional[str] = None
     default_rate_limit_per_second: float = 5.0
     cache_enabled: bool = True
 
@@ -201,6 +211,11 @@ def load_config(path: str | Path) -> PipelineConfig:
         cfg.http.openfda_api_key = env_key
     if not cfg.http.openfda_api_key:
         cfg.http.openfda_api_key = None
+    env_fred = os.environ.get("FRED_API_KEY")
+    if env_fred:
+        cfg.http.fred_api_key = env_fred
+    if not cfg.http.fred_api_key:
+        cfg.http.fred_api_key = None
 
     cfg.config_hash = cfg.compute_hash()
     return cfg
