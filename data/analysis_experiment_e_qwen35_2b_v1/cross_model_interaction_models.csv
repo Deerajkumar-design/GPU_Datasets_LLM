@@ -1,0 +1,4 @@
+outcome,formula,interaction_term,interaction_coefficient_qwen_minus_llama,interaction_or_ratio,ci_low,ci_high,p_value,n_observations,n_families
+inaccurate,inaccurate ~ context_log2 * C(model),context_log2:C(model)[T.qwen35_2b],0.02988461050653023,1.030335637186651,0.9665485909154531,1.0983322879311745,0.3593982451455977,5998,500
+grounded_inaccuracy,grounded_inaccuracy ~ context_log2 * C(model),context_log2:C(model)[T.qwen35_2b],0.17467396512380237,1.19085789210671,1.115694616468644,1.2710848454942711,1.5119519588436038e-07,5998,500
+hallucinatory_inaccuracy,hallucinatory_inaccuracy ~ context_log2 * C(model),context_log2:C(model)[T.qwen35_2b],-0.2081715647391426,0.8120677025763098,0.7665383520509391,0.86030131669621,1.5345135039801317e-12,5998,500

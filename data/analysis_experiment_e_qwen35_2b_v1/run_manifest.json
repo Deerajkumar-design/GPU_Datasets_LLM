@@ -1,0 +1,46 @@
+{
+  "benchmark_hash": "dc2c4194dedb090198e6883735257908ce274bebc8611b40d958dbd026aa1fe6",
+  "context_log2_field": "log2(input_tokens)",
+  "created_at": "2026-08-12T07:30:25.640594+00:00",
+  "gee_specification": "binary_outcome ~ context_log2, clustered by question_family_id",
+  "grader_hash": "d9282a0ccc50daba3bfd232c058dfbab63a5c19a7323d585a7c2236b3a6c4ba8",
+  "integrity": {
+    "ambiguous": 0,
+    "context_counts": {
+      "16K": 500,
+      "32K": 500,
+      "4K": 500,
+      "64K": 500,
+      "82K": 500,
+      "8K": 500
+    },
+    "families": 500,
+    "format_failure": 0,
+    "missing_answer_correct": 0,
+    "missing_hallucination": 0,
+    "rows": 3000,
+    "runtime_failures": 0,
+    "unique_instance_ids": 3000
+  },
+  "llama_scored_dataset": "data/grading_experiment_d_final_v1/final_scored_results.csv",
+  "llama_scored_dataset_hash": "155f80ec3bf284a7928ede0d24b491a972540b77dfe01d98eb622825c9c06a78",
+  "malformed_outputs": 0,
+  "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "package_versions": {
+    "matplotlib": "3.8.4",
+    "numpy": "1.26.4",
+    "pandas": "2.2.2",
+    "python": "3.12.4",
+    "scipy": "1.13.1",
+    "seaborn": "0.13.2",
+    "statsmodels": "0.14.2"
+  },
+  "prompt_hash": "8b1f0e7700df4fe1",
+  "prompt_version": "qwen35_chat_v1",
+  "qwen_scored_dataset": "data/grading_experiment_e_qwen35_2b_v1/scored_results.csv",
+  "qwen_scored_dataset_hash": "e7d0d65e89a9713f160b925c2aa4888f92f7a52110c5c752ea628e6f0baca422",
+  "runtime_failures": 0,
+  "successful": 3000,
+  "transformers_version": "5.14.1",
+  "working_correlation": "Exchangeable"
+}

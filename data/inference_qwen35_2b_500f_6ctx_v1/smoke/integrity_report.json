@@ -1,0 +1,15 @@
+{
+  "attempted": 60,
+  "dataset_hash": "dc2c4194dedb090198e6883735257908ce274bebc8611b40d958dbd026aa1fe6",
+  "expected_instances": 60,
+  "failed": 0,
+  "failure_breakdown": {},
+  "hit_128_outputs": 0,
+  "malformed_outputs": 0,
+  "no_grading_or_statistical_analysis_performed": true,
+  "passed": true,
+  "problems": [],
+  "source_dataset_hash_unchanged": true,
+  "successful": 60,
+  "thinking_trace_outputs": 0
+}

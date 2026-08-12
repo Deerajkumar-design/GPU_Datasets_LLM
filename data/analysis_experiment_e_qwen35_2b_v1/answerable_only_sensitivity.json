@@ -1,0 +1,50 @@
+{
+  "exclude_unanswerable": [
+    {
+      "coefficient": 0.39243640971440313,
+      "converged": true,
+      "formula": "inaccurate ~ context_log2",
+      "n_families": 400,
+      "n_observations": 2400,
+      "odds_ratio_ci_high": 1.5676248298294502,
+      "odds_ratio_ci_low": 1.3983754819288772,
+      "odds_ratio_per_2x_context": 1.4805837115463722,
+      "outcome": "inaccurate",
+      "p_value": 2.531003756146249e-41,
+      "predictor": "context_log2",
+      "robust_se": 0.029146054389349196,
+      "working_correlation": "Exchangeable"
+    },
+    {
+      "coefficient": -0.11041883983056018,
+      "converged": true,
+      "formula": "hallucinatory_inaccuracy ~ context_log2",
+      "n_families": 400,
+      "n_observations": 2400,
+      "odds_ratio_ci_high": 0.9392987382491063,
+      "odds_ratio_ci_low": 0.8536653921950824,
+      "odds_ratio_per_2x_context": 0.8954590028447809,
+      "outcome": "hallucinatory_inaccuracy",
+      "p_value": 5.959455995135364e-06,
+      "predictor": "context_log2",
+      "robust_se": 0.024386741254687466,
+      "working_correlation": "Exchangeable"
+    },
+    {
+      "coefficient": 0.4386544927910404,
+      "converged": true,
+      "formula": "grounded_inaccuracy ~ context_log2",
+      "n_families": 400,
+      "n_observations": 2400,
+      "odds_ratio_ci_high": 1.637973288548863,
+      "odds_ratio_ci_low": 1.4679242200512321,
+      "odds_ratio_per_2x_context": 1.5506194446278045,
+      "outcome": "grounded_inaccuracy",
+      "p_value": 1.846618527336144e-55,
+      "predictor": "context_log2",
+      "robust_se": 0.027962342972595703,
+      "working_correlation": "Exchangeable"
+    }
+  ],
+  "exclude_unanswerable_observations": 2400
+}

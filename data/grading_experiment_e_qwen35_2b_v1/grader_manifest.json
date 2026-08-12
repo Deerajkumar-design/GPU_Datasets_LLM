@@ -1,0 +1,61 @@
+{
+  "audit_result": {
+    "answer_correct_counts": {
+      "False": 66,
+      "True": 34
+    },
+    "counts_by_context": {
+      "16K": 17,
+      "32K": 14,
+      "4K": 15,
+      "64K": 20,
+      "82K": 21,
+      "8K": 13
+    },
+    "counts_by_domain": {
+      "CLINICAL_TRIALS": 24,
+      "FDA": 25,
+      "FRED": 26,
+      "SEC": 25
+    },
+    "counts_by_question_type": {
+      "DIRECT_RETRIEVAL": 14,
+      "ENTITY_UNIT_BINDING": 15,
+      "RETRIEVAL_CALCULATION": 38,
+      "TEMPORAL_VERSION": 13,
+      "UNANSWERABLE": 20
+    },
+    "error_type_counts": {
+      "CORRECT": 34,
+      "FAILED_TO_ABSTAIN": 8,
+      "UNNECESSARY_ABSTENTION": 27,
+      "UNSUPPORTED_VALUE": 20,
+      "WRONG_ENTITY": 3,
+      "WRONG_FIELD": 4,
+      "WRONG_PERIOD": 3,
+      "WRONG_VERSION": 1
+    },
+    "format_failure_count": 0,
+    "hallucination_counts": {
+      "False": 72,
+      "True": 28
+    },
+    "sample_size": 100,
+    "semantic_review_count": 0
+  },
+  "created_at": "2026-08-12T07:33:12Z",
+  "dataset_dir": "data/preproduction_llama32_3b_500f_6ctx_v1",
+  "dataset_hash": "dc2c4194dedb090198e6883735257908ce274bebc8611b40d958dbd026aa1fe6",
+  "frozen_grader_hash": "d9282a0ccc50daba3bfd232c058dfbab63a5c19a7323d585a7c2236b3a6c4ba8",
+  "grading_script_hash": "70a64b414cfa4b18aa2da6557ec6bc0db31b4af8db79f9857d20cbeea0a5240f",
+  "manual_resolution_count": 10,
+  "manual_resolutions_path": "data/grading_experiment_e_qwen35_2b_v1/manual_resolutions.jsonl",
+  "observed_grader_hash": "d9282a0ccc50daba3bfd232c058dfbab63a5c19a7323d585a7c2236b3a6c4ba8",
+  "platform": "Linux-6.8.0-87-generic-x86_64-with-glibc2.35",
+  "python_version": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:12:24) [GCC 11.2.0]",
+  "raw_failures_path": "data/inference_qwen35_2b_500f_6ctx_v1/failures.jsonl",
+  "raw_failures_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "raw_results_path": "data/inference_qwen35_2b_500f_6ctx_v1/results.jsonl",
+  "raw_results_sha256": "4be954af552a89b9e8606d227e3c33125532194dc7c6cf6d4758e88f977d08a1",
+  "semantic_grading_rules_changed_from_experiment_d": false
+}

@@ -1,0 +1,18 @@
+{
+  "dataset_hash": "dc2c4194dedb090198e6883735257908ce274bebc8611b40d958dbd026aa1fe6",
+  "failures": [],
+  "families": 500,
+  "instances": 3000,
+  "instances_by_context": {
+    "16K": 500,
+    "32K": 500,
+    "4K": 500,
+    "64K": 500,
+    "82K": 500,
+    "8K": 500
+  },
+  "passed": true,
+  "source_prompt_versions": {
+    "llama_chat_v4:5d2869822989e19b": 3000
+  }
+}

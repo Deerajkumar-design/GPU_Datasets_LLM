@@ -1,0 +1,4 @@
+outcome,predictor,formula,working_correlation,n_observations,n_families,coefficient,robust_se,odds_ratio_per_2x_context,odds_ratio_ci_low,odds_ratio_ci_high,p_value,converged
+inaccurate,context_log2,inaccurate ~ context_log2,Exchangeable,2400,400,0.39243640971440313,0.029146054389349196,1.4805837115463722,1.3983754819288772,1.5676248298294502,2.531003756146249e-41,True
+hallucinatory_inaccuracy,context_log2,hallucinatory_inaccuracy ~ context_log2,Exchangeable,2400,400,-0.11041883983056018,0.024386741254687466,0.8954590028447809,0.8536653921950824,0.9392987382491063,5.959455995135364e-06,True
+grounded_inaccuracy,context_log2,grounded_inaccuracy ~ context_log2,Exchangeable,2400,400,0.4386544927910404,0.027962342972595703,1.5506194446278045,1.4679242200512321,1.637973288548863,1.846618527336144e-55,True
