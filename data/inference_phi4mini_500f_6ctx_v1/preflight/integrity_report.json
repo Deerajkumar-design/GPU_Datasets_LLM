@@ -1,0 +1,17 @@
+{
+  "attempted": 6,
+  "dataset_hash": "dc2c4194dedb090198e6883735257908ce274bebc8611b40d958dbd026aa1fe6",
+  "expected_instances": 6,
+  "failed": 3,
+  "failure_breakdown": {
+    "CUDA_OOM": 3
+  },
+  "hit_128_outputs": 0,
+  "malformed_outputs": 0,
+  "no_grading_or_statistical_analysis_performed": true,
+  "passed": true,
+  "problems": [],
+  "source_dataset_hash_unchanged": true,
+  "successful": 3,
+  "thinking_trace_outputs": 0
+}

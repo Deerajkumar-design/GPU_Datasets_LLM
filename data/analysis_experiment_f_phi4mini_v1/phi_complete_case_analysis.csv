@@ -1,0 +1,2 @@
+analysis,outcome,n_observations,n_families,estimable,reason,complete_families
+complete_case,inaccurate,0,0,False,no question families had successful outputs at all six conditions,0

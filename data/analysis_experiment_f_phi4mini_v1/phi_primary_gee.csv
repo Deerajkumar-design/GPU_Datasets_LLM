@@ -1,0 +1,5 @@
+analysis,outcome,formula,working_correlation,n_observations,n_families,estimable,coefficient,robust_se,odds_ratio_per_2x_context,odds_ratio_ci_low,odds_ratio_ci_high,p_value,reason,complete_families
+llama_primary,inaccurate,inaccurate ~ context_log2,Exchangeable,2998,500,True,0.20845498149658281,0.022895476020445695,1.2317734762142785,1.177720361693054,1.2883074336286702,8.655597418634078e-20,,
+qwen_primary,inaccurate,inaccurate ~ context_log2,Exchangeable,3000,500,True,0.24387694604936191,0.024530216905957285,1.2761872809401953,1.2162819268144862,1.339043144626073,2.735607978289658e-23,,
+phi_primary,inaccurate,inaccurate ~ context_log2,Exchangeable,1500,500,True,0.11573827214747019,0.04339409546212944,1.1227019912953193,1.031163120056691,1.2223669919354543,0.007649904005939978,,
+complete_case,inaccurate,,,0,0,False,,,,,,,no question families had successful outputs at all six conditions,0.0

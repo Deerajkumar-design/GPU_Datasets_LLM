@@ -1,0 +1,7 @@
+context,successful_n,runtime_failures,accurate_count,inaccurate_count,accurate_rate,inaccuracy_rate,mean_rendered_phi_tokens,mean_latency_seconds
+4K,500,0,248,252,0.496,0.504,4195.348,0.3761752591133118
+8K,500,0,234,266,0.468,0.532,8204.63,0.7015118780452758
+16K,500,0,220,280,0.44,0.56,16220.268,1.4463259362187237
+32K,0,500,0,0,,,32253.482,
+64K,0,500,0,0,,,64316.54,
+82K,0,500,0,0,,,80733.566,

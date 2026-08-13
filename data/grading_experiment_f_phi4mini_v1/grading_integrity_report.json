@@ -1,0 +1,22 @@
+{
+  "context_counts": {
+    "16K": 500,
+    "4K": 500,
+    "8K": 500
+  },
+  "dataset_hash": "dc2c4194dedb090198e6883735257908ce274bebc8611b40d958dbd026aa1fe6",
+  "expected_inference_attempts": 3000,
+  "factual_graded_rows": 1500,
+  "frozen_benchmark_unchanged": true,
+  "grader_hash": "d9282a0ccc50daba3bfd232c058dfbab63a5c19a7323d585a7c2236b3a6c4ba8",
+  "manual_resolution_count": 8,
+  "no_llm_judge_used": true,
+  "no_statistical_hypothesis_testing_performed": true,
+  "passed": true,
+  "raw_failures_sha256": "7328ae52ee1974d16e3ad0e6546e8ae8835dc275250e6bba76a18154b6bb6ce3",
+  "raw_results_sha256": "1f92db11b2e0c9c9bb2a7d3839f64fb1c18b7c9a8be9bef9c331341fbcbd1457",
+  "runtime_failures": 1500,
+  "successful_outputs": 1500,
+  "unique_runtime_failure_ids": 1500,
+  "unique_scored_instance_ids": 1500
+}

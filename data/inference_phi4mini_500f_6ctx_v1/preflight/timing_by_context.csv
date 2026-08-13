@@ -1,0 +1,7 @@
+context_length,attempted,runtime_successful,runtime_failed,cuda_oom_count,usable_answer_outputs,malformed_outputs,thinking_trace_outputs,hit_128,degenerate_outputs,mean_input_tokens,min_input_tokens,median_input_tokens,max_input_tokens,sd_input_tokens,mean_generated_tokens,median_generated_tokens,mean_latency_seconds,median_latency_seconds,std_latency_seconds,p95_latency_seconds,total_generation_seconds,mean_peak_allocated_vram_gib,max_peak_allocated_vram_gib,mean_peak_reserved_vram_gib,max_peak_reserved_vram_gib
+4K,1,1,0,0,1,0,0,0,0,4242,4242,4242,4242,0.0,10,10,0.4212673809379339,0.4212673809379339,0.0,0.4212673809379339,0.4212673809379339,9.065078258514404,9.065078258514404,9.671875,9.671875
+8K,1,1,0,0,1,0,0,0,0,8199,8199,8199,8199,0.0,10,10,0.7549395114183426,0.7549395114183426,0.0,0.7549395114183426,0.7549395114183426,10.84742259979248,10.84742259979248,11.982421875,11.982421875
+16K,1,1,0,0,1,0,0,0,0,16264,16264,16264,16264,0.0,10,10,1.516780974343419,1.516780974343419,0.0,1.516780974343419,1.516780974343419,14.482553005218506,14.482553005218506,16.64453125,16.64453125
+32K,1,0,1,1,0,0,0,0,0,,,,,,,,,,,,0,,,,
+64K,1,0,1,1,0,0,0,0,0,,,,,,,,,,,,0,,,,
+82K,1,0,1,1,0,0,0,0,0,,,,,,,,,,,,0,,,,

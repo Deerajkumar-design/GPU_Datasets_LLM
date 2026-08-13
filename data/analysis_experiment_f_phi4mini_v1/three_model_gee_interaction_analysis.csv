@@ -1,0 +1,4 @@
+comparison,reference_model,comparison_model,term,n_observations,coefficient,robust_se,or_ratio,or_ratio_ci_low,or_ratio_ci_high,p_value,terms,df,wald_chi2
+Phi-4-mini-instruct vs Llama-3.2-3B-Instruct,llama32_3b,phi4mini,context_log2:C(model)[T.phi4mini],4498,-0.09203223168236645,0.049417581917474626,0.9120757513354049,0.8278784685827377,1.004836105471084,0.06255548800152602,,,
+Phi-4-mini-instruct vs Qwen3.5-2B,qwen35_2b,phi4mini,context_log2:C(model)[T.phi4mini],4500,-0.12615527716890387,0.046887627064364196,0.8814779627537013,0.8040825527409903,0.9663229181776595,0.007132626432430916,,,
+joint_three_model_context_slope_interaction,,,,7498,,,,,,0.031676450917955755,context_log2:C(model)[T.qwen35_2b];context_log2:C(model)[T.phi4mini],2.0,6.904363494833145

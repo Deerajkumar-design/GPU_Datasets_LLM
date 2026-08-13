@@ -1,0 +1,17 @@
+{
+  "data/analysis_experiment_f_phi4mini_v1/EXPERIMENT_F_REPORT.md": "2340dfe89d89ac0097cf7d473e38442641111cca373da71a597f4f6988e2e2f3",
+  "data/analysis_experiment_f_phi4mini_v1/artifact_hashes.json": "8eacad5df7c1256ec475cca6a68918a1ba34bcdc566c51ef0efb70dd526b91ed",
+  "data/analysis_experiment_f_phi4mini_v1/run_manifest.json": "7bd44fa060f536557c7561ee9476af06a413f470759db069f4a3a68d1356a48a",
+  "data/grading_experiment_f_phi4mini_v1/grader_manifest.json": "0d58b8fc87ae1d98bf94ceb146848e62b8ed7eb283ef008234d5718fd1a9af2b",
+  "data/grading_experiment_f_phi4mini_v1/grading_summary.json": "0801ce09df849a4ff07b73c75a83994905076a5a56684db5da4c112bce5e983b",
+  "data/grading_experiment_f_phi4mini_v1/runtime_failures.jsonl": "893ed6b56fda3ca8a0d9321c90c50bf33bee5dd4a1db9d6169b8c0b740c4e6fc",
+  "data/grading_experiment_f_phi4mini_v1/scored_results.csv": "2417a3db3ee5c1d871c9bfc07fd45d8675227a18ebb13b50b1853a0124621e4b",
+  "data/grading_experiment_f_phi4mini_v1/scored_results.jsonl": "a5c20e6c3318a7ec75a1dcfd78cb4f62b4765ebd56cc7f47dbba412df1f509e6",
+  "data/inference_phi4mini_500f_6ctx_v1/environment.json": "c480e5b4b92c5a482decbe1f12bf77ef8513f30e44572bba069d8d401dcb0bfe",
+  "data/inference_phi4mini_500f_6ctx_v1/failures.jsonl": "7328ae52ee1974d16e3ad0e6546e8ae8835dc275250e6bba76a18154b6bb6ce3",
+  "data/inference_phi4mini_500f_6ctx_v1/results.jsonl": "1f92db11b2e0c9c9bb2a7d3839f64fb1c18b7c9a8be9bef9c331341fbcbd1457",
+  "data/inference_phi4mini_500f_6ctx_v1/run_manifest.json": "e6d447fd6643863c3cac095053dca9c9e92ab33c9e68ce1b67d72144798092ae",
+  "scripts/analyze_experiment_f_phi4mini.py": "609328c242350a3401068ecae6b5fbe049a4905068384ec7daaae475f64fd469",
+  "scripts/grade_experiment_f_phi4mini.py": "9b0e510453f26361bc310aeeb271896b47d342a5008722469e9348fa361da780",
+  "scripts/run_phi4mini_experiment_f.py": "21090bdbb7db7d00f3944afd419d71ff0fe0b25953839e34cd7cfe07686a4c92"
+}

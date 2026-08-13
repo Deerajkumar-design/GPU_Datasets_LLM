@@ -1,0 +1,61 @@
+{
+  "audit_result": {
+    "answer_correct_counts": {
+      "False": 54,
+      "True": 46
+    },
+    "counts_by_context": {
+      "16K": 27,
+      "4K": 32,
+      "8K": 41
+    },
+    "counts_by_domain": {
+      "CLINICAL_TRIALS": 22,
+      "FDA": 23,
+      "FRED": 27,
+      "SEC": 28
+    },
+    "counts_by_question_type": {
+      "DIRECT_RETRIEVAL": 13,
+      "ENTITY_UNIT_BINDING": 15,
+      "RETRIEVAL_CALCULATION": 36,
+      "TEMPORAL_VERSION": 13,
+      "UNANSWERABLE": 23
+    },
+    "error_type_counts": {
+      "CALCULATION_ERROR": 2,
+      "CORRECT": 46,
+      "FAILED_TO_ABSTAIN": 8,
+      "FORMAT_FAILURE": 3,
+      "UNNECESSARY_ABSTENTION": 1,
+      "UNSUPPORTED_VALUE": 32,
+      "WRONG_ENTITY": 4,
+      "WRONG_PERIOD": 1,
+      "WRONG_SERIES_VARIANT": 1,
+      "WRONG_VERSION": 2
+    },
+    "format_failure_count": 3,
+    "hallucination_counts": {
+      "False": 57,
+      "None": 3,
+      "True": 40
+    },
+    "sample_size": 100,
+    "semantic_review_count": 3
+  },
+  "created_at": "2026-08-13T09:06:49Z",
+  "dataset_dir": "data/preproduction_llama32_3b_500f_6ctx_v1",
+  "dataset_hash": "dc2c4194dedb090198e6883735257908ce274bebc8611b40d958dbd026aa1fe6",
+  "frozen_grader_hash": "d9282a0ccc50daba3bfd232c058dfbab63a5c19a7323d585a7c2236b3a6c4ba8",
+  "grading_script_hash": "9b0e510453f26361bc310aeeb271896b47d342a5008722469e9348fa361da780",
+  "manual_resolution_count": 8,
+  "manual_resolutions_path": "data/grading_experiment_f_phi4mini_v1/manual_resolutions.jsonl",
+  "observed_grader_hash": "d9282a0ccc50daba3bfd232c058dfbab63a5c19a7323d585a7c2236b3a6c4ba8",
+  "platform": "Linux-6.8.0-87-generic-x86_64-with-glibc2.35",
+  "python_version": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:12:24) [GCC 11.2.0]",
+  "raw_failures_path": "data/inference_phi4mini_500f_6ctx_v1/failures.jsonl",
+  "raw_failures_sha256": "7328ae52ee1974d16e3ad0e6546e8ae8835dc275250e6bba76a18154b6bb6ce3",
+  "raw_results_path": "data/inference_phi4mini_500f_6ctx_v1/results.jsonl",
+  "raw_results_sha256": "1f92db11b2e0c9c9bb2a7d3839f64fb1c18b7c9a8be9bef9c331341fbcbd1457",
+  "semantic_grading_rules_changed_from_experiment_d": false
+}
