@@ -1,0 +1,7 @@
+Context,Llama Accurate,Llama Inaccurate,Llama Runtime Failures,Qwen Mean Tokens,Qwen Accurate,Qwen Inaccurate,Qwen Mean Latency
+4K,50.4%,49.6%,0,"5,164",54.8%,45.2%,0.47 s
+8K,45.6%,54.4%,0,"10,106",45.8%,54.2%,0.84 s
+16K,41.2%,58.8%,0,"19,981",39.4%,60.6%,1.59 s
+32K,38.4%,61.6%,0,"39,736",31.2%,68.8%,3.20 s
+64K,30.4%,69.6%,0,"79,219",32.6%,67.4%,6.81 s
+82K,29.3%,70.7%,2,"99,422",28.8%,71.2%,8.87 s

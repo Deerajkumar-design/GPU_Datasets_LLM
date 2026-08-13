@@ -1,0 +1,11 @@
+Model,Comparison,Paired N,4K Inaccurate,Higher Context Inaccurate,Delta,"Discordant 4K=0,Higher=1","Discordant 4K=1,Higher=0",Raw p,Holm p
+Llama,4K vs 8K,500,49.6%,54.4%,4.8 pp,41,17,0.00223,0.00223
+Llama,4K vs 16K,500,49.6%,58.8%,9.2 pp,66,20,6.67e-07,1.33e-06
+Llama,4K vs 32K,500,49.6%,61.6%,12.0 pp,88,28,2.09e-08,6.27e-08
+Llama,4K vs 64K,500,49.6%,69.6%,20.0 pp,124,24,1.89e-17,7.57e-17
+Llama,4K vs 82K,498,49.4%,70.7%,21.3 pp,129,23,4.33e-19,2.17e-18
+Qwen,4K vs 8K,500,45.2%,54.2%,9.0 pp,60,15,1.59e-07,1.59e-07
+Qwen,4K vs 16K,500,45.2%,60.6%,15.4 pp,88,11,4.53e-16,9.06e-16
+Qwen,4K vs 32K,500,45.2%,68.8%,23.6 pp,125,7,4.58e-29,2.29e-28
+Qwen,4K vs 64K,500,45.2%,67.4%,22.2 pp,139,28,6.84e-19,2.05e-18
+Qwen,4K vs 82K,500,45.2%,71.2%,26.0 pp,151,21,1.87e-25,7.50e-25

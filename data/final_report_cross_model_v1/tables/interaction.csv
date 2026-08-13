@@ -1,0 +1,2 @@
+Outcome,Interaction,Qwen-vs-Llama slope OR ratio,95% CI,p-value,Interpretation
+Inaccurate,log2(rendered_input_tokens) x model,1.030,"[0.967, 1.098]",0.3594,No statistically significant difference detected

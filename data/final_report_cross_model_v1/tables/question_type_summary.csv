@@ -1,0 +1,6 @@
+Question Type,Llama 4K Accurate,Llama 82K Accurate,Llama 4K Inaccurate,Llama 82K Inaccurate,Qwen 4K Accurate,Qwen 82K Accurate,Qwen 4K Inaccurate,Qwen 82K Inaccurate
+DIRECT_RETRIEVAL,76.0%,63.0%,24.0%,37.0%,87.0%,35.0%,13.0%,65.0%
+ENTITY_UNIT_BINDING,74.7%,49.5%,25.3%,50.5%,72.6%,24.2%,27.4%,75.8%
+RETRIEVAL_CALCULATION,6.0%,10.1%,94.0%,89.9%,4.7%,0.0%,95.3%,100.0%
+TEMPORAL_VERSION,81.8%,32.7%,18.2%,67.3%,98.2%,23.6%,1.8%,76.4%
+UNANSWERABLE,51.0%,3.0%,49.0%,97.0%,57.0%,73.0%,43.0%,27.0%
