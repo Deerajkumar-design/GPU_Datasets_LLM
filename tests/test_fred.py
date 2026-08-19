@@ -166,11 +166,12 @@ def _find(records, concept, period, version="latest"):
                 if r.concept == concept and r.period == period and r.version == version)
 
 
-def test_seasonal_adjustment_twin_is_a_unit_conflict(fred_records):
+def test_seasonal_adjustment_twin_is_a_series_variant(fred_records):
     period = sorted({r.period for r in fred_records if r.concept == "UNRATE"})[-1]
     target = _find(fred_records, "UNRATE", period)
     twin = _find(fred_records, "UNRATENSA", period)
-    assert classify_distractor(twin, [target])[0] is DistractorType.WRONG_UNIT
+    assert target.unit == twin.unit
+    assert classify_distractor(twin, [target])[0] is DistractorType.WRONG_SERIES_VARIANT
 
 
 def test_chained_dollar_twin_is_a_unit_conflict(fred_records):

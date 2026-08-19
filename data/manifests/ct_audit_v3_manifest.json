@@ -1,0 +1,186 @@
+{
+  "config_hash": "a3e99a21a0d3793c",
+  "config_path": "config/ct_audit_v3.yaml",
+  "content_sha256": {
+    "instances": "adcdff81ae0e97f75ff5e9b681537de80d853e4b8dcd6b0da0ee7e1540909d75",
+    "question_families": "179b9458018435821af0a48c5f3b5d50ecb57bd07ff903652df46985a1414b46",
+    "unavailable_variants": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "counts": {
+    "instances": 48,
+    "normalized_CLINICAL_TRIALS": 74683,
+    "question_families": 8
+  },
+  "dataset_name": "ct_audit_v3",
+  "extra": {},
+  "files": [
+    {
+      "bytes": 27131,
+      "path": "data/ct_audit_v3/question_families.jsonl",
+      "rows": null,
+      "sha256": "8ee1a04da886d72e41f73c0ede86dc7e94dd4a60ef8b2e7a3cfc03165634d86d"
+    },
+    {
+      "bytes": 17868554,
+      "path": "data/ct_audit_v3/instances.jsonl",
+      "rows": null,
+      "sha256": "3d8c280cf449f22ba6b4a22fa6d1a2644598f17c339c925d6ece94a6c0adaf54"
+    },
+    {
+      "bytes": 0,
+      "path": "data/ct_audit_v3/unavailable_variants.jsonl",
+      "rows": null,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 89562051,
+      "path": "data/normalized/clinical_trials.jsonl",
+      "rows": null,
+      "sha256": "45748d0660b3943a8796411fac248398413772cf127a3de75e7f0a8b53865b6a"
+    }
+  ],
+  "generated_at": "2026-08-09T19:14:40Z",
+  "generator_version": "0.2.0",
+  "git_commit": "7c848cf04dc3d16ee413ef3819f09f44ca9ad046",
+  "manifest_version": "1.0.0",
+  "platform": "Linux-6.8.0-87-generic-x86_64-with-glibc2.35",
+  "python_version": "3.12.4",
+  "schema_version": "1.1.0",
+  "seed": 20240817,
+  "source_retrievals": [
+    {
+      "api_base": "https://clinicaltrials.gov/api/v2",
+      "api_version": "v2",
+      "blocked": false,
+      "blocker_reason": null,
+      "domain": "CLINICAL_TRIALS",
+      "errors": [],
+      "identifiers": [
+        "metformin",
+        "atorvastatin",
+        "pembrolizumab",
+        "insulin glargine",
+        "semaglutide",
+        "rivaroxaban",
+        "aspirin",
+        "tranexamic acid"
+      ],
+      "n_normalized_records": 0,
+      "n_raw_payloads": 24,
+      "n_raw_records": 2400,
+      "n_requests": 0,
+      "notes": null,
+      "retrieved_at": "2026-08-09T04:32:06Z",
+      "source": "CLINICALTRIALS_GOV_V2"
+    },
+    {
+      "api_base": "https://api.fda.gov/drug",
+      "api_version": "openfda-drugsfda",
+      "blocked": false,
+      "blocker_reason": null,
+      "domain": "FDA",
+      "errors": [],
+      "identifiers": [
+        "METFORMIN HYDROCHLORIDE",
+        "ATORVASTATIN CALCIUM",
+        "LISINOPRIL",
+        "AMLODIPINE BESYLATE",
+        "LEVOTHYROXINE SODIUM",
+        "OMEPRAZOLE",
+        "SERTRALINE HYDROCHLORIDE",
+        "GABAPENTIN",
+        "IBUPROFEN",
+        "AMOXICILLIN",
+        "PREDNISONE",
+        "WARFARIN SODIUM",
+        "MONTELUKAST SODIUM",
+        "LOSARTAN POTASSIUM",
+        "CIPROFLOXACIN HYDROCHLORIDE"
+      ],
+      "n_normalized_records": 0,
+      "n_raw_payloads": 15,
+      "n_raw_records": 960,
+      "n_requests": 0,
+      "notes": null,
+      "retrieved_at": "2026-08-09T04:32:06Z",
+      "source": "OPENFDA_DRUGSFDA"
+    },
+    {
+      "api_base": "https://data.sec.gov/api/xbrl",
+      "api_version": "xbrl-companyfacts-v1",
+      "blocked": false,
+      "blocker_reason": null,
+      "domain": "SEC",
+      "errors": [],
+      "identifiers": [
+        "0000320193",
+        "0000789019",
+        "0001018724",
+        "0000021344",
+        "0000104169",
+        "0000200406",
+        "0000078003",
+        "0000019617"
+      ],
+      "n_normalized_records": 0,
+      "n_raw_payloads": 8,
+      "n_raw_records": 259528,
+      "n_requests": 0,
+      "notes": null,
+      "retrieved_at": "2026-08-09T04:32:06Z",
+      "source": "SEC_EDGAR_XBRL_COMPANYFACTS"
+    },
+    {
+      "api_base": "https://api.worldbank.org/v2",
+      "api_version": "v2",
+      "blocked": false,
+      "blocker_reason": null,
+      "domain": "WORLD_BANK",
+      "errors": [
+        "NY.GDP.MKTP.KD [NLD..NLD]: [world_bank] GET https://api.worldbank.org/v2/country/NLD/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/NLD/indicator/NY.GDP.MKTP.KD?format=json&per_page=500",
+        "NY.GDP.MKTP.KD [SAU..SAU]: [world_bank] GET https://api.worldbank.org/v2/country/SAU/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTPSConnectionPool(host='api.worldbank.org', port=443): Read timed out. (read timeout=4.0)",
+        "NY.GDP.MKTP.KD [CHE..CHE]: [world_bank] GET https://api.worldbank.org/v2/country/CHE/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/CHE/indicator/NY.GDP.MKTP.KD?format=json&per_page=500",
+        "NY.GDP.MKTP.KD [POL..POL]: [world_bank] GET https://api.worldbank.org/v2/country/POL/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/POL/indicator/NY.GDP.MKTP.KD?format=json&per_page=500",
+        "NY.GDP.MKTP.KD [SWE..SWE]: [world_bank] GET https://api.worldbank.org/v2/country/SWE/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTPSConnectionPool(host='api.worldbank.org', port=443): Read timed out. (read timeout=4.0)",
+        "NY.GDP.PCAP.CD [FRA..FRA]: [world_bank] GET https://api.worldbank.org/v2/country/FRA/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTPSConnectionPool(host='api.worldbank.org', port=443): Read timed out. (read timeout=4.0)",
+        "NY.GDP.PCAP.CD [BRA..BRA]: [world_bank] GET https://api.worldbank.org/v2/country/BRA/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/BRA/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.PCAP.CD [ITA..ITA]: [world_bank] GET https://api.worldbank.org/v2/country/ITA/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/ITA/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.PCAP.CD [CAN..CAN]: [world_bank] GET https://api.worldbank.org/v2/country/CAN/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/CAN/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.PCAP.CD [KOR..KOR]: [world_bank] GET https://api.worldbank.org/v2/country/KOR/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/KOR/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.PCAP.CD [MEX..MEX]: [world_bank] GET https://api.worldbank.org/v2/country/MEX/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/MEX/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.PCAP.CD [ESP..ESP]: [world_bank] GET https://api.worldbank.org/v2/country/ESP/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/ESP/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.PCAP.CD [IDN..IDN]: [world_bank] GET https://api.worldbank.org/v2/country/IDN/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/IDN/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.PCAP.CD [TUR..TUR]: [world_bank] GET https://api.worldbank.org/v2/country/TUR/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTPSConnectionPool(host='api.worldbank.org', port=443): Read timed out. (read timeout=4.0)",
+        "NY.GDP.PCAP.CD [NLD..NLD]: [world_bank] GET https://api.worldbank.org/v2/country/NLD/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/NLD/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.PCAP.CD [POL..POL]: [world_bank] GET https://api.worldbank.org/v2/country/POL/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/POL/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [DEU..DEU]: [world_bank] GET https://api.worldbank.org/v2/country/DEU/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/DEU/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [BRA..BRA]: [world_bank] GET https://api.worldbank.org/v2/country/BRA/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/BRA/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [ITA..ITA]: [world_bank] GET https://api.worldbank.org/v2/country/ITA/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/ITA/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [ESP..ESP]: [world_bank] GET https://api.worldbank.org/v2/country/ESP/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/ESP/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [IDN..IDN]: [world_bank] GET https://api.worldbank.org/v2/country/IDN/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/IDN/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [TUR..TUR]: [world_bank] GET https://api.worldbank.org/v2/country/TUR/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/TUR/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [NLD..NLD]: [world_bank] GET https://api.worldbank.org/v2/country/NLD/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTPSConnectionPool(host='api.worldbank.org', port=443): Read timed out. (read timeout=4.0)",
+        "NY.GDP.MKTP.KD.ZG [SAU..SAU]: [world_bank] GET https://api.worldbank.org/v2/country/SAU/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/SAU/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [CHE..CHE]: [world_bank] GET https://api.worldbank.org/v2/country/CHE/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/CHE/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [POL..POL]: [world_bank] GET https://api.worldbank.org/v2/country/POL/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/POL/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [SWE..SWE]: [world_bank] GET https://api.worldbank.org/v2/country/SWE/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/SWE/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500"
+      ],
+      "identifiers": [
+        "NY.GDP.MKTP.CD",
+        "NY.GDP.MKTP.KD",
+        "NY.GDP.PCAP.CD",
+        "NY.GDP.MKTP.KD.ZG"
+      ],
+      "n_normalized_records": 0,
+      "n_raw_payloads": 53,
+      "n_raw_records": 3498,
+      "n_requests": 65,
+      "notes": null,
+      "retrieved_at": "2026-08-09T04:33:16Z",
+      "source": "WORLD_BANK_INDICATORS_V2"
+    }
+  ],
+  "stage_timings_seconds": {},
+  "tokenizer_id": "tiktoken:cl100k_base",
+  "tokenizer_version": "tiktoken==0.13.0"
+}

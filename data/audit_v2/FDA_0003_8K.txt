@@ -1,0 +1,689 @@
+<RECORD id="R82424ED78F" source="OPENFDA_DRUGSFDA">
+entity: LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE (ANDA201845, product 001) [ANDA201845/001]
+field: Marketing status [product.marketing_status]
+value: Prescription
+dosage_form: TABLET
+route: ORAL
+sponsor: JUBILANT CADISTA
+</RECORD>
+<RECORD id="R99CE801FA7" source="OPENFDA_DRUGSFDA">
+entity: PRINIVIL (NDA019558, product 002) [NDA019558/002]
+field: Strength of LISINOPRIL [product.active_ingredient_strength]
+unit: MG
+value: 10MG
+dosage_form: TABLET
+route: ORAL
+sponsor: MERCK
+</RECORD>
+<RECORD id="R86DE50D9FC" source="OPENFDA_DRUGSFDA">
+entity: WARFARIN SODIUM (ANDA040196, product 001) [ANDA040196/001]
+field: Route of administration [product.route]
+value: ORAL
+dosage_form: TABLET
+route: ORAL
+sponsor: CHARTWELL RX
+</RECORD>
+<RECORD id="R09135EF2CB" source="OPENFDA_DRUGSFDA">
+entity: IBUPROFEN (ANDA070556, product 001) [ANDA070556/001]
+field: Route of administration [product.route]
+value: ORAL
+dosage_form: TABLET
+route: ORAL
+sponsor: ABBOTT
+</RECORD>
+<RECORD id="RB1FD26C2FA" source="OPENFDA_DRUGSFDA">
+entity: TELMISARTAN AND AMLODIPINE (ANDA205234, product 002) [ANDA205234/002]
+field: Strength of AMLODIPINE BESYLATE [product.active_ingredient_strength]
+unit: MG
+value: EQ 10MG BASE
+dosage_form: TABLET
+route: ORAL
+sponsor: ALEMBIC
+</RECORD>
+<RECORD id="R29497B9A60" source="OPENFDA_DRUGSFDA">
+entity: LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE (ANDA078245, product 002) [ANDA078245/002]
+field: Route of administration [product.route]
+value: ORAL
+dosage_form: TABLET
+route: ORAL
+sponsor: LUPIN LTD
+</RECORD>
+<RECORD id="R495CDB99F7" source="OPENFDA_DRUGSFDA">
+entity: METFORMIN HYDROCHLORIDE (ANDA075973, product 001) [ANDA075973/001]
+field: Route of administration [product.route]
+value: ORAL
+dosage_form: TABLET
+route: ORAL
+sponsor: MYLAN
+</RECORD>
+<RECORD id="RFB423CFE71" source="OPENFDA_DRUGSFDA">
+entity: OLMESARTAN MEDOXOMIL, AMLODIPINE AND HYDROCHLOROTHIAZIDE (ANDA206137, product 004) [ANDA206137/004]
+field: Strength of AMLODIPINE BESYLATE [product.active_ingredient_strength]
+unit: MG
+value: EQ 10MG BASE
+dosage_form: TABLET
+route: ORAL
+sponsor: PH HEALTH
+</RECORD>
+<RECORD id="RBDF4B1B019" source="OPENFDA_DRUGSFDA">
+entity: LISINOPRIL (ANDA075783, product 003) [ANDA075783/003]
+field: Strength of LISINOPRIL [product.active_ingredient_strength]
+unit: MG
+value: 10MG
+dosage_form: TABLET
+route: ORAL
+sponsor: TEVA
+</RECORD>
+<RECORD id="RF7248C9EF1" source="OPENFDA_DRUGSFDA">
+entity: LEVOTHYROXINE SODIUM (ANDA076752, product 004) [ANDA076752/004]
+field: Strength of LEVOTHYROXINE SODIUM [product.active_ingredient_strength]
+unit: MG
+value: 0.088MG
+dosage_form: TABLET
+route: ORAL
+sponsor: MERCK KGAA
+</RECORD>
+<RECORD id="R1C00F1A04C" source="OPENFDA_DRUGSFDA">
+entity: LOSARTAN POTASSIUM (ANDA091129, product 002) [ANDA091129/002]
+field: Brand name [product.brand_name]
+value: LOSARTAN POTASSIUM
+dosage_form: TABLET
+route: ORAL
+sponsor: WATSON LABS
+</RECORD>
+<RECORD id="R861D8C5F9B" source="OPENFDA_DRUGSFDA">
+entity: OMEPRAZOLE AND SODIUM BICARBONATE (ANDA079182, product 001) [ANDA079182/001]
+field: Strength of OMEPRAZOLE [product.active_ingredient_strength]
+unit: MG
+value: 20MG/PACKET
+dosage_form: FOR SUSPENSION
+route: ORAL
+sponsor: STRIDES PHARMA INTL
+</RECORD>
+<RECORD id="R56D68599A9" source="OPENFDA_DRUGSFDA">
+entity: ATORVASTATIN CALCIUM (ANDA209288, product 002) [ANDA209288/002]
+field: Strength of ATORVASTATIN CALCIUM [product.active_ingredient_strength]
+unit: MG
+value: EQ 20MG BASE
+dosage_form: TABLET
+route: ORAL
+sponsor: ALKEM LABS LTD
+</RECORD>
+<RECORD id="R3FDB428414" source="OPENFDA_DRUGSFDA">
+entity: EMPAGLIFLOZIN AND METFORMIN HYDROCHLORIDE (ANDA212198, product 004) [ANDA212198/004]
+field: Reference listed drug [product.reference_drug]
+value: No
+dosage_form: TABLET
+route: ORAL
+sponsor: ZYDUS PHARMS
+</RECORD>
+<RECORD id="RB80F4F7593" source="OPENFDA_DRUGSFDA">
+entity: AUGMENTIN '250' (NDA050575, product 002) [NDA050575/002]
+field: Route of administration [product.route]
+value: ORAL
+dosage_form: FOR SUSPENSION
+route: ORAL
+sponsor: US ANTIBIOTICS
+</RECORD>
+<RECORD id="RC402FB5DB4" source="OPENFDA_DRUGSFDA">
+entity: SITAGLIPTIN AND METFORMIN HYDROCHLORIDE (ANDA204144, product 003) [ANDA204144/003]
+field: Strength of SITAGLIPTIN PHOSPHATE [product.active_ingredient_strength]
+unit: MG
+value: EQ 100MG BASE
+dosage_form: TABLET, EXTENDED RELEASE
+route: ORAL
+sponsor: PH HEALTH
+</RECORD>
+<RECORD id="RF4DAB70B3A" source="OPENFDA_DRUGSFDA">
+entity: LOSARTAN POTASSIUM (ANDA090428, product 002) [ANDA090428/002]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: ALEMBIC PHARMS LTD
+</RECORD>
+<RECORD id="R2BF537D42C" source="OPENFDA_DRUGSFDA">
+entity: CALDOLOR (NDA022348, product 001) [NDA022348/001]
+field: Dosage form [product.dosage_form]
+value: SOLUTION
+dosage_form: SOLUTION
+route: INTRAVENOUS
+sponsor: APOTEX
+</RECORD>
+<RECORD id="R4685B43DC4" source="OPENFDA_DRUGSFDA">
+entity: WARFARIN SODIUM (ANDA090935, product 004) [ANDA090935/004]
+field: Reference standard [product.reference_standard]
+value: No
+dosage_form: TABLET
+route: ORAL
+sponsor: INVAGEN PHARMS
+</RECORD>
+<RECORD id="R7C6578C85E" source="OPENFDA_DRUGSFDA">
+entity: AMOXICILLIN (ANDA064076, product 002) [ANDA064076/002]
+field: Strength of AMOXICILLIN [product.active_ingredient_strength]
+unit: MG
+value: 500MG
+dosage_form: CAPSULE
+route: ORAL
+sponsor: SANDOZ
+</RECORD>
+<RECORD id="R2D9506EEEE" source="OPENFDA_DRUGSFDA">
+entity: WARFARIN SODIUM (ANDA040415, product 001) [ANDA040415/001]
+field: Reference standard [product.reference_standard]
+value: No
+dosage_form: TABLET
+route: ORAL
+sponsor: AUROBINDO PHARMA USA
+</RECORD>
+<RECORD id="R81082A3D9C" source="OPENFDA_DRUGSFDA">
+entity: OMEPRAZOLE (ANDA075410, product 003) [ANDA075410/003]
+field: Dosage form [product.dosage_form]
+value: CAPSULE, DELAYED REL PELLETS
+dosage_form: CAPSULE, DELAYED REL PELLETS
+route: ORAL
+sponsor: LANNETT CO INC
+</RECORD>
+<RECORD id="R00BC8591CA" source="OPENFDA_DRUGSFDA">
+entity: LOSARTAN POTASSIUM (ANDA200290, product 001) [ANDA200290/001]
+field: Strength of LOSARTAN POTASSIUM [product.active_ingredient_strength]
+unit: MG
+value: 25MG
+dosage_form: TABLET
+route: ORAL
+sponsor: IPCA LABS LTD
+</RECORD>
+<RECORD id="R53FB7B7B6D" source="OPENFDA_DRUGSFDA">
+entity: GABAPENTIN (ANDA078150, product 003) [ANDA078150/003]
+field: Strength of GABAPENTIN [product.active_ingredient_strength]
+unit: MG
+value: 400MG
+dosage_form: CAPSULE
+route: ORAL
+sponsor: HIKMA
+</RECORD>
+<RECORD id="R2009DBDB1C" source="OPENFDA_DRUGSFDA">
+entity: LEVOTHYROXINE SODIUM (ANDA207588, product 011) [ANDA207588/011]
+field: Reference listed drug [product.reference_drug]
+value: No
+dosage_form: TABLET
+route: ORAL
+sponsor: WATSON LABS TEVA
+</RECORD>
+<RECORD id="RE4C9F56147" source="OPENFDA_DRUGSFDA">
+entity: LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE (ANDA201682, product 002) [ANDA201682/002]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: IPCA LABS LTD
+</RECORD>
+<RECORD id="RCE2855E2E0" source="OPENFDA_DRUGSFDA">
+entity: LOSARTAN POTASSIUM (ANDA077459, product 003) [ANDA077459/003]
+field: Strength of LOSARTAN POTASSIUM [product.active_ingredient_strength]
+unit: MG
+value: 100MG
+dosage_form: TABLET
+route: ORAL
+sponsor: HIKMA
+</RECORD>
+<RECORD id="RFD1B8C0207" source="OPENFDA_DRUGSFDA">
+entity: AMNEAL application ANDA075939 [ANDA075939]
+field: ORIG submission 1 status date [submission.status_date]
+period: 2004
+value: 2004-06-09
+version: ORIG-1
+sponsor: AMNEAL
+submission_type: ORIG
+</RECORD>
+<RECORD id="RDF536FC018" source="OPENFDA_DRUGSFDA">
+entity: LEVOTHYROXINE SODIUM (ANDA076752, product 003) [ANDA076752/003]
+field: Brand name [product.brand_name]
+value: LEVOTHYROXINE SODIUM
+dosage_form: TABLET
+route: ORAL
+sponsor: MERCK KGAA
+</RECORD>
+<RECORD id="R909AF4618C" source="OPENFDA_DRUGSFDA">
+entity: LEVOTHYROXINE SODIUM (ANDA216414, product 005) [ANDA216414/005]
+field: Strength of LEVOTHYROXINE SODIUM [product.active_ingredient_strength]
+unit: MG
+value: 0.3MG
+dosage_form: TABLET
+route: ORAL
+sponsor: AUROBINDO PHARMA
+</RECORD>
+<RECORD id="R92D97EA8F9" source="OPENFDA_DRUGSFDA">
+entity: ACETAMINOPHEN AND IBUPROFEN (ANDA216999, product 001) [ANDA216999/001]
+field: Strength of IBUPROFEN [product.active_ingredient_strength]
+unit: MG
+value: 125MG
+dosage_form: TABLET
+route: ORAL
+sponsor: BIONPHARMA
+</RECORD>
+<RECORD id="R725FD917A1" source="OPENFDA_DRUGSFDA">
+entity: WYMOX (ANDA062120, product 002) [ANDA062120/002]
+field: Dosage form [product.dosage_form]
+value: CAPSULE
+dosage_form: CAPSULE
+route: ORAL
+sponsor: WYETH AYERST
+</RECORD>
+<RECORD id="REB22210352" source="OPENFDA_DRUGSFDA">
+entity: POLYMOX (ANDA061851, product 002) [ANDA061851/002]
+field: Marketing status [product.marketing_status]
+value: Discontinued
+dosage_form: FOR SUSPENSION
+route: ORAL
+sponsor: APOTHECON
+</RECORD>
+<RECORD id="RE3A2673D50" source="OPENFDA_DRUGSFDA">
+entity: OMEPRAZOLE (ANDA091352, product 003) [ANDA091352/003]
+field: Brand name [product.brand_name]
+value: OMEPRAZOLE
+dosage_form: CAPSULE, DELAYED REL PELLETS
+route: ORAL
+sponsor: ZYDUS PHARMS USA INC
+</RECORD>
+<RECORD id="R3BE042B917" source="OPENFDA_DRUGSFDA">
+entity: AUGMENTIN '200' (NDA050725, product 001) [NDA050725/001]
+field: Reference listed drug [product.reference_drug]
+value: Yes
+dosage_form: FOR SUSPENSION
+route: ORAL
+sponsor: US ANTIBIOTICS
+</RECORD>
+<RECORD id="R3F1E155D73" source="OPENFDA_DRUGSFDA">
+entity: ATORVASTATIN CALCIUM (ANDA214969, product 002) [ANDA214969/002]
+field: Brand name [product.brand_name]
+value: ATORVASTATIN CALCIUM
+dosage_form: TABLET
+route: ORAL
+sponsor: APOTEX
+</RECORD>
+<RECORD id="RB5A7565305" source="OPENFDA_DRUGSFDA">
+entity: OMEPRAZOLE (ANDA091352, product 003) [ANDA091352/003]
+field: Reference standard [product.reference_standard]
+value: No
+dosage_form: CAPSULE, DELAYED REL PELLETS
+route: ORAL
+sponsor: ZYDUS PHARMS USA INC
+</RECORD>
+<RECORD id="R4DFDA2B795" source="OPENFDA_DRUGSFDA">
+entity: OMEPRAZOLE (ANDA091352, product 003) [ANDA091352/003]
+field: Marketing status [product.marketing_status]
+value: Prescription
+dosage_form: CAPSULE, DELAYED REL PELLETS
+route: ORAL
+sponsor: ZYDUS PHARMS USA INC
+</RECORD>
+<RECORD id="RB42D0C376C" source="OPENFDA_DRUGSFDA">
+entity: IBUPROFEN (ANDA071462, product 001) [ANDA071462/001]
+field: Strength of IBUPROFEN [product.active_ingredient_strength]
+unit: MG
+value: 200MG
+dosage_form: TABLET
+route: ORAL
+sponsor: SUN PHARM INDUSTRIES
+</RECORD>
+<RECORD id="REC38A79005" source="OPENFDA_DRUGSFDA">
+entity: IBUPROFEN (ANDA072249, product 001) [ANDA072249/001]
+field: Brand name [product.brand_name]
+value: IBUPROFEN
+dosage_form: TABLET
+route: ORAL
+sponsor: PH HEALTH
+</RECORD>
+<RECORD id="REC56F61313" source="OPENFDA_DRUGSFDA">
+entity: PREDNISONE (ANDA219477, product 001) [ANDA219477/001]
+field: Reference standard [product.reference_standard]
+value: No
+dosage_form: TABLET, DELAYED RELEASE
+route: ORAL
+sponsor: DR REDDYS
+</RECORD>
+<RECORD id="R019AE1C43D" source="OPENFDA_DRUGSFDA">
+entity: OMEPRAZOLE (ANDA091352, product 003) [ANDA091352/003]
+field: Strength of OMEPRAZOLE [product.active_ingredient_strength]
+unit: MG
+value: 40MG
+dosage_form: CAPSULE, DELAYED REL PELLETS
+route: ORAL
+sponsor: ZYDUS PHARMS USA INC
+</RECORD>
+<RECORD id="R6D62C406F9" source="OPENFDA_DRUGSFDA">
+entity: MONTELUKAST SODIUM (ANDA203438, product 001) [ANDA203438/001]
+field: Reference listed drug [product.reference_drug]
+value: No
+dosage_form: GRANULE
+route: ORAL
+sponsor: AJANTA PHARMA LTD
+</RECORD>
+<RECORD id="R236057BD48" source="OPENFDA_DRUGSFDA">
+entity: OMEPRAZOLE (ANDA091352, product 003) [ANDA091352/003]
+field: Route of administration [product.route]
+value: ORAL
+dosage_form: CAPSULE, DELAYED REL PELLETS
+route: ORAL
+sponsor: ZYDUS PHARMS USA INC
+</RECORD>
+<RECORD id="R40595F4BEC" source="OPENFDA_DRUGSFDA">
+entity: DR REDDYS LABS INC application ANDA077787 [ANDA077787]
+field: SUPPL submission 5 status date [submission.status_date]
+period: 2025
+value: 2025-06-24
+version: SUPPL-5
+sponsor: DR REDDYS LABS INC
+submission_type: SUPPL
+</RECORD>
+<RECORD id="R5222E2E49D" source="OPENFDA_DRUGSFDA">
+entity: OMEPRAZOLE (ANDA091352, product 003) [ANDA091352/003]
+field: Reference listed drug [product.reference_drug]
+value: No
+dosage_form: CAPSULE, DELAYED REL PELLETS
+route: ORAL
+sponsor: ZYDUS PHARMS USA INC
+</RECORD>
+<RECORD id="R84AEA69999" source="OPENFDA_DRUGSFDA">
+entity: JUBILANT CADISTA application ANDA201845 [ANDA201845]
+field: ORIG submission 1 status date [submission.status_date]
+period: 2012
+value: 2012-09-18
+version: ORIG-1
+sponsor: JUBILANT CADISTA
+submission_type: ORIG
+</RECORD>
+<RECORD id="R09E231FDA4" source="OPENFDA_DRUGSFDA">
+entity: CEDIPROF INC application NDA021342 [NDA021342]
+field: SUPPL submission 4 status date [submission.status_date]
+period: 2004
+value: 2004-06-23
+version: SUPPL-4
+sponsor: CEDIPROF INC
+submission_type: SUPPL
+</RECORD>
+<RECORD id="RD02F11E258" source="OPENFDA_DRUGSFDA">
+entity: ZEGERID (NDA021850, product 002) [NDA021850/002]
+field: Strength of OMEPRAZOLE [product.active_ingredient_strength]
+unit: MG
+value: 40MG
+dosage_form: TABLET, CHEWABLE
+route: ORAL
+sponsor: SANTARUS
+</RECORD>
+<RECORD id="R3A7DDB0CC8" source="OPENFDA_DRUGSFDA">
+entity: AMLODIPINE BESYLATE AND VALSARTAN (ANDA090245, product 004) [ANDA090245/004]
+field: Strength of VALSARTAN [product.active_ingredient_strength]
+unit: MG
+value: 320MG
+dosage_form: TABLET
+route: ORAL
+sponsor: LUPIN
+</RECORD>
+<RECORD id="R1DAE50DDB3" source="OPENFDA_DRUGSFDA">
+entity: OHM LABS application ANDA071214 [ANDA071214]
+field: SUPPL submission 12 status date [submission.status_date]
+period: 1999
+value: 1999-09-17
+version: SUPPL-12
+sponsor: OHM LABS
+submission_type: SUPPL
+</RECORD>
+<RECORD id="RFFD84C4DB0" source="OPENFDA_DRUGSFDA">
+entity: AMLODIPINE BESYLATE (ANDA219686, product 001) [ANDA219686/001]
+field: Route of administration [product.route]
+value: ORAL
+dosage_form: TABLET
+route: ORAL
+sponsor: TEVA PHARMS INC
+</RECORD>
+<RECORD id="R9225CD37FC" source="OPENFDA_DRUGSFDA">
+entity: LINAGLIPTIN AND METFORMIN HYDROCHLORIDE (ANDA208427, product 002) [ANDA208427/002]
+field: Strength of METFORMIN HYDROCHLORIDE [product.active_ingredient_strength]
+unit: MG
+value: 850MG
+dosage_form: TABLET
+route: ORAL
+sponsor: DR REDDYS
+</RECORD>
+<RECORD id="R0893ED6C1C" source="OPENFDA_DRUGSFDA">
+entity: TEVA application ANDA061931 [ANDA061931]
+field: SUPPL submission 5 status date [submission.status_date]
+period: 1995
+value: 1995-07-17
+version: SUPPL-5
+sponsor: TEVA
+submission_type: SUPPL
+</RECORD>
+<RECORD id="RFBD1ED08D7" source="OPENFDA_DRUGSFDA">
+entity: MONTELUKAST SODIUM (ANDA202096, product 002) [ANDA202096/002]
+field: Dosage form [product.dosage_form]
+value: TABLET, CHEWABLE
+dosage_form: TABLET, CHEWABLE
+route: ORAL
+sponsor: AUROBINDO PHARMA LTD
+</RECORD>
+<RECORD id="R1FD219BE64" source="OPENFDA_DRUGSFDA">
+entity: OMEPRAZOLE (ANDA091352, product 002) [ANDA091352/002]
+field: Strength of OMEPRAZOLE [product.active_ingredient_strength]
+unit: MG
+value: 20MG
+dosage_form: CAPSULE, DELAYED REL PELLETS
+route: ORAL
+sponsor: ZYDUS PHARMS USA INC
+</RECORD>
+<RECORD id="RCA301A0429" source="OPENFDA_DRUGSFDA">
+entity: OMEPRAZOLE (ANDA075347, product 001) [ANDA075347/001]
+field: Strength of OMEPRAZOLE [product.active_ingredient_strength]
+unit: MG
+value: 10MG
+dosage_form: CAPSULE, DELAYED REL PELLETS
+route: ORAL
+sponsor: ACTAVIS LABS FL INC
+</RECORD>
+<RECORD id="R576C3A09DC" source="OPENFDA_DRUGSFDA">
+entity: AMLODIPINE BESYLATE (ANDA203245, product 002) [ANDA203245/002]
+field: Brand name [product.brand_name]
+value: AMLODIPINE BESYLATE
+dosage_form: TABLET
+route: ORAL
+sponsor: UNICHEM
+</RECORD>
+<RECORD id="R07C3926340" source="OPENFDA_DRUGSFDA">
+entity: TEVA PHARMS application ANDA090955 [ANDA090955]
+field: SUPPL submission 6 status date [submission.status_date]
+period: 2015
+value: 2015-04-28
+version: SUPPL-6
+sponsor: TEVA PHARMS
+submission_type: SUPPL
+</RECORD>
+<RECORD id="RB77BAF456D" source="OPENFDA_DRUGSFDA">
+entity: OMEPRAZOLE (ANDA091352, product 001) [ANDA091352/001]
+field: Strength of OMEPRAZOLE [product.active_ingredient_strength]
+unit: MG
+value: 10MG
+dosage_form: CAPSULE, DELAYED REL PELLETS
+route: ORAL
+sponsor: ZYDUS PHARMS USA INC
+</RECORD>
+<RECORD id="RD7123863EC" source="OPENFDA_DRUGSFDA">
+entity: LISINOPRIL AND HYDROCHLOROTHIAZIDE (ANDA075926, product 003) [ANDA075926/003]
+field: Brand name [product.brand_name]
+value: LISINOPRIL AND HYDROCHLOROTHIAZIDE
+dosage_form: TABLET
+route: ORAL
+sponsor: EPIC PHARMA LLC
+</RECORD>
+<RECORD id="R971E55F271" source="OPENFDA_DRUGSFDA">
+entity: MOTRIN (NDA020418, product 001) [NDA020418/001]
+field: Reference listed drug [product.reference_drug]
+value: No
+dosage_form: TABLET
+route: ORAL
+sponsor: MCNEIL PED
+</RECORD>
+<RECORD id="RB585132B8F" source="OPENFDA_DRUGSFDA">
+entity: PRINZIDE (NDA019778, product 003) [NDA019778/003]
+field: Strength of LISINOPRIL [product.active_ingredient_strength]
+unit: MG
+value: 10MG **Federal Register determination that product was not discontinued or withdrawn for safety or effectiveness reasons**
+dosage_form: TABLET
+route: ORAL
+sponsor: MERCK
+</RECORD>
+<RECORD id="R11D38DEB9B" source="OPENFDA_DRUGSFDA">
+entity: OMEPRAZOLE (ANDA091352, product 003) [ANDA091352/003]
+field: Dosage form [product.dosage_form]
+value: CAPSULE, DELAYED REL PELLETS
+dosage_form: CAPSULE, DELAYED REL PELLETS
+route: ORAL
+sponsor: ZYDUS PHARMS USA INC
+</RECORD>
+<RECORD id="RDBBDDB6888" source="OPENFDA_DRUGSFDA">
+entity: AMLODIPINE BESYLATE AND VALSARTAN (ANDA090011, product 003) [ANDA090011/003]
+field: Reference standard [product.reference_standard]
+value: No
+dosage_form: TABLET
+route: ORAL
+sponsor: STRIDES PHARMA INTL
+</RECORD>
+<RECORD id="R9D9D086D54" source="OPENFDA_DRUGSFDA">
+entity: PREDNISONE (ANDA087773, product 001) [ANDA087773/001]
+field: Strength of PREDNISONE [product.active_ingredient_strength]
+unit: MG
+value: 10MG
+dosage_form: TABLET
+route: ORAL
+sponsor: WATSON LABS
+</RECORD>
+<RECORD id="R5141CE4BA9" source="OPENFDA_DRUGSFDA">
+entity: LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE (ANDA077948, product 003) [ANDA077948/003]
+field: Strength of LOSARTAN POTASSIUM [product.active_ingredient_strength]
+unit: MG
+value: 100MG
+dosage_form: TABLET
+route: ORAL
+sponsor: CHARTWELL RX
+</RECORD>
+<RECORD id="RA6B8A1DB9D" source="OPENFDA_DRUGSFDA">
+entity: CIPROFLOXACIN HYDROCHLORIDE (ANDA074124, product 001) [ANDA074124/001]
+field: Reference standard [product.reference_standard]
+value: No
+dosage_form: TABLET
+route: ORAL
+sponsor: BARR
+</RECORD>
+<RECORD id="R14C140750F" source="OPENFDA_DRUGSFDA">
+entity: AUROBINDO PHARMA application ANDA078861 [ANDA078861]
+field: SUPPL submission 13 status date [submission.status_date]
+period: 2017
+value: 2017-08-03
+version: SUPPL-13
+sponsor: AUROBINDO PHARMA
+submission_type: SUPPL
+</RECORD>
+<RECORD id="RE11F29014F" source="OPENFDA_DRUGSFDA">
+entity: ATORVASTATIN CALCIUM (ANDA211933, product 003) [ANDA211933/003]
+field: Strength of ATORVASTATIN CALCIUM [product.active_ingredient_strength]
+unit: MG
+value: EQ 40MG BASE
+dosage_form: TABLET
+route: ORAL
+sponsor: MSN
+</RECORD>
+<RECORD id="R5D342EA74D" source="OPENFDA_DRUGSFDA">
+entity: OLMESARTAN MEDOXOMIL, AMLODIPINE AND HYDROCHLOROTHIAZIDE (ANDA203580, product 004) [ANDA203580/004]
+field: Marketing status [product.marketing_status]
+value: Discontinued
+dosage_form: TABLET
+route: ORAL
+sponsor: TORRENT
+</RECORD>
+<RECORD id="R24973A0920" source="OPENFDA_DRUGSFDA">
+entity: APOTEX CORP application ANDA090790 [ANDA090790]
+field: SUPPL submission 9 status date [submission.status_date]
+period: 2016
+value: 2016-06-10
+version: SUPPL-9
+sponsor: APOTEX CORP
+submission_type: SUPPL
+</RECORD>
+<RECORD id="R6E979ABE81" source="OPENFDA_DRUGSFDA">
+entity: AMOXICILLIN (ANDA064076, product 002) [ANDA064076/002]
+field: Route of administration [product.route]
+value: ORAL
+dosage_form: CAPSULE
+route: ORAL
+sponsor: SANDOZ
+</RECORD>
+<RECORD id="RCB8DBA4755" source="OPENFDA_DRUGSFDA">
+entity: AMLODIPINE BESYLATE AND ATORVASTATIN CALCIUM (ANDA217279, product 001) [ANDA217279/001]
+field: Strength of AMLODIPINE BESYLATE [product.active_ingredient_strength]
+unit: MG
+value: EQ 2.5MG BASE
+dosage_form: TABLET
+route: ORAL
+sponsor: ALEMBIC
+</RECORD>
+<RECORD id="R2BE8CF4EC5" source="OPENFDA_DRUGSFDA">
+entity: AMOXIL (NDA050460, product 002) [NDA050460/002]
+field: Strength of AMOXICILLIN [product.active_ingredient_strength]
+unit: MG
+value: 250MG/5ML **Federal Register determination that product was not discontinued or withdrawn for safety or effectiveness reasons**
+dosage_form: FOR SUSPENSION
+route: ORAL
+sponsor: GLAXOSMITHKLINE
+</RECORD>
+<RECORD id="R9A9844338E" source="OPENFDA_DRUGSFDA">
+entity: MONTELUKAST SODIUM (ANDA090984, product 002) [ANDA090984/002]
+field: Reference standard [product.reference_standard]
+value: No
+dosage_form: TABLET, CHEWABLE
+route: ORAL
+sponsor: TORRENT PHARMS LTD
+</RECORD>
+<RECORD id="R867DD02738" source="OPENFDA_DRUGSFDA">
+entity: LOSARTAN POTASSIUM (ANDA090083, product 003) [ANDA090083/003]
+field: Strength of LOSARTAN POTASSIUM [product.active_ingredient_strength]
+unit: MG
+value: 100MG
+dosage_form: TABLET
+route: ORAL
+sponsor: AUROBINDO PHARMA
+</RECORD>
+<RECORD id="RB9B35A3116" source="OPENFDA_DRUGSFDA">
+entity: LISINOPRIL AND HYDROCHLOROTHIAZIDE (ANDA076674, product 001) [ANDA076674/001]
+field: Strength of HYDROCHLOROTHIAZIDE [product.active_ingredient_strength]
+unit: MG
+value: 12.5MG
+dosage_form: TABLET
+route: ORAL
+sponsor: COREPHARMA
+</RECORD>
+<RECORD id="R2A353D6D79" source="OPENFDA_DRUGSFDA">
+entity: LEVOTHYROXINE SODIUM (ANDA076187, product 009) [ANDA076187/009]
+field: Brand name [product.brand_name]
+value: LEVOTHYROXINE SODIUM
+dosage_form: TABLET
+route: ORAL
+sponsor: MYLAN
+</RECORD>
+<RECORD id="R95F41AF650" source="OPENFDA_DRUGSFDA">
+entity: LISINOPRIL AND HYDROCHLOROTHIAZIDE (ANDA075776, product 003) [ANDA075776/003]
+field: Strength of HYDROCHLOROTHIAZIDE [product.active_ingredient_strength]
+unit: MG
+value: 25MG
+dosage_form: TABLET
+route: ORAL
+sponsor: CHARTWELL RX
+</RECORD>
+<RECORD id="R30C591AA2D" source="OPENFDA_DRUGSFDA">
+entity: LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE (ANDA078245, product 002) [ANDA078245/002]
+field: Strength of LOSARTAN POTASSIUM [product.active_ingredient_strength]
+unit: MG
+value: 100MG
+dosage_form: TABLET
+route: ORAL
+sponsor: LUPIN LTD
+</RECORD>

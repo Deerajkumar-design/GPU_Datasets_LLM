@@ -102,16 +102,17 @@ class DistractorSelector:
         for rec in self.pool.domain_records(family.domain):
             if rec.record_id in forbidden or rec.record_type in self.NON_RENDERABLE_RECORD_TYPES:
                 continue
-            dtype, flags = classify_distractor(rec, anchors, target_values)
+            dtype, flags = classify_distractor(
+                rec, anchors, target_values, allow_near_match=family.answerable
+            )
             buckets[dtype].append(DistractorCandidate(rec, dtype, flags))
 
         rng = rng_for(self.cfg.seed, "distractors", family.question_family_id)
         for dtype, items in buckets.items():
             items.sort(key=lambda c: c.record.record_id)
             rng.shuffle(items)
-            # Within each tier, put explicitly named foils first: the question text
-            # already references them by name, so they must be present even at 4K or the
-            # question would describe a context that does not exist.
+            # Within each tier, put template-declared strong foils first so the shortest
+            # contexts preserve the intended interference without the prompt naming them.
             def _foil_key(entity_id, concept, period):
                 # Periods are None for records with no period (FDA products, trial arms);
                 # both sides are normalized so those foils are not silently missed.

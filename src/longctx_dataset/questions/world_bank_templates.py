@@ -219,7 +219,7 @@ class WBCrossIndicatorRatio(QuestionTemplate):
                 f"person for {num.entity_name} ({entity}) in {period} by dividing \"{num.concept_label}\" "
                 f"(indicator {self.NUM}) by \"{den.concept_label}\" (indicator {self.DEN}) for that same "
                 f"country and year. Round the result to two decimal places and report it in current US$ "
-                f"per person. Do not copy a pre-computed per-capita indicator; derive the value."
+                f"per person."
             )
             out.append(self.make_answerable(
                 ctx,
@@ -337,8 +337,7 @@ class WBUnitBinding(QuestionTemplate):
                 f"Using only the World Bank Indicators records supplied in the context, report the value of "
                 f"\"{target.concept_label}\" — indicator code {target.concept}, unit "
                 f"{target.unit or 'as recorded'} — for {target.entity_name} ({entity}) in {period}. "
-                f"Note that the context also contains \"{foil.concept_label}\" (indicator code {foil.concept}) "
-                f"for the same country and year; that is a different measure ({note}) and is not the answer."
+                f"Report the value exactly as recorded."
             )
             out.append(self.make_answerable(
                 ctx,
@@ -408,8 +407,7 @@ class WBUnanswerableMissingObservation(QuestionTemplate):
             question = (
                 f"Using only the World Bank Indicators records supplied in the context, what value is "
                 f"reported for the indicator \"{rec.concept_label}\" (indicator code {rec.concept}) for "
-                f"{rec.entity_name} ({rec.entity_id}) in the year {rec.period}? If the supplied records do "
-                f"not contain this value, state that the evidence is insufficient rather than estimating."
+                f"{rec.entity_name} ({rec.entity_id}) in the year {rec.period}?"
             )
             spec = UnanswerableSpec(
                 reason_code="NO_VALUE_REPORTED_IN_SOURCE",

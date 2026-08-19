@@ -54,11 +54,11 @@ def test_unknown_backend_is_rejected():
 
 def test_fallback_is_opt_in_only():
     """An unavailable tokenizer must fail loudly unless fallback was explicitly allowed."""
-    strict = TokenizerConfig(id="hf:definitely/not-a-real-model-xyz", allow_fallback=False)
+    strict = TokenizerConfig(id="magic:thing", allow_fallback=False)
     with pytest.raises(TokenizerUnavailable):
         get_tokenizer(strict)
 
-    lenient = TokenizerConfig(id="hf:definitely/not-a-real-model-xyz",
+    lenient = TokenizerConfig(id="magic:thing",
                               fallback_id="whitespace:v1", allow_fallback=True)
     tok = get_tokenizer(lenient)
     assert tok.tokenizer_id == "whitespace:v1"

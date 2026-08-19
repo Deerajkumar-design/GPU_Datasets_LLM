@@ -18,7 +18,10 @@ from typing import Any, Dict, List, Optional, Sequence
 
 from ..config import PipelineConfig
 from ..context.builder import ContextBuilder
+from ..context.display_ids import DISPLAY_ID_RE
 from ..context.tokenizer import get_tokenizer
+from ..evidence import family_requires_version_equivalence, records_equivalent
+from ..prompt_renderer import LLAMA_PROMPT_VERSION, RESPONSE_FORMAT_VERSION, PromptRenderer
 from ..normalize.common import RecordPool
 from ..schemas import (
     AnswerType,
@@ -34,6 +37,7 @@ from ..schemas import (
 from ..storage.io import iter_jsonl, iter_models, read_models
 from . import contexts as ctx_checks
 from . import leakage as leak_checks
+from .question_leakage import answerability_leakage_phrases
 from .gold import verify_family
 from .result import CheckResult, Severity, ValidationReport
 
@@ -96,6 +100,7 @@ def run_validation(cfg: PipelineConfig, log=print) -> ValidationReport:
     c_t = _mk(report, "T", "calculation operands recomputable")
     c_u = _mk(report, "U", "all five question types represented",
               Severity.CRITICAL if cfg.validation.require_all_question_types else Severity.WARNING)
+    c_z = _mk(report, "Z", "model-facing questions do not leak answerability")
 
     seen_family_ids: set = set()
     seen_questions: Dict[tuple, str] = {}
@@ -118,6 +123,7 @@ def run_validation(cfg: PipelineConfig, log=print) -> ValidationReport:
         _check_units(fam, pool, c_n)
         _check_answer_schema(fam, c_o, c_q)
         _check_calculation_operands(fam, pool, c_t)
+        _check_question_answerability_leakage(fam, c_z)
 
     present_types = {f.question_type for f in families}
     c_u.n_checked = len(QuestionType)
@@ -135,9 +141,17 @@ def run_validation(cfg: PipelineConfig, log=print) -> ValidationReport:
     c_r = _mk(report, "R", "no context truncation through target evidence")
     c_s = _mk(report, "S", "no answer leakage for unanswerable families")
     c_v = _mk(report, "V", "no duplicate answer sources in answerable contexts")
+    c_w = _mk(report, "W", "opaque display ID mapping integrity")
+    c_x = _mk(report, "X", "evidence-equivalence consistency")
+    c_y = _mk(report, "Y", "distractor taxonomy semantic constraints")
+    c_aa = _mk(report, "AA", "model prompt token-budget and provenance")
+    c_ab = _mk(report, "AB", "complete instance count for available variants")
+    c_ac = _mk(report, "AC", "per-record gold evidence display mapping")
+    c_ad = _mk(report, "AD", "temporal-version question-type semantics")
 
     tok = get_tokenizer(cfg.tokenizer)
     builder = ContextBuilder(cfg, pool, tok)
+    prompt_renderer = PromptRenderer(cfg, tok) if cfg.model.id else None
     gold_blocks: Dict[str, str] = {}
     for fam in families:
         for rid in fam.gold_evidence_ids:
@@ -148,6 +162,9 @@ def run_validation(cfg: PipelineConfig, log=print) -> ValidationReport:
     summaries: Dict[str, List[_InstanceSummary]] = defaultdict(list)
     seen_instance_ids: set = set()
     token_dist: Dict[int, List[int]] = defaultdict(list)
+    rendered_token_dist: Dict[int, List[int]] = defaultdict(list)
+    prompt_overhead_dist: Dict[int, List[int]] = defaultdict(list)
+    remaining_margin_dist: Dict[int, List[int]] = defaultdict(list)
     position_dist: List[float] = []
     distractor_totals: Counter = Counter()
     by_domain: Counter = Counter()
@@ -174,16 +191,30 @@ def run_validation(cfg: PipelineConfig, log=print) -> ValidationReport:
             (c_l, ctx_checks.check_target_position(
                 inst, cfg.context.target_position, cfg.context.position_tolerance)),
             (c_m, ctx_checks.check_record_boundaries(inst)),
-            (c_r, ctx_checks.check_no_truncation(inst, gold_blocks)),
+            (c_r, ctx_checks.check_no_truncation(inst, _gold_blocks_from_context(inst))),
             (c_s, leak_checks.check_unanswerable_leakage(fam, inst.context_record_ids, pool)),
             (c_v, leak_checks.check_answerable_duplication(fam, inst.context_record_ids, pool)),
             (c_p, _distractor_problems(inst)),
+            (c_w, _display_id_problems(inst)),
+            (c_ac, _gold_display_map_problems(inst)),
+            (c_x, _equivalence_problems(fam, inst, pool)),
+            (c_y, _taxonomy_semantic_problems(inst, pool)),
         ):
             check.n_checked += 1
             for p in problems:
                 check.fail(instance_id=inst.instance_id, problem=p)
+        if cfg.model.id:
+            c_aa.n_checked += 1
+            for p in _model_prompt_problems(inst, cfg, tok, prompt_renderer):
+                c_aa.fail(instance_id=inst.instance_id, problem=p)
 
         token_dist[inst.context_length_nominal].append(inst.context_tokens_actual)
+        if inst.rendered_input_tokens_actual is not None:
+            rendered_token_dist[inst.context_length_nominal].append(inst.rendered_input_tokens_actual)
+        if inst.prompt_overhead_tokens is not None:
+            prompt_overhead_dist[inst.context_length_nominal].append(inst.prompt_overhead_tokens)
+        if inst.remaining_context_margin is not None:
+            remaining_margin_dist[inst.context_length_nominal].append(inst.remaining_context_margin)
         if inst.target_position_relative is not None:
             position_dist.append(inst.target_position_relative)
         distractor_totals.update(inst.distractor_counts)
@@ -217,6 +248,9 @@ def run_validation(cfg: PipelineConfig, log=print) -> ValidationReport:
     c_j = _mk(report, "J", "nested-context lineage")
 
     for fam in families:
+        c_ad.n_checked += 1
+        for p in _temporal_version_semantic_problems(fam, active_domains=set(cfg.enabled_domains())):
+            c_ad.fail(question_family_id=fam.question_family_id, problem=p)
         variants = sorted(summaries.get(fam.question_family_id, []),
                           key=lambda s: s.context_length_nominal)
         if not variants:
@@ -247,6 +281,18 @@ def run_validation(cfg: PipelineConfig, log=print) -> ValidationReport:
         for problem in _nesting_problems(variants):
             c_j.fail(question_family_id=fam.question_family_id, problem=problem)
 
+    c_ab.n_checked = 1
+    if len(unavailable) == 0:
+        expected_instances = len(families) * len(cfg.context.lengths)
+        if n_instances != expected_instances:
+            c_ab.fail(
+                kind="complete_instance_count_mismatch",
+                expected=expected_instances,
+                actual=n_instances,
+                families=len(families),
+                context_conditions=len(cfg.context.lengths),
+            )
+
     # ---- stats ------------------------------------------------------------------------
     report.stats = {
         "n_families": len(families),
@@ -263,12 +309,32 @@ def run_validation(cfg: PipelineConfig, log=print) -> ValidationReport:
         "token_stats_by_length": {
             str(k): _describe(v) for k, v in sorted(token_dist.items())
         },
+        "rendered_input_token_stats_by_length": {
+            str(k): _describe(v) for k, v in sorted(rendered_token_dist.items())
+        },
+        "prompt_overhead_token_stats_by_length": {
+            str(k): _describe(v) for k, v in sorted(prompt_overhead_dist.items())
+        },
+        "remaining_context_margin_by_length": {
+            str(k): _describe(v) for k, v in sorted(remaining_margin_dist.items())
+        },
         "target_position": _describe(position_dist, decimals=4),
         "distractor_totals": dict(distractor_totals),
         "unavailable_by_length": dict(Counter(str(u.context_length_nominal) for u in unavailable)),
         "unavailable_by_reason": dict(Counter(u.reason_code for u in unavailable)),
         "tokenizer": tok.tokenizer_id,
         "tokenizer_version": tok.version,
+        "tokenizer_class": tok.tokenizer_class,
+        "tokenizer_revision": tok.tokenizer_revision,
+        "model_id": cfg.model.id,
+        "model_context_limit": tok.model_context_limit,
+        "model_config_revision": tok.model_config_revision,
+        "generation_tokens_reserved": cfg.model.max_new_tokens if cfg.model.id else None,
+        "prompt_version": LLAMA_PROMPT_VERSION if cfg.model.id else None,
+        "prompt_hash": prompt_renderer.prompt_hash if prompt_renderer else None,
+        "response_format_version": RESPONSE_FORMAT_VERSION if cfg.model.id else None,
+        "template_date": cfg.model_prompt.template_date if cfg.model.id else None,
+        "chat_template_used": tok.has_chat_template,
         "tokenizer_is_approximate": tok.is_approximate,
         "config_hash": cfg.config_hash,
         "seed": cfg.seed,
@@ -283,6 +349,94 @@ def run_validation(cfg: PipelineConfig, log=print) -> ValidationReport:
 # --------------------------------------------------------------------------------------
 # Individual check bodies
 # --------------------------------------------------------------------------------------
+
+
+def _model_prompt_problems(inst: Instance, cfg: PipelineConfig, tok: Any,
+                           renderer: Optional[PromptRenderer]) -> List[str]:
+    problems: List[str] = []
+    if renderer is None:
+        problems.append("model id configured but prompt renderer is unavailable")
+        return problems
+    expected_tokenizer = f"hf:{cfg.model.id}"
+    if inst.model_id != cfg.model.id:
+        problems.append(f"model_id {inst.model_id!r} != configured {cfg.model.id!r}")
+    if inst.tokenizer != expected_tokenizer:
+        problems.append(f"tokenizer {inst.tokenizer!r} != expected {expected_tokenizer!r}")
+    if tok.is_approximate:
+        problems.append("tokenizer fallback/approximation was used")
+    if not tok.has_chat_template:
+        problems.append("native chat template was not available")
+    if inst.prompt_hash != renderer.prompt_hash:
+        problems.append(f"prompt_hash {inst.prompt_hash!r} != {renderer.prompt_hash!r}")
+    if inst.prompt_version != LLAMA_PROMPT_VERSION:
+        problems.append(f"unexpected prompt_version {inst.prompt_version!r}")
+    if inst.response_format_version != RESPONSE_FORMAT_VERSION:
+        problems.append(f"unexpected response_format_version {inst.response_format_version!r}")
+    if inst.generation_tokens_reserved != cfg.model.max_new_tokens:
+        problems.append(
+            f"generation reserve {inst.generation_tokens_reserved!r} != {cfg.model.max_new_tokens}"
+        )
+    if inst.model_context_limit != tok.model_context_limit:
+        problems.append(
+            f"model_context_limit {inst.model_context_limit!r} != tokenizer {tok.model_context_limit!r}"
+        )
+    if tok.model_context_limit is None:
+        problems.append("model context limit is unknown")
+        return problems
+    safe_input_budget = tok.model_context_limit - cfg.model.max_new_tokens
+    if cfg.model_prompt.max_rendered_input_tokens is not None:
+        safe_input_budget = min(safe_input_budget, cfg.model_prompt.max_rendered_input_tokens)
+    rendered = renderer.render(context=inst.context, question=inst.question).token_count
+    preview = renderer.render_text_preview(context="", question="")
+    expected_date = f"Today Date: {cfg.model_prompt.template_date}"
+    if expected_date not in preview:
+        problems.append(f"frozen chat-template date missing from rendered prompt: {expected_date}")
+    if inst.rendered_input_tokens_actual != rendered:
+        problems.append(
+            f"rendered_input_tokens_actual {inst.rendered_input_tokens_actual!r} != recomputed {rendered}"
+        )
+    if rendered > safe_input_budget:
+        problems.append(
+            f"rendered input {rendered} exceeds safe budget {safe_input_budget} "
+            f"(context limit {tok.model_context_limit}, reserve {cfg.model.max_new_tokens})"
+        )
+    expected_margin = safe_input_budget - rendered
+    if inst.remaining_context_margin != expected_margin:
+        problems.append(
+            f"remaining_context_margin {inst.remaining_context_margin!r} != {expected_margin}"
+        )
+    expected_overhead = rendered - inst.context_tokens_actual
+    if inst.prompt_overhead_tokens != expected_overhead:
+        problems.append(
+            f"prompt_overhead_tokens {inst.prompt_overhead_tokens!r} != {expected_overhead}"
+        )
+    if inst.context_length_label and inst.context_length_label not in inst.instance_id:
+        problems.append("context_length_label is not reflected in instance_id")
+    text = "\n".join(m["content"] for m in renderer.messages(context=inst.context, question=inst.question))
+    lowered = text.lower()
+    for forbidden in ("answerable", "gold_answer", "gold evidence", "question_type", "distractor_type"):
+        if forbidden in lowered:
+            problems.append(f"internal metadata term appears in rendered prompt messages: {forbidden}")
+    return problems
+
+
+def _gold_blocks_from_context(inst: Instance) -> Dict[str, str]:
+    out: Dict[str, str] = {}
+    if not inst.answerable:
+        return out
+    for rid in inst.gold_evidence_ids:
+        did = next((d for d, c in inst.display_id_to_record_id.items() if c == rid), None)
+        if did is None:
+            continue
+        marker = f'<RECORD id="{did}"'
+        start = inst.context.find(marker)
+        if start < 0:
+            continue
+        end = inst.context.find("</RECORD>", start)
+        if end < 0:
+            continue
+        out[rid] = inst.context[start:end + len("</RECORD>")]
+    return out
 
 
 def _check_provenance(fam: QuestionFamily, check: CheckResult) -> None:
@@ -388,6 +542,21 @@ def _check_calculation_operands(fam: QuestionFamily, pool: RecordPool, check: Ch
         check.fail(question_family_id=fam.question_family_id, problem="calculation_spec has an empty formula")
 
 
+def _check_question_answerability_leakage(fam: QuestionFamily, check: CheckResult) -> None:
+    check.n_checked += 1
+    phrases = answerability_leakage_phrases(fam.question)
+    if phrases:
+        check.fail(
+            question_family_id=fam.question_family_id,
+            problem=f"model-facing question contains answerability-leakage phrase(s): {phrases}",
+        )
+    if "answerable" in fam.question.lower():
+        check.fail(
+            question_family_id=fam.question_family_id,
+            problem="model-facing question contains hidden metadata label 'answerable'",
+        )
+
+
 def _distractor_problems(inst: Instance) -> List[str]:
     problems: List[str] = []
     n_gold = len(inst.gold_evidence_ids) if inst.answerable else 0
@@ -409,6 +578,155 @@ def _distractor_problems(inst: Instance) -> List[str]:
             problems.append(f"distractor {d.record_id} has no relationship_to_target metadata")
         if d.position_index is None or d.side not in ("before", "after"):
             problems.append(f"distractor {d.record_id} has incomplete placement metadata")
+        if len(problems) > 10:
+            break
+    return problems
+
+
+def _display_id_problems(inst: Instance) -> List[str]:
+    problems: List[str] = []
+    if len(inst.context_display_ids) != len(inst.context_record_ids):
+        problems.append("context_display_ids length differs from context_record_ids")
+        return problems
+    if len(set(inst.context_display_ids)) != len(inst.context_display_ids):
+        problems.append("duplicate display IDs inside context")
+    if set(inst.display_id_to_record_id) != set(inst.context_display_ids):
+        problems.append("display_id_to_record_id keys differ from context_display_ids")
+    for did, rid in zip(inst.context_display_ids, inst.context_record_ids):
+        if inst.display_id_to_record_id.get(did) != rid:
+            problems.append(f"display ID {did} maps to {inst.display_id_to_record_id.get(did)!r}, expected {rid!r}")
+        if not DISPLAY_ID_RE.match(did):
+            problems.append(f"display ID {did!r} is not opaque R<hex>")
+        if rid in did:
+            problems.append(f"display ID {did!r} contains its canonical record ID")
+        if len(problems) > 10:
+            break
+    expected_gold = [inst.display_id_to_record_id.get(did) for did in inst.gold_evidence_display_ids]
+    if expected_gold and expected_gold != inst.gold_evidence_ids:
+        problems.append("gold_evidence_display_ids do not map to gold_evidence_ids")
+    if inst.gold_evidence_canonical_ids and inst.gold_evidence_canonical_ids != inst.gold_evidence_ids:
+        problems.append("gold_evidence_canonical_ids differs from gold_evidence_ids")
+    return problems
+
+
+def _gold_display_map_problems(inst: Instance) -> List[str]:
+    problems: List[str] = []
+    if not inst.answerable:
+        if inst.gold_evidence_display_map:
+            problems.append("unanswerable instance carries gold_evidence_display_map")
+        return problems
+    if len(inst.gold_evidence_display_map) != len(inst.gold_evidence_ids):
+        problems.append(
+            f"gold_evidence_display_map has {len(inst.gold_evidence_display_map)} rows for "
+            f"{len(inst.gold_evidence_ids)} gold records"
+        )
+        return problems
+    by_gold = {g.gold_record_id: g for g in inst.gold_evidence_equivalence_groups}
+    seen = set()
+    for mapping, expected_rid in zip(inst.gold_evidence_display_map, inst.gold_evidence_ids):
+        if mapping.canonical_record_id != expected_rid:
+            problems.append(
+                f"gold display mapping canonical {mapping.canonical_record_id!r} != expected {expected_rid!r}"
+            )
+        if mapping.canonical_record_id in seen:
+            problems.append(f"duplicate gold display mapping for {mapping.canonical_record_id}")
+        seen.add(mapping.canonical_record_id)
+        if mapping.display_id not in inst.display_id_to_record_id:
+            problems.append(f"gold display ID {mapping.display_id!r} missing from display map")
+        elif inst.display_id_to_record_id[mapping.display_id] != mapping.canonical_record_id:
+            problems.append(
+                f"gold display ID {mapping.display_id!r} maps to "
+                f"{inst.display_id_to_record_id[mapping.display_id]!r}, expected {mapping.canonical_record_id!r}"
+            )
+        group = by_gold.get(mapping.canonical_record_id)
+        expected_canonical = list(group.canonical_record_ids) if group else [mapping.canonical_record_id]
+        expected_display = list(group.display_ids) if group else [mapping.display_id]
+        if mapping.equivalent_canonical_ids != expected_canonical:
+            problems.append(
+                f"equivalent_canonical_ids for {mapping.canonical_record_id} do not match its equivalence group"
+            )
+        if mapping.equivalent_display_ids != expected_display:
+            problems.append(
+                f"equivalent_display_ids for {mapping.canonical_record_id} do not match its equivalence group"
+            )
+        if len(inst.gold_evidence_ids) > 1 and set(mapping.equivalent_display_ids) == set(inst.gold_evidence_display_ids):
+            if len(mapping.equivalent_display_ids) > 1:
+                problems.append(
+                    f"multi-evidence mapping for {mapping.canonical_record_id} appears to include all gold IDs"
+                )
+        if len(problems) > 10:
+            break
+    return problems
+
+
+def _equivalence_problems(fam: QuestionFamily, inst: Instance, pool: RecordPool) -> List[str]:
+    problems: List[str] = []
+    require_version = family_requires_version_equivalence(fam)
+    for group in inst.gold_evidence_equivalence_groups:
+        if group.gold_record_id not in inst.gold_evidence_ids:
+            problems.append(f"equivalence group {group.group_id} refers to non-gold {group.gold_record_id}")
+            continue
+        gold = pool.get(group.gold_record_id)
+        if gold is None:
+            problems.append(f"equivalence group gold {group.gold_record_id} missing from pool")
+            continue
+        if group.gold_record_id not in group.canonical_record_ids:
+            problems.append(f"equivalence group {group.group_id} omits its gold record")
+        for rid in group.canonical_record_ids:
+            rec = pool.get(rid)
+            if rec is None:
+                problems.append(f"equivalent record {rid} missing from pool")
+                continue
+            if rid not in inst.context_record_ids:
+                problems.append(f"equivalent record {rid} is not present in this context")
+            if not records_equivalent(gold, rec, require_version=require_version):
+                problems.append(f"record {rid} is not semantically equivalent to gold {group.gold_record_id}")
+            dids = [d for d, c in inst.display_id_to_record_id.items() if c == rid]
+            if dids and dids[0] not in group.display_ids:
+                problems.append(f"equivalent record {rid} display ID missing from group")
+            if len(problems) > 10:
+                return problems
+    return problems
+
+
+def _temporal_version_semantic_problems(
+    fam: QuestionFamily,
+    active_domains: Optional[set[Domain]] = None,
+) -> List[str]:
+    if fam.question_type is not QuestionType.TEMPORAL_VERSION:
+        return []
+    if fam.domain is Domain.WORLD_BANK:
+        return []
+    template_id = fam.generation_metadata.template_id
+    version_templates = {
+        "SEC_QUARTER_VS_ANNUAL_FRAME",
+        "SEC_FILING_VERSION_SELECTION",
+        "FDA_ORIGINAL_VS_SUPPLEMENT",
+        "FRED_VINTAGE_SELECTION",
+    }
+    if template_id not in version_templates:
+        return [
+            f"TEMPORAL_VERSION template {template_id!r} is not registered as a true "
+            "version/time-state distinction"
+        ]
+    return []
+
+
+def _taxonomy_semantic_problems(inst: Instance, pool: RecordPool) -> List[str]:
+    problems: List[str] = []
+    if not inst.answerable:
+        bad = [d.record_id for d in inst.distractors if d.distractor_type is DistractorType.NEAR_MATCH_VALUE]
+        if bad:
+            problems.append(f"unanswerable instance has NEAR_MATCH_VALUE distractors: {bad[:5]}")
+    for d in inst.distractors[:5000]:
+        rec = pool.get(d.record_id)
+        if rec is None:
+            continue
+        if d.distractor_type is DistractorType.WRONG_UNIT and d.relationship_to_target.get("same_unit"):
+            problems.append(f"WRONG_UNIT distractor {d.record_id} has same_unit=true")
+        if d.distractor_type is DistractorType.WRONG_SERIES_VARIANT:
+            if not d.relationship_to_target.get("same_unit"):
+                problems.append(f"WRONG_SERIES_VARIANT distractor {d.record_id} does not have same_unit=true")
         if len(problems) > 10:
             break
     return problems

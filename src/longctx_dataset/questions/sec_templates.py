@@ -268,9 +268,7 @@ class SECQuarterVsAnnual(QuestionTemplate):
             question = (
                 f"Using only the SEC XBRL company-facts records supplied in the context, what did "
                 f"{_short_name(q)} (CIK {q.entity_id}) report for us-gaap:{q.metadata.get('tag')} for the "
-                f"single quarterly XBRL frame {q.period}, in USD? Report the quarterly figure only — the "
-                f"context also contains the full-year frame CY{m.group(1)} for the same concept, which is "
-                f"not the answer."
+                f"single quarterly XBRL frame {q.period}, in USD? Report the quarterly figure exactly."
             )
             out.append(self.make_answerable(
                 ctx,
@@ -335,9 +333,7 @@ class SECRestatementVersion(QuestionTemplate):
                 f"{_short_name(last)} (CIK {last.entity_id}) report for us-gaap:{last.metadata.get('tag')} "
                 f"for the period ending {last.period_end} in the MOST RECENTLY FILED version of that fact "
                 f"— accession {last.metadata.get('accn')}, form {last.metadata.get('form')}, filed "
-                f"{last.metadata.get('filed')} — in {last.unit}? An earlier filing (accession "
-                f"{first.metadata.get('accn')}, filed {first.metadata.get('filed')}) reports a different "
-                f"value for the same concept and period; that earlier value is not the answer."
+                f"{last.metadata.get('filed')} — in {last.unit}? Report the exact value from that version."
             )
             out.append(self.make_answerable(
                 ctx,
@@ -389,12 +385,11 @@ class SECEntityBinding(QuestionTemplate):
                 continue
             seen.add((target.entity_id, concept))
             value = float(target.value_numeric)
-            peer_names = ", ".join(sorted({f"{p.entity_name} (CIK {p.entity_id})" for p in others}))
             question = (
                 f"Using only the SEC XBRL company-facts records supplied in the context, what value did "
-                f"{_short_name(target)} — and specifically CIK {target.entity_id}, not any other filer — "
+                f"{_short_name(target)} (CIK {target.entity_id}) "
                 f"report for us-gaap:{target.metadata.get('tag')} for the annual XBRL frame {frame}, in "
-                f"{target.unit}? The context also contains the same concept and frame for {peer_names}."
+                f"{target.unit}? Report the exact value for that filer."
             )
             out.append(self.make_answerable(
                 ctx,
@@ -450,17 +445,16 @@ class SECUnanswerableConceptNotReported(QuestionTemplate):
         for cik, name, concept in combos:
             if len(out) >= n:
                 break
-            if cik in seen:
+            key = (cik, concept)
+            if key in seen:
                 continue
             if ctx.pool.matches_target(entity_id=cik, concept=concept):
                 continue  # absence must be provable, not assumed
-            seen.add(cik)
+            seen.add(key)
             question = (
                 f"Using only the SEC XBRL company-facts records supplied in the context, what value did "
                 f"{name} (CIK {cik}) report for the us-gaap concept \"{tags.get(concept) or concept}\" "
-                f"({labels.get(concept, concept)}) for the annual XBRL frame {frame}? If the supplied "
-                f"records do not contain this fact, state that the evidence is insufficient rather than "
-                f"estimating or inferring it from a related concept."
+                f"({labels.get(concept, concept)}) for the annual XBRL frame {frame}?"
             )
             spec = UnanswerableSpec(
                 reason_code="CONCEPT_NOT_REPORTED_BY_FILER",

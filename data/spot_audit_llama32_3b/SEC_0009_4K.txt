@@ -1,0 +1,360 @@
+<RECORD id="R181FD4E63B" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: AMAZON COM INC [0001018724]
+field: Earnings Per Share, Diluted [us-gaap:EarningsPerShareDiluted]
+period: 2013-04-01..2013-06-30
+unit: USD/shares
+value: -0.02
+version: 10-Q|0001193125-13-303204
+form: 10-Q
+accession: 0001193125-13-303204
+fiscal_year: 2013
+fiscal_period: Q2
+</RECORD>
+<RECORD id="R01EA5389D2" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: PFIZER INC [0000078003]
+field: Selling, General and Administrative Expense [us-gaap:SellingGeneralAndAdministrativeExpense]
+period: 2013-01-01..2013-12-31
+unit: USD
+value: 14355000000.0
+version: 10-K|0000078003-15-000014
+form: 10-K
+accession: 0000078003-15-000014
+fiscal_year: 2014
+fiscal_period: FY
+</RECORD>
+<RECORD id="R72F86B7C67" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Liabilities [us-gaap:Liabilities]
+period: AS_OF_2017-06-30
+unit: USD
+value: 168692000000.0
+version: 10-K|0001564590-17-014900
+form: 10-K
+accession: 0001564590-17-014900
+fiscal_year: 2017
+fiscal_period: FY
+</RECORD>
+<RECORD id="RCC88DD78D9" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: Johnson & Johnson [0000200406]
+field: Cost of Goods and Services Sold [us-gaap:CostOfGoodsAndServicesSold]
+period: 2018-12-31..2019-12-29
+unit: USD
+value: 27556000000.0
+version: 10-K|0000200406-21-000008
+form: 10-K
+accession: 0000200406-21-000008
+fiscal_year: 2020
+fiscal_period: FY
+</RECORD>
+<RECORD id="RF02E4FAB92" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: JPMORGAN CHASE & CO [0000019617]
+field: Revenues [us-gaap:Revenues]
+period: 2010-01-01..2010-03-31
+unit: USD
+value: 27671000000.0
+version: 10-Q|0000950123-11-045948
+form: 10-Q
+accession: 0000950123-11-045948
+fiscal_year: 2011
+fiscal_period: Q1
+</RECORD>
+<RECORD id="R51391916C2" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: WALMART INC. [0000104169]
+field: Operating Income (Loss) [us-gaap:OperatingIncomeLoss]
+period: 2023-02-01..2023-07-31
+unit: USD
+value: 13556000000.0
+version: 10-Q|0000104169-24-000141
+form: 10-Q
+accession: 0000104169-24-000141
+fiscal_year: 2025
+fiscal_period: Q2
+</RECORD>
+<RECORD id="RB889968E9F" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: WALMART INC. [0000104169]
+field: Assets, Current [us-gaap:AssetsCurrent]
+period: AS_OF_2020-01-31
+unit: USD
+value: 61806000000.0
+version: 10-K|0000104169-20-000011
+form: 10-K
+accession: 0000104169-20-000011
+fiscal_year: 2020
+fiscal_period: FY
+</RECORD>
+<RECORD id="RE590C804D2" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: COCA COLA CO [0000021344]
+field: Operating Income (Loss) [us-gaap:OperatingIncomeLoss]
+period: CY2011
+unit: USD
+value: 10173000000.0
+version: 10-K|0000021344-14-000008
+form: 10-K
+accession: 0000021344-14-000008
+fiscal_year: 2013
+fiscal_period: FY
+</RECORD>
+<RECORD id="R9F748ABC95" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: WALMART INC. [0000104169]
+field: Revenues [us-gaap:Revenues]
+period: CY2025Q3
+unit: USD
+value: 179496000000.0
+version: 10-Q|0000104169-25-000191
+form: 10-Q
+accession: 0000104169-25-000191
+fiscal_year: 2026
+fiscal_period: Q3
+</RECORD>
+<RECORD id="R113E08594A" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: WALMART INC. [0000104169]
+field: Revenues [us-gaap:Revenues]
+period: 2011-02-01..2011-04-30
+unit: USD
+value: 104189000000.0
+version: 10-Q|0001445305-12-001926
+form: 10-Q
+accession: 0001445305-12-001926
+fiscal_year: 2012
+fiscal_period: Q1
+</RECORD>
+<RECORD id="R21F0BC2AB9" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: WALMART INC. [0000104169]
+field: Revenues [us-gaap:Revenues]
+period: 2018-02-01..2018-07-31
+unit: USD
+value: 250718000000.0
+version: 10-Q|0000104169-18-000086
+form: 10-Q
+accession: 0000104169-18-000086
+fiscal_year: 2019
+fiscal_period: Q2
+</RECORD>
+<RECORD id="RDB2B128B46" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: COCA COLA CO [0000021344]
+field: Liabilities, Current [us-gaap:LiabilitiesCurrent]
+period: AS_OF_2013-12-31
+unit: USD
+value: 27811000000.0
+version: 10-Q|0000021344-14-000036
+form: 10-Q
+accession: 0000021344-14-000036
+fiscal_year: 2014
+fiscal_period: Q3
+</RECORD>
+<RECORD id="R06BE221A36" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Operating Income (Loss) [us-gaap:OperatingIncomeLoss]
+period: CY2011
+unit: USD
+value: 27161000000.0
+version: 8-K|0001193125-13-455144
+form: 8-K
+accession: 0001193125-13-455144
+fiscal_year: 2013
+fiscal_period: FY
+</RECORD>
+<RECORD id="RC2566323CD" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: AMAZON COM INC [0001018724]
+field: Operating Income (Loss) [us-gaap:OperatingIncomeLoss]
+period: CY2011
+unit: USD
+value: 862000000.0
+version: 10-K|0001018724-14-000006
+form: 10-K
+accession: 0001018724-14-000006
+fiscal_year: 2013
+fiscal_period: FY
+</RECORD>
+<RECORD id="RB1AFF6F2F5" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: WALMART INC. [0000104169]
+field: Operating Income (Loss) [us-gaap:OperatingIncomeLoss]
+period: CY2011
+unit: USD
+value: 26491000000.0
+version: 10-K|0000104169-14-000019
+form: 10-K
+accession: 0000104169-14-000019
+fiscal_year: 2013
+fiscal_period: FY
+</RECORD>
+<RECORD id="R8C100B55A6" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: WALMART INC. [0000104169]
+field: Revenues [us-gaap:Revenues]
+period: CY2011
+unit: USD
+value: 446509000000.0
+version: 10-K|0000104169-14-000019
+form: 10-K
+accession: 0000104169-14-000019
+fiscal_year: 2013
+fiscal_period: FY
+</RECORD>
+<RECORD id="R9CBBB90739" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: WALMART INC. [0000104169]
+field: Revenues [us-gaap:Revenues]
+period: CY2018Q1
+unit: USD
+value: 122690000000.0
+version: 10-K|0000104169-20-000011
+form: 10-K
+accession: 0000104169-20-000011
+fiscal_year: 2020
+fiscal_period: FY
+</RECORD>
+<RECORD id="R704A6BD6E7" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: Johnson & Johnson [0000200406]
+field: Operating Income (Loss) [us-gaap:OperatingIncomeLoss]
+period: CY2011
+unit: USD
+value: 13765000000.0
+version: 10-K|0000200406-14-000033
+form: 10-K
+accession: 0000200406-14-000033
+fiscal_year: 2013
+fiscal_period: FY
+</RECORD>
+<RECORD id="R1F446A5367" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: WALMART INC. [0000104169]
+field: Accounts Payable, Current [us-gaap:AccountsPayableCurrent]
+period: AS_OF_2015-01-31
+unit: USD
+value: 38410000000.0
+version: 10-Q|0000104169-15-000054
+form: 10-Q
+accession: 0000104169-15-000054
+fiscal_year: 2016
+fiscal_period: Q3
+</RECORD>
+<RECORD id="R587C991444" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: WALMART INC. [0000104169]
+field: Earnings Per Share, Basic [us-gaap:EarningsPerShareBasic]
+period: 2018-02-01..2018-07-31
+unit: USD/shares
+value: 0.43
+version: 10-Q|0000104169-18-000086
+form: 10-Q
+accession: 0000104169-18-000086
+fiscal_year: 2019
+fiscal_period: Q2
+</RECORD>
+<RECORD id="RFFBAAE8DCC" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: WALMART INC. [0000104169]
+field: Property, Plant and Equipment, Net [us-gaap:PropertyPlantAndEquipmentNet]
+period: AS_OF_2013-01-31
+unit: USD
+value: 113929000000.0
+version: 10-K|0000104169-13-000011
+form: 10-K
+accession: 0000104169-13-000011
+fiscal_year: 2012
+fiscal_period: FY
+</RECORD>
+<RECORD id="R3945F74AED" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: JPMORGAN CHASE & CO [0000019617]
+field: Revenues [us-gaap:Revenues]
+period: CY2011
+unit: USD
+value: 97234000000.0
+version: 10-K|0000019617-14-000289
+form: 10-K
+accession: 0000019617-14-000289
+fiscal_year: 2013
+fiscal_period: FY
+</RECORD>
+<RECORD id="RCFFE969152" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: Apple Inc. [0000320193]
+field: Operating Income (Loss) [us-gaap:OperatingIncomeLoss]
+period: CY2011
+unit: USD
+value: 33790000000.0
+version: 10-K|0001193125-13-416534
+form: 10-K
+accession: 0001193125-13-416534
+fiscal_year: 2013
+fiscal_period: FY
+</RECORD>
+<RECORD id="R2FE9F9E4D2" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: WALMART INC. [0000104169]
+field: Income Tax Expense (Benefit) [us-gaap:IncomeTaxExpenseBenefit]
+period: CY2024Q2
+unit: USD
+value: 1502000000.0
+version: 10-Q|0000104169-25-000137
+form: 10-Q
+accession: 0000104169-25-000137
+fiscal_year: 2026
+fiscal_period: Q2
+</RECORD>
+<RECORD id="R5A15DD3693" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: WALMART INC. [0000104169]
+field: Operating Income (Loss) [us-gaap:OperatingIncomeLoss]
+period: 2012-05-01..2012-07-31
+unit: USD
+value: 6698000000.0
+version: 10-Q|0000104169-13-000037
+form: 10-Q
+accession: 0000104169-13-000037
+fiscal_year: 2013
+fiscal_period: Q2
+</RECORD>
+<RECORD id="R414CB472AF" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: PFIZER INC [0000078003]
+field: Earnings Per Share, Diluted [us-gaap:EarningsPerShareDiluted]
+period: 2011-01-01..2011-04-03
+unit: USD/shares
+value: 0.28
+version: 10-Q|0001157523-11-003088
+form: 10-Q
+accession: 0001157523-11-003088
+fiscal_year: 2011
+fiscal_period: Q1
+</RECORD>
+<RECORD id="RBAFCC9A118" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: PFIZER INC [0000078003]
+field: Assets, Current [us-gaap:AssetsCurrent]
+period: CY2021Q4I
+unit: USD
+value: 59693000000.0
+version: 10-K|0000078003-23-000024
+form: 10-K
+accession: 0000078003-23-000024
+fiscal_year: 2022
+fiscal_period: FY
+</RECORD>
+<RECORD id="RD8075AEAEB" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: WALMART INC. [0000104169]
+field: Operating Income (Loss) [us-gaap:OperatingIncomeLoss]
+period: CY2009
+unit: USD
+value: 24002000000.0
+version: 10-K|0001193125-12-134679
+form: 10-K
+accession: 0001193125-12-134679
+fiscal_year: 2011
+fiscal_period: FY
+</RECORD>
+<RECORD id="R165F3D8677" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: WALMART INC. [0000104169]
+field: Operating Income (Loss) [us-gaap:OperatingIncomeLoss]
+period: 2021-02-01..2021-10-31
+unit: USD
+value: 20055000000.0
+version: 10-Q|0000104169-21-000072
+form: 10-Q
+accession: 0000104169-21-000072
+fiscal_year: 2022
+fiscal_period: Q3
+</RECORD>
+<RECORD id="RA6601C1C44" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: WALMART INC. [0000104169]
+field: Revenues [us-gaap:Revenues]
+period: 2014-08-01..2014-10-31
+unit: USD
+value: 119001000000.0
+version: 10-Q|0000104169-14-000080
+form: 10-Q
+accession: 0000104169-14-000080
+fiscal_year: 2015
+fiscal_period: Q3
+</RECORD>

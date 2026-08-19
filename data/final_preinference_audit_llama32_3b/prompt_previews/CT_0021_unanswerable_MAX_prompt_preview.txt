@@ -1,0 +1,31 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Cutting Knowledge Date: December 2023
+Today Date: 09 Aug 2026
+
+Answer using only the supplied records.
+
+Identify records matching the exact entity, period, version, field, unit, product, route, dosage form, arm, series, or other conditions requested by the question.
+
+If the supplied records do not contain sufficient evidence to answer the question, return INSUFFICIENT_EVIDENCE.
+
+Do not infer or fabricate missing information.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+KNOWLEDGE RECORDS:
+
+[CONTEXT OMITTED IN FINAL AUDIT PACKAGE]
+
+TARGET QUESTION:
+
+Using only the ClinicalTrials.gov records supplied in the context, what is the date on which results were first posted for trial NCT02339493 ("Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter")?
+
+OUTPUT FORMAT:
+
+Return exactly one JSON object with this schema:
+{"selected_evidence":["R..."],"answer":"...","insufficient_evidence":false}
+
+For insufficient evidence, use:
+{"selected_evidence":[],"answer":"INSUFFICIENT_EVIDENCE","insufficient_evidence":true}
+
+Use only model-facing record IDs from the supplied records. Do not include reasoning.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+

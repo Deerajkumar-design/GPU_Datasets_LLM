@@ -1,0 +1,5 @@
+Comparison,Inaccuracy difference,Discordant pairs,Raw p-value,Holm-adjusted p-value,Result
+4K vs 8K,7.0%,3/10,0.0923,0.0923,not significant after Holm
+4K vs 16K,14.0%,3/17,0.0026,0.0052,p < 0.05 after Holm
+4K vs 32K,19.0%,5/24,5.46e-04,0.0016,p < 0.05 after Holm
+4K vs 64K,30.0%,5/35,1.38e-06,5.53e-06,p < 0.05 after Holm

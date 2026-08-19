@@ -1,0 +1,27 @@
+[
+  {
+    "Question type":"DIRECT_RETRIEVAL",
+    "Families":20,
+    "Purpose":"Single-record factual retrieval."
+  },
+  {
+    "Question type":"RETRIEVAL_CALCULATION",
+    "Families":30,
+    "Purpose":"Retrieve values and compute a deterministic answer."
+  },
+  {
+    "Question type":"TEMPORAL_VERSION",
+    "Families":11,
+    "Purpose":"Identify the requested period, version, or submission."
+  },
+  {
+    "Question type":"ENTITY_UNIT_BINDING",
+    "Families":19,
+    "Purpose":"Bind entity, unit, product, route, dosage form, or series attributes."
+  },
+  {
+    "Question type":"UNANSWERABLE",
+    "Families":20,
+    "Purpose":"Return the insufficient-evidence answer when target evidence is absent."
+  }
+]

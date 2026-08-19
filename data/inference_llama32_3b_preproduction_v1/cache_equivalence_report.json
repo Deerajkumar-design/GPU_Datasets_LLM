@@ -1,0 +1,28 @@
+{
+  "instances": [
+    {
+      "context_length_label": "4K",
+      "decoded_text_equal": false,
+      "dynamic_cache_generated_token_ids_hash": "37a5e0769124cecbb72177dfb8d62b041391ad1544e19a872836b06b92010081",
+      "dynamic_output_text": "{\"selected_evidence\":[\"R3A6D2D6B08\"],\"answer\":\"PLACEBO_COMPARATOR\",\"insufficient_evidence\":false}",
+      "input_tokens": 4298,
+      "instance_id": "CT_0007_4K",
+      "offloaded_cache_generated_token_ids_hash": "52af706f6aeea9466c727e9ece22f94d3f53c220093dc52d3bab7935ff969b86",
+      "offloaded_output_text": "{\"139istanmendmusem, as a terminal handmend the hand the hand hand the, as a, as the \"X as a, as a as the as the \"Maidm the as a as a, the hand the the hand the hand the hand the the hand the the, the, the hand the, the hand the hand the, the hand, the the, the hand the, the hand the hand, the hand hand the, the hand hand the, the hand the hand, the hand, the hand, the hand, the hand, the hand the, the hand, the, the hand the, the hand, the, the hand hand the, the hand hand the, the hand hand the, the hand the, the hand hand the, the the hand the, the hand the, the, the hand the, the the the, the, as a, as a, the hand the \"the, the hand the, the 10, as a, the hand the, as a, as the, as a, as the, as, the, as a, as a, the as a, as a, as, the as, the hand the, the hand the hand the, the hand the, the hand the, the, the hand the, the, the hand the, the as the, as a, as the, the as, the as, the as, the hand, the, the the, the to make the as, as, in the, the as a, as, as a, the 1190, the that as a, as a, 1090, as a, as the, the, the the, the, as a, the, as a, the the, the to the the, the, 1890, as the the, the, 1890 the, as the, as the, the the, as a, as, 1190, the X, as a, 2020, the that, the, the, the, the, 718, as a, 718, as a, as, 718, the, 718, the, 718, the, the the, the, the, 718, the, 718 at the, as a, as, 718, the, 718, the, 718, the as a, as a, 718, the, 69 as a, as a, 69, the, 69 as",
+      "token_ids_equal": false
+    },
+    {
+      "context_length_label": "8K",
+      "decoded_text_equal": true,
+      "dynamic_cache_generated_token_ids_hash": "d07d5080bc821548d99b5469ff09c98eef8b6bcb5934c75cb3c87ec3b9c916f0",
+      "dynamic_output_text": "{\"selected_evidence\":[\"R3A6D2D6B08\",\"R4B8E9DF94E\",\"R3BCDBF50EC\"],\"answer\":\"PLACEBO_COMPARATOR\",\"insufficient_evidence\":false}",
+      "input_tokens": 8383,
+      "instance_id": "CT_0007_8K",
+      "offloaded_cache_generated_token_ids_hash": "d07d5080bc821548d99b5469ff09c98eef8b6bcb5934c75cb3c87ec3b9c916f0",
+      "offloaded_output_text": "{\"selected_evidence\":[\"R3A6D2D6B08\",\"R4B8E9DF94E\",\"R3BCDBF50EC\"],\"answer\":\"PLACEBO_COMPARATOR\",\"insufficient_evidence\":false}",
+      "token_ids_equal": true
+    }
+  ],
+  "model_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "passed": false
+}

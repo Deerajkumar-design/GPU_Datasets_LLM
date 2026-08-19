@@ -1,0 +1,23 @@
+{
+  "all_100_family_semantics_preserved": true,
+  "context_exact_preservation_note": "The 4K-64K original-family semantic fields are preserved exactly. Context byte/order hashes differ because the expansion rebuild used the Experiment C answer-only prompt renderer and the new six-context construction pass rather than copying v2 instances.",
+  "family_semantic_preservation": {
+    "answerable": 100,
+    "gold_answer": 100,
+    "gold_answer_normalized": 100,
+    "gold_evidence_canonical_ids": 100,
+    "question": 100,
+    "target_conditions": 100
+  },
+  "instance_comparison_4k_to_64k": {
+    "context_record_ids": 0,
+    "context_sha256": 0,
+    "gold_answer": 500,
+    "gold_evidence_canonical_ids": 500,
+    "question": 500
+  },
+  "new_dataset": "data/preproduction_llama32_3b_500f_6ctx_v1",
+  "old_4k_to_64k_instance_count": 500,
+  "old_dataset": "data/preproduction_llama32_3b_v2",
+  "old_family_count": 100
+}

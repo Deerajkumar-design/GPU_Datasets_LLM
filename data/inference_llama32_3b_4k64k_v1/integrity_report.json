@@ -1,0 +1,21 @@
+{
+  "attempted": 500,
+  "configuration_drift": false,
+  "context_lengths_executed": [
+    "16K",
+    "32K",
+    "4K",
+    "64K",
+    "8K"
+  ],
+  "executed_128k_instances": 0,
+  "expected_instances": 500,
+  "failed": 0,
+  "failure_breakdown": {},
+  "no_scoring_performed": true,
+  "passed": true,
+  "problems": [],
+  "successful": 500,
+  "synchronized_cuda_timing": true,
+  "truncation_occurred": false
+}

@@ -281,12 +281,15 @@ def stage_build_contexts(cfg: PipelineConfig, log=print) -> Tuple[int, int]:
 
 def build_manifest(cfg: PipelineConfig, timings: Optional[Dict[str, float]] = None) -> DatasetManifest:
     from .context.tokenizer import get_tokenizer
+    from .prompt_renderer import LLAMA_PROMPT_VERSION, RESPONSE_FORMAT_VERSION, prompt_hash
 
     try:
         tok = get_tokenizer(cfg.tokenizer)
         tok_id, tok_ver = tok.tokenizer_id, tok.version
+        tok_prov = tok.provenance()
     except Exception:  # noqa: BLE001 - a manifest must still be writable offline
         tok_id, tok_ver = cfg.tokenizer.id, None
+        tok_prov = {}
 
     counts: Dict[str, int] = {}
     for domain in cfg.enabled_domains():
@@ -309,6 +312,19 @@ def build_manifest(cfg: PipelineConfig, timings: Optional[Dict[str, float]] = No
         counts=counts,
         source_retrievals=load_retrievals(cfg),
         stage_timings_seconds=timings or {},
+        extra={
+            "model": {
+                "id": cfg.model.id,
+                "max_new_tokens": cfg.model.max_new_tokens if cfg.model.id else None,
+            },
+            "tokenizer": tok_prov,
+            "prompt": {
+                "version": LLAMA_PROMPT_VERSION if cfg.model.id else None,
+                "hash": prompt_hash(template_date=cfg.model_prompt.template_date) if cfg.model.id else None,
+                "response_format_version": RESPONSE_FORMAT_VERSION if cfg.model.id else None,
+                "template_date": cfg.model_prompt.template_date if cfg.model.id else None,
+            },
+        },
         content_sha256={
             "question_families": sha256_jsonl_content(families_path(cfg)),
             "instances": sha256_jsonl_content(instances_path(cfg)),

@@ -298,7 +298,7 @@
   "dataset_name": "pilot",
   "has_critical_failures": false,
   "stats": {
-    "config_hash": "87a7631a5f655544",
+    "config_hash": "990213b0175565dc",
     "distractor_totals": {
       "NEAR_MATCH_VALUE": 2689,
       "OTHER_SAME_DOMAIN": 38500,

@@ -1,0 +1,82 @@
+{
+  "by_context": [
+    {
+      "complete_usable": 2,
+      "context_length": "4K",
+      "degenerate_evidence_loops": 4,
+      "evidence_count_violations": 1,
+      "format_failures": 4,
+      "hit_512": 4,
+      "mean_generated_tokens": 360.8333333333333,
+      "mean_inference_seconds": 4.312822937499732,
+      "median_inference_seconds": 6.016290736850351,
+      "p95_inference_seconds": 6.0266502276062965,
+      "total": 6,
+      "total_inference_seconds": 25.87693762499839
+    },
+    {
+      "complete_usable": 2,
+      "context_length": "8K",
+      "degenerate_evidence_loops": 0,
+      "evidence_count_violations": 1,
+      "format_failures": 0,
+      "hit_512": 0,
+      "mean_generated_tokens": 28.5,
+      "mean_inference_seconds": 0.8565399525687099,
+      "median_inference_seconds": 0.8565399525687099,
+      "p95_inference_seconds": 0.8144674906507134,
+      "total": 2,
+      "total_inference_seconds": 1.7130799051374197
+    },
+    {
+      "complete_usable": 3,
+      "context_length": "16K",
+      "degenerate_evidence_loops": 6,
+      "evidence_count_violations": 2,
+      "format_failures": 6,
+      "hit_512": 6,
+      "mean_generated_tokens": 355.55555555555554,
+      "mean_inference_seconds": 6.693176588354011,
+      "median_inference_seconds": 9.14597781188786,
+      "p95_inference_seconds": 9.177835614420474,
+      "total": 9,
+      "total_inference_seconds": 60.2385892951861
+    },
+    {
+      "complete_usable": 5,
+      "context_length": "32K",
+      "degenerate_evidence_loops": 2,
+      "evidence_count_violations": 1,
+      "format_failures": 3,
+      "hit_512": 3,
+      "mean_generated_tokens": 211.125,
+      "mean_inference_seconds": 7.480475555639714,
+      "median_inference_seconds": 3.4958750759251416,
+      "p95_inference_seconds": 14.358777633868158,
+      "total": 8,
+      "total_inference_seconds": 59.84380444511771
+    },
+    {
+      "complete_usable": 2,
+      "context_length": "64K",
+      "degenerate_evidence_loops": 3,
+      "evidence_count_violations": 0,
+      "format_failures": 3,
+      "hit_512": 3,
+      "mean_generated_tokens": 317.2,
+      "mean_inference_seconds": 18.936360466852783,
+      "median_inference_seconds": 25.876258737407625,
+      "p95_inference_seconds": 25.914444976486266,
+      "total": 5,
+      "total_inference_seconds": 94.68180233426392
+    }
+  ],
+  "evidence_count_violations": 5,
+  "format_failure_rate": 0.5333333333333333,
+  "format_failures": 16,
+  "hit_512_count": 16,
+  "missing_answer_field_count": 0,
+  "passed": false,
+  "repetitive_loop_count": 15,
+  "sample_size": 30
+}

@@ -1,0 +1,211 @@
+[
+  {
+    "adjudication_method": "human_manual_review",
+    "adjudication_reason": "The model answer exactly matches the deterministic gold answer/target evidence. These were grader edge cases, not factual errors.",
+    "final_answer_correct": true,
+    "final_error_type": "CORRECT",
+    "final_hallucination": false,
+    "instance_id": "FDA_0099_32K",
+    "original_answer_correct": false,
+    "original_error_type": "AMBIGUOUS_REVIEW_REQUIRED",
+    "original_hallucination": false
+  },
+  {
+    "adjudication_method": "human_manual_review",
+    "adjudication_reason": "The returned value is authentic and present in the supplied context, but belongs to a different requested entity/application/company/state/series. Therefore the answer is grounded but incorrectly bound, not hallucinated.",
+    "final_answer_correct": false,
+    "final_error_type": "WRONG_ENTITY",
+    "final_hallucination": false,
+    "instance_id": "SEC_0086_32K",
+    "original_answer_correct": false,
+    "original_error_type": "AMBIGUOUS_REVIEW_REQUIRED",
+    "original_hallucination": false
+  },
+  {
+    "adjudication_method": "human_manual_review",
+    "adjudication_reason": "The returned value is authentic and present in the supplied context, but belongs to a different requested entity/application/company/state/series. Therefore the answer is grounded but incorrectly bound, not hallucinated.",
+    "final_answer_correct": false,
+    "final_error_type": "WRONG_ENTITY",
+    "final_hallucination": false,
+    "instance_id": "FRED_0102_64K",
+    "original_answer_correct": false,
+    "original_error_type": "AMBIGUOUS_REVIEW_REQUIRED",
+    "original_hallucination": false
+  },
+  {
+    "adjudication_method": "human_manual_review",
+    "adjudication_reason": "The returned value is authentic and present in the supplied context, but belongs to a different requested entity/application/company/state/series. Therefore the answer is grounded but incorrectly bound, not hallucinated.",
+    "final_answer_correct": false,
+    "final_error_type": "WRONG_ENTITY",
+    "final_hallucination": false,
+    "instance_id": "FRED_0100_32K",
+    "original_answer_correct": false,
+    "original_error_type": "AMBIGUOUS_REVIEW_REQUIRED",
+    "original_hallucination": false
+  },
+  {
+    "adjudication_method": "human_manual_review",
+    "adjudication_reason": "The returned value is authentic and present in the supplied context, but belongs to a different requested entity/application/company/state/series. Therefore the answer is grounded but incorrectly bound, not hallucinated.",
+    "final_answer_correct": false,
+    "final_error_type": "WRONG_ENTITY",
+    "final_hallucination": false,
+    "instance_id": "FDA_0019_64K",
+    "original_answer_correct": false,
+    "original_error_type": "AMBIGUOUS_REVIEW_REQUIRED",
+    "original_hallucination": false
+  },
+  {
+    "adjudication_method": "human_manual_review",
+    "adjudication_reason": "The returned value is authentic and present in the supplied context, but belongs to a different requested entity/application/company/state/series. Therefore the answer is grounded but incorrectly bound, not hallucinated.",
+    "final_answer_correct": false,
+    "final_error_type": "WRONG_ENTITY",
+    "final_hallucination": false,
+    "instance_id": "FRED_0103_32K",
+    "original_answer_correct": false,
+    "original_error_type": "AMBIGUOUS_REVIEW_REQUIRED",
+    "original_hallucination": false
+  },
+  {
+    "adjudication_method": "human_manual_review",
+    "adjudication_reason": "The model answer exactly matches the deterministic gold answer/target evidence. These were grader edge cases, not factual errors.",
+    "final_answer_correct": true,
+    "final_error_type": "CORRECT",
+    "final_hallucination": false,
+    "instance_id": "FDA_0099_64K",
+    "original_answer_correct": false,
+    "original_error_type": "AMBIGUOUS_REVIEW_REQUIRED",
+    "original_hallucination": false
+  },
+  {
+    "adjudication_method": "human_manual_review",
+    "adjudication_reason": "The model answer exactly matches the deterministic gold answer/target evidence. These were grader edge cases, not factual errors.",
+    "final_answer_correct": true,
+    "final_error_type": "CORRECT",
+    "final_hallucination": false,
+    "instance_id": "FDA_0099_4K",
+    "original_answer_correct": false,
+    "original_error_type": "AMBIGUOUS_REVIEW_REQUIRED",
+    "original_hallucination": false
+  },
+  {
+    "adjudication_method": "human_manual_review",
+    "adjudication_reason": "The returned value is authentic and present in the supplied context, but belongs to a different requested entity/application/company/state/series. Therefore the answer is grounded but incorrectly bound, not hallucinated.",
+    "final_answer_correct": false,
+    "final_error_type": "WRONG_ENTITY",
+    "final_hallucination": false,
+    "instance_id": "FRED_0038_4K",
+    "original_answer_correct": false,
+    "original_error_type": "AMBIGUOUS_REVIEW_REQUIRED",
+    "original_hallucination": false
+  },
+  {
+    "adjudication_method": "human_manual_review",
+    "adjudication_reason": "The returned value is authentic and present in the supplied context, but belongs to a different requested entity/application/company/state/series. Therefore the answer is grounded but incorrectly bound, not hallucinated.",
+    "final_answer_correct": false,
+    "final_error_type": "WRONG_ENTITY",
+    "final_hallucination": false,
+    "instance_id": "FRED_0093_64K",
+    "original_answer_correct": false,
+    "original_error_type": "AMBIGUOUS_REVIEW_REQUIRED",
+    "original_hallucination": false
+  },
+  {
+    "adjudication_method": "human_manual_review",
+    "adjudication_reason": "The returned value is authentic and present in the supplied context, but belongs to a different requested entity/application/company/state/series. Therefore the answer is grounded but incorrectly bound, not hallucinated.",
+    "final_answer_correct": false,
+    "final_error_type": "WRONG_ENTITY",
+    "final_hallucination": false,
+    "instance_id": "FRED_0100_82K",
+    "original_answer_correct": false,
+    "original_error_type": "AMBIGUOUS_REVIEW_REQUIRED",
+    "original_hallucination": false
+  },
+  {
+    "adjudication_method": "human_manual_review",
+    "adjudication_reason": "The returned value is authentic and present in the supplied context, but belongs to a different requested entity/application/company/state/series. Therefore the answer is grounded but incorrectly bound, not hallucinated.",
+    "final_answer_correct": false,
+    "final_error_type": "WRONG_ENTITY",
+    "final_hallucination": false,
+    "instance_id": "FDA_0020_82K",
+    "original_answer_correct": false,
+    "original_error_type": "AMBIGUOUS_REVIEW_REQUIRED",
+    "original_hallucination": false
+  },
+  {
+    "adjudication_method": "human_manual_review",
+    "adjudication_reason": "The returned value is authentic and present in the supplied context, but belongs to a different requested entity/application/company/state/series. Therefore the answer is grounded but incorrectly bound, not hallucinated.",
+    "final_answer_correct": false,
+    "final_error_type": "WRONG_ENTITY",
+    "final_hallucination": false,
+    "instance_id": "FRED_0100_64K",
+    "original_answer_correct": false,
+    "original_error_type": "AMBIGUOUS_REVIEW_REQUIRED",
+    "original_hallucination": false
+  },
+  {
+    "adjudication_method": "human_manual_review",
+    "adjudication_reason": "The model answer exactly matches the deterministic gold answer/target evidence. These were grader edge cases, not factual errors.",
+    "final_answer_correct": true,
+    "final_error_type": "CORRECT",
+    "final_hallucination": false,
+    "instance_id": "FDA_0099_16K",
+    "original_answer_correct": false,
+    "original_error_type": "AMBIGUOUS_REVIEW_REQUIRED",
+    "original_hallucination": false
+  },
+  {
+    "adjudication_method": "human_manual_review",
+    "adjudication_reason": "The returned value is authentic and present in the supplied context, but belongs to a different requested entity/application/company/state/series. Therefore the answer is grounded but incorrectly bound, not hallucinated.",
+    "final_answer_correct": false,
+    "final_error_type": "WRONG_ENTITY",
+    "final_hallucination": false,
+    "instance_id": "FRED_0104_82K",
+    "original_answer_correct": false,
+    "original_error_type": "AMBIGUOUS_REVIEW_REQUIRED",
+    "original_hallucination": false
+  },
+  {
+    "adjudication_method": "human_manual_review",
+    "adjudication_reason": "The returned value is authentic and present in the supplied context, but belongs to a different requested entity/application/company/state/series. Therefore the answer is grounded but incorrectly bound, not hallucinated.",
+    "final_answer_correct": false,
+    "final_error_type": "WRONG_ENTITY",
+    "final_hallucination": false,
+    "instance_id": "FRED_0038_8K",
+    "original_answer_correct": false,
+    "original_error_type": "AMBIGUOUS_REVIEW_REQUIRED",
+    "original_hallucination": false
+  },
+  {
+    "adjudication_method": "human_manual_review",
+    "adjudication_reason": "The model answer exactly matches the deterministic gold answer/target evidence. These were grader edge cases, not factual errors.",
+    "final_answer_correct": true,
+    "final_error_type": "CORRECT",
+    "final_hallucination": false,
+    "instance_id": "FDA_0105_4K",
+    "original_answer_correct": false,
+    "original_error_type": "AMBIGUOUS_REVIEW_REQUIRED",
+    "original_hallucination": false
+  },
+  {
+    "adjudication_method": "human_manual_review",
+    "adjudication_reason": "The model answer exactly matches the deterministic gold answer/target evidence. These were grader edge cases, not factual errors.",
+    "final_answer_correct": true,
+    "final_error_type": "CORRECT",
+    "final_hallucination": false,
+    "instance_id": "FDA_0099_82K",
+    "original_answer_correct": false,
+    "original_error_type": "AMBIGUOUS_REVIEW_REQUIRED",
+    "original_hallucination": false
+  },
+  {
+    "adjudication_method": "human_manual_review",
+    "adjudication_reason": "The model answer exactly matches the deterministic gold answer/target evidence. These were grader edge cases, not factual errors.",
+    "final_answer_correct": true,
+    "final_error_type": "CORRECT",
+    "final_hallucination": false,
+    "instance_id": "FDA_0099_8K",
+    "original_answer_correct": false,
+    "original_error_type": "AMBIGUOUS_REVIEW_REQUIRED",
+    "original_hallucination": false
+  }
+]

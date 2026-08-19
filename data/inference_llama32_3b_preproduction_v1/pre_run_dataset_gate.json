@@ -1,0 +1,33 @@
+{
+  "counts": {
+    "families": 100,
+    "families_answerable": 80,
+    "families_by_domain": {
+      "CLINICAL_TRIALS": 25,
+      "FDA": 25,
+      "FRED": 25,
+      "SEC": 25
+    },
+    "families_by_question_type": {
+      "DIRECT_RETRIEVAL": 20,
+      "ENTITY_UNIT_BINDING": 19,
+      "RETRIEVAL_CALCULATION": 30,
+      "TEMPORAL_VERSION": 11,
+      "UNANSWERABLE": 20
+    },
+    "families_unanswerable": 20,
+    "instances": 600,
+    "instances_by_length": {
+      "128K": 100,
+      "16K": 100,
+      "32K": 100,
+      "4K": 100,
+      "64K": 100,
+      "8K": 100
+    },
+    "max_rendered_input_tokens": 130437,
+    "min_remaining_context_margin": 123
+  },
+  "failures": [],
+  "passed": true
+}

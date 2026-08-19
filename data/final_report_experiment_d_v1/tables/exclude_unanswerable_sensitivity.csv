@@ -1,0 +1,4 @@
+Outcome,OR,95% CI,p-value
+inaccurate,1.129,"[1.081, 1.180]",5.30e-08
+hallucinatory_inaccuracy,0.942,"[0.906, 0.980]",0.00275
+grounded_inaccuracy,1.234,"[1.166, 1.306]",2.66e-13

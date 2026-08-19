@@ -17,11 +17,14 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 from .config import PipelineConfig
+from .context.builder import length_label
 from .distractors.taxonomy import describe_taxonomy
+from .prompts import EVALUATION_PROMPT_VERSION
 from .questions.base import rng_for
 from .schemas import Domain, Instance, QuestionFamily, QuestionType
 from .storage.io import iter_jsonl, read_models, write_json
 from .storage.manifests import utc_now
+from .validation.question_leakage import answerability_leakage_phrases
 
 # Left unticked on purpose. An automated pass marking these would defeat the point of
 # having a human read the contexts.
@@ -206,6 +209,57 @@ def _fmt_context_meta(inst: Optional[Instance], label: str) -> str:
     return "\n".join(lines) + "\n"
 
 
+def _validation_status(cfg: PipelineConfig) -> str:
+    from .pipeline import validation_path
+
+    path = validation_path(cfg)
+    if not path.exists():
+        return "not found"
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return "unreadable"
+    checks = payload.get("checks") or []
+    failed = [c for c in checks if not c.get("passed") and not c.get("skipped")]
+    return "PASS" if not failed else f"FAIL ({len(failed)} failing checks)"
+
+
+def _audit_issue_fields(fam: QuestionFamily, instances: Sequence[Instance]) -> Dict[str, Any]:
+    q = fam.question.lower()
+    leak_terms = ("not the answer", "those are not", "context also contains", "different strengths")
+    display_ok = True
+    equiv_count = 0
+    invalid_near = 0
+    basis_count = 0
+    unit_count = 0
+    for inst in instances:
+        display_ok = display_ok and bool(inst.context_display_ids) and len(inst.context_display_ids) == len(inst.context_record_ids)
+        display_ok = display_ok and len(set(inst.context_display_ids)) == len(inst.context_display_ids)
+        display_ok = display_ok and set(inst.display_id_to_record_id) == set(inst.context_display_ids)
+        equiv_count = max(
+            equiv_count,
+            sum(max(0, len(g.canonical_record_ids) - 1) for g in inst.gold_evidence_equivalence_groups),
+        )
+        invalid_near += sum(
+            1 for d in inst.distractors
+            if (not inst.answerable and d.distractor_type.value == "NEAR_MATCH_VALUE")
+        )
+        basis_count += inst.distractor_counts.get("WRONG_SERIES_VARIANT", 0)
+        unit_count += inst.distractor_counts.get("WRONG_UNIT", 0)
+    return {
+        "question_foil_leakage_detected": any(t in q for t in leak_terms),
+        "question_type_leakage_detected": bool(answerability_leakage_phrases(fam.question)),
+        "question_contains_abstention_instruction": bool(answerability_leakage_phrases(fam.question)),
+        "common_evaluation_prompt_version": EVALUATION_PROMPT_VERSION,
+        "common_evaluation_prompt_applied_uniformly": True,
+        "opaque_display_ids": "pass" if display_ok else "fail",
+        "equivalent_evidence_present": equiv_count,
+        "invalid_near_match_value": invalid_near,
+        "measurement_basis_distractors": basis_count,
+        "true_wrong_unit_distractors": unit_count,
+    }
+
+
 def _distractor_examples(inst: Optional[Instance], view: DatasetView,
                          cfg: PipelineConfig, limit: int = 6) -> str:
     """A few real distractors from the 4K context, rendered exactly as the model sees them."""
@@ -245,11 +299,17 @@ def build_audit_package(
     n_families: int = 12,
     seed: int = 20240817,
     domains: Sequence[Domain] = ACTIVE_DOMAINS,
+    family_ids: Optional[Sequence[str]] = None,
     log=print,
 ) -> Dict[str, Any]:
     out_dir.mkdir(parents=True, exist_ok=True)
     views = [DatasetView(c) for c in configs]
-    selected = select_families(views, n_families, seed, domains)
+    if family_ids:
+        wanted = set(family_ids)
+        selected = [(v, f) for v in views for f in v.families if f.question_family_id in wanted]
+        selected.sort(key=lambda p: family_ids.index(p[1].question_family_id))
+    else:
+        selected = select_families(views, n_families, seed, domains)
     if not selected:
         raise RuntimeError("no question families available to audit")
 
@@ -257,13 +317,17 @@ def build_audit_package(
     entries: List[Dict[str, Any]] = []
 
     for view, fam in selected:
-        short = view.instance(fam.question_family_id, SHORT_LEN)
-        long_ = view.instance(fam.question_family_id, LONG_LEN)
+        by_label: Dict[str, Optional[Instance]] = {
+            length_label(n): view.instance(fam.question_family_id, n)
+            for n in view.cfg.context.lengths
+        }
+        short = by_label.get("4K")
+        long_ = by_label.get("128K")
         fid = fam.question_family_id
 
         # Exact model-facing contexts, byte-for-byte, untruncated and unannotated.
         written: Dict[str, Optional[str]] = {}
-        for label, inst in (("4K", short), ("128K", long_)):
+        for label, inst in by_label.items():
             if inst is None:
                 written[label] = None
                 continue
@@ -271,8 +335,10 @@ def build_audit_package(
             path.write_text(inst.context, encoding="utf-8")
             written[label] = path.name
 
-        md = _render_family_md(fam, view, short, long_, written, taxonomy)
+        generated_instances = [i for i in by_label.values() if i is not None]
+        md = _render_family_md(fam, view, by_label, written, taxonomy)
         (out_dir / f"{fid}.md").write_text(md, encoding="utf-8")
+        issue_fields = _audit_issue_fields(fam, generated_instances)
 
         entries.append({
             "question_family_id": fid,
@@ -286,6 +352,7 @@ def build_audit_package(
             "audit_markdown": f"{fid}.md",
             "context_4k": written["4K"],
             "context_128k": written["128K"],
+            "contexts": dict(written),
             "context_4k_tokens": short.context_tokens_actual if short else None,
             "context_128k_tokens": long_.context_tokens_actual if long_ else None,
             "target_position_4k": short.target_position_relative if short else None,
@@ -294,6 +361,7 @@ def build_audit_package(
             "records_128k": len(long_.context_record_ids) if long_ else None,
             "distractor_counts_4k": dict(short.distractor_counts) if short else {},
             "distractor_counts_128k": dict(long_.distractor_counts) if long_ else {},
+            "audit_issue_fields": issue_fields,
             "checklist_items": len(AUDIT_CHECKLIST),
             "checklist_status": "PENDING_HUMAN_REVIEW",
         })
@@ -316,7 +384,11 @@ def build_audit_package(
     return summary
 
 
-def _render_family_md(fam, view, short, long_, written, taxonomy) -> str:
+def _render_family_md(fam, view, instances_by_label, written, taxonomy) -> str:
+    short = instances_by_label.get("4K")
+    long_ = instances_by_label.get("128K")
+    generated_instances = [i for i in instances_by_label.values() if i is not None]
+    issue_fields = _audit_issue_fields(fam, generated_instances)
     L: List[str] = []
     a = L.append
     a(f"# Audit — `{fam.question_family_id}`")
@@ -370,6 +442,42 @@ def _render_family_md(fam, view, short, long_, written, taxonomy) -> str:
     a("## Gold evidence")
     a("")
     a(_fmt_evidence_table(fam))
+    a("")
+    a("### Model-facing gold evidence IDs")
+    a("")
+    if generated_instances:
+        inst0 = generated_instances[0]
+        a("| canonical record id | display id | valid equivalent display ids |")
+        a("|---|---|---|")
+        for mapping in inst0.gold_evidence_display_map:
+            equiv = ", ".join(f"`{did}`" for did in mapping.equivalent_display_ids)
+            a(f"| `{mapping.canonical_record_id}` | `{mapping.display_id or ''}` | {equiv} |")
+    else:
+        a("_(none)_")
+    a("")
+    a("### Model-facing record ID examples")
+    a("")
+    if generated_instances:
+        inst0 = generated_instances[0]
+        a("| display id | canonical record id |")
+        a("|---|---|")
+        for did in inst0.context_display_ids[:8]:
+            a(f"| `{did}` | `{inst0.display_id_to_record_id.get(did, '')}` |")
+    else:
+        a("_(none)_")
+    a("")
+    a("### Equivalent evidence")
+    a("")
+    groups = generated_instances[-1].gold_evidence_equivalence_groups if generated_instances else fam.gold_evidence_equivalence_groups
+    if groups:
+        a("| group | gold canonical id | equivalent canonical ids | display ids |")
+        a("|---|---|---|---|")
+        for g in groups:
+            a(f"| `{g.group_id}` | `{g.gold_record_id}` | "
+              f"{', '.join(f'`{x}`' for x in g.canonical_record_ids)} | "
+              f"{', '.join(f'`{x}`' for x in g.display_ids)} |")
+    else:
+        a("_(none)_")
 
     a("## Target conditions")
     a("")
@@ -389,24 +497,39 @@ def _render_family_md(fam, view, short, long_, written, taxonomy) -> str:
     a(f"_Generation: seed `{fam.generation_metadata.seed}`, config hash "
       f"`{fam.generation_metadata.config_hash}`, git `{(fam.generation_metadata.git_commit or 'n/a')[:12]}`, "
       f"tokenizer `{fam.generation_metadata.tokenizer_id}`._")
+    a(f"_Validation status: **{_validation_status(view.cfg)}**._")
     a("")
 
     a("## Context metadata")
     a("")
-    a(_fmt_context_meta(short, "4K"))
-    a("")
-    a(_fmt_context_meta(long_, "128K"))
+    for label, inst in instances_by_label.items():
+        a(_fmt_context_meta(inst, label))
+        a("")
     a("")
 
     a("### Distractor composition")
     a("")
-    a("| distractor type | 4K | 128K | meaning |")
-    a("|---|---|---|---|")
-    keys = sorted(set((short.distractor_counts if short else {}))
-                  | set((long_.distractor_counts if long_ else {})))
+    labels = list(instances_by_label)
+    a("| distractor type | " + " | ".join(labels) + " | meaning |")
+    a("|---|" + "|".join("---" for _ in labels) + "|---|")
+    keys = sorted(set().union(*(set((i.distractor_counts if i else {})) for i in instances_by_label.values())))
     for k in keys:
-        a(f"| `{k}` | {(short.distractor_counts.get(k, 0) if short else 0):,} | "
-          f"{(long_.distractor_counts.get(k, 0) if long_ else 0):,} | {taxonomy.get(k, '')} |")
+        counts = [f"{(instances_by_label[label].distractor_counts.get(k, 0) if instances_by_label[label] else 0):,}"
+                  for label in labels]
+        a(f"| `{k}` | " + " | ".join(counts) + f" | {taxonomy.get(k, '')} |")
+    a("")
+    a("### Specific audit fields")
+    a("")
+    a(f"- Question foil leakage detected: {'yes' if issue_fields['question_foil_leakage_detected'] else 'no'}")
+    a(f"- Question-type leakage detected: {'yes' if issue_fields['question_type_leakage_detected'] else 'no'}")
+    a(f"- Question contains abstention instruction: {'yes' if issue_fields['question_contains_abstention_instruction'] else 'no'}")
+    a(f"- Common evaluation prompt version: {issue_fields['common_evaluation_prompt_version']}")
+    a(f"- Common evaluation prompt applied uniformly: {'yes' if issue_fields['common_evaluation_prompt_applied_uniformly'] else 'no'}")
+    a(f"- Opaque display IDs: {issue_fields['opaque_display_ids']}")
+    a(f"- Equivalent evidence present: {issue_fields['equivalent_evidence_present']}")
+    a(f"- Invalid NEAR_MATCH_VALUE: {issue_fields['invalid_near_match_value']}")
+    a(f"- Measurement-basis distractors: {issue_fields['measurement_basis_distractors']}")
+    a(f"- True WRONG_UNIT distractors: {issue_fields['true_wrong_unit_distractors']}")
     a("")
 
     a("### Representative distractors (from the 4K context)")
@@ -420,7 +543,7 @@ def _render_family_md(fam, view, short, long_, written, taxonomy) -> str:
       "with no added header or annotation. The question above is supplied separately at "
       "evaluation time and is deliberately not part of the context.")
     a("")
-    for label in ("4K", "128K"):
+    for label in labels:
         name = written.get(label)
         a(f"- **{label}:** " + (f"[`{name}`]({name})" if name else "_not generated_"))
     a("")

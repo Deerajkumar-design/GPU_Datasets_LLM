@@ -1,0 +1,169 @@
+name: preproduction_llama32_3b_500f_6ctx_v1
+seed: 20240817
+data_root: data
+output_subdir: preproduction_llama32_3b_500f_6ctx_v1
+schema_version: "1.1.0"
+write_parquet: true
+
+model:
+  id: "meta-llama/Llama-3.2-3B-Instruct"
+  max_new_tokens: 128
+
+model_prompt:
+  template_date: "09 Aug 2026"
+  max_rendered_input_tokens: 81800
+
+tokenizer:
+  id: "hf:meta-llama/Llama-3.2-3B-Instruct"
+  fallback_id: "whitespace:v1"
+  allow_fallback: false
+
+context:
+  lengths: [4096, 8192, 16384, 32768, 65536, 83968]
+  target_position: 0.50
+  position_tolerance: 0.05
+  min_fill_ratio: 0.95
+
+http:
+  timeout_seconds: 60.0
+  max_retries: 5
+  backoff_seconds: 2.0
+  sec_user_agent: "${SEC_USER_AGENT}"
+  sec_rate_limit_per_second: 8.0
+  openfda_api_key: "${OPENFDA_API_KEY}"
+  fred_api_key: "${FRED_API_KEY}"
+  default_rate_limit_per_second: 5.0
+  cache_enabled: true
+
+validation:
+  fail_on: ["CRITICAL"]
+  numeric_recompute_rel_tolerance: 1.0e-9
+  require_all_question_types: true
+  max_leakage_value_rel_tolerance: 1.0e-6
+
+domains:
+  SEC:
+    enabled: true
+    n_families: 125
+    question_type_counts:
+      DIRECT_RETRIEVAL: 25
+      RETRIEVAL_CALCULATION: 40
+      TEMPORAL_VERSION: 20
+      ENTITY_UNIT_BINDING: 15
+      UNANSWERABLE: 25
+    params:
+      companies:
+        "0000320193": "Apple Inc."
+        "0000789019": "Microsoft Corporation"
+        "0001018724": "Amazon.com, Inc."
+        "0000021344": "The Coca-Cola Company"
+        "0000104169": "Walmart Inc."
+        "0000200406": "Johnson & Johnson"
+        "0000078003": "Pfizer Inc."
+        "0000019617": "JPMorgan Chase & Co."
+        "0000051143": "International Business Machines Corporation"
+        "0000012927": "The Boeing Company"
+        "0000040545": "General Electric Company"
+        "0000093410": "Chevron Corporation"
+        "0000034088": "Exxon Mobil Corporation"
+        "0000080424": "The Procter & Gamble Company"
+        "0000063908": "McDonald's Corporation"
+        "0000029534": "Dollar General Corporation"
+        "0000318154": "Amgen Inc."
+        "0000097745": "Thermo Fisher Scientific Inc."
+        "0000320187": "NIKE, Inc."
+        "0001045810": "NVIDIA Corporation"
+
+  FDA:
+    enabled: true
+    n_families: 125
+    question_type_counts:
+      DIRECT_RETRIEVAL: 25
+      RETRIEVAL_CALCULATION: 40
+      TEMPORAL_VERSION: 15
+      ENTITY_UNIT_BINDING: 20
+      UNANSWERABLE: 25
+    params:
+      limit_per_ingredient: 100
+      ingredients:
+        - "METFORMIN HYDROCHLORIDE"
+        - "ATORVASTATIN CALCIUM"
+        - "LISINOPRIL"
+        - "AMLODIPINE BESYLATE"
+        - "LEVOTHYROXINE SODIUM"
+        - "OMEPRAZOLE"
+        - "SERTRALINE HYDROCHLORIDE"
+        - "GABAPENTIN"
+        - "IBUPROFEN"
+        - "AMOXICILLIN"
+        - "PREDNISONE"
+        - "WARFARIN SODIUM"
+        - "MONTELUKAST SODIUM"
+        - "LOSARTAN POTASSIUM"
+        - "CIPROFLOXACIN HYDROCHLORIDE"
+        - "HYDROCHLOROTHIAZIDE"
+        - "SIMVASTATIN"
+        - "METOPROLOL TARTRATE"
+        - "FUROSEMIDE"
+        - "TRAMADOL HYDROCHLORIDE"
+        - "ALBUTEROL SULFATE"
+        - "FLUOXETINE HYDROCHLORIDE"
+        - "PANTOPRAZOLE SODIUM"
+        - "ESCITALOPROM OXALATE"
+        - "CLOPIDOGREL BISULFATE"
+
+  CLINICAL_TRIALS:
+    enabled: true
+    n_families: 125
+    question_type_counts:
+      DIRECT_RETRIEVAL: 25
+      RETRIEVAL_CALCULATION: 35
+      TEMPORAL_VERSION: 0
+      ENTITY_UNIT_BINDING: 40
+      UNANSWERABLE: 25
+    params:
+      page_size: 100
+      max_pages_per_query: 5
+      overall_status: "COMPLETED"
+      queries:
+        - "metformin"
+        - "atorvastatin"
+        - "pembrolizumab"
+        - "insulin glargine"
+        - "semaglutide"
+        - "rivaroxaban"
+        - "aspirin"
+        - "tranexamic acid"
+        - "nivolumab"
+        - "dapagliflozin"
+        - "apixaban"
+        - "sacubitril valsartan"
+        - "tocilizumab"
+        - "remdesivir"
+        - "denosumab"
+        - "ustekinumab"
+
+  FRED:
+    enabled: true
+    n_families: 125
+    question_type_counts:
+      DIRECT_RETRIEVAL: 25
+      RETRIEVAL_CALCULATION: 35
+      TEMPORAL_VERSION: 20
+      ENTITY_UNIT_BINDING: 20
+      UNANSWERABLE: 25
+    params:
+      observation_start: '1990-01-01'
+      rate_limit_per_second: 4.0
+      vintage_series: [GDP, GDPC1, PAYEMS, UNRATE, CPIAUCSL]
+      vintage_dates: ['2021-04-29', '2021-07-29', '2022-06-29', '2023-09-28', '2025-03-27']
+      vintage_observation_start: '2018-01-01'
+      series:
+        - {id: UNRATE, title: Unemployment Rate, units: Percent, frequency: Monthly, seasonal_adjustment: Seasonally Adjusted, family: unemployment_rate, geo_code: US, geo_name: United States}
+        - {id: UNRATENSA, title: Unemployment Rate, units: Percent, frequency: Monthly, seasonal_adjustment: Not Seasonally Adjusted, family: unemployment_rate, geo_code: US, geo_name: United States}
+        - {id: CPIAUCSL, title: 'Consumer Price Index for All Urban Consumers: All Items in U.S. City Average', units: Index 1982-1984=100, frequency: Monthly, seasonal_adjustment: Seasonally Adjusted, family: cpi_all_items, geo_code: US, geo_name: United States}
+        - {id: CPIAUCNS, title: 'Consumer Price Index for All Urban Consumers: All Items in U.S. City Average', units: Index 1982-1984=100, frequency: Monthly, seasonal_adjustment: Not Seasonally Adjusted, family: cpi_all_items, geo_code: US, geo_name: United States}
+        - {id: PAYEMS, title: All Employees, Total Nonfarm, units: Thousands of Persons, frequency: Monthly, seasonal_adjustment: Seasonally Adjusted, family: nonfarm_payrolls, geo_code: US, geo_name: United States}
+        - {id: PAYNSA, title: All Employees, Total Nonfarm, units: Thousands of Persons, frequency: Monthly, seasonal_adjustment: Not Seasonally Adjusted, family: nonfarm_payrolls, geo_code: US, geo_name: United States}
+        - {id: HOUST, title: 'New Privately-Owned Housing Units Started: Total Units', units: Thousands of Units, frequency: Monthly, seasonal_adjustment: Seasonally Adjusted Annual Rate, family: housing_starts, geo_code: US, geo_name: United States}
+        - {id: INDPRO, title: 'Industrial Production: Total Index', units: Index 2017=100, frequency: Monthly, seasonal_adjustment: Seasonally Adjusted, family: industrial_production, geo_code: US, geo_name: United States}

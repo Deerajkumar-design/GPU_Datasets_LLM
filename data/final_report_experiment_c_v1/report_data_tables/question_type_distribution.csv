@@ -1,0 +1,6 @@
+Question type,Families,Purpose
+DIRECT_RETRIEVAL,20,Single-record factual retrieval.
+RETRIEVAL_CALCULATION,30,Retrieve values and compute a deterministic answer.
+TEMPORAL_VERSION,11,"Identify the requested period, version, or submission."
+ENTITY_UNIT_BINDING,19,"Bind entity, unit, product, route, dosage form, or series attributes."
+UNANSWERABLE,20,Return the insufficient-evidence answer when target evidence is absent.

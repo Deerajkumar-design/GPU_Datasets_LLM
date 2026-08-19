@@ -1,0 +1,317 @@
+{
+  "families": {
+    "CT_0007": {
+      "context_lengths_after": [
+        4096,
+        8192,
+        16384,
+        32768,
+        65536,
+        131072
+      ],
+      "distractor_counts_after": {
+        "OTHER_SAME_DOMAIN": 1235,
+        "WRONG_ENTITY": 954,
+        "WRONG_FIELD": 159
+      },
+      "distractor_counts_before": {
+        "NEAR_MATCH_VALUE": 18,
+        "OTHER_SAME_DOMAIN": 1089,
+        "WRONG_ENTITY": 838,
+        "WRONG_FIELD": 153
+      },
+      "equivalence_groups_after_128k": [],
+      "family_id_changed": false,
+      "foil_leakage_after_terms": [],
+      "foil_leakage_before_terms": [],
+      "gold_display_mapping_after_4k": [],
+      "invalid_near_match_after": 0,
+      "invalid_near_match_before": 18,
+      "new_dataset": "pilot_v2",
+      "old_dataset": "pilot",
+      "question_after": "Using only the ClinicalTrials.gov records supplied in the context, what is the date on which results were first posted for trial NCT02339493 (\"Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter\")? If the supplied records do not contain this field for this trial, state that the evidence is insufficient rather than inferring it from another date or another trial.",
+      "question_before": "Using only the ClinicalTrials.gov records supplied in the context, what is the date on which results were first posted for trial NCT02339493 (\"Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter\")? If the supplied records do not contain this field for this trial, state that the evidence is insufficient rather than inferring it from another date or another trial."
+    },
+    "FDA_0003": {
+      "context_lengths_after": [
+        4096,
+        8192,
+        16384,
+        32768,
+        65536,
+        131072
+      ],
+      "distractor_counts_after": {
+        "OTHER_SAME_DOMAIN": 1459,
+        "WRONG_ENTITY": 1067,
+        "WRONG_FIELD": 35
+      },
+      "distractor_counts_before": {
+        "OTHER_SAME_DOMAIN": 1275,
+        "WRONG_ENTITY": 927,
+        "WRONG_FIELD": 36
+      },
+      "equivalence_groups_after_128k": [
+        {
+          "canonical_record_ids": [
+            "FDA-ANDA091352-003-strength-OMEPRAZOLE-0-2a6b2002"
+          ],
+          "display_ids": [
+            "R019AE1C43D"
+          ],
+          "gold_record_id": "FDA-ANDA091352-003-strength-OMEPRAZOLE-0-2a6b2002",
+          "group_id": "EG9B8EC38389"
+        }
+      ],
+      "family_id_changed": false,
+      "foil_leakage_after_terms": [],
+      "foil_leakage_before_terms": [
+        "not the answer",
+        "those are not",
+        "different strengths"
+      ],
+      "gold_display_mapping_after_4k": [
+        [
+          "R019AE1C43D",
+          "FDA-ANDA091352-003-strength-OMEPRAZOLE-0-2a6b2002"
+        ]
+      ],
+      "invalid_near_match_after": 0,
+      "invalid_near_match_before": 0,
+      "new_dataset": "pilot_v2",
+      "old_dataset": "pilot",
+      "question_after": "Using only the Drugs@FDA records supplied in the context, what is the listed strength of OMEPRAZOLE in product number 003 under FDA application ANDA091352 (dosage form CAPSULE, DELAYED REL PELLETS, route ORAL)? Report the strength string exactly as recorded.",
+      "question_before": "Using only the Drugs@FDA records supplied in the context, what is the listed strength of OMEPRAZOLE in product number 003 under FDA application ANDA091352 (dosage form CAPSULE, DELAYED REL PELLETS, route ORAL)? Report the strength string exactly as recorded. Other products under this same application list different strengths (product 001 = 10MG, product 002 = 20MG); those are not the answer."
+    },
+    "FRED_0007": {
+      "context_lengths_after": [
+        4096,
+        8192,
+        16384,
+        32768,
+        65536,
+        131072
+      ],
+      "distractor_counts_after": {
+        "OTHER_SAME_DOMAIN": 1200,
+        "WRONG_FIELD": 906,
+        "WRONG_PERIOD": 873,
+        "WRONG_SERIES_VARIANT": 11
+      },
+      "distractor_counts_before": {
+        "OTHER_SAME_DOMAIN": 1035,
+        "WRONG_FIELD": 782,
+        "WRONG_PERIOD": 748,
+        "WRONG_UNIT": 11
+      },
+      "equivalence_groups_after_128k": [
+        {
+          "canonical_record_ids": [
+            "FRED-CPIAUCSL-2026-06-01-latest-b06e0481"
+          ],
+          "display_ids": [
+            "REB8EA54B26"
+          ],
+          "gold_record_id": "FRED-CPIAUCSL-2026-06-01-latest-b06e0481",
+          "group_id": "EGC61D55A32E"
+        },
+        {
+          "canonical_record_ids": [
+            "FRED-CPIAUCSL-2026-05-01-latest-f8e9c0e7"
+          ],
+          "display_ids": [
+            "RE5D25FD56F"
+          ],
+          "gold_record_id": "FRED-CPIAUCSL-2026-05-01-latest-f8e9c0e7",
+          "group_id": "EG30D9FB3696"
+        }
+      ],
+      "family_id_changed": false,
+      "foil_leakage_after_terms": [],
+      "foil_leakage_before_terms": [],
+      "gold_display_mapping_after_4k": [
+        [
+          "REB8EA54B26",
+          "FRED-CPIAUCSL-2026-06-01-latest-b06e0481"
+        ],
+        [
+          "RE5D25FD56F",
+          "FRED-CPIAUCSL-2026-05-01-latest-f8e9c0e7"
+        ]
+      ],
+      "invalid_near_match_after": 0,
+      "invalid_near_match_before": 0,
+      "new_dataset": "fred_pilot_v2",
+      "old_dataset": "fred_pilot",
+      "question_after": "Using only the FRED records supplied in the context, calculate the percentage change in FRED series CPIAUCSL (\"Consumer Price Index for All Urban Consumers: All Items in U.S. City Average\"), measured in Index 1982-1984=100, seasonally adjusted, monthly frequency between the observation dated 2026-05-01 and the observation dated 2026-06-01. Use both values from the most recent vintage, apply ((value_2026-06-01 - value_2026-05-01) / value_2026-05-01) * 100, and round to two decimal places.",
+      "question_before": "Using only the FRED records supplied in the context, calculate the percentage change in FRED series CPIAUCSL (\"Consumer Price Index for All Urban Consumers: All Items in U.S. City Average\"), measured in Index 1982-1984=100, seasonally adjusted, monthly frequency between the observation dated 2026-05-01 and the observation dated 2026-06-01. Use both values from the most recent vintage, apply ((value_2026-06-01 - value_2026-05-01) / value_2026-05-01) * 100, and round to two decimal places."
+    },
+    "SEC_0006": {
+      "context_lengths_after": [
+        4096,
+        8192,
+        16384,
+        32768,
+        65536,
+        131072
+      ],
+      "distractor_counts_after": {
+        "NEAR_MATCH_VALUE": 143,
+        "OTHER_SAME_DOMAIN": 697,
+        "WRONG_ENTITY": 6,
+        "WRONG_FIELD": 533,
+        "WRONG_PERIOD": 409
+      },
+      "distractor_counts_before": {
+        "NEAR_MATCH_VALUE": 132,
+        "OTHER_SAME_DOMAIN": 540,
+        "WRONG_ENTITY": 6,
+        "WRONG_FIELD": 411,
+        "WRONG_PERIOD": 356
+      },
+      "equivalence_groups_after_128k": [
+        {
+          "canonical_record_ids": [
+            "SEC-0000789019-NetCashProvidedByUsedInF-USD-2021-07-01-2021-09-30-0001564590-21-051992-6091605a",
+            "SEC-0000789019-NetCashProvidedByUsedInF-USD-CY2021Q3-0001564590-22-035087-306cc7fc"
+          ],
+          "display_ids": [
+            "RE00ECF2D69",
+            "R5B83575D92"
+          ],
+          "gold_record_id": "SEC-0000789019-NetCashProvidedByUsedInF-USD-CY2021Q3-0001564590-22-035087-306cc7fc",
+          "group_id": "EG7B0DB3413A"
+        }
+      ],
+      "family_id_changed": false,
+      "foil_leakage_after_terms": [],
+      "foil_leakage_before_terms": [
+        "not the answer",
+        "context also contains"
+      ],
+      "gold_display_mapping_after_4k": [
+        [
+          "R5B83575D92",
+          "SEC-0000789019-NetCashProvidedByUsedInF-USD-CY2021Q3-0001564590-22-035087-306cc7fc"
+        ]
+      ],
+      "invalid_near_match_after": 0,
+      "invalid_near_match_before": 0,
+      "new_dataset": "pilot_v2",
+      "old_dataset": "pilot",
+      "question_after": "Using only the SEC XBRL company-facts records supplied in the context, what did MICROSOFT CORPORATION (CIK 0000789019) report for us-gaap:NetCashProvidedByUsedInFinancingActivities for the single quarterly XBRL frame CY2021Q3, in USD? Report the quarterly figure exactly.",
+      "question_before": "Using only the SEC XBRL company-facts records supplied in the context, what did MICROSOFT CORPORATION (CIK 0000789019) report for us-gaap:NetCashProvidedByUsedInFinancingActivities for the single quarterly XBRL frame CY2021Q3, in USD? Report the quarterly figure only \u2014 the context also contains the full-year frame CY2021 for the same concept, which is not the answer."
+    }
+  },
+  "issues": {
+    "distractor_taxonomy": {
+      "CT_0007": {
+        "after_NEAR_MATCH_VALUE": 0,
+        "after_WRONG_SERIES_VARIANT": 0,
+        "after_WRONG_UNIT": 0,
+        "before_NEAR_MATCH_VALUE": 18,
+        "before_WRONG_SERIES_VARIANT": 0,
+        "before_WRONG_UNIT": 0,
+        "invalid_near_match_after": 0,
+        "invalid_near_match_before": 18
+      },
+      "FDA_0003": {
+        "after_NEAR_MATCH_VALUE": 0,
+        "after_WRONG_SERIES_VARIANT": 0,
+        "after_WRONG_UNIT": 0,
+        "before_NEAR_MATCH_VALUE": 0,
+        "before_WRONG_SERIES_VARIANT": 0,
+        "before_WRONG_UNIT": 0,
+        "invalid_near_match_after": 0,
+        "invalid_near_match_before": 0
+      },
+      "FRED_0007": {
+        "after_NEAR_MATCH_VALUE": 0,
+        "after_WRONG_SERIES_VARIANT": 11,
+        "after_WRONG_UNIT": 0,
+        "before_NEAR_MATCH_VALUE": 0,
+        "before_WRONG_SERIES_VARIANT": 0,
+        "before_WRONG_UNIT": 11,
+        "invalid_near_match_after": 0,
+        "invalid_near_match_before": 0
+      },
+      "SEC_0006": {
+        "after_NEAR_MATCH_VALUE": 143,
+        "after_WRONG_SERIES_VARIANT": 0,
+        "after_WRONG_UNIT": 0,
+        "before_NEAR_MATCH_VALUE": 132,
+        "before_WRONG_SERIES_VARIANT": 0,
+        "before_WRONG_UNIT": 0,
+        "invalid_near_match_after": 0,
+        "invalid_near_match_before": 0
+      }
+    },
+    "equivalent_evidence": {
+      "SEC_0006_after_128k_groups": [
+        {
+          "canonical_record_ids": [
+            "SEC-0000789019-NetCashProvidedByUsedInF-USD-2021-07-01-2021-09-30-0001564590-21-051992-6091605a",
+            "SEC-0000789019-NetCashProvidedByUsedInF-USD-CY2021Q3-0001564590-22-035087-306cc7fc"
+          ],
+          "display_ids": [
+            "RE00ECF2D69",
+            "R5B83575D92"
+          ],
+          "gold_record_id": "SEC-0000789019-NetCashProvidedByUsedInF-USD-CY2021Q3-0001564590-22-035087-306cc7fc",
+          "group_id": "EG7B0DB3413A"
+        }
+      ],
+      "implementation": "Preserve source records; expose conservative evidence equivalence groups on families and instances. Version equality is required for version/vintage/submission-selection templates, but not for frame-vs-date duplicate representations where filing version is not the target dimension."
+    },
+    "question_foil_leakage": {
+      "after_families_with_leakage": {},
+      "before_families_with_leakage": {
+        "FDA_0003": [
+          "not the answer",
+          "those are not",
+          "different strengths"
+        ],
+        "SEC_0006": [
+          "not the answer",
+          "context also contains"
+        ]
+      }
+    },
+    "record_ids": {
+      "CLINICAL_TRIALS": {
+        "canonical_record_id": "CT-NCT02339493-eligibility-minimum-age-115a2098",
+        "display_id": "R0772032232"
+      },
+      "FDA": {
+        "canonical_record_id": "FDA-ANDA075410-003-product-dosage-form-ec6caeab",
+        "display_id": "R81082A3D9C"
+      },
+      "FRED": {
+        "canonical_record_id": "FRED-NYUR-2008-08-01-latest-b08220ab",
+        "display_id": "R113E69B80D"
+      },
+      "SEC": {
+        "canonical_record_id": "SEC-0000200406-OperatingIncomeLoss-USD-2012-01-02-2012-04-01-0000200406-12-000081-ef62b079",
+        "display_id": "R7408A293B4"
+      }
+    }
+  },
+  "record_id_examples": {
+    "CLINICAL_TRIALS": {
+      "canonical_record_id": "CT-NCT02339493-eligibility-minimum-age-115a2098",
+      "display_id": "R0772032232"
+    },
+    "FDA": {
+      "canonical_record_id": "FDA-ANDA075410-003-product-dosage-form-ec6caeab",
+      "display_id": "R81082A3D9C"
+    },
+    "FRED": {
+      "canonical_record_id": "FRED-NYUR-2008-08-01-latest-b08220ab",
+      "display_id": "R113E69B80D"
+    },
+    "SEC": {
+      "canonical_record_id": "SEC-0000200406-OperatingIncomeLoss-USD-2012-01-02-2012-04-01-0000200406-12-000081-ef62b079",
+      "display_id": "R7408A293B4"
+    }
+  }
+}

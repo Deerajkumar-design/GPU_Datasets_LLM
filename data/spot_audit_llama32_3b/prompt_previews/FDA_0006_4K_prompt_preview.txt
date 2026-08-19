@@ -1,0 +1,154 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Cutting Knowledge Date: December 2023
+Today Date: 09 Aug 2026
+
+Answer using only the supplied records.
+
+Identify records matching the exact entity, period, version, field, unit, product, route, dosage form, arm, series, or other conditions requested by the question.
+
+If the supplied records do not contain sufficient evidence to answer the question, return INSUFFICIENT_EVIDENCE.
+
+Do not infer or fabricate missing information.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+KNOWLEDGE RECORDS:
+
+<RECORD id="RDB16AE182C" source="OPENFDA_DRUGSFDA">
+entity: AMLODIPINE BESYLATE (ANDA206524, product 003) [ANDA206524/003]
+field: Brand name [product.brand_name]
+value: AMLODIPINE BESYLATE
+dosage_form: TABLET
+route: ORAL
+sponsor: SUNSHINE
+</RECORD>
+<RECORD id="RAF8AF5276C" source="OPENFDA_DRUGSFDA">
+entity: OMEPRAZOLE (ANDA091352, product 002) [ANDA091352/002]
+field: Strength of OMEPRAZOLE [product.active_ingredient_strength]
+unit: MG
+value: 20MG
+dosage_form: CAPSULE, DELAYED REL PELLETS
+route: ORAL
+sponsor: ZYDUS PHARMS USA INC
+</RECORD>
+<RECORD id="RCF913852FB" source="OPENFDA_DRUGSFDA">
+entity: TIROSINT-SOL (NDA206977, product 006) [NDA206977/006]
+field: Strength of LEVOTHYROXINE SODIUM [product.active_ingredient_strength]
+unit: MCG
+value: 100MCG/ML
+dosage_form: SOLUTION
+route: ORAL
+sponsor: IBSA
+</RECORD>
+<RECORD id="R080A947C46" source="OPENFDA_DRUGSFDA">
+entity: ONESOURCE application ANDA200888 [ANDA200888]
+field: SUPPL submission 6 status date [submission.status_date]
+period: 2016
+value: 2016-12-28
+version: SUPPL-6
+sponsor: ONESOURCE
+submission_type: SUPPL
+</RECORD>
+<RECORD id="R75A6FD26AE" source="OPENFDA_DRUGSFDA">
+entity: TWI PHARMS application NDA019777 [NDA019777]
+field: SUPPL submission 15 status date [submission.status_date]
+period: 1992
+value: 1992-11-18
+version: SUPPL-15
+sponsor: TWI PHARMS
+submission_type: SUPPL
+</RECORD>
+<RECORD id="R7A86994701" source="OPENFDA_DRUGSFDA">
+entity: LYPQOZET (ANDA206084, product 001) [ANDA206084/001]
+field: Strength of ATORVASTATIN CALCIUM [product.active_ingredient_strength]
+unit: MG
+value: EQ 10MG BASE
+dosage_form: TABLET
+route: ORAL
+sponsor: PHARMOBEDIENT
+</RECORD>
+<RECORD id="R3309FF41CF" source="OPENFDA_DRUGSFDA">
+entity: METFORMIN HYDROCHLORIDE (ANDA203769, product 005) [ANDA203769/005]
+field: Reference listed drug [product.reference_drug]
+value: No
+dosage_form: TABLET
+route: ORAL
+sponsor: SCIEGEN PHARMS
+</RECORD>
+<RECORD id="R75AA6A409D" source="OPENF
+
+...[middle omitted in compact preview; exact prompt is reproducible from context/question/prompt hash]...
+
+ product 003) [ANDA078402/003]
+field: Strength of LISINOPRIL [product.active_ingredient_strength]
+unit: MG
+value: 10MG
+dosage_form: TABLET
+route: ORAL
+sponsor: WOCKHARDT BIO AG
+</RECORD>
+<RECORD id="RDBC583ECF6" source="OPENFDA_DRUGSFDA">
+entity: VOQUEZNA TRIPLE PAK (NDA215152, product 001) [NDA215152/001]
+field: Strength of AMOXICILLIN [product.active_ingredient_strength]
+unit: MG
+value: 500MG
+dosage_form: CAPSULE, TABLET, TABLET
+route: ORAL
+sponsor: PHATHOM
+</RECORD>
+<RECORD id="R2B5D822E0D" source="OPENFDA_DRUGSFDA">
+entity: ORGANON application NDA020829 [NDA020829]
+field: SUPPL submission 23 status date [submission.status_date]
+period: 2003
+value: 2003-10-02
+version: SUPPL-23
+sponsor: ORGANON
+submission_type: SUPPL
+</RECORD>
+<RECORD id="R286F844192" source="OPENFDA_DRUGSFDA">
+entity: LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE (ANDA200180, product 001) [ANDA200180/001]
+field: Route of administration [product.route]
+value: ORAL
+dosage_form: TABLET
+route: ORAL
+sponsor: WATSON LABS
+</RECORD>
+<RECORD id="RCCF66AB341" source="OPENFDA_DRUGSFDA">
+entity: AMLODIPINE AND OLMESARTAN MEDOXOMIL (ANDA207216, product 002) [ANDA207216/002]
+field: Strength of OLMESARTAN MEDOXOMIL [product.active_ingredient_strength]
+unit: MG
+value: 40MG
+dosage_form: TABLET
+route: ORAL
+sponsor: AJANTA PHARMA LTD
+</RECORD>
+<RECORD id="RC9144ACBD7" source="OPENFDA_DRUGSFDA">
+entity: AMLODIPINE BESYLATE AND ATORVASTATIN CALCIUM (ANDA217279, product 005) [ANDA217279/005]
+field: Marketing status [product.marketing_status]
+value: Prescription
+dosage_form: TABLET
+route: ORAL
+sponsor: ALEMBIC
+</RECORD>
+<RECORD id="R708EFDB732" source="OPENFDA_DRUGSFDA">
+entity: LOTREL (NDA020364, product 004) [NDA020364/004]
+field: Route of administration [product.route]
+value: ORAL
+dosage_form: CAPSULE
+route: ORAL
+sponsor: SANDOZ
+</RECORD>
+
+TARGET QUESTION:
+
+Using only the Drugs@FDA records supplied in the context, what is the listed strength of OMEPRAZOLE in product number 003 under FDA application ANDA091352 (dosage form CAPSULE, DELAYED REL PELLETS, route ORAL)? Report the strength string exactly as recorded.
+
+OUTPUT FORMAT:
+
+Return exactly one JSON object with this schema:
+{"selected_evidence":["R..."],"answer":"...","insufficient_evidence":false}
+
+For insufficient evidence, use:
+{"selected_evidence":[],"answer":"INSUFFICIENT_EVIDENCE","insufficient_evidence":true}
+
+Use only model-facing record IDs from the supplied records. Do not include reasoning.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+

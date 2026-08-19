@@ -1,0 +1,115 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Cutting Knowledge Date: December 2023
+Today Date: 09 Aug 2026
+
+Answer using only the supplied records.
+
+Identify records matching the exact entity, period, version, field, unit, product, route, dosage form, arm, series, or other conditions requested by the question.
+
+If the supplied records do not contain sufficient evidence to answer the question, return INSUFFICIENT_EVIDENCE.
+
+Do not infer or fabricate missing information.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+KNOWLEDGE RECORDS:
+
+<RECORD id="R12E8034845" source="CLINICALTRIALS_GOV_V2">
+entity: Comparison of Exenatide vs. Biphasic Insulin Aspart 30 on Glucose Variability in Type 2 Diabetes [NCT02449603]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 150.0
+version: lastupdate:2018-11-14
+status: COMPLETED
+</RECORD>
+<RECORD id="RA64BF2AD82" source="CLINICALTRIALS_GOV_V2">
+entity: A Study to Compare the Pharmacokinetics of Fimasartan/Atorvastatin Combination Tablet [NCT02566187]
+field: Arm group type: Group 2 [arm.type]
+value: OTHER
+version: lastupdate:2016-02-25
+arm: Group 2
+status: COMPLETED
+</RECORD>
+<RECORD id="RA5AD37569C" source="CLINICALTRIALS_GOV_V2">
+entity: The Accuracy Of A Novel Platelet Activity Assay In Humans On Antiplatelet Agents: Pharmacodynamics And Comparison With Light Transmission Aggregometry [NCT04822363]
+field: Intervention: Clopidogrel [intervention.type]
+value: DRUG
+version: lastupdate:2026-01-22
+intervention: Clopidogrel
+status: COMPLETED
+</RECORD>
+<RECORD id="R5BFE93F7D7" source="CLINICALTRIALS_GOV_V2">
+entity: Relative Bioavailability of Telmisartan and Dipyridamole After Co-administration Compared to the Bioavailability of Telmisartan or Dipyridamole Alone in Healthy Female and Male Subjects [NCT02262793]
+field: Arm group type: ASA/ER-DP alone [arm.type]
+value: ACTIVE_COMPARATOR
+version: lastupdate:2014-10-13
+arm: ASA/ER-DP alone
+status: COMPLETED
+</RECORD>
+<RECORD id="R7CF740250F" source="CLINICALTRIALS_GOV_V2">
+entity: A Study on Comparison of Glargine Plus Glulisine With Premixed Insulin in Type 2 Diabetes Patients [NCT02987751]
+field: Secondary outcome timeframe: Number of events of severe hypoglycemia [outcome.secondary.timeframe]
+value: Baseline and 24 weeks
+version: lastupdate:2019-09-10
+outcome: Number of events of severe hypoglycemia
+status: COMPLETED
+</RECORD>
+<RECORD id="R5CAF535B08" source="CLINICALTRIALS_GOV_V2">
+entity: Safety and Efficacy of Dapagliflozin in Tr
+
+...[middle omitted in compact preview; exact prompt is reproducible from context/question/prompt hash]...
+
+ COMPLETED
+</RECORD>
+<RECORD id="R3301F18D5D" source="CLINICALTRIALS_GOV_V2">
+entity: Relative Bioavailability of Telmisartan and Dipyridamole After Co-administration Compared to the Bioavailability of Telmisartan or Dipyridamole Alone in Healthy Female and Male Subjects [NCT02262793]
+field: Masking [design.masking]
+value: NONE
+version: lastupdate:2014-10-13
+status: COMPLETED
+</RECORD>
+<RECORD id="R18C818557D" source="CLINICALTRIALS_GOV_V2">
+entity: Efficacy and Safety of CS0159 Combined With Semaglutide in MASH Patients With Obesity and T2DM [NCT06492330]
+field: Secondary outcome timeframe: Percentage change in HbA1c relative to baseline [outcome.secondary.timeframe]
+value: Baseline to 16 weeks
+version: lastupdate:2025-06-03
+outcome: Percentage change in HbA1c relative to baseline
+status: COMPLETED
+</RECORD>
+<RECORD id="R236D85CD9C" source="CLINICALTRIALS_GOV_V2">
+entity: Noninferiority Oral Tranexamic Acid vs Intravenous Administration in Total Hip Arthroplasty [NCT04691362]
+field: Primary purpose [design.primary_purpose]
+value: SUPPORTIVE_CARE
+version: lastupdate:2022-12-15
+status: COMPLETED
+</RECORD>
+<RECORD id="RF77A4BB491" source="CLINICALTRIALS_GOV_V2">
+entity: Defactinib Combined With Pembrolizumab and Gemcitabine in Patients With Advanced Cancer [NCT02546531]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 43.0
+version: lastupdate:2021-07-20
+status: COMPLETED
+</RECORD>
+<RECORD id="R821D0C1351" source="CLINICALTRIALS_GOV_V2">
+entity: Metformin in Intracytoplasmic Sperm Injection Cycles [NCT03088631]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 320.0
+version: lastupdate:2019-09-17
+status: COMPLETED
+</RECORD>
+
+TARGET QUESTION:
+
+Using only the ClinicalTrials.gov records supplied in the context, what enrollment count is reported for trial NCT02262793 ("Relative Bioavailability of Telmisartan and Dipyridamole After Co-administration Compared to the Bioavailability of Telmisartan or Dipyridamole Alone in Healthy Female and Male Subjects")? Report the actual number of participants as an integer.
+
+OUTPUT FORMAT:
+
+Return exactly one JSON object with this schema:
+{"selected_evidence":["R..."],"answer":"...","insufficient_evidence":false}
+
+For insufficient evidence, use:
+{"selected_evidence":[],"answer":"INSUFFICIENT_EVIDENCE","insufficient_evidence":true}
+
+Use only model-facing record IDs from the supplied records. Do not include reasoning.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+

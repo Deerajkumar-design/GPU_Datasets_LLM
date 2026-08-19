@@ -1,0 +1,150 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Cutting Knowledge Date: December 2023
+Today Date: 09 Aug 2026
+
+Answer using only the supplied records.
+
+Identify records matching the exact entity, period, version, field, unit, product, route, dosage form, arm, series, or other conditions requested by the question.
+
+If the supplied records do not contain sufficient evidence to answer the question, return INSUFFICIENT_EVIDENCE.
+
+Do not infer or fabricate missing information.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+KNOWLEDGE RECORDS:
+
+<RECORD id="R712407A76A" source="OPENFDA_DRUGSFDA">
+entity: LOSARTAN POTASSIUM (ANDA091129, product 001) [ANDA091129/001]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: WATSON LABS
+</RECORD>
+<RECORD id="R13EF1A4C88" source="OPENFDA_DRUGSFDA">
+entity: IBUPROFEN (ANDA079233, product 001) [ANDA079233/001]
+field: Reference standard [product.reference_standard]
+value: No
+dosage_form: TABLET
+route: ORAL
+sponsor: AMNEAL PHARMS
+</RECORD>
+<RECORD id="RFB45B2A3DB" source="OPENFDA_DRUGSFDA">
+entity: MONTELUKAST SODIUM (ANDA203795, product 001) [ANDA203795/001]
+field: Brand name [product.brand_name]
+value: MONTELUKAST SODIUM
+dosage_form: TABLET, CHEWABLE
+route: ORAL
+sponsor: JUBILANT GENERICS
+</RECORD>
+<RECORD id="R5EEC5D7A10" source="OPENFDA_DRUGSFDA">
+entity: MONTELUKAST SODIUM (ANDA205695, product 001) [ANDA205695/001]
+field: Brand name [product.brand_name]
+value: MONTELUKAST SODIUM
+dosage_form: TABLET, CHEWABLE
+route: ORAL
+sponsor: ANBISON LAB
+</RECORD>
+<RECORD id="R732A038A46" source="OPENFDA_DRUGSFDA">
+entity: LISINOPRIL (ANDA075944, product 003) [ANDA075944/003]
+field: Reference standard [product.reference_standard]
+value: No
+dosage_form: TABLET
+route: ORAL
+sponsor: SUN PHARM INDS LTD
+</RECORD>
+<RECORD id="R6A766DD035" source="OPENFDA_DRUGSFDA">
+entity: AMTURNIDE (NDA200045, product 001) [NDA200045/001]
+field: Strength of AMLODIPINE BESYLATE [product.active_ingredient_strength]
+unit: MG
+value: EQ 5MG BASE
+dosage_form: TABLET
+route: ORAL
+sponsor: NOVARTIS
+</RECORD>
+<RECORD id="R7879058C28" source="OPENFDA_DRUGSFDA">
+entity: MONTELUKAST SODIUM (ANDA205695, product 001) [ANDA205695/001]
+field: Route of administration [product.route]
+value: ORAL
+dosage_form: TABLET, CHEWABLE
+route: ORAL
+sponsor: ANBISON LAB
+</RECORD>
+<RECORD id="RCEB9945702" source="OPENFDA_DRUGSFDA">
+entity: IBUPROFEN (ANDA214003, product 001) [ANDA214003/001]
+field: Strength of IBUPROFEN [product.a
+
+...[middle omitted in compact preview; exact prompt is reproducible from context/question/prompt hash]...
+
+F" source="OPENFDA_DRUGSFDA">
+entity: MONTELUKAST SODIUM (ANDA205695, product 002) [ANDA205695/002]
+field: Reference listed drug [product.reference_drug]
+value: No
+dosage_form: TABLET, CHEWABLE
+route: ORAL
+sponsor: ANBISON LAB
+</RECORD>
+<RECORD id="R8B751414A3" source="OPENFDA_DRUGSFDA">
+entity: SYNJARDY XR (NDA208658, product 004) [NDA208658/004]
+field: Brand name [product.brand_name]
+value: SYNJARDY XR
+dosage_form: TABLET, EXTENDED RELEASE
+route: ORAL
+sponsor: BOEHRINGER INGELHEIM
+</RECORD>
+<RECORD id="RC62FA0708B" source="OPENFDA_DRUGSFDA">
+entity: AMLODIPINE BESYLATE AND ATORVASTATIN CALCIUM (ANDA207762, product 004) [ANDA207762/004]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: APDM PHARMS
+</RECORD>
+<RECORD id="R964589839C" source="OPENFDA_DRUGSFDA">
+entity: AMOXICILLIN AND CLAVULANATE POTASSIUM (ANDA203824, product 001) [ANDA203824/001]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: HIKMA PHARMS
+</RECORD>
+<RECORD id="R8A46EBE880" source="OPENFDA_DRUGSFDA">
+entity: METFORMIN HYDROCHLORIDE (ANDA203686, product 003) [ANDA203686/003]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: ZYDUS HLTHCARE
+</RECORD>
+<RECORD id="R98C78DDA3D" source="OPENFDA_DRUGSFDA">
+entity: ALEMBIC PHARMS LTD application ANDA091617 [ANDA091617]
+field: SUPPL submission 29 status date [submission.status_date]
+period: 2022
+value: 2022-01-14
+version: SUPPL-29
+sponsor: ALEMBIC PHARMS LTD
+submission_type: SUPPL
+</RECORD>
+<RECORD id="RF26BDCE42D" source="OPENFDA_DRUGSFDA">
+entity: AMLODIPINE BESYLATE AND ATORVASTATIN CALCIUM (ANDA205199, product 003) [ANDA205199/003]
+field: Route of administration [product.route]
+value: ORAL
+dosage_form: TABLET
+route: ORAL
+sponsor: APOTEX
+</RECORD>
+
+TARGET QUESTION:
+
+Using only the Drugs@FDA records supplied in the context, how many distinct product entries are listed under FDA application ANDA205695 (sponsor: ANBISON LAB)? Count the products belonging to that application number only, and answer with an integer.
+
+OUTPUT FORMAT:
+
+Return exactly one JSON object with this schema:
+{"selected_evidence":["R..."],"answer":"...","insufficient_evidence":false}
+
+For insufficient evidence, use:
+{"selected_evidence":[],"answer":"INSUFFICIENT_EVIDENCE","insufficient_evidence":true}
+
+Use only model-facing record IDs from the supplied records. Do not include reasoning.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+

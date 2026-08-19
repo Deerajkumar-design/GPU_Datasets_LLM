@@ -1,0 +1,47 @@
+[
+  {
+    "Context":"4K",
+    "Mean latency (s)":0.3173239504,
+    "Median latency (s)":0.3150759311,
+    "P95 latency (s)":0.3498486456,
+    "Total latency (s)":31.732395038,
+    "Mean input tokens":4265.73,
+    "Mean output tokens":8.47
+  },
+  {
+    "Context":"8K",
+    "Mean latency (s)":0.6007813499,
+    "Median latency (s)":0.5982510871,
+    "P95 latency (s)":0.6359666367,
+    "Total latency (s)":60.0781349912,
+    "Mean input tokens":8329.19,
+    "Mean output tokens":8.42
+  },
+  {
+    "Context":"16K",
+    "Mean latency (s)":1.2121606383,
+    "Median latency (s)":1.2097398359,
+    "P95 latency (s)":1.260019206,
+    "Total latency (s)":121.2160638329,
+    "Mean input tokens":16440.02,
+    "Mean output tokens":8.31
+  },
+  {
+    "Context":"32K",
+    "Mean latency (s)":2.842376991,
+    "Median latency (s)":2.8350786096,
+    "P95 latency (s)":2.9353641431,
+    "Total latency (s)":284.237699098,
+    "Mean input tokens":32671.02,
+    "Mean output tokens":8.37
+  },
+  {
+    "Context":"64K",
+    "Mean latency (s)":7.8239024762,
+    "Median latency (s)":7.8105571624,
+    "P95 latency (s)":7.9525140253,
+    "Total latency (s)":782.3902476206,
+    "Mean input tokens":65120.48,
+    "Mean output tokens":8.3
+  }
+]

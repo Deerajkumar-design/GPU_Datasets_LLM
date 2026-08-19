@@ -1,0 +1,4038 @@
+{
+  "instances": [
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0001_4K",
+      "v2_rendered_input_tokens": 4309,
+      "v4_rendered_input_tokens": 4293
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0001_8K",
+      "v2_rendered_input_tokens": 8363,
+      "v4_rendered_input_tokens": 8347
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0001_16K",
+      "v2_rendered_input_tokens": 16481,
+      "v4_rendered_input_tokens": 16465
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0001_32K",
+      "v2_rendered_input_tokens": 32702,
+      "v4_rendered_input_tokens": 32686
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0001_64K",
+      "v2_rendered_input_tokens": 65159,
+      "v4_rendered_input_tokens": 65143
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0002_4K",
+      "v2_rendered_input_tokens": 4269,
+      "v4_rendered_input_tokens": 4253
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0002_8K",
+      "v2_rendered_input_tokens": 8356,
+      "v4_rendered_input_tokens": 8340
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0002_16K",
+      "v2_rendered_input_tokens": 16419,
+      "v4_rendered_input_tokens": 16403
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0002_32K",
+      "v2_rendered_input_tokens": 32676,
+      "v4_rendered_input_tokens": 32660
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0002_64K",
+      "v2_rendered_input_tokens": 65156,
+      "v4_rendered_input_tokens": 65140
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0003_4K",
+      "v2_rendered_input_tokens": 4245,
+      "v4_rendered_input_tokens": 4229
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0003_8K",
+      "v2_rendered_input_tokens": 8356,
+      "v4_rendered_input_tokens": 8340
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0003_16K",
+      "v2_rendered_input_tokens": 16465,
+      "v4_rendered_input_tokens": 16449
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0003_32K",
+      "v2_rendered_input_tokens": 32657,
+      "v4_rendered_input_tokens": 32641
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0003_64K",
+      "v2_rendered_input_tokens": 65172,
+      "v4_rendered_input_tokens": 65156
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0004_4K",
+      "v2_rendered_input_tokens": 4270,
+      "v4_rendered_input_tokens": 4254
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0004_8K",
+      "v2_rendered_input_tokens": 8341,
+      "v4_rendered_input_tokens": 8325
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0004_16K",
+      "v2_rendered_input_tokens": 16469,
+      "v4_rendered_input_tokens": 16453
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0004_32K",
+      "v2_rendered_input_tokens": 32718,
+      "v4_rendered_input_tokens": 32702
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0004_64K",
+      "v2_rendered_input_tokens": 65200,
+      "v4_rendered_input_tokens": 65184
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0005_4K",
+      "v2_rendered_input_tokens": 4246,
+      "v4_rendered_input_tokens": 4230
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0005_8K",
+      "v2_rendered_input_tokens": 8369,
+      "v4_rendered_input_tokens": 8353
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0005_16K",
+      "v2_rendered_input_tokens": 16485,
+      "v4_rendered_input_tokens": 16469
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0005_32K",
+      "v2_rendered_input_tokens": 32712,
+      "v4_rendered_input_tokens": 32696
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0005_64K",
+      "v2_rendered_input_tokens": 65189,
+      "v4_rendered_input_tokens": 65173
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0006_4K",
+      "v2_rendered_input_tokens": 4316,
+      "v4_rendered_input_tokens": 4300
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0006_8K",
+      "v2_rendered_input_tokens": 8398,
+      "v4_rendered_input_tokens": 8382
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0006_16K",
+      "v2_rendered_input_tokens": 16513,
+      "v4_rendered_input_tokens": 16497
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0006_32K",
+      "v2_rendered_input_tokens": 32731,
+      "v4_rendered_input_tokens": 32715
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0006_64K",
+      "v2_rendered_input_tokens": 65252,
+      "v4_rendered_input_tokens": 65236
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0007_4K",
+      "v2_rendered_input_tokens": 4298,
+      "v4_rendered_input_tokens": 4282
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0007_8K",
+      "v2_rendered_input_tokens": 8383,
+      "v4_rendered_input_tokens": 8367
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0007_16K",
+      "v2_rendered_input_tokens": 16529,
+      "v4_rendered_input_tokens": 16513
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0007_32K",
+      "v2_rendered_input_tokens": 32752,
+      "v4_rendered_input_tokens": 32736
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0007_64K",
+      "v2_rendered_input_tokens": 65244,
+      "v4_rendered_input_tokens": 65228
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0008_4K",
+      "v2_rendered_input_tokens": 4340,
+      "v4_rendered_input_tokens": 4324
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0008_8K",
+      "v2_rendered_input_tokens": 8399,
+      "v4_rendered_input_tokens": 8383
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0008_16K",
+      "v2_rendered_input_tokens": 16498,
+      "v4_rendered_input_tokens": 16482
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0008_32K",
+      "v2_rendered_input_tokens": 32757,
+      "v4_rendered_input_tokens": 32741
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0008_64K",
+      "v2_rendered_input_tokens": 65239,
+      "v4_rendered_input_tokens": 65223
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0009_4K",
+      "v2_rendered_input_tokens": 4287,
+      "v4_rendered_input_tokens": 4271
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0009_8K",
+      "v2_rendered_input_tokens": 8405,
+      "v4_rendered_input_tokens": 8389
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0009_16K",
+      "v2_rendered_input_tokens": 16526,
+      "v4_rendered_input_tokens": 16510
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0009_32K",
+      "v2_rendered_input_tokens": 32764,
+      "v4_rendered_input_tokens": 32748
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0009_64K",
+      "v2_rendered_input_tokens": 65247,
+      "v4_rendered_input_tokens": 65231
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0010_4K",
+      "v2_rendered_input_tokens": 4291,
+      "v4_rendered_input_tokens": 4275
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0010_8K",
+      "v2_rendered_input_tokens": 8312,
+      "v4_rendered_input_tokens": 8296
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0010_16K",
+      "v2_rendered_input_tokens": 16462,
+      "v4_rendered_input_tokens": 16446
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0010_32K",
+      "v2_rendered_input_tokens": 32636,
+      "v4_rendered_input_tokens": 32620
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0010_64K",
+      "v2_rendered_input_tokens": 65112,
+      "v4_rendered_input_tokens": 65096
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0011_4K",
+      "v2_rendered_input_tokens": 4267,
+      "v4_rendered_input_tokens": 4251
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0011_8K",
+      "v2_rendered_input_tokens": 8349,
+      "v4_rendered_input_tokens": 8333
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0011_16K",
+      "v2_rendered_input_tokens": 16432,
+      "v4_rendered_input_tokens": 16416
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0011_32K",
+      "v2_rendered_input_tokens": 32686,
+      "v4_rendered_input_tokens": 32670
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0011_64K",
+      "v2_rendered_input_tokens": 65164,
+      "v4_rendered_input_tokens": 65148
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0012_4K",
+      "v2_rendered_input_tokens": 4292,
+      "v4_rendered_input_tokens": 4276
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0012_8K",
+      "v2_rendered_input_tokens": 8330,
+      "v4_rendered_input_tokens": 8314
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0012_16K",
+      "v2_rendered_input_tokens": 16462,
+      "v4_rendered_input_tokens": 16446
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0012_32K",
+      "v2_rendered_input_tokens": 32678,
+      "v4_rendered_input_tokens": 32662
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0012_64K",
+      "v2_rendered_input_tokens": 65157,
+      "v4_rendered_input_tokens": 65141
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0013_4K",
+      "v2_rendered_input_tokens": 4334,
+      "v4_rendered_input_tokens": 4318
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0013_8K",
+      "v2_rendered_input_tokens": 8405,
+      "v4_rendered_input_tokens": 8389
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0013_16K",
+      "v2_rendered_input_tokens": 16519,
+      "v4_rendered_input_tokens": 16503
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0013_32K",
+      "v2_rendered_input_tokens": 32759,
+      "v4_rendered_input_tokens": 32743
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0013_64K",
+      "v2_rendered_input_tokens": 65194,
+      "v4_rendered_input_tokens": 65178
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0014_4K",
+      "v2_rendered_input_tokens": 4277,
+      "v4_rendered_input_tokens": 4261
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0014_8K",
+      "v2_rendered_input_tokens": 8375,
+      "v4_rendered_input_tokens": 8359
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0014_16K",
+      "v2_rendered_input_tokens": 16454,
+      "v4_rendered_input_tokens": 16438
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0014_32K",
+      "v2_rendered_input_tokens": 32735,
+      "v4_rendered_input_tokens": 32719
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0014_64K",
+      "v2_rendered_input_tokens": 65212,
+      "v4_rendered_input_tokens": 65196
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0015_4K",
+      "v2_rendered_input_tokens": 4264,
+      "v4_rendered_input_tokens": 4248
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0015_8K",
+      "v2_rendered_input_tokens": 8365,
+      "v4_rendered_input_tokens": 8349
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0015_16K",
+      "v2_rendered_input_tokens": 16486,
+      "v4_rendered_input_tokens": 16470
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0015_32K",
+      "v2_rendered_input_tokens": 32677,
+      "v4_rendered_input_tokens": 32661
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0015_64K",
+      "v2_rendered_input_tokens": 65218,
+      "v4_rendered_input_tokens": 65202
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0016_4K",
+      "v2_rendered_input_tokens": 4295,
+      "v4_rendered_input_tokens": 4279
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0016_8K",
+      "v2_rendered_input_tokens": 8348,
+      "v4_rendered_input_tokens": 8332
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0016_16K",
+      "v2_rendered_input_tokens": 16462,
+      "v4_rendered_input_tokens": 16446
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0016_32K",
+      "v2_rendered_input_tokens": 32693,
+      "v4_rendered_input_tokens": 32677
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0016_64K",
+      "v2_rendered_input_tokens": 65128,
+      "v4_rendered_input_tokens": 65112
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0017_4K",
+      "v2_rendered_input_tokens": 4233,
+      "v4_rendered_input_tokens": 4217
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0017_8K",
+      "v2_rendered_input_tokens": 8315,
+      "v4_rendered_input_tokens": 8299
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0017_16K",
+      "v2_rendered_input_tokens": 16470,
+      "v4_rendered_input_tokens": 16454
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0017_32K",
+      "v2_rendered_input_tokens": 32639,
+      "v4_rendered_input_tokens": 32623
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0017_64K",
+      "v2_rendered_input_tokens": 65191,
+      "v4_rendered_input_tokens": 65175
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0018_4K",
+      "v2_rendered_input_tokens": 4315,
+      "v4_rendered_input_tokens": 4299
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0018_8K",
+      "v2_rendered_input_tokens": 8364,
+      "v4_rendered_input_tokens": 8348
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0018_16K",
+      "v2_rendered_input_tokens": 16479,
+      "v4_rendered_input_tokens": 16463
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0018_32K",
+      "v2_rendered_input_tokens": 32721,
+      "v4_rendered_input_tokens": 32705
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0018_64K",
+      "v2_rendered_input_tokens": 65165,
+      "v4_rendered_input_tokens": 65149
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0019_4K",
+      "v2_rendered_input_tokens": 4271,
+      "v4_rendered_input_tokens": 4255
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0019_8K",
+      "v2_rendered_input_tokens": 8382,
+      "v4_rendered_input_tokens": 8366
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0019_16K",
+      "v2_rendered_input_tokens": 16494,
+      "v4_rendered_input_tokens": 16478
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0019_32K",
+      "v2_rendered_input_tokens": 32709,
+      "v4_rendered_input_tokens": 32693
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0019_64K",
+      "v2_rendered_input_tokens": 65224,
+      "v4_rendered_input_tokens": 65208
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0020_4K",
+      "v2_rendered_input_tokens": 4315,
+      "v4_rendered_input_tokens": 4299
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0020_8K",
+      "v2_rendered_input_tokens": 8370,
+      "v4_rendered_input_tokens": 8354
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0020_16K",
+      "v2_rendered_input_tokens": 16456,
+      "v4_rendered_input_tokens": 16440
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0020_32K",
+      "v2_rendered_input_tokens": 32730,
+      "v4_rendered_input_tokens": 32714
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0020_64K",
+      "v2_rendered_input_tokens": 65149,
+      "v4_rendered_input_tokens": 65133
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0021_4K",
+      "v2_rendered_input_tokens": 4229,
+      "v4_rendered_input_tokens": 4213
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0021_8K",
+      "v2_rendered_input_tokens": 8343,
+      "v4_rendered_input_tokens": 8327
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0021_16K",
+      "v2_rendered_input_tokens": 16449,
+      "v4_rendered_input_tokens": 16433
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0021_32K",
+      "v2_rendered_input_tokens": 32706,
+      "v4_rendered_input_tokens": 32690
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0021_64K",
+      "v2_rendered_input_tokens": 65169,
+      "v4_rendered_input_tokens": 65153
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0022_4K",
+      "v2_rendered_input_tokens": 4259,
+      "v4_rendered_input_tokens": 4243
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0022_8K",
+      "v2_rendered_input_tokens": 8337,
+      "v4_rendered_input_tokens": 8321
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0022_16K",
+      "v2_rendered_input_tokens": 16473,
+      "v4_rendered_input_tokens": 16457
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0022_32K",
+      "v2_rendered_input_tokens": 32719,
+      "v4_rendered_input_tokens": 32703
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0022_64K",
+      "v2_rendered_input_tokens": 65171,
+      "v4_rendered_input_tokens": 65155
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0023_4K",
+      "v2_rendered_input_tokens": 4281,
+      "v4_rendered_input_tokens": 4265
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0023_8K",
+      "v2_rendered_input_tokens": 8334,
+      "v4_rendered_input_tokens": 8318
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0023_16K",
+      "v2_rendered_input_tokens": 16477,
+      "v4_rendered_input_tokens": 16461
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0023_32K",
+      "v2_rendered_input_tokens": 32707,
+      "v4_rendered_input_tokens": 32691
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0023_64K",
+      "v2_rendered_input_tokens": 65153,
+      "v4_rendered_input_tokens": 65137
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0024_4K",
+      "v2_rendered_input_tokens": 4243,
+      "v4_rendered_input_tokens": 4227
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0024_8K",
+      "v2_rendered_input_tokens": 8327,
+      "v4_rendered_input_tokens": 8311
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0024_16K",
+      "v2_rendered_input_tokens": 16409,
+      "v4_rendered_input_tokens": 16393
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0024_32K",
+      "v2_rendered_input_tokens": 32706,
+      "v4_rendered_input_tokens": 32690
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0024_64K",
+      "v2_rendered_input_tokens": 65191,
+      "v4_rendered_input_tokens": 65175
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0025_4K",
+      "v2_rendered_input_tokens": 4239,
+      "v4_rendered_input_tokens": 4223
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0025_8K",
+      "v2_rendered_input_tokens": 8361,
+      "v4_rendered_input_tokens": 8345
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0025_16K",
+      "v2_rendered_input_tokens": 16428,
+      "v4_rendered_input_tokens": 16412
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0025_32K",
+      "v2_rendered_input_tokens": 32701,
+      "v4_rendered_input_tokens": 32685
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "CT_0025_64K",
+      "v2_rendered_input_tokens": 65126,
+      "v4_rendered_input_tokens": 65110
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0001_4K",
+      "v2_rendered_input_tokens": 4272,
+      "v4_rendered_input_tokens": 4256
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0001_8K",
+      "v2_rendered_input_tokens": 8322,
+      "v4_rendered_input_tokens": 8306
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0001_16K",
+      "v2_rendered_input_tokens": 16406,
+      "v4_rendered_input_tokens": 16390
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0001_32K",
+      "v2_rendered_input_tokens": 32671,
+      "v4_rendered_input_tokens": 32655
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0001_64K",
+      "v2_rendered_input_tokens": 65027,
+      "v4_rendered_input_tokens": 65011
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0002_4K",
+      "v2_rendered_input_tokens": 4300,
+      "v4_rendered_input_tokens": 4284
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0002_8K",
+      "v2_rendered_input_tokens": 8314,
+      "v4_rendered_input_tokens": 8298
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0002_16K",
+      "v2_rendered_input_tokens": 16433,
+      "v4_rendered_input_tokens": 16417
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0002_32K",
+      "v2_rendered_input_tokens": 32624,
+      "v4_rendered_input_tokens": 32608
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0002_64K",
+      "v2_rendered_input_tokens": 65030,
+      "v4_rendered_input_tokens": 65014
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0003_4K",
+      "v2_rendered_input_tokens": 4273,
+      "v4_rendered_input_tokens": 4257
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0003_8K",
+      "v2_rendered_input_tokens": 8282,
+      "v4_rendered_input_tokens": 8266
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0003_16K",
+      "v2_rendered_input_tokens": 16453,
+      "v4_rendered_input_tokens": 16437
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0003_32K",
+      "v2_rendered_input_tokens": 32670,
+      "v4_rendered_input_tokens": 32654
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0003_64K",
+      "v2_rendered_input_tokens": 65048,
+      "v4_rendered_input_tokens": 65032
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0004_4K",
+      "v2_rendered_input_tokens": 4292,
+      "v4_rendered_input_tokens": 4276
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0004_8K",
+      "v2_rendered_input_tokens": 8341,
+      "v4_rendered_input_tokens": 8325
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0004_16K",
+      "v2_rendered_input_tokens": 16420,
+      "v4_rendered_input_tokens": 16404
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0004_32K",
+      "v2_rendered_input_tokens": 32641,
+      "v4_rendered_input_tokens": 32625
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0004_64K",
+      "v2_rendered_input_tokens": 65065,
+      "v4_rendered_input_tokens": 65049
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0005_4K",
+      "v2_rendered_input_tokens": 4314,
+      "v4_rendered_input_tokens": 4298
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0005_8K",
+      "v2_rendered_input_tokens": 8335,
+      "v4_rendered_input_tokens": 8319
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0005_16K",
+      "v2_rendered_input_tokens": 16473,
+      "v4_rendered_input_tokens": 16457
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0005_32K",
+      "v2_rendered_input_tokens": 32662,
+      "v4_rendered_input_tokens": 32646
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0005_64K",
+      "v2_rendered_input_tokens": 65109,
+      "v4_rendered_input_tokens": 65093
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0006_4K",
+      "v2_rendered_input_tokens": 4284,
+      "v4_rendered_input_tokens": 4268
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0006_8K",
+      "v2_rendered_input_tokens": 8369,
+      "v4_rendered_input_tokens": 8353
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0006_16K",
+      "v2_rendered_input_tokens": 16454,
+      "v4_rendered_input_tokens": 16438
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0006_32K",
+      "v2_rendered_input_tokens": 32673,
+      "v4_rendered_input_tokens": 32657
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0006_64K",
+      "v2_rendered_input_tokens": 65080,
+      "v4_rendered_input_tokens": 65064
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0007_4K",
+      "v2_rendered_input_tokens": 4254,
+      "v4_rendered_input_tokens": 4238
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0007_8K",
+      "v2_rendered_input_tokens": 8287,
+      "v4_rendered_input_tokens": 8271
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0007_16K",
+      "v2_rendered_input_tokens": 16406,
+      "v4_rendered_input_tokens": 16390
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0007_32K",
+      "v2_rendered_input_tokens": 32641,
+      "v4_rendered_input_tokens": 32625
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0007_64K",
+      "v2_rendered_input_tokens": 65086,
+      "v4_rendered_input_tokens": 65070
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0008_4K",
+      "v2_rendered_input_tokens": 4271,
+      "v4_rendered_input_tokens": 4255
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0008_8K",
+      "v2_rendered_input_tokens": 8355,
+      "v4_rendered_input_tokens": 8339
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0008_16K",
+      "v2_rendered_input_tokens": 16427,
+      "v4_rendered_input_tokens": 16411
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0008_32K",
+      "v2_rendered_input_tokens": 32661,
+      "v4_rendered_input_tokens": 32645
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0008_64K",
+      "v2_rendered_input_tokens": 65091,
+      "v4_rendered_input_tokens": 65075
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0009_4K",
+      "v2_rendered_input_tokens": 4245,
+      "v4_rendered_input_tokens": 4229
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0009_8K",
+      "v2_rendered_input_tokens": 8362,
+      "v4_rendered_input_tokens": 8346
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0009_16K",
+      "v2_rendered_input_tokens": 16472,
+      "v4_rendered_input_tokens": 16456
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0009_32K",
+      "v2_rendered_input_tokens": 32657,
+      "v4_rendered_input_tokens": 32641
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0009_64K",
+      "v2_rendered_input_tokens": 65134,
+      "v4_rendered_input_tokens": 65118
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0010_4K",
+      "v2_rendered_input_tokens": 4226,
+      "v4_rendered_input_tokens": 4210
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0010_8K",
+      "v2_rendered_input_tokens": 8307,
+      "v4_rendered_input_tokens": 8291
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0010_16K",
+      "v2_rendered_input_tokens": 16454,
+      "v4_rendered_input_tokens": 16438
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0010_32K",
+      "v2_rendered_input_tokens": 32604,
+      "v4_rendered_input_tokens": 32588
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0010_64K",
+      "v2_rendered_input_tokens": 65080,
+      "v4_rendered_input_tokens": 65064
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0011_4K",
+      "v2_rendered_input_tokens": 4274,
+      "v4_rendered_input_tokens": 4258
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0011_8K",
+      "v2_rendered_input_tokens": 8309,
+      "v4_rendered_input_tokens": 8293
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0011_16K",
+      "v2_rendered_input_tokens": 16454,
+      "v4_rendered_input_tokens": 16438
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0011_32K",
+      "v2_rendered_input_tokens": 32611,
+      "v4_rendered_input_tokens": 32595
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0011_64K",
+      "v2_rendered_input_tokens": 65087,
+      "v4_rendered_input_tokens": 65071
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0012_4K",
+      "v2_rendered_input_tokens": 4268,
+      "v4_rendered_input_tokens": 4252
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0012_8K",
+      "v2_rendered_input_tokens": 8335,
+      "v4_rendered_input_tokens": 8319
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0012_16K",
+      "v2_rendered_input_tokens": 16406,
+      "v4_rendered_input_tokens": 16390
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0012_32K",
+      "v2_rendered_input_tokens": 32665,
+      "v4_rendered_input_tokens": 32649
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0012_64K",
+      "v2_rendered_input_tokens": 65025,
+      "v4_rendered_input_tokens": 65009
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0013_4K",
+      "v2_rendered_input_tokens": 4239,
+      "v4_rendered_input_tokens": 4223
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0013_8K",
+      "v2_rendered_input_tokens": 8291,
+      "v4_rendered_input_tokens": 8275
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0013_16K",
+      "v2_rendered_input_tokens": 16417,
+      "v4_rendered_input_tokens": 16401
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0013_32K",
+      "v2_rendered_input_tokens": 32607,
+      "v4_rendered_input_tokens": 32591
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0013_64K",
+      "v2_rendered_input_tokens": 65055,
+      "v4_rendered_input_tokens": 65039
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0014_4K",
+      "v2_rendered_input_tokens": 4309,
+      "v4_rendered_input_tokens": 4293
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0014_8K",
+      "v2_rendered_input_tokens": 8351,
+      "v4_rendered_input_tokens": 8335
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0014_16K",
+      "v2_rendered_input_tokens": 16433,
+      "v4_rendered_input_tokens": 16417
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0014_32K",
+      "v2_rendered_input_tokens": 32690,
+      "v4_rendered_input_tokens": 32674
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0014_64K",
+      "v2_rendered_input_tokens": 65131,
+      "v4_rendered_input_tokens": 65115
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0015_4K",
+      "v2_rendered_input_tokens": 4290,
+      "v4_rendered_input_tokens": 4274
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0015_8K",
+      "v2_rendered_input_tokens": 8309,
+      "v4_rendered_input_tokens": 8293
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0015_16K",
+      "v2_rendered_input_tokens": 16476,
+      "v4_rendered_input_tokens": 16460
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0015_32K",
+      "v2_rendered_input_tokens": 32687,
+      "v4_rendered_input_tokens": 32671
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0015_64K",
+      "v2_rendered_input_tokens": 65142,
+      "v4_rendered_input_tokens": 65126
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0016_4K",
+      "v2_rendered_input_tokens": 4318,
+      "v4_rendered_input_tokens": 4302
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0016_8K",
+      "v2_rendered_input_tokens": 8314,
+      "v4_rendered_input_tokens": 8298
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0016_16K",
+      "v2_rendered_input_tokens": 16416,
+      "v4_rendered_input_tokens": 16400
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0016_32K",
+      "v2_rendered_input_tokens": 32704,
+      "v4_rendered_input_tokens": 32688
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0016_64K",
+      "v2_rendered_input_tokens": 65120,
+      "v4_rendered_input_tokens": 65104
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0017_4K",
+      "v2_rendered_input_tokens": 4303,
+      "v4_rendered_input_tokens": 4287
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0017_8K",
+      "v2_rendered_input_tokens": 8349,
+      "v4_rendered_input_tokens": 8333
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0017_16K",
+      "v2_rendered_input_tokens": 16472,
+      "v4_rendered_input_tokens": 16456
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0017_32K",
+      "v2_rendered_input_tokens": 32646,
+      "v4_rendered_input_tokens": 32630
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0017_64K",
+      "v2_rendered_input_tokens": 65148,
+      "v4_rendered_input_tokens": 65132
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0018_4K",
+      "v2_rendered_input_tokens": 4255,
+      "v4_rendered_input_tokens": 4239
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0018_8K",
+      "v2_rendered_input_tokens": 8344,
+      "v4_rendered_input_tokens": 8328
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0018_16K",
+      "v2_rendered_input_tokens": 16448,
+      "v4_rendered_input_tokens": 16432
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0018_32K",
+      "v2_rendered_input_tokens": 32666,
+      "v4_rendered_input_tokens": 32650
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0018_64K",
+      "v2_rendered_input_tokens": 65087,
+      "v4_rendered_input_tokens": 65071
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0019_4K",
+      "v2_rendered_input_tokens": 4237,
+      "v4_rendered_input_tokens": 4221
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0019_8K",
+      "v2_rendered_input_tokens": 8272,
+      "v4_rendered_input_tokens": 8256
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0019_16K",
+      "v2_rendered_input_tokens": 16391,
+      "v4_rendered_input_tokens": 16375
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0019_32K",
+      "v2_rendered_input_tokens": 32629,
+      "v4_rendered_input_tokens": 32613
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0019_64K",
+      "v2_rendered_input_tokens": 65038,
+      "v4_rendered_input_tokens": 65022
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0020_4K",
+      "v2_rendered_input_tokens": 4268,
+      "v4_rendered_input_tokens": 4252
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0020_8K",
+      "v2_rendered_input_tokens": 8284,
+      "v4_rendered_input_tokens": 8268
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0020_16K",
+      "v2_rendered_input_tokens": 16452,
+      "v4_rendered_input_tokens": 16436
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0020_32K",
+      "v2_rendered_input_tokens": 32661,
+      "v4_rendered_input_tokens": 32645
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0020_64K",
+      "v2_rendered_input_tokens": 65020,
+      "v4_rendered_input_tokens": 65004
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0021_4K",
+      "v2_rendered_input_tokens": 4262,
+      "v4_rendered_input_tokens": 4246
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0021_8K",
+      "v2_rendered_input_tokens": 8345,
+      "v4_rendered_input_tokens": 8329
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0021_16K",
+      "v2_rendered_input_tokens": 16405,
+      "v4_rendered_input_tokens": 16389
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0021_32K",
+      "v2_rendered_input_tokens": 32655,
+      "v4_rendered_input_tokens": 32639
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0021_64K",
+      "v2_rendered_input_tokens": 65022,
+      "v4_rendered_input_tokens": 65006
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0022_4K",
+      "v2_rendered_input_tokens": 4284,
+      "v4_rendered_input_tokens": 4268
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0022_8K",
+      "v2_rendered_input_tokens": 8318,
+      "v4_rendered_input_tokens": 8302
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0022_16K",
+      "v2_rendered_input_tokens": 16457,
+      "v4_rendered_input_tokens": 16441
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0022_32K",
+      "v2_rendered_input_tokens": 32670,
+      "v4_rendered_input_tokens": 32654
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0022_64K",
+      "v2_rendered_input_tokens": 65088,
+      "v4_rendered_input_tokens": 65072
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0023_4K",
+      "v2_rendered_input_tokens": 4252,
+      "v4_rendered_input_tokens": 4236
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0023_8K",
+      "v2_rendered_input_tokens": 8283,
+      "v4_rendered_input_tokens": 8267
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0023_16K",
+      "v2_rendered_input_tokens": 16393,
+      "v4_rendered_input_tokens": 16377
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0023_32K",
+      "v2_rendered_input_tokens": 32623,
+      "v4_rendered_input_tokens": 32607
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0023_64K",
+      "v2_rendered_input_tokens": 65075,
+      "v4_rendered_input_tokens": 65059
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0024_4K",
+      "v2_rendered_input_tokens": 4298,
+      "v4_rendered_input_tokens": 4282
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0024_8K",
+      "v2_rendered_input_tokens": 8325,
+      "v4_rendered_input_tokens": 8309
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0024_16K",
+      "v2_rendered_input_tokens": 16423,
+      "v4_rendered_input_tokens": 16407
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0024_32K",
+      "v2_rendered_input_tokens": 32613,
+      "v4_rendered_input_tokens": 32597
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0024_64K",
+      "v2_rendered_input_tokens": 65091,
+      "v4_rendered_input_tokens": 65075
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0025_4K",
+      "v2_rendered_input_tokens": 4289,
+      "v4_rendered_input_tokens": 4273
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0025_8K",
+      "v2_rendered_input_tokens": 8351,
+      "v4_rendered_input_tokens": 8335
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0025_16K",
+      "v2_rendered_input_tokens": 16438,
+      "v4_rendered_input_tokens": 16422
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0025_32K",
+      "v2_rendered_input_tokens": 32614,
+      "v4_rendered_input_tokens": 32598
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FDA_0025_64K",
+      "v2_rendered_input_tokens": 65094,
+      "v4_rendered_input_tokens": 65078
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0001_4K",
+      "v2_rendered_input_tokens": 4297,
+      "v4_rendered_input_tokens": 4281
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0001_8K",
+      "v2_rendered_input_tokens": 8302,
+      "v4_rendered_input_tokens": 8286
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0001_16K",
+      "v2_rendered_input_tokens": 16396,
+      "v4_rendered_input_tokens": 16380
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0001_32K",
+      "v2_rendered_input_tokens": 32600,
+      "v4_rendered_input_tokens": 32584
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0001_64K",
+      "v2_rendered_input_tokens": 64970,
+      "v4_rendered_input_tokens": 64954
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0002_4K",
+      "v2_rendered_input_tokens": 4252,
+      "v4_rendered_input_tokens": 4236
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0002_8K",
+      "v2_rendered_input_tokens": 8299,
+      "v4_rendered_input_tokens": 8283
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0002_16K",
+      "v2_rendered_input_tokens": 16412,
+      "v4_rendered_input_tokens": 16396
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0002_32K",
+      "v2_rendered_input_tokens": 32634,
+      "v4_rendered_input_tokens": 32618
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0002_64K",
+      "v2_rendered_input_tokens": 64981,
+      "v4_rendered_input_tokens": 64965
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0003_4K",
+      "v2_rendered_input_tokens": 4315,
+      "v4_rendered_input_tokens": 4299
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0003_8K",
+      "v2_rendered_input_tokens": 8339,
+      "v4_rendered_input_tokens": 8323
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0003_16K",
+      "v2_rendered_input_tokens": 16424,
+      "v4_rendered_input_tokens": 16408
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0003_32K",
+      "v2_rendered_input_tokens": 32675,
+      "v4_rendered_input_tokens": 32659
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0003_64K",
+      "v2_rendered_input_tokens": 65023,
+      "v4_rendered_input_tokens": 65007
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0004_4K",
+      "v2_rendered_input_tokens": 4279,
+      "v4_rendered_input_tokens": 4263
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0004_8K",
+      "v2_rendered_input_tokens": 8352,
+      "v4_rendered_input_tokens": 8336
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0004_16K",
+      "v2_rendered_input_tokens": 16395,
+      "v4_rendered_input_tokens": 16379
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0004_32K",
+      "v2_rendered_input_tokens": 32640,
+      "v4_rendered_input_tokens": 32624
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0004_64K",
+      "v2_rendered_input_tokens": 64953,
+      "v4_rendered_input_tokens": 64937
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0005_4K",
+      "v2_rendered_input_tokens": 4282,
+      "v4_rendered_input_tokens": 4266
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0005_8K",
+      "v2_rendered_input_tokens": 8320,
+      "v4_rendered_input_tokens": 8304
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0005_16K",
+      "v2_rendered_input_tokens": 16414,
+      "v4_rendered_input_tokens": 16398
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0005_32K",
+      "v2_rendered_input_tokens": 32596,
+      "v4_rendered_input_tokens": 32580
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0005_64K",
+      "v2_rendered_input_tokens": 64933,
+      "v4_rendered_input_tokens": 64917
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0006_4K",
+      "v2_rendered_input_tokens": 4304,
+      "v4_rendered_input_tokens": 4288
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0006_8K",
+      "v2_rendered_input_tokens": 8344,
+      "v4_rendered_input_tokens": 8328
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0006_16K",
+      "v2_rendered_input_tokens": 16392,
+      "v4_rendered_input_tokens": 16376
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0006_32K",
+      "v2_rendered_input_tokens": 32615,
+      "v4_rendered_input_tokens": 32599
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0006_64K",
+      "v2_rendered_input_tokens": 64952,
+      "v4_rendered_input_tokens": 64936
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0007_4K",
+      "v2_rendered_input_tokens": 4258,
+      "v4_rendered_input_tokens": 4242
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0007_8K",
+      "v2_rendered_input_tokens": 8299,
+      "v4_rendered_input_tokens": 8283
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0007_16K",
+      "v2_rendered_input_tokens": 16437,
+      "v4_rendered_input_tokens": 16421
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0007_32K",
+      "v2_rendered_input_tokens": 32590,
+      "v4_rendered_input_tokens": 32574
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0007_64K",
+      "v2_rendered_input_tokens": 64969,
+      "v4_rendered_input_tokens": 64953
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0008_4K",
+      "v2_rendered_input_tokens": 4280,
+      "v4_rendered_input_tokens": 4264
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0008_8K",
+      "v2_rendered_input_tokens": 8294,
+      "v4_rendered_input_tokens": 8278
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0008_16K",
+      "v2_rendered_input_tokens": 16403,
+      "v4_rendered_input_tokens": 16387
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0008_32K",
+      "v2_rendered_input_tokens": 32608,
+      "v4_rendered_input_tokens": 32592
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0008_64K",
+      "v2_rendered_input_tokens": 64996,
+      "v4_rendered_input_tokens": 64980
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0009_4K",
+      "v2_rendered_input_tokens": 4298,
+      "v4_rendered_input_tokens": 4282
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0009_8K",
+      "v2_rendered_input_tokens": 8319,
+      "v4_rendered_input_tokens": 8303
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0009_16K",
+      "v2_rendered_input_tokens": 16390,
+      "v4_rendered_input_tokens": 16374
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0009_32K",
+      "v2_rendered_input_tokens": 32629,
+      "v4_rendered_input_tokens": 32613
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0009_64K",
+      "v2_rendered_input_tokens": 64991,
+      "v4_rendered_input_tokens": 64975
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0010_4K",
+      "v2_rendered_input_tokens": 4329,
+      "v4_rendered_input_tokens": 4313
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0010_8K",
+      "v2_rendered_input_tokens": 8392,
+      "v4_rendered_input_tokens": 8376
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0010_16K",
+      "v2_rendered_input_tokens": 16459,
+      "v4_rendered_input_tokens": 16443
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0010_32K",
+      "v2_rendered_input_tokens": 32671,
+      "v4_rendered_input_tokens": 32655
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0010_64K",
+      "v2_rendered_input_tokens": 65015,
+      "v4_rendered_input_tokens": 64999
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0011_4K",
+      "v2_rendered_input_tokens": 4346,
+      "v4_rendered_input_tokens": 4330
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0011_8K",
+      "v2_rendered_input_tokens": 8367,
+      "v4_rendered_input_tokens": 8351
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0011_16K",
+      "v2_rendered_input_tokens": 16466,
+      "v4_rendered_input_tokens": 16450
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0011_32K",
+      "v2_rendered_input_tokens": 32674,
+      "v4_rendered_input_tokens": 32658
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0011_64K",
+      "v2_rendered_input_tokens": 65039,
+      "v4_rendered_input_tokens": 65023
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0012_4K",
+      "v2_rendered_input_tokens": 4321,
+      "v4_rendered_input_tokens": 4305
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0012_8K",
+      "v2_rendered_input_tokens": 8346,
+      "v4_rendered_input_tokens": 8330
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0012_16K",
+      "v2_rendered_input_tokens": 16467,
+      "v4_rendered_input_tokens": 16451
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0012_32K",
+      "v2_rendered_input_tokens": 32609,
+      "v4_rendered_input_tokens": 32593
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0012_64K",
+      "v2_rendered_input_tokens": 64985,
+      "v4_rendered_input_tokens": 64969
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0013_4K",
+      "v2_rendered_input_tokens": 4292,
+      "v4_rendered_input_tokens": 4276
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0013_8K",
+      "v2_rendered_input_tokens": 8384,
+      "v4_rendered_input_tokens": 8368
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0013_16K",
+      "v2_rendered_input_tokens": 16458,
+      "v4_rendered_input_tokens": 16442
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0013_32K",
+      "v2_rendered_input_tokens": 32660,
+      "v4_rendered_input_tokens": 32644
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0013_64K",
+      "v2_rendered_input_tokens": 65011,
+      "v4_rendered_input_tokens": 64995
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0014_4K",
+      "v2_rendered_input_tokens": 4310,
+      "v4_rendered_input_tokens": 4294
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0014_8K",
+      "v2_rendered_input_tokens": 8328,
+      "v4_rendered_input_tokens": 8312
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0014_16K",
+      "v2_rendered_input_tokens": 16474,
+      "v4_rendered_input_tokens": 16458
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0014_32K",
+      "v2_rendered_input_tokens": 32658,
+      "v4_rendered_input_tokens": 32642
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0014_64K",
+      "v2_rendered_input_tokens": 64961,
+      "v4_rendered_input_tokens": 64945
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0015_4K",
+      "v2_rendered_input_tokens": 4305,
+      "v4_rendered_input_tokens": 4289
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0015_8K",
+      "v2_rendered_input_tokens": 8353,
+      "v4_rendered_input_tokens": 8337
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0015_16K",
+      "v2_rendered_input_tokens": 16417,
+      "v4_rendered_input_tokens": 16401
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0015_32K",
+      "v2_rendered_input_tokens": 32624,
+      "v4_rendered_input_tokens": 32608
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0015_64K",
+      "v2_rendered_input_tokens": 64943,
+      "v4_rendered_input_tokens": 64927
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0016_4K",
+      "v2_rendered_input_tokens": 4285,
+      "v4_rendered_input_tokens": 4269
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0016_8K",
+      "v2_rendered_input_tokens": 8373,
+      "v4_rendered_input_tokens": 8357
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0016_16K",
+      "v2_rendered_input_tokens": 16438,
+      "v4_rendered_input_tokens": 16422
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0016_32K",
+      "v2_rendered_input_tokens": 32604,
+      "v4_rendered_input_tokens": 32588
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0016_64K",
+      "v2_rendered_input_tokens": 64978,
+      "v4_rendered_input_tokens": 64962
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0017_4K",
+      "v2_rendered_input_tokens": 4312,
+      "v4_rendered_input_tokens": 4296
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0017_8K",
+      "v2_rendered_input_tokens": 8309,
+      "v4_rendered_input_tokens": 8293
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0017_16K",
+      "v2_rendered_input_tokens": 16423,
+      "v4_rendered_input_tokens": 16407
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0017_32K",
+      "v2_rendered_input_tokens": 32626,
+      "v4_rendered_input_tokens": 32610
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0017_64K",
+      "v2_rendered_input_tokens": 64965,
+      "v4_rendered_input_tokens": 64949
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0018_4K",
+      "v2_rendered_input_tokens": 4318,
+      "v4_rendered_input_tokens": 4302
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0018_8K",
+      "v2_rendered_input_tokens": 8330,
+      "v4_rendered_input_tokens": 8314
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0018_16K",
+      "v2_rendered_input_tokens": 16443,
+      "v4_rendered_input_tokens": 16427
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0018_32K",
+      "v2_rendered_input_tokens": 32628,
+      "v4_rendered_input_tokens": 32612
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0018_64K",
+      "v2_rendered_input_tokens": 65043,
+      "v4_rendered_input_tokens": 65027
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0019_4K",
+      "v2_rendered_input_tokens": 4257,
+      "v4_rendered_input_tokens": 4241
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0019_8K",
+      "v2_rendered_input_tokens": 8284,
+      "v4_rendered_input_tokens": 8268
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0019_16K",
+      "v2_rendered_input_tokens": 16403,
+      "v4_rendered_input_tokens": 16387
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0019_32K",
+      "v2_rendered_input_tokens": 32588,
+      "v4_rendered_input_tokens": 32572
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0019_64K",
+      "v2_rendered_input_tokens": 64919,
+      "v4_rendered_input_tokens": 64903
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0020_4K",
+      "v2_rendered_input_tokens": 4265,
+      "v4_rendered_input_tokens": 4249
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0020_8K",
+      "v2_rendered_input_tokens": 8368,
+      "v4_rendered_input_tokens": 8352
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0020_16K",
+      "v2_rendered_input_tokens": 16440,
+      "v4_rendered_input_tokens": 16424
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0020_32K",
+      "v2_rendered_input_tokens": 32592,
+      "v4_rendered_input_tokens": 32576
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0020_64K",
+      "v2_rendered_input_tokens": 64956,
+      "v4_rendered_input_tokens": 64940
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0021_4K",
+      "v2_rendered_input_tokens": 4270,
+      "v4_rendered_input_tokens": 4254
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0021_8K",
+      "v2_rendered_input_tokens": 8320,
+      "v4_rendered_input_tokens": 8304
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0021_16K",
+      "v2_rendered_input_tokens": 16395,
+      "v4_rendered_input_tokens": 16379
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0021_32K",
+      "v2_rendered_input_tokens": 32636,
+      "v4_rendered_input_tokens": 32620
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0021_64K",
+      "v2_rendered_input_tokens": 64986,
+      "v4_rendered_input_tokens": 64970
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0022_4K",
+      "v2_rendered_input_tokens": 4222,
+      "v4_rendered_input_tokens": 4206
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0022_8K",
+      "v2_rendered_input_tokens": 8299,
+      "v4_rendered_input_tokens": 8283
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0022_16K",
+      "v2_rendered_input_tokens": 16355,
+      "v4_rendered_input_tokens": 16339
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0022_32K",
+      "v2_rendered_input_tokens": 32541,
+      "v4_rendered_input_tokens": 32525
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0022_64K",
+      "v2_rendered_input_tokens": 64933,
+      "v4_rendered_input_tokens": 64917
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0023_4K",
+      "v2_rendered_input_tokens": 4287,
+      "v4_rendered_input_tokens": 4271
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0023_8K",
+      "v2_rendered_input_tokens": 8307,
+      "v4_rendered_input_tokens": 8291
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0023_16K",
+      "v2_rendered_input_tokens": 16426,
+      "v4_rendered_input_tokens": 16410
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0023_32K",
+      "v2_rendered_input_tokens": 32654,
+      "v4_rendered_input_tokens": 32638
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0023_64K",
+      "v2_rendered_input_tokens": 65017,
+      "v4_rendered_input_tokens": 65001
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0024_4K",
+      "v2_rendered_input_tokens": 4228,
+      "v4_rendered_input_tokens": 4212
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0024_8K",
+      "v2_rendered_input_tokens": 8343,
+      "v4_rendered_input_tokens": 8327
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0024_16K",
+      "v2_rendered_input_tokens": 16433,
+      "v4_rendered_input_tokens": 16417
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0024_32K",
+      "v2_rendered_input_tokens": 32564,
+      "v4_rendered_input_tokens": 32548
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0024_64K",
+      "v2_rendered_input_tokens": 64991,
+      "v4_rendered_input_tokens": 64975
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0025_4K",
+      "v2_rendered_input_tokens": 4260,
+      "v4_rendered_input_tokens": 4244
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0025_8K",
+      "v2_rendered_input_tokens": 8326,
+      "v4_rendered_input_tokens": 8310
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0025_16K",
+      "v2_rendered_input_tokens": 16421,
+      "v4_rendered_input_tokens": 16405
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0025_32K",
+      "v2_rendered_input_tokens": 32560,
+      "v4_rendered_input_tokens": 32544
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "FRED_0025_64K",
+      "v2_rendered_input_tokens": 64935,
+      "v4_rendered_input_tokens": 64919
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0001_4K",
+      "v2_rendered_input_tokens": 4324,
+      "v4_rendered_input_tokens": 4308
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0001_8K",
+      "v2_rendered_input_tokens": 8340,
+      "v4_rendered_input_tokens": 8324
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0001_16K",
+      "v2_rendered_input_tokens": 16490,
+      "v4_rendered_input_tokens": 16474
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0001_32K",
+      "v2_rendered_input_tokens": 32748,
+      "v4_rendered_input_tokens": 32732
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0001_64K",
+      "v2_rendered_input_tokens": 65284,
+      "v4_rendered_input_tokens": 65268
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0002_4K",
+      "v2_rendered_input_tokens": 4307,
+      "v4_rendered_input_tokens": 4291
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0002_8K",
+      "v2_rendered_input_tokens": 8326,
+      "v4_rendered_input_tokens": 8310
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0002_16K",
+      "v2_rendered_input_tokens": 16469,
+      "v4_rendered_input_tokens": 16453
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0002_32K",
+      "v2_rendered_input_tokens": 32770,
+      "v4_rendered_input_tokens": 32754
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0002_64K",
+      "v2_rendered_input_tokens": 65303,
+      "v4_rendered_input_tokens": 65287
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0003_4K",
+      "v2_rendered_input_tokens": 4338,
+      "v4_rendered_input_tokens": 4322
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0003_8K",
+      "v2_rendered_input_tokens": 8388,
+      "v4_rendered_input_tokens": 8372
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0003_16K",
+      "v2_rendered_input_tokens": 16473,
+      "v4_rendered_input_tokens": 16457
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0003_32K",
+      "v2_rendered_input_tokens": 32774,
+      "v4_rendered_input_tokens": 32758
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0003_64K",
+      "v2_rendered_input_tokens": 65356,
+      "v4_rendered_input_tokens": 65340
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0004_4K",
+      "v2_rendered_input_tokens": 4296,
+      "v4_rendered_input_tokens": 4280
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0004_8K",
+      "v2_rendered_input_tokens": 8365,
+      "v4_rendered_input_tokens": 8349
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0004_16K",
+      "v2_rendered_input_tokens": 16524,
+      "v4_rendered_input_tokens": 16508
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0004_32K",
+      "v2_rendered_input_tokens": 32793,
+      "v4_rendered_input_tokens": 32777
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0004_64K",
+      "v2_rendered_input_tokens": 65327,
+      "v4_rendered_input_tokens": 65311
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0005_4K",
+      "v2_rendered_input_tokens": 4229,
+      "v4_rendered_input_tokens": 4213
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0005_8K",
+      "v2_rendered_input_tokens": 8394,
+      "v4_rendered_input_tokens": 8378
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0005_16K",
+      "v2_rendered_input_tokens": 16480,
+      "v4_rendered_input_tokens": 16464
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0005_32K",
+      "v2_rendered_input_tokens": 32804,
+      "v4_rendered_input_tokens": 32788
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0005_64K",
+      "v2_rendered_input_tokens": 65278,
+      "v4_rendered_input_tokens": 65262
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0006_4K",
+      "v2_rendered_input_tokens": 4326,
+      "v4_rendered_input_tokens": 4310
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0006_8K",
+      "v2_rendered_input_tokens": 8360,
+      "v4_rendered_input_tokens": 8344
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0006_16K",
+      "v2_rendered_input_tokens": 16519,
+      "v4_rendered_input_tokens": 16503
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0006_32K",
+      "v2_rendered_input_tokens": 32761,
+      "v4_rendered_input_tokens": 32745
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0006_64K",
+      "v2_rendered_input_tokens": 65292,
+      "v4_rendered_input_tokens": 65276
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0007_4K",
+      "v2_rendered_input_tokens": 4229,
+      "v4_rendered_input_tokens": 4213
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0007_8K",
+      "v2_rendered_input_tokens": 8385,
+      "v4_rendered_input_tokens": 8369
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0007_16K",
+      "v2_rendered_input_tokens": 16432,
+      "v4_rendered_input_tokens": 16416
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0007_32K",
+      "v2_rendered_input_tokens": 32791,
+      "v4_rendered_input_tokens": 32775
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0007_64K",
+      "v2_rendered_input_tokens": 65305,
+      "v4_rendered_input_tokens": 65289
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0008_4K",
+      "v2_rendered_input_tokens": 4327,
+      "v4_rendered_input_tokens": 4311
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0008_8K",
+      "v2_rendered_input_tokens": 8350,
+      "v4_rendered_input_tokens": 8334
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0008_16K",
+      "v2_rendered_input_tokens": 16497,
+      "v4_rendered_input_tokens": 16481
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0008_32K",
+      "v2_rendered_input_tokens": 32785,
+      "v4_rendered_input_tokens": 32769
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0008_64K",
+      "v2_rendered_input_tokens": 65341,
+      "v4_rendered_input_tokens": 65325
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0009_4K",
+      "v2_rendered_input_tokens": 4320,
+      "v4_rendered_input_tokens": 4304
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0009_8K",
+      "v2_rendered_input_tokens": 8356,
+      "v4_rendered_input_tokens": 8340
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0009_16K",
+      "v2_rendered_input_tokens": 16470,
+      "v4_rendered_input_tokens": 16454
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0009_32K",
+      "v2_rendered_input_tokens": 32802,
+      "v4_rendered_input_tokens": 32786
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0009_64K",
+      "v2_rendered_input_tokens": 65336,
+      "v4_rendered_input_tokens": 65320
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0010_4K",
+      "v2_rendered_input_tokens": 4274,
+      "v4_rendered_input_tokens": 4258
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0010_8K",
+      "v2_rendered_input_tokens": 8396,
+      "v4_rendered_input_tokens": 8380
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0010_16K",
+      "v2_rendered_input_tokens": 16496,
+      "v4_rendered_input_tokens": 16480
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0010_32K",
+      "v2_rendered_input_tokens": 32720,
+      "v4_rendered_input_tokens": 32704
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0010_64K",
+      "v2_rendered_input_tokens": 65331,
+      "v4_rendered_input_tokens": 65315
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0011_4K",
+      "v2_rendered_input_tokens": 4239,
+      "v4_rendered_input_tokens": 4223
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0011_8K",
+      "v2_rendered_input_tokens": 8327,
+      "v4_rendered_input_tokens": 8311
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0011_16K",
+      "v2_rendered_input_tokens": 16460,
+      "v4_rendered_input_tokens": 16444
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0011_32K",
+      "v2_rendered_input_tokens": 32817,
+      "v4_rendered_input_tokens": 32801
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0011_64K",
+      "v2_rendered_input_tokens": 65354,
+      "v4_rendered_input_tokens": 65338
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0012_4K",
+      "v2_rendered_input_tokens": 4233,
+      "v4_rendered_input_tokens": 4217
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0012_8K",
+      "v2_rendered_input_tokens": 8404,
+      "v4_rendered_input_tokens": 8388
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0012_16K",
+      "v2_rendered_input_tokens": 16536,
+      "v4_rendered_input_tokens": 16520
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0012_32K",
+      "v2_rendered_input_tokens": 32723,
+      "v4_rendered_input_tokens": 32707
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0012_64K",
+      "v2_rendered_input_tokens": 65306,
+      "v4_rendered_input_tokens": 65290
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0013_4K",
+      "v2_rendered_input_tokens": 4241,
+      "v4_rendered_input_tokens": 4225
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0013_8K",
+      "v2_rendered_input_tokens": 8313,
+      "v4_rendered_input_tokens": 8297
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0013_16K",
+      "v2_rendered_input_tokens": 16545,
+      "v4_rendered_input_tokens": 16529
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0013_32K",
+      "v2_rendered_input_tokens": 32730,
+      "v4_rendered_input_tokens": 32714
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0013_64K",
+      "v2_rendered_input_tokens": 65266,
+      "v4_rendered_input_tokens": 65250
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0014_4K",
+      "v2_rendered_input_tokens": 4300,
+      "v4_rendered_input_tokens": 4284
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0014_8K",
+      "v2_rendered_input_tokens": 8331,
+      "v4_rendered_input_tokens": 8315
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0014_16K",
+      "v2_rendered_input_tokens": 16452,
+      "v4_rendered_input_tokens": 16436
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0014_32K",
+      "v2_rendered_input_tokens": 32736,
+      "v4_rendered_input_tokens": 32720
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0014_64K",
+      "v2_rendered_input_tokens": 65356,
+      "v4_rendered_input_tokens": 65340
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0015_4K",
+      "v2_rendered_input_tokens": 4276,
+      "v4_rendered_input_tokens": 4260
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0015_8K",
+      "v2_rendered_input_tokens": 8412,
+      "v4_rendered_input_tokens": 8396
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0015_16K",
+      "v2_rendered_input_tokens": 16455,
+      "v4_rendered_input_tokens": 16439
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0015_32K",
+      "v2_rendered_input_tokens": 32807,
+      "v4_rendered_input_tokens": 32791
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0015_64K",
+      "v2_rendered_input_tokens": 65252,
+      "v4_rendered_input_tokens": 65236
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0016_4K",
+      "v2_rendered_input_tokens": 4280,
+      "v4_rendered_input_tokens": 4264
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0016_8K",
+      "v2_rendered_input_tokens": 8418,
+      "v4_rendered_input_tokens": 8402
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0016_16K",
+      "v2_rendered_input_tokens": 16486,
+      "v4_rendered_input_tokens": 16470
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0016_32K",
+      "v2_rendered_input_tokens": 32823,
+      "v4_rendered_input_tokens": 32807
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0016_64K",
+      "v2_rendered_input_tokens": 65264,
+      "v4_rendered_input_tokens": 65248
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0017_4K",
+      "v2_rendered_input_tokens": 4230,
+      "v4_rendered_input_tokens": 4214
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0017_8K",
+      "v2_rendered_input_tokens": 8388,
+      "v4_rendered_input_tokens": 8372
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0017_16K",
+      "v2_rendered_input_tokens": 16529,
+      "v4_rendered_input_tokens": 16513
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0017_32K",
+      "v2_rendered_input_tokens": 32802,
+      "v4_rendered_input_tokens": 32786
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0017_64K",
+      "v2_rendered_input_tokens": 65296,
+      "v4_rendered_input_tokens": 65280
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0018_4K",
+      "v2_rendered_input_tokens": 4221,
+      "v4_rendered_input_tokens": 4205
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0018_8K",
+      "v2_rendered_input_tokens": 8386,
+      "v4_rendered_input_tokens": 8370
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0018_16K",
+      "v2_rendered_input_tokens": 16502,
+      "v4_rendered_input_tokens": 16486
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0018_32K",
+      "v2_rendered_input_tokens": 32792,
+      "v4_rendered_input_tokens": 32776
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0018_64K",
+      "v2_rendered_input_tokens": 65303,
+      "v4_rendered_input_tokens": 65287
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0019_4K",
+      "v2_rendered_input_tokens": 4356,
+      "v4_rendered_input_tokens": 4340
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0019_8K",
+      "v2_rendered_input_tokens": 8347,
+      "v4_rendered_input_tokens": 8331
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0019_16K",
+      "v2_rendered_input_tokens": 16493,
+      "v4_rendered_input_tokens": 16477
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0019_32K",
+      "v2_rendered_input_tokens": 32814,
+      "v4_rendered_input_tokens": 32798
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0019_64K",
+      "v2_rendered_input_tokens": 65310,
+      "v4_rendered_input_tokens": 65294
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0020_4K",
+      "v2_rendered_input_tokens": 4373,
+      "v4_rendered_input_tokens": 4357
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0020_8K",
+      "v2_rendered_input_tokens": 8443,
+      "v4_rendered_input_tokens": 8427
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0020_16K",
+      "v2_rendered_input_tokens": 16505,
+      "v4_rendered_input_tokens": 16489
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0020_32K",
+      "v2_rendered_input_tokens": 32850,
+      "v4_rendered_input_tokens": 32834
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0020_64K",
+      "v2_rendered_input_tokens": 65349,
+      "v4_rendered_input_tokens": 65333
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0021_4K",
+      "v2_rendered_input_tokens": 4297,
+      "v4_rendered_input_tokens": 4281
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0021_8K",
+      "v2_rendered_input_tokens": 8388,
+      "v4_rendered_input_tokens": 8372
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0021_16K",
+      "v2_rendered_input_tokens": 16529,
+      "v4_rendered_input_tokens": 16513
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0021_32K",
+      "v2_rendered_input_tokens": 32712,
+      "v4_rendered_input_tokens": 32696
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0021_64K",
+      "v2_rendered_input_tokens": 65328,
+      "v4_rendered_input_tokens": 65312
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0022_4K",
+      "v2_rendered_input_tokens": 4253,
+      "v4_rendered_input_tokens": 4237
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0022_8K",
+      "v2_rendered_input_tokens": 8307,
+      "v4_rendered_input_tokens": 8291
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0022_16K",
+      "v2_rendered_input_tokens": 16531,
+      "v4_rendered_input_tokens": 16515
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0022_32K",
+      "v2_rendered_input_tokens": 32741,
+      "v4_rendered_input_tokens": 32725
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0022_64K",
+      "v2_rendered_input_tokens": 65264,
+      "v4_rendered_input_tokens": 65248
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0023_4K",
+      "v2_rendered_input_tokens": 4263,
+      "v4_rendered_input_tokens": 4247
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0023_8K",
+      "v2_rendered_input_tokens": 8391,
+      "v4_rendered_input_tokens": 8375
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0023_16K",
+      "v2_rendered_input_tokens": 16524,
+      "v4_rendered_input_tokens": 16508
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0023_32K",
+      "v2_rendered_input_tokens": 32719,
+      "v4_rendered_input_tokens": 32703
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0023_64K",
+      "v2_rendered_input_tokens": 65333,
+      "v4_rendered_input_tokens": 65317
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0024_4K",
+      "v2_rendered_input_tokens": 4297,
+      "v4_rendered_input_tokens": 4281
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0024_8K",
+      "v2_rendered_input_tokens": 8311,
+      "v4_rendered_input_tokens": 8295
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0024_16K",
+      "v2_rendered_input_tokens": 16509,
+      "v4_rendered_input_tokens": 16493
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0024_32K",
+      "v2_rendered_input_tokens": 32728,
+      "v4_rendered_input_tokens": 32712
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0024_64K",
+      "v2_rendered_input_tokens": 65213,
+      "v4_rendered_input_tokens": 65197
+    },
+    {
+      "context_length_label": "4K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0025_4K",
+      "v2_rendered_input_tokens": 4310,
+      "v4_rendered_input_tokens": 4294
+    },
+    {
+      "context_length_label": "8K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0025_8K",
+      "v2_rendered_input_tokens": 8355,
+      "v4_rendered_input_tokens": 8339
+    },
+    {
+      "context_length_label": "16K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0025_16K",
+      "v2_rendered_input_tokens": 16439,
+      "v4_rendered_input_tokens": 16423
+    },
+    {
+      "context_length_label": "32K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0025_32K",
+      "v2_rendered_input_tokens": 32768,
+      "v4_rendered_input_tokens": 32752
+    },
+    {
+      "context_length_label": "64K",
+      "delta_tokens": -16,
+      "fits_budget": true,
+      "instance_id": "SEC_0025_64K",
+      "v2_rendered_input_tokens": 65301,
+      "v4_rendered_input_tokens": 65285
+    }
+  ],
+  "summary": {
+    "by_context": {
+      "16K": {
+        "max": 16529,
+        "mean": 16440.02,
+        "min": 16339
+      },
+      "32K": {
+        "max": 32834,
+        "mean": 32671.02,
+        "min": 32525
+      },
+      "4K": {
+        "max": 4357,
+        "mean": 4265.73,
+        "min": 4205
+      },
+      "64K": {
+        "max": 65340,
+        "mean": 65120.48,
+        "min": 64903
+      },
+      "8K": {
+        "max": 8427,
+        "mean": 8329.19,
+        "min": 8256
+      }
+    },
+    "max_delta_tokens": -16,
+    "max_v4_rendered_input_tokens": 65340,
+    "overflow_count": 0,
+    "prompt_hash": "5d2869822989e19b",
+    "prompt_version": "llama_chat_v4"
+  }
+}

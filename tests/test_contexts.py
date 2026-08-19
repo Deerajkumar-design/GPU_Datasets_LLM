@@ -20,6 +20,7 @@ from longctx_dataset.validation.contexts import (
     check_nesting, check_no_truncation, check_record_boundaries,
     check_target_position, check_token_compliance, is_subsequence,
 )
+from longctx_dataset.context.display_ids import DISPLAY_ID_RE
 
 
 def rec(rid, *, entity="E1", concept="c1", period="CY2024", value=100.0, unit="USD") -> NormalizedRecord:
@@ -47,6 +48,34 @@ def answerable_family(pool: RecordPool) -> QuestionFamily:
         gold_evidence=[GoldEvidence.from_record(tgt, "target_value")], gold_evidence_ids=["TGT"],
         target_conditions={"records": [{"entity_id": "E1", "concept": "c1",
                                         "period": "CY2024", "unit": "USD", "version": "v1"}]},
+        generation_metadata=GenerationMetadata(template_id="T", seed=1, config_hash="h"),
+    )
+
+
+def calculation_family(pool: RecordPool) -> QuestionFamily:
+    a = pool.get("A")
+    b = pool.get("B")
+    return QuestionFamily(
+        question_family_id="F_0003", domain=Domain.SEC, source_name="SRC",
+        question_type=QuestionType.RETRIEVAL_CALCULATION, question="What is A minus B?",
+        answerable=True, gold_answer="7", gold_answer_normalized=7.0,
+        answer_type=AnswerType.NUMERIC, answer_unit="USD", numeric_tolerance=0.01,
+        gold_evidence=[GoldEvidence.from_record(a, "left"), GoldEvidence.from_record(b, "right")],
+        gold_evidence_ids=["A", "B"],
+        calculation_spec={
+            "operation": "difference",
+            "formula": "left - right",
+            "operands": {"left": "A", "right": "B"},
+            "operand_values": {"left": 10.0, "right": 3.0},
+            "raw_result": 7.0,
+            "rounded_result": 7.0,
+            "round_decimals": 2,
+            "result_unit": "USD",
+        },
+        target_conditions={"records": [
+            {"entity_id": "E1", "concept": "c1", "period": "CY2024", "unit": "USD", "version": "v1"},
+            {"entity_id": "E1", "concept": "c2", "period": "CY2024", "unit": "USD", "version": "v1"},
+        ]},
         generation_metadata=GenerationMetadata(template_id="T", seed=1, config_hash="h"),
     )
 
@@ -147,6 +176,56 @@ def test_record_boundaries_are_well_formed(builder, cfg):
         assert check_record_boundaries(inst) == []
         assert inst.context.count("<RECORD id=") == len(inst.context_record_ids)
         assert inst.context.count("</RECORD>") == len(inst.context_record_ids)
+
+
+def test_model_facing_record_ids_are_opaque_and_mapped(builder, cfg):
+    b, pool = builder
+    instances, _ = b.build_family(answerable_family(pool))
+    for inst in instances:
+        assert len(inst.context_display_ids) == len(inst.context_record_ids)
+        assert len(set(inst.context_display_ids)) == len(inst.context_display_ids)
+        assert set(inst.display_id_to_record_id) == set(inst.context_display_ids)
+        assert inst.gold_evidence_display_ids == [
+            inst.context_display_ids[inst.context_record_ids.index(rid)]
+            for rid in inst.gold_evidence_ids
+        ]
+        for display_id, canonical_id in zip(inst.context_display_ids, inst.context_record_ids):
+            assert DISPLAY_ID_RE.match(display_id)
+            assert canonical_id not in display_id
+            assert f'id="{display_id}"' in inst.context
+            assert f'id="{canonical_id}"' not in inst.context
+            assert inst.display_id_to_record_id[display_id] == canonical_id
+
+
+def test_gold_evidence_display_map_is_per_record_for_single_and_multi_gold(cfg):
+    pool = big_pool(800)
+    pool.add(rec("A", concept="c1", value=10.0))
+    pool.add(rec("B", concept="c2", value=3.0))
+    b = ContextBuilder(cfg, pool, get_tokenizer(cfg.tokenizer))
+
+    single = b.build_family(answerable_family(pool))[0][0]
+    assert len(single.gold_evidence_display_map) == 1
+    m = single.gold_evidence_display_map[0]
+    assert m.canonical_record_id == "TGT"
+    assert m.display_id == single.gold_evidence_display_ids[0]
+    assert m.equivalent_display_ids == [m.display_id]
+
+    multi = b.build_family(calculation_family(pool))[0][0]
+    assert [m.canonical_record_id for m in multi.gold_evidence_display_map] == ["A", "B"]
+    assert len(set(m.display_id for m in multi.gold_evidence_display_map)) == 2
+    for m in multi.gold_evidence_display_map:
+        assert m.equivalent_display_ids == [m.display_id]
+        assert set(m.equivalent_display_ids) != set(multi.gold_evidence_display_ids)
+
+
+def test_opaque_ids_are_stable_across_nested_lengths(builder, cfg):
+    b, pool = builder
+    instances, _ = b.build_family(answerable_family(pool))
+    seen = {}
+    for inst in instances:
+        for canonical_id, display_id in zip(inst.context_record_ids, inst.context_display_ids):
+            seen.setdefault(canonical_id, display_id)
+            assert seen[canonical_id] == display_id
 
 
 def test_truncation_check_catches_a_damaged_gold_block(builder, cfg):
@@ -262,7 +341,7 @@ def test_changing_the_seed_changes_the_context_but_not_the_gold(cfg):
     b = ContextBuilder(cfg, pool, get_tokenizer(cfg.tokenizer)).build_family(fam)[0]
     assert [i.context_sha256 for i in a] != [i.context_sha256 for i in b]
     assert [i.gold_answer_normalized for i in a] == [i.gold_answer_normalized for i in b]
-    assert {i.lineage["gold_block_sha256"] for i in a} == {i.lineage["gold_block_sha256"] for i in b}
+    assert [i.gold_evidence_ids for i in a] == [i.gold_evidence_ids for i in b]
 
 
 def test_changing_the_tokenizer_changes_measured_lengths_not_gold(cfg):
@@ -273,7 +352,8 @@ def test_changing_the_tokenizer_changes_measured_lengths_not_gold(cfg):
     b = ContextBuilder(cfg, pool, get_tokenizer(cfg.tokenizer)).build_family(fam)[0]
     assert {i.tokenizer for i in a} == {"whitespace:v1"}
     assert {i.tokenizer for i in b} == {"tiktoken:cl100k_base"}
-    assert [i.gold_answer_normalized for i in a] == [i.gold_answer_normalized for i in b]
+    assert {i.gold_answer_normalized for i in a} == {i.gold_answer_normalized for i in b} == {42.0}
+    assert {tuple(i.gold_evidence_ids) for i in a} == {tuple(i.gold_evidence_ids) for i in b}
 
 
 def test_oversized_candidates_are_retained_for_longer_variants(cfg):

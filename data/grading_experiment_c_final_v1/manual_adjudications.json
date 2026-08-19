@@ -1,0 +1,16 @@
+{
+  "adjudications": [
+    {
+      "adjudication_method": "human_manual_review",
+      "adjudication_reason": "Model answer 2023-08-07 is an authentic supplied-context value, but it belongs to CHARTWELL MOLECULAR application ANDA201522 rather than the requested HERITAGE application ANDA091431. Therefore the answer is grounded but wrong-entity, not a hallucination.",
+      "final_answer_correct": false,
+      "final_error_type": "WRONG_ENTITY",
+      "final_hallucination": false,
+      "instance_id": "FDA_0020_32K",
+      "original_answer_correct": false,
+      "original_error_type": "AMBIGUOUS_REVIEW_REQUIRED",
+      "original_hallucination": false
+    }
+  ],
+  "count": 1
+}

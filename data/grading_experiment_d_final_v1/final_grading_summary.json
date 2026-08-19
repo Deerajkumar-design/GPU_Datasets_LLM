@@ -1,0 +1,73 @@
+{
+  "ambiguous": 0,
+  "by_context": {
+    "16K": {
+      "correct": 206,
+      "gradable": 500,
+      "grounded": 120,
+      "hallucinatory": 174,
+      "inaccurate": 294,
+      "runtime_failures": 0
+    },
+    "32K": {
+      "correct": 192,
+      "gradable": 500,
+      "grounded": 117,
+      "hallucinatory": 191,
+      "inaccurate": 308,
+      "runtime_failures": 0
+    },
+    "4K": {
+      "correct": 252,
+      "gradable": 500,
+      "grounded": 77,
+      "hallucinatory": 171,
+      "inaccurate": 248,
+      "runtime_failures": 0
+    },
+    "64K": {
+      "correct": 152,
+      "gradable": 500,
+      "grounded": 139,
+      "hallucinatory": 209,
+      "inaccurate": 348,
+      "runtime_failures": 0
+    },
+    "82K": {
+      "correct": 146,
+      "gradable": 498,
+      "grounded": 151,
+      "hallucinatory": 201,
+      "inaccurate": 352,
+      "runtime_failures": 2
+    },
+    "8K": {
+      "correct": 228,
+      "gradable": 500,
+      "grounded": 86,
+      "hallucinatory": 186,
+      "inaccurate": 272,
+      "runtime_failures": 0
+    }
+  },
+  "correct": 1176,
+  "error_type_counts": {
+    "CALCULATION_ERROR": 68,
+    "CORRECT": 1176,
+    "FAILED_TO_ABSTAIN": 435,
+    "UNNECESSARY_ABSTENTION": 66,
+    "UNSUPPORTED_VALUE": 697,
+    "WRONG_ENTITY": 253,
+    "WRONG_FIELD": 39,
+    "WRONG_PERIOD": 134,
+    "WRONG_SERIES_VARIANT": 13,
+    "WRONG_UNIT": 8,
+    "WRONG_VERSION": 109
+  },
+  "grounded_inaccuracy": 690,
+  "hallucinatory_inaccuracy": 1132,
+  "inaccurate": 1822,
+  "manual_adjudications": 19,
+  "runtime_failures": 2,
+  "successful_graded_responses": 2998
+}

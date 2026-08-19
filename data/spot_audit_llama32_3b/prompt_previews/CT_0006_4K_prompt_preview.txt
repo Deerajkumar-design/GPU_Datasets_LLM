@@ -1,0 +1,122 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Cutting Knowledge Date: December 2023
+Today Date: 09 Aug 2026
+
+Answer using only the supplied records.
+
+Identify records matching the exact entity, period, version, field, unit, product, route, dosage form, arm, series, or other conditions requested by the question.
+
+If the supplied records do not contain sufficient evidence to answer the question, return INSUFFICIENT_EVIDENCE.
+
+Do not infer or fabricate missing information.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+KNOWLEDGE RECORDS:
+
+<RECORD id="R9745B899C3" source="CLINICALTRIALS_GOV_V2">
+entity: Lunch Time Insulin Injection by School Nurse for Poorly Controlled Diabetes [NCT00340613]
+field: Study first posted date [study.first_posted_date]
+period: 2006
+value: 2006-06-21
+version: lastupdate:2016-07-14
+status: COMPLETED
+</RECORD>
+<RECORD id="R64D3FDBD97" source="CLINICALTRIALS_GOV_V2">
+entity: Exercise and Metformin in Colorectal and Breast Cancer Survivors [NCT01340300]
+field: Studied condition [study.condition]
+value: Colorectal Cancer
+version: lastupdate:2018-06-06
+status: COMPLETED
+</RECORD>
+<RECORD id="RF2F4ABDDF6" source="CLINICALTRIALS_GOV_V2">
+entity: Exercise and Metformin in Colorectal and Breast Cancer Survivors [NCT01340300]
+field: Secondary outcome timeframe: Changes in Other Insulin-Related Biomarkers [outcome.secondary.timeframe]
+value: 0 and 3 months (change between 0 and 3 months)
+version: lastupdate:2018-06-06
+outcome: Changes in Other Insulin-Related Biomarkers
+status: COMPLETED
+</RECORD>
+<RECORD id="RD7347784D3" source="CLINICALTRIALS_GOV_V2">
+entity: ROsuvastatin Pretreatment to Reduce MyocArdial Periprocedural Necrosis:Comparison With Atorvastatin Reloading [NCT01228227]
+field: Arm group type: ROSUVASTATIN [arm.type]
+value: ACTIVE_COMPARATOR
+version: lastupdate:2013-01-04
+arm: ROSUVASTATIN
+status: COMPLETED
+</RECORD>
+<RECORD id="RDA0E14FB0A" source="CLINICALTRIALS_GOV_V2">
+entity: Effect of Intravenous Tranexamic Acid on Visual Clarity During Shoulder Arthroscopy in the Beach Chair Position [NCT05397652]
+field: Study completion date [study.completion_date]
+period: 2023
+value: 2023-07-21
+version: lastupdate:2026-02-24
+status: COMPLETED
+</RECORD>
+<RECORD id="R3A687E2993" source="CLINICALTRIALS_GOV_V2">
+entity: Perioperative Outcomes of Postpartum Hemorrhage in Patients Undergoing Cesarean Delivery [NCT04833556]
+field: Study completion date [study.completion_date]
+period: 2024
+value: 2024-12-31
+version: lastupdate:20
+
+...[middle omitted in compact preview; exact prompt is reproducible from context/question/prompt hash]...
+
+ation]
+value: RANDOMIZED
+version: lastupdate:2018-06-06
+status: COMPLETED
+</RECORD>
+<RECORD id="R0F11080F05" source="CLINICALTRIALS_GOV_V2">
+entity: Exercise and Metformin in Colorectal and Breast Cancer Survivors [NCT01340300]
+field: Primary outcome timeframe: Change in Fasting Insulin Level [outcome.primary.timeframe]
+value: 0 and 3 months (change between 0 and 3 months)
+version: lastupdate:2018-06-06
+outcome: Change in Fasting Insulin Level
+status: COMPLETED
+</RECORD>
+<RECORD id="R1F81C893FE" source="CLINICALTRIALS_GOV_V2">
+entity: The Effect of Tranexamic Acid in Total Blood Loss During Proximal Femoral Nailing [NCT05359172]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 100.0
+version: lastupdate:2022-10-10
+status: COMPLETED
+</RECORD>
+<RECORD id="R717F1D4A8F" source="CLINICALTRIALS_GOV_V2">
+entity: Efficacy and Safety of AMR101 (Ethyl Icosapentate) in Patients With Fasting Triglyceride (Tg) Levels ≥ 500 and ≤ 2000 mg/dL [NCT01047683]
+field: Studied condition [study.condition]
+value: Hypertriglyceridemia
+version: lastupdate:2022-04-25
+status: COMPLETED
+</RECORD>
+<RECORD id="R7B3447DE8B" source="CLINICALTRIALS_GOV_V2">
+entity: Exercise and Metformin in Colorectal and Breast Cancer Survivors [NCT01340300]
+field: Results first posted date [study.results_first_posted_date]
+period: 2017
+value: 2017-09-18
+version: lastupdate:2018-06-06
+status: COMPLETED
+</RECORD>
+<RECORD id="RB43396DD2E" source="CLINICALTRIALS_GOV_V2">
+entity: Exercise and Metformin in Colorectal and Breast Cancer Survivors [NCT01340300]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 139.0
+version: lastupdate:2018-06-06
+status: COMPLETED
+</RECORD>
+
+TARGET QUESTION:
+
+Using only the ClinicalTrials.gov records supplied in the context, what is the arm-group TYPE of the arm labelled "Control" in trial NCT01340300 ("Exercise and Metformin in Colorectal and Breast Cancer Survivors")? Answer with the ClinicalTrials.gov arm type value (for example EXPERIMENTAL, ACTIVE_COMPARATOR, PLACEBO_COMPARATOR, SHAM_COMPARATOR, NO_INTERVENTION or OTHER).
+
+OUTPUT FORMAT:
+
+Return exactly one JSON object with this schema:
+{"selected_evidence":["R..."],"answer":"...","insufficient_evidence":false}
+
+For insufficient evidence, use:
+{"selected_evidence":[],"answer":"INSUFFICIENT_EVIDENCE","insufficient_evidence":true}
+
+Use only model-facing record IDs from the supplied records. Do not include reasoning.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+

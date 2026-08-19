@@ -1,0 +1,16 @@
+{
+  "created_at": "2026-08-10T07:01:25.383999+00:00",
+  "current_grader_sha256": "d9282a0ccc50daba3bfd232c058dfbab63a5c19a7323d585a7c2236b3a6c4ba8",
+  "final_dataset_path": "data/grading_experiment_c_final_v1/final_scored_results.jsonl",
+  "final_dataset_sha256": "6fdfaa035b5da2211e813353916902c871e783ecfa993615db672f62bcb8e327",
+  "frozen_grader_manifest_path": "data/grading_experiment_c_full_v1/grader_freeze_manifest.json",
+  "frozen_grader_sha256": "d9282a0ccc50daba3bfd232c058dfbab63a5c19a7323d585a7c2236b3a6c4ba8",
+  "frozen_scored_results_path": "data/grading_experiment_c_full_v1/scored_results.jsonl",
+  "frozen_scored_results_sha256": "6e200de0ba4c52f8c9d34d752ed2d8e8a1af62df9ed6fccbe39826d1e9f4356c",
+  "latency_analysis_performed": false,
+  "manual_adjudication_count": 1,
+  "manual_adjudication_layer": "data/grading_experiment_c_final_v1/manual_adjudications.json",
+  "raw_results_path": "data/inference_llama32_3b_4k64k_v3/results.jsonl",
+  "raw_results_sha256": "1f0d9dba2a54889ff4046df582a441291ba979a4187cd13bc7d0d25dbad8e4a9",
+  "statistical_analysis_performed": false
+}

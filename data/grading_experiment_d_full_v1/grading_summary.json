@@ -1,0 +1,88 @@
+{
+  "ambiguous_review": 19,
+  "correct": 1169,
+  "counts_by_context": {
+    "16K": {
+      "ambiguous": 1,
+      "correct": 205,
+      "format_failure": 0,
+      "gradable_n": 500,
+      "grounded_inaccuracy": 120,
+      "hallucinatory_inaccuracy": 174,
+      "inaccurate": 295,
+      "runtime_failures": 0
+    },
+    "32K": {
+      "ambiguous": 4,
+      "correct": 191,
+      "format_failure": 0,
+      "gradable_n": 500,
+      "grounded_inaccuracy": 114,
+      "hallucinatory_inaccuracy": 191,
+      "inaccurate": 309,
+      "runtime_failures": 0
+    },
+    "4K": {
+      "ambiguous": 3,
+      "correct": 250,
+      "format_failure": 0,
+      "gradable_n": 500,
+      "grounded_inaccuracy": 76,
+      "hallucinatory_inaccuracy": 171,
+      "inaccurate": 250,
+      "runtime_failures": 0
+    },
+    "64K": {
+      "ambiguous": 5,
+      "correct": 151,
+      "format_failure": 0,
+      "gradable_n": 500,
+      "grounded_inaccuracy": 135,
+      "hallucinatory_inaccuracy": 209,
+      "inaccurate": 349,
+      "runtime_failures": 0
+    },
+    "82K": {
+      "ambiguous": 4,
+      "correct": 145,
+      "format_failure": 0,
+      "gradable_n": 498,
+      "grounded_inaccuracy": 148,
+      "hallucinatory_inaccuracy": 201,
+      "inaccurate": 353,
+      "runtime_failures": 2
+    },
+    "8K": {
+      "ambiguous": 2,
+      "correct": 227,
+      "format_failure": 0,
+      "gradable_n": 500,
+      "grounded_inaccuracy": 85,
+      "hallucinatory_inaccuracy": 186,
+      "inaccurate": 273,
+      "runtime_failures": 0
+    }
+  },
+  "error_type_counts": {
+    "AMBIGUOUS_REVIEW_REQUIRED": 19,
+    "CALCULATION_ERROR": 68,
+    "CORRECT": 1169,
+    "FAILED_TO_ABSTAIN": 435,
+    "UNNECESSARY_ABSTENTION": 66,
+    "UNSUPPORTED_VALUE": 697,
+    "WRONG_ENTITY": 241,
+    "WRONG_FIELD": 39,
+    "WRONG_PERIOD": 134,
+    "WRONG_SERIES_VARIANT": 13,
+    "WRONG_UNIT": 8,
+    "WRONG_VERSION": 109
+  },
+  "format_failure": 0,
+  "grader_manifest_sha256": "3c4c9f521b9fe8180f8f5b55b501f492357c52680a93ef4a15dd10453f8fbc70",
+  "grounded_inaccuracy": 678,
+  "hallucinatory_inaccuracy": 1132,
+  "inaccurate": 1829,
+  "runtime_failures": 2,
+  "scored_results_sha256": "7ab4f8df193ae9f5bba2f8ab23b5e1662deee4185b27039f79f08532b6062f17",
+  "successful_responses_graded": 2998
+}

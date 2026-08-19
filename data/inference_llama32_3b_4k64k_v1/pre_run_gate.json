@@ -1,0 +1,13 @@
+{
+  "failures": [],
+  "families": 100,
+  "instances": 500,
+  "instances_by_context_length": {
+    "16K": 100,
+    "32K": 100,
+    "4K": 100,
+    "64K": 100,
+    "8K": 100
+  },
+  "passed": true
+}

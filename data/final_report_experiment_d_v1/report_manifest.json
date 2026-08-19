@@ -1,0 +1,67 @@
+{
+  "analysis_directory": "data/analysis_experiment_d_final_v1",
+  "benchmark_hash": "dc2c4194dedb090198e6883735257908ce274bebc8611b40d958dbd026aa1fe6",
+  "created_at": "2026-08-12T03:02:40.470155+00:00",
+  "figure_files": [
+    "data/final_report_experiment_d_v1/figures/figure_01_factual_reliability_decomposition.pdf",
+    "data/final_report_experiment_d_v1/figures/figure_01_factual_reliability_decomposition.png",
+    "data/final_report_experiment_d_v1/figures/figure_02_overall_inaccuracy.pdf",
+    "data/final_report_experiment_d_v1/figures/figure_02_overall_inaccuracy.png",
+    "data/final_report_experiment_d_v1/figures/figure_03_hallucinatory_inaccuracy.pdf",
+    "data/final_report_experiment_d_v1/figures/figure_03_hallucinatory_inaccuracy.png",
+    "data/final_report_experiment_d_v1/figures/figure_04_grounded_inaccuracy.pdf",
+    "data/final_report_experiment_d_v1/figures/figure_04_grounded_inaccuracy.png",
+    "data/final_report_experiment_d_v1/figures/figure_05_error_type_composition.pdf",
+    "data/final_report_experiment_d_v1/figures/figure_05_error_type_composition.png",
+    "data/final_report_experiment_d_v1/figures/figure_06_inaccuracy_by_question_type.pdf",
+    "data/final_report_experiment_d_v1/figures/figure_06_inaccuracy_by_question_type.png",
+    "data/final_report_experiment_d_v1/figures/figure_07_grounded_inaccuracy_by_question_type.pdf",
+    "data/final_report_experiment_d_v1/figures/figure_07_grounded_inaccuracy_by_question_type.png",
+    "data/final_report_experiment_d_v1/figures/figure_08_inaccuracy_by_domain.pdf",
+    "data/final_report_experiment_d_v1/figures/figure_08_inaccuracy_by_domain.png",
+    "data/final_report_experiment_d_v1/figures/figure_09_grounded_inaccuracy_by_domain.pdf",
+    "data/final_report_experiment_d_v1/figures/figure_09_grounded_inaccuracy_by_domain.png",
+    "data/final_report_experiment_d_v1/figures/figure_10_latency_vs_context_tokens.pdf",
+    "data/final_report_experiment_d_v1/figures/figure_10_latency_vs_context_tokens.png",
+    "data/final_report_experiment_d_v1/figures/figure_11_family_transition_heatmap.pdf",
+    "data/final_report_experiment_d_v1/figures/figure_11_family_transition_heatmap.png"
+  ],
+  "final_csv_hash": "155f80ec3bf284a7928ede0d24b491a972540b77dfe01d98eb622825c9c06a78",
+  "final_jsonl_hash": "8fa4fd3b990adf54b6f7790ed6defa9c5d89aa6dd8365e0a7519beeb44d985e8",
+  "final_scored_dataset": "data/grading_experiment_d_final_v1/final_scored_results.csv",
+  "generated_files": {
+    "docx": "data/final_report_experiment_d_v1/final_experiment_d_report.docx",
+    "html": "data/final_report_experiment_d_v1/final_experiment_d_report.html",
+    "markdown": "data/final_report_experiment_d_v1/final_experiment_d_report.md",
+    "pdf": "data/final_report_experiment_d_v1/final_experiment_d_report.pdf"
+  },
+  "grader_hash": "d9282a0ccc50daba3bfd232c058dfbab63a5c19a7323d585a7c2236b3a6c4ba8",
+  "model_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "package_versions": {
+    "libreoffice": "LibreOffice 7.3.7.2 30(Build:2)",
+    "pandas": "2.2.2",
+    "python": "3.12.4"
+  },
+  "prompt_hash": "5d2869822989e19b",
+  "quality_check": {
+    "docx_embedded_media_count": 11,
+    "docx_missing_required_sections": [],
+    "docx_word_count_estimate": 2134,
+    "frozen_results_unchanged": true,
+    "pdf_pages": 15,
+    "statistics_verified_against_frozen_analysis": true
+  },
+  "report_generation_script": "/home/srinija/GPU_Datasets/scripts/generate_experiment_d_report.py",
+  "report_generation_script_hash": "cd465dae19b1d120b681780671c4164f8a1ff98426c3c27d8b16eec98131d2f2",
+  "table_files": [
+    "data/final_report_experiment_d_v1/tables/complete_case_sensitivity.csv",
+    "data/final_report_experiment_d_v1/tables/domain_summary.csv",
+    "data/final_report_experiment_d_v1/tables/error_type_evolution.csv",
+    "data/final_report_experiment_d_v1/tables/exclude_unanswerable_sensitivity.csv",
+    "data/final_report_experiment_d_v1/tables/latency.csv",
+    "data/final_report_experiment_d_v1/tables/main_results.csv",
+    "data/final_report_experiment_d_v1/tables/paired_tests.csv",
+    "data/final_report_experiment_d_v1/tables/question_type_summary.csv",
+    "data/final_report_experiment_d_v1/tables/trend_results.csv"
+  ]
+}

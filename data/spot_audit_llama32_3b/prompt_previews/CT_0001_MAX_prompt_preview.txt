@@ -1,0 +1,103 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Cutting Knowledge Date: December 2023
+Today Date: 09 Aug 2026
+
+Answer using only the supplied records.
+
+Identify records matching the exact entity, period, version, field, unit, product, route, dosage form, arm, series, or other conditions requested by the question.
+
+If the supplied records do not contain sufficient evidence to answer the question, return INSUFFICIENT_EVIDENCE.
+
+Do not infer or fabricate missing information.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+KNOWLEDGE RECORDS:
+
+<RECORD id="R034F3C9283" source="CLINICALTRIALS_GOV_V2">
+entity: Trial Investigating the Absorption, Metabolism and Excretion After a Single Subcutaneous Dose of [3H]-Semaglutide in Healthy Male Subjects [NCT02060266]
+field: Primary completion date [study.primary_completion_date]
+period: 2014
+value: 2014-04-28
+version: lastupdate:2017-03-28
+status: COMPLETED
+</RECORD>
+<RECORD id="RCF40EE2081" source="CLINICALTRIALS_GOV_V2">
+entity: A Research Study Looking at the Comparability (Bioequivalence) of Two Forms of Semaglutide in Two Different Pen-injectors in People With Overweight or Obesity [NCT04187300]
+field: Study completion date [study.completion_date]
+period: 2020
+value: 2020-09-23
+version: lastupdate:2021-11-11
+status: COMPLETED
+</RECORD>
+<RECORD id="RFBD8BA4CC0" source="CLINICALTRIALS_GOV_V2">
+entity: Safety and Efficacy of Exenatide in Patients With Type 2 Diabetes Using a Thiazolidinedione or a Thiazolidinedione and Metformin [NCT00603239]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 165.0
+version: lastupdate:2015-04-07
+status: COMPLETED
+</RECORD>
+<RECORD id="R030137FD6B" source="CLINICALTRIALS_GOV_V2">
+entity: A One Year Clinical Trial Assessing the Usefulness and Safety of Inhaled Insulin in Diabetics With Asthma [NCT00139659]
+field: Secondary outcome timeframe: Bronchodilator Responsiveness as Determined by the Change in Forced Expiratory Volume in 1 Second (FEV1) Pre-albuterol and 30 Minutes Post-albuterol [outcome.secondary.timeframe]
+value: Baseline, Week 1, Week 2, Week 3, Week 4, Week 6, Week 12, Week 18, Week 26, Week 39, Week 52
+version: lastupdate:2010-06-02
+outcome: Bronchodilator Responsiveness as Determined by the Change in Forced Expiratory Volume in 1 Second (FEV1) Pre-albuterol and 30 Minutes Post-albuterol
+status: COMPLETED
+</RECORD>
+<RECORD id="R1F1506BDF5" source="CLINICALTRIALS_GOV_V2">
+entity: Transfusion of Red Blood Cells, Tranexamic Acid and F
+
+...[middle omitted in compact preview; exact prompt is reproducible from context/question/prompt hash]...
+
+Maximum Observed Concentration (Tmax) [outcome.secondary.timeframe]
+value: Cycle 1 Day 15: pre-dose, 0.5, 1, 2, 4, and 8 hours post LEN dose
+version: lastupdate:2023-10-06
+outcome: Lenalidomide (LEN) Plasma Pharmacokinetic (PK) Parameters in Cycle 1 Day 15: Time to Maximum Observed Concentration (Tmax)
+status: COMPLETED
+</RECORD>
+<RECORD id="R273C6750E7" source="CLINICALTRIALS_GOV_V2">
+entity: Perioperative Use of Tranexamic (TXA) in Bone Tumor Surgery Will Change in Blood Loss and Transfusion Requirements. [NCT05024253]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 48.0
+version: lastupdate:2024-02-07
+status: COMPLETED
+</RECORD>
+<RECORD id="R6C5F49DD87" source="CLINICALTRIALS_GOV_V2">
+entity: A Study of Tirzepatide (LY3298176) in Participants With Obesity or Overweight With Weight Related Comorbidities [NCT05822830]
+field: Accepts healthy volunteers [eligibility.healthy_volunteers]
+value: No
+version: lastupdate:2025-11-26
+status: COMPLETED
+</RECORD>
+<RECORD id="R3E4022843C" source="CLINICALTRIALS_GOV_V2">
+entity: XIENCE Xpedition Everolimus-Eluting Coronary Stent Japan Post Marketing Surveillance (XIENCE Xpedition SV Japan PMS) [NCT02513732]
+field: Secondary outcome timeframe: Number of Participants With Target Vessel Failure (TVF) [outcome.secondary.timeframe]
+value: 0 to 5 years
+version: lastupdate:2021-05-13
+outcome: Number of Participants With Target Vessel Failure (TVF)
+status: COMPLETED
+</RECORD>
+<RECORD id="R3359FD07FA" source="CLINICALTRIALS_GOV_V2">
+entity: Treatment and Management of Women With Bleeding Disorders [NCT00111215]
+field: Eligible sex [eligibility.sex]
+value: FEMALE
+version: lastupdate:2007-03-13
+status: COMPLETED
+</RECORD>
+
+TARGET QUESTION:
+
+Using only the ClinicalTrials.gov records supplied in the context, what enrollment count is reported for trial NCT02262793 ("Relative Bioavailability of Telmisartan and Dipyridamole After Co-administration Compared to the Bioavailability of Telmisartan or Dipyridamole Alone in Healthy Female and Male Subjects")? Report the actual number of participants as an integer.
+
+OUTPUT FORMAT:
+
+Return exactly one JSON object with this schema:
+{"selected_evidence":["R..."],"answer":"...","insufficient_evidence":false}
+
+For insufficient evidence, use:
+{"selected_evidence":[],"answer":"INSUFFICIENT_EVIDENCE","insufficient_evidence":true}
+
+Use only model-facing record IDs from the supplied records. Do not include reasoning.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+

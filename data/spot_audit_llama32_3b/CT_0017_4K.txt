@@ -1,0 +1,307 @@
+<RECORD id="R871FA9E3AA" source="CLINICALTRIALS_GOV_V2">
+entity: Cancer Associated Thrombosis, a Pilot Treatment Study Using Rivaroxaban [NCT02746185]
+field: Allocation [design.allocation]
+value: RANDOMIZED
+version: lastupdate:2018-08-13
+status: COMPLETED
+</RECORD>
+<RECORD id="RCF3A11ECC1" source="CLINICALTRIALS_GOV_V2">
+entity: Cancer Associated Thrombosis, a Pilot Treatment Study Using Rivaroxaban [NCT02746185]
+field: Study type [study.study_type]
+value: INTERVENTIONAL
+version: lastupdate:2018-08-13
+status: COMPLETED
+</RECORD>
+<RECORD id="R91163944D4" source="CLINICALTRIALS_GOV_V2">
+entity: Ticagrelor Monotherapy Compared to Aspirin Monotherapy in Patients With History of ACS [NCT03881943]
+field: Primary completion date [study.primary_completion_date]
+period: 2018
+value: 2018-12-21
+version: lastupdate:2019-03-20
+status: COMPLETED
+</RECORD>
+<RECORD id="RCCCE73115F" source="CLINICALTRIALS_GOV_V2">
+entity: AED/Statin Interaction Study [NCT00627575]
+field: Arm group type: Lamotrigine [arm.type]
+value: ACTIVE_COMPARATOR
+version: lastupdate:2017-08-04
+arm: Lamotrigine
+status: COMPLETED
+</RECORD>
+<RECORD id="RAF7FD8B2BD" source="CLINICALTRIALS_GOV_V2">
+entity: Clinical Trial to Evaluate the Efficacy and Safety of DW1125 and DW1125A [NCT05970679]
+field: Primary purpose [design.primary_purpose]
+value: TREATMENT
+version: lastupdate:2023-08-01
+status: COMPLETED
+</RECORD>
+<RECORD id="RCA16154E69" source="CLINICALTRIALS_GOV_V2">
+entity: Cancer Associated Thrombosis, a Pilot Treatment Study Using Rivaroxaban [NCT02746185]
+field: Arm group type: Low-molecular-weight heparin [arm.type]
+value: ACTIVE_COMPARATOR
+version: lastupdate:2018-08-13
+arm: Low-molecular-weight heparin
+status: COMPLETED
+</RECORD>
+<RECORD id="R5B585644B9" source="CLINICALTRIALS_GOV_V2">
+entity: Cancer Associated Thrombosis, a Pilot Treatment Study Using Rivaroxaban [NCT02746185]
+field: Primary outcome timeframe: Unsuspected PE and DVT [outcome.primary.timeframe]
+value: 3 months
+version: lastupdate:2018-08-13
+outcome: Unsuspected PE and DVT
+status: COMPLETED
+</RECORD>
+<RECORD id="R7FA610C953" source="CLINICALTRIALS_GOV_V2">
+entity: Effect of Atorvastatin on Fractional Flow Reserve in Coronary Artery Disease [NCT01946815]
+field: Primary completion date [study.primary_completion_date]
+period: 2018
+value: 2018-11
+version: lastupdate:2023-04-12
+status: COMPLETED
+</RECORD>
+<RECORD id="R4744B061B4" source="CLINICALTRIALS_GOV_V2">
+entity: Cancer Associated Thrombosis, a Pilot Treatment Study Using Rivaroxaban [NCT02746185]
+field: Primary outcome timeframe: Worsening of pulmonary vascular or venous obstruction [outcome.primary.timeframe]
+value: 3 months
+version: lastupdate:2018-08-13
+outcome: Worsening of pulmonary vascular or venous obstruction
+status: COMPLETED
+</RECORD>
+<RECORD id="R99F1EEC249" source="CLINICALTRIALS_GOV_V2">
+entity: A "Real World" Trial to Determine Efficacy and Health Outcomes of Toujeo (ACHIEVE CONTROL REAL LIFE STUDY PROGRAM) [NCT02451137]
+field: Primary completion date [study.primary_completion_date]
+period: 2018
+value: 2018-03-02
+version: lastupdate:2019-09-10
+status: COMPLETED
+</RECORD>
+<RECORD id="RD25A68CCA8" source="CLINICALTRIALS_GOV_V2">
+entity: Cancer Associated Thrombosis, a Pilot Treatment Study Using Rivaroxaban [NCT02746185]
+field: Lead sponsor [sponsor.lead_sponsor]
+value: Assistance Publique - Hôpitaux de Paris
+version: lastupdate:2018-08-13
+status: COMPLETED
+</RECORD>
+<RECORD id="RE1AA255166" source="CLINICALTRIALS_GOV_V2">
+entity: Cancer Associated Thrombosis, a Pilot Treatment Study Using Rivaroxaban [NCT02746185]
+field: Primary purpose [design.primary_purpose]
+value: TREATMENT
+version: lastupdate:2018-08-13
+status: COMPLETED
+</RECORD>
+<RECORD id="RA1D2F43564" source="CLINICALTRIALS_GOV_V2">
+entity: A Study on Comparison of Glargine Plus Glulisine With Premixed Insulin in Type 2 Diabetes Patients [NCT02987751]
+field: Primary completion date [study.primary_completion_date]
+period: 2018
+value: 2018-09
+version: lastupdate:2019-09-10
+status: COMPLETED
+</RECORD>
+<RECORD id="RE239ED34AE" source="CLINICALTRIALS_GOV_V2">
+entity: Atherosclerosis in the Coronary and Carotid Arteries [NCT00080587]
+field: Eligible sex [eligibility.sex]
+value: ALL
+version: lastupdate:2008-03-04
+status: COMPLETED
+</RECORD>
+<RECORD id="R9F2DEE0F89" source="CLINICALTRIALS_GOV_V2">
+entity: Efficacy and Safety of Adjuvant Metformin for Operable Breast Cancer Patients [NCT00909506]
+field: Accepts healthy volunteers [eligibility.healthy_volunteers]
+value: No
+version: lastupdate:2015-07-29
+status: COMPLETED
+</RECORD>
+<RECORD id="R7695ED3C92" source="CLINICALTRIALS_GOV_V2">
+entity: Cancer Associated Thrombosis, a Pilot Treatment Study Using Rivaroxaban [NCT02746185]
+field: Masking [design.masking]
+value: SINGLE
+version: lastupdate:2018-08-13
+status: COMPLETED
+</RECORD>
+<RECORD id="RFBB8799119" source="CLINICALTRIALS_GOV_V2">
+entity: Study to Explore the Effect of Lowering Blood Viscosity in Patients With Treatment-resistant Critical Limb Ischemia [NCT01758874]
+field: Secondary outcome timeframe: Blood viscosity measurements [outcome.secondary.timeframe]
+value: Conducting study periods (4 weeks)
+version: lastupdate:2013-01-01
+outcome: Blood viscosity measurements
+status: COMPLETED
+</RECORD>
+<RECORD id="RF8207C0AAF" source="CLINICALTRIALS_GOV_V2">
+entity: Sitagliptin for Hyperglycemia in Patients With T2DM Undergoing Cardiac Surgery [NCT02556918]
+field: Primary completion date [study.primary_completion_date]
+period: 2018
+value: 2018-11-06
+version: lastupdate:2019-12-23
+status: COMPLETED
+</RECORD>
+<RECORD id="RADD66B8392" source="CLINICALTRIALS_GOV_V2">
+entity: Cancer Associated Thrombosis, a Pilot Treatment Study Using Rivaroxaban [NCT02746185]
+field: Last update posted date [study.last_update_posted_date]
+period: 2018
+value: 2018-08-13
+version: lastupdate:2018-08-13
+status: COMPLETED
+</RECORD>
+<RECORD id="R2D8FBB6898" source="CLINICALTRIALS_GOV_V2">
+entity: Cancer Associated Thrombosis, a Pilot Treatment Study Using Rivaroxaban [NCT02746185]
+field: Study start date [study.start_date]
+period: 2016
+value: 2016-09
+version: lastupdate:2018-08-13
+status: COMPLETED
+</RECORD>
+<RECORD id="R91B4903946" source="CLINICALTRIALS_GOV_V2">
+entity: Cancer Associated Thrombosis, a Pilot Treatment Study Using Rivaroxaban [NCT02746185]
+field: Primary completion date [study.primary_completion_date]
+period: 2018
+value: 2018-04-25
+version: lastupdate:2018-08-13
+status: COMPLETED
+</RECORD>
+<RECORD id="R8821963585" source="CLINICALTRIALS_GOV_V2">
+entity: Cancer Associated Thrombosis, a Pilot Treatment Study Using Rivaroxaban [NCT02746185]
+field: Study first posted date [study.first_posted_date]
+period: 2016
+value: 2016-04-21
+version: lastupdate:2018-08-13
+status: COMPLETED
+</RECORD>
+<RECORD id="R433C5C62EA" source="CLINICALTRIALS_GOV_V2">
+entity: The Effect of Anacetrapib on Vascular Function and Arterial Stiffness [NCT02931188]
+field: Primary completion date [study.primary_completion_date]
+period: 2018
+value: 2018-05
+version: lastupdate:2024-02-07
+status: COMPLETED
+</RECORD>
+<RECORD id="R05DB444369" source="CLINICALTRIALS_GOV_V2">
+entity: Tranexamic Acid Dosing for Total Joint Arthroplasty [NCT02584725]
+field: Arm group type: 10 mg/kg/dose tranexamic acid [arm.type]
+value: ACTIVE_COMPARATOR
+version: lastupdate:2020-10-30
+arm: 10 mg/kg/dose tranexamic acid
+status: COMPLETED
+</RECORD>
+<RECORD id="R0F53730FE2" source="CLINICALTRIALS_GOV_V2">
+entity: Efficacy of Tranexamic Acid in Preventing Postpartum Haemorrhage After Elective Caesarean Section [NCT03463993]
+field: Primary completion date [study.primary_completion_date]
+period: 2018
+value: 2018-12-31
+version: lastupdate:2022-06-01
+status: COMPLETED
+</RECORD>
+<RECORD id="R4885BBBB23" source="CLINICALTRIALS_GOV_V2">
+entity: Basal Bolus Versus Basal Insulin in Type 2 Diabetes Mellitus (T2DM) [NCT00979628]
+field: Masking [design.masking]
+value: NONE
+version: lastupdate:2018-10-10
+status: COMPLETED
+</RECORD>
+<RECORD id="R236BD7D61B" source="CLINICALTRIALS_GOV_V2">
+entity: Cancer Associated Thrombosis, a Pilot Treatment Study Using Rivaroxaban [NCT02746185]
+field: Intervention: Low-molecular-weight heparin [intervention.type]
+value: DRUG
+version: lastupdate:2018-08-13
+intervention: Low-molecular-weight heparin
+status: COMPLETED
+</RECORD>
+<RECORD id="R01F11D4CD3" source="CLINICALTRIALS_GOV_V2">
+entity: Insulin in Total Parenteral Nutrition [NCT02706119]
+field: Primary completion date [study.primary_completion_date]
+period: 2018
+value: 2018-03-31
+version: lastupdate:2018-05-24
+status: COMPLETED
+</RECORD>
+<RECORD id="RFEE596343E" source="CLINICALTRIALS_GOV_V2">
+entity: Effects of Metformin Treatment on Myocardial Efficiency in Patients With Heart Failure [NCT02810132]
+field: Primary completion date [study.primary_completion_date]
+period: 2018
+value: 2018-02-14
+version: lastupdate:2018-04-20
+status: COMPLETED
+</RECORD>
+<RECORD id="R0508F9BA21" source="CLINICALTRIALS_GOV_V2">
+entity: Cancer Associated Thrombosis, a Pilot Treatment Study Using Rivaroxaban [NCT02746185]
+field: Accepts healthy volunteers [eligibility.healthy_volunteers]
+value: No
+version: lastupdate:2018-08-13
+status: COMPLETED
+</RECORD>
+<RECORD id="RA9B09B1CC2" source="CLINICALTRIALS_GOV_V2">
+entity: 12-Month, Open-Label, Extension Study of LCP-AtorFen in Dyslipidemia [NCT00664859]
+field: Primary completion date [study.primary_completion_date]
+period: 2009
+value: 2009-02
+version: lastupdate:2020-03-24
+status: COMPLETED
+</RECORD>
+<RECORD id="RC815986A20" source="CLINICALTRIALS_GOV_V2">
+entity: A Phase 3 Study to Evaluate the Efficacy of XW003 Compared With Dulaglutide in Participants With T2DM [NCT05680129]
+field: Study type [study.study_type]
+value: INTERVENTIONAL
+version: lastupdate:2025-05-08
+status: COMPLETED
+</RECORD>
+<RECORD id="R0D776929F2" source="CLINICALTRIALS_GOV_V2">
+entity: Efficacy and Safety of Semaglutide Versus Canagliflozin as add-on to Metformin in Subjects With Type 2 Diabetes [NCT03136484]
+field: Primary completion date [study.primary_completion_date]
+period: 2018
+value: 2018-10-16
+version: lastupdate:2020-01-21
+status: COMPLETED
+</RECORD>
+<RECORD id="R42803CED32" source="CLINICALTRIALS_GOV_V2">
+entity: A Study of Abemaciclib (LY2835219) in Combination With Another Anti-cancer Drug in Participants With Lung Cancer (NSCLC) [NCT02079636]
+field: Primary completion date [study.primary_completion_date]
+period: 2018
+value: 2018-05-02
+version: lastupdate:2020-09-11
+status: COMPLETED
+</RECORD>
+<RECORD id="R5F3C901CAF" source="CLINICALTRIALS_GOV_V2">
+entity: Cancer Associated Thrombosis, a Pilot Treatment Study Using Rivaroxaban [NCT02746185]
+field: Studied condition [study.condition]
+value: Neoplasm
+version: lastupdate:2018-08-13
+status: COMPLETED
+</RECORD>
+<RECORD id="R34A164611E" source="CLINICALTRIALS_GOV_V2">
+entity: Outcomes and Safety Trial Investigating Ecallantide's Effect on Reducing Surgical Blood Loss Volume in Subjects at High Risk of Bleeding Exposed to Cardio-pulmonary Bypass During Cardiac Surgery [NCT00888940]
+field: Study type [study.study_type]
+value: INTERVENTIONAL
+version: lastupdate:2015-08-10
+status: COMPLETED
+</RECORD>
+<RECORD id="R70FEC45585" source="CLINICALTRIALS_GOV_V2">
+entity: Randomized Clinical Trial of Bococizumab (PF-04950615; RN316) in Subjects Who Are Intolerant to Statins [NCT02135029]
+field: Number of arm groups [arms.count]
+unit: arms
+value: 3.0
+version: lastupdate:2017-12-14
+status: COMPLETED
+</RECORD>
+<RECORD id="R8E14852D8D" source="CLINICALTRIALS_GOV_V2">
+entity: Atorvastatin Effectiveness and Safety in Cardiology Patients in Real World Setting [NCT02565615]
+field: Primary completion date [study.primary_completion_date]
+period: 2018
+value: 2018-08-31
+version: lastupdate:2021-02-21
+status: COMPLETED
+</RECORD>
+<RECORD id="R5EE2ACF4A2" source="CLINICALTRIALS_GOV_V2">
+entity: Metformin SR Tablet (DuLeNing) and Glucophage in Patients With Type 2 Diabetes [NCT03039075]
+field: Primary completion date [study.primary_completion_date]
+period: 2018
+value: 2018-10
+version: lastupdate:2019-07-24
+status: COMPLETED
+</RECORD>
+<RECORD id="R007E15A0D6" source="CLINICALTRIALS_GOV_V2">
+entity: Efficacy of Lapaquistat Acetate and Atorvastatin on Blood Cholesterol Levels in Subjects With Primary Hypercholesterolemia [NCT00143676]
+field: Primary completion date [study.primary_completion_date]
+period: 2006
+value: 2006-08
+version: lastupdate:2012-05-24
+status: COMPLETED
+</RECORD>

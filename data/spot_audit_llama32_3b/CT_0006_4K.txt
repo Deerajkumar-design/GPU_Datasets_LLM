@@ -1,0 +1,315 @@
+<RECORD id="R9745B899C3" source="CLINICALTRIALS_GOV_V2">
+entity: Lunch Time Insulin Injection by School Nurse for Poorly Controlled Diabetes [NCT00340613]
+field: Study first posted date [study.first_posted_date]
+period: 2006
+value: 2006-06-21
+version: lastupdate:2016-07-14
+status: COMPLETED
+</RECORD>
+<RECORD id="R64D3FDBD97" source="CLINICALTRIALS_GOV_V2">
+entity: Exercise and Metformin in Colorectal and Breast Cancer Survivors [NCT01340300]
+field: Studied condition [study.condition]
+value: Colorectal Cancer
+version: lastupdate:2018-06-06
+status: COMPLETED
+</RECORD>
+<RECORD id="RF2F4ABDDF6" source="CLINICALTRIALS_GOV_V2">
+entity: Exercise and Metformin in Colorectal and Breast Cancer Survivors [NCT01340300]
+field: Secondary outcome timeframe: Changes in Other Insulin-Related Biomarkers [outcome.secondary.timeframe]
+value: 0 and 3 months (change between 0 and 3 months)
+version: lastupdate:2018-06-06
+outcome: Changes in Other Insulin-Related Biomarkers
+status: COMPLETED
+</RECORD>
+<RECORD id="RD7347784D3" source="CLINICALTRIALS_GOV_V2">
+entity: ROsuvastatin Pretreatment to Reduce MyocArdial Periprocedural Necrosis:Comparison With Atorvastatin Reloading [NCT01228227]
+field: Arm group type: ROSUVASTATIN [arm.type]
+value: ACTIVE_COMPARATOR
+version: lastupdate:2013-01-04
+arm: ROSUVASTATIN
+status: COMPLETED
+</RECORD>
+<RECORD id="RDA0E14FB0A" source="CLINICALTRIALS_GOV_V2">
+entity: Effect of Intravenous Tranexamic Acid on Visual Clarity During Shoulder Arthroscopy in the Beach Chair Position [NCT05397652]
+field: Study completion date [study.completion_date]
+period: 2023
+value: 2023-07-21
+version: lastupdate:2026-02-24
+status: COMPLETED
+</RECORD>
+<RECORD id="R3A687E2993" source="CLINICALTRIALS_GOV_V2">
+entity: Perioperative Outcomes of Postpartum Hemorrhage in Patients Undergoing Cesarean Delivery [NCT04833556]
+field: Study completion date [study.completion_date]
+period: 2024
+value: 2024-12-31
+version: lastupdate:2025-12-22
+status: COMPLETED
+</RECORD>
+<RECORD id="R04F3D37A0A" source="CLINICALTRIALS_GOV_V2">
+entity: Research Study Comparing Different Tablets With the Study Medicine Semaglutide in Healthy Men [NCT03638778]
+field: Arm group type: Oral semaglutide formulation C [arm.type]
+value: EXPERIMENTAL
+version: lastupdate:2019-11-14
+arm: Oral semaglutide formulation C
+status: COMPLETED
+</RECORD>
+<RECORD id="RF8EC390DBB" source="CLINICALTRIALS_GOV_V2">
+entity: Low Risk Acute Coronary Syndrome [NCT01703156]
+field: Arm group type: Non-Stress Group [arm.type]
+value: EXPERIMENTAL
+version: lastupdate:2017-04-12
+arm: Non-Stress Group
+status: COMPLETED
+</RECORD>
+<RECORD id="R312A82A3D0" source="CLINICALTRIALS_GOV_V2">
+entity: Consolidation Pembrolizumab Following Chemoradiation in Patients With Inoperable/Unresectable Stage III NSCLC [NCT02343952]
+field: Minimum eligible age [eligibility.minimum_age]
+value: 18 Years
+version: lastupdate:2023-09-13
+status: COMPLETED
+</RECORD>
+<RECORD id="R5371123478" source="CLINICALTRIALS_GOV_V2">
+entity: Effects of Oxygen Treatment on Mechanisms Involved in Ischemia-reperfusion Injury: A Pilot Study in Healthy Volunteers [NCT02286544]
+field: Arm group type: Salmonella typhi vaccine [arm.type]
+value: ACTIVE_COMPARATOR
+version: lastupdate:2017-12-11
+arm: Salmonella typhi vaccine
+status: COMPLETED
+</RECORD>
+<RECORD id="R4C14E31D36" source="CLINICALTRIALS_GOV_V2">
+entity: Exercise and Metformin in Colorectal and Breast Cancer Survivors [NCT01340300]
+field: Study first posted date [study.first_posted_date]
+period: 2011
+value: 2011-04-22
+version: lastupdate:2018-06-06
+status: COMPLETED
+</RECORD>
+<RECORD id="R6A0B6CFD31" source="CLINICALTRIALS_GOV_V2">
+entity: Exercise and Metformin in Colorectal and Breast Cancer Survivors [NCT01340300]
+field: Primary purpose [design.primary_purpose]
+value: DIAGNOSTIC
+version: lastupdate:2018-06-06
+status: COMPLETED
+</RECORD>
+<RECORD id="R64F38368C6" source="CLINICALTRIALS_GOV_V2">
+entity: Exercise and Metformin in Colorectal and Breast Cancer Survivors [NCT01340300]
+field: Arm group type: Exercise training with metformin [arm.type]
+value: ACTIVE_COMPARATOR
+version: lastupdate:2018-06-06
+arm: Exercise training with metformin
+status: COMPLETED
+</RECORD>
+<RECORD id="R1A2131A1BB" source="CLINICALTRIALS_GOV_V2">
+entity: An Assessment of Pharmacokinetic Gemigliptin and Metformin Interactions in Healthy Mexican Volunteers [NCT03310749]
+field: Arm group type: Treatment sequence C [arm.type]
+value: OTHER
+version: lastupdate:2017-10-16
+arm: Treatment sequence C
+status: COMPLETED
+</RECORD>
+<RECORD id="RB539F51757" source="CLINICALTRIALS_GOV_V2">
+entity: Study To Assess the Pharmacokinetics of AZD1656 During Coadministration With Simvastatin [NCT01096940]
+field: Arm group type: 1 [arm.type]
+value: EXPERIMENTAL
+version: lastupdate:2010-11-08
+arm: 1
+status: COMPLETED
+</RECORD>
+<RECORD id="RBFFFC9DBF6" source="CLINICALTRIALS_GOV_V2">
+entity: Exercise and Metformin in Colorectal and Breast Cancer Survivors [NCT01340300]
+field: Study start date [study.start_date]
+period: 2011
+value: 2011-05
+version: lastupdate:2018-06-06
+status: COMPLETED
+</RECORD>
+<RECORD id="R2330B06DAF" source="CLINICALTRIALS_GOV_V2">
+entity: Exercise and Metformin in Colorectal and Breast Cancer Survivors [NCT01340300]
+field: Study type [study.study_type]
+value: INTERVENTIONAL
+version: lastupdate:2018-06-06
+status: COMPLETED
+</RECORD>
+<RECORD id="R83301DC7C0" source="CLINICALTRIALS_GOV_V2">
+entity: Exercise and Metformin in Colorectal and Breast Cancer Survivors [NCT01340300]
+field: Arm group type: Metformin [arm.type]
+value: ACTIVE_COMPARATOR
+version: lastupdate:2018-06-06
+arm: Metformin
+status: COMPLETED
+</RECORD>
+<RECORD id="R8AA6357881" source="CLINICALTRIALS_GOV_V2">
+entity: Exercise and Metformin in Colorectal and Breast Cancer Survivors [NCT01340300]
+field: Arm group type: Exercise training [arm.type]
+value: ACTIVE_COMPARATOR
+version: lastupdate:2018-06-06
+arm: Exercise training
+status: COMPLETED
+</RECORD>
+<RECORD id="R96A599DFE5" source="CLINICALTRIALS_GOV_V2">
+entity: Exercise and Metformin in Colorectal and Breast Cancer Survivors [NCT01340300]
+field: Intervention model [design.intervention_model]
+value: PARALLEL
+version: lastupdate:2018-06-06
+status: COMPLETED
+</RECORD>
+<RECORD id="RB0734CF34D" source="CLINICALTRIALS_GOV_V2">
+entity: Exercise and Metformin in Colorectal and Breast Cancer Survivors [NCT01340300]
+field: Arm group type: Control [arm.type]
+value: ACTIVE_COMPARATOR
+version: lastupdate:2018-06-06
+arm: Control
+status: COMPLETED
+</RECORD>
+<RECORD id="RE448E372B9" source="CLINICALTRIALS_GOV_V2">
+entity: Exercise and Metformin in Colorectal and Breast Cancer Survivors [NCT01340300]
+field: Accepts healthy volunteers [eligibility.healthy_volunteers]
+value: No
+version: lastupdate:2018-06-06
+status: COMPLETED
+</RECORD>
+<RECORD id="R5BE7743B94" source="CLINICALTRIALS_GOV_V2">
+entity: Exercise and Metformin in Colorectal and Breast Cancer Survivors [NCT01340300]
+field: Intervention: Metformin [intervention.type]
+value: DRUG
+version: lastupdate:2018-06-06
+intervention: Metformin
+status: COMPLETED
+</RECORD>
+<RECORD id="RDA44C5D523" source="CLINICALTRIALS_GOV_V2">
+entity: Characterisation of the Nasal Microbiome in Patients With N-ERD [NCT04375293]
+field: Arm group type: Healthy [arm.type]
+value: SHAM_COMPARATOR
+version: lastupdate:2021-09-01
+arm: Healthy
+status: COMPLETED
+</RECORD>
+<RECORD id="RA01080E5C2" source="CLINICALTRIALS_GOV_V2">
+entity: Exercise and Metformin in Colorectal and Breast Cancer Survivors [NCT01340300]
+field: Intervention: Educational information [intervention.type]
+value: OTHER
+version: lastupdate:2018-06-06
+intervention: Educational information
+status: COMPLETED
+</RECORD>
+<RECORD id="RBD3B7CC378" source="CLINICALTRIALS_GOV_V2">
+entity: Acid Tranexamic Effectiveness in Reducing the Intraoperative Bleeding in Palatoplasty [NCT02422056]
+field: Studied condition [study.condition]
+value: Hemorrhage
+version: lastupdate:2015-04-21
+status: COMPLETED
+</RECORD>
+<RECORD id="R08AB37CE28" source="CLINICALTRIALS_GOV_V2">
+entity: Trial Of Pembrolizumab And Nintedanib [NCT02856425]
+field: Arm group type: Cervical Cancer (CC) [arm.type]
+value: EXPERIMENTAL
+version: lastupdate:2026-01-20
+arm: Cervical Cancer (CC)
+status: COMPLETED
+</RECORD>
+<RECORD id="R21D001F186" source="CLINICALTRIALS_GOV_V2">
+entity: Management of Initial Bleeding/Spotting Associated With the Levonorgestrel-releasing Intrauterine System (MIRENA) [NCT01295294]
+field: Studied condition [study.condition]
+value: Uterine Hemorrhage
+version: lastupdate:2014-11-04
+status: COMPLETED
+</RECORD>
+<RECORD id="R99B8AF4FC2" source="CLINICALTRIALS_GOV_V2">
+entity: The Effect of Semaglutide on Pituitary Function [NCT04865744]
+field: Arm group type: Oral semaglutide 14 mg [arm.type]
+value: ACTIVE_COMPARATOR
+version: lastupdate:2023-02-22
+arm: Oral semaglutide 14 mg
+status: COMPLETED
+</RECORD>
+<RECORD id="R2FE2268B42" source="CLINICALTRIALS_GOV_V2">
+entity: Insulin Degludec and Symptomatic Nocturnal Hypoglycaemia [NCT02192450]
+field: Intervention: Insulin aspart/degludec [intervention.type]
+value: DRUG
+version: lastupdate:2019-06-27
+intervention: Insulin aspart/degludec
+status: COMPLETED
+</RECORD>
+<RECORD id="R8777F07925" source="CLINICALTRIALS_GOV_V2">
+entity: Comparing Pre-Mixed Insulin With Insulin Glargine Combined With Rapid-Acting Insulin in Patients With Type 2 Diabetes [NCT00110370]
+field: Masking [design.masking]
+value: NONE
+version: lastupdate:2007-11-27
+status: COMPLETED
+</RECORD>
+<RECORD id="R3D35AC54E5" source="CLINICALTRIALS_GOV_V2">
+entity: JTX-2011 Alone and in Combination With Anti-PD-1 or Anti-CTLA-4 in Subjects With Advanced and/or Refractory Solid Tumors [NCT02904226]
+field: Intervention model [design.intervention_model]
+value: PARALLEL
+version: lastupdate:2023-07-03
+status: COMPLETED
+</RECORD>
+<RECORD id="RCD4478DB31" source="CLINICALTRIALS_GOV_V2">
+entity: Topical Tranexamic Acid Use on Granulating Wounds Following Mohs Micrographic Surgery [NCT04541303]
+field: Arm group type: Placebo [arm.type]
+value: PLACEBO_COMPARATOR
+version: lastupdate:2024-11-21
+arm: Placebo
+status: COMPLETED
+</RECORD>
+<RECORD id="RE6945C3A16" source="CLINICALTRIALS_GOV_V2">
+entity: Semaglutide and Cognition in Healthy Volunteers [NCT06363487]
+field: Arm group type: Placebo [arm.type]
+value: PLACEBO_COMPARATOR
+version: lastupdate:2025-06-06
+arm: Placebo
+status: COMPLETED
+</RECORD>
+<RECORD id="R4FD4227815" source="CLINICALTRIALS_GOV_V2">
+entity: Exercise and Metformin in Colorectal and Breast Cancer Survivors [NCT01340300]
+field: Minimum eligible age [eligibility.minimum_age]
+value: 18 Years
+version: lastupdate:2018-06-06
+status: COMPLETED
+</RECORD>
+<RECORD id="R6E17DF2AC6" source="CLINICALTRIALS_GOV_V2">
+entity: Exercise and Metformin in Colorectal and Breast Cancer Survivors [NCT01340300]
+field: Allocation [design.allocation]
+value: RANDOMIZED
+version: lastupdate:2018-06-06
+status: COMPLETED
+</RECORD>
+<RECORD id="R0F11080F05" source="CLINICALTRIALS_GOV_V2">
+entity: Exercise and Metformin in Colorectal and Breast Cancer Survivors [NCT01340300]
+field: Primary outcome timeframe: Change in Fasting Insulin Level [outcome.primary.timeframe]
+value: 0 and 3 months (change between 0 and 3 months)
+version: lastupdate:2018-06-06
+outcome: Change in Fasting Insulin Level
+status: COMPLETED
+</RECORD>
+<RECORD id="R1F81C893FE" source="CLINICALTRIALS_GOV_V2">
+entity: The Effect of Tranexamic Acid in Total Blood Loss During Proximal Femoral Nailing [NCT05359172]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 100.0
+version: lastupdate:2022-10-10
+status: COMPLETED
+</RECORD>
+<RECORD id="R717F1D4A8F" source="CLINICALTRIALS_GOV_V2">
+entity: Efficacy and Safety of AMR101 (Ethyl Icosapentate) in Patients With Fasting Triglyceride (Tg) Levels ≥ 500 and ≤ 2000 mg/dL [NCT01047683]
+field: Studied condition [study.condition]
+value: Hypertriglyceridemia
+version: lastupdate:2022-04-25
+status: COMPLETED
+</RECORD>
+<RECORD id="R7B3447DE8B" source="CLINICALTRIALS_GOV_V2">
+entity: Exercise and Metformin in Colorectal and Breast Cancer Survivors [NCT01340300]
+field: Results first posted date [study.results_first_posted_date]
+period: 2017
+value: 2017-09-18
+version: lastupdate:2018-06-06
+status: COMPLETED
+</RECORD>
+<RECORD id="RB43396DD2E" source="CLINICALTRIALS_GOV_V2">
+entity: Exercise and Metformin in Colorectal and Breast Cancer Survivors [NCT01340300]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 139.0
+version: lastupdate:2018-06-06
+status: COMPLETED
+</RECORD>

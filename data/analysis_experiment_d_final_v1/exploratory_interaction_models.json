@@ -1,0 +1,48 @@
+{
+  "domain": [
+    {
+      "converged": true,
+      "factor": "domain",
+      "formula": "inaccurate ~ context_log2 * C(domain)",
+      "interaction_p_value": 7.527278327992263e-09,
+      "outcome": "inaccurate"
+    },
+    {
+      "converged": true,
+      "factor": "domain",
+      "formula": "hallucinatory_inaccuracy ~ context_log2 * C(domain)",
+      "interaction_p_value": 4.179435855724927e-11,
+      "outcome": "hallucinatory_inaccuracy"
+    },
+    {
+      "converged": true,
+      "factor": "domain",
+      "formula": "grounded_inaccuracy ~ context_log2 * C(domain)",
+      "interaction_p_value": 3.917059229703151e-08,
+      "outcome": "grounded_inaccuracy"
+    }
+  ],
+  "question_type": [
+    {
+      "converged": true,
+      "factor": "question_type",
+      "formula": "inaccurate ~ context_log2 * C(question_type)",
+      "interaction_p_value": 1.0795517799712126e-20,
+      "outcome": "inaccurate"
+    },
+    {
+      "converged": true,
+      "factor": "question_type",
+      "formula": "hallucinatory_inaccuracy ~ context_log2 * C(question_type)",
+      "interaction_p_value": 6.466698444130317e-32,
+      "outcome": "hallucinatory_inaccuracy"
+    },
+    {
+      "converged": true,
+      "factor": "question_type",
+      "formula": "grounded_inaccuracy ~ context_log2 * C(question_type)",
+      "interaction_p_value": 1.1089095926121104e-12,
+      "outcome": "grounded_inaccuracy"
+    }
+  ]
+}

@@ -17,6 +17,7 @@ from longctx_dataset.pipeline import (families_path, instances_path, load_pool,
 from longctx_dataset.schemas import Domain, Instance, QuestionFamily, QuestionType
 from longctx_dataset.storage.io import read_models, write_jsonl
 from longctx_dataset.validation.dataset import run_validation
+from longctx_dataset.validation.question_leakage import answerability_leakage_phrases
 
 
 @pytest.fixture
@@ -133,6 +134,15 @@ def test_validator_catches_a_question_that_drifts_across_variants(built):
     assert not next(c for c in report.checks if c.check_id == "G").passed
 
 
+def test_validator_catches_answerability_leakage_in_question_text(built):
+    cfg, _ = built
+    fams = [json.loads(l) for l in families_path(cfg).read_text().splitlines() if l.strip()]
+    fams[0]["question"] = fams[0]["question"] + " If the supplied records do not contain this, return INSUFFICIENT_EVIDENCE."
+    write_jsonl(families_path(cfg), fams)
+    report = run_validation(cfg, log=lambda *_: None)
+    assert not next(c for c in report.checks if c.check_id == "Z").passed
+
+
 def test_validator_catches_an_over_length_context(built):
     cfg, _ = built
 
@@ -187,6 +197,20 @@ def test_unanswerable_families_are_genuinely_unanswerable(built):
             if r.value is not None
         ]
         assert not matches, f"{fam.question_family_id} is answerable after all: {matches[:2]}"
+
+
+def test_generated_questions_do_not_reveal_answerability_metadata(built):
+    _, families = built
+    for fam in families:
+        assert "answerable" not in fam.question.lower()
+        assert answerability_leakage_phrases(fam.question) == []
+
+    ct_0007 = next((f for f in families if f.question_family_id == "CT_0007"), None)
+    if ct_0007 is not None:
+        assert ct_0007.answerable is False
+        assert "insufficient" not in ct_0007.question.lower()
+        assert "another date" not in ct_0007.question.lower()
+        assert "another trial" not in ct_0007.question.lower()
 
 
 def test_content_hash_is_stable_across_runs(cfg):

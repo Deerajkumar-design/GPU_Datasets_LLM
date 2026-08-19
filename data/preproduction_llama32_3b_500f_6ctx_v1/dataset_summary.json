@@ -1,0 +1,274 @@
+{
+  "context_labels": [
+    "4K",
+    "8K",
+    "16K",
+    "32K",
+    "64K",
+    "82K"
+  ],
+  "dataset": "preproduction_llama32_3b_500f_6ctx_v1",
+  "distractor_counts_by_context": {
+    "16K": {
+      "NEAR_MATCH_VALUE": 2963,
+      "OTHER_SAME_DOMAIN": 33570,
+      "WRONG_ENTITY": 16519,
+      "WRONG_FIELD": 14144,
+      "WRONG_PERIOD": 11064,
+      "WRONG_SERIES_VARIANT": 182,
+      "WRONG_UNIT": 59,
+      "WRONG_VERSION": 305
+    },
+    "32K": {
+      "NEAR_MATCH_VALUE": 5931,
+      "OTHER_SAME_DOMAIN": 71083,
+      "WRONG_ENTITY": 32809,
+      "WRONG_FIELD": 24695,
+      "WRONG_PERIOD": 22271,
+      "WRONG_SERIES_VARIANT": 182,
+      "WRONG_UNIT": 60,
+      "WRONG_VERSION": 320
+    },
+    "4K": {
+      "NEAR_MATCH_VALUE": 637,
+      "OTHER_SAME_DOMAIN": 7224,
+      "WRONG_ENTITY": 4429,
+      "WRONG_FIELD": 4184,
+      "WRONG_PERIOD": 2661,
+      "WRONG_SERIES_VARIANT": 172,
+      "WRONG_UNIT": 44,
+      "WRONG_VERSION": 245
+    },
+    "64K": {
+      "NEAR_MATCH_VALUE": 11377,
+      "OTHER_SAME_DOMAIN": 149467,
+      "WRONG_ENTITY": 62878,
+      "WRONG_FIELD": 45512,
+      "WRONG_PERIOD": 44383,
+      "WRONG_SERIES_VARIANT": 182,
+      "WRONG_UNIT": 61,
+      "WRONG_VERSION": 323
+    },
+    "82K": {
+      "NEAR_MATCH_VALUE": 14073,
+      "OTHER_SAME_DOMAIN": 191080,
+      "WRONG_ENTITY": 77464,
+      "WRONG_FIELD": 56371,
+      "WRONG_PERIOD": 55075,
+      "WRONG_SERIES_VARIANT": 182,
+      "WRONG_UNIT": 61,
+      "WRONG_VERSION": 324
+    },
+    "8K": {
+      "NEAR_MATCH_VALUE": 1421,
+      "OTHER_SAME_DOMAIN": 15603,
+      "WRONG_ENTITY": 8487,
+      "WRONG_FIELD": 7991,
+      "WRONG_PERIOD": 5399,
+      "WRONG_SERIES_VARIANT": 182,
+      "WRONG_UNIT": 56,
+      "WRONG_VERSION": 290
+    }
+  },
+  "domain_question_type_crosstab": {
+    "CLINICAL_TRIALS": {
+      "DIRECT_RETRIEVAL": 25,
+      "ENTITY_UNIT_BINDING": 40,
+      "RETRIEVAL_CALCULATION": 35,
+      "UNANSWERABLE": 25
+    },
+    "FDA": {
+      "DIRECT_RETRIEVAL": 25,
+      "ENTITY_UNIT_BINDING": 20,
+      "RETRIEVAL_CALCULATION": 40,
+      "TEMPORAL_VERSION": 15,
+      "UNANSWERABLE": 25
+    },
+    "FRED": {
+      "DIRECT_RETRIEVAL": 25,
+      "ENTITY_UNIT_BINDING": 20,
+      "RETRIEVAL_CALCULATION": 35,
+      "TEMPORAL_VERSION": 20,
+      "UNANSWERABLE": 25
+    },
+    "SEC": {
+      "DIRECT_RETRIEVAL": 25,
+      "ENTITY_UNIT_BINDING": 15,
+      "RETRIEVAL_CALCULATION": 40,
+      "TEMPORAL_VERSION": 20,
+      "UNANSWERABLE": 25
+    }
+  },
+  "families_total": 500,
+  "family_counts_by_answerability": {
+    "false": 100,
+    "true": 400
+  },
+  "family_counts_by_domain": {
+    "CLINICAL_TRIALS": 125,
+    "FDA": 125,
+    "FRED": 125,
+    "SEC": 125
+  },
+  "family_counts_by_question_type": {
+    "DIRECT_RETRIEVAL": 100,
+    "ENTITY_UNIT_BINDING": 95,
+    "RETRIEVAL_CALCULATION": 150,
+    "TEMPORAL_VERSION": 55,
+    "UNANSWERABLE": 100
+  },
+  "generated_at": "2026-08-11T04:19:35.749092+00:00",
+  "instance_counts_by_context": {
+    "16K": 500,
+    "32K": 500,
+    "4K": 500,
+    "64K": 500,
+    "82K": 500,
+    "8K": 500
+  },
+  "instances_total": 3000,
+  "max_rendered_input_tokens_allowed_for_82k": 81800,
+  "max_rendered_input_tokens_observed": 81800,
+  "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+  "prompt_hash": "5d2869822989e19b",
+  "prompt_version": "llama_chat_v4",
+  "record_count_stats_by_context": {
+    "16K": {
+      "max": 210,
+      "mean": 158.746,
+      "median": 162.0,
+      "min": 110
+    },
+    "32K": {
+      "max": 420,
+      "mean": 315.836,
+      "median": 320.5,
+      "min": 220
+    },
+    "4K": {
+      "max": 53,
+      "mean": 40.326,
+      "median": 41.5,
+      "min": 27
+    },
+    "64K": {
+      "max": 836,
+      "mean": 629.5,
+      "median": 632.5,
+      "min": 440
+    },
+    "82K": {
+      "max": 1053,
+      "mean": 790.394,
+      "median": 795.5,
+      "min": 551
+    },
+    "8K": {
+      "max": 106,
+      "mean": 79.992,
+      "median": 82.0,
+      "min": 55
+    }
+  },
+  "rendered_input_token_stats_by_context": {
+    "16K": {
+      "max": 16558,
+      "mean": 16442.33,
+      "median": 16440.5,
+      "min": 16351,
+      "n": 500,
+      "p5": 16380.85,
+      "p95": 16514.0
+    },
+    "32K": {
+      "max": 32836,
+      "mean": 32671.378,
+      "median": 32663.0,
+      "min": 32534,
+      "n": 500,
+      "p5": 32577.9,
+      "p95": 32787.049999999996
+    },
+    "4K": {
+      "max": 4359,
+      "mean": 4273.298,
+      "median": 4276.0,
+      "min": 4202,
+      "n": 500,
+      "p5": 4218.95,
+      "p95": 4331.0
+    },
+    "64K": {
+      "max": 65367,
+      "mean": 65126.13,
+      "median": 65115.5,
+      "min": 64894,
+      "n": 500,
+      "p5": 64953.9,
+      "p95": 65326.0
+    },
+    "82K": {
+      "max": 81800,
+      "mean": 81745.142,
+      "median": 81748.0,
+      "min": 81622,
+      "n": 500,
+      "p5": 81678.90000000001,
+      "p95": 81795.0
+    },
+    "8K": {
+      "max": 8459,
+      "mean": 8330.55,
+      "median": 8329.0,
+      "min": 8257,
+      "n": 500,
+      "p5": 8273.0,
+      "p95": 8393.05
+    }
+  },
+  "target_position_stats_by_context": {
+    "16K": {
+      "max": 0.5044697903822442,
+      "mean": 0.5002131715389496,
+      "median": 0.5002467005409759,
+      "min": 0.4954173586762625,
+      "n": 400
+    },
+    "32K": {
+      "max": 0.5023885104940364,
+      "mean": 0.5000792898429659,
+      "median": 0.5000539238678627,
+      "min": 0.4974274446977633,
+      "n": 400
+    },
+    "4K": {
+      "max": 0.5176913425345044,
+      "mean": 0.5009621237671635,
+      "median": 0.500682819872877,
+      "min": 0.4818931068931069,
+      "n": 400
+    },
+    "64K": {
+      "max": 0.5012784966112138,
+      "mean": 0.49999563895486204,
+      "median": 0.5000192649915282,
+      "min": 0.49858300218710533,
+      "n": 400
+    },
+    "82K": {
+      "max": 0.5012100439792634,
+      "mean": 0.49998926698732926,
+      "median": 0.4999938596437178,
+      "min": 0.49890050490780213,
+      "n": 400
+    },
+    "8K": {
+      "max": 0.5087795226907382,
+      "mean": 0.4998562518129863,
+      "median": 0.49972241966951825,
+      "min": 0.4914625092798812,
+      "n": 400
+    }
+  },
+  "tokenizer": "hf:meta-llama/Llama-3.2-3B-Instruct"
+}

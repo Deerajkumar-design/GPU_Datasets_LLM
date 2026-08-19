@@ -1,0 +1,76 @@
+{
+  "analysis_directory": "data/analysis_experiment_c_final_v1",
+  "created_at": "2026-08-10T03:56:01.759465",
+  "expected_source_dataset_hash": "6fdfaa035b5da2211e813353916902c871e783ecfa993615db672f62bcb8e327",
+  "figure_files": [
+    {
+      "caption": "Correct and inaccurate responses sum to 100% at each context length.",
+      "name": "figure_1_factual_reliability_total_inaccuracy",
+      "pdf": "data/final_report_experiment_c_v1/figures/figure_1_factual_reliability_total_inaccuracy.pdf",
+      "png": "data/final_report_experiment_c_v1/figures/figure_1_factual_reliability_total_inaccuracy.png",
+      "title": "Figure 1. Factual reliability vs context length."
+    },
+    {
+      "caption": "GEE OR per context doubling = 1.352, 95% CI [1.203, 1.519], p = 4.06e-07.",
+      "name": "figure_2_inaccuracy",
+      "pdf": "data/final_report_experiment_c_v1/figures/figure_2_inaccuracy.pdf",
+      "png": "data/final_report_experiment_c_v1/figures/figure_2_inaccuracy.png",
+      "title": "Figure 2. Inaccuracy vs context length."
+    },
+    {
+      "caption": "Mean synchronized generation latency rises as input length increases.",
+      "name": "figure_3_latency",
+      "pdf": "data/final_report_experiment_c_v1/figures/figure_3_latency.pdf",
+      "png": "data/final_report_experiment_c_v1/figures/figure_3_latency.png",
+      "title": "Figure 3. Inference latency vs context length."
+    },
+    {
+      "caption": "Subgroup results are exploratory because cells are smaller than the primary repeated-measures analysis.",
+      "name": "figure_4_inaccuracy_by_question_type",
+      "pdf": "data/final_report_experiment_c_v1/figures/figure_4_inaccuracy_by_question_type.pdf",
+      "png": "data/final_report_experiment_c_v1/figures/figure_4_inaccuracy_by_question_type.png",
+      "title": "Inaccuracy by Question Type & Context."
+    },
+    {
+      "caption": "Subgroup results are exploratory because cells are smaller than the primary repeated-measures analysis.",
+      "name": "figure_5_inaccuracy_by_domain",
+      "pdf": "data/final_report_experiment_c_v1/figures/figure_5_inaccuracy_by_domain.pdf",
+      "png": "data/final_report_experiment_c_v1/figures/figure_5_inaccuracy_by_domain.png",
+      "title": "Inaccuracy by Domain & Context."
+    }
+  ],
+  "grader_hash": "d9282a0ccc50daba3bfd232c058dfbab63a5c19a7323d585a7c2236b3a6c4ba8",
+  "grading_rerun": false,
+  "inference_rerun": false,
+  "labels_modified": false,
+  "output_files": {
+    "docx": "data/final_report_experiment_c_v1/final_research_report.docx",
+    "figures": "data/final_report_experiment_c_v1/figures",
+    "markdown": "data/final_report_experiment_c_v1/final_research_report.md",
+    "pdf": "data/final_report_experiment_c_v1/final_research_report.pdf",
+    "tables": "data/final_report_experiment_c_v1/report_data_tables"
+  },
+  "package_versions": {
+    "matplotlib": "3.11.0",
+    "numpy": "2.5.1",
+    "pandas": "3.0.5",
+    "platform": "Linux-6.8.0-87-generic-x86_64-with-glibc2.35",
+    "python": "3.12.13",
+    "python_docx": "1.2.0"
+  },
+  "pdf_export": "succeeded_via_libreoffice_headless",
+  "quality_check": {
+    "banned_terms_present": [],
+    "docx_readable": true,
+    "embedded_figure_count": 5,
+    "figures_embedded": true,
+    "missing_required_sections": [],
+    "paragraph_count": 100,
+    "table_count": 11,
+    "total_inaccuracy_language_present": true
+  },
+  "report_generation_script": "scripts/generate_experiment_c_total_inaccuracy_report.py",
+  "report_generation_script_sha256": "697c915bcd3781bd6ac2accb8fa351cbba7fd0dd6ca57264f2e570c8a47ccbf3",
+  "source_dataset_hash": "6fdfaa035b5da2211e813353916902c871e783ecfa993615db672f62bcb8e327",
+  "terminology_policy": "Total inaccuracy only; banned terms removed."
+}

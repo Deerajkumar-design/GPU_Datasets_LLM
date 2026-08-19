@@ -1,0 +1,5 @@
+outcome,or_per_2x_context,ci_low,ci_high,p_value,interpretation
+inaccurate,1.2317734762142785,1.177720361693054,1.2883074336286702,8.655597418634078e-20,odds ratio per doubling of rendered input tokens
+hallucinatory_inaccuracy,1.0700445966505356,1.0266988034603421,1.1152203888442875,0.0013328105869846465,odds ratio per doubling of rendered input tokens
+grounded_inaccuracy,1.214982951079025,1.1529270787346042,1.2803789577332878,3.3371498939503463e-13,odds ratio per doubling of rendered input tokens
+hallucinatory_vs_grounded_among_inaccurate,0.936284482986037,0.8971785933458769,0.9770949057212692,0.0024909319661059067,odds ratio per doubling of rendered input tokens

@@ -1,0 +1,1290 @@
+{
+  "config_hash": "b8ba470562b734d3",
+  "config_path": "config/fred_pilot_v2.yaml",
+  "context_lengths": [
+    4096,
+    8192,
+    16384,
+    32768,
+    65536,
+    131072
+  ],
+  "dataset_name": "fred_pilot_v2",
+  "distractors": {
+    "taxonomy": {
+      "NEAR_MATCH_VALUE": "Numerically within 5% of a target value while being a different fact -- a plausible-looking wrong answer.",
+      "OTHER_SAME_DOMAIN": "A real record from the same primary source with no closer relationship to the target.",
+      "WRONG_ENTITY": "Same metric and period, a different entity (other company, country, trial, product).",
+      "WRONG_FIELD": "Same entity, a different field/concept.",
+      "WRONG_PERIOD": "Same entity and metric, a different period (other year, quarter, or instant).",
+      "WRONG_SERIES_VARIANT": "Same entity, period, unit and underlying measure, but a different series variant or measurement basis such as seasonal adjustment, frequency, nominal/real basis, or transform.",
+      "WRONG_UNIT": "Same entity, metric and period, reported in a genuinely different unit.",
+      "WRONG_VERSION": "Same entity, metric, period and unit, but a different filing/revision/submission version."
+    },
+    "totals_by_type": {
+      "NEAR_MATCH_VALUE": 720,
+      "OTHER_SAME_DOMAIN": 12912,
+      "WRONG_ENTITY": 158,
+      "WRONG_FIELD": 8032,
+      "WRONG_PERIOD": 9287,
+      "WRONG_SERIES_VARIANT": 107,
+      "WRONG_UNIT": 22,
+      "WRONG_VERSION": 84
+    }
+  },
+  "generated_at": "2026-08-09T19:04:53Z",
+  "git_commit": "7c848cf04dc3d16ee413ef3819f09f44ca9ad046",
+  "instances": {
+    "by_domain": {
+      "FRED": 60
+    },
+    "by_length": {
+      "128K": 10,
+      "16K": 10,
+      "32K": 10,
+      "4K": 10,
+      "64K": 10,
+      "8K": 10
+    },
+    "by_question_type": {
+      "DIRECT_RETRIEVAL": 12,
+      "ENTITY_UNIT_BINDING": 12,
+      "RETRIEVAL_CALCULATION": 18,
+      "TEMPORAL_VERSION": 6,
+      "UNANSWERABLE": 12
+    },
+    "fill_ratio_by_length": {
+      "128K": {
+        "max": 0.9882,
+        "mean": 0.9876,
+        "median": 0.9875,
+        "min": 0.9873,
+        "n": 10,
+        "p25": 0.9875,
+        "p75": 0.9878
+      },
+      "16K": {
+        "max": 0.9876,
+        "mean": 0.9864,
+        "median": 0.9865,
+        "min": 0.984,
+        "n": 10,
+        "p25": 0.986,
+        "p75": 0.9874
+      },
+      "32K": {
+        "max": 0.9882,
+        "mean": 0.987,
+        "median": 0.9871,
+        "min": 0.9858,
+        "n": 10,
+        "p25": 0.9861,
+        "p75": 0.9876
+      },
+      "4K": {
+        "max": 0.9868,
+        "mean": 0.9805,
+        "median": 0.9802,
+        "min": 0.9753,
+        "n": 10,
+        "p25": 0.9768,
+        "p75": 0.9834
+      },
+      "64K": {
+        "max": 0.9879,
+        "mean": 0.9873,
+        "median": 0.9873,
+        "min": 0.9868,
+        "n": 10,
+        "p25": 0.987,
+        "p75": 0.9877
+      },
+      "8K": {
+        "max": 0.9868,
+        "mean": 0.9833,
+        "median": 0.9828,
+        "min": 0.9794,
+        "n": 10,
+        "p25": 0.9808,
+        "p75": 0.9857
+      }
+    },
+    "target_position_distribution": {
+      "max": 0.5087,
+      "mean": 0.4998,
+      "median": 0.5,
+      "min": 0.4889,
+      "n": 48,
+      "p25": 0.4991,
+      "p75": 0.5004
+    },
+    "token_distribution_by_length": {
+      "128K": {
+        "max": 129527.0,
+        "mean": 129453.1,
+        "median": 129438.0,
+        "min": 129406.0,
+        "n": 10,
+        "p25": 129433.0,
+        "p75": 129469.0
+      },
+      "16K": {
+        "max": 16181.0,
+        "mean": 16161.1,
+        "median": 16162.0,
+        "min": 16122.0,
+        "n": 10,
+        "p25": 16155.0,
+        "p75": 16177.0
+      },
+      "32K": {
+        "max": 32380.0,
+        "mean": 32342.2,
+        "median": 32346.0,
+        "min": 32303.0,
+        "n": 10,
+        "p25": 32313.0,
+        "p75": 32363.0
+      },
+      "4K": {
+        "max": 4042.0,
+        "mean": 4016.3,
+        "median": 4015.0,
+        "min": 3995.0,
+        "n": 10,
+        "p25": 4001.0,
+        "p75": 4028.0
+      },
+      "64K": {
+        "max": 64746.0,
+        "mean": 64704.8,
+        "median": 64706.0,
+        "min": 64670.0,
+        "n": 10,
+        "p25": 64682.0,
+        "p75": 64727.0
+      },
+      "8K": {
+        "max": 8084.0,
+        "mean": 8054.9,
+        "median": 8051.0,
+        "min": 8023.0,
+        "n": 10,
+        "p25": 8035.0,
+        "p75": 8075.0
+      }
+    },
+    "total": 60
+  },
+  "min_fill_ratio": 0.95,
+  "normalized_records_by_domain": {
+    "FRED": 20925
+  },
+  "position_tolerance": 0.05,
+  "question_families": {
+    "answerable": 8,
+    "by_domain": {
+      "FRED": 10
+    },
+    "by_question_type": {
+      "DIRECT_RETRIEVAL": 2,
+      "ENTITY_UNIT_BINDING": 2,
+      "RETRIEVAL_CALCULATION": 3,
+      "TEMPORAL_VERSION": 1,
+      "UNANSWERABLE": 2
+    },
+    "by_template": {
+      "FRED_BASIS_BINDING": 2,
+      "FRED_DIRECT_OBSERVATION": 2,
+      "FRED_PERCENT_CHANGE": 2,
+      "FRED_SERIES_SPREAD": 1,
+      "FRED_UNANSWERABLE_NO_OBSERVATION": 2,
+      "FRED_VINTAGE_SELECTION": 1
+    },
+    "configured_target": {
+      "FRED": 10
+    },
+    "total": 10,
+    "unanswerable": 2
+  },
+  "representative_families": [
+    {
+      "answer_type": "PERCENT",
+      "answer_unit": "percent",
+      "answerable": true,
+      "calculation_spec": {
+        "denominator_record_id": null,
+        "formula": "((current - previous) / previous) * 100",
+        "numerator_record_id": null,
+        "operand_values": {
+          "current": 4.67,
+          "previous": 4.66
+        },
+        "operands": {
+          "current": "FRED-WGS10YR-2026-07-31-latest-b0603637",
+          "previous": "FRED-WGS10YR-2026-07-24-latest-4def8320"
+        },
+        "operation": "growth_percent",
+        "raw_result": 0.214592274678107,
+        "result_unit": "percent",
+        "round_decimals": 2,
+        "rounded_result": 0.21
+      },
+      "context_variants": [
+        {
+          "context_sha256": "7bc72f2c463ecf3b",
+          "distractor_counts": {
+            "NEAR_MATCH_VALUE": 8,
+            "OTHER_SAME_DOMAIN": 16,
+            "WRONG_FIELD": 14,
+            "WRONG_PERIOD": 9,
+            "WRONG_SERIES_VARIANT": 2
+          },
+          "fill_ratio": 0.9834,
+          "instance_id": "FRED_0005_4K",
+          "n_records": 51,
+          "nominal": "4K",
+          "target_evidence_tokens": [
+            1943,
+            2124
+          ],
+          "target_position_relative": 0.5048411122144985,
+          "tokens_actual": 4028
+        },
+        {
+          "context_sha256": "fa62a0208cb2cafb",
+          "distractor_counts": {
+            "NEAR_MATCH_VALUE": 18,
+            "OTHER_SAME_DOMAIN": 33,
+            "WRONG_FIELD": 21,
+            "WRONG_PERIOD": 26,
+            "WRONG_SERIES_VARIANT": 2
+          },
+          "fill_ratio": 0.9855,
+          "instance_id": "FRED_0005_8K",
+          "n_records": 102,
+          "nominal": "8K",
+          "target_evidence_tokens": [
+            3936,
+            4117
+          ],
+          "target_position_relative": 0.4987613031091292,
+          "tokens_actual": 8073
+        },
+        {
+          "context_sha256": "7d1197b282a6a3f3",
+          "distractor_counts": {
+            "NEAR_MATCH_VALUE": 34,
+            "OTHER_SAME_DOMAIN": 68,
+            "WRONG_FIELD": 44,
+            "WRONG_PERIOD": 54,
+            "WRONG_SERIES_VARIANT": 2
+          },
+          "fill_ratio": 0.986,
+          "instance_id": "FRED_0005_16K",
+          "n_records": 204,
+          "nominal": "16K",
+          "target_evidence_tokens": [
+            7947,
+            8128
+          ],
+          "target_position_relative": 0.4975239863819251,
+          "tokens_actual": 16155
+        },
+        {
+          "context_sha256": "d0965eda0ca6a088",
+          "distractor_counts": {
+            "NEAR_MATCH_VALUE": 68,
+            "OTHER_SAME_DOMAIN": 136,
+            "WRONG_FIELD": 95,
+            "WRONG_PERIOD": 103,
+            "WRONG_SERIES_VARIANT": 2
+          },
+          "fill_ratio": 0.9858,
+          "instance_id": "FRED_0005_32K",
+          "n_records": 406,
+          "nominal": "32K",
+          "target_evidence_tokens": [
+            16031,
+            16212
+          ],
+          "target_position_relative": 0.49907129368789277,
+          "tokens_actual": 32303
+        },
+        {
+          "context_sha256": "060f93f0bcabfdbe",
+          "distractor_counts": {
+            "NEAR_MATCH_VALUE": 136,
+            "OTHER_SAME_DOMAIN": 272,
+            "WRONG_FIELD": 197,
+            "WRONG_PERIOD": 204,
+            "WRONG_SERIES_VARIANT": 2
+          },
+          "fill_ratio": 0.9869,
+          "instance_id": "FRED_0005_64K",
+          "n_records": 813,
+          "nominal": "64K",
+          "target_evidence_tokens": [
+            32249,
+            32430
+          ],
+          "target_position_relative": 0.5,
+          "tokens_actual": 64679
+        },
+        {
+          "context_sha256": "d28a58257b3a7087",
+          "distractor_counts": {
+            "NEAR_MATCH_VALUE": 271,
+            "OTHER_SAME_DOMAIN": 540,
+            "WRONG_FIELD": 401,
+            "WRONG_PERIOD": 408,
+            "WRONG_SERIES_VARIANT": 2
+          },
+          "fill_ratio": 0.9875,
+          "instance_id": "FRED_0005_128K",
+          "n_records": 1624,
+          "nominal": "128K",
+          "target_evidence_tokens": [
+            64596,
+            64777
+          ],
+          "target_position_relative": 0.4997643586692832,
+          "tokens_actual": 129434
+        }
+      ],
+      "domain": "FRED",
+      "gold_answer": "0.21%",
+      "gold_answer_normalized": 0.21,
+      "gold_evidence": [
+        {
+          "concept": "Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (Not Seasonally Adjusted) [WGS10YR]",
+          "entity": "United States [US]",
+          "period": "2026-07-31",
+          "record_id": "FRED-WGS10YR-2026-07-31-latest-b0603637",
+          "role": "current",
+          "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=WGS10YR&cosd=1990-01-01",
+          "unit": "Percent",
+          "value": 4.67,
+          "version": "latest"
+        },
+        {
+          "concept": "Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (Not Seasonally Adjusted) [WGS10YR]",
+          "entity": "United States [US]",
+          "period": "2026-07-24",
+          "record_id": "FRED-WGS10YR-2026-07-24-latest-4def8320",
+          "role": "previous",
+          "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=WGS10YR&cosd=1990-01-01",
+          "unit": "Percent",
+          "value": 4.66,
+          "version": "latest"
+        }
+      ],
+      "numeric_tolerance": 0.005,
+      "question": "Using only the FRED records supplied in the context, calculate the percentage change in FRED series WGS10YR (\"Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity\"), measured in Percent, not seasonally adjusted, weekly frequency between the observation dated 2026-07-24 and the observation dated 2026-07-31. Use both values from the most recent vintage, apply ((value_2026-07-31 - value_2026-07-24) / value_2026-07-24) * 100, and round to two decimal places.",
+      "question_family_id": "FRED_0005",
+      "question_type": "RETRIEVAL_CALCULATION",
+      "template_id": "FRED_PERCENT_CHANGE",
+      "unanswerable_spec": null
+    },
+    {
+      "answer_type": "INSUFFICIENT_EVIDENCE",
+      "answer_unit": null,
+      "answerable": false,
+      "calculation_spec": null,
+      "context_variants": [
+        {
+          "context_sha256": "256699a799aba6eb",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 20,
+            "WRONG_FIELD": 15,
+            "WRONG_PERIOD": 9,
+            "WRONG_SERIES_VARIANT": 4
+          },
+          "fill_ratio": 0.9766,
+          "instance_id": "FRED_0009_4K",
+          "n_records": 48,
+          "nominal": "4K",
+          "target_evidence_tokens": [
+            null,
+            null
+          ],
+          "target_position_relative": null,
+          "tokens_actual": 4000
+        },
+        {
+          "context_sha256": "2563446c383f943c",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 39,
+            "WRONG_FIELD": 30,
+            "WRONG_PERIOD": 23,
+            "WRONG_SERIES_VARIANT": 4
+          },
+          "fill_ratio": 0.9834,
+          "instance_id": "FRED_0009_8K",
+          "n_records": 96,
+          "nominal": "8K",
+          "target_evidence_tokens": [
+            null,
+            null
+          ],
+          "target_position_relative": null,
+          "tokens_actual": 8056
+        },
+        {
+          "context_sha256": "f65b67d02df91335",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 76,
+            "WRONG_FIELD": 58,
+            "WRONG_PERIOD": 53,
+            "WRONG_SERIES_VARIANT": 4
+          },
+          "fill_ratio": 0.9874,
+          "instance_id": "FRED_0009_16K",
+          "n_records": 191,
+          "nominal": "16K",
+          "target_evidence_tokens": [
+            null,
+            null
+          ],
+          "target_position_relative": null,
+          "tokens_actual": 16178
+        },
+        {
+          "context_sha256": "45a6fabcd897a9c6",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 153,
+            "WRONG_FIELD": 114,
+            "WRONG_PERIOD": 110,
+            "WRONG_SERIES_VARIANT": 4
+          },
+          "fill_ratio": 0.9882,
+          "instance_id": "FRED_0009_32K",
+          "n_records": 381,
+          "nominal": "32K",
+          "target_evidence_tokens": [
+            null,
+            null
+          ],
+          "target_position_relative": null,
+          "tokens_actual": 32380
+        },
+        {
+          "context_sha256": "3d1b25cb027067a0",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 304,
+            "WRONG_FIELD": 230,
+            "WRONG_PERIOD": 224,
+            "WRONG_SERIES_VARIANT": 4
+          },
+          "fill_ratio": 0.9874,
+          "instance_id": "FRED_0009_64K",
+          "n_records": 762,
+          "nominal": "64K",
+          "target_evidence_tokens": [
+            null,
+            null
+          ],
+          "target_position_relative": null,
+          "tokens_actual": 64709
+        },
+        {
+          "context_sha256": "5a840e5c23625eaf",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 609,
+            "WRONG_FIELD": 459,
+            "WRONG_PERIOD": 452,
+            "WRONG_SERIES_VARIANT": 4
+          },
+          "fill_ratio": 0.9882,
+          "instance_id": "FRED_0009_128K",
+          "n_records": 1524,
+          "nominal": "128K",
+          "target_evidence_tokens": [
+            null,
+            null
+          ],
+          "target_position_relative": null,
+          "tokens_actual": 129527
+        }
+      ],
+      "domain": "FRED",
+      "gold_answer": null,
+      "gold_answer_normalized": "INSUFFICIENT_EVIDENCE",
+      "gold_evidence": [],
+      "numeric_tolerance": null,
+      "question": "Using only the FRED records supplied in the context, what value does FRED report for FRED series DGS10 (\"Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity\"), measured in Percent, not seasonally adjusted, daily frequency, for the observation dated 2009-09-07? If the supplied records contain no observation for that series on that date, state that the evidence is insufficient rather than interpolating from neighbouring dates or from a related series.",
+      "question_family_id": "FRED_0009",
+      "question_type": "UNANSWERABLE",
+      "template_id": "FRED_UNANSWERABLE_NO_OBSERVATION",
+      "unanswerable_spec": {
+        "forbidden_concept_aliases": [
+          "DGS10"
+        ],
+        "missing_concept": "DGS10",
+        "missing_entity_id": "US",
+        "missing_period": "2009-09-07",
+        "reason": "The St. Louis Fed returns an empty observation for DGS10 on 2009-09-07 — the series publishes no value for that date (a non-trading day for daily series, or a date outside the published range). Verified by exhaustive scan of the normalized pool: zero valued records match entity_id=US, concept=DGS10, period=2009-09-07. Empty observations are never rendered into a context.",
+        "reason_code": "NO_OBSERVATION_PUBLISHED",
+        "verified_absent_in_pool": true
+      }
+    },
+    {
+      "answer_type": "NUMERIC",
+      "answer_unit": "Thousands of Persons",
+      "answerable": true,
+      "calculation_spec": null,
+      "context_variants": [
+        {
+          "context_sha256": "854373824ba510f6",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 20,
+            "WRONG_FIELD": 10,
+            "WRONG_PERIOD": 13,
+            "WRONG_SERIES_VARIANT": 1,
+            "WRONG_VERSION": 5
+          },
+          "fill_ratio": 0.9805,
+          "instance_id": "FRED_0008_4K",
+          "n_records": 50,
+          "nominal": "4K",
+          "target_evidence_tokens": [
+            2000,
+            2086
+          ],
+          "target_position_relative": 0.5087151394422311,
+          "tokens_actual": 4016
+        },
+        {
+          "context_sha256": "b18094ab23ed2400",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 40,
+            "WRONG_FIELD": 24,
+            "WRONG_PERIOD": 29,
+            "WRONG_SERIES_VARIANT": 1,
+            "WRONG_VERSION": 5
+          },
+          "fill_ratio": 0.9794,
+          "instance_id": "FRED_0008_8K",
+          "n_records": 100,
+          "nominal": "8K",
+          "target_evidence_tokens": [
+            3936,
+            4022
+          ],
+          "target_position_relative": 0.4959491462046616,
+          "tokens_actual": 8023
+        },
+        {
+          "context_sha256": "5078b0ec5c32b58b",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 80,
+            "WRONG_FIELD": 53,
+            "WRONG_PERIOD": 62,
+            "WRONG_SERIES_VARIANT": 1,
+            "WRONG_VERSION": 5
+          },
+          "fill_ratio": 0.9865,
+          "instance_id": "FRED_0008_16K",
+          "n_records": 202,
+          "nominal": "16K",
+          "target_evidence_tokens": [
+            8066,
+            8152
+          ],
+          "target_position_relative": 0.5017324588541022,
+          "tokens_actual": 16162
+        },
+        {
+          "context_sha256": "ebc275cdbcc8f7bd",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 161,
+            "WRONG_FIELD": 114,
+            "WRONG_PERIOD": 123,
+            "WRONG_SERIES_VARIANT": 1,
+            "WRONG_VERSION": 5
+          },
+          "fill_ratio": 0.9876,
+          "instance_id": "FRED_0008_32K",
+          "n_records": 405,
+          "nominal": "32K",
+          "target_evidence_tokens": [
+            16147,
+            16233
+          ],
+          "target_position_relative": 0.5002626456138183,
+          "tokens_actual": 32363
+        },
+        {
+          "context_sha256": "4b8849f96edd0611",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 322,
+            "WRONG_FIELD": 236,
+            "WRONG_PERIOD": 243,
+            "WRONG_SERIES_VARIANT": 1,
+            "WRONG_VERSION": 5
+          },
+          "fill_ratio": 0.987,
+          "instance_id": "FRED_0008_64K",
+          "n_records": 808,
+          "nominal": "64K",
+          "target_evidence_tokens": [
+            32330,
+            32416
+          ],
+          "target_position_relative": 0.5004947280541727,
+          "tokens_actual": 64682
+        },
+        {
+          "context_sha256": "88e2dce49c9e89fc",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 645,
+            "WRONG_FIELD": 479,
+            "WRONG_PERIOD": 486,
+            "WRONG_SERIES_VARIANT": 1,
+            "WRONG_VERSION": 5
+          },
+          "fill_ratio": 0.9873,
+          "instance_id": "FRED_0008_128K",
+          "n_records": 1617,
+          "nominal": "128K",
+          "target_evidence_tokens": [
+            64661,
+            64747
+          ],
+          "target_position_relative": 0.5000077276169574,
+          "tokens_actual": 129406
+        }
+      ],
+      "domain": "FRED",
+      "gold_answer": "144,120",
+      "gold_answer_normalized": 144120.0,
+      "gold_evidence": [
+        {
+          "concept": "All Employees, Total Nonfarm (Seasonally Adjusted) [PAYEMS]",
+          "entity": "United States [US]",
+          "period": "2021-03-01",
+          "record_id": "FRED-PAYEMS-2021-03-01-2021-04-29-4117a714",
+          "role": "target_value",
+          "source_url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=PAYEMS&vintage_date=2021-04-29&cosd=1990-01-01",
+          "unit": "Thousands of Persons",
+          "value": 144120.0,
+          "version": "vintage:2021-04-29"
+        }
+      ],
+      "numeric_tolerance": 0.5,
+      "question": "Using only the FRED/ALFRED records supplied in the context, what value did FRED series PAYEMS (\"All Employees, Total Nonfarm\"), measured in Thousands of Persons, seasonally adjusted, monthly frequency show for the observation dated 2021-03-01 **as of the vintage date 2021-04-29**? Report the value from that vintage exactly.",
+      "question_family_id": "FRED_0008",
+      "question_type": "TEMPORAL_VERSION",
+      "template_id": "FRED_VINTAGE_SELECTION",
+      "unanswerable_spec": null
+    },
+    {
+      "answer_type": "NUMERIC",
+      "answer_unit": "Thousands of Persons",
+      "answerable": true,
+      "calculation_spec": null,
+      "context_variants": [
+        {
+          "context_sha256": "fb63cdc4f96fbd64",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 20,
+            "WRONG_FIELD": 10,
+            "WRONG_PERIOD": 14,
+            "WRONG_SERIES_VARIANT": 6
+          },
+          "fill_ratio": 0.9868,
+          "instance_id": "FRED_0003_4K",
+          "n_records": 51,
+          "nominal": "4K",
+          "target_evidence_tokens": [
+            1985,
+            2068
+          ],
+          "target_position_relative": 0.5013607125185552,
+          "tokens_actual": 4042
+        },
+        {
+          "context_sha256": "e8aec718fae1e386",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 40,
+            "WRONG_FIELD": 23,
+            "WRONG_PERIOD": 31,
+            "WRONG_SERIES_VARIANT": 6
+          },
+          "fill_ratio": 0.9817,
+          "instance_id": "FRED_0003_8K",
+          "n_records": 101,
+          "nominal": "8K",
+          "target_evidence_tokens": [
+            3970,
+            4053
+          ],
+          "target_position_relative": 0.4988187018154688,
+          "tokens_actual": 8042
+        },
+        {
+          "context_sha256": "4ee2edb9091fe242",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 80,
+            "WRONG_FIELD": 53,
+            "WRONG_PERIOD": 62,
+            "WRONG_SERIES_VARIANT": 6
+          },
+          "fill_ratio": 0.9863,
+          "instance_id": "FRED_0003_16K",
+          "n_records": 202,
+          "nominal": "16K",
+          "target_evidence_tokens": [
+            8068,
+            8151
+          ],
+          "target_position_relative": 0.5018565505291169,
+          "tokens_actual": 16159
+        },
+        {
+          "context_sha256": "86ac32b6df1b3ab9",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 160,
+            "WRONG_FIELD": 115,
+            "WRONG_PERIOD": 123,
+            "WRONG_SERIES_VARIANT": 6
+          },
+          "fill_ratio": 0.9874,
+          "instance_id": "FRED_0003_32K",
+          "n_records": 405,
+          "nominal": "32K",
+          "target_evidence_tokens": [
+            16161,
+            16244
+          ],
+          "target_position_relative": 0.5007726781023025,
+          "tokens_actual": 32355
+        },
+        {
+          "context_sha256": "278a377a3f2a289b",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 323,
+            "WRONG_FIELD": 236,
+            "WRONG_PERIOD": 243,
+            "WRONG_SERIES_VARIANT": 6
+          },
+          "fill_ratio": 0.987,
+          "instance_id": "FRED_0003_64K",
+          "n_records": 809,
+          "nominal": "64K",
+          "target_evidence_tokens": [
+            32304,
+            32387
+          ],
+          "target_position_relative": 0.5000386482391862,
+          "tokens_actual": 64686
+        },
+        {
+          "context_sha256": "c70b8b681019cc37",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 647,
+            "WRONG_FIELD": 479,
+            "WRONG_PERIOD": 486,
+            "WRONG_SERIES_VARIANT": 6
+          },
+          "fill_ratio": 0.9875,
+          "instance_id": "FRED_0003_128K",
+          "n_records": 1619,
+          "nominal": "128K",
+          "target_evidence_tokens": [
+            64676,
+            64759
+          ],
+          "target_position_relative": 0.4999884114402262,
+          "tokens_actual": 129438
+        }
+      ],
+      "domain": "FRED",
+      "gold_answer": "149,952",
+      "gold_answer_normalized": 149952.0,
+      "gold_evidence": [
+        {
+          "concept": "All Employees, Total Nonfarm (Not Seasonally Adjusted) [PAYNSA]",
+          "entity": "United States [US]",
+          "period": "2020-03-01",
+          "record_id": "FRED-PAYNSA-2020-03-01-latest-01e51bbe",
+          "role": "target_value",
+          "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PAYNSA&cosd=1990-01-01",
+          "unit": "Thousands of Persons",
+          "value": 149952.0,
+          "version": "latest"
+        }
+      ],
+      "numeric_tolerance": 0.5,
+      "question": "Using only the FRED records supplied in the context, report the value of FRED series PAYNSA (\"All Employees, Total Nonfarm\"), measured in Thousands of Persons, not seasonally adjusted, monthly frequency for United States on the observation dated 2020-03-01. Report the value for series PAYNSA exactly.",
+      "question_family_id": "FRED_0003",
+      "question_type": "ENTITY_UNIT_BINDING",
+      "template_id": "FRED_BASIS_BINDING",
+      "unanswerable_spec": null
+    }
+  ],
+  "schema_version": "1.1.0",
+  "seed": 20240817,
+  "source_limitations": [
+    {
+      "detail": "NY.GDP.MKTP.KD [NLD..NLD]: [world_bank] GET https://api.worldbank.org/v2/country/NLD/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/NLD/indicator/NY.GDP.MKTP.KD?format=json&per_page=500",
+      "domain": "WORLD_BANK",
+      "kind": "REQUEST_ERROR"
+    },
+    {
+      "detail": "NY.GDP.MKTP.KD [SAU..SAU]: [world_bank] GET https://api.worldbank.org/v2/country/SAU/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTPSConnectionPool(host='api.worldbank.org', port=443): Read timed out. (read timeout=4.0)",
+      "domain": "WORLD_BANK",
+      "kind": "REQUEST_ERROR"
+    },
+    {
+      "detail": "NY.GDP.MKTP.KD [CHE..CHE]: [world_bank] GET https://api.worldbank.org/v2/country/CHE/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/CHE/indicator/NY.GDP.MKTP.KD?format=json&per_page=500",
+      "domain": "WORLD_BANK",
+      "kind": "REQUEST_ERROR"
+    },
+    {
+      "detail": "NY.GDP.MKTP.KD [POL..POL]: [world_bank] GET https://api.worldbank.org/v2/country/POL/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/POL/indicator/NY.GDP.MKTP.KD?format=json&per_page=500",
+      "domain": "WORLD_BANK",
+      "kind": "REQUEST_ERROR"
+    },
+    {
+      "detail": "NY.GDP.MKTP.KD [SWE..SWE]: [world_bank] GET https://api.worldbank.org/v2/country/SWE/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTPSConnectionPool(host='api.worldbank.org', port=443): Read timed out. (read timeout=4.0)",
+      "domain": "WORLD_BANK",
+      "kind": "REQUEST_ERROR"
+    },
+    {
+      "detail": "NY.GDP.PCAP.CD [FRA..FRA]: [world_bank] GET https://api.worldbank.org/v2/country/FRA/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTPSConnectionPool(host='api.worldbank.org', port=443): Read timed out. (read timeout=4.0)",
+      "domain": "WORLD_BANK",
+      "kind": "REQUEST_ERROR"
+    },
+    {
+      "detail": "NY.GDP.PCAP.CD [BRA..BRA]: [world_bank] GET https://api.worldbank.org/v2/country/BRA/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/BRA/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+      "domain": "WORLD_BANK",
+      "kind": "REQUEST_ERROR"
+    },
+    {
+      "detail": "NY.GDP.PCAP.CD [ITA..ITA]: [world_bank] GET https://api.worldbank.org/v2/country/ITA/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/ITA/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+      "domain": "WORLD_BANK",
+      "kind": "REQUEST_ERROR"
+    },
+    {
+      "detail": "NY.GDP.PCAP.CD [CAN..CAN]: [world_bank] GET https://api.worldbank.org/v2/country/CAN/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/CAN/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+      "domain": "WORLD_BANK",
+      "kind": "REQUEST_ERROR"
+    },
+    {
+      "detail": "NY.GDP.PCAP.CD [KOR..KOR]: [world_bank] GET https://api.worldbank.org/v2/country/KOR/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/KOR/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+      "domain": "WORLD_BANK",
+      "kind": "REQUEST_ERROR"
+    }
+  ],
+  "sources": [
+    {
+      "api_base": "https://clinicaltrials.gov/api/v2",
+      "api_version": "v2",
+      "blocked": false,
+      "blocker_reason": null,
+      "domain": "CLINICAL_TRIALS",
+      "errors": [],
+      "identifiers": [
+        "metformin",
+        "atorvastatin",
+        "pembrolizumab",
+        "insulin glargine",
+        "semaglutide",
+        "rivaroxaban",
+        "aspirin",
+        "tranexamic acid"
+      ],
+      "n_normalized_records": 0,
+      "n_raw_payloads": 24,
+      "n_raw_records": 2400,
+      "n_requests": 0,
+      "notes": null,
+      "retrieved_at": "2026-08-09T04:32:06Z",
+      "source": "CLINICALTRIALS_GOV_V2"
+    },
+    {
+      "api_base": "https://api.fda.gov/drug",
+      "api_version": "openfda-drugsfda",
+      "blocked": false,
+      "blocker_reason": null,
+      "domain": "FDA",
+      "errors": [],
+      "identifiers": [
+        "METFORMIN HYDROCHLORIDE",
+        "ATORVASTATIN CALCIUM",
+        "LISINOPRIL",
+        "AMLODIPINE BESYLATE",
+        "LEVOTHYROXINE SODIUM",
+        "OMEPRAZOLE",
+        "SERTRALINE HYDROCHLORIDE",
+        "GABAPENTIN",
+        "IBUPROFEN",
+        "AMOXICILLIN",
+        "PREDNISONE",
+        "WARFARIN SODIUM",
+        "MONTELUKAST SODIUM",
+        "LOSARTAN POTASSIUM",
+        "CIPROFLOXACIN HYDROCHLORIDE"
+      ],
+      "n_normalized_records": 0,
+      "n_raw_payloads": 15,
+      "n_raw_records": 960,
+      "n_requests": 0,
+      "notes": null,
+      "retrieved_at": "2026-08-09T04:32:06Z",
+      "source": "OPENFDA_DRUGSFDA"
+    },
+    {
+      "api_base": "https://data.sec.gov/api/xbrl",
+      "api_version": "xbrl-companyfacts-v1",
+      "blocked": false,
+      "blocker_reason": null,
+      "domain": "SEC",
+      "errors": [],
+      "identifiers": [
+        "0000320193",
+        "0000789019",
+        "0001018724",
+        "0000021344",
+        "0000104169",
+        "0000200406",
+        "0000078003",
+        "0000019617"
+      ],
+      "n_normalized_records": 0,
+      "n_raw_payloads": 8,
+      "n_raw_records": 259528,
+      "n_requests": 0,
+      "notes": null,
+      "retrieved_at": "2026-08-09T04:32:06Z",
+      "source": "SEC_EDGAR_XBRL_COMPANYFACTS"
+    },
+    {
+      "api_base": "https://api.worldbank.org/v2",
+      "api_version": "v2",
+      "blocked": false,
+      "blocker_reason": null,
+      "domain": "WORLD_BANK",
+      "errors": [
+        "NY.GDP.MKTP.KD [NLD..NLD]: [world_bank] GET https://api.worldbank.org/v2/country/NLD/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/NLD/indicator/NY.GDP.MKTP.KD?format=json&per_page=500",
+        "NY.GDP.MKTP.KD [SAU..SAU]: [world_bank] GET https://api.worldbank.org/v2/country/SAU/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTPSConnectionPool(host='api.worldbank.org', port=443): Read timed out. (read timeout=4.0)",
+        "NY.GDP.MKTP.KD [CHE..CHE]: [world_bank] GET https://api.worldbank.org/v2/country/CHE/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/CHE/indicator/NY.GDP.MKTP.KD?format=json&per_page=500",
+        "NY.GDP.MKTP.KD [POL..POL]: [world_bank] GET https://api.worldbank.org/v2/country/POL/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/POL/indicator/NY.GDP.MKTP.KD?format=json&per_page=500",
+        "NY.GDP.MKTP.KD [SWE..SWE]: [world_bank] GET https://api.worldbank.org/v2/country/SWE/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTPSConnectionPool(host='api.worldbank.org', port=443): Read timed out. (read timeout=4.0)",
+        "NY.GDP.PCAP.CD [FRA..FRA]: [world_bank] GET https://api.worldbank.org/v2/country/FRA/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTPSConnectionPool(host='api.worldbank.org', port=443): Read timed out. (read timeout=4.0)",
+        "NY.GDP.PCAP.CD [BRA..BRA]: [world_bank] GET https://api.worldbank.org/v2/country/BRA/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/BRA/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.PCAP.CD [ITA..ITA]: [world_bank] GET https://api.worldbank.org/v2/country/ITA/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/ITA/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.PCAP.CD [CAN..CAN]: [world_bank] GET https://api.worldbank.org/v2/country/CAN/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/CAN/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.PCAP.CD [KOR..KOR]: [world_bank] GET https://api.worldbank.org/v2/country/KOR/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/KOR/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.PCAP.CD [MEX..MEX]: [world_bank] GET https://api.worldbank.org/v2/country/MEX/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/MEX/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.PCAP.CD [ESP..ESP]: [world_bank] GET https://api.worldbank.org/v2/country/ESP/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/ESP/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.PCAP.CD [IDN..IDN]: [world_bank] GET https://api.worldbank.org/v2/country/IDN/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/IDN/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.PCAP.CD [TUR..TUR]: [world_bank] GET https://api.worldbank.org/v2/country/TUR/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTPSConnectionPool(host='api.worldbank.org', port=443): Read timed out. (read timeout=4.0)",
+        "NY.GDP.PCAP.CD [NLD..NLD]: [world_bank] GET https://api.worldbank.org/v2/country/NLD/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/NLD/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.PCAP.CD [POL..POL]: [world_bank] GET https://api.worldbank.org/v2/country/POL/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/POL/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [DEU..DEU]: [world_bank] GET https://api.worldbank.org/v2/country/DEU/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/DEU/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [BRA..BRA]: [world_bank] GET https://api.worldbank.org/v2/country/BRA/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/BRA/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [ITA..ITA]: [world_bank] GET https://api.worldbank.org/v2/country/ITA/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/ITA/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [ESP..ESP]: [world_bank] GET https://api.worldbank.org/v2/country/ESP/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/ESP/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [IDN..IDN]: [world_bank] GET https://api.worldbank.org/v2/country/IDN/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/IDN/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [TUR..TUR]: [world_bank] GET https://api.worldbank.org/v2/country/TUR/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/TUR/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [NLD..NLD]: [world_bank] GET https://api.worldbank.org/v2/country/NLD/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTPSConnectionPool(host='api.worldbank.org', port=443): Read timed out. (read timeout=4.0)",
+        "NY.GDP.MKTP.KD.ZG [SAU..SAU]: [world_bank] GET https://api.worldbank.org/v2/country/SAU/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/SAU/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [CHE..CHE]: [world_bank] GET https://api.worldbank.org/v2/country/CHE/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/CHE/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [POL..POL]: [world_bank] GET https://api.worldbank.org/v2/country/POL/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/POL/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [SWE..SWE]: [world_bank] GET https://api.worldbank.org/v2/country/SWE/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/SWE/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500"
+      ],
+      "identifiers": [
+        "NY.GDP.MKTP.CD",
+        "NY.GDP.MKTP.KD",
+        "NY.GDP.PCAP.CD",
+        "NY.GDP.MKTP.KD.ZG"
+      ],
+      "n_normalized_records": 0,
+      "n_raw_payloads": 53,
+      "n_raw_records": 3498,
+      "n_requests": 65,
+      "notes": null,
+      "retrieved_at": "2026-08-09T04:33:16Z",
+      "source": "WORLD_BANK_INDICATORS_V2"
+    }
+  ],
+  "target_position": 0.5,
+  "tokenizer": {
+    "id": "tiktoken:cl100k_base",
+    "is_approximate": false,
+    "version": "tiktoken==0.13.0"
+  },
+  "unavailable_variants": {
+    "by_domain": {},
+    "by_length": {},
+    "by_reason_code": {},
+    "detail": [],
+    "total": 0
+  },
+  "validation": {
+    "checks": [
+      {
+        "check_id": "A",
+        "message": "",
+        "n_checked": 70,
+        "n_failed": 0,
+        "name": "unique IDs (families and instances)",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "B",
+        "message": "",
+        "n_checked": 10,
+        "n_failed": 0,
+        "name": "no duplicate question families",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "C",
+        "message": "",
+        "n_checked": 10,
+        "n_failed": 0,
+        "name": "valid source provenance",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "D",
+        "message": "",
+        "n_checked": 10,
+        "n_failed": 0,
+        "name": "deterministic gold-answer recomputation",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "E",
+        "message": "",
+        "n_checked": 60,
+        "n_failed": 0,
+        "name": "gold evidence present in every answerable context",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "F",
+        "message": "",
+        "n_checked": 60,
+        "n_failed": 0,
+        "name": "gold evidence absent for unanswerable families",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "G",
+        "message": "",
+        "n_checked": 10,
+        "n_failed": 0,
+        "name": "identical question across context-length variants",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "H",
+        "message": "",
+        "n_checked": 10,
+        "n_failed": 0,
+        "name": "identical gold answer across context-length variants",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "I",
+        "message": "",
+        "n_checked": 10,
+        "n_failed": 0,
+        "name": "identical gold evidence across context-length variants",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "J",
+        "message": "",
+        "n_checked": 10,
+        "n_failed": 0,
+        "name": "nested-context lineage",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "K",
+        "message": "",
+        "n_checked": 60,
+        "n_failed": 0,
+        "name": "token-length compliance",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "L",
+        "message": "",
+        "n_checked": 60,
+        "n_failed": 0,
+        "name": "target-position compliance",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "M",
+        "message": "",
+        "n_checked": 60,
+        "n_failed": 0,
+        "name": "record-boundary integrity",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "N",
+        "message": "",
+        "n_checked": 3,
+        "n_failed": 0,
+        "name": "unit consistency in calculations",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "O",
+        "message": "",
+        "n_checked": 10,
+        "n_failed": 0,
+        "name": "answer-type / schema validity",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "P",
+        "message": "",
+        "n_checked": 60,
+        "n_failed": 0,
+        "name": "distractor metadata completeness",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "Q",
+        "message": "",
+        "n_checked": 10,
+        "n_failed": 0,
+        "name": "no NaN or invalid numeric answers",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "R",
+        "message": "",
+        "n_checked": 60,
+        "n_failed": 0,
+        "name": "no context truncation through target evidence",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "S",
+        "message": "",
+        "n_checked": 60,
+        "n_failed": 0,
+        "name": "no answer leakage for unanswerable families",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "T",
+        "message": "",
+        "n_checked": 3,
+        "n_failed": 0,
+        "name": "calculation operands recomputable",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "U",
+        "message": "",
+        "n_checked": 5,
+        "n_failed": 0,
+        "name": "all five question types represented",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "V",
+        "message": "",
+        "n_checked": 60,
+        "n_failed": 0,
+        "name": "no duplicate answer sources in answerable contexts",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "W",
+        "message": "",
+        "n_checked": 60,
+        "n_failed": 0,
+        "name": "opaque display ID mapping integrity",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "X",
+        "message": "",
+        "n_checked": 60,
+        "n_failed": 0,
+        "name": "evidence-equivalence consistency",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "Y",
+        "message": "",
+        "n_checked": 60,
+        "n_failed": 0,
+        "name": "distractor taxonomy semantic constraints",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      }
+    ],
+    "counts": {
+      "critical_failed": 0,
+      "failed": 0,
+      "passed": 25,
+      "skipped": 0,
+      "total": 25,
+      "warning_failed": 0
+    },
+    "failure_detail": {},
+    "has_critical_failures": false
+  }
+}

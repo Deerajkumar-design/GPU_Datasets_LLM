@@ -1,0 +1,129 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Cutting Knowledge Date: December 2023
+Today Date: 09 Aug 2026
+
+Answer using only the supplied records.
+
+Identify records matching the exact entity, period, version, field, unit, product, route, dosage form, arm, series, or other conditions requested by the question.
+
+If the supplied records do not contain sufficient evidence to answer the question, return INSUFFICIENT_EVIDENCE.
+
+Do not infer or fabricate missing information.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+KNOWLEDGE RECORDS:
+
+<RECORD id="R8C1A155DE8" source="CLINICALTRIALS_GOV_V2">
+entity: Tranexamic Acid in Total Knee Replacement [NCT03656445]
+field: Primary purpose [design.primary_purpose]
+value: TREATMENT
+version: lastupdate:2018-09-05
+status: COMPLETED
+</RECORD>
+<RECORD id="R49FA3DC69F" source="CLINICALTRIALS_GOV_V2">
+entity: Tranexamic Acid in Total Knee Replacement [NCT03656445]
+field: Arm group type: Group B - Tranexamic Acid [arm.type]
+value: ACTIVE_COMPARATOR
+version: lastupdate:2018-09-05
+arm: Group B - Tranexamic Acid
+status: COMPLETED
+</RECORD>
+<RECORD id="RB89369B16F" source="CLINICALTRIALS_GOV_V2">
+entity: Tranexamic Acid in Total Knee Replacement [NCT03656445]
+field: Number of arm groups [arms.count]
+unit: arms
+value: 3.0
+version: lastupdate:2018-09-05
+status: COMPLETED
+</RECORD>
+<RECORD id="R2EE950F20E" source="CLINICALTRIALS_GOV_V2">
+entity: Comparison of Chemical Peeling Agent With Transamine for Treatment of Melasma [NCT05362500]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 54.0
+version: lastupdate:2022-05-05
+status: COMPLETED
+</RECORD>
+<RECORD id="R8781F37076" source="CLINICALTRIALS_GOV_V2">
+entity: The Effects of Nateglinide and Acarbose on the Post-Prandial Glucose Control in Type 2 Diabetic Patients [NCT00437918]
+field: Last update posted date [study.last_update_posted_date]
+period: 2008
+value: 2008-03-24
+version: lastupdate:2008-03-24
+status: COMPLETED
+</RECORD>
+<RECORD id="R42CE0F99A7" source="CLINICALTRIALS_GOV_V2">
+entity: Comparison of Efficacy and Safety of Prandilin and NovoRapid in Newly Diagnosed Type 2 Diabetes [NCT03226210]
+field: Primary purpose [design.primary_purpose]
+value: TREATMENT
+version: lastupdate:2017-07-21
+status: COMPLETED
+</RECORD>
+<RECORD id="R12AC306684" source="CLINICALTRIALS_GOV_V2">
+entity: Long-Duration Ultrasound for Knee Osteoarthritis [NCT03800927]
+field: Maximum eligible age [eligibility.maximum_age]
+value: 80 Years
+version: lastupdate:20
+
+...[middle omitted in compact preview; exact prompt is reproducible from context/question/prompt hash]...
+
+205928]
+field: Intervention model [design.intervention_model]
+value: CROSSOVER
+version: lastupdate:2025-01-22
+status: COMPLETED
+</RECORD>
+<RECORD id="R9126209185" source="CLINICALTRIALS_GOV_V2">
+entity: Evaluation of Tranexamic Acid for Angiotensin-converting Enzyme Inhibitor-induced Angioedema in the Emergency Department [NCT06096077]
+field: Study first posted date [study.first_posted_date]
+period: 2023
+value: 2023-10-23
+version: lastupdate:2024-01-18
+status: COMPLETED
+</RECORD>
+<RECORD id="R4C927EF7E2" source="CLINICALTRIALS_GOV_V2">
+entity: Research Study of How Well Semaglutide Works in People Living With Overweight or Obesity. [NCT04251156]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 375.0
+version: lastupdate:2026-01-29
+status: COMPLETED
+</RECORD>
+<RECORD id="RFD008F4504" source="CLINICALTRIALS_GOV_V2">
+entity: Belgian Real Life Non-interventional Study (NIS) in Patients Treated With Xarelto Following an Acute Deep Vein Thrombosis (DVT) [NCT01855100]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 131.0
+version: lastupdate:2017-01-18
+status: COMPLETED
+</RECORD>
+<RECORD id="R7349FDBB0A" source="CLINICALTRIALS_GOV_V2">
+entity: Long-Duration Ultrasound for Knee Osteoarthritis [NCT03800927]
+field: Intervention model [design.intervention_model]
+value: CROSSOVER
+version: lastupdate:2023-06-26
+status: COMPLETED
+</RECORD>
+<RECORD id="R3BE81332F3" source="CLINICALTRIALS_GOV_V2">
+entity: Anticoagulation Preference by AF Patients Study [NCT02607371]
+field: Secondary outcome timeframe: Burden associated with anticoagulation treatment measured by the questionnaire ACTS [outcome.secondary.timeframe]
+value: Baseline
+version: lastupdate:2017-09-14
+outcome: Burden associated with anticoagulation treatment measured by the questionnaire ACTS
+status: COMPLETED
+</RECORD>
+
+TARGET QUESTION:
+
+Using only the ClinicalTrials.gov records supplied in the context, subtract the enrollment count of trial NCT03800927 from the enrollment count of trial NCT03656445. Report the difference as an integer number of participants.
+
+OUTPUT FORMAT:
+
+Return exactly one JSON object with this schema:
+{"selected_evidence":["R..."],"answer":"...","insufficient_evidence":false}
+
+For insufficient evidence, use:
+{"selected_evidence":[],"answer":"INSUFFICIENT_EVIDENCE","insufficient_evidence":true}
+
+Use only model-facing record IDs from the supplied records. Do not include reasoning.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+

@@ -1,0 +1,331 @@
+<RECORD id="R8C1A155DE8" source="CLINICALTRIALS_GOV_V2">
+entity: Tranexamic Acid in Total Knee Replacement [NCT03656445]
+field: Primary purpose [design.primary_purpose]
+value: TREATMENT
+version: lastupdate:2018-09-05
+status: COMPLETED
+</RECORD>
+<RECORD id="R49FA3DC69F" source="CLINICALTRIALS_GOV_V2">
+entity: Tranexamic Acid in Total Knee Replacement [NCT03656445]
+field: Arm group type: Group B - Tranexamic Acid [arm.type]
+value: ACTIVE_COMPARATOR
+version: lastupdate:2018-09-05
+arm: Group B - Tranexamic Acid
+status: COMPLETED
+</RECORD>
+<RECORD id="RB89369B16F" source="CLINICALTRIALS_GOV_V2">
+entity: Tranexamic Acid in Total Knee Replacement [NCT03656445]
+field: Number of arm groups [arms.count]
+unit: arms
+value: 3.0
+version: lastupdate:2018-09-05
+status: COMPLETED
+</RECORD>
+<RECORD id="R2EE950F20E" source="CLINICALTRIALS_GOV_V2">
+entity: Comparison of Chemical Peeling Agent With Transamine for Treatment of Melasma [NCT05362500]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 54.0
+version: lastupdate:2022-05-05
+status: COMPLETED
+</RECORD>
+<RECORD id="R8781F37076" source="CLINICALTRIALS_GOV_V2">
+entity: The Effects of Nateglinide and Acarbose on the Post-Prandial Glucose Control in Type 2 Diabetic Patients [NCT00437918]
+field: Last update posted date [study.last_update_posted_date]
+period: 2008
+value: 2008-03-24
+version: lastupdate:2008-03-24
+status: COMPLETED
+</RECORD>
+<RECORD id="R42CE0F99A7" source="CLINICALTRIALS_GOV_V2">
+entity: Comparison of Efficacy and Safety of Prandilin and NovoRapid in Newly Diagnosed Type 2 Diabetes [NCT03226210]
+field: Primary purpose [design.primary_purpose]
+value: TREATMENT
+version: lastupdate:2017-07-21
+status: COMPLETED
+</RECORD>
+<RECORD id="R12AC306684" source="CLINICALTRIALS_GOV_V2">
+entity: Long-Duration Ultrasound for Knee Osteoarthritis [NCT03800927]
+field: Maximum eligible age [eligibility.maximum_age]
+value: 80 Years
+version: lastupdate:2023-06-26
+status: COMPLETED
+</RECORD>
+<RECORD id="R6E29596161" source="CLINICALTRIALS_GOV_V2">
+entity: Long-Duration Ultrasound for Knee Osteoarthritis [NCT03800927]
+field: Primary purpose [design.primary_purpose]
+value: TREATMENT
+version: lastupdate:2023-06-26
+status: COMPLETED
+</RECORD>
+<RECORD id="R5C049F3BE4" source="CLINICALTRIALS_GOV_V2">
+entity: Investigations on Differences in Atorvastatin Metabolites Ratios as a Diagnostic Tool in Detecting Atorvastatin Induced Myotoxicity [NCT00414531]
+field: Arm group type: SIM [arm.type]
+value: OTHER
+version: lastupdate:2014-12-03
+arm: SIM
+status: COMPLETED
+</RECORD>
+<RECORD id="R6523D151D9" source="CLINICALTRIALS_GOV_V2">
+entity: DPP4-Inhibitors and Bone Metabolism in Diabetes [NCT06770894]
+field: Arm group type: Active treatment [arm.type]
+value: EXPERIMENTAL
+version: lastupdate:2025-01-13
+arm: Active treatment
+status: COMPLETED
+</RECORD>
+<RECORD id="RA904148E08" source="CLINICALTRIALS_GOV_V2">
+entity: Tranexamic Acid for the Prevention of Blood Loss in High Risk Delivered Women [NCT04201951]
+field: Primary purpose [design.primary_purpose]
+value: PREVENTION
+version: lastupdate:2020-12-24
+status: COMPLETED
+</RECORD>
+<RECORD id="RB7C8411D3B" source="CLINICALTRIALS_GOV_V2">
+entity: Introducing Biosimilar Insulin Glargine to the Treatment Regimen of Children and Youth with Type 1 Diabetes in Mali [NCT06624943]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 260.0
+version: lastupdate:2024-10-03
+status: COMPLETED
+</RECORD>
+<RECORD id="RCB75647A17" source="CLINICALTRIALS_GOV_V2">
+entity: Tranexamic Acid in Total Knee Replacement [NCT03656445]
+field: Study type [study.study_type]
+value: INTERVENTIONAL
+version: lastupdate:2018-09-05
+status: COMPLETED
+</RECORD>
+<RECORD id="RF5F593C904" source="CLINICALTRIALS_GOV_V2">
+entity: The ACTIVATE (Adoptive Cell Therapy InVigorated to Augment Tumor Eradication) Trial [NCT03158935]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 8.0
+version: lastupdate:2020-08-14
+status: COMPLETED
+</RECORD>
+<RECORD id="RA06104644C" source="CLINICALTRIALS_GOV_V2">
+entity: Aspirin Reload Before Percutaneous Coronary Intervention: Reperfusion Indexes Evaluation. [NCT01374698]
+field: Number of arm groups [arms.count]
+unit: arms
+value: 2.0
+version: lastupdate:2013-05-14
+status: COMPLETED
+</RECORD>
+<RECORD id="R2929B083F8" source="CLINICALTRIALS_GOV_V2">
+entity: Oral vs. Subcutaneous Semaglutide in Type 2 Diabetes Mellitus [NCT07056803]
+field: Study completion date [study.completion_date]
+period: 2025
+value: 2025-06-25
+version: lastupdate:2025-07-17
+status: COMPLETED
+</RECORD>
+<RECORD id="RF5B4682805" source="CLINICALTRIALS_GOV_V2">
+entity: Long-Duration Ultrasound for Knee Osteoarthritis [NCT03800927]
+field: Intervention: Long duration ultrasound [intervention.type]
+value: DEVICE
+version: lastupdate:2023-06-26
+intervention: Long duration ultrasound
+status: COMPLETED
+</RECORD>
+<RECORD id="RA596D9A231" source="CLINICALTRIALS_GOV_V2">
+entity: Long-Duration Ultrasound for Knee Osteoarthritis [NCT03800927]
+field: Study phase [study.phase]
+value: NA
+version: lastupdate:2023-06-26
+status: COMPLETED
+</RECORD>
+<RECORD id="R0E50D46DF8" source="CLINICALTRIALS_GOV_V2">
+entity: Comparative Pharmacokinetics of YH14659 in Healthy Male Subjects [NCT01657071]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 60.0
+version: lastupdate:2012-08-03
+status: COMPLETED
+</RECORD>
+<RECORD id="RB094C100E1" source="CLINICALTRIALS_GOV_V2">
+entity: A Study of Dulaglutide in Japanese Participants With Type 2 Diabetes Mellitus [NCT01584232]
+field: Accepts healthy volunteers [eligibility.healthy_volunteers]
+value: No
+version: lastupdate:2014-10-20
+status: COMPLETED
+</RECORD>
+<RECORD id="RBF030A6983" source="CLINICALTRIALS_GOV_V2">
+entity: Tranexamic Acid in Total Knee Replacement [NCT03656445]
+field: Primary outcome timeframe: Blood loss [outcome.primary.timeframe]
+value: 24 hours
+version: lastupdate:2018-09-05
+outcome: Blood loss
+status: COMPLETED
+</RECORD>
+<RECORD id="R584E60CDF3" source="CLINICALTRIALS_GOV_V2">
+entity: Tranexamic Acid in Total Knee Replacement [NCT03656445]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 180.0
+version: lastupdate:2018-09-05
+status: COMPLETED
+</RECORD>
+<RECORD id="RF6704DB3B7" source="CLINICALTRIALS_GOV_V2">
+entity: Long-Duration Ultrasound for Knee Osteoarthritis [NCT03800927]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 100.0
+version: lastupdate:2023-06-26
+status: COMPLETED
+</RECORD>
+<RECORD id="R4CAF507CC3" source="CLINICALTRIALS_GOV_V2">
+entity: Tranexamic Acid in Total Knee Replacement [NCT03656445]
+field: Intervention: Tranexamic Acid [intervention.type]
+value: DRUG
+version: lastupdate:2018-09-05
+intervention: Tranexamic Acid
+status: COMPLETED
+</RECORD>
+<RECORD id="RBCEE1B0792" source="CLINICALTRIALS_GOV_V2">
+entity: Evaluation of Glycemic Changes During Exercise in Children With Type 1 Diabetes [NCT02824510]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 24.0
+version: lastupdate:2019-10-01
+status: COMPLETED
+</RECORD>
+<RECORD id="R53EAFD5666" source="CLINICALTRIALS_GOV_V2">
+entity: Specific Lp(a) Apheresis for Regression of Coronary and Carotid Atherosclerosis [NCT02133807]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 32.0
+version: lastupdate:2014-05-12
+status: COMPLETED
+</RECORD>
+<RECORD id="R084E4CE3E4" source="CLINICALTRIALS_GOV_V2">
+entity: Tranexamic Acid in Total Knee Replacement [NCT03656445]
+field: Primary outcome timeframe: Blood loss [outcome.primary.timeframe]
+value: 96 hours
+version: lastupdate:2018-09-05
+outcome: Blood loss
+status: COMPLETED
+</RECORD>
+<RECORD id="RE616EAD060" source="CLINICALTRIALS_GOV_V2">
+entity: Health Assessment, Patient Treatment Satisfaction and Quality-of-Life in Insulin-Naive Type 2 Diabetes Patients [NCT00941369]
+field: Study phase [study.phase]
+value: PHASE4
+version: lastupdate:2012-11-22
+status: COMPLETED
+</RECORD>
+<RECORD id="R761C386510" source="CLINICALTRIALS_GOV_V2">
+entity: The Impact of Glucotoxicity on Gastric Emptying in Chinese Patients With Newly Diagnosed Type 2 Diabetes [NCT05284344]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 78.0
+version: lastupdate:2024-05-09
+status: COMPLETED
+</RECORD>
+<RECORD id="R7E97B647B7" source="CLINICALTRIALS_GOV_V2">
+entity: Perioperative Antiplatelet Therapy in Patients With Drug-eluting Stent Undergoing Noncardiac Surgery [NCT02797548]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 1010.0
+version: lastupdate:2024-11-05
+status: COMPLETED
+</RECORD>
+<RECORD id="R9FAF8945F5" source="CLINICALTRIALS_GOV_V2">
+entity: Long-Duration Ultrasound for Knee Osteoarthritis [NCT03800927]
+field: Secondary outcome timeframe: Function [outcome.secondary.timeframe]
+value: First week (start of study) to 24 weeks (end of study)
+version: lastupdate:2023-06-26
+outcome: Function
+status: COMPLETED
+</RECORD>
+<RECORD id="RC6DB6D7514" source="CLINICALTRIALS_GOV_V2">
+entity: Long-Duration Ultrasound for Knee Osteoarthritis [NCT03800927]
+field: Number of arm groups [arms.count]
+unit: arms
+value: 2.0
+version: lastupdate:2023-06-26
+status: COMPLETED
+</RECORD>
+<RECORD id="R5947451B7F" source="CLINICALTRIALS_GOV_V2">
+entity: Clinical Trial to Evaluate the Efficacy and Safety of DW1125 and DW1125A [NCT05970679]
+field: Last update posted date [study.last_update_posted_date]
+period: 2023
+value: 2023-08-01
+version: lastupdate:2023-08-01
+status: COMPLETED
+</RECORD>
+<RECORD id="RAE97049A9E" source="CLINICALTRIALS_GOV_V2">
+entity: Research Study Comparing a New Medicine Semaglutide to Liraglutide in People With Type 2 Diabetes [NCT03191396]
+field: Intervention model [design.intervention_model]
+value: PARALLEL
+version: lastupdate:2019-10-15
+status: COMPLETED
+</RECORD>
+<RECORD id="R34F6E79AEF" source="CLINICALTRIALS_GOV_V2">
+entity: Arthroscopic Shoulder Surgery With Administration of Intravenous Tranexamic Acid [NCT04025736]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 72.0
+version: lastupdate:2019-07-19
+status: COMPLETED
+</RECORD>
+<RECORD id="RAAA9A35C41" source="CLINICALTRIALS_GOV_V2">
+entity: Effects of Shifting From Twice Daily Insulin Glargine or Detemir to Once Daily Insulin Degludec in Type 1 Diabetes [NCT02360254]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 26.0
+version: lastupdate:2016-08-16
+status: COMPLETED
+</RECORD>
+<RECORD id="R5C389B7FFC" source="CLINICALTRIALS_GOV_V2">
+entity: Tranexamic Acid in Total Knee Replacement [NCT03656445]
+field: Eligible sex [eligibility.sex]
+value: ALL
+version: lastupdate:2018-09-05
+status: COMPLETED
+</RECORD>
+<RECORD id="R39BEE869C2" source="CLINICALTRIALS_GOV_V2">
+entity: Weekly Subcutaneous Semaglutide as Adjunct to Closed-loop Therapy in Type 1 Diabetes Care [NCT05205928]
+field: Intervention model [design.intervention_model]
+value: CROSSOVER
+version: lastupdate:2025-01-22
+status: COMPLETED
+</RECORD>
+<RECORD id="R9126209185" source="CLINICALTRIALS_GOV_V2">
+entity: Evaluation of Tranexamic Acid for Angiotensin-converting Enzyme Inhibitor-induced Angioedema in the Emergency Department [NCT06096077]
+field: Study first posted date [study.first_posted_date]
+period: 2023
+value: 2023-10-23
+version: lastupdate:2024-01-18
+status: COMPLETED
+</RECORD>
+<RECORD id="R4C927EF7E2" source="CLINICALTRIALS_GOV_V2">
+entity: Research Study of How Well Semaglutide Works in People Living With Overweight or Obesity. [NCT04251156]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 375.0
+version: lastupdate:2026-01-29
+status: COMPLETED
+</RECORD>
+<RECORD id="RFD008F4504" source="CLINICALTRIALS_GOV_V2">
+entity: Belgian Real Life Non-interventional Study (NIS) in Patients Treated With Xarelto Following an Acute Deep Vein Thrombosis (DVT) [NCT01855100]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 131.0
+version: lastupdate:2017-01-18
+status: COMPLETED
+</RECORD>
+<RECORD id="R7349FDBB0A" source="CLINICALTRIALS_GOV_V2">
+entity: Long-Duration Ultrasound for Knee Osteoarthritis [NCT03800927]
+field: Intervention model [design.intervention_model]
+value: CROSSOVER
+version: lastupdate:2023-06-26
+status: COMPLETED
+</RECORD>
+<RECORD id="R3BE81332F3" source="CLINICALTRIALS_GOV_V2">
+entity: Anticoagulation Preference by AF Patients Study [NCT02607371]
+field: Secondary outcome timeframe: Burden associated with anticoagulation treatment measured by the questionnaire ACTS [outcome.secondary.timeframe]
+value: Baseline
+version: lastupdate:2017-09-14
+outcome: Burden associated with anticoagulation treatment measured by the questionnaire ACTS
+status: COMPLETED
+</RECORD>

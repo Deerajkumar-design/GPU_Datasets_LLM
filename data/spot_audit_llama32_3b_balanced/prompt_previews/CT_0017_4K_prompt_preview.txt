@@ -1,0 +1,126 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Cutting Knowledge Date: December 2023
+Today Date: 09 Aug 2026
+
+Answer using only the supplied records.
+
+Identify records matching the exact entity, period, version, field, unit, product, route, dosage form, arm, series, or other conditions requested by the question.
+
+If the supplied records do not contain sufficient evidence to answer the question, return INSUFFICIENT_EVIDENCE.
+
+Do not infer or fabricate missing information.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+KNOWLEDGE RECORDS:
+
+<RECORD id="R871FA9E3AA" source="CLINICALTRIALS_GOV_V2">
+entity: Cancer Associated Thrombosis, a Pilot Treatment Study Using Rivaroxaban [NCT02746185]
+field: Allocation [design.allocation]
+value: RANDOMIZED
+version: lastupdate:2018-08-13
+status: COMPLETED
+</RECORD>
+<RECORD id="RCF3A11ECC1" source="CLINICALTRIALS_GOV_V2">
+entity: Cancer Associated Thrombosis, a Pilot Treatment Study Using Rivaroxaban [NCT02746185]
+field: Study type [study.study_type]
+value: INTERVENTIONAL
+version: lastupdate:2018-08-13
+status: COMPLETED
+</RECORD>
+<RECORD id="R91163944D4" source="CLINICALTRIALS_GOV_V2">
+entity: Ticagrelor Monotherapy Compared to Aspirin Monotherapy in Patients With History of ACS [NCT03881943]
+field: Primary completion date [study.primary_completion_date]
+period: 2018
+value: 2018-12-21
+version: lastupdate:2019-03-20
+status: COMPLETED
+</RECORD>
+<RECORD id="RCCCE73115F" source="CLINICALTRIALS_GOV_V2">
+entity: AED/Statin Interaction Study [NCT00627575]
+field: Arm group type: Lamotrigine [arm.type]
+value: ACTIVE_COMPARATOR
+version: lastupdate:2017-08-04
+arm: Lamotrigine
+status: COMPLETED
+</RECORD>
+<RECORD id="RAF7FD8B2BD" source="CLINICALTRIALS_GOV_V2">
+entity: Clinical Trial to Evaluate the Efficacy and Safety of DW1125 and DW1125A [NCT05970679]
+field: Primary purpose [design.primary_purpose]
+value: TREATMENT
+version: lastupdate:2023-08-01
+status: COMPLETED
+</RECORD>
+<RECORD id="RCA16154E69" source="CLINICALTRIALS_GOV_V2">
+entity: Cancer Associated Thrombosis, a Pilot Treatment Study Using Rivaroxaban [NCT02746185]
+field: Arm group type: Low-molecular-weight heparin [arm.type]
+value: ACTIVE_COMPARATOR
+version: lastupdate:2018-08-13
+arm: Low-molecular-weight heparin
+status: COMPLETED
+</RECORD>
+<RECORD id="R5B585644B9" source="CLINICALTRIALS_GOV_V2">
+entity: Cancer Associated Thrombosis, a Pilot Treatment Study Using Rivaroxaban [NCT02746185]
+field: Primary outcome timeframe: Unsuspected PE and DVT [outcome.prima
+
+...[middle omitted in compact preview; exact prompt is reproducible from context/question/prompt hash]...
+
+, a Pilot Treatment Study Using Rivaroxaban [NCT02746185]
+field: Studied condition [study.condition]
+value: Neoplasm
+version: lastupdate:2018-08-13
+status: COMPLETED
+</RECORD>
+<RECORD id="R34A164611E" source="CLINICALTRIALS_GOV_V2">
+entity: Outcomes and Safety Trial Investigating Ecallantide's Effect on Reducing Surgical Blood Loss Volume in Subjects at High Risk of Bleeding Exposed to Cardio-pulmonary Bypass During Cardiac Surgery [NCT00888940]
+field: Study type [study.study_type]
+value: INTERVENTIONAL
+version: lastupdate:2015-08-10
+status: COMPLETED
+</RECORD>
+<RECORD id="R70FEC45585" source="CLINICALTRIALS_GOV_V2">
+entity: Randomized Clinical Trial of Bococizumab (PF-04950615; RN316) in Subjects Who Are Intolerant to Statins [NCT02135029]
+field: Number of arm groups [arms.count]
+unit: arms
+value: 3.0
+version: lastupdate:2017-12-14
+status: COMPLETED
+</RECORD>
+<RECORD id="R8E14852D8D" source="CLINICALTRIALS_GOV_V2">
+entity: Atorvastatin Effectiveness and Safety in Cardiology Patients in Real World Setting [NCT02565615]
+field: Primary completion date [study.primary_completion_date]
+period: 2018
+value: 2018-08-31
+version: lastupdate:2021-02-21
+status: COMPLETED
+</RECORD>
+<RECORD id="R5EE2ACF4A2" source="CLINICALTRIALS_GOV_V2">
+entity: Metformin SR Tablet (DuLeNing) and Glucophage in Patients With Type 2 Diabetes [NCT03039075]
+field: Primary completion date [study.primary_completion_date]
+period: 2018
+value: 2018-10
+version: lastupdate:2019-07-24
+status: COMPLETED
+</RECORD>
+<RECORD id="R007E15A0D6" source="CLINICALTRIALS_GOV_V2">
+entity: Efficacy of Lapaquistat Acetate and Atorvastatin on Blood Cholesterol Levels in Subjects With Primary Hypercholesterolemia [NCT00143676]
+field: Primary completion date [study.primary_completion_date]
+period: 2006
+value: 2006-08
+version: lastupdate:2012-05-24
+status: COMPLETED
+</RECORD>
+
+TARGET QUESTION:
+
+Using only the ClinicalTrials.gov records supplied in the context, what is the PRIMARY COMPLETION DATE of trial NCT02746185 ("Cancer Associated Thrombosis, a Pilot Treatment Study Using Rivaroxaban")? Answer in YYYY-MM-DD form.
+
+OUTPUT FORMAT:
+
+Return exactly one JSON object with this schema:
+{"selected_evidence":["R..."],"answer":"...","insufficient_evidence":false}
+
+For insufficient evidence, use:
+{"selected_evidence":[],"answer":"INSUFFICIENT_EVIDENCE","insufficient_evidence":true}
+
+Use only model-facing record IDs from the supplied records. Do not include reasoning.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+

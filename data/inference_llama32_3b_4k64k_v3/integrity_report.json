@@ -1,0 +1,11 @@
+{
+  "attempted": 500,
+  "expected_instances": 500,
+  "experiment_a_untouched": true,
+  "experiment_b_untouched": true,
+  "failed": 0,
+  "failure_breakdown": {},
+  "no_scoring_performed": true,
+  "passed": true,
+  "successful": 500
+}

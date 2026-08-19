@@ -1,0 +1,30 @@
+{
+  "context_counts": {
+    "16K": 500,
+    "32K": 500,
+    "4K": 500,
+    "64K": 500,
+    "82K": 498,
+    "8K": 500
+  },
+  "final_scored_results_hash": "8fa4fd3b990adf54b6f7790ed6defa9c5d89aa6dd8365e0a7519beeb44d985e8",
+  "frozen_grader_hash": "d9282a0ccc50daba3bfd232c058dfbab63a5c19a7323d585a7c2236b3a6c4ba8",
+  "gold_metadata_unchanged": true,
+  "manual_adjudications": 19,
+  "non_adjudicated_rows_unchanged": 2979,
+  "only_documented_override_ids_changed": true,
+  "raw_outputs_unchanged": true,
+  "remaining_ambiguous": 0,
+  "rows": 2998,
+  "runtime_failure_context_counts": {
+    "16K": 0,
+    "32K": 0,
+    "4K": 0,
+    "64K": 0,
+    "82K": 2,
+    "8K": 0
+  },
+  "runtime_failures": 2,
+  "source_scored_results_hash": "7ab4f8df193ae9f5bba2f8ab23b5e1662deee4185b27039f79f08532b6062f17",
+  "unique_instance_ids": 2998
+}

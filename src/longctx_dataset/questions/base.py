@@ -19,6 +19,7 @@ from collections import defaultdict
 from typing import Any, Callable, Dict, Iterable, List, Optional, Sequence, Tuple
 
 from ..config import PipelineConfig
+from ..evidence import build_equivalence_groups
 from ..normalize.common import RecordPool
 from ..schemas import (
     AnswerType,
@@ -289,7 +290,7 @@ class QuestionTemplate(ABC):
     ) -> QuestionFamily:
         recs = [r for r, _ in evidence]
         gold = [GoldEvidence.from_record(r, role) for r, role in evidence]
-        return QuestionFamily(
+        provisional = QuestionFamily(
             question_family_id=family_id,
             domain=self.domain,
             source_name=source_name,
@@ -303,10 +304,18 @@ class QuestionTemplate(ABC):
             numeric_tolerance=numeric_tolerance,
             gold_evidence=gold,
             gold_evidence_ids=[g.record_id for g in gold],
+            gold_evidence_canonical_ids=[g.record_id for g in gold],
+            gold_evidence_display_ids=[],
             calculation_spec=calculation_spec,
             target_conditions=target_conditions,
             source_provenance=self._provenance(recs, source_name, api_version, license_note),
             generation_metadata=self._metadata(ctx, note),
+        )
+        return QuestionFamily(
+            **provisional.model_dump(exclude={"gold_evidence_equivalence_groups"}),
+            gold_evidence_equivalence_groups=build_equivalence_groups(
+                provisional, ctx.pool.domain_records(self.domain)
+            ),
         )
 
     def make_unanswerable(

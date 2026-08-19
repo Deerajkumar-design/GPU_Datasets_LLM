@@ -1,0 +1,5 @@
+Domain,4K Inaccuracy,82K Inaccuracy,4K Hallucinatory,82K Hallucinatory,4K Grounded,82K Grounded
+CLINICAL_TRIALS,44.0%,59.2%,40.8%,36.8%,3.2%,22.4%
+FDA,58.4%,62.4%,53.6%,44.8%,4.8%,17.6%
+FRED,43.2%,79.0%,20.8%,36.3%,22.4%,42.7%
+SEC,52.8%,82.3%,21.6%,43.5%,31.2%,38.7%

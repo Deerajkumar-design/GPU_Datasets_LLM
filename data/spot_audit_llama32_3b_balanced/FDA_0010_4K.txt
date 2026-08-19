@@ -1,0 +1,350 @@
+<RECORD id="R712407A76A" source="OPENFDA_DRUGSFDA">
+entity: LOSARTAN POTASSIUM (ANDA091129, product 001) [ANDA091129/001]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: WATSON LABS
+</RECORD>
+<RECORD id="R13EF1A4C88" source="OPENFDA_DRUGSFDA">
+entity: IBUPROFEN (ANDA079233, product 001) [ANDA079233/001]
+field: Reference standard [product.reference_standard]
+value: No
+dosage_form: TABLET
+route: ORAL
+sponsor: AMNEAL PHARMS
+</RECORD>
+<RECORD id="RFB45B2A3DB" source="OPENFDA_DRUGSFDA">
+entity: MONTELUKAST SODIUM (ANDA203795, product 001) [ANDA203795/001]
+field: Brand name [product.brand_name]
+value: MONTELUKAST SODIUM
+dosage_form: TABLET, CHEWABLE
+route: ORAL
+sponsor: JUBILANT GENERICS
+</RECORD>
+<RECORD id="R5EEC5D7A10" source="OPENFDA_DRUGSFDA">
+entity: MONTELUKAST SODIUM (ANDA205695, product 001) [ANDA205695/001]
+field: Brand name [product.brand_name]
+value: MONTELUKAST SODIUM
+dosage_form: TABLET, CHEWABLE
+route: ORAL
+sponsor: ANBISON LAB
+</RECORD>
+<RECORD id="R732A038A46" source="OPENFDA_DRUGSFDA">
+entity: LISINOPRIL (ANDA075944, product 003) [ANDA075944/003]
+field: Reference standard [product.reference_standard]
+value: No
+dosage_form: TABLET
+route: ORAL
+sponsor: SUN PHARM INDS LTD
+</RECORD>
+<RECORD id="R6A766DD035" source="OPENFDA_DRUGSFDA">
+entity: AMTURNIDE (NDA200045, product 001) [NDA200045/001]
+field: Strength of AMLODIPINE BESYLATE [product.active_ingredient_strength]
+unit: MG
+value: EQ 5MG BASE
+dosage_form: TABLET
+route: ORAL
+sponsor: NOVARTIS
+</RECORD>
+<RECORD id="R7879058C28" source="OPENFDA_DRUGSFDA">
+entity: MONTELUKAST SODIUM (ANDA205695, product 001) [ANDA205695/001]
+field: Route of administration [product.route]
+value: ORAL
+dosage_form: TABLET, CHEWABLE
+route: ORAL
+sponsor: ANBISON LAB
+</RECORD>
+<RECORD id="RCEB9945702" source="OPENFDA_DRUGSFDA">
+entity: IBUPROFEN (ANDA214003, product 001) [ANDA214003/001]
+field: Strength of IBUPROFEN [product.active_ingredient_strength]
+unit: MG
+value: 200MG
+dosage_form: TABLET
+route: ORAL
+sponsor: YICHANG HUMANWELL
+</RECORD>
+<RECORD id="REFD7767086" source="OPENFDA_DRUGSFDA">
+entity: WARFARIN SODIUM (ANDA040616, product 008) [ANDA040616/008]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: PLIVA
+</RECORD>
+<RECORD id="R152184632C" source="OPENFDA_DRUGSFDA">
+entity: PHARMOBEDIENT application ANDA206084 [ANDA206084]
+field: SUPPL submission 1 status date [submission.status_date]
+period: 2021
+value: 2021-01-13
+version: SUPPL-1
+sponsor: PHARMOBEDIENT
+submission_type: SUPPL
+</RECORD>
+<RECORD id="R3B707248FB" source="OPENFDA_DRUGSFDA">
+entity: SANDOZ application ANDA075757 [ANDA075757]
+field: SUPPL submission 16 status date [submission.status_date]
+period: 2007
+value: 2007-11-16
+version: SUPPL-16
+sponsor: SANDOZ
+submission_type: SUPPL
+</RECORD>
+<RECORD id="R78274D6C78" source="OPENFDA_DRUGSFDA">
+entity: ATORVASTATIN CALCIUM (ANDA208480, product 002) [ANDA208480/002]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: MACLEODS PHARMS LTD
+</RECORD>
+<RECORD id="RED949CE31A" source="OPENFDA_DRUGSFDA">
+entity: MONTELUKAST SODIUM (ANDA205695, product 001) [ANDA205695/001]
+field: Reference standard [product.reference_standard]
+value: No
+dosage_form: TABLET, CHEWABLE
+route: ORAL
+sponsor: ANBISON LAB
+</RECORD>
+<RECORD id="R12A67EE451" source="OPENFDA_DRUGSFDA">
+entity: TIROSINT-SOL (NDA206977, product 010) [NDA206977/010]
+field: Dosage form [product.dosage_form]
+value: SOLUTION
+dosage_form: SOLUTION
+route: ORAL
+sponsor: IBSA
+</RECORD>
+<RECORD id="R842273FF7D" source="OPENFDA_DRUGSFDA">
+entity: METFORMIN HYDROCHLORIDE (ANDA075961, product 002) [ANDA075961/002]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: WATSON LABS FLORIDA
+</RECORD>
+<RECORD id="R38F8832E6D" source="OPENFDA_DRUGSFDA">
+entity: WARFARIN SODIUM (ANDA040663, product 009) [ANDA040663/009]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: ZYDUS PHARMS USA
+</RECORD>
+<RECORD id="R2B4CC06C84" source="OPENFDA_DRUGSFDA">
+entity: MONTELUKAST SODIUM (ANDA205695, product 001) [ANDA205695/001]
+field: Marketing status [product.marketing_status]
+value: Prescription
+dosage_form: TABLET, CHEWABLE
+route: ORAL
+sponsor: ANBISON LAB
+</RECORD>
+<RECORD id="RB4D092D88A" source="OPENFDA_DRUGSFDA">
+entity: MONTELUKAST SODIUM (ANDA205695, product 002) [ANDA205695/002]
+field: Marketing status [product.marketing_status]
+value: Prescription
+dosage_form: TABLET, CHEWABLE
+route: ORAL
+sponsor: ANBISON LAB
+</RECORD>
+<RECORD id="R44FA2DBE8E" source="OPENFDA_DRUGSFDA">
+entity: AMLODIPINE BESYLATE (ANDA077262, product 001) [ANDA077262/001]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: HIKMA
+</RECORD>
+<RECORD id="R622A388CEF" source="OPENFDA_DRUGSFDA">
+entity: GABAPENTIN (ANDA077261, product 002) [ANDA077261/002]
+field: Reference standard [product.reference_standard]
+value: No
+dosage_form: CAPSULE
+route: ORAL
+sponsor: TARO
+</RECORD>
+<RECORD id="R4636C90955" source="OPENFDA_DRUGSFDA">
+entity: LEVOTHYROXINE SODIUM (NDA214253, product 001) [NDA214253/001]
+field: Marketing status [product.marketing_status]
+value: Prescription
+dosage_form: SOLUTION
+route: INTRAVENOUS
+sponsor: HIKMA
+</RECORD>
+<RECORD id="R2CEE60A0A9" source="OPENFDA_DRUGSFDA">
+entity: MONTELUKAST SODIUM (ANDA205695, product 001) [ANDA205695/001]
+field: Dosage form [product.dosage_form]
+value: TABLET, CHEWABLE
+dosage_form: TABLET, CHEWABLE
+route: ORAL
+sponsor: ANBISON LAB
+</RECORD>
+<RECORD id="R8D2B7063AB" source="OPENFDA_DRUGSFDA">
+entity: MONTELUKAST SODIUM (ANDA205695, product 002) [ANDA205695/002]
+field: Dosage form [product.dosage_form]
+value: TABLET, CHEWABLE
+dosage_form: TABLET, CHEWABLE
+route: ORAL
+sponsor: ANBISON LAB
+</RECORD>
+<RECORD id="R1757BFDD38" source="OPENFDA_DRUGSFDA">
+entity: ATORVASTATIN CALCIUM (ANDA078773, product 001) [ANDA078773/001]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: TEVA PHARMS
+</RECORD>
+<RECORD id="R4695A5007C" source="OPENFDA_DRUGSFDA">
+entity: ORGANON application NDA020829 [NDA020829]
+field: SUPPL submission 62 status date [submission.status_date]
+period: 2012
+value: 2012-07-16
+version: SUPPL-62
+sponsor: ORGANON
+submission_type: SUPPL
+</RECORD>
+<RECORD id="R74BE2238D2" source="OPENFDA_DRUGSFDA">
+entity: PREDNISONE (ANDA084133, product 001) [ANDA084133/001]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: IVAX SUB TEVA PHARMS
+</RECORD>
+<RECORD id="R6EB53D42EF" source="OPENFDA_DRUGSFDA">
+entity: MONTELUKAST SODIUM (ANDA205695, product 002) [ANDA205695/002]
+field: Route of administration [product.route]
+value: ORAL
+dosage_form: TABLET, CHEWABLE
+route: ORAL
+sponsor: ANBISON LAB
+</RECORD>
+<RECORD id="R6B5CF20585" source="OPENFDA_DRUGSFDA">
+entity: MONTELUKAST SODIUM (ANDA205695, product 001) [ANDA205695/001]
+field: Reference listed drug [product.reference_drug]
+value: No
+dosage_form: TABLET, CHEWABLE
+route: ORAL
+sponsor: ANBISON LAB
+</RECORD>
+<RECORD id="R950D4652CA" source="OPENFDA_DRUGSFDA">
+entity: CIPROFLOXACIN EXTENDED RELEASE (ANDA077809, product 001) [ANDA077809/001]
+field: Route of administration [product.route]
+value: ORAL
+dosage_form: TABLET, EXTENDED RELEASE
+route: ORAL
+sponsor: ANI PHARMS
+</RECORD>
+<RECORD id="R84C2116F1A" source="OPENFDA_DRUGSFDA">
+entity: LINAGLIPTIN AND METFORMIN HYDROCHLORIDE (ANDA208427, product 003) [ANDA208427/003]
+field: Reference standard [product.reference_standard]
+value: No
+dosage_form: TABLET
+route: ORAL
+sponsor: DR REDDYS
+</RECORD>
+<RECORD id="RB1AFFE53A8" source="OPENFDA_DRUGSFDA">
+entity: PREDNISONE (ANDA080782, product 001) [ANDA080782/001]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: IMPAX LABS
+</RECORD>
+<RECORD id="R72E05322EE" source="OPENFDA_DRUGSFDA">
+entity: MONTELUKAST SODIUM (ANDA205695, product 002) [ANDA205695/002]
+field: Reference standard [product.reference_standard]
+value: No
+dosage_form: TABLET, CHEWABLE
+route: ORAL
+sponsor: ANBISON LAB
+</RECORD>
+<RECORD id="RA56886CCA1" source="OPENFDA_DRUGSFDA">
+entity: MONTELUKAST SODIUM (ANDA205695, product 002) [ANDA205695/002]
+field: Brand name [product.brand_name]
+value: MONTELUKAST SODIUM
+dosage_form: TABLET, CHEWABLE
+route: ORAL
+sponsor: ANBISON LAB
+</RECORD>
+<RECORD id="RA6333A34C3" source="OPENFDA_DRUGSFDA">
+entity: THYRO-TABS (NDA021116, product 001) [NDA021116/001]
+field: Route of administration [product.route]
+value: ORAL
+dosage_form: TABLET
+route: ORAL
+sponsor: ALVOGEN
+</RECORD>
+<RECORD id="R5FBE77E2D7" source="OPENFDA_DRUGSFDA">
+entity: LEVOTHYROXINE SODIUM (ANDA205366, product 001) [ANDA205366/001]
+field: Dosage form [product.dosage_form]
+value: POWDER
+dosage_form: POWDER
+route: INTRAVENOUS
+sponsor: PH HEALTH
+</RECORD>
+<RECORD id="RFFAB052763" source="OPENFDA_DRUGSFDA">
+entity: GABAPENTIN (ANDA207057, product 001) [ANDA207057/001]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: CSPC OUYI
+</RECORD>
+<RECORD id="RF9222EC7BF" source="OPENFDA_DRUGSFDA">
+entity: MONTELUKAST SODIUM (ANDA205695, product 002) [ANDA205695/002]
+field: Reference listed drug [product.reference_drug]
+value: No
+dosage_form: TABLET, CHEWABLE
+route: ORAL
+sponsor: ANBISON LAB
+</RECORD>
+<RECORD id="R8B751414A3" source="OPENFDA_DRUGSFDA">
+entity: SYNJARDY XR (NDA208658, product 004) [NDA208658/004]
+field: Brand name [product.brand_name]
+value: SYNJARDY XR
+dosage_form: TABLET, EXTENDED RELEASE
+route: ORAL
+sponsor: BOEHRINGER INGELHEIM
+</RECORD>
+<RECORD id="RC62FA0708B" source="OPENFDA_DRUGSFDA">
+entity: AMLODIPINE BESYLATE AND ATORVASTATIN CALCIUM (ANDA207762, product 004) [ANDA207762/004]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: APDM PHARMS
+</RECORD>
+<RECORD id="R964589839C" source="OPENFDA_DRUGSFDA">
+entity: AMOXICILLIN AND CLAVULANATE POTASSIUM (ANDA203824, product 001) [ANDA203824/001]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: HIKMA PHARMS
+</RECORD>
+<RECORD id="R8A46EBE880" source="OPENFDA_DRUGSFDA">
+entity: METFORMIN HYDROCHLORIDE (ANDA203686, product 003) [ANDA203686/003]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: ZYDUS HLTHCARE
+</RECORD>
+<RECORD id="R98C78DDA3D" source="OPENFDA_DRUGSFDA">
+entity: ALEMBIC PHARMS LTD application ANDA091617 [ANDA091617]
+field: SUPPL submission 29 status date [submission.status_date]
+period: 2022
+value: 2022-01-14
+version: SUPPL-29
+sponsor: ALEMBIC PHARMS LTD
+submission_type: SUPPL
+</RECORD>
+<RECORD id="RF26BDCE42D" source="OPENFDA_DRUGSFDA">
+entity: AMLODIPINE BESYLATE AND ATORVASTATIN CALCIUM (ANDA205199, product 003) [ANDA205199/003]
+field: Route of administration [product.route]
+value: ORAL
+dosage_form: TABLET
+route: ORAL
+sponsor: APOTEX
+</RECORD>

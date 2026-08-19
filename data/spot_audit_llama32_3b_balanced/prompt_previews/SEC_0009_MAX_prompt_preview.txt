@@ -1,0 +1,157 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Cutting Knowledge Date: December 2023
+Today Date: 09 Aug 2026
+
+Answer using only the supplied records.
+
+Identify records matching the exact entity, period, version, field, unit, product, route, dosage form, arm, series, or other conditions requested by the question.
+
+If the supplied records do not contain sufficient evidence to answer the question, return INSUFFICIENT_EVIDENCE.
+
+Do not infer or fabricate missing information.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+KNOWLEDGE RECORDS:
+
+<RECORD id="R0D1200BDED" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: WALMART INC. [0000104169]
+field: Revenues [us-gaap:Revenues]
+period: CY2020Q2
+unit: USD
+value: 137742000000.0
+version: 10-Q|0000104169-21-000058
+form: 10-Q
+accession: 0000104169-21-000058
+fiscal_year: 2022
+fiscal_period: Q2
+</RECORD>
+<RECORD id="R03424E9474" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: WALMART INC. [0000104169]
+field: Operating Income (Loss) [us-gaap:OperatingIncomeLoss]
+period: 2018-02-01..2018-10-31
+unit: USD
+value: 15890000000.0
+version: 10-Q|0000104169-19-000088
+form: 10-Q
+accession: 0000104169-19-000088
+fiscal_year: 2020
+fiscal_period: Q3
+</RECORD>
+<RECORD id="R7D52815345" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Payments to Acquire Property, Plant, and Equipment [us-gaap:PaymentsToAcquirePropertyPlantAndEquipment]
+period: CY2022Q4
+unit: USD
+value: 6274000000.0
+version: 10-Q|0000950170-24-008814
+form: 10-Q
+accession: 0000950170-24-008814
+fiscal_year: 2024
+fiscal_period: Q2
+</RECORD>
+<RECORD id="R1814B44568" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: AMAZON COM INC [0001018724]
+field: Net Cash Provided by (Used in) Investing Activities [us-gaap:NetCashProvidedByUsedInInvestingActivities]
+period: 2009-10-01..2010-09-30
+unit: USD
+value: -3753000000.0
+version: 10-Q|0001193125-10-233883
+form: 10-Q
+accession: 0001193125-10-233883
+fiscal_year: 2010
+fiscal_period: Q3
+</RECORD>
+<RECORD id="RBC5BEDF43B" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: PFIZER INC [0000078003]
+field: Income (Loss) from Continuing Operations before Income Taxes, Noncontrolling Interest [us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest]
+period: 2024-01-01..2024-03-31
+unit: USD
+value: 3421000000.0
+version: 10-Q|0000078003-24-000107
+form: 10-Q
+accession: 0000078003-24-000107
+fiscal_year: 2024
+fiscal_period: Q1
+</RECORD>
+<RECORD id="RE3939ABA52" sourc
+
+...[middle omitted in compact preview; exact prompt is reproducible from context/question/prompt hash]...
+
+ 10-Q
+accession: 0001193125-09-248603
+fiscal_year: 2009
+fiscal_period: Q3
+</RECORD>
+<RECORD id="R9D0D2251C6" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: WALMART INC. [0000104169]
+field: Inventory, Net [us-gaap:InventoryNet]
+period: AS_OF_2022-01-31
+unit: USD
+value: 56511000000.0
+version: 10-Q|0000104169-22-000072
+form: 10-Q
+accession: 0000104169-22-000072
+fiscal_year: 2023
+fiscal_period: Q2
+</RECORD>
+<RECORD id="RC0A7F4AA0F" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: Apple Inc. [0000320193]
+field: Liabilities [us-gaap:Liabilities]
+period: CY2010Q3I
+unit: USD
+value: 27392000000.0
+version: 10-K|0001193125-11-282113
+form: 10-K
+accession: 0001193125-11-282113
+fiscal_year: 2011
+fiscal_period: FY
+</RECORD>
+<RECORD id="RA34E98C857" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Common Stock, Shares, Outstanding [us-gaap:CommonStockSharesOutstanding]
+period: AS_OF_2012-06-30
+unit: shares
+value: 8381000000.0
+version: 10-Q|0001193125-13-022207
+form: 10-Q
+accession: 0001193125-13-022207
+fiscal_year: 2013
+fiscal_period: Q2
+</RECORD>
+<RECORD id="R37F50387C6" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: COCA COLA CO [0000021344]
+field: Net Cash Provided by (Used in) Financing Activities [us-gaap:NetCashProvidedByUsedInFinancingActivities]
+period: CY2022
+unit: USD
+value: -10250000000.0
+version: 8-K|0000021344-25-000047
+form: 8-K
+accession: 0000021344-25-000047
+</RECORD>
+<RECORD id="RCCF57AD8A9" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: WALMART INC. [0000104169]
+field: Operating Income (Loss) [us-gaap:OperatingIncomeLoss]
+period: 2011-02-01..2012-01-31
+unit: USD
+value: 26558000000.0
+version: 10-K|0001193125-12-134679
+form: 10-K
+accession: 0001193125-12-134679
+fiscal_year: 2011
+fiscal_period: FY
+</RECORD>
+
+TARGET QUESTION:
+
+Using only the SEC XBRL company-facts records supplied in the context, calculate WALMART INC.'s (CIK 0000104169) operating margin for the annual XBRL frame CY2011. Divide us-gaap:OperatingIncomeLoss by Revenues for that same company and frame, both in USD, multiply by 100, and round to two decimal places.
+
+OUTPUT FORMAT:
+
+Return exactly one JSON object with this schema:
+{"selected_evidence":["R..."],"answer":"...","insufficient_evidence":false}
+
+For insufficient evidence, use:
+{"selected_evidence":[],"answer":"INSUFFICIENT_EVIDENCE","insufficient_evidence":true}
+
+Use only model-facing record IDs from the supplied records. Do not include reasoning.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+

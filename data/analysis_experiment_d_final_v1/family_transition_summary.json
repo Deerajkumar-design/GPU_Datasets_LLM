@@ -1,0 +1,32 @@
+{
+  "grounded": {
+    "first_grounded_at_16K": 14,
+    "first_grounded_at_32K": 9,
+    "first_grounded_at_64K": 20,
+    "first_grounded_at_82K": 15,
+    "first_grounded_at_8K": 7,
+    "grounded_all_available_contexts": 22,
+    "never_grounded": 269,
+    "non_monotonic_or_recovered_after_grounded": 144
+  },
+  "hallucinatory": {
+    "first_hallucinatory_at_16K": 10,
+    "first_hallucinatory_at_32K": 18,
+    "first_hallucinatory_at_64K": 20,
+    "first_hallucinatory_at_82K": 7,
+    "first_hallucinatory_at_8K": 6,
+    "hallucinatory_all_available_contexts": 109,
+    "never_hallucinatory": 226,
+    "non_monotonic_or_recovered_after_hallucinatory": 104
+  },
+  "inaccuracy": {
+    "first_inaccurate_at_16K": 20,
+    "first_inaccurate_at_32K": 27,
+    "first_inaccurate_at_64K": 30,
+    "first_inaccurate_at_82K": 11,
+    "first_inaccurate_at_8K": 15,
+    "inaccurate_all_available_contexts": 198,
+    "never_inaccurate": 83,
+    "non_monotonic_or_recovered_after_inaccurate": 116
+  }
+}

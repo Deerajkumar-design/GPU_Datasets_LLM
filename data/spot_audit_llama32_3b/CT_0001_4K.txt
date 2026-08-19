@@ -1,0 +1,284 @@
+<RECORD id="R12E8034845" source="CLINICALTRIALS_GOV_V2">
+entity: Comparison of Exenatide vs. Biphasic Insulin Aspart 30 on Glucose Variability in Type 2 Diabetes [NCT02449603]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 150.0
+version: lastupdate:2018-11-14
+status: COMPLETED
+</RECORD>
+<RECORD id="RA64BF2AD82" source="CLINICALTRIALS_GOV_V2">
+entity: A Study to Compare the Pharmacokinetics of Fimasartan/Atorvastatin Combination Tablet [NCT02566187]
+field: Arm group type: Group 2 [arm.type]
+value: OTHER
+version: lastupdate:2016-02-25
+arm: Group 2
+status: COMPLETED
+</RECORD>
+<RECORD id="RA5AD37569C" source="CLINICALTRIALS_GOV_V2">
+entity: The Accuracy Of A Novel Platelet Activity Assay In Humans On Antiplatelet Agents: Pharmacodynamics And Comparison With Light Transmission Aggregometry [NCT04822363]
+field: Intervention: Clopidogrel [intervention.type]
+value: DRUG
+version: lastupdate:2026-01-22
+intervention: Clopidogrel
+status: COMPLETED
+</RECORD>
+<RECORD id="R5BFE93F7D7" source="CLINICALTRIALS_GOV_V2">
+entity: Relative Bioavailability of Telmisartan and Dipyridamole After Co-administration Compared to the Bioavailability of Telmisartan or Dipyridamole Alone in Healthy Female and Male Subjects [NCT02262793]
+field: Arm group type: ASA/ER-DP alone [arm.type]
+value: ACTIVE_COMPARATOR
+version: lastupdate:2014-10-13
+arm: ASA/ER-DP alone
+status: COMPLETED
+</RECORD>
+<RECORD id="R7CF740250F" source="CLINICALTRIALS_GOV_V2">
+entity: A Study on Comparison of Glargine Plus Glulisine With Premixed Insulin in Type 2 Diabetes Patients [NCT02987751]
+field: Secondary outcome timeframe: Number of events of severe hypoglycemia [outcome.secondary.timeframe]
+value: Baseline and 24 weeks
+version: lastupdate:2019-09-10
+outcome: Number of events of severe hypoglycemia
+status: COMPLETED
+</RECORD>
+<RECORD id="R5CAF535B08" source="CLINICALTRIALS_GOV_V2">
+entity: Safety and Efficacy of Dapagliflozin in Triple Therapy to Treat Subjects With Type 2 Diabetes [NCT01646320]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 320.0
+version: lastupdate:2016-06-22
+status: COMPLETED
+</RECORD>
+<RECORD id="RE9C3CEEA61" source="CLINICALTRIALS_GOV_V2">
+entity: A Phase 3 Study to Evaluate the Efficacy of XW003 Compared With Dulaglutide in Participants With T2DM [NCT05680129]
+field: Minimum eligible age [eligibility.minimum_age]
+value: 18 Years
+version: lastupdate:2025-05-08
+status: COMPLETED
+</RECORD>
+<RECORD id="R0CA8DE92A5" source="CLINICALTRIALS_GOV_V2">
+entity: Comparison of Hypoglycaemic Response Between NN1250 and Insulin Glargine in Type 1 Diabetics [NCT01002768]
+field: Studied condition [study.condition]
+value: Diabetes Mellitus, Type 1
+version: lastupdate:2017-01-20
+status: COMPLETED
+</RECORD>
+<RECORD id="R8865A49DD8" source="CLINICALTRIALS_GOV_V2">
+entity: Relative Bioavailability of Telmisartan and Dipyridamole After Co-administration Compared to the Bioavailability of Telmisartan or Dipyridamole Alone in Healthy Female and Male Subjects [NCT02262793]
+field: Last update posted date [study.last_update_posted_date]
+period: 2014
+value: 2014-10-13
+version: lastupdate:2014-10-13
+status: COMPLETED
+</RECORD>
+<RECORD id="R93C6BDB277" source="CLINICALTRIALS_GOV_V2">
+entity: Relative Bioavailability of Telmisartan and Dipyridamole After Co-administration Compared to the Bioavailability of Telmisartan or Dipyridamole Alone in Healthy Female and Male Subjects [NCT02262793]
+field: Maximum eligible age [eligibility.maximum_age]
+value: 65 Years
+version: lastupdate:2014-10-13
+status: COMPLETED
+</RECORD>
+<RECORD id="R4279769547" source="CLINICALTRIALS_GOV_V2">
+entity: Study of Interference Between Oral Anticoagulants and Heparin During Ablation of Atrial Fibrillation (AF) or Left Atrial Tachycardia (GAD) by Catheter. [NCT05802576]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 100.0
+version: lastupdate:2024-04-05
+status: COMPLETED
+</RECORD>
+<RECORD id="R37E02EF2F2" source="CLINICALTRIALS_GOV_V2">
+entity: Ertugliflozin and Sitagliptin Co-administration Factorial Study (VERTIS FACTORAL, MK-8835-005) [NCT02099110]
+field: Last update posted date [study.last_update_posted_date]
+period: 2018
+value: 2018-09-12
+version: lastupdate:2018-09-12
+status: COMPLETED
+</RECORD>
+<RECORD id="RC3D9F25250" source="CLINICALTRIALS_GOV_V2">
+entity: A Research Study to Compare a New Medicine Oral Semaglutide to a Dummy Medicine in Children and Teenagers With Type 2 Diabetes [NCT04596631]
+field: Lead sponsor [sponsor.lead_sponsor]
+value: Novo Nordisk A/S
+version: lastupdate:2026-03-11
+status: COMPLETED
+</RECORD>
+<RECORD id="R919E67A764" source="CLINICALTRIALS_GOV_V2">
+entity: Relative Bioavailability of Telmisartan and Dipyridamole After Co-administration Compared to the Bioavailability of Telmisartan or Dipyridamole Alone in Healthy Female and Male Subjects [NCT02262793]
+field: Number of arm groups [arms.count]
+unit: arms
+value: 4.0
+version: lastupdate:2014-10-13
+status: COMPLETED
+</RECORD>
+<RECORD id="RB95B8F0FDB" source="CLINICALTRIALS_GOV_V2">
+entity: Relative Bioavailability of Telmisartan and Dipyridamole After Co-administration Compared to the Bioavailability of Telmisartan or Dipyridamole Alone in Healthy Female and Male Subjects [NCT02262793]
+field: Minimum eligible age [eligibility.minimum_age]
+value: 21 Years
+version: lastupdate:2014-10-13
+status: COMPLETED
+</RECORD>
+<RECORD id="R076746E5A2" source="CLINICALTRIALS_GOV_V2">
+entity: Bioequivalence of Single Dose Fast Release Aspirin (1000 mg) Tablet Versus Single Dose of Two 500 mg Fast Release Aspirin Tablets [NCT03056703]
+field: Studied condition [study.condition]
+value: Pain
+version: lastupdate:2017-02-17
+status: COMPLETED
+</RECORD>
+<RECORD id="RA305D5589D" source="CLINICALTRIALS_GOV_V2">
+entity: Tranexamic Acid During Cystectomy Trial (TACT) [NCT01869413]
+field: Primary purpose [design.primary_purpose]
+value: PREVENTION
+version: lastupdate:2022-10-04
+status: COMPLETED
+</RECORD>
+<RECORD id="R684ED56604" source="CLINICALTRIALS_GOV_V2">
+entity: Rivaroxaban Compared to Vitamin K Antagonist Upon Development of Cardiovascular Calcification [NCT02066662]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 192.0
+version: lastupdate:2020-10-22
+status: COMPLETED
+</RECORD>
+<RECORD id="R900B293DCB" source="CLINICALTRIALS_GOV_V2">
+entity: Relative Bioavailability of Telmisartan and Dipyridamole After Co-administration Compared to the Bioavailability of Telmisartan or Dipyridamole Alone in Healthy Female and Male Subjects [NCT02262793]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 24.0
+version: lastupdate:2014-10-13
+status: COMPLETED
+</RECORD>
+<RECORD id="RA1E349B009" source="CLINICALTRIALS_GOV_V2">
+entity: A Phase III Randomized Trial of Metformin vs Placebo in Early Stage Breast Cancer [NCT01101438]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 3649.0
+version: lastupdate:2023-09-13
+status: COMPLETED
+</RECORD>
+<RECORD id="R4022D76378" source="CLINICALTRIALS_GOV_V2">
+entity: Transfusion of Red Blood Cells, Tranexamic Acid and Fibrinogen Concentrate for Severe Trauma Hemorrhage [NCT04149171]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 30.0
+version: lastupdate:2023-10-06
+status: COMPLETED
+</RECORD>
+<RECORD id="R89FE4E66D7" source="CLINICALTRIALS_GOV_V2">
+entity: A Bioequivalence Study Comparing Clopidogrel/Aspirin Combination Tablet With Coadministration of Clopidogrel and Aspirin [NCT01448330]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 64.0
+version: lastupdate:2011-12-30
+status: COMPLETED
+</RECORD>
+<RECORD id="R60E2C6C0A7" source="CLINICALTRIALS_GOV_V2">
+entity: Effects of Degludec/Liraglutide on Time in Range, Inflammation and Endothelial Function vs Insulin Basal Bolus in Diabetic Inpatients [NCT05360537]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 100.0
+version: lastupdate:2023-12-15
+status: COMPLETED
+</RECORD>
+<RECORD id="R3280C6F4FE" source="CLINICALTRIALS_GOV_V2">
+entity: FT500 as Monotherapy and in Combination With Immune Checkpoint Inhibitors in Subjects With Advanced Solid Tumors [NCT03841110]
+field: Lead sponsor [sponsor.lead_sponsor]
+value: Fate Therapeutics
+version: lastupdate:2023-05-01
+status: COMPLETED
+</RECORD>
+<RECORD id="RF98E8A0DF5" source="CLINICALTRIALS_GOV_V2">
+entity: Clinical Study to Assess the Equivalence of Tranexamic Acid vs Oxytocin in Reducing the PPH [NCT02775773]
+field: Study first posted date [study.first_posted_date]
+period: 2016
+value: 2016-05-18
+version: lastupdate:2024-02-08
+status: COMPLETED
+</RECORD>
+<RECORD id="R5ACBC10AA3" source="CLINICALTRIALS_GOV_V2">
+entity: A Study to Characterize Regimens of Basal Insulin Intensified With Either Symlin® or Rapid Acting Insulin in Patients With Type 2 Diabetes [NCT00467649]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 112.0
+version: lastupdate:2015-04-14
+status: COMPLETED
+</RECORD>
+<RECORD id="R080B2B6298" source="CLINICALTRIALS_GOV_V2">
+entity: The Effect of Tranexamic Acid on Postoperative Blood Loss and Coagulation in Patients With Preoperative Anemia Undergoing Off-Pump Coronary Artery Bypass Graft; Double Blind Randomized Control Study [NCT01067638]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 90.0
+version: lastupdate:2010-12-06
+status: COMPLETED
+</RECORD>
+<RECORD id="R3B0BDFE3C0" source="CLINICALTRIALS_GOV_V2">
+entity: Relative Bioavailability of Telmisartan and Dipyridamole After Co-administration Compared to the Bioavailability of Telmisartan or Dipyridamole Alone in Healthy Female and Male Subjects [NCT02262793]
+field: Allocation [design.allocation]
+value: RANDOMIZED
+version: lastupdate:2014-10-13
+status: COMPLETED
+</RECORD>
+<RECORD id="R3EF9A8C15B" source="CLINICALTRIALS_GOV_V2">
+entity: Efficacy and Safety of Semaglutide Versus Canagliflozin as add-on to Metformin in Subjects With Type 2 Diabetes [NCT03136484]
+field: Secondary outcome timeframe: Change in Biochemistry Parameter- ALP [outcome.secondary.timeframe]
+value: Week 0, week 52
+version: lastupdate:2020-01-21
+outcome: Change in Biochemistry Parameter- ALP
+status: COMPLETED
+</RECORD>
+<RECORD id="R986610D9B4" source="CLINICALTRIALS_GOV_V2">
+entity: TRANEXAMIC ACID IN PATIENTS UNDERGOING TOTAL HIP ARTHROPLASTY IN A BRAZILIAN REFERENCE ORTHOPEDIC CENTER: A RANDOMIZED CONTROLLED TRIAL [NCT03019198]
+field: Overall recruitment status [study.overall_status]
+value: COMPLETED
+version: lastupdate:2017-03-09
+status: COMPLETED
+</RECORD>
+<RECORD id="R381C48AA69" source="CLINICALTRIALS_GOV_V2">
+entity: A Study to Evaluate the Efficacy and Safety of Rivaroxaban Venous Thromboembolism (VTE) Prophylaxis in Ambulatory Cancer Participants [NCT02555878]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 841.0
+version: lastupdate:2019-09-12
+status: COMPLETED
+</RECORD>
+<RECORD id="R9C2EA1C2A0" source="CLINICALTRIALS_GOV_V2">
+entity: A Research Study to See How Well Semaglutide Helps People Who Have a Body Weight Above the Healthy Weight Range [NCT06041217]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 242.0
+version: lastupdate:2026-05-18
+status: COMPLETED
+</RECORD>
+<RECORD id="R3301F18D5D" source="CLINICALTRIALS_GOV_V2">
+entity: Relative Bioavailability of Telmisartan and Dipyridamole After Co-administration Compared to the Bioavailability of Telmisartan or Dipyridamole Alone in Healthy Female and Male Subjects [NCT02262793]
+field: Masking [design.masking]
+value: NONE
+version: lastupdate:2014-10-13
+status: COMPLETED
+</RECORD>
+<RECORD id="R18C818557D" source="CLINICALTRIALS_GOV_V2">
+entity: Efficacy and Safety of CS0159 Combined With Semaglutide in MASH Patients With Obesity and T2DM [NCT06492330]
+field: Secondary outcome timeframe: Percentage change in HbA1c relative to baseline [outcome.secondary.timeframe]
+value: Baseline to 16 weeks
+version: lastupdate:2025-06-03
+outcome: Percentage change in HbA1c relative to baseline
+status: COMPLETED
+</RECORD>
+<RECORD id="R236D85CD9C" source="CLINICALTRIALS_GOV_V2">
+entity: Noninferiority Oral Tranexamic Acid vs Intravenous Administration in Total Hip Arthroplasty [NCT04691362]
+field: Primary purpose [design.primary_purpose]
+value: SUPPORTIVE_CARE
+version: lastupdate:2022-12-15
+status: COMPLETED
+</RECORD>
+<RECORD id="RF77A4BB491" source="CLINICALTRIALS_GOV_V2">
+entity: Defactinib Combined With Pembrolizumab and Gemcitabine in Patients With Advanced Cancer [NCT02546531]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 43.0
+version: lastupdate:2021-07-20
+status: COMPLETED
+</RECORD>
+<RECORD id="R821D0C1351" source="CLINICALTRIALS_GOV_V2">
+entity: Metformin in Intracytoplasmic Sperm Injection Cycles [NCT03088631]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 320.0
+version: lastupdate:2019-09-17
+status: COMPLETED
+</RECORD>

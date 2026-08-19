@@ -12,12 +12,15 @@ from longctx_dataset.distractors.taxonomy import (
     describe_taxonomy,
 )
 from longctx_dataset.normalize.common import RecordPool
-from longctx_dataset.schemas import DistractorType, Domain, NormalizedRecord
+from longctx_dataset.schemas import (
+    AnswerType, DistractorType, Domain, NormalizedRecord, QuestionType, UnanswerableSpec,
+    INSUFFICIENT_EVIDENCE,
+)
 
 
-def rec(rid, *, entity="E1", concept="c1", period="CY2024", unit="USD", version="v1",
+def rec(rid, *, domain=Domain.SEC, entity="E1", concept="c1", period="CY2024", unit="USD", version="v1",
         value=100.0, label="Concept One", meta=None) -> NormalizedRecord:
-    return NormalizedRecord(record_id=rid, domain=Domain.SEC, source="s", entity_id=entity,
+    return NormalizedRecord(record_id=rid, domain=domain, source="s", entity_id=entity,
                             entity_name=entity, record_type="t", concept=concept,
                             concept_label=label, value=value, unit=unit, period=period,
                             version=version, metadata=meta or {})
@@ -43,8 +46,20 @@ def test_each_taxonomy_class_is_reachable(candidate, expected):
     assert flags, "every classification must carry relationship metadata"
 
 
-def test_unit_basis_variants_are_classified_as_wrong_unit():
-    """Sources publish current vs constant dollars under distinct concept codes."""
+def test_measurement_basis_variants_are_not_wrong_unit_when_unit_matches():
+    target = rec("T", domain=Domain.FRED, entity="US", concept="CPIAUCSL",
+                 label="Consumer Price Index (Seasonally Adjusted)",
+                 unit="Index 1982-1984=100",
+                 meta={"series_family": "cpi", "seasonal_adjustment": "Seasonally Adjusted"})
+    variant = rec("V", domain=Domain.FRED, entity="US", concept="CPIAUCNS",
+                  label="Consumer Price Index (Not Seasonally Adjusted)",
+                  unit="Index 1982-1984=100",
+                  meta={"series_family": "cpi", "seasonal_adjustment": "Not Seasonally Adjusted"})
+    assert classify_distractor(variant, [target])[0] is DistractorType.WRONG_SERIES_VARIANT
+
+
+def test_actual_unit_mismatch_remains_wrong_unit():
+    """Sources publish current vs constant dollars under distinct units."""
     target = rec("T", concept="NY.GDP.MKTP.CD", label="GDP (current US$)", unit="current US$")
     variant = rec("V", concept="NY.GDP.MKTP.KD", label="GDP (constant 2015 US$)",
                   unit="constant 2015 US$")
@@ -54,6 +69,13 @@ def test_unit_basis_variants_are_classified_as_wrong_unit():
     other = rec("O", concept="NY.GDP.PCAP.CD", label="GDP per capita (current US$)",
                 unit="current US$")
     assert classify_distractor(other, [target])[0] is not DistractorType.WRONG_UNIT
+
+
+def test_no_near_match_without_meaningful_target_value():
+    near = rec("N", value=100.1)
+    dtype, flags = classify_distractor(near, [], target_values=(), allow_near_match=False)
+    assert dtype is DistractorType.OTHER_SAME_DOMAIN
+    assert flags["value_within_5_percent"] is False
 
 
 def test_relationship_flags_describe_the_actual_difference():
@@ -130,6 +152,31 @@ def test_selector_never_renders_null_observation_records(cfg):
     pool = RecordPool([TARGET, null_rec, rec("OK", period="CY2023")])
     ids = {c.record.record_id for c in DistractorSelector(cfg, pool).build(_family(pool))}
     assert "NULL1" not in ids
+
+
+def test_unanswerable_selector_does_not_emit_near_match_value(cfg):
+    anchor = rec("ANCHOR", value=100.0)
+    close = rec("CLOSE", concept="other", value=101.0)
+    pool = RecordPool([TARGET, anchor, close, rec("FAR", entity="E2", concept="other2", value=999.0)])
+    fam = _family(
+        pool,
+        question_type=QuestionType.UNANSWERABLE,
+        answerable=False,
+        gold_answer=None,
+        gold_answer_normalized=INSUFFICIENT_EVIDENCE,
+        answer_type=AnswerType.INSUFFICIENT_EVIDENCE,
+        numeric_tolerance=None,
+        gold_evidence=[],
+        gold_evidence_ids=[],
+        unanswerable_spec=UnanswerableSpec(
+            reason_code="ABSENT", reason="missing", missing_concept="missing",
+            missing_entity_id="E1", verified_absent_in_pool=True,
+            forbidden_concept_aliases=["missing"],
+        ),
+        target_conditions={"records": [{"entity_id": "E1", "concept": "missing"}]},
+    )
+    kinds = {c.distractor_type for c in DistractorSelector(cfg, pool).build(fam)}
+    assert DistractorType.NEAR_MATCH_VALUE not in kinds
 
 
 def test_selector_is_deterministic_for_a_seed(cfg):

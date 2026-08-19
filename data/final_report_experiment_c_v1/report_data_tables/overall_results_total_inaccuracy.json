@@ -1,0 +1,42 @@
+[
+  {
+    "Context":"4K",
+    "N":100,
+    "Correct":"57%",
+    "Inaccurate":"43%",
+    "Inaccuracy 95% CI":"[33%, 53%]",
+    "Mean inference latency":"0.317 s"
+  },
+  {
+    "Context":"8K",
+    "N":100,
+    "Correct":"50%",
+    "Inaccurate":"50%",
+    "Inaccuracy 95% CI":"[40%, 60%]",
+    "Mean inference latency":"0.601 s"
+  },
+  {
+    "Context":"16K",
+    "N":100,
+    "Correct":"43%",
+    "Inaccurate":"57%",
+    "Inaccuracy 95% CI":"[47%, 67%]",
+    "Mean inference latency":"1.212 s"
+  },
+  {
+    "Context":"32K",
+    "N":100,
+    "Correct":"38%",
+    "Inaccurate":"62%",
+    "Inaccuracy 95% CI":"[52%, 71%]",
+    "Mean inference latency":"2.842 s"
+  },
+  {
+    "Context":"64K",
+    "N":100,
+    "Correct":"27%",
+    "Inaccurate":"73%",
+    "Inaccuracy 95% CI":"[64%, 81%]",
+    "Mean inference latency":"7.824 s"
+  }
+]

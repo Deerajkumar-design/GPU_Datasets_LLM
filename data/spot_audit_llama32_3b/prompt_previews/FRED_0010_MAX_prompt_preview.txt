@@ -1,0 +1,157 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Cutting Knowledge Date: December 2023
+Today Date: 09 Aug 2026
+
+Answer using only the supplied records.
+
+Identify records matching the exact entity, period, version, field, unit, product, route, dosage form, arm, series, or other conditions requested by the question.
+
+If the supplied records do not contain sufficient evidence to answer the question, return INSUFFICIENT_EVIDENCE.
+
+Do not infer or fabricate missing information.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+KNOWLEDGE RECORDS:
+
+<RECORD id="R4AA2F1F701" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Personal Consumption Expenditures (Seasonally Adjusted Annual Rate) [PCE]
+period: 2003-12-01
+unit: Billions of Dollars
+value: 7950.4
+version: latest
+</RECORD>
+<RECORD id="RBD410035F9" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (Not Seasonally Adjusted) [WGS10YR]
+period: 2019-04-26
+unit: Percent
+value: 2.55
+version: latest
+</RECORD>
+<RECORD id="R3F8A5483A3" source="FRED_STLOUISFED">
+entity: New York [NY]
+field: Unemployment Rate (Seasonally Adjusted) [NYUR]
+period: 2011-10-01
+unit: Percent
+value: 8.5
+version: latest
+</RECORD>
+<RECORD id="RFA35F4BA4D" source="FRED_STLOUISFED">
+entity: Illinois [IL]
+field: Unemployment Rate (Seasonally Adjusted) [ILUR]
+period: 2014-07-01
+unit: Percent
+value: 7.0
+version: latest
+</RECORD>
+<RECORD id="R3EB7D9EB76" source="FRED_STLOUISFED">
+entity: Florida [FL]
+field: Unemployment Rate (Seasonally Adjusted) [FLUR]
+period: 2017-03-01
+unit: Percent
+value: 4.5
+version: latest
+</RECORD>
+<RECORD id="R36ED7FE819" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Unemployment Rate (Seasonally Adjusted) [UNRATE]
+period: 1993-02-01
+unit: Percent
+value: 7.1
+version: latest
+</RECORD>
+<RECORD id="R6F32E580A5" source="FRED_STLOUISFED">
+entity: United States [US]
+field: All Employees, Total Nonfarm (Seasonally Adjusted) [PAYEMS]
+period: 2019-04-01
+unit: Thousands of Persons
+value: 150482.0
+version: vintage:2021-07-29
+</RECORD>
+<RECORD id="R8CE2170075" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (Not Seasonally Adjusted) [DGS10]
+period: 2017-03-23
+unit: Percent
+value: 2.41
+version: latest
+</RECORD>
+<RECORD id="RACB1ECAA33" source="FRED_STLOUISFED">
+entity: New York [NY]
+field: Unemployment Rate (Seasonally Adjusted) [NYUR]
+period:
+
+...[middle omitted in compact preview; exact prompt is reproducible from context/question/prompt hash]...
+
+RD id="R1166EA39A3" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (Not Seasonally Adjusted) [DGS10]
+period: 2024-08-23
+unit: Percent
+value: 3.81
+version: latest
+</RECORD>
+<RECORD id="RAEAF44CFAE" source="FRED_STLOUISFED">
+entity: United States [US]
+field: All Employees, Total Nonfarm (Seasonally Adjusted) [PAYEMS]
+period: 2000-02-01
+unit: Thousands of Persons
+value: 131120.0
+version: latest
+</RECORD>
+<RECORD id="RF2DAF1C72F" source="FRED_STLOUISFED">
+entity: California [CA]
+field: Unemployment Rate (Seasonally Adjusted) [CAUR]
+period: 2017-06-01
+unit: Percent
+value: 4.8
+version: latest
+</RECORD>
+<RECORD id="R1F7D21CC60" source="FRED_STLOUISFED">
+entity: Florida [FL]
+field: Unemployment Rate (Seasonally Adjusted) [FLUR]
+period: 2017-12-01
+unit: Percent
+value: 4.0
+version: latest
+</RECORD>
+<RECORD id="R860FECC72A" source="FRED_STLOUISFED">
+entity: Illinois [IL]
+field: Unemployment Rate (Seasonally Adjusted) [ILUR]
+period: 1996-07-01
+unit: Percent
+value: 5.4
+version: latest
+</RECORD>
+<RECORD id="RE28073F5B8" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (Not Seasonally Adjusted) [DGS10]
+period: 2026-06-17
+unit: Percent
+value: 4.49
+version: latest
+</RECORD>
+<RECORD id="R174E2E2338" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (Not Seasonally Adjusted) [DGS10]
+period: 2013-02-22
+unit: Percent
+value: 1.97
+version: latest
+</RECORD>
+
+TARGET QUESTION:
+
+Using only the FRED records supplied in the context, calculate the percentage change in FRED series WGS10YR ("Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity"), measured in Percent, not seasonally adjusted, weekly frequency between the observation dated 2026-07-24 and the observation dated 2026-07-31. Use both values from the most recent vintage, apply ((value_2026-07-31 - value_2026-07-24) / value_2026-07-24) * 100, and round to two decimal places.
+
+OUTPUT FORMAT:
+
+Return exactly one JSON object with this schema:
+{"selected_evidence":["R..."],"answer":"...","insufficient_evidence":false}
+
+For insufficient evidence, use:
+{"selected_evidence":[],"answer":"INSUFFICIENT_EVIDENCE","insufficient_evidence":true}
+
+Use only model-facing record IDs from the supplied records. Do not include reasoning.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+

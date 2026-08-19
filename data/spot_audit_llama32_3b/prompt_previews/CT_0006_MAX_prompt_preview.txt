@@ -1,0 +1,125 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Cutting Knowledge Date: December 2023
+Today Date: 09 Aug 2026
+
+Answer using only the supplied records.
+
+Identify records matching the exact entity, period, version, field, unit, product, route, dosage form, arm, series, or other conditions requested by the question.
+
+If the supplied records do not contain sufficient evidence to answer the question, return INSUFFICIENT_EVIDENCE.
+
+Do not infer or fabricate missing information.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+KNOWLEDGE RECORDS:
+
+<RECORD id="R75527C14AD" source="CLINICALTRIALS_GOV_V2">
+entity: The Safety and Efficacy Of Rivaroxaban and Ticagrelor for Patients With Atrial Fibrillation After Percutaneous Coronary Intervention [NCT03331484]
+field: Study phase [study.phase]
+value: PHASE3
+version: lastupdate:2026-05-06
+status: COMPLETED
+</RECORD>
+<RECORD id="R4A02D278E6" source="CLINICALTRIALS_GOV_V2">
+entity: Prevention of Postpartum Hemorrhage With Tranexamic Acid [NCT03287336]
+field: Arm group type: Cohort 1 [arm.type]
+value: EXPERIMENTAL
+version: lastupdate:2025-03-25
+arm: Cohort 1
+status: COMPLETED
+</RECORD>
+<RECORD id="R8425265ACB" source="CLINICALTRIALS_GOV_V2">
+entity: Effects of ROSIglitazone on Inflammatory Markers and Adipokines in Diabetic Patients Using an Angiotensin Receptor Blocker (TELmisartan) - The ROSITEL Study [NCT00486187]
+field: Arm group type: 2 [arm.type]
+value: ACTIVE_COMPARATOR
+version: lastupdate:2016-01-28
+arm: 2
+status: COMPLETED
+</RECORD>
+<RECORD id="RE6456954D7" source="CLINICALTRIALS_GOV_V2">
+entity: The Impact of Gall Bladder Emptying and Bile Acids on the Human GLP-1-secretion [NCT01656057]
+field: Arm group type: Acetaminophen+saline [arm.type]
+value: EXPERIMENTAL
+version: lastupdate:2015-07-14
+arm: Acetaminophen+saline
+status: COMPLETED
+</RECORD>
+<RECORD id="RD22535C153" source="CLINICALTRIALS_GOV_V2">
+entity: Research Study Comparing Different Tablets With the Study Medicine Semaglutide in Healthy Men [NCT03638778]
+field: Primary completion date [study.primary_completion_date]
+period: 2018
+value: 2018-12-05
+version: lastupdate:2019-11-14
+status: COMPLETED
+</RECORD>
+<RECORD id="RFD8F6500ED" source="CLINICALTRIALS_GOV_V2">
+entity: A Research Study to See How Semaglutide Helps People With Excess Weight and Type 2 Diabetes Lose Weight [NCT05649137]
+field: Arm group type: Placebo [arm.type]
+value: PLACEBO_COMPARATOR
+version: lastupdate:2026-04-27
+arm: Placebo
+status: COMPLETED
+</RECORD>
+<RECORD id="RE208E
+
+...[middle omitted in compact preview; exact prompt is reproducible from context/question/prompt hash]...
+
+in Healthy Volunteers [NCT02554721]
+field: Arm group type: Group 2 (CYP2C19 Wild Type) [arm.type]
+value: EXPERIMENTAL
+version: lastupdate:2021-10-13
+arm: Group 2 (CYP2C19 Wild Type)
+status: COMPLETED
+</RECORD>
+<RECORD id="R4327E23002" source="CLINICALTRIALS_GOV_V2">
+entity: Effects of VMX-C001 on the Anticoagulant Effect of Different Forms of Heparin [NCT06517563]
+field: Study type [study.study_type]
+value: INTERVENTIONAL
+version: lastupdate:2026-05-11
+status: COMPLETED
+</RECORD>
+<RECORD id="R2DD34B218A" source="CLINICALTRIALS_GOV_V2">
+entity: Erector Spinae Plane Block for Cervical Spine Surgery [NCT06393530]
+field: Secondary outcome timeframe: PLR [outcome.secondary.timeframe]
+value: 24 hours after surgery
+version: lastupdate:2026-02-02
+outcome: PLR
+status: COMPLETED
+</RECORD>
+<RECORD id="RF0FE3C435A" source="CLINICALTRIALS_GOV_V2">
+entity: Bioequivalence and Drug - Drug Interaction Study of Metformin/Gliclazide in Healthy Participants [NCT03467945]
+field: Arm group type: Treatment Sequence 1 [arm.type]
+value: EXPERIMENTAL
+version: lastupdate:2019-07-16
+arm: Treatment Sequence 1
+status: COMPLETED
+</RECORD>
+<RECORD id="R5FE40BF1F1" source="CLINICALTRIALS_GOV_V2">
+entity: Tranexamic Acid During Cystectomy Trial (TACT) [NCT01869413]
+field: Minimum eligible age [eligibility.minimum_age]
+value: 18 Years
+version: lastupdate:2022-10-04
+status: COMPLETED
+</RECORD>
+<RECORD id="R5DB0184D49" source="CLINICALTRIALS_GOV_V2">
+entity: Bioequivalence Study of Metformin Hydrochloride Extended-Release Tablets USP 750 mg Under Fasting Condition [NCT01831661]
+field: Overall recruitment status [study.overall_status]
+value: COMPLETED
+version: lastupdate:2013-04-15
+status: COMPLETED
+</RECORD>
+
+TARGET QUESTION:
+
+Using only the ClinicalTrials.gov records supplied in the context, what is the arm-group TYPE of the arm labelled "Control" in trial NCT01340300 ("Exercise and Metformin in Colorectal and Breast Cancer Survivors")? Answer with the ClinicalTrials.gov arm type value (for example EXPERIMENTAL, ACTIVE_COMPARATOR, PLACEBO_COMPARATOR, SHAM_COMPARATOR, NO_INTERVENTION or OTHER).
+
+OUTPUT FORMAT:
+
+Return exactly one JSON object with this schema:
+{"selected_evidence":["R..."],"answer":"...","insufficient_evidence":false}
+
+For insufficient evidence, use:
+{"selected_evidence":[],"answer":"INSUFFICIENT_EVIDENCE","insufficient_evidence":true}
+
+Use only model-facing record IDs from the supplied records. Do not include reasoning.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+

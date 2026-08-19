@@ -1,0 +1,156 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Cutting Knowledge Date: December 2023
+Today Date: 09 Aug 2026
+
+Answer using only the supplied records.
+
+Identify records matching the exact entity, period, version, field, unit, product, route, dosage form, arm, series, or other conditions requested by the question.
+
+If the supplied records do not contain sufficient evidence to answer the question, return INSUFFICIENT_EVIDENCE.
+
+Do not infer or fabricate missing information.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+KNOWLEDGE RECORDS:
+
+<RECORD id="R79568AD54C" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Industrial Production: Total Index (Seasonally Adjusted) [INDPRO]
+period: 2011-03-01
+unit: Index 2017=100
+value: 94.0788
+version: latest
+</RECORD>
+<RECORD id="R246FFFA941" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Consumer Price Index for All Urban Consumers: All Items in U.S. City Average (Seasonally Adjusted) [CPIAUCSL]
+period: 2022-05-01
+unit: Index 1982-1984=100
+value: 291.268
+version: vintage:2023-09-28
+</RECORD>
+<RECORD id="RA7C79826CE" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Consumer Price Index for All Urban Consumers: All Items in U.S. City Average (Not Seasonally Adjusted) [CPIAUCNS]
+period: 2020-08-01
+unit: Index 1982-1984=100
+value: 259.918
+version: latest
+</RECORD>
+<RECORD id="R6E4BB68E6A" source="FRED_STLOUISFED">
+entity: Florida [FL]
+field: Unemployment Rate (Seasonally Adjusted) [FLUR]
+period: 2000-04-01
+unit: Percent
+value: 3.7
+version: latest
+</RECORD>
+<RECORD id="R55471AC678" source="FRED_STLOUISFED">
+entity: Illinois [IL]
+field: Unemployment Rate (Seasonally Adjusted) [ILUR]
+period: 2026-01-01
+unit: Percent
+value: 4.9
+version: latest
+</RECORD>
+<RECORD id="RE4B060445C" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (Not Seasonally Adjusted) [WGS10YR]
+period: 2017-03-17
+unit: Percent
+value: 2.55
+version: latest
+</RECORD>
+<RECORD id="RF7CAB2EB70" source="FRED_STLOUISFED">
+entity: United States [US]
+field: All Employees, Total Nonfarm (Seasonally Adjusted) [PAYEMS]
+period: 1996-10-01
+unit: Thousands of Persons
+value: 120665.0
+version: latest
+</RECORD>
+<RECORD id="RCA49B56B11" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Consumer Price Index for All Urban Consumers: All Items in U.S. City Average (Not Seasonally Adjusted) [CPIAUCNS]
+period: 2001-04-01
+unit: Index 1982-1984=1
+
+...[middle omitted in compact preview; exact prompt is reproducible from context/question/prompt hash]...
+
+l Items in U.S. City Average (Not Seasonally Adjusted) [CPIAUCNS]
+period: 2009-02-01
+unit: Index 1982-1984=100
+value: 212.193
+version: latest
+</RECORD>
+<RECORD id="R54F9919A5F" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Unemployment Rate (Not Seasonally Adjusted) [UNRATENSA]
+period: 2015-05-01
+unit: Percent
+value: 5.3
+version: latest
+</RECORD>
+<RECORD id="RAB435D6DF1" source="FRED_STLOUISFED">
+entity: Pennsylvania [PA]
+field: Unemployment Rate (Seasonally Adjusted) [PAUR]
+period: 2004-02-01
+unit: Percent
+value: 5.4
+version: latest
+</RECORD>
+<RECORD id="RF6987CB4EA" source="FRED_STLOUISFED">
+entity: Florida [FL]
+field: Unemployment Rate (Seasonally Adjusted) [FLUR]
+period: 2023-04-01
+unit: Percent
+value: 2.8
+version: latest
+</RECORD>
+<RECORD id="RC2B332A6B8" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Consumer Price Index for All Urban Consumers: All Items in U.S. City Average (Not Seasonally Adjusted) [CPIAUCNS]
+period: 2010-10-01
+unit: Index 1982-1984=100
+value: 218.711
+version: latest
+</RECORD>
+<RECORD id="R4FC7F69D1D" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Consumer Price Index for All Urban Consumers: All Items in U.S. City Average (Not Seasonally Adjusted) [CPIAUCNS]
+period: 2015-06-01
+unit: Index 1982-1984=100
+value: 238.638
+version: latest
+</RECORD>
+<RECORD id="R52BF7D6D28" source="FRED_STLOUISFED">
+entity: United States [US]
+field: New Privately-Owned Housing Units Started: Total Units (Seasonally Adjusted Annual Rate) [HOUST]
+period: 1991-12-01
+unit: Thousands of Units
+value: 1079.0
+version: latest
+</RECORD>
+<RECORD id="RAA98630A61" source="FRED_STLOUISFED">
+entity: Pennsylvania [PA]
+field: Unemployment Rate (Seasonally Adjusted) [PAUR]
+period: 2006-09-01
+unit: Percent
+value: 4.7
+version: latest
+</RECORD>
+
+TARGET QUESTION:
+
+Using only the FRED records supplied in the context, what value does FRED report for FRED series DGS10 ("Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity"), measured in Percent, not seasonally adjusted, daily frequency, for the observation dated 2009-09-07?
+
+OUTPUT FORMAT:
+
+Return exactly one JSON object with this schema:
+{"selected_evidence":["R..."],"answer":"...","insufficient_evidence":false}
+
+For insufficient evidence, use:
+{"selected_evidence":[],"answer":"INSUFFICIENT_EVIDENCE","insufficient_evidence":true}
+
+Use only model-facing record IDs from the supplied records. Do not include reasoning.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+

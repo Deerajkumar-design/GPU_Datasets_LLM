@@ -298,7 +298,7 @@
   "dataset_name": "fred_pilot",
   "has_critical_failures": false,
   "stats": {
-    "config_hash": "306c104c7669fb09",
+    "config_hash": "8c72bbbd80ade192",
     "distractor_totals": {
       "NEAR_MATCH_VALUE": 1219,
       "OTHER_SAME_DOMAIN": 10547,

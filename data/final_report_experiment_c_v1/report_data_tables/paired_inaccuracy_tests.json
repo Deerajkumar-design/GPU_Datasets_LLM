@@ -1,0 +1,34 @@
+[
+  {
+    "Comparison":"4K vs 8K",
+    "Inaccuracy difference":"7.0%",
+    "Discordant pairs":"3\/10",
+    "Raw p-value":"0.0923",
+    "Holm-adjusted p-value":"0.0923",
+    "Result":"not significant after Holm"
+  },
+  {
+    "Comparison":"4K vs 16K",
+    "Inaccuracy difference":"14.0%",
+    "Discordant pairs":"3\/17",
+    "Raw p-value":"0.0026",
+    "Holm-adjusted p-value":"0.0052",
+    "Result":"p < 0.05 after Holm"
+  },
+  {
+    "Comparison":"4K vs 32K",
+    "Inaccuracy difference":"19.0%",
+    "Discordant pairs":"5\/24",
+    "Raw p-value":"5.46e-04",
+    "Holm-adjusted p-value":"0.0016",
+    "Result":"p < 0.05 after Holm"
+  },
+  {
+    "Comparison":"4K vs 64K",
+    "Inaccuracy difference":"30.0%",
+    "Discordant pairs":"5\/35",
+    "Raw p-value":"1.38e-06",
+    "Holm-adjusted p-value":"5.53e-06",
+    "Result":"p < 0.05 after Holm"
+  }
+]

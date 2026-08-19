@@ -73,6 +73,7 @@ class DistractorType(str, enum.Enum):
     WRONG_VERSION = "WRONG_VERSION"
     WRONG_FIELD = "WRONG_FIELD"
     WRONG_UNIT = "WRONG_UNIT"
+    WRONG_SERIES_VARIANT = "WRONG_SERIES_VARIANT"
     NEAR_MATCH_VALUE = "NEAR_MATCH_VALUE"
     OTHER_SAME_DOMAIN = "OTHER_SAME_DOMAIN"
 
@@ -234,6 +235,38 @@ class GoldEvidence(BaseModel):
         )
 
 
+class EvidenceEquivalenceGroup(BaseModel):
+    """Canonical records that can support the same target fact.
+
+    Groups are conservative: they are not value-only clusters. They exist so future
+    evidence scoring can accept alternate authentic representations of the same fact
+    without hiding those source records from the context.
+    """
+
+    model_config = ConfigDict(extra="forbid")
+
+    group_id: str
+    gold_record_id: str
+    canonical_record_ids: List[str] = Field(default_factory=list)
+    display_ids: List[str] = Field(default_factory=list)
+
+
+class GoldEvidenceDisplayMapping(BaseModel):
+    """Per-gold-record model-facing evidence IDs.
+
+    Multi-record evidence and evidence equivalence are distinct. A two-operand
+    calculation should have two mappings, one per canonical operand; equivalent IDs
+    attach only to the operand they can substantively support.
+    """
+
+    model_config = ConfigDict(extra="forbid")
+
+    canonical_record_id: str
+    display_id: Optional[str] = None
+    equivalent_canonical_ids: List[str] = Field(default_factory=list)
+    equivalent_display_ids: List[str] = Field(default_factory=list)
+
+
 class CalculationSpec(BaseModel):
     """Explicit, replayable definition of a derived gold answer.
 
@@ -339,6 +372,9 @@ class QuestionFamily(BaseModel):
 
     gold_evidence: List[GoldEvidence] = Field(default_factory=list)
     gold_evidence_ids: List[str] = Field(default_factory=list)
+    gold_evidence_canonical_ids: List[str] = Field(default_factory=list)
+    gold_evidence_display_ids: List[str] = Field(default_factory=list)
+    gold_evidence_equivalence_groups: List[EvidenceEquivalenceGroup] = Field(default_factory=list)
 
     calculation_spec: Optional[CalculationSpec] = None
     unanswerable_spec: Optional[UnanswerableSpec] = None
@@ -397,6 +433,12 @@ class QuestionFamily(BaseModel):
                 f"{self.question_family_id}: gold_evidence_ids {self.gold_evidence_ids} "
                 f"disagree with gold_evidence {ev_ids}"
             )
+        if self.gold_evidence_canonical_ids and self.gold_evidence_canonical_ids != self.gold_evidence_ids:
+            raise ValueError(
+                f"{self.question_family_id}: gold_evidence_canonical_ids "
+                f"{self.gold_evidence_canonical_ids} disagree with gold_evidence_ids "
+                f"{self.gold_evidence_ids}"
+            )
         return self
 
 
@@ -411,6 +453,7 @@ class DistractorRef(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     record_id: str
+    display_id: Optional[str] = None
     distractor_type: DistractorType
     relationship_to_target: Dict[str, bool] = Field(default_factory=dict)
     position_index: Optional[int] = Field(
@@ -422,9 +465,10 @@ class DistractorRef(BaseModel):
 class ContextStats(BaseModel):
     """Measured properties of one built context."""
 
-    model_config = ConfigDict(extra="forbid")
+    model_config = ConfigDict(extra="forbid", protected_namespaces=())
 
     context_length_nominal: int
+    context_length_label: Optional[str] = None
     context_tokens_actual: int
     fill_ratio: float
     tokenizer_id: str
@@ -440,11 +484,18 @@ class ContextStats(BaseModel):
     target_position_tolerance: Optional[float] = None
     target_position_ok: Optional[bool] = None
 
+    rendered_input_tokens_actual: Optional[int] = None
+    prompt_overhead_tokens: Optional[int] = None
+    generation_tokens_reserved: Optional[int] = None
+    model_context_limit: Optional[int] = None
+    remaining_context_margin: Optional[int] = None
+    near_model_maximum: bool = False
+
 
 class Instance(BaseModel):
     """One (question family x context length) row -- what the LLM will eventually see."""
 
-    model_config = ConfigDict(extra="forbid")
+    model_config = ConfigDict(extra="forbid", protected_namespaces=())
 
     schema_version: str = SCHEMA_VERSION
     instance_id: str
@@ -455,13 +506,29 @@ class Instance(BaseModel):
     question: str
 
     context_length_nominal: int
+    context_length_label: Optional[str] = None
     context_tokens_actual: int
     tokenizer: str
     tokenizer_version: Optional[str] = None
+    tokenizer_revision: Optional[str] = None
+    tokenizer_class: Optional[str] = None
+    model_id: Optional[str] = None
+    model_config_revision: Optional[str] = None
+    rendered_input_tokens_actual: Optional[int] = None
+    prompt_overhead_tokens: Optional[int] = None
+    generation_tokens_reserved: Optional[int] = None
+    model_context_limit: Optional[int] = None
+    remaining_context_margin: Optional[int] = None
+    near_model_maximum: bool = False
+    prompt_version: Optional[str] = None
+    prompt_hash: Optional[str] = None
+    response_format_version: Optional[str] = None
 
     target_evidence_start_token: Optional[int] = None
     target_evidence_end_token: Optional[int] = None
     target_position_relative: Optional[float] = None
+    target_position_relative_in_records_context: Optional[float] = None
+    target_position_relative_in_rendered_input: Optional[float] = None
 
     answerable: bool
     gold_answer: Union[float, int, str, None]
@@ -471,13 +538,25 @@ class Instance(BaseModel):
     numeric_tolerance: Optional[float] = None
 
     gold_evidence_ids: List[str] = Field(default_factory=list)
+    gold_evidence_display_ids: List[str] = Field(default_factory=list)
+    gold_evidence_canonical_ids: List[str] = Field(default_factory=list)
+    gold_evidence_equivalence_groups: List[EvidenceEquivalenceGroup] = Field(default_factory=list)
+    gold_evidence_display_map: List[GoldEvidenceDisplayMapping] = Field(default_factory=list)
     distractor_counts: Dict[str, int] = Field(default_factory=dict)
     distractors: List[DistractorRef] = Field(default_factory=list)
 
     context: str
     context_record_ids: List[str] = Field(
         default_factory=list,
-        description="Rendered record IDs in context order. Nesting is verified on this.",
+        description="Canonical record IDs in context order. Nesting is verified on this.",
+    )
+    context_display_ids: List[str] = Field(
+        default_factory=list,
+        description="Opaque model-facing record IDs in context order.",
+    )
+    display_id_to_record_id: Dict[str, str] = Field(
+        default_factory=dict,
+        description="Opaque display ID -> canonical record ID mapping for this context.",
     )
     context_sha256: Optional[str] = None
 

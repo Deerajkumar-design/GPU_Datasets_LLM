@@ -1,0 +1,126 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Cutting Knowledge Date: December 2023
+Today Date: 09 Aug 2026
+
+Answer using only the supplied records.
+
+Identify records matching the exact entity, period, version, field, unit, product, route, dosage form, arm, series, or other conditions requested by the question.
+
+If the supplied records do not contain sufficient evidence to answer the question, return INSUFFICIENT_EVIDENCE.
+
+Do not infer or fabricate missing information.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+KNOWLEDGE RECORDS:
+
+<RECORD id="R5EB491F41B" source="CLINICALTRIALS_GOV_V2">
+entity: Statin Therapy in Heart Failure: Potential Mechanisms of Benefit [NCT00233480]
+field: Overall recruitment status [study.overall_status]
+value: COMPLETED
+version: lastupdate:2020-03-20
+status: COMPLETED
+</RECORD>
+<RECORD id="R48BC89DF97" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Minimum eligible age [eligibility.minimum_age]
+value: 21 Years
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>
+<RECORD id="R0AF05B581D" source="CLINICALTRIALS_GOV_V2">
+entity: A Trial Investigating the Cardiovascular Safety of Oral Semaglutide in Subjects With Type 2 Diabetes [NCT02692716]
+field: Number of arm groups [arms.count]
+unit: arms
+value: 2.0
+version: lastupdate:2022-07-20
+status: COMPLETED
+</RECORD>
+<RECORD id="R23034F01F4" source="CLINICALTRIALS_GOV_V2">
+entity: A Heart Disease Study of Semaglutide in Patients With Type 2 Diabetes [NCT03914326]
+field: Arm group type: Placebo [arm.type]
+value: PLACEBO_COMPARATOR
+version: lastupdate:2025-12-11
+arm: Placebo
+status: COMPLETED
+</RECORD>
+<RECORD id="RBBFE4B0AF1" source="CLINICALTRIALS_GOV_V2">
+entity: Comparison of Effect & Safety of Clopidogrel Napadisilate With Clopidogrel Bisulfate in Coronary Artery Disease Patients [NCT01830491]
+field: Eligible sex [eligibility.sex]
+value: ALL
+version: lastupdate:2016-10-12
+status: COMPLETED
+</RECORD>
+<RECORD id="R686EF4985B" source="CLINICALTRIALS_GOV_V2">
+entity: The International Polycap Study 3 (TIPS-3) [NCT01646437]
+field: Eligible sex [eligibility.sex]
+value: ALL
+version: lastupdate:2021-09-16
+status: COMPLETED
+</RECORD>
+<RECORD id="RA9753ED0FD" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Study phase [study.phase]
+value: NA
+version: last
+
+...[middle omitted in compact preview; exact prompt is reproducible from context/question/prompt hash]...
+
+nal Registry [NCT02663076]
+field: Primary outcome timeframe: major bleeding [outcome.primary.timeframe]
+value: 12 month
+version: lastupdate:2022-07-19
+outcome: major bleeding
+status: COMPLETED
+</RECORD>
+<RECORD id="RE9742CAD57" source="CLINICALTRIALS_GOV_V2">
+entity: A Healthy Volunteer PK/PD, Safety and Tolerability Study of Second Generation Andexanet Alfa [NCT03083704]
+field: Primary outcome timeframe: Pharmacokinetics [outcome.primary.timeframe]
+value: Day 1 through Day 7
+version: lastupdate:2023-08-08
+outcome: Pharmacokinetics
+status: COMPLETED
+</RECORD>
+<RECORD id="R97CC606228" source="CLINICALTRIALS_GOV_V2">
+entity: Effectiveness of Subcutaneous Glargine On The Time To Closure of The Anion Gap in Patients Presenting to the Emergency Department With Diabetic Keto-acidosis [NCT02006342]
+field: Number of arm groups [arms.count]
+unit: arms
+value: 2.0
+version: lastupdate:2017-05-16
+status: COMPLETED
+</RECORD>
+<RECORD id="RDFF41F7941" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Allocation [design.allocation]
+value: RANDOMIZED
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>
+<RECORD id="RAD6AD40F5E" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Studied condition [study.condition]
+value: Stroke
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>
+<RECORD id="RDC2ED32592" source="CLINICALTRIALS_GOV_V2">
+entity: Dose-Dependent Effects of Intraoperative Tranexamic Acid on Surgical Bleeding and Transfusion Requirements in Multilevel Thoracolumbar Spinal Surgery [NCT07288697]
+field: Study phase [study.phase]
+value: NA
+version: lastupdate:2025-12-17
+status: COMPLETED
+</RECORD>
+
+TARGET QUESTION:
+
+Using only the ClinicalTrials.gov records supplied in the context, what is the date on which results were first posted for trial NCT02339493 ("Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter")?
+
+OUTPUT FORMAT:
+
+Return exactly one JSON object with this schema:
+{"selected_evidence":["R..."],"answer":"...","insufficient_evidence":false}
+
+For insufficient evidence, use:
+{"selected_evidence":[],"answer":"INSUFFICIENT_EVIDENCE","insufficient_evidence":true}
+
+Use only model-facing record IDs from the supplied records. Do not include reasoning.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+

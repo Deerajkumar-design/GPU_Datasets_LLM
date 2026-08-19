@@ -244,7 +244,7 @@ class CTDateFieldSelection(QuestionTemplate):
 
     template_id = "CT_DATE_FIELD_SELECTION"
     domain = Domain.CLINICAL_TRIALS
-    question_type = QuestionType.TEMPORAL_VERSION
+    question_type = QuestionType.ENTITY_UNIT_BINDING
     id_prefix = "CT"
 
     TARGET = "study.primary_completion_date"
@@ -270,12 +270,9 @@ class CTDateFieldSelection(QuestionTemplate):
             siblings = [(c, r) for c, r in siblings if r is not None and str(r.value) != str(target.value)]
             if len(siblings) < 3:
                 continue  # without competing dates the question is not a selection task
-            sib_desc = "; ".join(f"{DATE_CONCEPTS[c]} ({r.value})" for c, r in siblings[:4])
             question = (
                 f"Using only the ClinicalTrials.gov records supplied in the context, what is the PRIMARY "
-                f"COMPLETION DATE of trial {nct} (\"{target.entity_name}\")? Answer in YYYY-MM-DD form. "
-                f"The context also contains other dates for this same trial — {sib_desc} — none of which "
-                f"is the primary completion date."
+                f"COMPLETION DATE of trial {nct} (\"{target.entity_name}\")? Answer in YYYY-MM-DD form."
             )
             out.append(self.make_answerable(
                 ctx,
@@ -322,13 +319,12 @@ class CTArmBinding(QuestionTemplate):
             others = [g for g in group if g.record_id != target.record_id]
             if not others:
                 continue
-            other_labels = ", ".join(f'"{o.metadata.get("arm_label")}"' for o in others[:4])
             question = (
                 f"Using only the ClinicalTrials.gov records supplied in the context, what is the arm-group "
                 f"TYPE of the arm labelled \"{target.metadata.get('arm_label')}\" in trial {nct} "
                 f"(\"{target.entity_name}\")? Answer with the ClinicalTrials.gov arm type value (for "
                 f"example EXPERIMENTAL, ACTIVE_COMPARATOR, PLACEBO_COMPARATOR, SHAM_COMPARATOR, NO_INTERVENTION "
-                f"or OTHER). This trial also has arms labelled {other_labels}; their types are not the answer."
+                f"or OTHER)."
             )
             out.append(self.make_answerable(
                 ctx,
@@ -393,9 +389,7 @@ class CTUnanswerableMissingField(QuestionTemplate):
                     continue
                 question = (
                     f"Using only the ClinicalTrials.gov records supplied in the context, what is {phrase} "
-                    f"for trial {nct} (\"{names.get(nct, nct)}\")? If the supplied records do not contain "
-                    f"this field for this trial, state that the evidence is insufficient rather than "
-                    f"inferring it from another date or another trial."
+                    f"for trial {nct} (\"{names.get(nct, nct)}\")?"
                 )
                 spec = UnanswerableSpec(
                     reason_code=code,

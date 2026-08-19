@@ -1,0 +1,37 @@
+instance_id,domain,question_type,context_length_label,answerable,json_valid,answer_correct,evidence_correct,abstention_correct,hallucination,error_type,needs_semantic_review,review_reason,normalized_gold_answer,normalized_model_answer,grading_rule_used
+SEC_0021_32K,SEC,UNANSWERABLE,32K,False,False,False,False,False,,FORMAT_FAILURE,True,model output is not parseable JSON; raw output preserved,INSUFFICIENT_EVIDENCE,,json_parse_failure
+FDA_0002_32K,FDA,DIRECT_RETRIEVAL,32K,True,True,True,False,True,False,WRONG_EVIDENCE,False,,tablet,tablet,answer_correct_evidence_incorrect
+CT_0025_4K,CLINICAL_TRIALS,UNANSWERABLE,4K,False,True,False,False,False,True,FAILED_TO_ABSTAIN,False,,INSUFFICIENT_EVIDENCE,18,failed_to_abstain_unsupported_value
+FDA_0021_8K,FDA,UNANSWERABLE,8K,False,False,False,False,False,,FORMAT_FAILURE,True,model output is not parseable JSON; raw output preserved,INSUFFICIENT_EVIDENCE,,json_parse_failure
+FRED_0008_16K,FRED,ENTITY_UNIT_BINDING,16K,True,True,True,True,True,False,CORRECT,False,,1.77,1.77,deterministic_exact
+SEC_0019_64K,SEC,TEMPORAL_VERSION,64K,True,True,False,False,True,False,WRONG_VERSION,False,,10151000000.0,9929000000.0,model_answer_matches_context_distractor_value
+FRED_0004_4K,FRED,DIRECT_RETRIEVAL,4K,True,True,False,False,True,True,UNSUPPORTED_VALUE,False,,20985.448,21978.0,model_answer_not_matched_to_context_value
+SEC_0016_32K,SEC,RETRIEVAL_CALCULATION,32K,True,False,False,False,,,FORMAT_FAILURE,True,model output is not parseable JSON; raw output preserved,-6.84,,json_parse_failure
+SEC_0006_32K,SEC,ENTITY_UNIT_BINDING,32K,True,True,False,False,True,False,WRONG_ENTITY,False,,-492000000.0,-11314000000.0,model_answer_matches_context_distractor_value
+SEC_0006_4K,SEC,ENTITY_UNIT_BINDING,4K,True,False,False,False,,,FORMAT_FAILURE,True,model output is not parseable JSON; raw output preserved,-492000000.0,,json_parse_failure
+SEC_0006_64K,SEC,ENTITY_UNIT_BINDING,64K,True,True,False,False,True,False,WRONG_ENTITY,False,,-492000000.0,-11314000000.0,model_answer_matches_context_distractor_value
+CT_0007_4K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,4K,True,True,True,True,True,False,CORRECT,False,,placebo_comparator,placebo_comparator,deterministic_exact
+CT_0007_32K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,32K,True,False,False,False,,,FORMAT_FAILURE,True,model output is not parseable JSON; raw output preserved,placebo_comparator,,json_parse_failure
+CT_0007_64K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,64K,True,True,True,False,True,False,WRONG_EVIDENCE,False,,placebo_comparator,placebo_comparator,answer_correct_evidence_incorrect
+FDA_0003_4K,FDA,DIRECT_RETRIEVAL,4K,True,True,True,False,True,False,WRONG_EVIDENCE,False,,tablet,tablet,answer_correct_evidence_incorrect
+FDA_0003_32K,FDA,DIRECT_RETRIEVAL,32K,True,False,False,False,,,FORMAT_FAILURE,True,model output is not parseable JSON; raw output preserved,tablet,,json_parse_failure
+FDA_0003_64K,FDA,DIRECT_RETRIEVAL,64K,True,True,True,False,True,False,WRONG_EVIDENCE,False,,tablet,tablet,answer_correct_evidence_incorrect
+FRED_0007_4K,FRED,ENTITY_UNIT_BINDING,4K,True,True,False,False,True,False,WRONG_SERIES_VARIANT,False,,3.26,3.52,model_answer_matches_context_distractor_value
+FRED_0007_32K,FRED,ENTITY_UNIT_BINDING,32K,True,False,False,False,,,FORMAT_FAILURE,True,model output is not parseable JSON; raw output preserved,3.26,,json_parse_failure
+FRED_0007_64K,FRED,ENTITY_UNIT_BINDING,64K,True,False,False,False,,,FORMAT_FAILURE,True,model output is not parseable JSON; raw output preserved,3.26,,json_parse_failure
+CT_0001_16K,CLINICAL_TRIALS,DIRECT_RETRIEVAL,16K,True,False,False,False,,,FORMAT_FAILURE,True,model output is not parseable JSON; raw output preserved,24,,json_parse_failure
+CT_0002_16K,CLINICAL_TRIALS,DIRECT_RETRIEVAL,16K,True,False,False,False,,,FORMAT_FAILURE,True,model output is not parseable JSON; raw output preserved,44,,json_parse_failure
+CT_0003_16K,CLINICAL_TRIALS,DIRECT_RETRIEVAL,16K,True,False,False,False,,,FORMAT_FAILURE,True,model output is not parseable JSON; raw output preserved,226,,json_parse_failure
+CT_0004_16K,CLINICAL_TRIALS,DIRECT_RETRIEVAL,16K,True,False,False,False,,,FORMAT_FAILURE,True,model output is not parseable JSON; raw output preserved,38,,json_parse_failure
+CT_0005_16K,CLINICAL_TRIALS,DIRECT_RETRIEVAL,16K,True,False,False,False,,,FORMAT_FAILURE,True,model output is not parseable JSON; raw output preserved,388,,json_parse_failure
+CT_0006_16K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,16K,True,False,False,False,,,FORMAT_FAILURE,True,model output is not parseable JSON; raw output preserved,active_comparator,,json_parse_failure
+CT_0007_16K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,16K,True,False,False,False,,,FORMAT_FAILURE,True,model output is not parseable JSON; raw output preserved,placebo_comparator,,json_parse_failure
+CT_0008_16K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,16K,True,False,False,False,,,FORMAT_FAILURE,True,model output is not parseable JSON; raw output preserved,experimental,,json_parse_failure
+CT_0010_16K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,16K,True,False,False,False,,,FORMAT_FAILURE,True,model output is not parseable JSON; raw output preserved,80,,json_parse_failure
+CT_0014_16K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,16K,True,False,False,False,,,FORMAT_FAILURE,True,model output is not parseable JSON; raw output preserved,1230,,json_parse_failure
+CT_0017_16K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,16K,True,False,False,False,,,FORMAT_FAILURE,True,model output is not parseable JSON; raw output preserved,2018-04-25,,json_parse_failure
+CT_0018_16K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,16K,True,False,False,False,,,FORMAT_FAILURE,True,model output is not parseable JSON; raw output preserved,2021-03-02,,json_parse_failure
+CT_0019_16K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,16K,True,False,False,False,,,FORMAT_FAILURE,True,model output is not parseable JSON; raw output preserved,2023-02-13,,json_parse_failure
+CT_0020_16K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,16K,True,False,False,False,,,FORMAT_FAILURE,True,model output is not parseable JSON; raw output preserved,2018-11-26,,json_parse_failure
+CT_0021_16K,CLINICAL_TRIALS,UNANSWERABLE,16K,False,False,False,False,False,,FORMAT_FAILURE,True,model output is not parseable JSON; raw output preserved,INSUFFICIENT_EVIDENCE,,json_parse_failure
+CT_0022_16K,CLINICAL_TRIALS,UNANSWERABLE,16K,False,False,False,False,False,,FORMAT_FAILURE,True,model output is not parseable JSON; raw output preserved,INSUFFICIENT_EVIDENCE,,json_parse_failure

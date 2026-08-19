@@ -1,0 +1,20 @@
+{
+  "linear_latency_model": {
+    "formula": "generation_latency_seconds ~ input_tokens + generated_tokens_count",
+    "params": {
+      "const": -1.0619416267283577,
+      "generated_tokens_count": 0.025120765429074023,
+      "input_tokens": 0.00013986144329287758
+    },
+    "r_squared": 0.9815205921139202
+  },
+  "log_log_latency_model": {
+    "formula": "log(latency) ~ log(input_tokens) + log(generated_tokens_count)",
+    "params": {
+      "const": -11.71388841065092,
+      "log_generated_tokens": 0.11956685511501271,
+      "log_input_tokens": 1.2161473162485903
+    },
+    "r_squared": 0.9918021248572619
+  }
+}

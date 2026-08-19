@@ -1,0 +1,5 @@
+Outcome,OR per 2x Context,95% CI,p-value,Interpretation
+Overall Inaccuracy,1.232,"[1.178, 1.288]",8.66e-20,Odds ratio per doubling of rendered input tokens
+Hallucinatory Inaccuracy,1.070,"[1.027, 1.115]",0.00133,Odds ratio per doubling of rendered input tokens
+Grounded Inaccuracy,1.215,"[1.153, 1.280]",3.34e-13,Odds ratio per doubling of rendered input tokens
+Hallucinatory vs Grounded Among Inaccuracies,0.936,"[0.897, 0.977]",0.00249,Odds ratio per doubling of rendered input tokens

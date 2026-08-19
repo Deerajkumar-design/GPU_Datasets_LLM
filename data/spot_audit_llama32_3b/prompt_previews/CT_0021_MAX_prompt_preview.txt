@@ -1,0 +1,119 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Cutting Knowledge Date: December 2023
+Today Date: 09 Aug 2026
+
+Answer using only the supplied records.
+
+Identify records matching the exact entity, period, version, field, unit, product, route, dosage form, arm, series, or other conditions requested by the question.
+
+If the supplied records do not contain sufficient evidence to answer the question, return INSUFFICIENT_EVIDENCE.
+
+Do not infer or fabricate missing information.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+KNOWLEDGE RECORDS:
+
+<RECORD id="R8D6D4C75BC" source="CLINICALTRIALS_GOV_V2">
+entity: Clopidogrel in High-risk Patients With Acute Non-disabling Cerebrovascular Events [NCT00979589]
+field: Secondary outcome timeframe: Severe bleeding incidence (GUSTO definition), including fatal bleeding and symptomatic intracranial hemorrhage. [outcome.secondary.timeframe]
+value: 3 months
+version: lastupdate:2020-07-15
+outcome: Severe bleeding incidence (GUSTO definition), including fatal bleeding and symptomatic intracranial hemorrhage.
+status: COMPLETED
+</RECORD>
+<RECORD id="RDE8524FC62" source="CLINICALTRIALS_GOV_V2">
+entity: Investigating the Effect of Intravenous and Oral Tranexamic Acid on Blood Loss After Primary Hip and Knee Arthroplasty [NCT03690037]
+field: Masking [design.masking]
+value: NONE
+version: lastupdate:2022-04-15
+status: COMPLETED
+</RECORD>
+<RECORD id="R21193C47BF" source="CLINICALTRIALS_GOV_V2">
+entity: A Research Study Looking at the Comparability (Bioequivalence) of Two Versions of Semaglutide [NCT04228354]
+field: Number of arm groups [arms.count]
+unit: arms
+value: 2.0
+version: lastupdate:2022-01-10
+status: COMPLETED
+</RECORD>
+<RECORD id="R4A111D374C" source="CLINICALTRIALS_GOV_V2">
+entity: The Efficacy of Tranexamic Acid in Preventing Postpartum Haemorrhage After Caesarean Section [NCT04733157]
+field: Arm group type: Study group/Group A [arm.type]
+value: EXPERIMENTAL
+version: lastupdate:2023-03-20
+arm: Study group/Group A
+status: COMPLETED
+</RECORD>
+<RECORD id="R9132BB2D26" source="CLINICALTRIALS_GOV_V2">
+entity: Does Nicotine Influence the Risk of Preeclampsia? [NCT06645340]
+field: Study first posted date [study.first_posted_date]
+period: 2024
+value: 2024-10-16
+version: lastupdate:2024-10-23
+status: COMPLETED
+</RECORD>
+<RECORD id="R8635893AE7" source="CLINICALTRIALS_GOV_V2">
+entity: Tranexamic Acid and Pediatric Adenotonsillectomy [NCT01228136]
+field: Intervention model [design.intervention_model]
+value: PARALLEL
+vers
+
+...[middle omitted in compact preview; exact prompt is reproducible from context/question/prompt hash]...
+
+ Wild Type)
+status: COMPLETED
+</RECORD>
+<RECORD id="RC7DEDB5FEC" source="CLINICALTRIALS_GOV_V2">
+entity: Comparative Evaluation Of 1.2% Atorvastatin and 1.2% Simvastatin Gel Local Drug Delivery And Redelivery In Chronic Periodontitis Subjects With Diabetes Mellitus: A Randomized Controlled Clinical Trial. [NCT03745300]
+field: Arm group type: GROUP 2 [arm.type]
+value: ACTIVE_COMPARATOR
+version: lastupdate:2018-11-19
+arm: GROUP 2
+status: COMPLETED
+</RECORD>
+<RECORD id="R3D161E59B6" source="CLINICALTRIALS_GOV_V2">
+entity: Weighted Versus Uniform Dose of Tranexamic Acid in Patients Undergoing Primary, Knee Arthroplasty [NCT01651806]
+field: Accepts healthy volunteers [eligibility.healthy_volunteers]
+value: Yes
+version: lastupdate:2017-12-13
+status: COMPLETED
+</RECORD>
+<RECORD id="RBC86D991FF" source="CLINICALTRIALS_GOV_V2">
+entity: Carotid Revascularization and Medical Management for Asymptomatic Carotid Stenosis Trial - Hemodynamics (CREST-H) [NCT03121209]
+field: Primary outcome timeframe: Cognitive score at 1 year [outcome.primary.timeframe]
+value: 1 year
+version: lastupdate:2026-06-26
+outcome: Cognitive score at 1 year
+status: COMPLETED
+</RECORD>
+<RECORD id="R467EBA4C0C" source="CLINICALTRIALS_GOV_V2">
+entity: Prevalence of Vitamin D Deficiency in Type 1 Diabetes Mellitus and Effect of Supplementation on Insulin Requirements [NCT01029392]
+field: Arm group type: Normal Vitamin D [arm.type]
+value: NO_INTERVENTION
+version: lastupdate:2017-04-17
+arm: Normal Vitamin D
+status: COMPLETED
+</RECORD>
+<RECORD id="R699A7E116A" source="CLINICALTRIALS_GOV_V2">
+entity: Secondary Prevention of Cardiovascular Disease in the Elderly Trial [NCT02596126]
+field: Intervention: Cardiovascular Polypill [intervention.type]
+value: DRUG
+version: lastupdate:2025-05-23
+intervention: Cardiovascular Polypill
+status: COMPLETED
+</RECORD>
+
+TARGET QUESTION:
+
+Using only the ClinicalTrials.gov records supplied in the context, what is the date on which results were first posted for trial NCT02339493 ("Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter")?
+
+OUTPUT FORMAT:
+
+Return exactly one JSON object with this schema:
+{"selected_evidence":["R..."],"answer":"...","insufficient_evidence":false}
+
+For insufficient evidence, use:
+{"selected_evidence":[],"answer":"INSUFFICIENT_EVIDENCE","insufficient_evidence":true}
+
+Use only model-facing record IDs from the supplied records. Do not include reasoning.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+

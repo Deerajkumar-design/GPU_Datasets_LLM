@@ -1,0 +1,4 @@
+
+Warning: failed to launch javaldx - java may not function correctly
+
+(process:26): dconf-CRITICAL **: 03:56:01.739: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.

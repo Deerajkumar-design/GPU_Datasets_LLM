@@ -1,0 +1,6 @@
+question_type,total_responses,valid_json,valid_json_pct,recoverable_malformed_json,recoverable_malformed_json_pct,usable_responses,usable_responses_pct,format_failures,format_failure_pct,hit_512_token_limit,hit_512_token_limit_pct,repetitive_degenerate_outputs,repetitive_degenerate_outputs_pct,mean_generated_tokens,median_generated_tokens
+DIRECT_RETRIEVAL,100,24,24.0,0,0.0,24,24.0,76,76.0,76,76.0,72,72.0,401.69,512.0
+RETRIEVAL_CALCULATION,150,75,50.0,0,0.0,75,50.0,75,50.0,72,48.0,71,47.333333333333336,268,86.0
+TEMPORAL_VERSION,55,37,67.27272727272727,0,0.0,37,67.27272727272727,18,32.72727272727273,18,32.72727272727273,18,32.72727272727273,192.29090909090908,34
+ENTITY_UNIT_BINDING,95,32,33.68421052631579,0,0.0,32,33.68421052631579,63,66.3157894736842,63,66.3157894736842,63,66.3157894736842,355.7157894736842,512
+UNANSWERABLE,100,44,44.0,0,0.0,44,44.0,56,56.0,55,55.0,52,52.0,298.48,512.0

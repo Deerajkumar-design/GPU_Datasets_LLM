@@ -1,5 +1,5 @@
 {
-  "config_hash": "87a7631a5f655544",
+  "config_hash": "990213b0175565dc",
   "config_path": "config/pilot.yaml",
   "content_sha256": {
     "instances": "c88978d5b99531779b789bf2613be3d82fb797b8246c92de61f22cde06cda590",
@@ -60,13 +60,13 @@
       "sha256": "b3195cbdd1f3ffcb26e67f11980de864c32f14c4a50560edbaa1857394f351a3"
     }
   ],
-  "generated_at": "2026-08-09T04:37:40Z",
-  "generator_version": "0.1.0",
-  "git_commit": "9cedbeba89825f227fc63eb1e0e3f3f2361f7906",
+  "generated_at": "2026-08-09T18:18:58Z",
+  "generator_version": "0.2.0",
+  "git_commit": "7c848cf04dc3d16ee413ef3819f09f44ca9ad046",
   "manifest_version": "1.0.0",
   "platform": "Linux-6.8.0-87-generic-x86_64-with-glibc2.35",
   "python_version": "3.12.4",
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "seed": 20240817,
   "source_retrievals": [
     {
@@ -201,13 +201,7 @@
       "source": "WORLD_BANK_INDICATORS_V2"
     }
   ],
-  "stage_timings_seconds": {
-    "build_contexts": 16.442304372787476,
-    "generate_questions": 3.4790735244750977,
-    "normalize": 5.308897495269775,
-    "report": 2.145559787750244,
-    "validate": 3.4175124168395996
-  },
+  "stage_timings_seconds": {},
   "tokenizer_id": "tiktoken:cl100k_base",
   "tokenizer_version": "tiktoken==0.13.0"
 }

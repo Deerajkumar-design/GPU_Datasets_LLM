@@ -1,0 +1,384 @@
+<RECORD id="R720ED33B7B" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Consumer Price Index for All Urban Consumers: All Items in U.S. City Average (Not Seasonally Adjusted) [CPIAUCNS]
+period: 2023-02-01
+unit: Index 1982-1984=100
+value: 300.84
+version: latest
+</RECORD>
+<RECORD id="RBAF1550200" source="FRED_STLOUISFED">
+entity: California [CA]
+field: Unemployment Rate (Seasonally Adjusted) [CAUR]
+period: 2012-04-01
+unit: Percent
+value: 10.7
+version: latest
+</RECORD>
+<RECORD id="R43C30CA776" source="FRED_STLOUISFED">
+entity: Texas [TX]
+field: Unemployment Rate (Seasonally Adjusted) [TXUR]
+period: 2008-07-01
+unit: Percent
+value: 4.8
+version: latest
+</RECORD>
+<RECORD id="RB45E41487E" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Unemployment Rate (Seasonally Adjusted) [UNRATE]
+period: 2013-07-01
+unit: Percent
+value: 7.3
+version: latest
+</RECORD>
+<RECORD id="R52730A12EF" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Consumer Price Index for All Urban Consumers: All Items in U.S. City Average (Seasonally Adjusted) [CPIAUCSL]
+period: 2007-06-01
+unit: Index 1982-1984=100
+value: 207.234
+version: latest
+</RECORD>
+<RECORD id="RC6EB4A358E" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Consumer Price Index for All Urban Consumers: All Items in U.S. City Average (Not Seasonally Adjusted) [CPIAUCNS]
+period: 2021-08-01
+unit: Index 1982-1984=100
+value: 273.567
+version: latest
+</RECORD>
+<RECORD id="RCD18887711" source="FRED_STLOUISFED">
+entity: California [CA]
+field: Unemployment Rate (Seasonally Adjusted) [CAUR]
+period: 2003-05-01
+unit: Percent
+value: 7.0
+version: latest
+</RECORD>
+<RECORD id="RC3DF48EBCC" source="FRED_STLOUISFED">
+entity: Illinois [IL]
+field: Unemployment Rate (Seasonally Adjusted) [ILUR]
+period: 2006-04-01
+unit: Percent
+value: 4.7
+version: latest
+</RECORD>
+<RECORD id="R5E9DF626B3" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (Not Seasonally Adjusted) [DGS10]
+period: 2004-01-29
+unit: Percent
+value: 4.22
+version: latest
+</RECORD>
+<RECORD id="R6FF1FC5EC8" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Consumer Price Index for All Urban Consumers: All Items in U.S. City Average (Seasonally Adjusted) [CPIAUCSL]
+period: 1999-08-01
+unit: Index 1982-1984=100
+value: 167.1
+version: latest
+</RECORD>
+<RECORD id="RAAC6DD34F6" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Consumer Price Index for All Urban Consumers: All Items in U.S. City Average (Seasonally Adjusted) [CPIAUCSL]
+period: 1993-09-01
+unit: Index 1982-1984=100
+value: 145.0
+version: latest
+</RECORD>
+<RECORD id="R0F1176CA4A" source="FRED_STLOUISFED">
+entity: Pennsylvania [PA]
+field: Unemployment Rate (Seasonally Adjusted) [PAUR]
+period: 2022-06-01
+unit: Percent
+value: 4.2
+version: latest
+</RECORD>
+<RECORD id="R128861C33E" source="FRED_STLOUISFED">
+entity: Florida [FL]
+field: Unemployment Rate (Seasonally Adjusted) [FLUR]
+period: 1998-06-01
+unit: Percent
+value: 4.4
+version: latest
+</RECORD>
+<RECORD id="RC1E97A9998" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (Not Seasonally Adjusted) [DGS10]
+period: 2013-01-30
+unit: Percent
+value: 2.03
+version: latest
+</RECORD>
+<RECORD id="R6006BECDA3" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Consumer Price Index for All Urban Consumers: All Items in U.S. City Average (Seasonally Adjusted) [CPIAUCSL]
+period: 1991-08-01
+unit: Index 1982-1984=100
+value: 136.6
+version: latest
+</RECORD>
+<RECORD id="R9CF76DBD90" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Consumer Price Index for All Urban Consumers: All Items in U.S. City Average (Seasonally Adjusted) [CPIAUCSL]
+period: 1990-04-01
+unit: Index 1982-1984=100
+value: 128.9
+version: latest
+</RECORD>
+<RECORD id="RF4F034BFB6" source="FRED_STLOUISFED">
+entity: Illinois [IL]
+field: Unemployment Rate (Seasonally Adjusted) [ILUR]
+period: 2002-12-01
+unit: Percent
+value: 6.6
+version: latest
+</RECORD>
+<RECORD id="RE8BF48900D" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (Not Seasonally Adjusted) [WGS10YR]
+period: 1990-04-13
+unit: Percent
+value: 8.62
+version: latest
+</RECORD>
+<RECORD id="RB2D5C5023B" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (Not Seasonally Adjusted) [DGS10]
+period: 2006-02-24
+unit: Percent
+value: 4.58
+version: latest
+</RECORD>
+<RECORD id="RDDA9994B79" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Consumer Price Index for All Urban Consumers: All Items in U.S. City Average (Seasonally Adjusted) [CPIAUCSL]
+period: 2005-01-01
+unit: Index 1982-1984=100
+value: 191.6
+version: latest
+</RECORD>
+<RECORD id="R2043BCCF8B" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (Not Seasonally Adjusted) [DGS10]
+period: 1997-06-24
+unit: Percent
+value: 6.42
+version: latest
+</RECORD>
+<RECORD id="RE567172C83" source="FRED_STLOUISFED">
+entity: New York [NY]
+field: Unemployment Rate (Seasonally Adjusted) [NYUR]
+period: 2002-07-01
+unit: Percent
+value: 6.1
+version: latest
+</RECORD>
+<RECORD id="R5AEF142360" source="FRED_STLOUISFED">
+entity: Pennsylvania [PA]
+field: Unemployment Rate (Seasonally Adjusted) [PAUR]
+period: 2020-08-01
+unit: Percent
+value: 9.3
+version: latest
+</RECORD>
+<RECORD id="RD55550113A" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (Not Seasonally Adjusted) [DGS10]
+period: 2017-09-05
+unit: Percent
+value: 2.07
+version: latest
+</RECORD>
+<RECORD id="R40090A156C" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (Not Seasonally Adjusted) [DGS10]
+period: 2011-09-09
+unit: Percent
+value: 1.93
+version: latest
+</RECORD>
+<RECORD id="R8DAC07AD7A" source="FRED_STLOUISFED">
+entity: California [CA]
+field: Unemployment Rate (Seasonally Adjusted) [CAUR]
+period: 2012-11-01
+unit: Percent
+value: 9.8
+version: latest
+</RECORD>
+<RECORD id="R6A9CA52474" source="FRED_STLOUISFED">
+entity: Illinois [IL]
+field: Unemployment Rate (Seasonally Adjusted) [ILUR]
+period: 2022-09-01
+unit: Percent
+value: 4.5
+version: latest
+</RECORD>
+<RECORD id="RD148E95CE1" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Consumer Price Index for All Urban Consumers: All Items in U.S. City Average (Seasonally Adjusted) [CPIAUCSL]
+period: 1990-03-01
+unit: Index 1982-1984=100
+value: 128.6
+version: latest
+</RECORD>
+<RECORD id="RD81B513A85" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Consumer Price Index for All Urban Consumers: All Items in U.S. City Average (Seasonally Adjusted) [CPIAUCSL]
+period: 1990-02-01
+unit: Index 1982-1984=100
+value: 128.0
+version: latest
+</RECORD>
+<RECORD id="RFCEC4CE243" source="FRED_STLOUISFED">
+entity: United States [US]
+field: New Privately-Owned Housing Units Started: Total Units (Seasonally Adjusted Annual Rate) [HOUST]
+period: 2018-02-01
+unit: Thousands of Units
+value: 1277.0
+version: latest
+</RECORD>
+<RECORD id="RE5B57A8B43" source="FRED_STLOUISFED">
+entity: Texas [TX]
+field: Unemployment Rate (Seasonally Adjusted) [TXUR]
+period: 2009-12-01
+unit: Percent
+value: 8.4
+version: latest
+</RECORD>
+<RECORD id="RE2872A711C" source="FRED_STLOUISFED">
+entity: California [CA]
+field: Unemployment Rate (Seasonally Adjusted) [CAUR]
+period: 2001-03-01
+unit: Percent
+value: 4.9
+version: latest
+</RECORD>
+<RECORD id="R1CE24140C8" source="FRED_STLOUISFED">
+entity: Illinois [IL]
+field: Unemployment Rate (Seasonally Adjusted) [ILUR]
+period: 2024-09-01
+unit: Percent
+value: 5.0
+version: latest
+</RECORD>
+<RECORD id="RA27FD9C800" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Consumer Price Index for All Urban Consumers: All Items in U.S. City Average (Not Seasonally Adjusted) [CPIAUCNS]
+period: 1997-04-01
+unit: Index 1982-1984=100
+value: 160.2
+version: latest
+</RECORD>
+<RECORD id="R011108C2CA" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Gross Domestic Product (Seasonally Adjusted Annual Rate) [GDP]
+period: 2020-01-01
+unit: Billions of Dollars
+value: 21481.367
+version: vintage:2022-06-29
+</RECORD>
+<RECORD id="RBBBAD76014" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Gross Domestic Product (Seasonally Adjusted Annual Rate) [GDP]
+period: 1993-10-01
+unit: Billions of Dollars
+value: 7013.738
+version: latest
+</RECORD>
+<RECORD id="R99F16AF1B3" source="FRED_STLOUISFED">
+entity: California [CA]
+field: Unemployment Rate (Seasonally Adjusted) [CAUR]
+period: 2013-03-01
+unit: Percent
+value: 9.4
+version: latest
+</RECORD>
+<RECORD id="RB181502BC4" source="FRED_STLOUISFED">
+entity: Florida [FL]
+field: Unemployment Rate (Seasonally Adjusted) [FLUR]
+period: 1990-04-01
+unit: Percent
+value: 5.9
+version: latest
+</RECORD>
+<RECORD id="R9DC34B0E65" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Consumer Price Index for All Urban Consumers: All Items in U.S. City Average (Seasonally Adjusted) [CPIAUCSL]
+period: 1990-01-01
+unit: Index 1982-1984=100
+value: 127.5
+version: latest
+</RECORD>
+<RECORD id="RD5DFC5DE4C" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (Not Seasonally Adjusted) [WGS10YR]
+period: 2020-07-10
+unit: Percent
+value: 0.66
+version: latest
+</RECORD>
+<RECORD id="RAF7CBD08D2" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (Not Seasonally Adjusted) [DGS10]
+period: 1991-02-12
+unit: Percent
+value: 7.78
+version: latest
+</RECORD>
+<RECORD id="R925C4F5945" source="FRED_STLOUISFED">
+entity: Florida [FL]
+field: Unemployment Rate (Seasonally Adjusted) [FLUR]
+period: 2015-08-01
+unit: Percent
+value: 5.4
+version: latest
+</RECORD>
+<RECORD id="R5D3754074F" source="FRED_STLOUISFED">
+entity: California [CA]
+field: Unemployment Rate (Seasonally Adjusted) [CAUR]
+period: 2002-02-01
+unit: Percent
+value: 6.7
+version: latest
+</RECORD>
+<RECORD id="R9F514630DF" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Consumer Price Index for All Urban Consumers: All Items in U.S. City Average (Not Seasonally Adjusted) [CPIAUCNS]
+period: 2004-05-01
+unit: Index 1982-1984=100
+value: 189.1
+version: latest
+</RECORD>
+<RECORD id="RBDFDC4290F" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Industrial Production: Total Index (Seasonally Adjusted) [INDPRO]
+period: 2013-07-01
+unit: Index 2017=100
+value: 99.0814
+version: latest
+</RECORD>
+<RECORD id="RA546ECAF6C" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (Not Seasonally Adjusted) [DGS10]
+period: 2003-08-05
+unit: Percent
+value: 4.47
+version: latest
+</RECORD>
+<RECORD id="RC27CB5CE0E" source="FRED_STLOUISFED">
+entity: Florida [FL]
+field: Unemployment Rate (Seasonally Adjusted) [FLUR]
+period: 2005-06-01
+unit: Percent
+value: 3.7
+version: latest
+</RECORD>
+<RECORD id="R8773B277D0" source="FRED_STLOUISFED">
+entity: California [CA]
+field: Unemployment Rate (Seasonally Adjusted) [CAUR]
+period: 2009-01-01
+unit: Percent
+value: 9.9
+version: latest
+</RECORD>

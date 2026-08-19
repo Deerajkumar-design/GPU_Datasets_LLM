@@ -1,0 +1,40 @@
+{
+  "cache_implementation": "offloaded",
+  "created_at": "2026-08-09T23:36:29Z",
+  "cuda_available": true,
+  "cuda_runtime_version": "12.1",
+  "dataset_config": "config/preproduction_llama32_3b_v2.yaml",
+  "dataset_output": "data/preproduction_llama32_3b_v2",
+  "generation_settings": {
+    "do_sample": false,
+    "max_new_tokens": 512,
+    "num_beams": 1,
+    "use_cache": true
+  },
+  "git_commit": "7c848cf04dc3d16ee413ef3819f09f44ca9ad046",
+  "git_dirty_status": " M config/preproduction.yaml\n M config/production.yaml\n M data/manifests/fred_pilot_manifest.json\n M data/manifests/pilot_manifest.json\n M data/reports/fred_pilot_validation.json\n M data/reports/pilot_validation.json\n M src/longctx_dataset/audit.py\n M src/longctx_dataset/cli.py\n M src/longctx_dataset/config.py\n M src/longctx_dataset/context/builder.py\n M src/longctx_dataset/context/tokenizer.py\n M src/longctx_dataset/distractors/selector.py\n M src/longctx_dataset/distractors/taxonomy.py\n M src/longctx_dataset/pipeline.py\n M src/longctx_dataset/questions/base.py\n M src/longctx_dataset/questions/clinical_templates.py\n M src/longctx_dataset/questions/fda_templates.py\n M src/longctx_dataset/questions/fred_templates.py\n M src/longctx_dataset/questions/sec_templates.py\n M src/longctx_dataset/questions/world_bank_templates.py\n M src/longctx_dataset/report.py\n M src/longctx_dataset/schemas.py\n M src/longctx_dataset/validation/contexts.py\n M src/longctx_dataset/validation/dataset.py\n M tests/test_contexts.py\n M tests/test_distractors.py\n M tests/test_fred.py\n M tests/test_pipeline_integration.py\n M tests/test_tokenizer.py\n?? config/audit_llama32_smoke.yaml\n?? config/ct_audit_v3.yaml\n?? config/fred_pilot_v2.yaml\n?? config/pilot_v2.yaml\n?? config/preproduction_llama32_3b_v2.yaml\n?? data/audit_llama32_smoke/\n?? data/audit_v2/\n?? data/audit_v3/\n?? data/ct_audit_v3/\n?? data/final_preinference_audit_llama32_3b/\n?? data/fred_pilot_v2/\n?? data/inference_llama32_3b_preproduction_v1/\n?? data/manifests/audit_llama32_smoke_manifest.json\n?? data/manifests/ct_audit_v3_manifest.json\n?? data/manifests/fred_pilot_v2_manifest.json\n?? data/manifests/pilot_v2_manifest.json\n?? data/manifests/preproduction_llama32_3b_manifest.json\n?? data/manifests/preproduction_llama32_3b_v2_manifest.json\n?? data/pilot_v2/\n?? data/preproduction_llama32_3b/\n?? data/preproduction_llama32_3b_v2/\n?? data/reports/answerability_leakage_fix.md\n?? data/reports/audit_fixes_report.json\n?? data/reports/audit_fixes_report.md\n?? data/reports/audit_llama32_smoke_report.json\n?? data/reports/audit_llama32_smoke_report.md\n?? data/reports/audit_llama32_smoke_validation.json\n?? data/reports/ct_audit_v3_report.json\n?? data/reports/ct_audit_v3_report.md\n?? data/reports/ct_audit_v3_validation.json\n?? data/reports/fred_pilot_v2_report.json\n?? data/reports/fred_pilot_v2_report.md\n?? data/reports/fred_pilot_v2_validation.json\n?? data/reports/llama_preinference_readiness.json\n?? data/reports/llama_preinference_readiness.md\n?? data/reports/pilot_v2_report.json\n?? data/reports/pilot_v2_report.md\n?? data/reports/pilot_v2_validation.json\n?? data/reports/preproduction_llama32_3b_report.json\n?? data/reports/preproduction_llama32_3b_report.md\n?? data/reports/preproduction_llama32_3b_v2_report.json\n?? data/reports/preproduction_llama32_3b_v2_report.md\n?? data/reports/preproduction_llama32_3b_v2_validation.json\n?? data/reports/preproduction_llama32_3b_validation.json\n?? data/spot_audit_llama32_3b/\n?? data/spot_audit_llama32_3b_balanced/\n?? prompts/\n?? scripts/\n?? spot_audit_llama32_3b_balanced.zip\n?? src/longctx_dataset/context/display_ids.py\n?? src/longctx_dataset/evidence.py\n?? src/longctx_dataset/inference.py\n?? src/longctx_dataset/prompt_renderer.py\n?? src/longctx_dataset/prompts.py\n?? src/longctx_dataset/validation/question_leakage.py\n?? tests/test_evidence_equivalence.py\n?? tests/test_inference_runner.py\n?? tests/test_llama_prompting.py\n?? tests/test_preinference_regressions.py\n?? tests/test_question_leakage_policy.py\n",
+  "gpu": {
+    "cuda_driver_version": "550.163.01",
+    "gpu_name": "NVIDIA GeForce RTX 4090",
+    "gpu_total_vram_mib": 24564
+  },
+  "local_cache_only": true,
+  "model_dtype": "bfloat16",
+  "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+  "model_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "platform": "Linux-6.8.0-87-generic-x86_64-with-glibc2.35",
+  "prompt_hash": "14cc206955296997",
+  "prompt_version": "llama_chat_v2",
+  "python_version": "3.12.13 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:38:16) [GCC 14.3.0]",
+  "ram": {
+    "available_ram_bytes": 61976809472,
+    "process_peak_rss_kib": 6335252,
+    "total_ram_bytes": 67095744512
+  },
+  "run_id": "llama32_3b_preproduction_v1",
+  "template_date": "09 Aug 2026",
+  "tokenizer_id": "hf:meta-llama/Llama-3.2-3B-Instruct",
+  "tokenizers_version": "0.22.2",
+  "torch_version": "2.5.1+cu121",
+  "transformers_version": "5.14.1"
+}

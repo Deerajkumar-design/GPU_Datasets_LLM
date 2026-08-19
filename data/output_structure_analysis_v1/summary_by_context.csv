@@ -1,0 +1,6 @@
+context_length_label,total_responses,valid_json,valid_json_pct,recoverable_malformed_json,recoverable_malformed_json_pct,usable_responses,usable_responses_pct,format_failures,format_failure_pct,hit_512_token_limit,hit_512_token_limit_pct,repetitive_degenerate_outputs,repetitive_degenerate_outputs_pct,mean_generated_tokens,median_generated_tokens
+4K,100,63,63.0,0,0.0,63,63.0,37,37.0,37,37.0,36,36.0,217.99,57.5
+8K,100,44,44.0,0,0.0,44,44.0,56,56.0,55,55.0,53,53.0,306.01,512.0
+16K,100,32,32.0,0,0.0,32,32.0,68,68.0,67,67.0,66,66.0,356.92,512.0
+32K,100,33,33.0,0,0.0,33,33.0,67,67.0,65,65.0,63,63.0,345.28,512.0
+64K,100,40,40.0,0,0.0,40,40.0,60,60.0,60,60.0,58,58.0,319.66,512.0

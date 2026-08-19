@@ -29,16 +29,20 @@ from typing import Dict, List, Optional, Sequence, Tuple
 
 from ..config import PipelineConfig
 from ..distractors.selector import DistractorCandidate, DistractorSelector
+from ..evidence import build_equivalence_groups
 from ..normalize.common import RecordPool
+from ..prompt_renderer import LLAMA_PROMPT_VERSION, RESPONSE_FORMAT_VERSION, PromptRenderer
 from ..schemas import (
     ContextStats,
     DistractorRef,
     DistractorType,
+    GoldEvidenceDisplayMapping,
     Instance,
     NormalizedRecord,
     QuestionFamily,
     UnavailableVariant,
 )
+from .display_ids import DisplayIdMapper
 from .tokenizer import Tokenizer
 
 
@@ -83,8 +87,26 @@ class ContextBuilder:
         self._sep_tokens = self.tok.count(self.sep) if self.sep else 0
         self._render_cache: Dict[str, str] = {}
         self._token_cache: Dict[str, int] = {}
+        self.display_ids = DisplayIdMapper(cfg, pool.records)
         # Enough candidates to fill the largest target even with very small records.
         self._candidate_limit = max(cfg.context.lengths) // 24 + 256
+        self.prompt_renderer = PromptRenderer(cfg, tokenizer) if cfg.model.id else None
+        self._model_context_limit = tokenizer.model_context_limit if cfg.model.id else None
+        self._input_token_budget: Optional[int] = None
+        if cfg.model.id:
+            if self._model_context_limit is None:
+                raise ValueError(f"{tokenizer.tokenizer_id} did not expose a model context limit")
+            self._input_token_budget = self._model_context_limit - cfg.model.max_new_tokens
+            if cfg.model_prompt.max_rendered_input_tokens is not None:
+                self._input_token_budget = min(
+                    self._input_token_budget,
+                    cfg.model_prompt.max_rendered_input_tokens,
+                )
+            if self._input_token_budget <= 0:
+                raise ValueError(
+                    f"generation reserve {cfg.model.max_new_tokens} leaves no input budget "
+                    f"inside context limit {self._model_context_limit}"
+                )
 
     # ---- rendering ------------------------------------------------------------------
 
@@ -99,9 +121,8 @@ class ContextBuilder:
         if cached is not None:
             return cached
 
-        open_tag = self.cfg.context.record_open_template.format(
-            record_id=rec.record_id, source=rec.source
-        )
+        display_id = self.display_ids.display_id(rec.record_id)
+        open_tag = self.cfg.context.record_open_template.format(record_id=display_id, source=rec.source)
         lines = [open_tag, f"entity: {rec.entity_name} [{rec.entity_id}]"]
         concept_line = f"field: {rec.concept_label} [{rec.concept}]"
         lines.append(concept_line)
@@ -202,6 +223,35 @@ class ContextBuilder:
                 text = self.sep.join(parts)
                 actual = self.tok.count(text)
 
+            rendered_tokens = self._rendered_input_tokens(text, family.question)
+            while (
+                self._input_token_budget is not None
+                and rendered_tokens is not None
+                and rendered_tokens > self._input_token_budget
+                and (state.before_rev or state.after)
+            ):
+                self._shrink_one(state, cand_tokens)
+                parts, ids, sides = self._assemble(state, candidates, gold_parts, gold_records)
+                text = self.sep.join(parts)
+                actual = self.tok.count(text)
+                rendered_tokens = self._rendered_input_tokens(text, family.question)
+
+            if (
+                self._input_token_budget is not None
+                and rendered_tokens is not None
+                and rendered_tokens > self._input_token_budget
+            ):
+                exhausted_at = nominal
+                unavailable.append(self._unavailable(
+                    family, nominal, "PROMPT_BUDGET_EXCEEDED",
+                    f"The gold/context prompt alone required {rendered_tokens} rendered input "
+                    f"tokens, exceeding the safe input budget of {self._input_token_budget} "
+                    f"after reserving {self.cfg.model.max_new_tokens} generation tokens. "
+                    "No records were truncated.",
+                    tokens_achieved=actual, records_available=len(candidates),
+                ))
+                continue
+
             fill = actual / nominal if nominal else 0.0
             if fill < self.cfg.context.min_fill_ratio:
                 exhausted_at = nominal
@@ -219,6 +269,7 @@ class ContextBuilder:
             instance = self._make_instance(
                 family, nominal, actual, text, parts, ids, sides, candidates,
                 gold_records, gold_block, gold_tokens, state, prev_instance_id, prev_ids,
+                rendered_tokens,
             )
 
             # At very short targets a single record can be a large fraction of the whole
@@ -244,6 +295,11 @@ class ContextBuilder:
             prev_ids = ids
 
         return instances, unavailable
+
+    def _rendered_input_tokens(self, context: str, question: str) -> Optional[int]:
+        if self.prompt_renderer is None:
+            return None
+        return self.prompt_renderer.render(context=context, question=question).token_count
 
     # ---- growth mechanics -----------------------------------------------------------
 
@@ -328,10 +384,14 @@ class ContextBuilder:
         candidates: List[DistractorCandidate], gold_records: List[NormalizedRecord],
         gold_block: str, gold_tokens: int, state: _GrowthState,
         prev_instance_id: Optional[str], prev_ids: List[str],
+        rendered_tokens: Optional[int],
     ) -> Instance:
         by_id = {c.record.record_id: c for c in candidates}
         distractors: List[DistractorRef] = []
         counts: Dict[str, int] = {t.value: 0 for t in DistractorType}
+        display_ids = [self.display_ids.display_id(rid) for rid in ids]
+        display_map = {did: rid for did, rid in zip(display_ids, ids)}
+        canonical_to_display = {rid: did for did, rid in zip(display_ids, ids)}
         for pos, (rid, side) in enumerate(zip(ids, sides)):
             if side == "gold":
                 continue
@@ -339,6 +399,7 @@ class ContextBuilder:
             counts[cand.distractor_type.value] += 1
             distractors.append(DistractorRef(
                 record_id=rid,
+                display_id=self.display_ids.display_id(rid),
                 distractor_type=cand.distractor_type,
                 relationship_to_target=cand.relationship,
                 position_index=pos,
@@ -356,8 +417,27 @@ class ContextBuilder:
             if rel is not None:
                 pos_ok = abs(rel - self.cfg.context.target_position) <= self.cfg.context.position_tolerance
 
+        context_label = length_label(nominal)
+        near_model_maximum = nominal == max(self.cfg.context.lengths)
+        prompt_overhead = (
+            rendered_tokens - actual
+            if rendered_tokens is not None
+            else None
+        )
+        remaining_margin = (
+            self._input_token_budget - rendered_tokens
+            if self._input_token_budget is not None and rendered_tokens is not None
+            else None
+        )
+        prompt_version = prompt_hash = response_version = None
+        if self.prompt_renderer is not None:
+            prompt_version = LLAMA_PROMPT_VERSION
+            prompt_hash = self.prompt_renderer.prompt_hash
+            response_version = RESPONSE_FORMAT_VERSION
+
         stats = ContextStats(
             context_length_nominal=nominal,
+            context_length_label=context_label,
             context_tokens_actual=actual,
             fill_ratio=actual / nominal if nominal else 0.0,
             tokenizer_id=self.tok.tokenizer_id,
@@ -370,7 +450,31 @@ class ContextBuilder:
             target_position_relative=rel,
             target_position_tolerance=self.cfg.context.position_tolerance,
             target_position_ok=pos_ok,
+            rendered_input_tokens_actual=rendered_tokens,
+            prompt_overhead_tokens=prompt_overhead,
+            generation_tokens_reserved=self.cfg.model.max_new_tokens if self.cfg.model.id else None,
+            model_context_limit=self._model_context_limit,
+            remaining_context_margin=remaining_margin,
+            near_model_maximum=near_model_maximum,
         )
+
+        context_records = [self.pool.get(rid) for rid in ids]
+        equivalence_groups = build_equivalence_groups(
+            family,
+            [r for r in context_records if r is not None],
+            canonical_to_display,
+        )
+        gold_display_ids = [self.display_ids.display_id(rid) for rid in family.gold_evidence_ids]
+        eq_by_gold = {g.gold_record_id: g for g in equivalence_groups}
+        gold_display_map = []
+        for rid in family.gold_evidence_ids:
+            group = eq_by_gold.get(rid)
+            gold_display_map.append(GoldEvidenceDisplayMapping(
+                canonical_record_id=rid,
+                display_id=canonical_to_display.get(rid),
+                equivalent_canonical_ids=list(group.canonical_record_ids) if group else [rid],
+                equivalent_display_ids=list(group.display_ids) if group else [canonical_to_display[rid]],
+            ))
 
         return Instance(
             instance_id=f"{family.question_family_id}_{length_label(nominal)}",
@@ -379,12 +483,28 @@ class ContextBuilder:
             question_type=family.question_type,
             question=family.question,
             context_length_nominal=nominal,
+            context_length_label=context_label,
             context_tokens_actual=actual,
             tokenizer=self.tok.tokenizer_id,
             tokenizer_version=self.tok.version,
+            tokenizer_revision=self.tok.tokenizer_revision,
+            tokenizer_class=self.tok.tokenizer_class,
+            model_id=self.cfg.model.id,
+            model_config_revision=self.tok.model_config_revision,
+            rendered_input_tokens_actual=rendered_tokens,
+            prompt_overhead_tokens=prompt_overhead,
+            generation_tokens_reserved=self.cfg.model.max_new_tokens if self.cfg.model.id else None,
+            model_context_limit=self._model_context_limit,
+            remaining_context_margin=remaining_margin,
+            near_model_maximum=near_model_maximum,
+            prompt_version=prompt_version,
+            prompt_hash=prompt_hash,
+            response_format_version=response_version,
             target_evidence_start_token=start,
             target_evidence_end_token=end,
             target_position_relative=rel,
+            target_position_relative_in_records_context=rel,
+            target_position_relative_in_rendered_input=None,
             answerable=family.answerable,
             gold_answer=family.gold_answer,
             gold_answer_normalized=family.gold_answer_normalized,
@@ -392,10 +512,16 @@ class ContextBuilder:
             answer_unit=family.answer_unit,
             numeric_tolerance=family.numeric_tolerance,
             gold_evidence_ids=list(family.gold_evidence_ids),
+            gold_evidence_display_ids=gold_display_ids,
+            gold_evidence_canonical_ids=list(family.gold_evidence_ids),
+            gold_evidence_equivalence_groups=equivalence_groups,
+            gold_evidence_display_map=gold_display_map,
             distractor_counts={k: v for k, v in counts.items() if v},
             distractors=distractors,
             context=text,
             context_record_ids=ids,
+            context_display_ids=display_ids,
+            display_id_to_record_id=display_map,
             context_sha256=hashlib.sha256(text.encode("utf-8")).hexdigest(),
             lineage={
                 "extends_instance_id": prev_instance_id,

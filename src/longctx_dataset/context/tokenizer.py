@@ -21,7 +21,7 @@ from __future__ import annotations
 
 import re
 from abc import ABC, abstractmethod
-from typing import List, Optional
+from typing import Any, Dict, List, Optional, Sequence
 
 from ..config import TokenizerConfig
 
@@ -36,6 +36,11 @@ class Tokenizer(ABC):
     tokenizer_id: str
     version: Optional[str] = None
     is_approximate: bool = False
+    tokenizer_class: Optional[str] = None
+    tokenizer_revision: Optional[str] = None
+    model_config_revision: Optional[str] = None
+    model_context_limit: Optional[int] = None
+    has_chat_template: bool = False
 
     @abstractmethod
     def encode(self, text: str) -> List[int]:
@@ -47,6 +52,30 @@ class Tokenizer(ABC):
 
     def count_all(self, texts: List[str]) -> List[int]:
         return [self.count(t) for t in texts]
+
+    def apply_chat_template(
+        self,
+        messages: Sequence[Dict[str, str]],
+        *,
+        add_generation_prompt: bool,
+        tokenize: bool,
+        **template_kwargs: Any,
+    ) -> Any:
+        raise TokenizerUnavailable(
+            f"tokenizer {self.tokenizer_id!r} does not expose a native chat template"
+        )
+
+    def provenance(self) -> Dict[str, Any]:
+        return {
+            "tokenizer_id": self.tokenizer_id,
+            "tokenizer_class": self.tokenizer_class,
+            "tokenizer_version": self.version,
+            "tokenizer_revision": self.tokenizer_revision,
+            "model_config_revision": self.model_config_revision,
+            "model_context_limit": self.model_context_limit,
+            "chat_template_used": self.has_chat_template,
+            "is_approximate": self.is_approximate,
+        }
 
 
 class TiktokenTokenizer(Tokenizer):
@@ -86,19 +115,29 @@ class HFTokenizer(Tokenizer):
 
     def __init__(self, model_id: str):
         try:
-            from transformers import AutoTokenizer  # noqa: PLC0415
+            from transformers import AutoConfig, AutoTokenizer  # noqa: PLC0415
         except ImportError as exc:
             raise TokenizerUnavailable(
                 f"transformers is not installed (pip install 'longctx-dataset[hf]'): {exc}"
             ) from exc
         try:
             self._tok = AutoTokenizer.from_pretrained(model_id)
+            self._cfg = AutoConfig.from_pretrained(model_id)
         except Exception as exc:  # noqa: BLE001
             raise TokenizerUnavailable(f"could not load HF tokenizer {model_id!r}: {exc}") from exc
         self.tokenizer_id = f"hf:{model_id}"
+        self.tokenizer_class = self._tok.__class__.__name__
+        self.tokenizer_revision = getattr(self._tok, "init_kwargs", {}).get("_commit_hash")
+        self.model_config_revision = getattr(self._cfg, "_commit_hash", None)
+        self.model_context_limit = _derive_context_limit(self._tok, self._cfg, model_id)
+        self.has_chat_template = bool(getattr(self._tok, "chat_template", None))
         try:
             import transformers  # noqa: PLC0415
-            self.version = f"transformers=={transformers.__version__}"
+            import tokenizers  # noqa: PLC0415
+            self.version = (
+                f"transformers=={transformers.__version__}; "
+                f"tokenizers=={tokenizers.__version__}"
+            )
         except ImportError:
             self.version = None
 
@@ -107,6 +146,50 @@ class HFTokenizer(Tokenizer):
 
     def count(self, text: str) -> int:
         return len(self.encode(text))
+
+    def apply_chat_template(
+        self,
+        messages: Sequence[Dict[str, str]],
+        *,
+        add_generation_prompt: bool,
+        tokenize: bool,
+        **template_kwargs: Any,
+    ) -> Any:
+        if not self.has_chat_template:
+            raise TokenizerUnavailable(f"HF tokenizer {self.tokenizer_id!r} has no chat_template")
+        return self._tok.apply_chat_template(
+            list(messages),
+            add_generation_prompt=add_generation_prompt,
+            tokenize=tokenize,
+            **template_kwargs,
+        )
+
+
+def _usable_limit(value: Any) -> Optional[int]:
+    if not isinstance(value, int) or value <= 0:
+        return None
+    # Hugging Face sometimes uses huge sentinels when the true limit is unknown.
+    if value > 10_000_000:
+        return None
+    return value
+
+
+def _derive_context_limit(tok: Any, cfg: Any, model_id: str) -> Optional[int]:
+    candidates: Dict[str, int] = {}
+    cfg_limit = _usable_limit(getattr(cfg, "max_position_embeddings", None))
+    tok_limit = _usable_limit(getattr(tok, "model_max_length", None))
+    if cfg_limit is not None:
+        candidates["config.max_position_embeddings"] = cfg_limit
+    if tok_limit is not None:
+        candidates["tokenizer.model_max_length"] = tok_limit
+    if not candidates:
+        return None
+    vals = set(candidates.values())
+    if len(vals) != 1:
+        raise TokenizerUnavailable(
+            f"context-limit fields disagree for {model_id!r}: {candidates}"
+        )
+    return vals.pop()
 
 
 _WS_SPLIT = re.compile(r"\s+|(?<=[^\w\s])|(?=[^\w\s])")

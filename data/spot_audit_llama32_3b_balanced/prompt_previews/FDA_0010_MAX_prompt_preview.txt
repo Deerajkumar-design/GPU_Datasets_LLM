@@ -1,0 +1,151 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Cutting Knowledge Date: December 2023
+Today Date: 09 Aug 2026
+
+Answer using only the supplied records.
+
+Identify records matching the exact entity, period, version, field, unit, product, route, dosage form, arm, series, or other conditions requested by the question.
+
+If the supplied records do not contain sufficient evidence to answer the question, return INSUFFICIENT_EVIDENCE.
+
+Do not infer or fabricate missing information.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+KNOWLEDGE RECORDS:
+
+<RECORD id="R03A7E7554A" source="OPENFDA_DRUGSFDA">
+entity: AMLODIPINE BESYLATE AND BENAZEPRIL HYDROCHLORIDE (ANDA077890, product 004) [ANDA077890/004]
+field: Strength of BENAZEPRIL HYDROCHLORIDE [product.active_ingredient_strength]
+unit: MG
+value: 20MG
+dosage_form: CAPSULE
+route: ORAL
+sponsor: WATSON LABS
+</RECORD>
+<RECORD id="RBC7B8A63FC" source="OPENFDA_DRUGSFDA">
+entity: PREDNISONE (ANDA080209, product 001) [ANDA080209/001]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: CONTRACT PHARMACAL
+</RECORD>
+<RECORD id="R1DF9DC06FD" source="OPENFDA_DRUGSFDA">
+entity: AMLODIPINE BESYLATE (ANDA078043, product 001) [ANDA078043/001]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: LUPIN
+</RECORD>
+<RECORD id="R517F098EC6" source="OPENFDA_DRUGSFDA">
+entity: AUROBINDO PHARMA LTD application ANDA202096 [ANDA202096]
+field: SUPPL submission 16 status date [submission.status_date]
+period: 2018
+value: 2018-07-23
+version: SUPPL-16
+sponsor: AUROBINDO PHARMA LTD
+submission_type: SUPPL
+</RECORD>
+<RECORD id="RA1D9A5919E" source="OPENFDA_DRUGSFDA">
+entity: LEVOTHYROXINE SODIUM (ANDA215259, product 011) [ANDA215259/011]
+field: Route of administration [product.route]
+value: ORAL
+dosage_form: TABLET
+route: ORAL
+sponsor: ASCENT PHARMS INC
+</RECORD>
+<RECORD id="R3B216B7A28" source="OPENFDA_DRUGSFDA">
+entity: CIPROFLOXACIN EXTENDED RELEASE (ANDA077809, product 002) [ANDA077809/002]
+field: Dosage form [product.dosage_form]
+value: TABLET, EXTENDED RELEASE
+dosage_form: TABLET, EXTENDED RELEASE
+route: ORAL
+sponsor: ANI PHARMS
+</RECORD>
+<RECORD id="R0EB72DE0A7" source="OPENFDA_DRUGSFDA">
+entity: DAPAGLIFLOZIN AND METFORMIN HYDROCHLORIDE (ANDA211489, product 004) [ANDA211489/004]
+field: Marketing status [product.marketing_status]
+value: Prescription
+dosage_form: TABLET, EXTENDED RELEASE
+route: ORAL
+sponsor: AUROBINDO PHARMA
+</RECORD>
+<RECORD id="R
+
+...[middle omitted in compact preview; exact prompt is reproducible from context/question/prompt hash]...
+
+/RECORD>
+<RECORD id="R03A1AD0070" source="OPENFDA_DRUGSFDA">
+entity: METFORMIN HYDROCHLORIDE (ANDA075969, product 002) [ANDA075969/002]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: PHARMOBEDIENT
+</RECORD>
+<RECORD id="R818B43C3F9" source="OPENFDA_DRUGSFDA">
+entity: SERTRALINE HYDROCHLORIDE (ANDA078175, product 001) [ANDA078175/001]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: OXFORD PHARMS
+</RECORD>
+<RECORD id="RBF76B84CCC" source="OPENFDA_DRUGSFDA">
+entity: OMEPRAZOLE (ANDA205070, product 002) [ANDA205070/002]
+field: Dosage form [product.dosage_form]
+value: CAPSULE, DELAYED REL PELLETS
+dosage_form: CAPSULE, DELAYED REL PELLETS
+route: ORAL
+sponsor: SENORES PHARMS
+</RECORD>
+<RECORD id="R5A81F8B859" source="OPENFDA_DRUGSFDA">
+entity: LISINOPRIL AND HYDROCHLOROTHIAZIDE (ANDA076194, product 002) [ANDA076194/002]
+field: Strength of HYDROCHLOROTHIAZIDE [product.active_ingredient_strength]
+unit: MG
+value: 25MG
+dosage_form: TABLET
+route: ORAL
+sponsor: WATSON LABS
+</RECORD>
+<RECORD id="R2BE1FCB810" source="OPENFDA_DRUGSFDA">
+entity: IBUPROHM (ANDA070469, product 001) [ANDA070469/001]
+field: Dosage form [product.dosage_form]
+value: TABLET
+dosage_form: TABLET
+route: ORAL
+sponsor: OHM LABS
+</RECORD>
+<RECORD id="R982A0FC4F1" source="OPENFDA_DRUGSFDA">
+entity: PREDNISONE (ANDA087682, product 001) [ANDA087682/001]
+field: Marketing status [product.marketing_status]
+value: Discontinued
+dosage_form: TABLET
+route: ORAL
+sponsor: VANGARD
+</RECORD>
+<RECORD id="R77A4F01B22" source="OPENFDA_DRUGSFDA">
+entity: PREDNISONE (ANDA215672, product 004) [ANDA215672/004]
+field: Strength of PREDNISONE [product.active_ingredient_strength]
+unit: MG
+value: 20MG
+dosage_form: TABLET
+route: ORAL
+sponsor: AUROBINDO PHARMA LTD
+</RECORD>
+
+TARGET QUESTION:
+
+Using only the Drugs@FDA records supplied in the context, how many distinct product entries are listed under FDA application ANDA205695 (sponsor: ANBISON LAB)? Count the products belonging to that application number only, and answer with an integer.
+
+OUTPUT FORMAT:
+
+Return exactly one JSON object with this schema:
+{"selected_evidence":["R..."],"answer":"...","insufficient_evidence":false}
+
+For insufficient evidence, use:
+{"selected_evidence":[],"answer":"INSUFFICIENT_EVIDENCE","insufficient_evidence":true}
+
+Use only model-facing record IDs from the supplied records. Do not include reasoning.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+

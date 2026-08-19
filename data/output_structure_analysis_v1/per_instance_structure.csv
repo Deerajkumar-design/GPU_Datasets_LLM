@@ -1,0 +1,501 @@
+instance_id,question_family_id,context_length_label,domain,question_type,answerable,generated_tokens_count,hit_max_new_tokens_512,strict_json_valid,recovery_success,usable_structured_output,format_failure,output_truncated,degenerate_output,malformed_output_pattern,recovery_method,parse_confidence,parse_failure_reason,raw_output_chars
+SEC_0021_32K,SEC_0021,32K,SEC,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,907
+FDA_0002_32K,FDA_0002,32K,FDA,DIRECT_RETRIEVAL,True,21,False,True,False,True,False,False,False,valid_json,,strict,,78
+SEC_0006_32K,SEC_0006,32K,SEC,ENTITY_UNIT_BINDING,True,32,False,True,False,True,False,False,False,valid_json,,strict,,93
+SEC_0019_64K,SEC_0019,64K,SEC,TEMPORAL_VERSION,True,30,False,True,False,True,False,False,False,valid_json,,strict,,91
+CT_0025_4K,CT_0025,4K,CLINICAL_TRIALS,UNANSWERABLE,False,79,False,True,False,True,False,False,False,valid_json,,strict,,163
+FRED_0004_4K,FRED_0004,4K,FRED,DIRECT_RETRIEVAL,True,46,False,True,False,True,False,False,False,valid_json,,strict,,124
+FRED_0008_16K,FRED_0008,16K,FRED,ENTITY_UNIT_BINDING,True,26,False,True,False,True,False,False,False,valid_json,,strict,,83
+FDA_0018_4K,FDA_0018,4K,FDA,TEMPORAL_VERSION,True,62,False,True,False,True,False,False,False,valid_json,,strict,,145
+SEC_0002_4K,SEC_0002,4K,SEC,DIRECT_RETRIEVAL,True,45,False,True,False,True,False,False,False,valid_json,,strict,,120
+CT_0004_64K,CT_0004,64K,CLINICAL_TRIALS,DIRECT_RETRIEVAL,True,25,False,True,False,True,False,False,False,valid_json,,strict,,83
+SEC_0016_32K,SEC_0016,32K,SEC,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,863
+FDA_0021_8K,FDA_0021,8K,FDA,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,933
+SEC_0021_16K,SEC_0021,16K,SEC,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,970
+FRED_0009_16K,FRED_0009,16K,FRED,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,888
+FRED_0014_64K,FRED_0014,64K,FRED,RETRIEVAL_CALCULATION,True,35,False,True,False,True,False,False,False,valid_json,,strict,,97
+CT_0006_4K,CT_0006,4K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,28,False,True,False,True,False,False,False,valid_json,,strict,,96
+SEC_0010_8K,SEC_0010,8K,SEC,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,914
+SEC_0006_16K,SEC_0006,16K,SEC,ENTITY_UNIT_BINDING,True,42,False,True,False,True,False,False,False,valid_json,,strict,,118
+SEC_0022_32K,SEC_0022,32K,SEC,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1024
+FRED_0011_16K,FRED_0011,16K,FRED,RETRIEVAL_CALCULATION,True,37,False,True,False,True,False,False,False,valid_json,,strict,,97
+FDA_0004_4K,FDA_0004,4K,FDA,DIRECT_RETRIEVAL,True,62,False,True,False,True,False,False,False,valid_json,,strict,,152
+FDA_0008_16K,FDA_0008,16K,FDA,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,767
+CT_0009_4K,CT_0009,4K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,27,False,True,False,True,False,False,False,valid_json,,strict,,96
+FDA_0023_8K,FDA_0023,8K,FDA,UNANSWERABLE,False,42,False,True,False,True,False,False,False,valid_json,,strict,,111
+FDA_0009_32K,FDA_0009,32K,FDA,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,818
+FRED_0015_16K,FRED_0015,16K,FRED,RETRIEVAL_CALCULATION,True,36,False,True,False,True,False,False,False,valid_json,,strict,,94
+FDA_0003_4K,FDA_0003,4K,FDA,DIRECT_RETRIEVAL,True,116,False,True,False,True,False,False,False,valid_json,,strict,,239
+FDA_0021_16K,FDA_0021,16K,FDA,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,900
+FRED_0023_16K,FRED_0023,16K,FRED,UNANSWERABLE,False,40,False,True,False,True,False,False,False,valid_json,,strict,,113
+SEC_0003_4K,SEC_0003,4K,SEC,DIRECT_RETRIEVAL,True,54,False,True,False,True,False,False,False,valid_json,,strict,,134
+SEC_0007_32K,SEC_0007,32K,SEC,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,812
+SEC_0006_8K,SEC_0006,8K,SEC,ENTITY_UNIT_BINDING,True,114,False,True,False,True,False,False,False,valid_json,,strict,,247
+SEC_0022_4K,SEC_0022,4K,SEC,UNANSWERABLE,False,28,False,True,False,True,False,False,False,valid_json,,strict,,92
+CT_0003_8K,CT_0003,8K,CLINICAL_TRIALS,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,907
+FRED_0011_64K,FRED_0011,64K,FRED,RETRIEVAL_CALCULATION,True,35,False,True,False,True,False,False,False,valid_json,,strict,,97
+FDA_0004_64K,FDA_0004,64K,FDA,DIRECT_RETRIEVAL,True,46,False,True,False,True,False,False,False,valid_json,,strict,,123
+CT_0025_8K,CT_0025,8K,CLINICAL_TRIALS,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,884
+SEC_0022_8K,SEC_0022,8K,SEC,UNANSWERABLE,False,29,False,True,False,True,False,False,False,valid_json,,strict,,99
+CT_0013_4K,CT_0013,4K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,41,False,True,False,True,False,False,False,valid_json,,strict,,107
+FDA_0024_64K,FDA_0024,64K,FDA,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,810
+FDA_0012_32K,FDA_0012,32K,FDA,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,883
+SEC_0001_16K,SEC_0001,16K,SEC,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,910
+CT_0019_8K,CT_0019,8K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,110,False,True,False,True,False,False,False,valid_json,,strict,,243
+FDA_0013_16K,FDA_0013,16K,FDA,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,821
+SEC_0004_32K,SEC_0004,32K,SEC,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,886
+CT_0019_4K,CT_0019,4K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1016
+FDA_0010_32K,FDA_0010,32K,FDA,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1003
+FRED_0015_8K,FRED_0015,8K,FRED,RETRIEVAL_CALCULATION,True,34,False,True,False,True,False,False,False,valid_json,,strict,,94
+SEC_0008_32K,SEC_0008,32K,SEC,ENTITY_UNIT_BINDING,True,33,False,True,False,True,False,False,False,valid_json,,strict,,93
+CT_0001_16K,CT_0001,16K,CLINICAL_TRIALS,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,741
+CT_0010_16K,CT_0010,16K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,747
+SEC_0020_64K,SEC_0020,64K,SEC,TEMPORAL_VERSION,True,28,False,True,False,True,False,False,False,valid_json,,strict,,86
+FRED_0013_8K,FRED_0013,8K,FRED,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1032
+FRED_0002_64K,FRED_0002,64K,FRED,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,815
+FRED_0008_8K,FRED_0008,8K,FRED,ENTITY_UNIT_BINDING,True,26,False,True,False,True,False,False,False,valid_json,,strict,,83
+FDA_0016_4K,FDA_0016,4K,FDA,RETRIEVAL_CALCULATION,True,50,False,True,False,True,False,False,False,valid_json,,strict,,125
+SEC_0009_16K,SEC_0009,16K,SEC,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,990
+SEC_0021_4K,SEC_0021,4K,SEC,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,964
+CT_0008_64K,CT_0008,64K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,813
+CT_0006_64K,CT_0006,64K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,31,False,True,False,True,False,False,False,valid_json,,strict,,97
+FDA_0020_64K,FDA_0020,64K,FDA,TEMPORAL_VERSION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,844
+FDA_0016_64K,FDA_0016,64K,FDA,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,909
+CT_0014_32K,CT_0014,32K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,948
+FRED_0025_16K,FRED_0025,16K,FRED,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,815
+CT_0017_32K,CT_0017,32K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1206
+FDA_0016_32K,FDA_0016,32K,FDA,RETRIEVAL_CALCULATION,True,36,False,True,False,True,False,False,False,valid_json,,strict,,99
+FRED_0013_32K,FRED_0013,32K,FRED,RETRIEVAL_CALCULATION,True,36,False,False,False,False,True,False,False,unknown_malformed_json,,none,no unambiguous complete response object with all required fields,97
+FRED_0006_16K,FRED_0006,16K,FRED,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,913
+FRED_0024_64K,FRED_0024,64K,FRED,UNANSWERABLE,False,29,False,True,False,True,False,False,False,valid_json,,strict,,99
+FRED_0012_16K,FRED_0012,16K,FRED,RETRIEVAL_CALCULATION,True,36,False,True,False,True,False,False,False,valid_json,,strict,,97
+SEC_0002_64K,SEC_0002,64K,SEC,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,815
+FRED_0003_4K,FRED_0003,4K,FRED,DIRECT_RETRIEVAL,True,39,False,True,False,True,False,False,False,valid_json,,strict,,112
+FDA_0019_32K,FDA_0019,32K,FDA,TEMPORAL_VERSION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,989
+SEC_0020_4K,SEC_0020,4K,SEC,TEMPORAL_VERSION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,814
+FDA_0025_64K,FDA_0025,64K,FDA,UNANSWERABLE,False,44,False,True,False,True,False,False,False,valid_json,,strict,,125
+FDA_0015_16K,FDA_0015,16K,FDA,RETRIEVAL_CALCULATION,True,36,False,True,False,True,False,False,False,valid_json,,strict,,97
+FDA_0007_4K,FDA_0007,4K,FDA,ENTITY_UNIT_BINDING,True,166,False,True,False,True,False,False,False,valid_json,,strict,,336
+CT_0007_32K,CT_0007,32K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,780
+FRED_0009_4K,FRED_0009,4K,FRED,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,821
+SEC_0020_16K,SEC_0020,16K,SEC,TEMPORAL_VERSION,True,29,False,True,False,True,False,False,False,valid_json,,strict,,91
+SEC_0003_8K,SEC_0003,8K,SEC,DIRECT_RETRIEVAL,True,53,False,True,False,True,False,False,False,valid_json,,strict,,135
+SEC_0006_4K,SEC_0006,4K,SEC,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,913
+FDA_0020_4K,FDA_0020,4K,FDA,TEMPORAL_VERSION,True,29,False,True,False,True,False,False,False,valid_json,,strict,,89
+CT_0001_4K,CT_0001,4K,CLINICAL_TRIALS,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,821
+FRED_0010_64K,FRED_0010,64K,FRED,RETRIEVAL_CALCULATION,True,41,False,True,False,True,False,False,False,valid_json,,strict,,97
+CT_0013_64K,CT_0013,64K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,22,False,True,False,True,False,False,False,valid_json,,strict,,78
+CT_0001_32K,CT_0001,32K,CLINICAL_TRIALS,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,811
+FRED_0017_64K,FRED_0017,64K,FRED,TEMPORAL_VERSION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,910
+FRED_0009_64K,FRED_0009,64K,FRED,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,813
+FRED_0002_32K,FRED_0002,32K,FRED,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1009
+SEC_0016_64K,SEC_0016,64K,SEC,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,842
+FDA_0005_4K,FDA_0005,4K,FDA,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,892
+SEC_0012_16K,SEC_0012,16K,SEC,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,810
+SEC_0023_8K,SEC_0023,8K,SEC,UNANSWERABLE,False,512,True,False,False,False,True,True,False,partially_truncated_json,,none,no unambiguous complete response object with all required fields,852
+CT_0019_16K,CT_0019,16K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,908
+CT_0011_8K,CT_0011,8K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,821
+FDA_0017_16K,FDA_0017,16K,FDA,RETRIEVAL_CALCULATION,True,34,False,True,False,True,False,False,False,valid_json,,strict,,101
+SEC_0008_4K,SEC_0008,4K,SEC,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,863
+FDA_0011_16K,FDA_0011,16K,FDA,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,860
+CT_0012_8K,CT_0012,8K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,46,False,True,False,True,False,False,False,valid_json,,strict,,124
+CT_0018_4K,CT_0018,4K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1177
+SEC_0018_32K,SEC_0018,32K,SEC,TEMPORAL_VERSION,True,30,False,True,False,True,False,False,False,valid_json,,strict,,92
+SEC_0011_32K,SEC_0011,32K,SEC,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,858
+FRED_0022_8K,FRED_0022,8K,FRED,UNANSWERABLE,False,26,False,True,False,True,False,False,False,valid_json,,strict,,82
+CT_0007_16K,CT_0007,16K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,757
+FDA_0019_4K,FDA_0019,4K,FDA,TEMPORAL_VERSION,True,30,False,True,False,True,False,False,False,valid_json,,strict,,89
+CT_0015_32K,CT_0015,32K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,823
+FDA_0004_32K,FDA_0004,32K,FDA,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,813
+FRED_0014_16K,FRED_0014,16K,FRED,RETRIEVAL_CALCULATION,True,38,False,True,False,True,False,False,False,valid_json,,strict,,95
+SEC_0015_16K,SEC_0015,16K,SEC,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,966
+FDA_0006_8K,FDA_0006,8K,FDA,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,969
+CT_0009_8K,CT_0009,8K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,27,False,True,False,True,False,False,False,valid_json,,strict,,96
+CT_0014_4K,CT_0014,4K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,910
+FDA_0022_16K,FDA_0022,16K,FDA,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1009
+FDA_0024_8K,FDA_0024,8K,FDA,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,912
+SEC_0014_4K,SEC_0014,4K,SEC,RETRIEVAL_CALCULATION,True,62,False,True,False,True,False,False,False,valid_json,,strict,,158
+FRED_0010_4K,FRED_0010,4K,FRED,RETRIEVAL_CALCULATION,True,47,False,True,False,True,False,False,False,valid_json,,strict,,114
+FRED_0019_8K,FRED_0019,8K,FRED,TEMPORAL_VERSION,True,81,False,True,False,True,False,False,False,valid_json,,strict,,180
+FRED_0023_32K,FRED_0023,32K,FRED,UNANSWERABLE,False,27,False,True,False,True,False,False,False,valid_json,,strict,,86
+CT_0016_16K,CT_0016,16K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,31,False,True,False,True,False,False,False,valid_json,,strict,,93
+CT_0014_16K,CT_0014,16K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,824
+FDA_0017_4K,FDA_0017,4K,FDA,RETRIEVAL_CALCULATION,True,36,False,True,False,True,False,False,False,valid_json,,strict,,96
+CT_0002_4K,CT_0002,4K,CLINICAL_TRIALS,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,814
+FDA_0005_8K,FDA_0005,8K,FDA,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,943
+SEC_0001_4K,SEC_0001,4K,SEC,DIRECT_RETRIEVAL,True,68,False,True,False,True,False,False,False,valid_json,,strict,,169
+CT_0004_32K,CT_0004,32K,CLINICAL_TRIALS,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1100
+CT_0009_32K,CT_0009,32K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,27,False,True,False,True,False,False,False,valid_json,,strict,,96
+SEC_0016_8K,SEC_0016,8K,SEC,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,911
+FRED_0009_8K,FRED_0009,8K,FRED,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,897
+SEC_0008_16K,SEC_0008,16K,SEC,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,906
+CT_0024_16K,CT_0024,16K,CLINICAL_TRIALS,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,813
+FRED_0025_32K,FRED_0025,32K,FRED,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,954
+FDA_0018_8K,FDA_0018,8K,FDA,TEMPORAL_VERSION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,878
+FDA_0005_64K,FDA_0005,64K,FDA,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,858
+CT_0017_8K,CT_0017,8K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,81,False,True,False,True,False,False,False,valid_json,,strict,,187
+SEC_0004_4K,SEC_0004,4K,SEC,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,839
+FDA_0002_16K,FDA_0002,16K,FDA,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,False,partially_truncated_json,,none,no unambiguous complete response object with all required fields,836
+SEC_0020_8K,SEC_0020,8K,SEC,TEMPORAL_VERSION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1035
+CT_0016_32K,CT_0016,32K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,28,False,True,False,True,False,False,False,valid_json,,strict,,90
+SEC_0017_64K,SEC_0017,64K,SEC,TEMPORAL_VERSION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,866
+SEC_0001_64K,SEC_0001,64K,SEC,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,855
+SEC_0005_4K,SEC_0005,4K,SEC,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1022
+SEC_0008_64K,SEC_0008,64K,SEC,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,810
+FDA_0024_16K,FDA_0024,16K,FDA,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1026
+FRED_0025_64K,FRED_0025,64K,FRED,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,858
+FDA_0019_64K,FDA_0019,64K,FDA,TEMPORAL_VERSION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,811
+CT_0020_64K,CT_0020,64K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,742
+SEC_0004_16K,SEC_0004,16K,SEC,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,906
+SEC_0013_8K,SEC_0013,8K,SEC,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1025
+FRED_0018_16K,FRED_0018,16K,FRED,TEMPORAL_VERSION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,910
+FDA_0011_4K,FDA_0011,4K,FDA,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,998
+FRED_0023_64K,FRED_0023,64K,FRED,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,818
+CT_0005_32K,CT_0005,32K,CLINICAL_TRIALS,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1239
+SEC_0019_8K,SEC_0019,8K,SEC,TEMPORAL_VERSION,True,30,False,True,False,True,False,False,False,valid_json,,strict,,92
+FRED_0006_64K,FRED_0006,64K,FRED,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,870
+SEC_0018_8K,SEC_0018,8K,SEC,TEMPORAL_VERSION,True,30,False,True,False,True,False,False,False,valid_json,,strict,,92
+SEC_0007_16K,SEC_0007,16K,SEC,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,915
+FRED_0022_32K,FRED_0022,32K,FRED,UNANSWERABLE,False,26,False,True,False,True,False,False,False,valid_json,,strict,,82
+SEC_0003_16K,SEC_0003,16K,SEC,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,823
+CT_0015_4K,CT_0015,4K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,31,False,True,False,True,False,False,False,valid_json,,strict,,93
+FRED_0017_8K,FRED_0017,8K,FRED,TEMPORAL_VERSION,True,34,False,True,False,True,False,False,False,valid_json,,strict,,101
+CT_0014_64K,CT_0014,64K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,24,False,True,False,True,False,False,False,valid_json,,strict,,80
+FRED_0006_4K,FRED_0006,4K,FRED,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,887
+SEC_0006_64K,SEC_0006,64K,SEC,ENTITY_UNIT_BINDING,True,31,False,True,False,True,False,False,False,valid_json,,strict,,93
+CT_0009_64K,CT_0009,64K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,27,False,True,False,True,False,False,False,valid_json,,strict,,97
+SEC_0002_16K,SEC_0002,16K,SEC,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1036
+SEC_0025_16K,SEC_0025,16K,SEC,UNANSWERABLE,False,57,False,True,False,True,False,False,False,valid_json,,strict,,141
+CT_0010_4K,CT_0010,4K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,33,False,True,False,True,False,False,False,valid_json,,strict,,94
+FRED_0020_32K,FRED_0020,32K,FRED,TEMPORAL_VERSION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,749
+FDA_0019_16K,FDA_0019,16K,FDA,TEMPORAL_VERSION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,807
+FDA_0003_32K,FDA_0003,32K,FDA,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,971
+SEC_0018_64K,SEC_0018,64K,SEC,TEMPORAL_VERSION,True,31,False,True,False,True,False,False,False,valid_json,,strict,,92
+FRED_0013_16K,FRED_0013,16K,FRED,RETRIEVAL_CALCULATION,True,56,False,True,False,True,False,False,False,valid_json,,strict,,140
+CT_0025_32K,CT_0025,32K,CLINICAL_TRIALS,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,911
+FRED_0011_4K,FRED_0011,4K,FRED,RETRIEVAL_CALCULATION,True,40,False,True,False,True,False,False,False,valid_json,,strict,,111
+CT_0006_8K,CT_0006,8K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,911
+FDA_0016_16K,FDA_0016,16K,FDA,RETRIEVAL_CALCULATION,True,36,False,True,False,True,False,False,False,valid_json,,strict,,97
+SEC_0024_4K,SEC_0024,4K,SEC,UNANSWERABLE,False,26,False,True,False,True,False,False,False,valid_json,,strict,,91
+FRED_0010_8K,FRED_0010,8K,FRED,RETRIEVAL_CALCULATION,True,39,False,True,False,True,False,False,False,valid_json,,strict,,97
+CT_0001_64K,CT_0001,64K,CLINICAL_TRIALS,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1239
+FRED_0002_16K,FRED_0002,16K,FRED,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,990
+FDA_0003_64K,FDA_0003,64K,FDA,DIRECT_RETRIEVAL,True,27,False,True,False,True,False,False,False,valid_json,,strict,,85
+FDA_0006_32K,FDA_0006,32K,FDA,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,935
+FDA_0018_16K,FDA_0018,16K,FDA,TEMPORAL_VERSION,True,54,False,True,False,True,False,False,False,valid_json,,strict,,131
+CT_0007_64K,CT_0007,64K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,26,False,True,False,True,False,False,False,valid_json,,strict,,95
+FRED_0020_4K,FRED_0020,4K,FRED,TEMPORAL_VERSION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1028
+SEC_0017_16K,SEC_0017,16K,SEC,TEMPORAL_VERSION,True,98,False,True,False,True,False,False,False,valid_json,,strict,,219
+FRED_0016_16K,FRED_0016,16K,FRED,RETRIEVAL_CALCULATION,True,35,False,True,False,True,False,False,False,valid_json,,strict,,97
+SEC_0015_64K,SEC_0015,64K,SEC,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,915
+FDA_0020_32K,FDA_0020,32K,FDA,TEMPORAL_VERSION,True,32,False,True,False,True,False,False,False,valid_json,,strict,,89
+CT_0017_16K,CT_0017,16K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1032
+FDA_0007_8K,FDA_0007,8K,FDA,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,912
+CT_0011_16K,CT_0011,16K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,32,False,True,False,True,False,False,False,valid_json,,strict,,96
+FRED_0007_32K,FRED_0007,32K,FRED,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,668
+FDA_0008_32K,FDA_0008,32K,FDA,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,873
+CT_0023_64K,CT_0023,64K,CLINICAL_TRIALS,UNANSWERABLE,False,28,False,True,False,True,False,False,False,valid_json,,strict,,87
+FRED_0022_64K,FRED_0022,64K,FRED,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,811
+FDA_0013_32K,FDA_0013,32K,FDA,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,905
+FDA_0021_32K,FDA_0021,32K,FDA,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,964
+SEC_0025_8K,SEC_0025,8K,SEC,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1031
+SEC_0011_4K,SEC_0011,4K,SEC,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,869
+SEC_0009_64K,SEC_0009,64K,SEC,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,902
+FDA_0004_8K,FDA_0004,8K,FDA,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,910
+FDA_0001_8K,FDA_0001,8K,FDA,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,821
+CT_0012_4K,CT_0012,4K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,910
+FDA_0005_16K,FDA_0005,16K,FDA,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,861
+SEC_0024_8K,SEC_0024,8K,SEC,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,865
+FDA_0015_4K,FDA_0015,4K,FDA,RETRIEVAL_CALCULATION,True,35,False,True,False,True,False,False,False,valid_json,,strict,,94
+FDA_0011_64K,FDA_0011,64K,FDA,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,809
+CT_0012_16K,CT_0012,16K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,28,False,True,False,True,False,False,False,valid_json,,strict,,91
+FDA_0010_8K,FDA_0010,8K,FDA,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1018
+FDA_0007_64K,FDA_0007,64K,FDA,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,813
+FRED_0008_64K,FRED_0008,64K,FRED,ENTITY_UNIT_BINDING,True,26,False,True,False,True,False,False,False,valid_json,,strict,,83
+FDA_0006_4K,FDA_0006,4K,FDA,ENTITY_UNIT_BINDING,True,54,False,True,False,True,False,False,False,valid_json,,strict,,139
+FRED_0016_32K,FRED_0016,32K,FRED,RETRIEVAL_CALCULATION,True,37,False,True,False,True,False,False,False,valid_json,,strict,,97
+SEC_0016_16K,SEC_0016,16K,SEC,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1038
+FDA_0011_8K,FDA_0011,8K,FDA,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,936
+FRED_0003_64K,FRED_0003,64K,FRED,DIRECT_RETRIEVAL,True,43,False,True,False,True,False,False,False,valid_json,,strict,,114
+SEC_0001_8K,SEC_0001,8K,SEC,DIRECT_RETRIEVAL,True,38,False,True,False,True,False,False,False,valid_json,,strict,,107
+FRED_0014_4K,FRED_0014,4K,FRED,RETRIEVAL_CALCULATION,True,37,False,True,False,True,False,False,False,valid_json,,strict,,94
+SEC_0018_4K,SEC_0018,4K,SEC,TEMPORAL_VERSION,True,31,False,True,False,True,False,False,False,valid_json,,strict,,92
+FDA_0006_64K,FDA_0006,64K,FDA,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,812
+FDA_0023_64K,FDA_0023,64K,FDA,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,910
+CT_0010_64K,CT_0010,64K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,30,False,True,False,True,False,False,False,valid_json,,strict,,94
+FRED_0015_4K,FRED_0015,4K,FRED,RETRIEVAL_CALCULATION,True,33,False,True,False,True,False,False,False,valid_json,,strict,,94
+SEC_0025_4K,SEC_0025,4K,SEC,UNANSWERABLE,False,30,False,True,False,True,False,False,False,valid_json,,strict,,99
+FRED_0021_32K,FRED_0021,32K,FRED,UNANSWERABLE,False,28,False,True,False,True,False,False,False,valid_json,,strict,,83
+FDA_0020_8K,FDA_0020,8K,FDA,TEMPORAL_VERSION,True,45,False,True,False,True,False,False,False,valid_json,,strict,,117
+CT_0024_64K,CT_0024,64K,CLINICAL_TRIALS,UNANSWERABLE,False,30,False,True,False,True,False,False,False,valid_json,,strict,,89
+CT_0021_8K,CT_0021,8K,CLINICAL_TRIALS,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,912
+CT_0021_16K,CT_0021,16K,CLINICAL_TRIALS,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1038
+FRED_0018_4K,FRED_0018,4K,FRED,TEMPORAL_VERSION,True,24,False,True,False,True,False,False,False,valid_json,,strict,,80
+FDA_0010_4K,FDA_0010,4K,FDA,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,916
+FRED_0006_8K,FRED_0006,8K,FRED,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,747
+FRED_0006_32K,FRED_0006,32K,FRED,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,840
+FDA_0025_16K,FDA_0025,16K,FDA,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1206
+SEC_0024_16K,SEC_0024,16K,SEC,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,986
+SEC_0016_4K,SEC_0016,4K,SEC,RETRIEVAL_CALCULATION,True,52,False,True,False,True,False,False,False,valid_json,,strict,,138
+CT_0024_32K,CT_0024,32K,CLINICAL_TRIALS,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,811
+FDA_0013_8K,FDA_0013,8K,FDA,RETRIEVAL_CALCULATION,True,135,False,True,False,True,False,False,False,valid_json,,strict,,275
+FDA_0022_32K,FDA_0022,32K,FDA,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,817
+FDA_0017_8K,FDA_0017,8K,FDA,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,906
+CT_0023_32K,CT_0023,32K,CLINICAL_TRIALS,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,907
+SEC_0022_64K,SEC_0022,64K,SEC,UNANSWERABLE,False,28,False,True,False,True,False,False,False,valid_json,,strict,,92
+FRED_0014_8K,FRED_0014,8K,FRED,RETRIEVAL_CALCULATION,True,37,False,True,False,True,False,False,False,valid_json,,strict,,95
+CT_0020_8K,CT_0020,8K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,858
+FDA_0002_8K,FDA_0002,8K,FDA,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,883
+SEC_0012_8K,SEC_0012,8K,SEC,RETRIEVAL_CALCULATION,True,217,False,False,False,False,True,False,False,unknown_malformed_json,,none,no unambiguous complete response object with all required fields,433
+FDA_0014_8K,FDA_0014,8K,FDA,RETRIEVAL_CALCULATION,True,37,False,True,False,True,False,False,False,valid_json,,strict,,97
+FRED_0007_64K,FRED_0007,64K,FRED,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,822
+CT_0002_64K,CT_0002,64K,CLINICAL_TRIALS,DIRECT_RETRIEVAL,True,23,False,True,False,True,False,False,False,valid_json,,strict,,79
+FDA_0021_4K,FDA_0021,4K,FDA,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,961
+CT_0005_8K,CT_0005,8K,CLINICAL_TRIALS,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1081
+FRED_0002_4K,FRED_0002,4K,FRED,DIRECT_RETRIEVAL,True,42,False,True,False,True,False,False,False,valid_json,,strict,,115
+CT_0003_32K,CT_0003,32K,CLINICAL_TRIALS,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,937
+CT_0018_8K,CT_0018,8K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,811
+FRED_0010_16K,FRED_0010,16K,FRED,RETRIEVAL_CALCULATION,True,39,False,True,False,True,False,False,False,valid_json,,strict,,97
+CT_0024_8K,CT_0024,8K,CLINICAL_TRIALS,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,922
+FRED_0016_8K,FRED_0016,8K,FRED,RETRIEVAL_CALCULATION,True,35,False,True,False,True,False,False,False,valid_json,,strict,,97
+SEC_0022_16K,SEC_0022,16K,SEC,UNANSWERABLE,False,98,False,False,False,False,True,False,False,unknown_malformed_json,,none,no unambiguous complete response object with all required fields,223
+FDA_0025_32K,FDA_0025,32K,FDA,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1206
+FRED_0005_4K,FRED_0005,4K,FRED,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,902
+FRED_0024_4K,FRED_0024,4K,FRED,UNANSWERABLE,False,29,False,True,False,True,False,False,False,valid_json,,strict,,99
+FRED_0023_4K,FRED_0023,4K,FRED,UNANSWERABLE,False,26,False,True,False,True,False,False,False,valid_json,,strict,,87
+FRED_0007_8K,FRED_0007,8K,FRED,ENTITY_UNIT_BINDING,True,77,False,True,False,True,False,False,False,valid_json,,strict,,166
+CT_0008_16K,CT_0008,16K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,864
+FRED_0005_32K,FRED_0005,32K,FRED,DIRECT_RETRIEVAL,True,183,False,True,False,True,False,False,False,valid_json,,strict,,360
+FDA_0014_16K,FDA_0014,16K,FDA,RETRIEVAL_CALCULATION,True,38,False,True,False,True,False,False,False,valid_json,,strict,,99
+CT_0014_8K,CT_0014,8K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,910
+FRED_0010_32K,FRED_0010,32K,FRED,RETRIEVAL_CALCULATION,True,36,False,True,False,True,False,False,False,valid_json,,strict,,97
+FDA_0022_64K,FDA_0022,64K,FDA,UNANSWERABLE,False,52,False,True,False,True,False,False,False,valid_json,,strict,,125
+FRED_0017_4K,FRED_0017,4K,FRED,TEMPORAL_VERSION,True,27,False,True,False,True,False,False,False,valid_json,,strict,,87
+FDA_0014_32K,FDA_0014,32K,FDA,RETRIEVAL_CALCULATION,True,37,False,True,False,True,False,False,False,valid_json,,strict,,99
+CT_0002_16K,CT_0002,16K,CLINICAL_TRIALS,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,871
+SEC_0012_32K,SEC_0012,32K,SEC,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,696
+CT_0006_16K,CT_0006,16K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,902
+FRED_0005_64K,FRED_0005,64K,FRED,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,959
+SEC_0002_8K,SEC_0002,8K,SEC,DIRECT_RETRIEVAL,True,45,False,True,False,True,False,False,False,valid_json,,strict,,120
+FRED_0003_32K,FRED_0003,32K,FRED,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1021
+SEC_0019_32K,SEC_0019,32K,SEC,TEMPORAL_VERSION,True,31,False,True,False,True,False,False,False,valid_json,,strict,,92
+FDA_0007_32K,FDA_0007,32K,FDA,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,818
+FRED_0015_64K,FRED_0015,64K,FRED,RETRIEVAL_CALCULATION,True,37,False,True,False,True,False,False,False,valid_json,,strict,,98
+CT_0002_32K,CT_0002,32K,CLINICAL_TRIALS,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,814
+CT_0017_4K,CT_0017,4K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,953
+FDA_0006_16K,FDA_0006,16K,FDA,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,956
+SEC_0005_8K,SEC_0005,8K,SEC,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,839
+SEC_0017_32K,SEC_0017,32K,SEC,TEMPORAL_VERSION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1083
+SEC_0005_32K,SEC_0005,32K,SEC,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,914
+SEC_0009_32K,SEC_0009,32K,SEC,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,925
+CT_0004_16K,CT_0004,16K,CLINICAL_TRIALS,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,803
+SEC_0014_8K,SEC_0014,8K,SEC,RETRIEVAL_CALCULATION,True,80,False,True,False,True,False,False,False,valid_json,,strict,,189
+SEC_0024_32K,SEC_0024,32K,SEC,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1035
+CT_0005_16K,CT_0005,16K,CLINICAL_TRIALS,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,898
+CT_0016_8K,CT_0016,8K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,39,False,True,False,True,False,False,False,valid_json,,strict,,117
+FRED_0013_64K,FRED_0013,64K,FRED,RETRIEVAL_CALCULATION,True,35,False,True,False,True,False,False,False,valid_json,,strict,,99
+CT_0006_32K,CT_0006,32K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,28,False,True,False,True,False,False,False,valid_json,,strict,,96
+SEC_0011_64K,SEC_0011,64K,SEC,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1028
+FDA_0012_64K,FDA_0012,64K,FDA,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,906
+SEC_0004_8K,SEC_0004,8K,SEC,DIRECT_RETRIEVAL,True,47,False,True,False,True,False,False,False,valid_json,,strict,,118
+FRED_0017_16K,FRED_0017,16K,FRED,TEMPORAL_VERSION,True,43,False,True,False,True,False,False,False,valid_json,,strict,,115
+FRED_0019_16K,FRED_0019,16K,FRED,TEMPORAL_VERSION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,943
+CT_0018_16K,CT_0018,16K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1239
+FDA_0013_64K,FDA_0013,64K,FDA,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,905
+FRED_0021_8K,FRED_0021,8K,FRED,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,924
+FDA_0025_8K,FDA_0025,8K,FDA,UNANSWERABLE,False,38,False,True,False,True,False,False,False,valid_json,,strict,,111
+FRED_0019_4K,FRED_0019,4K,FRED,TEMPORAL_VERSION,True,27,False,True,False,True,False,False,False,valid_json,,strict,,82
+SEC_0025_32K,SEC_0025,32K,SEC,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,858
+SEC_0015_4K,SEC_0015,4K,SEC,RETRIEVAL_CALCULATION,True,70,False,True,False,True,False,False,False,valid_json,,strict,,167
+CT_0016_4K,CT_0016,4K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,39,False,True,False,True,False,False,False,valid_json,,strict,,117
+SEC_0025_64K,SEC_0025,64K,SEC,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,821
+CT_0015_8K,CT_0015,8K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1205
+FDA_0016_8K,FDA_0016,8K,FDA,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,971
+FRED_0021_16K,FRED_0021,16K,FRED,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,936
+FDA_0024_32K,FDA_0024,32K,FDA,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,770
+FDA_0005_32K,FDA_0005,32K,FDA,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,872
+FRED_0024_16K,FRED_0024,16K,FRED,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,845
+FDA_0008_4K,FDA_0008,4K,FDA,ENTITY_UNIT_BINDING,True,56,False,True,False,True,False,False,False,valid_json,,strict,,140
+SEC_0011_16K,SEC_0011,16K,SEC,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1027
+SEC_0023_32K,SEC_0023,32K,SEC,UNANSWERABLE,False,41,False,True,False,True,False,False,False,valid_json,,strict,,109
+FRED_0022_16K,FRED_0022,16K,FRED,UNANSWERABLE,False,26,False,True,False,True,False,False,False,valid_json,,strict,,82
+FRED_0003_16K,FRED_0003,16K,FRED,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1034
+FDA_0012_4K,FDA_0012,4K,FDA,RETRIEVAL_CALCULATION,True,91,False,True,False,True,False,False,False,valid_json,,strict,,204
+FDA_0014_4K,FDA_0014,4K,FDA,RETRIEVAL_CALCULATION,True,37,False,True,False,True,False,False,False,valid_json,,strict,,97
+FRED_0020_64K,FRED_0020,64K,FRED,TEMPORAL_VERSION,True,28,False,True,False,True,False,False,False,valid_json,,strict,,87
+FDA_0024_4K,FDA_0024,4K,FDA,UNANSWERABLE,False,39,False,True,False,True,False,False,False,valid_json,,strict,,111
+FRED_0011_8K,FRED_0011,8K,FRED,RETRIEVAL_CALCULATION,True,35,False,True,False,True,False,False,False,valid_json,,strict,,97
+CT_0012_64K,CT_0012,64K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,28,False,True,False,True,False,False,False,valid_json,,strict,,91
+FRED_0020_16K,FRED_0020,16K,FRED,TEMPORAL_VERSION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,914
+FRED_0019_64K,FRED_0019,64K,FRED,TEMPORAL_VERSION,True,27,False,True,False,True,False,False,False,valid_json,,strict,,83
+CT_0005_64K,CT_0005,64K,CLINICAL_TRIALS,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,997
+SEC_0013_64K,SEC_0013,64K,SEC,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,816
+FRED_0024_32K,FRED_0024,32K,FRED,UNANSWERABLE,False,28,False,True,False,True,False,False,False,valid_json,,strict,,82
+CT_0012_32K,CT_0012,32K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,28,False,True,False,True,False,False,False,valid_json,,strict,,91
+FDA_0023_32K,FDA_0023,32K,FDA,UNANSWERABLE,False,512,True,False,False,False,True,True,False,partially_truncated_json,,none,no unambiguous complete response object with all required fields,1206
+CT_0004_4K,CT_0004,4K,CLINICAL_TRIALS,DIRECT_RETRIEVAL,True,59,False,True,False,True,False,False,False,valid_json,,strict,,135
+FRED_0012_64K,FRED_0012,64K,FRED,RETRIEVAL_CALCULATION,True,36,False,True,False,True,False,False,False,valid_json,,strict,,97
+FDA_0002_4K,FDA_0002,4K,FDA,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,878
+FRED_0016_4K,FRED_0016,4K,FRED,RETRIEVAL_CALCULATION,True,35,False,True,False,True,False,False,False,valid_json,,strict,,97
+FRED_0016_64K,FRED_0016,64K,FRED,RETRIEVAL_CALCULATION,True,30,False,True,False,True,False,False,False,valid_json,,strict,,83
+FDA_0018_32K,FDA_0018,32K,FDA,TEMPORAL_VERSION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,775
+FDA_0009_64K,FDA_0009,64K,FDA,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,836
+CT_0011_64K,CT_0011,64K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,28,False,True,False,True,False,False,False,valid_json,,strict,,91
+FRED_0009_32K,FRED_0009,32K,FRED,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,829
+FRED_0012_4K,FRED_0012,4K,FRED,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,916
+FRED_0001_16K,FRED_0001,16K,FRED,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1035
+CT_0021_4K,CT_0021,4K,CLINICAL_TRIALS,UNANSWERABLE,False,60,False,True,False,True,False,False,False,valid_json,,strict,,146
+FDA_0015_8K,FDA_0015,8K,FDA,RETRIEVAL_CALCULATION,True,36,False,True,False,True,False,False,False,valid_json,,strict,,97
+CT_0013_32K,CT_0013,32K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,22,False,True,False,True,False,False,False,valid_json,,strict,,78
+SEC_0007_8K,SEC_0007,8K,SEC,ENTITY_UNIT_BINDING,True,148,False,True,False,True,False,False,False,valid_json,,strict,,299
+SEC_0005_16K,SEC_0005,16K,SEC,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,824
+FDA_0001_64K,FDA_0001,64K,FDA,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,965
+FDA_0010_64K,FDA_0010,64K,FDA,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,822
+FDA_0023_16K,FDA_0023,16K,FDA,UNANSWERABLE,False,52,False,True,False,True,False,False,False,valid_json,,strict,,125
+CT_0007_4K,CT_0007,4K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,32,False,True,False,True,False,False,False,valid_json,,strict,,97
+CT_0003_4K,CT_0003,4K,CLINICAL_TRIALS,DIRECT_RETRIEVAL,True,56,False,True,False,True,False,False,False,valid_json,,strict,,136
+FRED_0007_16K,FRED_0007,16K,FRED,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,737
+FDA_0003_8K,FDA_0003,8K,FDA,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,933
+SEC_0001_32K,SEC_0001,32K,SEC,DIRECT_RETRIEVAL,True,29,False,True,False,True,False,False,False,valid_json,,strict,,93
+FRED_0011_32K,FRED_0011,32K,FRED,RETRIEVAL_CALCULATION,True,34,False,True,False,True,False,False,False,valid_json,,strict,,97
+CT_0022_64K,CT_0022,64K,CLINICAL_TRIALS,UNANSWERABLE,False,31,False,True,False,True,False,False,False,valid_json,,strict,,89
+CT_0008_32K,CT_0008,32K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,902
+FDA_0003_16K,FDA_0003,16K,FDA,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,968
+FDA_0010_16K,FDA_0010,16K,FDA,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1013
+CT_0019_64K,CT_0019,64K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,640
+CT_0022_8K,CT_0022,8K,CLINICAL_TRIALS,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,810
+FDA_0022_8K,FDA_0022,8K,FDA,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,906
+FDA_0001_4K,FDA_0001,4K,FDA,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,False,partially_truncated_json,,none,no unambiguous complete response object with all required fields,850
+FDA_0023_4K,FDA_0023,4K,FDA,UNANSWERABLE,False,35,False,True,False,True,False,False,False,valid_json,,strict,,97
+SEC_0023_64K,SEC_0023,64K,SEC,UNANSWERABLE,False,31,False,True,False,True,False,False,False,valid_json,,strict,,92
+FRED_0012_8K,FRED_0012,8K,FRED,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,897
+FRED_0022_4K,FRED_0022,4K,FRED,UNANSWERABLE,False,31,False,True,False,True,False,False,False,valid_json,,strict,,99
+FDA_0019_8K,FDA_0019,8K,FDA,TEMPORAL_VERSION,True,56,False,True,False,True,False,False,False,valid_json,,strict,,131
+SEC_0023_4K,SEC_0023,4K,SEC,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,914
+FRED_0004_64K,FRED_0004,64K,FRED,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,908
+FRED_0007_4K,FRED_0007,4K,FRED,ENTITY_UNIT_BINDING,True,27,False,True,False,True,False,False,False,valid_json,,strict,,83
+FDA_0015_64K,FDA_0015,64K,FDA,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,910
+FDA_0025_4K,FDA_0025,4K,FDA,UNANSWERABLE,False,40,False,True,False,True,False,False,False,valid_json,,strict,,111
+SEC_0015_32K,SEC_0015,32K,SEC,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,913
+FRED_0021_4K,FRED_0021,4K,FRED,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,864
+CT_0015_16K,CT_0015,16K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,70,False,True,False,True,False,False,False,valid_json,,strict,,164
+FRED_0023_8K,FRED_0023,8K,FRED,UNANSWERABLE,False,28,False,True,False,True,False,False,False,valid_json,,strict,,99
+FDA_0007_16K,FDA_0007,16K,FDA,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,927
+FRED_0008_32K,FRED_0008,32K,FRED,ENTITY_UNIT_BINDING,True,26,False,True,False,True,False,False,False,valid_json,,strict,,83
+CT_0018_32K,CT_0018,32K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,816
+FRED_0018_64K,FRED_0018,64K,FRED,TEMPORAL_VERSION,True,27,False,True,False,True,False,False,False,valid_json,,strict,,86
+SEC_0010_16K,SEC_0010,16K,SEC,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,900
+SEC_0018_16K,SEC_0018,16K,SEC,TEMPORAL_VERSION,True,31,False,True,False,True,False,False,False,valid_json,,strict,,92
+FRED_0021_64K,FRED_0021,64K,FRED,UNANSWERABLE,False,28,False,True,False,True,False,False,False,valid_json,,strict,,83
+SEC_0017_4K,SEC_0017,4K,SEC,TEMPORAL_VERSION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,975
+FRED_0001_64K,FRED_0001,64K,FRED,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,826
+CT_0003_16K,CT_0003,16K,CLINICAL_TRIALS,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,909
+FDA_0009_4K,FDA_0009,4K,FDA,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,934
+FDA_0009_8K,FDA_0009,8K,FDA,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,896
+SEC_0010_4K,SEC_0010,4K,SEC,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,914
+SEC_0011_8K,SEC_0011,8K,SEC,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,851
+FRED_0012_32K,FRED_0012,32K,FRED,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,812
+SEC_0021_64K,SEC_0021,64K,SEC,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,813
+CT_0021_32K,CT_0021,32K,CLINICAL_TRIALS,UNANSWERABLE,False,512,True,False,False,False,True,True,False,partially_truncated_json,,none,no unambiguous complete response object with all required fields,1205
+SEC_0007_64K,SEC_0007,64K,SEC,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,909
+CT_0002_8K,CT_0002,8K,CLINICAL_TRIALS,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,909
+FRED_0019_32K,FRED_0019,32K,FRED,TEMPORAL_VERSION,True,27,False,True,False,True,False,False,False,valid_json,,strict,,82
+FDA_0020_16K,FDA_0020,16K,FDA,TEMPORAL_VERSION,True,31,False,True,False,True,False,False,False,valid_json,,strict,,89
+FRED_0024_8K,FRED_0024,8K,FRED,UNANSWERABLE,False,29,False,True,False,True,False,False,False,valid_json,,strict,,99
+FRED_0025_4K,FRED_0025,4K,FRED,UNANSWERABLE,False,28,False,True,False,True,False,False,False,valid_json,,strict,,82
+CT_0015_64K,CT_0015,64K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,743
+FDA_0008_64K,FDA_0008,64K,FDA,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,815
+CT_0024_4K,CT_0024,4K,CLINICAL_TRIALS,UNANSWERABLE,False,81,False,True,False,True,False,False,False,valid_json,,strict,,187
+FDA_0017_32K,FDA_0017,32K,FDA,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,907
+CT_0021_64K,CT_0021,64K,CLINICAL_TRIALS,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,912
+SEC_0014_16K,SEC_0014,16K,SEC,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,916
+SEC_0012_4K,SEC_0012,4K,SEC,RETRIEVAL_CALCULATION,True,44,False,True,False,True,False,False,False,valid_json,,strict,,111
+FRED_0002_8K,FRED_0002,8K,FRED,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,668
+FRED_0008_4K,FRED_0008,4K,FRED,ENTITY_UNIT_BINDING,True,26,False,True,False,True,False,False,False,valid_json,,strict,,83
+SEC_0002_32K,SEC_0002,32K,SEC,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,817
+FRED_0020_8K,FRED_0020,8K,FRED,TEMPORAL_VERSION,True,57,False,True,False,True,False,False,False,valid_json,,strict,,133
+FDA_0017_64K,FDA_0017,64K,FDA,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,False,partially_truncated_json,,none,no unambiguous complete response object with all required fields,1290
+CT_0007_8K,CT_0007,8K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,50,False,True,False,True,False,False,False,valid_json,,strict,,125
+FDA_0021_64K,FDA_0021,64K,FDA,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,931
+SEC_0013_16K,SEC_0013,16K,SEC,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,949
+CT_0010_32K,CT_0010,32K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,28,False,True,False,True,False,False,False,valid_json,,strict,,91
+CT_0020_16K,CT_0020,16K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,951
+FRED_0015_32K,FRED_0015,32K,FRED,RETRIEVAL_CALCULATION,True,35,False,True,False,True,False,False,False,valid_json,,strict,,98
+SEC_0021_8K,SEC_0021,8K,SEC,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,907
+FRED_0025_8K,FRED_0025,8K,FRED,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1024
+FRED_0017_32K,FRED_0017,32K,FRED,TEMPORAL_VERSION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,846
+CT_0019_32K,CT_0019,32K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,986
+CT_0023_8K,CT_0023,8K,CLINICAL_TRIALS,UNANSWERABLE,False,29,False,True,False,True,False,False,False,valid_json,,strict,,89
+SEC_0013_32K,SEC_0013,32K,SEC,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,915
+FRED_0001_4K,FRED_0001,4K,FRED,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,826
+CT_0013_16K,CT_0013,16K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,22,False,True,False,True,False,False,False,valid_json,,strict,,78
+FDA_0001_32K,FDA_0001,32K,FDA,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,905
+SEC_0005_64K,SEC_0005,64K,SEC,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,False,partially_truncated_json,,none,no unambiguous complete response object with all required fields,836
+FRED_0014_32K,FRED_0014,32K,FRED,RETRIEVAL_CALCULATION,True,40,False,True,False,True,False,False,False,valid_json,,strict,,97
+FRED_0005_16K,FRED_0005,16K,FRED,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,914
+FDA_0001_16K,FDA_0001,16K,FDA,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,923
+CT_0017_64K,CT_0017,64K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,911
+CT_0020_4K,CT_0020,4K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,910
+SEC_0012_64K,SEC_0012,64K,SEC,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,751
+FRED_0018_8K,FRED_0018,8K,FRED,TEMPORAL_VERSION,True,33,False,True,False,True,False,False,False,valid_json,,strict,,100
+FDA_0022_4K,FDA_0022,4K,FDA,UNANSWERABLE,False,44,False,True,False,True,False,False,False,valid_json,,strict,,111
+SEC_0019_16K,SEC_0019,16K,SEC,TEMPORAL_VERSION,True,30,False,True,False,True,False,False,False,valid_json,,strict,,92
+SEC_0004_64K,SEC_0004,64K,SEC,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,816
+CT_0023_16K,CT_0023,16K,CLINICAL_TRIALS,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,969
+CT_0001_8K,CT_0001,8K,CLINICAL_TRIALS,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,914
+CT_0009_16K,CT_0009,16K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,27,False,True,False,True,False,False,False,valid_json,,strict,,96
+SEC_0010_32K,SEC_0010,32K,SEC,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,906
+CT_0004_8K,CT_0004,8K,CLINICAL_TRIALS,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,False,partially_truncated_json,,none,no unambiguous complete response object with all required fields,1036
+FRED_0018_32K,FRED_0018,32K,FRED,TEMPORAL_VERSION,True,32,False,True,False,True,False,False,False,valid_json,,strict,,100
+SEC_0020_32K,SEC_0020,32K,SEC,TEMPORAL_VERSION,True,29,False,True,False,True,False,False,False,valid_json,,strict,,89
+SEC_0014_32K,SEC_0014,32K,SEC,RETRIEVAL_CALCULATION,True,44,False,False,False,False,True,False,False,unknown_malformed_json,,none,no unambiguous complete response object with all required fields,118
+CT_0008_8K,CT_0008,8K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,30,False,True,False,True,False,False,False,valid_json,,strict,,91
+CT_0023_4K,CT_0023,4K,CLINICAL_TRIALS,UNANSWERABLE,False,29,False,True,False,True,False,False,False,valid_json,,strict,,89
+FRED_0005_8K,FRED_0005,8K,FRED,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,925
+CT_0025_16K,CT_0025,16K,CLINICAL_TRIALS,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,818
+SEC_0009_8K,SEC_0009,8K,SEC,RETRIEVAL_CALCULATION,True,52,False,True,False,True,False,False,False,valid_json,,strict,,125
+SEC_0010_64K,SEC_0010,64K,SEC,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,845
+SEC_0017_8K,SEC_0017,8K,SEC,TEMPORAL_VERSION,True,36,False,True,False,True,False,False,False,valid_json,,strict,,107
+FDA_0013_4K,FDA_0013,4K,FDA,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,922
+SEC_0014_64K,SEC_0014,64K,SEC,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,811
+SEC_0023_16K,SEC_0023,16K,SEC,UNANSWERABLE,False,47,False,True,False,True,False,False,False,valid_json,,strict,,120
+FRED_0004_32K,FRED_0004,32K,FRED,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1036
+FRED_0001_8K,FRED_0001,8K,FRED,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,811
+CT_0025_64K,CT_0025,64K,CLINICAL_TRIALS,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,846
+FDA_0009_16K,FDA_0009,16K,FDA,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,930
+SEC_0019_4K,SEC_0019,4K,SEC,TEMPORAL_VERSION,True,30,False,True,False,True,False,False,False,valid_json,,strict,,92
+CT_0022_32K,CT_0022,32K,CLINICAL_TRIALS,UNANSWERABLE,False,32,False,True,False,True,False,False,False,valid_json,,strict,,89
+SEC_0009_4K,SEC_0009,4K,SEC,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,928
+CT_0008_4K,CT_0008,4K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,30,False,True,False,True,False,False,False,valid_json,,strict,,91
+FRED_0013_4K,FRED_0013,4K,FRED,RETRIEVAL_CALCULATION,True,34,False,True,False,True,False,False,False,valid_json,,strict,,95
+CT_0022_16K,CT_0022,16K,CLINICAL_TRIALS,UNANSWERABLE,False,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,809
+FDA_0018_64K,FDA_0018,64K,FDA,TEMPORAL_VERSION,True,30,False,True,False,True,False,False,False,valid_json,,strict,,89
+FDA_0002_64K,FDA_0002,64K,FDA,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,737
+FDA_0004_16K,FDA_0004,16K,FDA,DIRECT_RETRIEVAL,True,53,False,True,False,True,False,False,False,valid_json,,strict,,137
+SEC_0015_8K,SEC_0015,8K,SEC,RETRIEVAL_CALCULATION,True,67,False,True,False,True,False,False,False,valid_json,,strict,,161
+FRED_0003_8K,FRED_0003,8K,FRED,DIRECT_RETRIEVAL,True,37,False,True,False,True,False,False,False,valid_json,,strict,,112
+CT_0018_64K,CT_0018,64K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1239
+CT_0005_4K,CT_0005,4K,CLINICAL_TRIALS,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1031
+SEC_0008_8K,SEC_0008,8K,SEC,ENTITY_UNIT_BINDING,True,46,False,True,False,True,False,False,False,valid_json,,strict,,121
+FRED_0004_16K,FRED_0004,16K,FRED,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,814
+FDA_0008_8K,FDA_0008,8K,FDA,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,916
+CT_0016_64K,CT_0016,64K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,28,False,True,False,True,False,False,False,valid_json,,strict,,91
+SEC_0003_64K,SEC_0003,64K,SEC,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,808
+FDA_0012_8K,FDA_0012,8K,FDA,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,928
+CT_0011_32K,CT_0011,32K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,31,False,True,False,True,False,False,False,valid_json,,strict,,96
+SEC_0003_32K,SEC_0003,32K,SEC,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,811
+FDA_0015_32K,FDA_0015,32K,FDA,RETRIEVAL_CALCULATION,True,34,False,True,False,True,False,False,False,valid_json,,strict,,99
+CT_0020_32K,CT_0020,32K,CLINICAL_TRIALS,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,817
+FDA_0012_16K,FDA_0012,16K,FDA,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1032
+FDA_0011_32K,FDA_0011,32K,FDA,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,756
+CT_0022_4K,CT_0022,4K,CLINICAL_TRIALS,UNANSWERABLE,False,29,False,True,False,True,False,False,False,valid_json,,strict,,89
+CT_0013_8K,CT_0013,8K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,821
+FRED_0004_8K,FRED_0004,8K,FRED,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,916
+SEC_0024_64K,SEC_0024,64K,SEC,UNANSWERABLE,False,30,False,True,False,True,False,False,False,valid_json,,strict,,91
+SEC_0007_4K,SEC_0007,4K,SEC,ENTITY_UNIT_BINDING,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1026
+FRED_0001_32K,FRED_0001,32K,FRED,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,1036
+CT_0011_4K,CT_0011,4K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,81,False,True,False,True,False,False,False,valid_json,,strict,,177
+CT_0003_64K,CT_0003,64K,CLINICAL_TRIALS,DIRECT_RETRIEVAL,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,909
+FDA_0014_64K,FDA_0014,64K,FDA,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,814
+SEC_0013_4K,SEC_0013,4K,SEC,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,972
+CT_0010_8K,CT_0010,8K,CLINICAL_TRIALS,RETRIEVAL_CALCULATION,True,512,True,False,False,False,True,True,True,repetitive_truncated_selected_evidence,,none,degenerate repeated evidence IDs; required fields are incomplete,738

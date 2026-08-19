@@ -1,5 +1,5 @@
 {
-  "config_hash": "306c104c7669fb09",
+  "config_hash": "8c72bbbd80ade192",
   "config_path": "config/fred_pilot.yaml",
   "content_sha256": {
     "instances": "e48aa973e6dbabe1ee6a8448270bd877efbfe4b19563e0e1a744536fce19d913",
@@ -39,9 +39,9 @@
       "sha256": "1d824b8ecb085065a72efb4770d698e9db452af0fce265d073f8f94a8ebee2d0"
     }
   ],
-  "generated_at": "2026-08-09T18:04:33Z",
+  "generated_at": "2026-08-09T18:18:59Z",
   "generator_version": "0.2.0",
-  "git_commit": "2fe50bc2caec6f81d2fff6ca749abcd2dc8223b9",
+  "git_commit": "7c848cf04dc3d16ee413ef3819f09f44ca9ad046",
   "manifest_version": "1.0.0",
   "platform": "Linux-6.8.0-87-generic-x86_64-with-glibc2.35",
   "python_version": "3.12.4",

@@ -1,0 +1,1508 @@
+{
+  "config_hash": "0f152493a03909c0",
+  "config_path": "config/audit_llama32_smoke.yaml",
+  "context_lengths": [
+    4096,
+    8192,
+    16384,
+    32768,
+    65536,
+    131072
+  ],
+  "dataset_name": "audit_llama32_smoke",
+  "distractors": {
+    "taxonomy": {
+      "NEAR_MATCH_VALUE": "Numerically within 5% of a target value while being a different fact -- a plausible-looking wrong answer.",
+      "OTHER_SAME_DOMAIN": "A real record from the same primary source with no closer relationship to the target.",
+      "WRONG_ENTITY": "Same metric and period, a different entity (other company, country, trial, product).",
+      "WRONG_FIELD": "Same entity, a different field/concept.",
+      "WRONG_PERIOD": "Same entity and metric, a different period (other year, quarter, or instant).",
+      "WRONG_SERIES_VARIANT": "Same entity, period, unit and underlying measure, but a different series variant or measurement basis such as seasonal adjustment, frequency, nominal/real basis, or transform.",
+      "WRONG_UNIT": "Same entity, metric and period, reported in a genuinely different unit.",
+      "WRONG_VERSION": "Same entity, metric, period and unit, but a different filing/revision/submission version."
+    },
+    "totals_by_type": {
+      "NEAR_MATCH_VALUE": 1938,
+      "OTHER_SAME_DOMAIN": 41114,
+      "WRONG_ENTITY": 15880,
+      "WRONG_FIELD": 13738,
+      "WRONG_PERIOD": 12947,
+      "WRONG_SERIES_VARIANT": 107,
+      "WRONG_UNIT": 23,
+      "WRONG_VERSION": 140
+    }
+  },
+  "generated_at": "2026-08-09T19:42:13Z",
+  "git_commit": "7c848cf04dc3d16ee413ef3819f09f44ca9ad046",
+  "instances": {
+    "by_domain": {
+      "CLINICAL_TRIALS": 48,
+      "FDA": 48,
+      "FRED": 60,
+      "SEC": 48
+    },
+    "by_length": {
+      "128K": 34,
+      "16K": 34,
+      "32K": 34,
+      "4K": 34,
+      "64K": 34,
+      "8K": 34
+    },
+    "by_question_type": {
+      "DIRECT_RETRIEVAL": 48,
+      "ENTITY_UNIT_BINDING": 30,
+      "RETRIEVAL_CALCULATION": 54,
+      "TEMPORAL_VERSION": 24,
+      "UNANSWERABLE": 48
+    },
+    "fill_ratio_by_length": {
+      "128K": {
+        "max": 0.993,
+        "mean": 0.99,
+        "median": 0.9898,
+        "min": 0.9872,
+        "n": 34,
+        "p25": 0.9881,
+        "p75": 0.9912
+      },
+      "16K": {
+        "max": 0.9927,
+        "mean": 0.9881,
+        "median": 0.9876,
+        "min": 0.9845,
+        "n": 34,
+        "p25": 0.9866,
+        "p75": 0.9896
+      },
+      "32K": {
+        "max": 0.9926,
+        "mean": 0.989,
+        "median": 0.989,
+        "min": 0.986,
+        "n": 34,
+        "p25": 0.9875,
+        "p75": 0.9907
+      },
+      "4K": {
+        "max": 0.9929,
+        "mean": 0.9805,
+        "median": 0.9797,
+        "min": 0.9668,
+        "n": 34,
+        "p25": 0.9761,
+        "p75": 0.9846
+      },
+      "64K": {
+        "max": 0.9924,
+        "mean": 0.9897,
+        "median": 0.9895,
+        "min": 0.9866,
+        "n": 34,
+        "p25": 0.9877,
+        "p75": 0.9913
+      },
+      "8K": {
+        "max": 0.993,
+        "mean": 0.986,
+        "median": 0.9862,
+        "min": 0.9797,
+        "n": 34,
+        "p25": 0.9833,
+        "p75": 0.9886
+      }
+    },
+    "prompt_overhead_token_distribution_by_length": {
+      "128K": {
+        "max": 325.0,
+        "mean": 264.2,
+        "median": 261.0,
+        "min": 239.0,
+        "n": 34,
+        "p25": 248.0,
+        "p75": 271.0
+      },
+      "16K": {
+        "max": 325.0,
+        "mean": 264.2,
+        "median": 261.0,
+        "min": 239.0,
+        "n": 34,
+        "p25": 248.0,
+        "p75": 271.0
+      },
+      "32K": {
+        "max": 325.0,
+        "mean": 264.2,
+        "median": 261.0,
+        "min": 239.0,
+        "n": 34,
+        "p25": 248.0,
+        "p75": 271.0
+      },
+      "4K": {
+        "max": 325.0,
+        "mean": 264.2,
+        "median": 261.0,
+        "min": 239.0,
+        "n": 34,
+        "p25": 248.0,
+        "p75": 271.0
+      },
+      "64K": {
+        "max": 325.0,
+        "mean": 264.2,
+        "median": 261.0,
+        "min": 239.0,
+        "n": 34,
+        "p25": 248.0,
+        "p75": 271.0
+      },
+      "8K": {
+        "max": 325.0,
+        "mean": 264.2,
+        "median": 261.0,
+        "min": 239.0,
+        "n": 34,
+        "p25": 248.0,
+        "p75": 271.0
+      }
+    },
+    "remaining_model_margin_by_length": {
+      "128K": {
+        "max": 897.0,
+        "mean": 535.4,
+        "median": 537.0,
+        "min": 132.0,
+        "n": 34,
+        "p25": 360.0,
+        "p75": 786.0
+      },
+      "16K": {
+        "max": 114186.0,
+        "mean": 114107.4,
+        "median": 114108.0,
+        "min": 114032.0,
+        "n": 34,
+        "p25": 114077.0,
+        "p75": 114143.0
+      },
+      "32K": {
+        "max": 98004.0,
+        "mean": 97887.7,
+        "median": 97877.0,
+        "min": 97770.0,
+        "n": 34,
+        "p25": 97818.0,
+        "p75": 97951.0
+      },
+      "4K": {
+        "max": 126339.0,
+        "mean": 126279.6,
+        "median": 126280.0,
+        "min": 126207.0,
+        "n": 34,
+        "p25": 126263.0,
+        "p75": 126300.0
+      },
+      "64K": {
+        "max": 65656.0,
+        "mean": 65432.6,
+        "median": 65420.0,
+        "min": 65248.0,
+        "n": 34,
+        "p25": 65327.0,
+        "p75": 65520.0
+      },
+      "8K": {
+        "max": 122270.0,
+        "mean": 122218.3,
+        "median": 122224.0,
+        "min": 122138.0,
+        "n": 34,
+        "p25": 122199.0,
+        "p75": 122246.0
+      }
+    },
+    "rendered_input_token_distribution_by_length": {
+      "128K": {
+        "max": 130428.0,
+        "mean": 130024.6,
+        "median": 130006.0,
+        "min": 129663.0,
+        "n": 34,
+        "p25": 129774.0,
+        "p75": 130200.0
+      },
+      "16K": {
+        "max": 16528.0,
+        "mean": 16452.6,
+        "median": 16451.0,
+        "min": 16374.0,
+        "n": 34,
+        "p25": 16417.0,
+        "p75": 16483.0
+      },
+      "32K": {
+        "max": 32790.0,
+        "mean": 32672.3,
+        "median": 32671.0,
+        "min": 32556.0,
+        "n": 34,
+        "p25": 32609.0,
+        "p75": 32742.0
+      },
+      "4K": {
+        "max": 4353.0,
+        "mean": 4280.4,
+        "median": 4276.0,
+        "min": 4221.0,
+        "n": 34,
+        "p25": 4260.0,
+        "p75": 4297.0
+      },
+      "64K": {
+        "max": 65312.0,
+        "mean": 65127.4,
+        "median": 65097.0,
+        "min": 64904.0,
+        "n": 34,
+        "p25": 65040.0,
+        "p75": 65233.0
+      },
+      "8K": {
+        "max": 8422.0,
+        "mean": 8341.7,
+        "median": 8336.0,
+        "min": 8290.0,
+        "n": 34,
+        "p25": 8314.0,
+        "p75": 8361.0
+      }
+    },
+    "target_position_distribution": {
+      "max": 0.5163,
+      "mean": 0.5002,
+      "median": 0.5001,
+      "min": 0.4877,
+      "n": 156,
+      "p25": 0.4995,
+      "p75": 0.501
+    },
+    "token_distribution_by_length": {
+      "128K": {
+        "max": 130148.0,
+        "mean": 129760.4,
+        "median": 129740.0,
+        "min": 129392.0,
+        "n": 34,
+        "p25": 129516.0,
+        "p75": 129915.0
+      },
+      "16K": {
+        "max": 16265.0,
+        "mean": 16188.4,
+        "median": 16181.0,
+        "min": 16130.0,
+        "n": 34,
+        "p25": 16164.0,
+        "p75": 16213.0
+      },
+      "32K": {
+        "max": 32526.0,
+        "mean": 32408.1,
+        "median": 32408.0,
+        "min": 32309.0,
+        "n": 34,
+        "p25": 32358.0,
+        "p75": 32463.0
+      },
+      "4K": {
+        "max": 4067.0,
+        "mean": 4016.2,
+        "median": 4013.0,
+        "min": 3960.0,
+        "n": 34,
+        "p25": 3998.0,
+        "p75": 4033.0
+      },
+      "64K": {
+        "max": 65036.0,
+        "mean": 64863.1,
+        "median": 64851.0,
+        "min": 64660.0,
+        "n": 34,
+        "p25": 64731.0,
+        "p75": 64967.0
+      },
+      "8K": {
+        "max": 8135.0,
+        "mean": 8077.5,
+        "median": 8079.0,
+        "min": 8026.0,
+        "n": 34,
+        "p25": 8055.0,
+        "p75": 8099.0
+      }
+    },
+    "total": 204
+  },
+  "min_fill_ratio": 0.95,
+  "model": {
+    "chat_template_used": true,
+    "config_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "context_limit": 131072,
+    "generation_tokens_reserved": 512,
+    "id": "meta-llama/Llama-3.2-3B-Instruct",
+    "prompt_hash": "4e6a3c47baa301a0",
+    "prompt_version": "llama_chat_v1",
+    "response_format_version": "json_evidence_answer_v1"
+  },
+  "normalized_records_by_domain": {
+    "CLINICAL_TRIALS": 74683,
+    "FDA": 25737,
+    "FRED": 20925,
+    "SEC": 38764
+  },
+  "position_tolerance": 0.05,
+  "question_families": {
+    "answerable": 26,
+    "by_domain": {
+      "CLINICAL_TRIALS": 8,
+      "FDA": 8,
+      "FRED": 10,
+      "SEC": 8
+    },
+    "by_question_type": {
+      "DIRECT_RETRIEVAL": 8,
+      "ENTITY_UNIT_BINDING": 5,
+      "RETRIEVAL_CALCULATION": 9,
+      "TEMPORAL_VERSION": 4,
+      "UNANSWERABLE": 8
+    },
+    "by_template": {
+      "CT_ARM_TYPE_BINDING": 1,
+      "CT_DATE_FIELD_SELECTION": 1,
+      "CT_DIRECT_ENROLLMENT": 2,
+      "CT_ENROLLMENT_DIFFERENCE": 1,
+      "CT_STUDY_DURATION_DAYS": 1,
+      "CT_UNANSWERABLE_FIELD_ABSENT": 2,
+      "FDA_DIRECT_PRODUCT_ATTRIBUTE": 2,
+      "FDA_ORIGINAL_VS_SUPPLEMENT": 1,
+      "FDA_PRODUCT_COUNT": 1,
+      "FDA_STRENGTH_PRODUCT_BINDING": 1,
+      "FDA_STRENGTH_RATIO": 1,
+      "FDA_UNANSWERABLE_ATTRIBUTE_ABSENT": 2,
+      "FRED_BASIS_BINDING": 2,
+      "FRED_DIRECT_OBSERVATION": 2,
+      "FRED_PERCENT_CHANGE": 2,
+      "FRED_SERIES_SPREAD": 1,
+      "FRED_UNANSWERABLE_NO_OBSERVATION": 2,
+      "FRED_VINTAGE_SELECTION": 1,
+      "SEC_DIRECT_XBRL_FACT": 2,
+      "SEC_ENTITY_BINDING": 1,
+      "SEC_OPERATING_MARGIN": 1,
+      "SEC_QUARTER_VS_ANNUAL_FRAME": 1,
+      "SEC_UNANSWERABLE_CONCEPT_OR_PERIOD_ABSENT": 2,
+      "SEC_YOY_GROWTH_PERCENT": 1
+    },
+    "configured_target": {
+      "CLINICAL_TRIALS": 8,
+      "FDA": 8,
+      "FRED": 10,
+      "SEC": 8
+    },
+    "total": 34,
+    "unanswerable": 8
+  },
+  "representative_families": [
+    {
+      "answer_type": "INTEGER",
+      "answer_unit": "participants",
+      "answerable": true,
+      "calculation_spec": {
+        "denominator_record_id": null,
+        "formula": "minuend - subtrahend",
+        "numerator_record_id": null,
+        "operand_values": {
+          "minuend": 180.0,
+          "subtrahend": 100.0
+        },
+        "operands": {
+          "minuend": "CT-NCT03656445-enrollment-count-535dc578",
+          "subtrahend": "CT-NCT03800927-enrollment-count-5f640681"
+        },
+        "operation": "difference",
+        "raw_result": 80.0,
+        "result_unit": "participants",
+        "round_decimals": 0,
+        "rounded_result": 80.0
+      },
+      "context_variants": [
+        {
+          "context_sha256": "7e37313ac4c6b086",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 13,
+            "WRONG_ENTITY": 14,
+            "WRONG_FIELD": 14
+          },
+          "fill_ratio": 0.9866,
+          "instance_id": "CT_0004_4K",
+          "n_records": 43,
+          "nominal": "4K",
+          "target_evidence_tokens": [
+            1947,
+            2122
+          ],
+          "target_position_relative": 0.5034644889878743,
+          "tokens_actual": 4041
+        },
+        {
+          "context_sha256": "8b837ee94caef535",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 29,
+            "WRONG_ENTITY": 26,
+            "WRONG_FIELD": 26
+          },
+          "fill_ratio": 0.9899,
+          "instance_id": "CT_0004_8K",
+          "n_records": 83,
+          "nominal": "8K",
+          "target_evidence_tokens": [
+            3963,
+            4138
+          ],
+          "target_position_relative": 0.49950672092736464,
+          "tokens_actual": 8109
+        },
+        {
+          "context_sha256": "1c09b5f853cda098",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 61,
+            "WRONG_ENTITY": 50,
+            "WRONG_FIELD": 52
+          },
+          "fill_ratio": 0.99,
+          "instance_id": "CT_0004_16K",
+          "n_records": 165,
+          "nominal": "16K",
+          "target_evidence_tokens": [
+            8054,
+            8229
+          ],
+          "target_position_relative": 0.5019420468557336,
+          "tokens_actual": 16220
+        },
+        {
+          "context_sha256": "7a31fdb1c2f84852",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 141,
+            "WRONG_ENTITY": 111,
+            "WRONG_FIELD": 61
+          },
+          "fill_ratio": 0.989,
+          "instance_id": "CT_0004_32K",
+          "n_records": 315,
+          "nominal": "32K",
+          "target_evidence_tokens": [
+            16154,
+            16329
+          ],
+          "target_position_relative": 0.5011571216983461,
+          "tokens_actual": 32408
+        },
+        {
+          "context_sha256": "15acc38f0d923257",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 306,
+            "WRONG_ENTITY": 236,
+            "WRONG_FIELD": 61
+          },
+          "fill_ratio": 0.9908,
+          "instance_id": "CT_0004_64K",
+          "n_records": 605,
+          "nominal": "64K",
+          "target_evidence_tokens": [
+            32370,
+            32545
+          ],
+          "target_position_relative": 0.49986909382122835,
+          "tokens_actual": 64932
+        },
+        {
+          "context_sha256": "638ea9ef02fb3fe2",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 646,
+            "WRONG_ENTITY": 492,
+            "WRONG_FIELD": 61
+          },
+          "fill_ratio": 0.9905,
+          "instance_id": "CT_0004_128K",
+          "n_records": 1201,
+          "nominal": "128K",
+          "target_evidence_tokens": [
+            64854,
+            65029
+          ],
+          "target_position_relative": 0.500227230712349,
+          "tokens_actual": 129824
+        }
+      ],
+      "domain": "CLINICAL_TRIALS",
+      "gold_answer": "80",
+      "gold_answer_normalized": 80.0,
+      "gold_evidence": [
+        {
+          "concept": "Enrollment (participants) [enrollment.count]",
+          "entity": "Tranexamic Acid in Total Knee Replacement [NCT03656445]",
+          "period": null,
+          "record_id": "CT-NCT03656445-enrollment-count-535dc578",
+          "role": "minuend",
+          "source_url": "https://clinicaltrials.gov/study/NCT03656445",
+          "unit": "participants",
+          "value": 180.0,
+          "version": "lastupdate:2018-09-05"
+        },
+        {
+          "concept": "Enrollment (participants) [enrollment.count]",
+          "entity": "Long-Duration Ultrasound for Knee Osteoarthritis [NCT03800927]",
+          "period": null,
+          "record_id": "CT-NCT03800927-enrollment-count-5f640681",
+          "role": "subtrahend",
+          "source_url": "https://clinicaltrials.gov/study/NCT03800927",
+          "unit": "participants",
+          "value": 100.0,
+          "version": "lastupdate:2023-06-26"
+        }
+      ],
+      "numeric_tolerance": 0.0,
+      "question": "Using only the ClinicalTrials.gov records supplied in the context, subtract the enrollment count of trial NCT03800927 from the enrollment count of trial NCT03656445. Report the difference as an integer number of participants.",
+      "question_family_id": "CT_0004",
+      "question_type": "RETRIEVAL_CALCULATION",
+      "template_id": "CT_ENROLLMENT_DIFFERENCE",
+      "unanswerable_spec": null
+    },
+    {
+      "answer_type": "INSUFFICIENT_EVIDENCE",
+      "answer_unit": null,
+      "answerable": false,
+      "calculation_spec": null,
+      "context_variants": [
+        {
+          "context_sha256": "7331f53da35111d7",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 21,
+            "WRONG_ENTITY": 18,
+            "WRONG_FIELD": 4
+          },
+          "fill_ratio": 0.9797,
+          "instance_id": "FDA_0007_4K",
+          "n_records": 43,
+          "nominal": "4K",
+          "target_evidence_tokens": [
+            null,
+            null
+          ],
+          "target_position_relative": null,
+          "tokens_actual": 4013
+        },
+        {
+          "context_sha256": "47de0a6bb4e7a483",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 44,
+            "WRONG_ENTITY": 37,
+            "WRONG_FIELD": 5
+          },
+          "fill_ratio": 0.9824,
+          "instance_id": "FDA_0007_8K",
+          "n_records": 86,
+          "nominal": "8K",
+          "target_evidence_tokens": [
+            null,
+            null
+          ],
+          "target_position_relative": null,
+          "tokens_actual": 8048
+        },
+        {
+          "context_sha256": "d352e8a8acbdec57",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 93,
+            "WRONG_ENTITY": 73,
+            "WRONG_FIELD": 5
+          },
+          "fill_ratio": 0.9862,
+          "instance_id": "FDA_0007_16K",
+          "n_records": 171,
+          "nominal": "16K",
+          "target_evidence_tokens": [
+            null,
+            null
+          ],
+          "target_position_relative": null,
+          "tokens_actual": 16158
+        },
+        {
+          "context_sha256": "557fc1b513441bd5",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 191,
+            "WRONG_ENTITY": 144,
+            "WRONG_FIELD": 7
+          },
+          "fill_ratio": 0.9876,
+          "instance_id": "FDA_0007_32K",
+          "n_records": 342,
+          "nominal": "32K",
+          "target_evidence_tokens": [
+            null,
+            null
+          ],
+          "target_position_relative": null,
+          "tokens_actual": 32362
+        },
+        {
+          "context_sha256": "074ab0824765f7fd",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 389,
+            "WRONG_ENTITY": 291,
+            "WRONG_FIELD": 7
+          },
+          "fill_ratio": 0.989,
+          "instance_id": "FDA_0007_64K",
+          "n_records": 687,
+          "nominal": "64K",
+          "target_evidence_tokens": [
+            null,
+            null
+          ],
+          "target_position_relative": null,
+          "tokens_actual": 64816
+        },
+        {
+          "context_sha256": "ff441300b3fb74cd",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 778,
+            "WRONG_ENTITY": 585,
+            "WRONG_FIELD": 7
+          },
+          "fill_ratio": 0.9891,
+          "instance_id": "FDA_0007_128K",
+          "n_records": 1370,
+          "nominal": "128K",
+          "target_evidence_tokens": [
+            null,
+            null
+          ],
+          "target_position_relative": null,
+          "tokens_actual": 129639
+        }
+      ],
+      "domain": "FDA",
+      "gold_answer": null,
+      "gold_answer_normalized": "INSUFFICIENT_EVIDENCE",
+      "gold_evidence": [],
+      "numeric_tolerance": null,
+      "question": "Using only the Drugs@FDA records supplied in the context, what is the route of administration for product number 001 under FDA application ANDA215255 (brand name \"CANAGLIFLOZIN AND METFORMIN HYDROCHLORIDE\")?",
+      "question_family_id": "FDA_0007",
+      "question_type": "UNANSWERABLE",
+      "template_id": "FDA_UNANSWERABLE_ATTRIBUTE_ABSENT",
+      "unanswerable_spec": {
+        "forbidden_concept_aliases": [
+          "product.route"
+        ],
+        "missing_concept": "product.route",
+        "missing_entity_id": "ANDA215255/001",
+        "missing_period": null,
+        "reason": "The Drugs@FDA record for product ANDA215255/001 omits product.route; openFDA returns no such field for this product. Verified by exhaustive scan of the normalized pool: zero records match entity_id=ANDA215255/001 and concept=product.route. Other products in the pool do carry this attribute, so the omission is a property of this product.",
+        "reason_code": "ATTRIBUTE_NOT_LISTED_FOR_PRODUCT",
+        "verified_absent_in_pool": true
+      }
+    },
+    {
+      "answer_type": "NUMERIC",
+      "answer_unit": "Thousands of Persons",
+      "answerable": true,
+      "calculation_spec": null,
+      "context_variants": [
+        {
+          "context_sha256": "66c8d79b8fee857f",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 20,
+            "WRONG_FIELD": 10,
+            "WRONG_PERIOD": 13,
+            "WRONG_SERIES_VARIANT": 1,
+            "WRONG_VERSION": 5
+          },
+          "fill_ratio": 0.9763,
+          "instance_id": "FRED_0008_4K",
+          "n_records": 50,
+          "nominal": "4K",
+          "target_evidence_tokens": [
+            1920,
+            2007
+          ],
+          "target_position_relative": 0.49099774943735935,
+          "tokens_actual": 3999
+        },
+        {
+          "context_sha256": "b3d70528caa2046e",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 40,
+            "WRONG_FIELD": 23,
+            "WRONG_PERIOD": 31,
+            "WRONG_SERIES_VARIANT": 1,
+            "WRONG_VERSION": 5
+          },
+          "fill_ratio": 0.9861,
+          "instance_id": "FRED_0008_8K",
+          "n_records": 101,
+          "nominal": "8K",
+          "target_evidence_tokens": [
+            3992,
+            4079
+          ],
+          "target_position_relative": 0.49956672443674177,
+          "tokens_actual": 8078
+        },
+        {
+          "context_sha256": "114935197ee8a02f",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 81,
+            "WRONG_FIELD": 53,
+            "WRONG_PERIOD": 62,
+            "WRONG_SERIES_VARIANT": 1,
+            "WRONG_VERSION": 5
+          },
+          "fill_ratio": 0.9876,
+          "instance_id": "FRED_0008_16K",
+          "n_records": 203,
+          "nominal": "16K",
+          "target_evidence_tokens": [
+            8055,
+            8142
+          ],
+          "target_position_relative": 0.5004944070205797,
+          "tokens_actual": 16181
+        },
+        {
+          "context_sha256": "ba153553456a0f5b",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 160,
+            "WRONG_FIELD": 115,
+            "WRONG_PERIOD": 123,
+            "WRONG_SERIES_VARIANT": 1,
+            "WRONG_VERSION": 5
+          },
+          "fill_ratio": 0.9862,
+          "instance_id": "FRED_0008_32K",
+          "n_records": 405,
+          "nominal": "32K",
+          "target_evidence_tokens": [
+            16133,
+            16220
+          ],
+          "target_position_relative": 0.5005879622466347,
+          "tokens_actual": 32315
+        },
+        {
+          "context_sha256": "d1e96b2b5272090a",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 323,
+            "WRONG_FIELD": 236,
+            "WRONG_PERIOD": 243,
+            "WRONG_SERIES_VARIANT": 1,
+            "WRONG_VERSION": 5
+          },
+          "fill_ratio": 0.9872,
+          "instance_id": "FRED_0008_64K",
+          "n_records": 809,
+          "nominal": "64K",
+          "target_evidence_tokens": [
+            32310,
+            32397
+          ],
+          "target_position_relative": 0.5000927428703918,
+          "tokens_actual": 64695
+        },
+        {
+          "context_sha256": "4412c60913110579",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 645,
+            "WRONG_FIELD": 479,
+            "WRONG_PERIOD": 486,
+            "WRONG_SERIES_VARIANT": 1,
+            "WRONG_VERSION": 5
+          },
+          "fill_ratio": 0.9872,
+          "instance_id": "FRED_0008_128K",
+          "n_records": 1617,
+          "nominal": "128K",
+          "target_evidence_tokens": [
+            64654,
+            64741
+          ],
+          "target_position_relative": 0.5000115926796093,
+          "tokens_actual": 129392
+        }
+      ],
+      "domain": "FRED",
+      "gold_answer": "144,120",
+      "gold_answer_normalized": 144120.0,
+      "gold_evidence": [
+        {
+          "concept": "All Employees, Total Nonfarm (Seasonally Adjusted) [PAYEMS]",
+          "entity": "United States [US]",
+          "period": "2021-03-01",
+          "record_id": "FRED-PAYEMS-2021-03-01-2021-04-29-4117a714",
+          "role": "target_value",
+          "source_url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=PAYEMS&vintage_date=2021-04-29&cosd=1990-01-01",
+          "unit": "Thousands of Persons",
+          "value": 144120.0,
+          "version": "vintage:2021-04-29"
+        }
+      ],
+      "numeric_tolerance": 0.5,
+      "question": "Using only the FRED/ALFRED records supplied in the context, what value did FRED series PAYEMS (\"All Employees, Total Nonfarm\"), measured in Thousands of Persons, seasonally adjusted, monthly frequency show for the observation dated 2021-03-01 **as of the vintage date 2021-04-29**? Report the value from that vintage exactly.",
+      "question_family_id": "FRED_0008",
+      "question_type": "TEMPORAL_VERSION",
+      "template_id": "FRED_VINTAGE_SELECTION",
+      "unanswerable_spec": null
+    },
+    {
+      "answer_type": "NUMERIC",
+      "answer_unit": "USD",
+      "answerable": true,
+      "calculation_spec": null,
+      "context_variants": [
+        {
+          "context_sha256": "2c7dfd8f6ee12210",
+          "distractor_counts": {
+            "NEAR_MATCH_VALUE": 3,
+            "OTHER_SAME_DOMAIN": 4,
+            "WRONG_ENTITY": 7,
+            "WRONG_FIELD": 5,
+            "WRONG_PERIOD": 8
+          },
+          "fill_ratio": 0.9668,
+          "instance_id": "SEC_0003_4K",
+          "n_records": 28,
+          "nominal": "4K",
+          "target_evidence_tokens": [
+            1862,
+            2001
+          ],
+          "target_position_relative": 0.48775252525252527,
+          "tokens_actual": 3960
+        },
+        {
+          "context_sha256": "f74b439b91eb768a",
+          "distractor_counts": {
+            "NEAR_MATCH_VALUE": 8,
+            "OTHER_SAME_DOMAIN": 13,
+            "WRONG_ENTITY": 7,
+            "WRONG_FIELD": 14,
+            "WRONG_PERIOD": 14
+          },
+          "fill_ratio": 0.993,
+          "instance_id": "SEC_0003_8K",
+          "n_records": 57,
+          "nominal": "8K",
+          "target_evidence_tokens": [
+            4001,
+            4140
+          ],
+          "target_position_relative": 0.5003687768899816,
+          "tokens_actual": 8135
+        },
+        {
+          "context_sha256": "82b3dcffa53f6f11",
+          "distractor_counts": {
+            "NEAR_MATCH_VALUE": 12,
+            "OTHER_SAME_DOMAIN": 37,
+            "WRONG_ENTITY": 7,
+            "WRONG_FIELD": 27,
+            "WRONG_PERIOD": 30
+          },
+          "fill_ratio": 0.9927,
+          "instance_id": "SEC_0003_16K",
+          "n_records": 114,
+          "nominal": "16K",
+          "target_evidence_tokens": [
+            8116,
+            8255
+          ],
+          "target_position_relative": 0.5032585305871503,
+          "tokens_actual": 16265
+        },
+        {
+          "context_sha256": "f10d21a1d2e5456c",
+          "distractor_counts": {
+            "NEAR_MATCH_VALUE": 12,
+            "OTHER_SAME_DOMAIN": 81,
+            "WRONG_ENTITY": 7,
+            "WRONG_FIELD": 60,
+            "WRONG_PERIOD": 66
+          },
+          "fill_ratio": 0.9912,
+          "instance_id": "SEC_0003_32K",
+          "n_records": 227,
+          "nominal": "32K",
+          "target_evidence_tokens": [
+            16170,
+            16309
+          ],
+          "target_position_relative": 0.4999692127705428,
+          "tokens_actual": 32481
+        },
+        {
+          "context_sha256": "8eb135ad1abbf5b1",
+          "distractor_counts": {
+            "NEAR_MATCH_VALUE": 12,
+            "OTHER_SAME_DOMAIN": 173,
+            "WRONG_ENTITY": 7,
+            "WRONG_FIELD": 128,
+            "WRONG_PERIOD": 133
+          },
+          "fill_ratio": 0.9924,
+          "instance_id": "SEC_0003_64K",
+          "n_records": 454,
+          "nominal": "64K",
+          "target_evidence_tokens": [
+            32399,
+            32538
+          ],
+          "target_position_relative": 0.49923888308014025,
+          "tokens_actual": 65036
+        },
+        {
+          "context_sha256": "ff939568362fef67",
+          "distractor_counts": {
+            "NEAR_MATCH_VALUE": 12,
+            "OTHER_SAME_DOMAIN": 421,
+            "WRONG_ENTITY": 7,
+            "WRONG_FIELD": 319,
+            "WRONG_PERIOD": 154
+          },
+          "fill_ratio": 0.9928,
+          "instance_id": "SEC_0003_128K",
+          "n_records": 914,
+          "nominal": "128K",
+          "target_evidence_tokens": [
+            65042,
+            65181
+          ],
+          "target_position_relative": 0.5003573349727196,
+          "tokens_actual": 130130
+        }
+      ],
+      "domain": "SEC",
+      "gold_answer": "-492,000,000",
+      "gold_answer_normalized": -492000000.0,
+      "gold_evidence": [
+        {
+          "concept": "Net Cash Provided by (Used in) Investing Activities [us-gaap:NetCashProvidedByUsedInInvestingActivities]",
+          "entity": "PFIZER INC [0000078003]",
+          "period": "CY2010",
+          "record_id": "SEC-0000078003-NetCashProvidedByUsedInI-USD-CY2010-0000078003-13-000006-0cfaf545",
+          "role": "target_value",
+          "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000078003.json",
+          "unit": "USD",
+          "value": -492000000.0,
+          "version": "10-K|0000078003-13-000006"
+        }
+      ],
+      "numeric_tolerance": 0.5,
+      "question": "Using only the SEC XBRL company-facts records supplied in the context, what value did PFIZER INC (CIK 0000078003) report for us-gaap:NetCashProvidedByUsedInInvestingActivities for the annual XBRL frame CY2010, in USD? Report the exact value for that filer.",
+      "question_family_id": "SEC_0003",
+      "question_type": "ENTITY_UNIT_BINDING",
+      "template_id": "SEC_ENTITY_BINDING",
+      "unanswerable_spec": null
+    }
+  ],
+  "schema_version": "1.1.0",
+  "seed": 20240817,
+  "source_limitations": [
+    {
+      "detail": "NY.GDP.MKTP.KD [NLD..NLD]: [world_bank] GET https://api.worldbank.org/v2/country/NLD/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/NLD/indicator/NY.GDP.MKTP.KD?format=json&per_page=500",
+      "domain": "WORLD_BANK",
+      "kind": "REQUEST_ERROR"
+    },
+    {
+      "detail": "NY.GDP.MKTP.KD [SAU..SAU]: [world_bank] GET https://api.worldbank.org/v2/country/SAU/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTPSConnectionPool(host='api.worldbank.org', port=443): Read timed out. (read timeout=4.0)",
+      "domain": "WORLD_BANK",
+      "kind": "REQUEST_ERROR"
+    },
+    {
+      "detail": "NY.GDP.MKTP.KD [CHE..CHE]: [world_bank] GET https://api.worldbank.org/v2/country/CHE/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/CHE/indicator/NY.GDP.MKTP.KD?format=json&per_page=500",
+      "domain": "WORLD_BANK",
+      "kind": "REQUEST_ERROR"
+    },
+    {
+      "detail": "NY.GDP.MKTP.KD [POL..POL]: [world_bank] GET https://api.worldbank.org/v2/country/POL/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/POL/indicator/NY.GDP.MKTP.KD?format=json&per_page=500",
+      "domain": "WORLD_BANK",
+      "kind": "REQUEST_ERROR"
+    },
+    {
+      "detail": "NY.GDP.MKTP.KD [SWE..SWE]: [world_bank] GET https://api.worldbank.org/v2/country/SWE/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTPSConnectionPool(host='api.worldbank.org', port=443): Read timed out. (read timeout=4.0)",
+      "domain": "WORLD_BANK",
+      "kind": "REQUEST_ERROR"
+    },
+    {
+      "detail": "NY.GDP.PCAP.CD [FRA..FRA]: [world_bank] GET https://api.worldbank.org/v2/country/FRA/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTPSConnectionPool(host='api.worldbank.org', port=443): Read timed out. (read timeout=4.0)",
+      "domain": "WORLD_BANK",
+      "kind": "REQUEST_ERROR"
+    },
+    {
+      "detail": "NY.GDP.PCAP.CD [BRA..BRA]: [world_bank] GET https://api.worldbank.org/v2/country/BRA/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/BRA/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+      "domain": "WORLD_BANK",
+      "kind": "REQUEST_ERROR"
+    },
+    {
+      "detail": "NY.GDP.PCAP.CD [ITA..ITA]: [world_bank] GET https://api.worldbank.org/v2/country/ITA/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/ITA/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+      "domain": "WORLD_BANK",
+      "kind": "REQUEST_ERROR"
+    },
+    {
+      "detail": "NY.GDP.PCAP.CD [CAN..CAN]: [world_bank] GET https://api.worldbank.org/v2/country/CAN/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/CAN/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+      "domain": "WORLD_BANK",
+      "kind": "REQUEST_ERROR"
+    },
+    {
+      "detail": "NY.GDP.PCAP.CD [KOR..KOR]: [world_bank] GET https://api.worldbank.org/v2/country/KOR/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/KOR/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+      "domain": "WORLD_BANK",
+      "kind": "REQUEST_ERROR"
+    }
+  ],
+  "sources": [
+    {
+      "api_base": "https://clinicaltrials.gov/api/v2",
+      "api_version": "v2",
+      "blocked": false,
+      "blocker_reason": null,
+      "domain": "CLINICAL_TRIALS",
+      "errors": [],
+      "identifiers": [
+        "metformin",
+        "atorvastatin",
+        "pembrolizumab",
+        "insulin glargine",
+        "semaglutide",
+        "rivaroxaban",
+        "aspirin",
+        "tranexamic acid"
+      ],
+      "n_normalized_records": 0,
+      "n_raw_payloads": 24,
+      "n_raw_records": 2400,
+      "n_requests": 0,
+      "notes": null,
+      "retrieved_at": "2026-08-09T04:32:06Z",
+      "source": "CLINICALTRIALS_GOV_V2"
+    },
+    {
+      "api_base": "https://api.fda.gov/drug",
+      "api_version": "openfda-drugsfda",
+      "blocked": false,
+      "blocker_reason": null,
+      "domain": "FDA",
+      "errors": [],
+      "identifiers": [
+        "METFORMIN HYDROCHLORIDE",
+        "ATORVASTATIN CALCIUM",
+        "LISINOPRIL",
+        "AMLODIPINE BESYLATE",
+        "LEVOTHYROXINE SODIUM",
+        "OMEPRAZOLE",
+        "SERTRALINE HYDROCHLORIDE",
+        "GABAPENTIN",
+        "IBUPROFEN",
+        "AMOXICILLIN",
+        "PREDNISONE",
+        "WARFARIN SODIUM",
+        "MONTELUKAST SODIUM",
+        "LOSARTAN POTASSIUM",
+        "CIPROFLOXACIN HYDROCHLORIDE"
+      ],
+      "n_normalized_records": 0,
+      "n_raw_payloads": 15,
+      "n_raw_records": 960,
+      "n_requests": 0,
+      "notes": null,
+      "retrieved_at": "2026-08-09T04:32:06Z",
+      "source": "OPENFDA_DRUGSFDA"
+    },
+    {
+      "api_base": "https://data.sec.gov/api/xbrl",
+      "api_version": "xbrl-companyfacts-v1",
+      "blocked": false,
+      "blocker_reason": null,
+      "domain": "SEC",
+      "errors": [],
+      "identifiers": [
+        "0000320193",
+        "0000789019",
+        "0001018724",
+        "0000021344",
+        "0000104169",
+        "0000200406",
+        "0000078003",
+        "0000019617"
+      ],
+      "n_normalized_records": 0,
+      "n_raw_payloads": 8,
+      "n_raw_records": 259528,
+      "n_requests": 0,
+      "notes": null,
+      "retrieved_at": "2026-08-09T04:32:06Z",
+      "source": "SEC_EDGAR_XBRL_COMPANYFACTS"
+    },
+    {
+      "api_base": "https://api.worldbank.org/v2",
+      "api_version": "v2",
+      "blocked": false,
+      "blocker_reason": null,
+      "domain": "WORLD_BANK",
+      "errors": [
+        "NY.GDP.MKTP.KD [NLD..NLD]: [world_bank] GET https://api.worldbank.org/v2/country/NLD/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/NLD/indicator/NY.GDP.MKTP.KD?format=json&per_page=500",
+        "NY.GDP.MKTP.KD [SAU..SAU]: [world_bank] GET https://api.worldbank.org/v2/country/SAU/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTPSConnectionPool(host='api.worldbank.org', port=443): Read timed out. (read timeout=4.0)",
+        "NY.GDP.MKTP.KD [CHE..CHE]: [world_bank] GET https://api.worldbank.org/v2/country/CHE/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/CHE/indicator/NY.GDP.MKTP.KD?format=json&per_page=500",
+        "NY.GDP.MKTP.KD [POL..POL]: [world_bank] GET https://api.worldbank.org/v2/country/POL/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/POL/indicator/NY.GDP.MKTP.KD?format=json&per_page=500",
+        "NY.GDP.MKTP.KD [SWE..SWE]: [world_bank] GET https://api.worldbank.org/v2/country/SWE/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTPSConnectionPool(host='api.worldbank.org', port=443): Read timed out. (read timeout=4.0)",
+        "NY.GDP.PCAP.CD [FRA..FRA]: [world_bank] GET https://api.worldbank.org/v2/country/FRA/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTPSConnectionPool(host='api.worldbank.org', port=443): Read timed out. (read timeout=4.0)",
+        "NY.GDP.PCAP.CD [BRA..BRA]: [world_bank] GET https://api.worldbank.org/v2/country/BRA/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/BRA/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.PCAP.CD [ITA..ITA]: [world_bank] GET https://api.worldbank.org/v2/country/ITA/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/ITA/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.PCAP.CD [CAN..CAN]: [world_bank] GET https://api.worldbank.org/v2/country/CAN/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/CAN/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.PCAP.CD [KOR..KOR]: [world_bank] GET https://api.worldbank.org/v2/country/KOR/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/KOR/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.PCAP.CD [MEX..MEX]: [world_bank] GET https://api.worldbank.org/v2/country/MEX/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/MEX/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.PCAP.CD [ESP..ESP]: [world_bank] GET https://api.worldbank.org/v2/country/ESP/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/ESP/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.PCAP.CD [IDN..IDN]: [world_bank] GET https://api.worldbank.org/v2/country/IDN/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/IDN/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.PCAP.CD [TUR..TUR]: [world_bank] GET https://api.worldbank.org/v2/country/TUR/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTPSConnectionPool(host='api.worldbank.org', port=443): Read timed out. (read timeout=4.0)",
+        "NY.GDP.PCAP.CD [NLD..NLD]: [world_bank] GET https://api.worldbank.org/v2/country/NLD/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/NLD/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.PCAP.CD [POL..POL]: [world_bank] GET https://api.worldbank.org/v2/country/POL/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/POL/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [DEU..DEU]: [world_bank] GET https://api.worldbank.org/v2/country/DEU/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/DEU/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [BRA..BRA]: [world_bank] GET https://api.worldbank.org/v2/country/BRA/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/BRA/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [ITA..ITA]: [world_bank] GET https://api.worldbank.org/v2/country/ITA/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/ITA/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [ESP..ESP]: [world_bank] GET https://api.worldbank.org/v2/country/ESP/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/ESP/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [IDN..IDN]: [world_bank] GET https://api.worldbank.org/v2/country/IDN/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/IDN/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [TUR..TUR]: [world_bank] GET https://api.worldbank.org/v2/country/TUR/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/TUR/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [NLD..NLD]: [world_bank] GET https://api.worldbank.org/v2/country/NLD/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTPSConnectionPool(host='api.worldbank.org', port=443): Read timed out. (read timeout=4.0)",
+        "NY.GDP.MKTP.KD.ZG [SAU..SAU]: [world_bank] GET https://api.worldbank.org/v2/country/SAU/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/SAU/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [CHE..CHE]: [world_bank] GET https://api.worldbank.org/v2/country/CHE/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/CHE/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [POL..POL]: [world_bank] GET https://api.worldbank.org/v2/country/POL/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/POL/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [SWE..SWE]: [world_bank] GET https://api.worldbank.org/v2/country/SWE/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/SWE/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500"
+      ],
+      "identifiers": [
+        "NY.GDP.MKTP.CD",
+        "NY.GDP.MKTP.KD",
+        "NY.GDP.PCAP.CD",
+        "NY.GDP.MKTP.KD.ZG"
+      ],
+      "n_normalized_records": 0,
+      "n_raw_payloads": 53,
+      "n_raw_records": 3498,
+      "n_requests": 65,
+      "notes": null,
+      "retrieved_at": "2026-08-09T04:33:16Z",
+      "source": "WORLD_BANK_INDICATORS_V2"
+    }
+  ],
+  "target_position": 0.5,
+  "tokenizer": {
+    "class": "TokenizersBackend",
+    "id": "hf:meta-llama/Llama-3.2-3B-Instruct",
+    "is_approximate": false,
+    "revision": null,
+    "version": "transformers==5.14.1; tokenizers==0.22.2"
+  },
+  "unavailable_variants": {
+    "by_domain": {},
+    "by_length": {},
+    "by_reason_code": {},
+    "detail": [],
+    "total": 0
+  },
+  "validation": {
+    "checks": [
+      {
+        "check_id": "A",
+        "message": "",
+        "n_checked": 238,
+        "n_failed": 0,
+        "name": "unique IDs (families and instances)",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "AA",
+        "message": "",
+        "n_checked": 204,
+        "n_failed": 0,
+        "name": "model prompt token-budget and provenance",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "B",
+        "message": "",
+        "n_checked": 34,
+        "n_failed": 0,
+        "name": "no duplicate question families",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "C",
+        "message": "",
+        "n_checked": 34,
+        "n_failed": 0,
+        "name": "valid source provenance",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "D",
+        "message": "",
+        "n_checked": 34,
+        "n_failed": 0,
+        "name": "deterministic gold-answer recomputation",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "E",
+        "message": "",
+        "n_checked": 204,
+        "n_failed": 0,
+        "name": "gold evidence present in every answerable context",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "F",
+        "message": "",
+        "n_checked": 204,
+        "n_failed": 0,
+        "name": "gold evidence absent for unanswerable families",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "G",
+        "message": "",
+        "n_checked": 34,
+        "n_failed": 0,
+        "name": "identical question across context-length variants",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "H",
+        "message": "",
+        "n_checked": 34,
+        "n_failed": 0,
+        "name": "identical gold answer across context-length variants",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "I",
+        "message": "",
+        "n_checked": 34,
+        "n_failed": 0,
+        "name": "identical gold evidence across context-length variants",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "J",
+        "message": "",
+        "n_checked": 34,
+        "n_failed": 0,
+        "name": "nested-context lineage",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "K",
+        "message": "",
+        "n_checked": 204,
+        "n_failed": 0,
+        "name": "token-length compliance",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "L",
+        "message": "",
+        "n_checked": 204,
+        "n_failed": 0,
+        "name": "target-position compliance",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "M",
+        "message": "",
+        "n_checked": 204,
+        "n_failed": 0,
+        "name": "record-boundary integrity",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "N",
+        "message": "",
+        "n_checked": 9,
+        "n_failed": 0,
+        "name": "unit consistency in calculations",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "O",
+        "message": "",
+        "n_checked": 34,
+        "n_failed": 0,
+        "name": "answer-type / schema validity",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "P",
+        "message": "",
+        "n_checked": 204,
+        "n_failed": 0,
+        "name": "distractor metadata completeness",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "Q",
+        "message": "",
+        "n_checked": 34,
+        "n_failed": 0,
+        "name": "no NaN or invalid numeric answers",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "R",
+        "message": "",
+        "n_checked": 204,
+        "n_failed": 0,
+        "name": "no context truncation through target evidence",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "S",
+        "message": "",
+        "n_checked": 204,
+        "n_failed": 0,
+        "name": "no answer leakage for unanswerable families",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "T",
+        "message": "",
+        "n_checked": 9,
+        "n_failed": 0,
+        "name": "calculation operands recomputable",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "U",
+        "message": "",
+        "n_checked": 5,
+        "n_failed": 0,
+        "name": "all five question types represented",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "V",
+        "message": "",
+        "n_checked": 204,
+        "n_failed": 0,
+        "name": "no duplicate answer sources in answerable contexts",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "W",
+        "message": "",
+        "n_checked": 204,
+        "n_failed": 0,
+        "name": "opaque display ID mapping integrity",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "X",
+        "message": "",
+        "n_checked": 204,
+        "n_failed": 0,
+        "name": "evidence-equivalence consistency",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "Y",
+        "message": "",
+        "n_checked": 204,
+        "n_failed": 0,
+        "name": "distractor taxonomy semantic constraints",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "Z",
+        "message": "",
+        "n_checked": 34,
+        "n_failed": 0,
+        "name": "model-facing questions do not leak answerability",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      }
+    ],
+    "counts": {
+      "critical_failed": 0,
+      "failed": 0,
+      "passed": 27,
+      "skipped": 0,
+      "total": 27,
+      "warning_failed": 0
+    },
+    "failure_detail": {},
+    "has_critical_failures": false
+  }
+}

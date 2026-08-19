@@ -52,6 +52,46 @@ class TokenizerConfig(BaseModel):
     allow_fallback: bool = False
 
 
+class ModelConfig(BaseModel):
+    """Model-under-test settings that affect prompt budgeting."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    id: Optional[str] = Field(
+        None,
+        description="Exact model checkpoint under test. None for historical datasets "
+        "that only measured record-context tokens.",
+    )
+    max_new_tokens: int = Field(
+        512,
+        description="Reserved generation budget. Prompt/input tokens must fit in the "
+        "verified model context limit minus this reserve.",
+    )
+
+    @model_validator(mode="after")
+    def _bounds(self) -> "ModelConfig":
+        if self.max_new_tokens <= 0:
+            raise ValueError("model.max_new_tokens must be positive")
+        return self
+
+
+class ModelPromptConfig(BaseModel):
+    """Frozen chat-template inputs for deterministic model-facing prompts."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    template_date: str = Field(
+        "09 Aug 2026",
+        description="Value passed to native Llama chat templates as `date_string`. "
+        "Freezes the `Today Date:` line so rendering never depends on wall-clock time.",
+    )
+    max_rendered_input_tokens: Optional[int] = Field(
+        None,
+        description="Optional experiment-specific hard cap on the complete rendered "
+        "model input. Used when hardware feasibility is below the model context limit.",
+    )
+
+
 class ContextConfig(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
@@ -134,7 +174,7 @@ class ValidationConfig(BaseModel):
 class PipelineConfig(BaseModel):
     """Root config object."""
 
-    model_config = ConfigDict(extra="forbid")
+    model_config = ConfigDict(extra="forbid", protected_namespaces=())
 
     name: str = "pilot"
     seed: int = 20240817
@@ -144,6 +184,8 @@ class PipelineConfig(BaseModel):
     write_parquet: bool = False
 
     tokenizer: TokenizerConfig = Field(default_factory=TokenizerConfig)
+    model: ModelConfig = Field(default_factory=ModelConfig)
+    model_prompt: ModelPromptConfig = Field(default_factory=ModelPromptConfig)
     context: ContextConfig = Field(default_factory=ContextConfig)
     http: HTTPConfig = Field(default_factory=HTTPConfig)
     validation: ValidationConfig = Field(default_factory=ValidationConfig)

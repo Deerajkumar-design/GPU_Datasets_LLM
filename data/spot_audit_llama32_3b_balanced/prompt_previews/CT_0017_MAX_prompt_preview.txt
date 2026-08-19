@@ -1,0 +1,104 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Cutting Knowledge Date: December 2023
+Today Date: 09 Aug 2026
+
+Answer using only the supplied records.
+
+Identify records matching the exact entity, period, version, field, unit, product, route, dosage form, arm, series, or other conditions requested by the question.
+
+If the supplied records do not contain sufficient evidence to answer the question, return INSUFFICIENT_EVIDENCE.
+
+Do not infer or fabricate missing information.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+KNOWLEDGE RECORDS:
+
+<RECORD id="R4068776E52" source="CLINICALTRIALS_GOV_V2">
+entity: Pembrolizumab (MK-3475) Versus Standard Treatment for Recurrent or Metastatic Head and Neck Cancer (MK-3475-040/KEYNOTE-040) [NCT02252042]
+field: Secondary outcome timeframe: Number of Participants Who Experienced At Least One Adverse Event (AE) in All Participants [outcome.secondary.timeframe]
+value: Up to approximately 33 months
+version: lastupdate:2023-07-17
+outcome: Number of Participants Who Experienced At Least One Adverse Event (AE) in All Participants
+status: COMPLETED
+</RECORD>
+<RECORD id="RA2FD46AF2B" source="CLINICALTRIALS_GOV_V2">
+entity: A Study of Setanaxib Co-Administered With Pembrolizumab in Patients With Recurrent or Metastatic Squamous Cell Carcinoma of Head and Neck (SCCHN) [NCT05323656]
+field: Intervention: Placebo [intervention.type]
+value: DRUG
+version: lastupdate:2025-09-02
+intervention: Placebo
+status: COMPLETED
+</RECORD>
+<RECORD id="R3220C60EA3" source="CLINICALTRIALS_GOV_V2">
+entity: The Acute Effect of Atorvastain on Renal Function in Patients With Type II Diabetes [NCT00678522]
+field: Last update posted date [study.last_update_posted_date]
+period: 2008
+value: 2008-05-15
+version: lastupdate:2008-05-15
+status: COMPLETED
+</RECORD>
+<RECORD id="RAEC4BEBC3D" source="CLINICALTRIALS_GOV_V2">
+entity: Post-thrombotic Syndrome & Predictors of Recurrence in Catheter-related Thrombosis [NCT01999179]
+field: Intervention model [design.intervention_model]
+value: SINGLE_GROUP
+version: lastupdate:2022-05-18
+status: COMPLETED
+</RECORD>
+<RECORD id="R37EF5402DA" source="CLINICALTRIALS_GOV_V2">
+entity: A Research Study to See How Well CagriSema Helps People in China With Excess Body Weight Lose Weight [NCT05996848]
+field: Secondary outcome timeframe: CagriSema 2.4 mg/2.4 mg versus placebo and semaglutide 2.4 mg: Change in Diastolic Blood Pressure (DBP) [outcome.secondary.timeframe]
+value: From baseline (week 0) to end of treatment (wee
+
+...[middle omitted in compact preview; exact prompt is reproducible from context/question/prompt hash]...
+
+ve From Time Zero to Last Measurable Concentration (AUC0-t) of Metformin [outcome.primary.timeframe]
+value: Pre-dose, 0.5, 1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 16, 24, 28, 32, 48, 72, 96, 120, 144 and 168 hours post-dose
+version: lastupdate:2019-07-16
+outcome: Area Under the Plasma Concentration-Time Curve From Time Zero to Last Measurable Concentration (AUC0-t) of Metformin
+status: COMPLETED
+</RECORD>
+<RECORD id="R44F236B9A2" source="CLINICALTRIALS_GOV_V2">
+entity: Outcome After Total Knee Arthroplasty Under General or Spinal Anesthesia [NCT03364088]
+field: Secondary outcome timeframe: Bleeding [outcome.secondary.timeframe]
+value: 3 months to 1 day preoperative, intraoperative, 15-24 hours postoperative
+version: lastupdate:2020-01-13
+outcome: Bleeding
+status: COMPLETED
+</RECORD>
+<RECORD id="RDDAC77422A" source="CLINICALTRIALS_GOV_V2">
+entity: Comparison of Intralesional Tranexamic Acid and Platelets Rich Plasma in the Treatment of Melasma [NCT05884151]
+field: Lead sponsor [sponsor.lead_sponsor]
+value: Combined Military Hospital Abbottabad
+version: lastupdate:2023-06-01
+status: COMPLETED
+</RECORD>
+<RECORD id="RA38C928B8A" source="CLINICALTRIALS_GOV_V2">
+entity: Pembrolizumab Alone or With Idelalisib or Ibrutinib in Treating Patients With Relapsed or Refractory Chronic Lymphocytic Leukemia or Other Low-Grade B-Cell Non-Hodgkin Lymphomas [NCT02332980]
+field: Studied condition [study.condition]
+value: Refractory Small Lymphocytic Lymphoma
+version: lastupdate:2026-06-24
+status: COMPLETED
+</RECORD>
+<RECORD id="RD154CA2D86" source="CLINICALTRIALS_GOV_V2">
+entity: The Effects of Nateglinide and Acarbose on the Post-Prandial Glucose Control in Type 2 Diabetic Patients [NCT00437918]
+field: Primary completion date [study.primary_completion_date]
+period: 2008
+value: 2008-03
+version: lastupdate:2008-03-24
+status: COMPLETED
+</RECORD>
+
+TARGET QUESTION:
+
+Using only the ClinicalTrials.gov records supplied in the context, what is the PRIMARY COMPLETION DATE of trial NCT02746185 ("Cancer Associated Thrombosis, a Pilot Treatment Study Using Rivaroxaban")? Answer in YYYY-MM-DD form.
+
+OUTPUT FORMAT:
+
+Return exactly one JSON object with this schema:
+{"selected_evidence":["R..."],"answer":"...","insufficient_evidence":false}
+
+For insufficient evidence, use:
+{"selected_evidence":[],"answer":"INSUFFICIENT_EVIDENCE","insufficient_evidence":true}
+
+Use only model-facing record IDs from the supplied records. Do not include reasoning.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+

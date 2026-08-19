@@ -1,0 +1,73 @@
+name: pilot_v2
+seed: 20240817
+data_root: data
+output_subdir: pilot_v2
+schema_version: "1.1.0"
+write_parquet: true
+
+tokenizer:
+  id: "tiktoken:cl100k_base"
+  fallback_id: "whitespace:v1"
+  allow_fallback: false
+
+context:
+  lengths: [4096, 8192, 16384, 32768, 65536, 131072]
+  target_position: 0.50
+  position_tolerance: 0.05
+  min_fill_ratio: 0.95
+
+http:
+  timeout_seconds: 45.0
+  max_retries: 4
+  backoff_seconds: 1.5
+  sec_user_agent: "${SEC_USER_AGENT}"
+  sec_rate_limit_per_second: 8.0
+  openfda_api_key: "${OPENFDA_API_KEY}"
+  default_rate_limit_per_second: 5.0
+  cache_enabled: true
+
+validation:
+  fail_on: ["CRITICAL"]
+  numeric_recompute_rel_tolerance: 1.0e-9
+  require_all_question_types: true
+  max_leakage_value_rel_tolerance: 1.0e-6
+
+domains:
+  SEC:
+    enabled: true
+    n_families: 8
+    question_type_mix:
+      DIRECT_RETRIEVAL: 0.20
+      RETRIEVAL_CALCULATION: 0.30
+      TEMPORAL_VERSION: 0.15
+      ENTITY_UNIT_BINDING: 0.15
+      UNANSWERABLE: 0.20
+
+  FDA:
+    enabled: true
+    n_families: 8
+    question_type_mix:
+      DIRECT_RETRIEVAL: 0.20
+      RETRIEVAL_CALCULATION: 0.30
+      TEMPORAL_VERSION: 0.15
+      ENTITY_UNIT_BINDING: 0.15
+      UNANSWERABLE: 0.20
+
+  CLINICAL_TRIALS:
+    enabled: true
+    n_families: 8
+    question_type_mix:
+      DIRECT_RETRIEVAL: 0.20
+      RETRIEVAL_CALCULATION: 0.30
+      TEMPORAL_VERSION: 0.15
+      ENTITY_UNIT_BINDING: 0.15
+      UNANSWERABLE: 0.20
+    params:
+      page_size: 100
+      max_pages_per_query: 3
+      overall_status: "COMPLETED"
+
+  WORLD_BANK:
+    enabled: false
+    n_families: 0
+

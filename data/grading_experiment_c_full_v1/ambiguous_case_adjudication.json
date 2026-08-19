@@ -1,0 +1,50 @@
+{
+  "instance_id": "FDA_0020_32K",
+  "context_length_label": "32K",
+  "question_family_id": "FDA_0020",
+  "question_type": "TEMPORAL_VERSION",
+  "answerable": true,
+  "question": "Using only the Drugs@FDA records supplied in the context, what is the submission status date of the ORIGINAL submission (submission type ORIG) for FDA application ANDA091431 (sponsor: HERITAGE)? Answer in YYYY-MM-DD form.",
+  "gold_answer": "2013-12-30",
+  "model_answer": "2023-08-07",
+  "frozen_grader_error_type": "AMBIGUOUS_REVIEW_REQUIRED",
+  "frozen_grader_reason": "answer value appears in context but deterministic distractor type is unavailable",
+  "target_evidence": {
+    "display_id": "RAE3543605D",
+    "canonical_record_id": "FDA-ANDA091431-submission-ORIG-1-7b0a53ff",
+    "entity": "HERITAGE application ANDA091431 [ANDA091431]",
+    "field": "ORIG submission 1 status date [submission.status_date]",
+    "period": "2013",
+    "version": "ORIG-1",
+    "value": "2013-12-30"
+  },
+  "matched_context_record": {
+    "display_id": "RE46B71ECC3",
+    "canonical_record_id": "FDA-ANDA201522-submission-SUPPL-17-84f9253f",
+    "dataset_tag": "OTHER_SAME_DOMAIN",
+    "entity": "CHARTWELL MOLECULAR application ANDA201522 [ANDA201522]",
+    "field": "SUPPL submission 17 status date [submission.status_date]",
+    "period": "2023",
+    "version": "SUPPL-17",
+    "value": "2023-08-07",
+    "relationship_to_target": {
+      "different_entity": true,
+      "different_metric": false,
+      "different_period": true,
+      "different_unit": false,
+      "different_version": true,
+      "same_entity": false,
+      "same_metric": true,
+      "same_period": false,
+      "same_unit": true,
+      "same_version": false,
+      "value_within_5_percent": false
+    }
+  },
+  "manual_adjudication": {
+    "answer_correct": false,
+    "hallucination": false,
+    "error_type": "WRONG_ENTITY",
+    "justification": "The returned date is an authentic value in the supplied context, but it belongs to CHARTWELL MOLECULAR application ANDA201522 SUPPL-17 rather than the requested HERITAGE ANDA091431 ORIG-1 submission."
+  }
+}

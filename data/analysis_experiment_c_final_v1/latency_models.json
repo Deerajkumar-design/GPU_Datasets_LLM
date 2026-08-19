@@ -1,0 +1,65 @@
+{
+  "latency_context_adjusted_correctness_exploratory": {
+    "adj_r_squared": 0.7772090798159059,
+    "formula": "generation_latency_seconds ~ log2_input_tokens + answer_correct_int",
+    "n_observations": 500,
+    "p_values": {
+      "Intercept": 1.0071797634581264e-138,
+      "answer_correct_int": 0.6906520215356899,
+      "log2_input_tokens": 1.2207582850044283e-160
+    },
+    "params": {
+      "Intercept": -22.023674459888465,
+      "answer_correct_int": -0.04818094805689194,
+      "log2_input_tokens": 1.7555527906465291
+    },
+    "r_squared": 0.7781020293958021,
+    "standard_errors": {
+      "Intercept": 0.6190830219002528,
+      "answer_correct_int": 0.12099613762105332,
+      "log2_input_tokens": 0.04306079752629819
+    }
+  },
+  "latency_context_adjusted_hallucination_exploratory": {
+    "adj_r_squared": 0.777369463991962,
+    "formula": "generation_latency_seconds ~ log2_input_tokens + hallucination_int",
+    "n_observations": 500,
+    "p_values": {
+      "Intercept": 6.429204640141797e-146,
+      "hallucination_int": 0.4725817212369099,
+      "log2_input_tokens": 2.0321473145869565e-164
+    },
+    "params": {
+      "Intercept": -22.109896637115767,
+      "hallucination_int": 0.08731034146542774,
+      "log2_input_tokens": 1.7579216842501004
+    },
+    "r_squared": 0.7782617707495093,
+    "standard_errors": {
+      "Intercept": 0.5936800825447,
+      "hallucination_int": 0.12146125361354415,
+      "log2_input_tokens": 0.04215487464994937
+    }
+  },
+  "latency_input_output_tokens": {
+    "adj_r_squared": 0.9811661467242541,
+    "formula": "generation_latency_seconds ~ input_tokens + generated_tokens_count",
+    "n_observations": 500,
+    "p_values": {
+      "Intercept": 1.1517254592102287e-18,
+      "generated_tokens_count": 0.020192850215865487,
+      "input_tokens": 0.0
+    },
+    "params": {
+      "Intercept": -0.7781046476418851,
+      "generated_tokens_count": 0.022313857405520474,
+      "input_tokens": 0.00012420743998213039
+    },
+    "r_squared": 0.9812416331101288,
+    "standard_errors": {
+      "Intercept": 0.08475346997465394,
+      "generated_tokens_count": 0.00957577594889144,
+      "input_tokens": 7.703831585246733e-07
+    }
+  }
+}

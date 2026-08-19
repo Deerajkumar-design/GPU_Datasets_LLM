@@ -1,0 +1,23 @@
+{
+  "context_counts": {
+    "16K": 100,
+    "32K": 100,
+    "4K": 100,
+    "64K": 100,
+    "8K": 100
+  },
+  "errors": [],
+  "evidence_accuracy_graded": false,
+  "expected_rows": 500,
+  "grader_hash_after": "d9282a0ccc50daba3bfd232c058dfbab63a5c19a7323d585a7c2236b3a6c4ba8",
+  "grader_hash_before": "d9282a0ccc50daba3bfd232c058dfbab63a5c19a7323d585a7c2236b3a6c4ba8",
+  "grader_unchanged_during_scoring": true,
+  "no_fuzzy_semantic_grader_used": true,
+  "no_llm_judge_used": true,
+  "passed": true,
+  "raw_outputs_unchanged": true,
+  "raw_results_hash_after": "1f0d9dba2a54889ff4046df582a441291ba979a4187cd13bc7d0d25dbad8e4a9",
+  "raw_results_hash_before": "1f0d9dba2a54889ff4046df582a441291ba979a4187cd13bc7d0d25dbad8e4a9",
+  "scored_rows": 500,
+  "unique_instance_ids": 500
+}

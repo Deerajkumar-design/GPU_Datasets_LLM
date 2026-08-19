@@ -1,0 +1,164 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Cutting Knowledge Date: December 2023
+Today Date: 09 Aug 2026
+
+Answer using only the supplied records.
+
+Identify records matching the exact entity, period, version, field, unit, product, route, dosage form, arm, series, or other conditions requested by the question.
+
+If the supplied records do not contain sufficient evidence to answer the question, return INSUFFICIENT_EVIDENCE.
+
+Do not infer or fabricate missing information.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+KNOWLEDGE RECORDS:
+
+<RECORD id="R720ED33B7B" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Consumer Price Index for All Urban Consumers: All Items in U.S. City Average (Not Seasonally Adjusted) [CPIAUCNS]
+period: 2023-02-01
+unit: Index 1982-1984=100
+value: 300.84
+version: latest
+</RECORD>
+<RECORD id="RBAF1550200" source="FRED_STLOUISFED">
+entity: California [CA]
+field: Unemployment Rate (Seasonally Adjusted) [CAUR]
+period: 2012-04-01
+unit: Percent
+value: 10.7
+version: latest
+</RECORD>
+<RECORD id="R43C30CA776" source="FRED_STLOUISFED">
+entity: Texas [TX]
+field: Unemployment Rate (Seasonally Adjusted) [TXUR]
+period: 2008-07-01
+unit: Percent
+value: 4.8
+version: latest
+</RECORD>
+<RECORD id="RB45E41487E" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Unemployment Rate (Seasonally Adjusted) [UNRATE]
+period: 2013-07-01
+unit: Percent
+value: 7.3
+version: latest
+</RECORD>
+<RECORD id="R52730A12EF" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Consumer Price Index for All Urban Consumers: All Items in U.S. City Average (Seasonally Adjusted) [CPIAUCSL]
+period: 2007-06-01
+unit: Index 1982-1984=100
+value: 207.234
+version: latest
+</RECORD>
+<RECORD id="RC6EB4A358E" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Consumer Price Index for All Urban Consumers: All Items in U.S. City Average (Not Seasonally Adjusted) [CPIAUCNS]
+period: 2021-08-01
+unit: Index 1982-1984=100
+value: 273.567
+version: latest
+</RECORD>
+<RECORD id="RCD18887711" source="FRED_STLOUISFED">
+entity: California [CA]
+field: Unemployment Rate (Seasonally Adjusted) [CAUR]
+period: 2003-05-01
+unit: Percent
+value: 7.0
+version: latest
+</RECORD>
+<RECORD id="RC3DF48EBCC" source="FRED_STLOUISFED">
+entity: Illinois [IL]
+field: Unemployment Rate (Seasonally Adjusted) [ILUR]
+period: 2006-04-01
+unit: Percent
+value: 4.7
+version: latest
+</RECORD>
+<RECORD id="R5E9DF626B3" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Market Yie
+
+...[middle omitted in compact preview; exact prompt is reproducible from context/question/prompt hash]...
+
+rce="FRED_STLOUISFED">
+entity: United States [US]
+field: Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (Not Seasonally Adjusted) [DGS10]
+period: 1991-02-12
+unit: Percent
+value: 7.78
+version: latest
+</RECORD>
+<RECORD id="R925C4F5945" source="FRED_STLOUISFED">
+entity: Florida [FL]
+field: Unemployment Rate (Seasonally Adjusted) [FLUR]
+period: 2015-08-01
+unit: Percent
+value: 5.4
+version: latest
+</RECORD>
+<RECORD id="R5D3754074F" source="FRED_STLOUISFED">
+entity: California [CA]
+field: Unemployment Rate (Seasonally Adjusted) [CAUR]
+period: 2002-02-01
+unit: Percent
+value: 6.7
+version: latest
+</RECORD>
+<RECORD id="R9F514630DF" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Consumer Price Index for All Urban Consumers: All Items in U.S. City Average (Not Seasonally Adjusted) [CPIAUCNS]
+period: 2004-05-01
+unit: Index 1982-1984=100
+value: 189.1
+version: latest
+</RECORD>
+<RECORD id="RBDFDC4290F" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Industrial Production: Total Index (Seasonally Adjusted) [INDPRO]
+period: 2013-07-01
+unit: Index 2017=100
+value: 99.0814
+version: latest
+</RECORD>
+<RECORD id="RA546ECAF6C" source="FRED_STLOUISFED">
+entity: United States [US]
+field: Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (Not Seasonally Adjusted) [DGS10]
+period: 2003-08-05
+unit: Percent
+value: 4.47
+version: latest
+</RECORD>
+<RECORD id="RC27CB5CE0E" source="FRED_STLOUISFED">
+entity: Florida [FL]
+field: Unemployment Rate (Seasonally Adjusted) [FLUR]
+period: 2005-06-01
+unit: Percent
+value: 3.7
+version: latest
+</RECORD>
+<RECORD id="R8773B277D0" source="FRED_STLOUISFED">
+entity: California [CA]
+field: Unemployment Rate (Seasonally Adjusted) [CAUR]
+period: 2009-01-01
+unit: Percent
+value: 9.9
+version: latest
+</RECORD>
+
+TARGET QUESTION:
+
+Using only the FRED records supplied in the context, what value does FRED report for FRED series DGS10 ("Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity"), measured in Percent, not seasonally adjusted, daily frequency, for the observation dated 2009-09-07?
+
+OUTPUT FORMAT:
+
+Return exactly one JSON object with this schema:
+{"selected_evidence":["R..."],"answer":"...","insufficient_evidence":false}
+
+For insufficient evidence, use:
+{"selected_evidence":[],"answer":"INSUFFICIENT_EVIDENCE","insufficient_evidence":true}
+
+Use only model-facing record IDs from the supplied records. Do not include reasoning.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+

@@ -23,6 +23,7 @@ from ..schemas import DistractorType, NormalizedRecord
 DISTRACTOR_TIERS: List[DistractorType] = [
     DistractorType.WRONG_VERSION,
     DistractorType.WRONG_UNIT,
+    DistractorType.WRONG_SERIES_VARIANT,
     DistractorType.WRONG_PERIOD,
     DistractorType.WRONG_ENTITY,
     DistractorType.WRONG_FIELD,
@@ -35,6 +36,7 @@ DISTRACTOR_TIERS: List[DistractorType] = [
 TIER_WEIGHTS: Dict[DistractorType, int] = {
     DistractorType.WRONG_VERSION: 2,
     DistractorType.WRONG_UNIT: 2,
+    DistractorType.WRONG_SERIES_VARIANT: 2,
     DistractorType.WRONG_PERIOD: 3,
     DistractorType.WRONG_ENTITY: 3,
     DistractorType.WRONG_FIELD: 3,
@@ -88,16 +90,15 @@ def _same_measure(record: NormalizedRecord, target: NormalizedRecord) -> bool:
     return bool(fam) and fam == _family(target)
 
 
-def _basis_differs(record: NormalizedRecord, target: NormalizedRecord) -> bool:
-    """Same quantity, different measurement basis: unit, seasonal adjustment, frequency.
-
-    All three change the number a correct answer must report, so confusing them is a
-    unit error rather than a field error. Monthly GS10 is an average of daily DGS10;
-    quoting one for the other is wrong in exactly the way WRONG_UNIT describes.
-    """
+def _series_variant_differs(record: NormalizedRecord, target: NormalizedRecord) -> bool:
+    """Same quantity and unit, but a different measurement basis or series variant."""
     if record.unit != target.unit:
-        return True
+        return False
     for key in ("seasonal_adjustment", "frequency"):
+        a, b = record.metadata.get(key), target.metadata.get(key)
+        if a is not None and b is not None and a != b:
+            return True
+    for key in ("basis", "transformation", "price_basis"):
         a, b = record.metadata.get(key), target.metadata.get(key)
         if a is not None and b is not None and a != b:
             return True
@@ -156,6 +157,7 @@ def classify_distractor(
     record: NormalizedRecord,
     targets: Sequence[NormalizedRecord],
     target_values: Sequence[float] = (),
+    allow_near_match: bool = True,
 ) -> tuple[DistractorType, Dict[str, bool]]:
     """Assign the strongest applicable taxonomy label relative to the nearest target.
 
@@ -164,7 +166,7 @@ def classify_distractor(
     WRONG_VERSION is checked before WRONG_PERIOD, and so on down the tiers.
     """
     if not targets:
-        near = any(_rel_close(record.value_numeric, t) for t in target_values)
+        near = allow_near_match and any(_rel_close(record.value_numeric, t) for t in target_values)
         flags = RelationshipFlags(value_within_5_percent=near)
         return (
             DistractorType.NEAR_MATCH_VALUE if near else DistractorType.OTHER_SAME_DOMAIN,
@@ -178,9 +180,9 @@ def classify_distractor(
         same_period = record.period == tgt.period
         same_unit = record.unit == tgt.unit
         same_version = record.version == tgt.version
-        near = _rel_close(record.value_numeric, tgt.value_numeric) or any(
+        near = allow_near_match and same_unit and (_rel_close(record.value_numeric, tgt.value_numeric) or any(
             _rel_close(record.value_numeric, v) for v in target_values
-        )
+        ))
         flags = RelationshipFlags(
             same_entity=same_entity, same_metric=same_metric, same_period=same_period,
             same_unit=same_unit, same_version=same_version,
@@ -195,14 +197,15 @@ def classify_distractor(
             dtype = DistractorType.WRONG_VERSION
         elif same_entity and same_metric and same_period and not same_unit:
             dtype = DistractorType.WRONG_UNIT
+        elif same_entity and same_period and not same_metric and same_measure and record.unit != tgt.unit:
+            dtype = DistractorType.WRONG_UNIT
         elif (
             same_entity and same_period and not same_metric
-            and same_measure and _basis_differs(record, tgt)
+            and same_measure and _series_variant_differs(record, tgt)
         ):
-            # Same quantity for the same entity and period, published on a different
-            # basis -- seasonally adjusted vs not, nominal vs chained dollars, daily vs
-            # monthly. Distinct concept codes, but the interference is a unit mismatch.
-            dtype = DistractorType.WRONG_UNIT
+            # Same quantity and unit for the same entity and period, but a different
+            # published basis: seasonally adjusted vs not, daily vs monthly, etc.
+            dtype = DistractorType.WRONG_SERIES_VARIANT
         elif same_entity and same_period and _is_unit_variant(record, tgt):
             # Label-based fallback for sources that encode the basis in the concept
             # label's trailing parenthetical rather than in a declared family.
@@ -232,7 +235,10 @@ def describe_taxonomy() -> Dict[str, str]:
         DistractorType.WRONG_VERSION.value:
             "Same entity, metric, period and unit, but a different filing/revision/submission version.",
         DistractorType.WRONG_UNIT.value:
-            "Same entity, metric and period, reported in a different unit or measurement basis.",
+            "Same entity, metric and period, reported in a genuinely different unit.",
+        DistractorType.WRONG_SERIES_VARIANT.value:
+            "Same entity, period, unit and underlying measure, but a different series variant or "
+            "measurement basis such as seasonal adjustment, frequency, nominal/real basis, or transform.",
         DistractorType.WRONG_PERIOD.value:
             "Same entity and metric, a different period (other year, quarter, or instant).",
         DistractorType.WRONG_ENTITY.value:

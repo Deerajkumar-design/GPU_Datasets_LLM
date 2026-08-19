@@ -1,0 +1,684 @@
+<RECORD id="R83A3600799" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Net Cash Provided by (Used in) Financing Activities [us-gaap:NetCashProvidedByUsedInFinancingActivities]
+period: 2010-07-01..2011-06-30
+unit: USD
+value: -8376000000.0
+version: 10-K|0001193125-12-316848
+form: 10-K
+accession: 0001193125-12-316848
+fiscal_year: 2012
+fiscal_period: FY
+</RECORD>
+<RECORD id="RD42942D840" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: AMAZON COM INC [0001018724]
+field: Net Cash Provided by (Used in) Operating Activities [us-gaap:NetCashProvidedByUsedInOperatingActivities]
+period: CY2010Q1
+unit: USD
+value: -1098000000.0
+version: 10-Q|0001193125-11-110197
+form: 10-Q
+accession: 0001193125-11-110197
+fiscal_year: 2011
+fiscal_period: Q1
+</RECORD>
+<RECORD id="RC887296B6E" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: Apple Inc. [0000320193]
+field: Stockholders' Equity Attributable to Parent [us-gaap:StockholdersEquity]
+period: CY2021Q1I
+unit: USD
+value: 69178000000.0
+version: 10-Q|0000320193-22-000070
+form: 10-Q
+accession: 0000320193-22-000070
+fiscal_year: 2022
+fiscal_period: Q3
+</RECORD>
+<RECORD id="R3A66350A35" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: WALMART INC. [0000104169]
+field: Net Cash Provided by (Used in) Investing Activities [us-gaap:NetCashProvidedByUsedInInvestingActivities]
+period: CY2007
+unit: USD
+value: -15670000000.0
+version: 10-K|0001193125-10-071652
+form: 10-K
+accession: 0001193125-10-071652
+fiscal_year: 2009
+fiscal_period: FY
+</RECORD>
+<RECORD id="R4DAA5A801F" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Revenues [us-gaap:Revenues]
+period: 2010-07-01..2010-12-31
+unit: USD
+value: 36148000000.0
+version: 10-Q|0001193125-11-015947
+form: 10-Q
+accession: 0001193125-11-015947
+fiscal_year: 2011
+fiscal_period: Q2
+</RECORD>
+<RECORD id="RA4C3DEC17A" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Net Cash Provided by (Used in) Financing Activities [us-gaap:NetCashProvidedByUsedInFinancingActivities]
+period: CY2021Q4
+unit: USD
+value: -11986000000.0
+version: 10-Q|0001564590-23-000733
+form: 10-Q
+accession: 0001564590-23-000733
+fiscal_year: 2023
+fiscal_period: Q2
+</RECORD>
+<RECORD id="R36F74B61C8" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: AMAZON COM INC [0001018724]
+field: Net Income (Loss) Attributable to Parent [us-gaap:NetIncomeLoss]
+period: 2016-01-01..2016-09-30
+unit: USD
+value: 1622000000.0
+version: 10-Q|0001018724-17-000135
+form: 10-Q
+accession: 0001018724-17-000135
+fiscal_year: 2017
+fiscal_period: Q3
+</RECORD>
+<RECORD id="RF4BFF465AB" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: JPMORGAN CHASE & CO [0000019617]
+field: Earnings Per Share, Basic [us-gaap:EarningsPerShareBasic]
+period: CY2009Q3
+unit: USD/shares
+value: 0.82
+version: 10-Q|0000950123-10-102689
+form: 10-Q
+accession: 0000950123-10-102689
+fiscal_year: 2010
+fiscal_period: Q3
+</RECORD>
+<RECORD id="R68E959470C" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Accounts Receivable, after Allowance for Credit Loss, Current [us-gaap:AccountsReceivableNetCurrent]
+period: AS_OF_2025-06-30
+unit: USD
+value: 69905000000.0
+version: 10-Q|0001193125-25-256321
+form: 10-Q
+accession: 0001193125-25-256321
+fiscal_year: 2026
+fiscal_period: Q1
+</RECORD>
+<RECORD id="RD7EAE62396" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: WALMART INC. [0000104169]
+field: Net Cash Provided by (Used in) Financing Activities [us-gaap:NetCashProvidedByUsedInFinancingActivities]
+period: CY2015
+unit: USD
+value: -16285000000.0
+version: 10-K|0000104169-18-000028
+form: 10-K
+accession: 0000104169-18-000028
+fiscal_year: 2018
+fiscal_period: FY
+</RECORD>
+<RECORD id="R1BBE7AC5DE" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Property, Plant and Equipment, Net [us-gaap:PropertyPlantAndEquipmentNet]
+period: AS_OF_2013-06-30
+unit: USD
+value: 9991000000.0
+version: 10-K|0001193125-13-310206
+form: 10-K
+accession: 0001193125-13-310206
+fiscal_year: 2013
+fiscal_period: FY
+</RECORD>
+<RECORD id="RDA753B2486" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Revenue from Contract with Customer, Excluding Assessed Tax [us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax]
+period: 2020-07-01..2021-06-30
+unit: USD
+value: 168088000000.0
+version: 10-K|0001564590-22-026876
+form: 10-K
+accession: 0001564590-22-026876
+fiscal_year: 2022
+fiscal_period: FY
+</RECORD>
+<RECORD id="R42C6FBCDBB" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: Apple Inc. [0000320193]
+field: Income Tax Expense (Benefit) [us-gaap:IncomeTaxExpenseBenefit]
+period: 2024-09-29..2025-06-28
+unit: USD
+value: 15381000000.0
+version: 10-Q|0000320193-26-000020
+form: 10-Q
+accession: 0000320193-26-000020
+fiscal_year: 2026
+fiscal_period: Q3
+</RECORD>
+<RECORD id="R42C02A0C84" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: COCA COLA CO [0000021344]
+field: Net Cash Provided by (Used in) Financing Activities [us-gaap:NetCashProvidedByUsedInFinancingActivities]
+period: CY2021Q1
+unit: USD
+value: 364000000.0
+version: 10-Q|0000021344-22-000016
+form: 10-Q
+accession: 0000021344-22-000016
+fiscal_year: 2022
+fiscal_period: Q1
+</RECORD>
+<RECORD id="R7408A293B4" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: Johnson & Johnson [0000200406]
+field: Operating Income (Loss) [us-gaap:OperatingIncomeLoss]
+period: 2012-01-02..2012-04-01
+unit: USD
+value: 5130000000.0
+version: 10-Q|0000200406-12-000081
+form: 10-Q
+accession: 0000200406-12-000081
+fiscal_year: 2012
+fiscal_period: Q1
+</RECORD>
+<RECORD id="RC3D097E02A" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Operating Income (Loss) [us-gaap:OperatingIncomeLoss]
+period: CY2008Q3
+unit: USD
+value: 5999000000.0
+version: 10-Q|0001193125-09-212454
+form: 10-Q
+accession: 0001193125-09-212454
+fiscal_year: 2010
+fiscal_period: Q1
+</RECORD>
+<RECORD id="RDC1822D28D" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Net Cash Provided by (Used in) Financing Activities [us-gaap:NetCashProvidedByUsedInFinancingActivities]
+period: 2024-07-01..2024-09-30
+unit: USD
+value: -16576000000.0
+version: 10-Q|0000950170-24-118967
+form: 10-Q
+accession: 0000950170-24-118967
+fiscal_year: 2025
+fiscal_period: Q1
+</RECORD>
+<RECORD id="R46A121F267" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Net Cash Provided by (Used in) Financing Activities [us-gaap:NetCashProvidedByUsedInFinancingActivities]
+period: 2017-07-01..2017-12-31
+unit: USD
+value: -7893000000.0
+version: 10-Q|0001564590-18-001129
+form: 10-Q
+accession: 0001564590-18-001129
+fiscal_year: 2018
+fiscal_period: Q2
+</RECORD>
+<RECORD id="RB315B094FB" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Net Cash Provided by (Used in) Financing Activities [us-gaap:NetCashProvidedByUsedInFinancingActivities]
+period: CY2011Q1
+unit: USD
+value: 1437000000.0
+version: 10-Q|0001193125-12-170665
+form: 10-Q
+accession: 0001193125-12-170665
+fiscal_year: 2012
+fiscal_period: Q3
+</RECORD>
+<RECORD id="R10DD04DC60" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: COCA COLA CO [0000021344]
+field: Income Tax Expense (Benefit) [us-gaap:IncomeTaxExpenseBenefit]
+period: CY2026Q1
+unit: USD
+value: 645000000.0
+version: 10-Q|0001628280-26-028802
+form: 10-Q
+accession: 0001628280-26-028802
+fiscal_year: 2026
+fiscal_period: Q1
+</RECORD>
+<RECORD id="R5701058E4A" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: JPMORGAN CHASE & CO [0000019617]
+field: Net Income (Loss) Attributable to Parent [us-gaap:NetIncomeLoss]
+period: 2018-01-01..2018-06-30
+unit: USD
+value: 17028000000.0
+version: 10-Q|0000019617-18-000151
+form: 10-Q
+accession: 0000019617-18-000151
+fiscal_year: 2018
+fiscal_period: Q2
+</RECORD>
+<RECORD id="R2B8127C09F" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: COCA COLA CO [0000021344]
+field: Weighted Average Number of Shares Outstanding, Diluted [us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding]
+period: CY2009Q2
+unit: shares
+value: 2323000000.0
+version: 10-Q|0001047469-10-006835
+form: 10-Q
+accession: 0001047469-10-006835
+fiscal_year: 2010
+fiscal_period: Q2
+</RECORD>
+<RECORD id="R82B7AD3B1E" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Earnings Per Share, Basic [us-gaap:EarningsPerShareBasic]
+period: 2014-07-01..2015-06-30
+unit: USD/shares
+value: 1.49
+version: 10-K|0001193125-15-272806
+form: 10-K
+accession: 0001193125-15-272806
+fiscal_year: 2015
+fiscal_period: FY
+</RECORD>
+<RECORD id="R7E9492914A" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Net Cash Provided by (Used in) Financing Activities [us-gaap:NetCashProvidedByUsedInFinancingActivities]
+period: CY2008Q4
+unit: USD
+value: -3858000000.0
+version: 10-Q|0001193125-10-015598
+form: 10-Q
+accession: 0001193125-10-015598
+fiscal_year: 2010
+fiscal_period: Q2
+</RECORD>
+<RECORD id="RA4578796C6" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Net Cash Provided by (Used in) Financing Activities [us-gaap:NetCashProvidedByUsedInFinancingActivities]
+period: CY2025Q4
+unit: USD
+value: -17617000000.0
+version: 10-Q|0001193125-26-027207
+form: 10-Q
+accession: 0001193125-26-027207
+fiscal_year: 2026
+fiscal_period: Q2
+</RECORD>
+<RECORD id="RB5732FC2A9" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: PFIZER INC [0000078003]
+field: Assets [us-gaap:Assets]
+period: CY2021Q1I
+unit: USD
+value: 158818000000.0
+version: 10-Q|0000078003-21-000065
+form: 10-Q
+accession: 0000078003-21-000065
+fiscal_year: 2021
+fiscal_period: Q1
+</RECORD>
+<RECORD id="R0A48FD5CF6" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Net Cash Provided by (Used in) Financing Activities [us-gaap:NetCashProvidedByUsedInFinancingActivities]
+period: CY2021
+unit: USD
+value: -48486000000.0
+version: 10-K|0000950170-23-035122
+form: 10-K
+accession: 0000950170-23-035122
+fiscal_year: 2023
+fiscal_period: FY
+</RECORD>
+<RECORD id="R80996EDF48" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Liabilities [us-gaap:Liabilities]
+period: AS_OF_2013-06-30
+unit: USD
+value: 63487000000.0
+version: 10-Q|0001193125-13-409855
+form: 10-Q
+accession: 0001193125-13-409855
+fiscal_year: 2014
+fiscal_period: Q1
+</RECORD>
+<RECORD id="R5B83575D92" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Net Cash Provided by (Used in) Financing Activities [us-gaap:NetCashProvidedByUsedInFinancingActivities]
+period: CY2021Q3
+unit: USD
+value: -16276000000.0
+version: 10-Q|0001564590-22-035087
+form: 10-Q
+accession: 0001564590-22-035087
+fiscal_year: 2023
+fiscal_period: Q1
+</RECORD>
+<RECORD id="R01182040C3" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Research and Development Expense [us-gaap:ResearchAndDevelopmentExpense]
+period: CY2025Q4
+unit: USD
+value: 8504000000.0
+version: 10-Q|0001193125-26-027207
+form: 10-Q
+accession: 0001193125-26-027207
+fiscal_year: 2026
+fiscal_period: Q2
+</RECORD>
+<RECORD id="R6D4C716DB4" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Research and Development Expense [us-gaap:ResearchAndDevelopmentExpense]
+period: 2014-07-01..2014-12-31
+unit: USD
+value: 5968000000.0
+version: 10-Q|0001193125-15-020351
+form: 10-Q
+accession: 0001193125-15-020351
+fiscal_year: 2015
+fiscal_period: Q2
+</RECORD>
+<RECORD id="R58652E8E64" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: Apple Inc. [0000320193]
+field: Net Income (Loss) Attributable to Parent [us-gaap:NetIncomeLoss]
+period: CY2011Q1
+unit: USD
+value: 5987000000.0
+version: 8-K|0001193125-13-170623
+form: 8-K
+accession: 0001193125-13-170623
+fiscal_year: 2012
+fiscal_period: FY
+</RECORD>
+<RECORD id="R7DA26183D7" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: AMAZON COM INC [0001018724]
+field: Net Cash Provided by (Used in) Financing Activities [us-gaap:NetCashProvidedByUsedInFinancingActivities]
+period: CY2021Q3
+unit: USD
+value: -2776000000.0
+version: 10-Q|0001018724-22-000023
+form: 10-Q
+accession: 0001018724-22-000023
+fiscal_year: 2022
+fiscal_period: Q3
+</RECORD>
+<RECORD id="RE91E9CB6AE" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Operating Income (Loss) [us-gaap:OperatingIncomeLoss]
+period: 2018-07-01..2018-12-31
+unit: USD
+value: 20213000000.0
+version: 10-Q|0001564590-20-002450
+form: 10-Q
+accession: 0001564590-20-002450
+fiscal_year: 2020
+fiscal_period: Q2
+</RECORD>
+<RECORD id="REEBC0ADE1C" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Assets, Current [us-gaap:AssetsCurrent]
+period: AS_OF_2016-06-30
+unit: USD
+value: 139660000000.0
+version: 10-Q|0001564590-17-007547
+form: 10-Q
+accession: 0001564590-17-007547
+fiscal_year: 2017
+fiscal_period: Q3
+</RECORD>
+<RECORD id="R18B636BA44" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: PFIZER INC [0000078003]
+field: Net Cash Provided by (Used in) Investing Activities [us-gaap:NetCashProvidedByUsedInInvestingActivities]
+period: CY2022
+unit: USD
+value: -15783000000.0
+version: 10-K|0000078003-25-000054
+form: 10-K
+accession: 0000078003-25-000054
+fiscal_year: 2024
+fiscal_period: FY
+</RECORD>
+<RECORD id="R824AF2E144" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: JPMORGAN CHASE & CO [0000019617]
+field: Net Income (Loss) Attributable to Parent [us-gaap:NetIncomeLoss]
+period: 2020-01-01..2020-09-30
+unit: USD
+value: 16995000000.0
+version: 10-Q|0000019617-21-000458
+form: 10-Q
+accession: 0000019617-21-000458
+fiscal_year: 2021
+fiscal_period: Q3
+</RECORD>
+<RECORD id="RA88A68597A" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: PFIZER INC [0000078003]
+field: Earnings Per Share, Basic [us-gaap:EarningsPerShareBasic]
+period: 2022-07-04..2022-10-02
+unit: USD/shares
+value: 1.54
+version: 10-Q|0000078003-22-000101
+form: 10-Q
+accession: 0000078003-22-000101
+fiscal_year: 2022
+fiscal_period: Q3
+</RECORD>
+<RECORD id="RDC9D448114" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Net Cash Provided by (Used in) Financing Activities [us-gaap:NetCashProvidedByUsedInFinancingActivities]
+period: 2022-07-01..2022-12-31
+unit: USD
+value: -22232000000.0
+version: 10-Q|0000950170-24-008814
+form: 10-Q
+accession: 0000950170-24-008814
+fiscal_year: 2024
+fiscal_period: Q2
+</RECORD>
+<RECORD id="RF2DC529E37" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Net Cash Provided by (Used in) Financing Activities [us-gaap:NetCashProvidedByUsedInFinancingActivities]
+period: 2016-07-01..2016-12-31
+unit: USD
+value: 17345000000.0
+version: 10-Q|0001564590-18-001129
+form: 10-Q
+accession: 0001564590-18-001129
+fiscal_year: 2018
+fiscal_period: Q2
+</RECORD>
+<RECORD id="RFA6F1A6225" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Net Cash Provided by (Used in) Financing Activities [us-gaap:NetCashProvidedByUsedInFinancingActivities]
+period: 2021-07-01..2022-06-30
+unit: USD
+value: -58876000000.0
+version: 10-K|0000950170-23-035122
+form: 10-K
+accession: 0000950170-23-035122
+fiscal_year: 2023
+fiscal_period: FY
+</RECORD>
+<RECORD id="RED1D3ECFA9" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: Johnson & Johnson [0000200406]
+field: Net Cash Provided by (Used in) Financing Activities [us-gaap:NetCashProvidedByUsedInFinancingActivities]
+period: CY2023
+unit: USD
+value: -15825000000.0
+version: 10-K|0000200406-26-000016
+form: 10-K
+accession: 0000200406-26-000016
+fiscal_year: 2025
+fiscal_period: FY
+</RECORD>
+<RECORD id="R7D6F827BF5" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: AMAZON COM INC [0001018724]
+field: Net Cash Provided by (Used in) Investing Activities [us-gaap:NetCashProvidedByUsedInInvestingActivities]
+period: CY2022Q3
+unit: USD
+value: -15608000000.0
+version: 10-Q|0001018724-23-000018
+form: 10-Q
+accession: 0001018724-23-000018
+fiscal_year: 2023
+fiscal_period: Q3
+</RECORD>
+<RECORD id="RBCF91B9207" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: PFIZER INC [0000078003]
+field: Assets, Current [us-gaap:AssetsCurrent]
+period: CY2022Q2I
+unit: USD
+value: 67466000000.0
+version: 10-Q|0000078003-22-000094
+form: 10-Q
+accession: 0000078003-22-000094
+fiscal_year: 2022
+fiscal_period: Q2
+</RECORD>
+<RECORD id="R951529FA96" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Net Cash Provided by (Used in) Financing Activities [us-gaap:NetCashProvidedByUsedInFinancingActivities]
+period: 2017-07-01..2018-06-30
+unit: USD
+value: -33590000000.0
+version: 10-K|0001564590-19-027952
+form: 10-K
+accession: 0001564590-19-027952
+fiscal_year: 2019
+fiscal_period: FY
+</RECORD>
+<RECORD id="R9533D63C16" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Net Cash Provided by (Used in) Financing Activities [us-gaap:NetCashProvidedByUsedInFinancingActivities]
+period: 2020-10-01..2020-12-31
+unit: USD
+value: -13634000000.0
+version: 10-Q|0001564590-21-002316
+form: 10-Q
+accession: 0001564590-21-002316
+fiscal_year: 2021
+fiscal_period: Q2
+</RECORD>
+<RECORD id="R6CD1395C0D" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Net Cash Provided by (Used in) Operating Activities [us-gaap:NetCashProvidedByUsedInOperatingActivities]
+period: CY2019
+unit: USD
+value: 52185000000.0
+version: 10-K|0001564590-21-039151
+form: 10-K
+accession: 0001564590-21-039151
+fiscal_year: 2021
+fiscal_period: FY
+</RECORD>
+<RECORD id="R3194A0C52F" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: WALMART INC. [0000104169]
+field: Net Cash Provided by (Used in) Financing Activities [us-gaap:NetCashProvidedByUsedInFinancingActivities]
+period: CY2020
+unit: USD
+value: -16117000000.0
+version: 10-K|0000104169-23-000020
+form: 10-K
+accession: 0000104169-23-000020
+fiscal_year: 2023
+fiscal_period: FY
+</RECORD>
+<RECORD id="RA709C8BD67" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: COCA COLA CO [0000021344]
+field: Cash and Cash Equivalents, at Carrying Value [us-gaap:CashAndCashEquivalentsAtCarryingValue]
+period: CY2024Q1I
+unit: USD
+value: 10443000000.0
+version: 10-Q|0000021344-25-000029
+form: 10-Q
+accession: 0000021344-25-000029
+fiscal_year: 2025
+fiscal_period: Q1
+</RECORD>
+<RECORD id="R3EF8CCDFC5" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: COCA COLA CO [0000021344]
+field: Gross Profit [us-gaap:GrossProfit]
+period: 2022-01-01..2022-12-31
+unit: USD
+value: 25004000000.0
+version: 10-K|0000021344-23-000011
+form: 10-K
+accession: 0000021344-23-000011
+fiscal_year: 2022
+fiscal_period: FY
+</RECORD>
+<RECORD id="RCFB3CB4AF3" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Net Cash Provided by (Used in) Financing Activities [us-gaap:NetCashProvidedByUsedInFinancingActivities]
+period: CY2021Q1
+unit: USD
+value: -13192000000.0
+version: 10-Q|0001564590-22-015675
+form: 10-Q
+accession: 0001564590-22-015675
+fiscal_year: 2022
+fiscal_period: Q3
+</RECORD>
+<RECORD id="R306029EDA7" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Operating Income (Loss) [us-gaap:OperatingIncomeLoss]
+period: CY2020
+unit: USD
+value: 52959000000.0
+version: 10-K|0001564590-22-026876
+form: 10-K
+accession: 0001564590-22-026876
+fiscal_year: 2022
+fiscal_period: FY
+</RECORD>
+<RECORD id="RA7DABC86BD" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Payments to Acquire Property, Plant, and Equipment [us-gaap:PaymentsToAcquirePropertyPlantAndEquipment]
+period: 2023-07-01..2024-03-31
+unit: USD
+value: 30604000000.0
+version: 10-Q|0000950170-25-061046
+form: 10-Q
+accession: 0000950170-25-061046
+fiscal_year: 2025
+fiscal_period: Q3
+</RECORD>
+<RECORD id="RA9EE4CA378" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: PFIZER INC [0000078003]
+field: Net Cash Provided by (Used in) Investing Activities [us-gaap:NetCashProvidedByUsedInInvestingActivities]
+period: 2022-01-01..2022-12-31
+unit: USD
+value: -15783000000.0
+version: 10-K|0000078003-24-000039
+form: 10-K
+accession: 0000078003-24-000039
+fiscal_year: 2023
+fiscal_period: FY
+</RECORD>
+<RECORD id="RE2658734BF" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: PFIZER INC [0000078003]
+field: Assets, Current [us-gaap:AssetsCurrent]
+period: CY2025Q2I
+unit: USD
+value: 43703000000.0
+version: 10-Q|0000078003-25-000138
+form: 10-Q
+accession: 0000078003-25-000138
+fiscal_year: 2025
+fiscal_period: Q2
+</RECORD>
+<RECORD id="R33BA477D33" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Net Cash Provided by (Used in) Financing Activities [us-gaap:NetCashProvidedByUsedInFinancingActivities]
+period: 2021-07-01..2022-03-31
+unit: USD
+value: -45607000000.0
+version: 10-Q|0001564590-22-015675
+form: 10-Q
+accession: 0001564590-22-015675
+fiscal_year: 2022
+fiscal_period: Q3
+</RECORD>
+<RECORD id="RAC1A87A570" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: AMAZON COM INC [0001018724]
+field: Net Cash Provided by (Used in) Investing Activities [us-gaap:NetCashProvidedByUsedInInvestingActivities]
+period: 2016-07-01..2017-06-30
+unit: USD
+value: -13173000000.0
+version: 10-Q|0001018724-18-000108
+form: 10-Q
+accession: 0001018724-18-000108
+fiscal_year: 2018
+fiscal_period: Q2
+</RECORD>

@@ -1,0 +1,68 @@
+{
+  "audit_result": {
+    "answer_correct_counts": {
+      "False": 61,
+      "True": 39
+    },
+    "counts_by_context": {
+      "16K": 16,
+      "32K": 17,
+      "4K": 14,
+      "64K": 18,
+      "82K": 18,
+      "8K": 17
+    },
+    "counts_by_domain": {
+      "CLINICAL_TRIALS": 24,
+      "FDA": 21,
+      "FRED": 30,
+      "SEC": 25
+    },
+    "counts_by_question_type": {
+      "DIRECT_RETRIEVAL": 16,
+      "ENTITY_UNIT_BINDING": 13,
+      "RETRIEVAL_CALCULATION": 32,
+      "TEMPORAL_VERSION": 14,
+      "UNANSWERABLE": 25
+    },
+    "error_type_counts": {
+      "CALCULATION_ERROR": 2,
+      "CORRECT": 39,
+      "FAILED_TO_ABSTAIN": 12,
+      "UNNECESSARY_ABSTENTION": 1,
+      "UNSUPPORTED_VALUE": 27,
+      "WRONG_ENTITY": 4,
+      "WRONG_FIELD": 4,
+      "WRONG_PERIOD": 7,
+      "WRONG_VERSION": 4
+    },
+    "format_failure_count": 0,
+    "hallucination_counts": {
+      "False": 61,
+      "True": 39
+    },
+    "sample_size": 100,
+    "semantic_review_count": 0
+  },
+  "created_at": "2026-08-11T14:49:50Z",
+  "dataset_dir": "data/preproduction_llama32_3b_500f_6ctx_v1",
+  "dataset_hash": "dc2c4194dedb090198e6883735257908ce274bebc8611b40d958dbd026aa1fe6",
+  "experiment_c_frozen_grader_hash": "d9282a0ccc50daba3bfd232c058dfbab63a5c19a7323d585a7c2236b3a6c4ba8",
+  "experiment_d_grader_hash": "d9282a0ccc50daba3bfd232c058dfbab63a5c19a7323d585a7c2236b3a6c4ba8",
+  "experiment_d_script_hash": "3aff5e051f06c079c1f159c592d6280e1e81a8281bac223908ff6b6a7f7c552d",
+  "platform": "Linux-6.8.0-87-generic-x86_64-with-glibc2.35",
+  "python_version": "3.12.13 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:38:16) [GCC 14.3.0]",
+  "raw_failures_path": "data/inference_llama32_3b_500f_6ctx_v1/failures.jsonl",
+  "raw_failures_sha256": "7ff19113eb44bb769e65be30150ca45769a1d650c550b43c637fa2bcd452544d",
+  "raw_results_path": "data/inference_llama32_3b_500f_6ctx_v1/results.jsonl",
+  "raw_results_sha256": "74da30fb39a20e052f3f80c3223b3f8c71aa4f34feb91ea0a42071d04db42c2d",
+  "semantic_grading_rules_changed_from_experiment_c": false,
+  "semantic_rule_change_note": "No semantic grading logic changed; Experiment D uses grade_answer_only_response from the Experiment C frozen grader.",
+  "test_result": {
+    "command": "conda run -n longctx-llama-infer pytest tests/test_grading.py",
+    "passed": true,
+    "returncode": 0,
+    "stderr_tail": "",
+    "stdout_tail": "============================= test session starts ==============================\nplatform linux -- Python 3.12.13, pytest-9.1.1, pluggy-1.6.0\nrootdir: /home/srinija/GPU_Datasets\nconfigfile: pyproject.toml\nplugins: cov-7.1.0, anyio-4.14.2\ncollected 30 items\n\ntests/test_grading.py ..............................                     [100%]\n\n============================== 30 passed in 0.04s ==============================\n\n"
+  }
+}

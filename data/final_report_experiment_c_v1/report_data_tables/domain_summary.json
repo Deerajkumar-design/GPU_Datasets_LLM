@@ -1,0 +1,18 @@
+[
+  {
+    "Domain":"SEC",
+    "Role":"Company financial facts and filings."
+  },
+  {
+    "Domain":"FDA \/ Drugs@FDA",
+    "Role":"Drug applications, submissions, products, strengths, dosage forms, and routes."
+  },
+  {
+    "Domain":"ClinicalTrials.gov",
+    "Role":"Trial metadata, dates, enrollment, arms, status, and unavailable fields."
+  },
+  {
+    "Domain":"FRED",
+    "Role":"Economic time series with unit, frequency, and series attributes."
+  }
+]

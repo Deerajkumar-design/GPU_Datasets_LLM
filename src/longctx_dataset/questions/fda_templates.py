@@ -240,16 +240,10 @@ class FDAOriginalVsSupplement(QuestionTemplate):
             supps = [s for s in subs if not s.metadata.get("is_original")]
             if orig is None or len(supps) < 2:
                 continue
-            supp_desc = ", ".join(
-                f"{s.metadata.get('submission_type')}-{s.metadata.get('submission_number')} ({s.value})"
-                for s in sorted(supps, key=lambda s: str(s.value))[:4]
-            )
             question = (
                 f"Using only the Drugs@FDA records supplied in the context, what is the submission status "
                 f"date of the ORIGINAL submission (submission type ORIG) for FDA application {appno} "
-                f"(sponsor: {orig.metadata.get('sponsor_name')})? Answer in YYYY-MM-DD form. The context "
-                f"also contains later supplement submissions for this same application — {supp_desc} — "
-                f"whose dates are not the answer."
+                f"(sponsor: {orig.metadata.get('sponsor_name')})? Answer in YYYY-MM-DD form."
             )
             out.append(self.make_answerable(
                 ctx,
@@ -304,15 +298,11 @@ class FDAStrengthBinding(QuestionTemplate):
             if route:
                 qualifiers.append(f"route {route.value}")
             qual = f" ({', '.join(qualifiers)})" if qualifiers else ""
-            sib = ", ".join(
-                f"product {o.metadata.get('product_number')} = {o.value}" for o in others[:4]
-            )
             question = (
                 f"Using only the Drugs@FDA records supplied in the context, what is the listed strength of "
                 f"{target.metadata.get('ingredient_name')} in product number "
                 f"{target.metadata.get('product_number')} under FDA application {appno}{qual}? Report the "
-                f"strength string exactly as recorded. Other products under this same application list "
-                f"different strengths ({sib}); those are not the answer."
+                f"strength string exactly as recorded."
             )
             out.append(self.make_answerable(
                 ctx,
@@ -379,9 +369,7 @@ class FDAUnanswerableMissingAttribute(QuestionTemplate):
                 question = (
                     f"Using only the Drugs@FDA records supplied in the context, what is {phrase} for "
                     f"product number {prodno} under FDA application {appno} (brand name "
-                    f"\"{anchor.metadata.get('brand_name')}\")? If the supplied records do not list this "
-                    f"attribute for this specific product, state that the evidence is insufficient rather "
-                    f"than inferring it from another product or from general knowledge of the drug."
+                    f"\"{anchor.metadata.get('brand_name')}\")?"
                 )
                 spec = UnanswerableSpec(
                     reason_code=code,

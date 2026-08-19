@@ -1,0 +1,163 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Cutting Knowledge Date: December 2023
+Today Date: 09 Aug 2026
+
+Answer using only the supplied records.
+
+Identify records matching the exact entity, period, version, field, unit, product, route, dosage form, arm, series, or other conditions requested by the question.
+
+If the supplied records do not contain sufficient evidence to answer the question, return INSUFFICIENT_EVIDENCE.
+
+Do not infer or fabricate missing information.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+KNOWLEDGE RECORDS:
+
+<RECORD id="R5B57864F0F" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: Apple Inc. [0000320193]
+field: Earnings Per Share, Diluted [us-gaap:EarningsPerShareDiluted]
+period: CY2025Q1
+unit: USD/shares
+value: 1.65
+version: 10-Q|0000320193-26-000013
+form: 10-Q
+accession: 0000320193-26-000013
+fiscal_year: 2026
+fiscal_period: Q2
+</RECORD>
+<RECORD id="R07C324E5AE" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Common Stock, Shares, Outstanding [us-gaap:CommonStockSharesOutstanding]
+period: AS_OF_2022-06-30
+unit: shares
+value: 7464000000.0
+version: 10-Q|0000950170-23-014423
+form: 10-Q
+accession: 0000950170-23-014423
+fiscal_year: 2023
+fiscal_period: Q3
+</RECORD>
+<RECORD id="RF58258B289" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Assets [us-gaap:Assets]
+period: AS_OF_2023-06-30
+unit: USD
+value: 411976000000.0
+version: 10-Q|0000950170-24-048288
+form: 10-Q
+accession: 0000950170-24-048288
+fiscal_year: 2024
+fiscal_period: Q3
+</RECORD>
+<RECORD id="RCDA1FEBF0B" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: JPMORGAN CHASE & CO [0000019617]
+field: Property, Plant and Equipment, Net [us-gaap:PropertyPlantAndEquipmentNet]
+period: AS_OF_2022-12-31
+unit: USD
+value: 27734000000.0
+version: 10-K|0000019617-23-000231
+form: 10-K
+accession: 0000019617-23-000231
+fiscal_year: 2022
+fiscal_period: FY
+</RECORD>
+<RECORD id="R785DAFCD5D" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: WALMART INC. [0000104169]
+field: Cost of Revenue [us-gaap:CostOfRevenue]
+period: 2012-02-01..2012-04-30
+unit: USD
+value: 85186000000.0
+version: 10-Q|0001445305-12-001926
+form: 10-Q
+accession: 0001445305-12-001926
+fiscal_year: 2012
+fiscal_period: Q1
+</RECORD>
+<RECORD id="R65C38C0285" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: WALMART INC. [0000104169]
+field: Cost of Revenue [us-gaap:CostOfRevenue]
+period: 2015-02-01..2015-10-31
+unit: USD
+value: 263985000000.0
+version: 10-Q|000
+
+...[middle omitted in compact preview; exact prompt is reproducible from context/question/prompt hash]...
+
+
+accession: 0000104169-24-000141
+fiscal_year: 2025
+fiscal_period: Q2
+</RECORD>
+<RECORD id="R7015963249" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: WALMART INC. [0000104169]
+field: Selling, General and Administrative Expense [us-gaap:SellingGeneralAndAdministrativeExpense]
+period: CY2010Q2
+unit: USD
+value: 20098000000.0
+version: 10-Q|0001193125-11-238857
+form: 10-Q
+accession: 0001193125-11-238857
+fiscal_year: 2011
+fiscal_period: Q2
+</RECORD>
+<RECORD id="R0D185C7103" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: WALMART INC. [0000104169]
+field: Earnings Per Share, Diluted [us-gaap:EarningsPerShareDiluted]
+period: 2014-02-01..2015-01-31
+unit: USD/shares
+value: 5.05
+version: 10-K|0000104169-15-000011
+form: 10-K
+accession: 0000104169-15-000011
+fiscal_year: 2015
+fiscal_period: FY
+</RECORD>
+<RECORD id="R0984A619CE" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: WALMART INC. [0000104169]
+field: Earnings Per Share, Diluted [us-gaap:EarningsPerShareDiluted]
+period: 2015-05-01..2015-07-31
+unit: USD/shares
+value: 1.08
+version: 10-Q|0000104169-16-000119
+form: 10-Q
+accession: 0000104169-16-000119
+fiscal_year: 2017
+fiscal_period: Q2
+</RECORD>
+<RECORD id="R2A5302BD63" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: AMAZON COM INC [0001018724]
+field: Stockholders' Equity Attributable to Parent [us-gaap:StockholdersEquity]
+period: AS_OF_2022-12-31
+unit: USD
+value: 146043000000.0
+version: 10-Q|0001018724-23-000018
+form: 10-Q
+accession: 0001018724-23-000018
+fiscal_year: 2023
+fiscal_period: Q3
+</RECORD>
+<RECORD id="RCD640BF7F7" source="SEC_EDGAR_XBRL_COMPANYFACTS">
+entity: MICROSOFT CORPORATION [0000789019]
+field: Net Income (Loss) Attributable to Parent [us-gaap:NetIncomeLoss]
+period: CY2014Q2
+unit: USD
+value: 4612000000.0
+version: 8-K|0001193125-15-353706
+form: 8-K
+accession: 0001193125-15-353706
+</RECORD>
+
+TARGET QUESTION:
+
+Using only the SEC XBRL company-facts records supplied in the context, what value did WALMART INC. (CIK 0000104169) report for the us-gaap concept "CostOfRevenue" (Cost of Revenue) for the annual XBRL frame CY2020, in USD? Report the exact reported figure.
+
+OUTPUT FORMAT:
+
+Return exactly one JSON object with this schema:
+{"selected_evidence":["R..."],"answer":"...","insufficient_evidence":false}
+
+For insufficient evidence, use:
+{"selected_evidence":[],"answer":"INSUFFICIENT_EVIDENCE","insufficient_evidence":true}
+
+Use only model-facing record IDs from the supplied records. Do not include reasoning.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+

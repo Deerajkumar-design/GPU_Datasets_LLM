@@ -56,6 +56,9 @@ def generate_report(cfg: PipelineConfig, n_examples: int = 4, log=print) -> Tupl
     # Stream instances: their `context` fields are far too large to hold in memory.
     inst_by_family: Dict[str, List[Dict[str, Any]]] = defaultdict(list)
     per_length_tokens: Dict[int, List[int]] = defaultdict(list)
+    per_length_rendered_tokens: Dict[int, List[int]] = defaultdict(list)
+    per_length_prompt_overhead: Dict[int, List[int]] = defaultdict(list)
+    per_length_remaining_margin: Dict[int, List[int]] = defaultdict(list)
     positions: List[float] = []
     distractor_totals: Counter = Counter()
     inst_by_domain: Counter = Counter()
@@ -66,12 +69,21 @@ def generate_report(cfg: PipelineConfig, n_examples: int = 4, log=print) -> Tupl
         inst_by_family[row["question_family_id"]].append({
             k: row.get(k) for k in (
                 "instance_id", "context_length_nominal", "context_tokens_actual",
+                "rendered_input_tokens_actual", "prompt_overhead_tokens",
+                "generation_tokens_reserved", "model_context_limit",
+                "remaining_context_margin", "near_model_maximum", "prompt_hash",
                 "target_position_relative", "target_evidence_start_token",
                 "target_evidence_end_token", "distractor_counts", "context_record_ids",
                 "context_sha256", "tokenizer",
             ) if k != "context_record_ids"
         } | {"n_records": len(row.get("context_record_ids") or [])})
         per_length_tokens[row["context_length_nominal"]].append(row["context_tokens_actual"])
+        if row.get("rendered_input_tokens_actual") is not None:
+            per_length_rendered_tokens[row["context_length_nominal"]].append(row["rendered_input_tokens_actual"])
+        if row.get("prompt_overhead_tokens") is not None:
+            per_length_prompt_overhead[row["context_length_nominal"]].append(row["prompt_overhead_tokens"])
+        if row.get("remaining_context_margin") is not None:
+            per_length_remaining_margin[row["context_length_nominal"]].append(row["remaining_context_margin"])
         if row.get("target_position_relative") is not None:
             positions.append(row["target_position_relative"])
         distractor_totals.update(row.get("distractor_counts") or {})
@@ -82,7 +94,8 @@ def generate_report(cfg: PipelineConfig, n_examples: int = 4, log=print) -> Tupl
     checks = validation.get("checks", [])
     payload = _build_json(cfg, families, unavailable, retrievals, validation, manifest,
                           n_instances, per_length_tokens, positions, distractor_totals,
-                          inst_by_domain, inst_by_type)
+                          inst_by_domain, inst_by_type, per_length_rendered_tokens,
+                          per_length_prompt_overhead, per_length_remaining_margin)
     examples = _pick_examples(families, inst_by_family, n_examples)
     payload["representative_families"] = examples
 
@@ -108,7 +121,9 @@ def _describe(values: List[float], decimals: int = 1) -> Dict[str, Any]:
 
 
 def _build_json(cfg, families, unavailable, retrievals, validation, manifest, n_instances,
-                per_length_tokens, positions, distractor_totals, inst_by_domain, inst_by_type
+                per_length_tokens, positions, distractor_totals, inst_by_domain, inst_by_type,
+                per_length_rendered_tokens, per_length_prompt_overhead,
+                per_length_remaining_margin
                 ) -> Dict[str, Any]:
     fam_by_domain = Counter(f.domain.value for f in families)
     fam_by_type = Counter(f.question_type.value for f in families)
@@ -125,7 +140,23 @@ def _build_json(cfg, families, unavailable, retrievals, validation, manifest, n_
         "tokenizer": {
             "id": validation.get("stats", {}).get("tokenizer") or cfg.tokenizer.id,
             "version": validation.get("stats", {}).get("tokenizer_version"),
+            "class": validation.get("stats", {}).get("tokenizer_class"),
+            "revision": validation.get("stats", {}).get("tokenizer_revision"),
             "is_approximate": validation.get("stats", {}).get("tokenizer_is_approximate"),
+        },
+        "model": {
+            "id": validation.get("stats", {}).get("model_id") or cfg.model.id,
+            "context_limit": validation.get("stats", {}).get("model_context_limit"),
+            "config_revision": validation.get("stats", {}).get("model_config_revision"),
+            "generation_tokens_reserved": (
+                validation.get("stats", {}).get("generation_tokens_reserved")
+                or (cfg.model.max_new_tokens if cfg.model.id else None)
+            ),
+            "chat_template_used": validation.get("stats", {}).get("chat_template_used"),
+            "prompt_version": validation.get("stats", {}).get("prompt_version"),
+            "prompt_hash": validation.get("stats", {}).get("prompt_hash"),
+            "response_format_version": validation.get("stats", {}).get("response_format_version"),
+            "template_date": validation.get("stats", {}).get("template_date"),
         },
         "context_lengths": cfg.context.lengths,
         "target_position": cfg.context.target_position,
@@ -149,6 +180,15 @@ def _build_json(cfg, families, unavailable, retrievals, validation, manifest, n_
             "by_length": {_length_label(k): len(v) for k, v in sorted(per_length_tokens.items())},
             "token_distribution_by_length": {
                 _length_label(k): _describe(v) for k, v in sorted(per_length_tokens.items())
+            },
+            "rendered_input_token_distribution_by_length": {
+                _length_label(k): _describe(v) for k, v in sorted(per_length_rendered_tokens.items())
+            },
+            "prompt_overhead_token_distribution_by_length": {
+                _length_label(k): _describe(v) for k, v in sorted(per_length_prompt_overhead.items())
+            },
+            "remaining_model_margin_by_length": {
+                _length_label(k): _describe(v) for k, v in sorted(per_length_remaining_margin.items())
             },
             "fill_ratio_by_length": {
                 _length_label(k): _describe([t / k for t in v], 4)
@@ -341,17 +381,27 @@ def _render_markdown(cfg: PipelineConfig, p: Dict[str, Any], checks: List[Dict[s
     a("## 4. Context instances")
     a("")
     tok = p["tokenizer"]
+    model = p.get("model", {})
     a(f"Tokenizer: `{tok['id']}` ({tok.get('version') or 'version n/a'})"
       + ("  ⚠️ **approximate backend**" if tok.get("is_approximate") else ""))
+    if model.get("id"):
+        a(f"Model: `{model['id']}` · context limit `{model.get('context_limit')}` · "
+          f"generation reserve `{model.get('generation_tokens_reserved')}` · "
+          f"prompt `{model.get('prompt_version')}` / `{model.get('prompt_hash')}` · "
+          f"template date `{model.get('template_date')}` · "
+          f"chat template `{model.get('chat_template_used')}`")
     a("")
     rows = []
     for label in [_length_label(n) for n in p["context_lengths"]]:
         d = p["instances"]["token_distribution_by_length"].get(label, {"n": 0})
+        r = p["instances"].get("rendered_input_token_distribution_by_length", {}).get(label, {})
+        m = p["instances"].get("remaining_model_margin_by_length", {}).get(label, {})
         f = p["instances"]["fill_ratio_by_length"].get(label, {})
         rows.append([label, d.get("n", 0), d.get("min"), d.get("median"), d.get("max"),
+                     r.get("median"), r.get("max"), m.get("min"),
                      f.get("min"), f.get("median")])
     a(_fmt_table(["nominal", "instances", "min tokens", "median tokens", "max tokens",
-                  "min fill", "median fill"], rows))
+                  "median rendered", "max rendered", "min margin", "min fill", "median fill"], rows))
     a("")
     tp = p["instances"]["target_position_distribution"]
     a(f"**Target-evidence position** (target {p['target_position']} ± {p['position_tolerance']}): "

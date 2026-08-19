@@ -1,0 +1,31 @@
+{
+  "answer_correct_false": 285,
+  "answer_correct_true": 215,
+  "context_counts": {
+    "16K": 100,
+    "32K": 100,
+    "4K": 100,
+    "64K": 100,
+    "8K": 100
+  },
+  "error_type_counts": {
+    "AMBIGUOUS_REVIEW_REQUIRED": 1,
+    "CALCULATION_ERROR": 10,
+    "CORRECT": 215,
+    "FAILED_TO_ABSTAIN": 63,
+    "UNNECESSARY_ABSTENTION": 6,
+    "UNSUPPORTED_VALUE": 122,
+    "WRONG_ENTITY": 30,
+    "WRONG_FIELD": 12,
+    "WRONG_PERIOD": 17,
+    "WRONG_SERIES_VARIANT": 3,
+    "WRONG_UNIT": 6,
+    "WRONG_VERSION": 15
+  },
+  "hallucination_false": 315,
+  "hallucination_null": 0,
+  "hallucination_true": 185,
+  "semantic_review_count": 1,
+  "total_scored_rows": 500,
+  "unique_instance_ids": 500
+}

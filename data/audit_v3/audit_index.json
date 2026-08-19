@@ -1,0 +1,88 @@
+{
+  "checklist": [
+    "Question is grammatically clear",
+    "Exact entity/period/version/field is unambiguous",
+    "Gold answer is correct",
+    "Gold evidence directly supports the answer",
+    "Calculation is correct if applicable",
+    "4K context is answerable when answerable=true",
+    "128K context is answerable when answerable=true",
+    "Unanswerable context genuinely lacks required evidence",
+    "Distractors are realistic same-domain competitors",
+    "Distractors do not accidentally reveal the answer",
+    "128K context is meaningfully more competitive than 4K",
+    "No malformed/unnatural record formatting",
+    "Record IDs are usable for later evidence selection",
+    "No obvious question-template artifacts make the answer trivial",
+    "No source-specific information leaks the answer outside intended evidence"
+  ],
+  "checklist_status": "PENDING_HUMAN_REVIEW",
+  "datasets": [
+    {
+      "config": "config/ct_audit_v3.yaml",
+      "name": "ct_audit_v3"
+    }
+  ],
+  "domains_audited": [
+    "SEC",
+    "FDA",
+    "CLINICAL_TRIALS",
+    "FRED"
+  ],
+  "families": [
+    {
+      "answerable": false,
+      "audit_issue_fields": {
+        "common_evaluation_prompt_applied_uniformly": true,
+        "common_evaluation_prompt_version": "evaluation_v1",
+        "equivalent_evidence_present": 0,
+        "invalid_near_match_value": 0,
+        "measurement_basis_distractors": 0,
+        "opaque_display_ids": "pass",
+        "question_contains_abstention_instruction": false,
+        "question_foil_leakage_detected": false,
+        "question_type_leakage_detected": false,
+        "true_wrong_unit_distractors": 0
+      },
+      "audit_markdown": "CT_0007.md",
+      "checklist_items": 15,
+      "checklist_status": "PENDING_HUMAN_REVIEW",
+      "context_128k": "CT_0007_128K.txt",
+      "context_128k_tokens": 129823,
+      "context_4k": "CT_0007_4K.txt",
+      "context_4k_tokens": 4020,
+      "contexts": {
+        "128K": "CT_0007_128K.txt",
+        "16K": "CT_0007_16K.txt",
+        "32K": "CT_0007_32K.txt",
+        "4K": "CT_0007_4K.txt",
+        "64K": "CT_0007_64K.txt",
+        "8K": "CT_0007_8K.txt"
+      },
+      "dataset": "ct_audit_v3",
+      "distractor_counts_128k": {
+        "OTHER_SAME_DOMAIN": 657,
+        "WRONG_ENTITY": 497,
+        "WRONG_FIELD": 30
+      },
+      "distractor_counts_4k": {
+        "OTHER_SAME_DOMAIN": 13,
+        "WRONG_ENTITY": 11,
+        "WRONG_FIELD": 15
+      },
+      "domain": "CLINICAL_TRIALS",
+      "gold_answer": null,
+      "gold_answer_normalized": "INSUFFICIENT_EVIDENCE",
+      "question_family_id": "CT_0007",
+      "question_type": "UNANSWERABLE",
+      "records_128k": 1184,
+      "records_4k": 39,
+      "target_position_128k": null,
+      "target_position_4k": null,
+      "template_id": "CT_UNANSWERABLE_FIELD_ABSENT"
+    }
+  ],
+  "generated_at": "2026-08-09T19:14:14Z",
+  "n_families": 1,
+  "seed": 20240817
+}

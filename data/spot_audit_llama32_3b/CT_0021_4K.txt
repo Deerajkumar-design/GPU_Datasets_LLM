@@ -1,0 +1,310 @@
+<RECORD id="R5EB491F41B" source="CLINICALTRIALS_GOV_V2">
+entity: Statin Therapy in Heart Failure: Potential Mechanisms of Benefit [NCT00233480]
+field: Overall recruitment status [study.overall_status]
+value: COMPLETED
+version: lastupdate:2020-03-20
+status: COMPLETED
+</RECORD>
+<RECORD id="R48BC89DF97" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Minimum eligible age [eligibility.minimum_age]
+value: 21 Years
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>
+<RECORD id="R0AF05B581D" source="CLINICALTRIALS_GOV_V2">
+entity: A Trial Investigating the Cardiovascular Safety of Oral Semaglutide in Subjects With Type 2 Diabetes [NCT02692716]
+field: Number of arm groups [arms.count]
+unit: arms
+value: 2.0
+version: lastupdate:2022-07-20
+status: COMPLETED
+</RECORD>
+<RECORD id="R23034F01F4" source="CLINICALTRIALS_GOV_V2">
+entity: A Heart Disease Study of Semaglutide in Patients With Type 2 Diabetes [NCT03914326]
+field: Arm group type: Placebo [arm.type]
+value: PLACEBO_COMPARATOR
+version: lastupdate:2025-12-11
+arm: Placebo
+status: COMPLETED
+</RECORD>
+<RECORD id="RBBFE4B0AF1" source="CLINICALTRIALS_GOV_V2">
+entity: Comparison of Effect & Safety of Clopidogrel Napadisilate With Clopidogrel Bisulfate in Coronary Artery Disease Patients [NCT01830491]
+field: Eligible sex [eligibility.sex]
+value: ALL
+version: lastupdate:2016-10-12
+status: COMPLETED
+</RECORD>
+<RECORD id="R686EF4985B" source="CLINICALTRIALS_GOV_V2">
+entity: The International Polycap Study 3 (TIPS-3) [NCT01646437]
+field: Eligible sex [eligibility.sex]
+value: ALL
+version: lastupdate:2021-09-16
+status: COMPLETED
+</RECORD>
+<RECORD id="RA9753ED0FD" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Study phase [study.phase]
+value: NA
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>
+<RECORD id="RDA2E131BCE" source="CLINICALTRIALS_GOV_V2">
+entity: Safety, Tolerability, and Efficacy of Monotherapy and Combination Regimens in Participants With Nonalcoholic Steatohepatitis (NASH) [NCT03987074]
+field: Study first posted date [study.first_posted_date]
+period: 2019
+value: 2019-06-14
+version: lastupdate:2021-07-15
+status: COMPLETED
+</RECORD>
+<RECORD id="RB995245EC7" source="CLINICALTRIALS_GOV_V2">
+entity: A Study for Type 2 Diabetic Patients [NCT00548808]
+field: Arm group type: Insulin glargine [arm.type]
+value: ACTIVE_COMPARATOR
+version: lastupdate:2010-09-15
+arm: Insulin glargine
+status: COMPLETED
+</RECORD>
+<RECORD id="REBFFC552CB" source="CLINICALTRIALS_GOV_V2">
+entity: Semaglutide and Preoperative Residual Gastric Volumes [NCT06263595]
+field: Primary outcome timeframe: Number of participants presenting with a full stomach [outcome.primary.timeframe]
+value: Measured in the preoperative holding area
+version: lastupdate:2026-04-28
+outcome: Number of participants presenting with a full stomach
+status: COMPLETED
+</RECORD>
+<RECORD id="R30DE7DFC31" source="CLINICALTRIALS_GOV_V2">
+entity: Tranexamic Acid Versus Misoprostol to Reduce Blood Loss During and After Cesarean Section [NCT07712510]
+field: Arm group type: Rectal Misoprostol [arm.type]
+value: ACTIVE_COMPARATOR
+version: lastupdate:2026-07-17
+arm: Rectal Misoprostol
+status: COMPLETED
+</RECORD>
+<RECORD id="RCE4078EF0D" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Accepts healthy volunteers [eligibility.healthy_volunteers]
+value: No
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>
+<RECORD id="REF14C905F8" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Arm group type: Alert Group [arm.type]
+value: EXPERIMENTAL
+version: lastupdate:2018-10-31
+arm: Alert Group
+status: COMPLETED
+</RECORD>
+<RECORD id="RB21F886E24" source="CLINICALTRIALS_GOV_V2">
+entity: Effect of Glucose Control on the Response to Aspirin in Type 2 Diabetic Patients [NCT00649909]
+field: Number of arm groups [arms.count]
+unit: arms
+value: 1.0
+version: lastupdate:2017-08-10
+status: COMPLETED
+</RECORD>
+<RECORD id="RDF236BD7D2" source="CLINICALTRIALS_GOV_V2">
+entity: Semaglutide Treatment On Coronary Progression [NCT03985384]
+field: Accepts healthy volunteers [eligibility.healthy_volunteers]
+value: No
+version: lastupdate:2023-10-05
+status: COMPLETED
+</RECORD>
+<RECORD id="RCDFE6C2A52" source="CLINICALTRIALS_GOV_V2">
+entity: Does Tranexamic Acid Reduce the Need for Blood Transfusions in Patients Undergoing Hip Fracture Surgery? [NCT01714336]
+field: Intervention: tranexamic acid [intervention.type]
+value: DRUG
+version: lastupdate:2018-11-14
+intervention: tranexamic acid
+status: COMPLETED
+</RECORD>
+<RECORD id="R64624906F7" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Intervention model [design.intervention_model]
+value: PARALLEL
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>
+<RECORD id="R398CEC4DA9" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Primary purpose [design.primary_purpose]
+value: PREVENTION
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>
+<RECORD id="RAF658D598E" source="CLINICALTRIALS_GOV_V2">
+entity: Evaluation of Insulin Glargine Versus Sitagliptin in Insulin-naive Patients [NCT00751114]
+field: Allocation [design.allocation]
+value: RANDOMIZED
+version: lastupdate:2012-09-10
+status: COMPLETED
+</RECORD>
+<RECORD id="RD67EC212F8" source="CLINICALTRIALS_GOV_V2">
+entity: Effects of Hypoglycemic Drugs on Testosterone Levels in Type 2 Diabetes Patients [NCT03982238]
+field: Arm group type: Control group [arm.type]
+value: ACTIVE_COMPARATOR
+version: lastupdate:2020-04-03
+arm: Control group
+status: COMPLETED
+</RECORD>
+<RECORD id="RDBDDA7EFE6" source="CLINICALTRIALS_GOV_V2">
+entity: Comparative Pharmacokinetics of YH14659 in Healthy Male Subjects [NCT01657071]
+field: Overall recruitment status [study.overall_status]
+value: COMPLETED
+version: lastupdate:2012-08-03
+status: COMPLETED
+</RECORD>
+<RECORD id="R4CF22E7DFF" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Lead sponsor [sponsor.lead_sponsor]
+value: Brigham and Women's Hospital
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>
+<RECORD id="RD4A8C126CA" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Arm group type: Control Group [arm.type]
+value: NO_INTERVENTION
+version: lastupdate:2018-10-31
+arm: Control Group
+status: COMPLETED
+</RECORD>
+<RECORD id="RC1189F3017" source="CLINICALTRIALS_GOV_V2">
+entity: Clinical Efficacy of Tranexamic Acid and ε-Aminocaproic Acid in Reducing Blood Loss Following Total Knee Replacement [NCT01873768]
+field: Number of arm groups [arms.count]
+unit: arms
+value: 2.0
+version: lastupdate:2016-03-21
+status: COMPLETED
+</RECORD>
+<RECORD id="R37EF7F08AC" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Study type [study.study_type]
+value: INTERVENTIONAL
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>
+<RECORD id="R6EEC3F5FF6" source="CLINICALTRIALS_GOV_V2">
+entity: Effects of Local Insulin on Varicose Ulcers for Wound Healing [NCT04310280]
+field: Arm group type: Topical insulin glargine [arm.type]
+value: EXPERIMENTAL
+version: lastupdate:2020-03-17
+arm: Topical insulin glargine
+status: COMPLETED
+</RECORD>
+<RECORD id="RA61B121C46" source="CLINICALTRIALS_GOV_V2">
+entity: Research Study to Investigate How Well Semaglutide Tablets Taken Once Daily Work in East Asian People Who Are Overweight or Living With Obesity [NCT05132088]
+field: Minimum eligible age [eligibility.minimum_age]
+value: 18 Years
+version: lastupdate:2025-06-06
+status: COMPLETED
+</RECORD>
+<RECORD id="RB6B41CF206" source="CLINICALTRIALS_GOV_V2">
+entity: A Study Comparing the Dulaglutide Pen and the Semaglutide Pen [NCT03724981]
+field: Number of arm groups [arms.count]
+unit: arms
+value: 2.0
+version: lastupdate:2020-04-24
+status: COMPLETED
+</RECORD>
+<RECORD id="R6755599848" source="CLINICALTRIALS_GOV_V2">
+entity: Oral Tranexamic Acid and Topical Hydroquinone in the Treatment of Melasma [NCT03751163]
+field: Number of arm groups [arms.count]
+unit: arms
+value: 2.0
+version: lastupdate:2018-11-26
+status: COMPLETED
+</RECORD>
+<RECORD id="RC43EF11313" source="CLINICALTRIALS_GOV_V2">
+entity: Antiplatelet Activity of Aspirin in Infants After Aortopulmonary and Cavopulmonary Shunts [NCT01656993]
+field: Last update posted date [study.last_update_posted_date]
+period: 2017
+value: 2017-05-05
+version: lastupdate:2017-05-05
+status: COMPLETED
+</RECORD>
+<RECORD id="R0B3F1199AD" source="CLINICALTRIALS_GOV_V2">
+entity: The POWERED Study: Prophylaxis With Metformin to Prevent PTDM [NCT05240274]
+field: Secondary outcome timeframe: incidence of treatment emergent adverse events [outcome.secondary.timeframe]
+value: 12 months
+version: lastupdate:2022-10-18
+outcome: incidence of treatment emergent adverse events
+status: COMPLETED
+</RECORD>
+<RECORD id="R1CF319A2DC" source="CLINICALTRIALS_GOV_V2">
+entity: Thromboprophylaxis With Rivaroxaban In Patients With Malignancy and Central Venous Lines [NCT03506815]
+field: Last update posted date [study.last_update_posted_date]
+period: 2024
+value: 2024-07-05
+version: lastupdate:2024-07-05
+status: COMPLETED
+</RECORD>
+<RECORD id="RCED1CE9204" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Secondary outcome timeframe: Frequency of composite of major adverse cardiovascular events at 90 days [outcome.secondary.timeframe]
+value: 90 days
+version: lastupdate:2018-10-31
+outcome: Frequency of composite of major adverse cardiovascular events at 90 days
+status: COMPLETED
+</RECORD>
+<RECORD id="RCAF2E71EE8" source="CLINICALTRIALS_GOV_V2">
+entity: First-line Esophageal Carcinoma Study With Pembrolizumab Plus Chemo vs. Chemo (MK-3475-590/KEYNOTE-590) [NCT03189719]
+field: Allocation [design.allocation]
+value: RANDOMIZED
+version: lastupdate:2024-10-15
+status: COMPLETED
+</RECORD>
+<RECORD id="RE1B15CB015" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Intervention: Computer Electronic Alert [intervention.type]
+value: OTHER
+version: lastupdate:2018-10-31
+intervention: Computer Electronic Alert
+status: COMPLETED
+</RECORD>
+<RECORD id="RC0E88628E0" source="CLINICALTRIALS_GOV_V2">
+entity: Factor XA - Inhibition in RENal Patients With Non-valvular Atrial Fibrillation - Observational Registry [NCT02663076]
+field: Primary outcome timeframe: major bleeding [outcome.primary.timeframe]
+value: 12 month
+version: lastupdate:2022-07-19
+outcome: major bleeding
+status: COMPLETED
+</RECORD>
+<RECORD id="RE9742CAD57" source="CLINICALTRIALS_GOV_V2">
+entity: A Healthy Volunteer PK/PD, Safety and Tolerability Study of Second Generation Andexanet Alfa [NCT03083704]
+field: Primary outcome timeframe: Pharmacokinetics [outcome.primary.timeframe]
+value: Day 1 through Day 7
+version: lastupdate:2023-08-08
+outcome: Pharmacokinetics
+status: COMPLETED
+</RECORD>
+<RECORD id="R97CC606228" source="CLINICALTRIALS_GOV_V2">
+entity: Effectiveness of Subcutaneous Glargine On The Time To Closure of The Anion Gap in Patients Presenting to the Emergency Department With Diabetic Keto-acidosis [NCT02006342]
+field: Number of arm groups [arms.count]
+unit: arms
+value: 2.0
+version: lastupdate:2017-05-16
+status: COMPLETED
+</RECORD>
+<RECORD id="RDFF41F7941" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Allocation [design.allocation]
+value: RANDOMIZED
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>
+<RECORD id="RAD6AD40F5E" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Studied condition [study.condition]
+value: Stroke
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>
+<RECORD id="RDC2ED32592" source="CLINICALTRIALS_GOV_V2">
+entity: Dose-Dependent Effects of Intraoperative Tranexamic Acid on Surgical Bleeding and Transfusion Requirements in Multilevel Thoracolumbar Spinal Surgery [NCT07288697]
+field: Study phase [study.phase]
+value: NA
+version: lastupdate:2025-12-17
+status: COMPLETED
+</RECORD>

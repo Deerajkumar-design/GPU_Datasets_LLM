@@ -1,0 +1,52 @@
+{
+  "selected": [
+    {
+      "family": "SEC_0009",
+      "domain": "SEC",
+      "question_type": "RETRIEVAL_CALCULATION",
+      "answerable": true
+    },
+    {
+      "family": "FDA_0010",
+      "domain": "FDA",
+      "question_type": "RETRIEVAL_CALCULATION",
+      "answerable": true
+    },
+    {
+      "family": "CT_0010",
+      "domain": "CLINICAL_TRIALS",
+      "question_type": "RETRIEVAL_CALCULATION",
+      "answerable": true
+    },
+    {
+      "family": "FRED_0010",
+      "domain": "FRED",
+      "question_type": "RETRIEVAL_CALCULATION",
+      "answerable": true
+    },
+    {
+      "family": "CT_0017",
+      "domain": "CLINICAL_TRIALS",
+      "question_type": "TEMPORAL_VERSION",
+      "answerable": true
+    },
+    {
+      "family": "FDA_0006",
+      "domain": "FDA",
+      "question_type": "ENTITY_UNIT_BINDING",
+      "answerable": true
+    },
+    {
+      "family": "FRED_0021",
+      "domain": "FRED",
+      "question_type": "UNANSWERABLE",
+      "answerable": false
+    },
+    {
+      "family": "SEC_0001",
+      "domain": "SEC",
+      "question_type": "DIRECT_RETRIEVAL",
+      "answerable": true
+    }
+  ]
+}

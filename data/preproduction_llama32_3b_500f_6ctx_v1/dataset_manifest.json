@@ -1,0 +1,37 @@
+{
+  "config_path": "config/preproduction_llama32_3b_500f_6ctx_v1.yaml",
+  "config_sha256": "68b7b31f0dbb8d0fb1aaa735fbd4932e9586383eb456e4e2b5965c398147c338",
+  "context_labels": [
+    "4K",
+    "8K",
+    "16K",
+    "32K",
+    "64K",
+    "82K"
+  ],
+  "created_at": "2026-08-11T04:19:36.634041+00:00",
+  "dataset": "preproduction_llama32_3b_500f_6ctx_v1",
+  "dataset_sha256": "dc2c4194dedb090198e6883735257908ce274bebc8611b40d958dbd026aa1fe6",
+  "families": 500,
+  "file_hashes": {
+    "instances.jsonl": "ab8ba5bf47b730620aebfc8b1acb3618cf207eb0a65a5b275a47b5a210b12f2d",
+    "instances.parquet": "19977c82e89be3ad631b30259c68ddc1f9a5a0e919a4ea0e1fe53dbeaa9d084e",
+    "question_families.jsonl": "d3602a1eb14a0b827451c9ba30d18a12720065ab6f8edce2dad6e2f7b75bdaf2"
+  },
+  "generation_code_sha256": "15a43d6d33a64d21a0d5a2114784741a1e0176a5f9246e8dfcb8859e03787391",
+  "generation_tokens_reserved": 128,
+  "instances": 3000,
+  "max_rendered_input_tokens_82k": 81800,
+  "model_context_limit": 131072,
+  "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+  "model_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "platform": "Linux-6.8.0-87-generic-x86_64-with-glibc2.35",
+  "prompt_hash": "5d2869822989e19b",
+  "prompt_version": "llama_chat_v4",
+  "python": "3.12.13",
+  "response_format_version": "answer_only_line_v1",
+  "tokenizer": "hf:meta-llama/Llama-3.2-3B-Instruct",
+  "tokenizer_class": "TokenizersBackend",
+  "tokenizer_revision": null,
+  "tokenizer_version": "transformers==5.14.1; tokenizers==0.22.2"
+}

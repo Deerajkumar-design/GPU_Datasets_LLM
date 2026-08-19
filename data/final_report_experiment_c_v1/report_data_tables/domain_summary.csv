@@ -1,0 +1,5 @@
+Domain,Role
+SEC,Company financial facts and filings.
+FDA / Drugs@FDA,"Drug applications, submissions, products, strengths, dosage forms, and routes."
+ClinicalTrials.gov,"Trial metadata, dates, enrollment, arms, status, and unavailable fields."
+FRED,"Economic time series with unit, frequency, and series attributes."

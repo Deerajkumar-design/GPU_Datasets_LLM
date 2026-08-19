@@ -1,0 +1,3 @@
+answerable,total_responses,valid_json,valid_json_pct,recoverable_malformed_json,recoverable_malformed_json_pct,usable_responses,usable_responses_pct,format_failures,format_failure_pct,hit_512_token_limit,hit_512_token_limit_pct,repetitive_degenerate_outputs,repetitive_degenerate_outputs_pct,mean_generated_tokens,median_generated_tokens
+True,400,168,42.0,0,0.0,168,42.0,232,58.0,229,57.25,224,56.0,311.845,512.0
+False,100,44,44.0,0,0.0,44,44.0,56,56.0,55,55.0,52,52.0,298.48,512.0

@@ -77,6 +77,8 @@ def build_parser() -> argparse.ArgumentParser:
                          "(repeatable, e.g. --also config/fred_pilot.yaml)")
     sp.add_argument("--n", type=int, default=12, help="how many families to sample")
     sp.add_argument("--out", default="data/audit", help="output directory")
+    sp.add_argument("--families", default=None,
+                    help="comma-separated exact question family IDs to audit instead of sampling")
 
     sp = add_common(sub.add_parser("build-pilot", help="end-to-end: fetch -> ... -> report"), True)
     sp.add_argument("--skip-fetch", action="store_true", help="reuse cached raw payloads")
@@ -219,8 +221,9 @@ def cmd_audit(args) -> int:
 
     cfgs = [load_config(args.config)] + [load_config(p) for p in args.also]
     _section(f"AUDIT  ({', '.join(c.name for c in cfgs)})")
+    family_ids = [x.strip() for x in args.families.split(",") if x.strip()] if args.families else None
     summary = build_audit_package(cfgs, Path(args.out), n_families=args.n,
-                                  seed=cfgs[0].seed, log=_log)
+                                  seed=cfgs[0].seed, family_ids=family_ids, log=_log)
     _log(f"\n  {summary['n_families']} families -> {args.out}")
     _log(f"  index -> {Path(args.out) / 'audit_index.md'}")
     _log("  checklist status: PENDING_HUMAN_REVIEW (intentionally unticked)")

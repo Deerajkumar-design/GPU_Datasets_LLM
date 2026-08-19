@@ -24,17 +24,17 @@ def check_record_boundaries(instance: Instance) -> List[str]:
 
     if len(opens) != n_close:
         problems.append(f"{len(opens)} <RECORD> open tags vs {n_close} {_CLOSE_TOKEN} close tags")
-    if len(opens) != len(instance.context_record_ids):
+    declared_display = instance.context_display_ids or instance.context_record_ids
+    if len(opens) != len(declared_display):
         problems.append(
-            f"{len(opens)} rendered records vs {len(instance.context_record_ids)} declared "
-            "context_record_ids"
+            f"{len(opens)} rendered records vs {len(declared_display)} declared context_display_ids"
         )
-    if opens != list(instance.context_record_ids):
+    if opens != list(declared_display):
         first_bad = next(
-            (i for i, (a, b) in enumerate(zip(opens, instance.context_record_ids)) if a != b), None
+            (i for i, (a, b) in enumerate(zip(opens, declared_display)) if a != b), None
         )
         problems.append(
-            "rendered record-id sequence differs from context_record_ids"
+            "rendered record-id sequence differs from context_display_ids"
             + (f" (first difference at index {first_bad})" if first_bad is not None else "")
         )
     dupes = {r for r in opens if opens.count(r) > 1} if len(opens) < 5000 else set()

@@ -1,0 +1,325 @@
+{
+  "frozen_prompt": {
+    "model": "meta-llama/Llama-3.2-3B-Instruct",
+    "tokenizer": "hf:meta-llama/Llama-3.2-3B-Instruct",
+    "tokenizer_class": "TokenizersBackend",
+    "native_chat_template_used": true,
+    "frozen_template_date": "09 Aug 2026",
+    "prompt_version": "llama_chat_v2",
+    "prompt_hash": "14cc206955296997",
+    "response_format_version": "json_evidence_answer_v1",
+    "model_config_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "tokenizer_revision": null
+  },
+  "token_budget": {
+    "model_context_limit": 131072,
+    "generation_reserve": 512,
+    "max_safe_input": 130560,
+    "by_condition": {
+      "4K": {
+        "rendered_input": {
+          "n": 100,
+          "min": 4221,
+          "mean": 4281.7,
+          "max": 4373
+        },
+        "remaining_margin": {
+          "n": 100,
+          "min": 126187,
+          "mean": 126278.3,
+          "max": 126339
+        }
+      },
+      "8K": {
+        "rendered_input": {
+          "n": 100,
+          "min": 8272,
+          "mean": 8345.2,
+          "max": 8443
+        },
+        "remaining_margin": {
+          "n": 100,
+          "min": 122117,
+          "mean": 122214.8,
+          "max": 122288
+        }
+      },
+      "16K": {
+        "rendered_input": {
+          "n": 100,
+          "min": 16355,
+          "mean": 16456.0,
+          "max": 16545
+        },
+        "remaining_margin": {
+          "n": 100,
+          "min": 114015,
+          "mean": 114104.0,
+          "max": 114205
+        }
+      },
+      "32K": {
+        "rendered_input": {
+          "n": 100,
+          "min": 32541,
+          "mean": 32687.0,
+          "max": 32850
+        },
+        "remaining_margin": {
+          "n": 100,
+          "min": 97710,
+          "mean": 97873.0,
+          "max": 98019
+        }
+      },
+      "64K": {
+        "rendered_input": {
+          "n": 100,
+          "min": 64919,
+          "mean": 65136.5,
+          "max": 65356
+        },
+        "remaining_margin": {
+          "n": 100,
+          "min": 65204,
+          "mean": 65423.5,
+          "max": 65641
+        }
+      },
+      "128K": {
+        "rendered_input": {
+          "n": 100,
+          "min": 129630,
+          "mean": 130043.0,
+          "max": 130437
+        },
+        "remaining_margin": {
+          "n": 100,
+          "min": 123,
+          "mean": 517.0,
+          "max": 930
+        }
+      }
+    },
+    "near_max": {
+      "rendered_input": {
+        "n": 100,
+        "min": 129630,
+        "mean": 130043.0,
+        "max": 130437
+      },
+      "remaining_margin": {
+        "n": 100,
+        "min": 123,
+        "mean": 517.0,
+        "max": 930
+      }
+    },
+    "minimum_remaining_margin": 123,
+    "overflow_count": 0,
+    "truncation_failure_count": 0
+  },
+  "dataset": {
+    "families": 100,
+    "instances": 600,
+    "families_by_domain": {
+      "CLINICAL_TRIALS": 25,
+      "FDA": 25,
+      "FRED": 25,
+      "SEC": 25
+    },
+    "families_by_question_type": {
+      "DIRECT_RETRIEVAL": 20,
+      "ENTITY_UNIT_BINDING": 19,
+      "RETRIEVAL_CALCULATION": 30,
+      "UNANSWERABLE": 20,
+      "TEMPORAL_VERSION": 11
+    },
+    "answerable": 80,
+    "unanswerable": 20
+  },
+  "multi_evidence_audit": {
+    "root_cause": "The contexts and display_id_to_record_id mappings were correct. The issue was an audit/report rendering bug plus a schema ambiguity: flat gold_evidence_display_ids did not expose per-evidence operand mappings. v2 adds gold_evidence_display_map and renders per-record IDs.",
+    "families": [
+      {
+        "family": "SEC_0009",
+        "question": "Using only the SEC XBRL company-facts records supplied in the context, calculate WALMART INC.'s (CIK 0000104169) operating margin for the annual XBRL frame CY2011. Divide us-gaap:OperatingIncomeLoss by Revenues for that same company and frame, both in USD, multiply by 100, and round to two decimal places.",
+        "evidence": [
+          {
+            "canonical_record_id": "SEC-0000104169-OperatingIncomeLoss-USD-CY2011-0000104169-14-000019-ab2642b5",
+            "display_id": "RB1AFF6F2F5",
+            "equivalent_display_ids": [
+              "RB1AFF6F2F5"
+            ],
+            "role": "numerator",
+            "field": "us-gaap:OperatingIncomeLoss",
+            "value": 26491000000.0
+          },
+          {
+            "canonical_record_id": "SEC-0000104169-Revenues-USD-CY2011-0000104169-14-000019-50faff09",
+            "display_id": "R8C100B55A6",
+            "equivalent_display_ids": [
+              "R8C100B55A6"
+            ],
+            "role": "denominator",
+            "field": "us-gaap:Revenues",
+            "value": 446509000000.0
+          }
+        ]
+      },
+      {
+        "family": "CT_0010",
+        "question": "Using only the ClinicalTrials.gov records supplied in the context, subtract the enrollment count of trial NCT03800927 from the enrollment count of trial NCT03656445. Report the difference as an integer number of participants.",
+        "evidence": [
+          {
+            "canonical_record_id": "CT-NCT03656445-enrollment-count-535dc578",
+            "display_id": "R584E60CDF3",
+            "equivalent_display_ids": [
+              "R584E60CDF3"
+            ],
+            "role": "minuend",
+            "field": "enrollment.count",
+            "value": 180.0
+          },
+          {
+            "canonical_record_id": "CT-NCT03800927-enrollment-count-5f640681",
+            "display_id": "RF6704DB3B7",
+            "equivalent_display_ids": [
+              "RF6704DB3B7"
+            ],
+            "role": "subtrahend",
+            "field": "enrollment.count",
+            "value": 100.0
+          }
+        ]
+      },
+      {
+        "family": "FDA_0010",
+        "question": "Using only the Drugs@FDA records supplied in the context, how many distinct product entries are listed under FDA application ANDA205695 (sponsor: ANBISON LAB)? Count the products belonging to that application number only, and answer with an integer.",
+        "evidence": [
+          {
+            "canonical_record_id": "FDA-ANDA205695-001-product-dosage-form-4f3d7427",
+            "display_id": "R2CEE60A0A9",
+            "equivalent_display_ids": [
+              "R2CEE60A0A9"
+            ],
+            "role": "product_0",
+            "field": "product.dosage_form",
+            "value": "TABLET, CHEWABLE"
+          },
+          {
+            "canonical_record_id": "FDA-ANDA205695-002-product-dosage-form-75631b38",
+            "display_id": "R8D2B7063AB",
+            "equivalent_display_ids": [
+              "R8D2B7063AB"
+            ],
+            "role": "product_1",
+            "field": "product.dosage_form",
+            "value": "TABLET, CHEWABLE"
+          }
+        ]
+      },
+      {
+        "family": "FRED_0010",
+        "question": "Using only the FRED records supplied in the context, calculate the percentage change in FRED series WGS10YR (\"Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity\"), measured in Percent, not seasonally adjusted, weekly frequency between the observation dated 2026-07-24 and the observation dated 2026-07-31. Use both values from the most recent vintage, apply ((value_2026-07-31 - value_2026-07-24) / value_2026-07-24) * 100, and round to two decimal places.",
+        "evidence": [
+          {
+            "canonical_record_id": "FRED-WGS10YR-2026-07-31-latest-b0603637",
+            "display_id": "RA2C8DBEEC0",
+            "equivalent_display_ids": [
+              "RA2C8DBEEC0"
+            ],
+            "role": "current",
+            "field": "WGS10YR",
+            "value": 4.67
+          },
+          {
+            "canonical_record_id": "FRED-WGS10YR-2026-07-24-latest-4def8320",
+            "display_id": "RE9533D1E1E",
+            "equivalent_display_ids": [
+              "RE9533D1E1E"
+            ],
+            "role": "previous",
+            "field": "WGS10YR",
+            "value": 4.66
+          }
+        ]
+      }
+    ]
+  },
+  "smoke_count_resolution": {
+    "expected_four_family_instances": 24,
+    "actual_four_family_instances": 24,
+    "previous_reported_204": "204 was the total instance count of the broader audit_llama32_smoke dataset: 34 families x 6 context lengths. It was not the count for the four named audited families.",
+    "duplication_bug": false
+  },
+  "ct_0017": {
+    "original_type": "TEMPORAL_VERSION",
+    "final_type": "ENTITY_UNIT_BINDING",
+    "template": "CT_DATE_FIELD_SELECTION",
+    "question": "Using only the ClinicalTrials.gov records supplied in the context, what is the PRIMARY COMPLETION DATE of trial NCT02746185 (\"Cancer Associated Thrombosis, a Pilot Treatment Study Using Rivaroxaban\")? Answer in YYYY-MM-DD form.",
+    "gold_evidence_ids": [
+      "CT-NCT02746185-study-primary-completion-35ff3c07"
+    ],
+    "distractor_counts_max": {
+      "OTHER_SAME_DOMAIN": 1001,
+      "WRONG_ENTITY": 122,
+      "WRONG_FIELD": 31
+    },
+    "reason": "CT_DATE_FIELD_SELECTION selects one sibling date field on a single trial. It does not require distinguishing original/amended versions, vintages, or multiple time-indexed states of the same target field, so it is ENTITY_UNIT_BINDING rather than TEMPORAL_VERSION."
+  },
+  "temporal_version_review": {
+    "inspected_original_temporal_families": 15,
+    "reclassified_count": 4,
+    "reclassified": [
+      {
+        "family": "CT_0017",
+        "domain": "CLINICAL_TRIALS",
+        "template": "CT_DATE_FIELD_SELECTION",
+        "old": "TEMPORAL_VERSION",
+        "new": "ENTITY_UNIT_BINDING"
+      },
+      {
+        "family": "CT_0018",
+        "domain": "CLINICAL_TRIALS",
+        "template": "CT_DATE_FIELD_SELECTION",
+        "old": "TEMPORAL_VERSION",
+        "new": "ENTITY_UNIT_BINDING"
+      },
+      {
+        "family": "CT_0019",
+        "domain": "CLINICAL_TRIALS",
+        "template": "CT_DATE_FIELD_SELECTION",
+        "old": "TEMPORAL_VERSION",
+        "new": "ENTITY_UNIT_BINDING"
+      },
+      {
+        "family": "CT_0020",
+        "domain": "CLINICAL_TRIALS",
+        "template": "CT_DATE_FIELD_SELECTION",
+        "old": "TEMPORAL_VERSION",
+        "new": "ENTITY_UNIT_BINDING"
+      }
+    ],
+    "before_counts": {
+      "DIRECT_RETRIEVAL": 20,
+      "ENTITY_UNIT_BINDING": 15,
+      "RETRIEVAL_CALCULATION": 30,
+      "TEMPORAL_VERSION": 15,
+      "UNANSWERABLE": 20
+    },
+    "after_counts": {
+      "DIRECT_RETRIEVAL": 20,
+      "ENTITY_UNIT_BINDING": 19,
+      "RETRIEVAL_CALCULATION": 30,
+      "UNANSWERABLE": 20,
+      "TEMPORAL_VERSION": 11
+    }
+  },
+  "validation": {
+    "passed": 30,
+    "total": 30,
+    "critical_failed": 0,
+    "warning_failed": 0
+  }
+}

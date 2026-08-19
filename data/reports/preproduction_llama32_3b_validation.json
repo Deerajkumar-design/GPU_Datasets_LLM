@@ -1,0 +1,672 @@
+{
+  "checks": [
+    {
+      "check_id": "A",
+      "failures": [],
+      "failures_truncated": false,
+      "message": "",
+      "n_checked": 700,
+      "n_failed": 0,
+      "name": "unique IDs (families and instances)",
+      "passed": true,
+      "severity": "CRITICAL",
+      "skip_reason": null,
+      "skipped": false
+    },
+    {
+      "check_id": "AA",
+      "failures": [],
+      "failures_truncated": false,
+      "message": "",
+      "n_checked": 600,
+      "n_failed": 0,
+      "name": "model prompt token-budget and provenance",
+      "passed": true,
+      "severity": "CRITICAL",
+      "skip_reason": null,
+      "skipped": false
+    },
+    {
+      "check_id": "B",
+      "failures": [],
+      "failures_truncated": false,
+      "message": "",
+      "n_checked": 100,
+      "n_failed": 0,
+      "name": "no duplicate question families",
+      "passed": true,
+      "severity": "CRITICAL",
+      "skip_reason": null,
+      "skipped": false
+    },
+    {
+      "check_id": "C",
+      "failures": [],
+      "failures_truncated": false,
+      "message": "",
+      "n_checked": 100,
+      "n_failed": 0,
+      "name": "valid source provenance",
+      "passed": true,
+      "severity": "CRITICAL",
+      "skip_reason": null,
+      "skipped": false
+    },
+    {
+      "check_id": "D",
+      "failures": [],
+      "failures_truncated": false,
+      "message": "",
+      "n_checked": 100,
+      "n_failed": 0,
+      "name": "deterministic gold-answer recomputation",
+      "passed": true,
+      "severity": "CRITICAL",
+      "skip_reason": null,
+      "skipped": false
+    },
+    {
+      "check_id": "E",
+      "failures": [],
+      "failures_truncated": false,
+      "message": "",
+      "n_checked": 600,
+      "n_failed": 0,
+      "name": "gold evidence present in every answerable context",
+      "passed": true,
+      "severity": "CRITICAL",
+      "skip_reason": null,
+      "skipped": false
+    },
+    {
+      "check_id": "F",
+      "failures": [],
+      "failures_truncated": false,
+      "message": "",
+      "n_checked": 600,
+      "n_failed": 0,
+      "name": "gold evidence absent for unanswerable families",
+      "passed": true,
+      "severity": "CRITICAL",
+      "skip_reason": null,
+      "skipped": false
+    },
+    {
+      "check_id": "G",
+      "failures": [],
+      "failures_truncated": false,
+      "message": "",
+      "n_checked": 100,
+      "n_failed": 0,
+      "name": "identical question across context-length variants",
+      "passed": true,
+      "severity": "CRITICAL",
+      "skip_reason": null,
+      "skipped": false
+    },
+    {
+      "check_id": "H",
+      "failures": [],
+      "failures_truncated": false,
+      "message": "",
+      "n_checked": 100,
+      "n_failed": 0,
+      "name": "identical gold answer across context-length variants",
+      "passed": true,
+      "severity": "CRITICAL",
+      "skip_reason": null,
+      "skipped": false
+    },
+    {
+      "check_id": "I",
+      "failures": [],
+      "failures_truncated": false,
+      "message": "",
+      "n_checked": 100,
+      "n_failed": 0,
+      "name": "identical gold evidence across context-length variants",
+      "passed": true,
+      "severity": "CRITICAL",
+      "skip_reason": null,
+      "skipped": false
+    },
+    {
+      "check_id": "J",
+      "failures": [],
+      "failures_truncated": false,
+      "message": "",
+      "n_checked": 100,
+      "n_failed": 0,
+      "name": "nested-context lineage",
+      "passed": true,
+      "severity": "CRITICAL",
+      "skip_reason": null,
+      "skipped": false
+    },
+    {
+      "check_id": "K",
+      "failures": [],
+      "failures_truncated": false,
+      "message": "",
+      "n_checked": 600,
+      "n_failed": 0,
+      "name": "token-length compliance",
+      "passed": true,
+      "severity": "CRITICAL",
+      "skip_reason": null,
+      "skipped": false
+    },
+    {
+      "check_id": "L",
+      "failures": [],
+      "failures_truncated": false,
+      "message": "",
+      "n_checked": 600,
+      "n_failed": 0,
+      "name": "target-position compliance",
+      "passed": true,
+      "severity": "CRITICAL",
+      "skip_reason": null,
+      "skipped": false
+    },
+    {
+      "check_id": "M",
+      "failures": [],
+      "failures_truncated": false,
+      "message": "",
+      "n_checked": 600,
+      "n_failed": 0,
+      "name": "record-boundary integrity",
+      "passed": true,
+      "severity": "CRITICAL",
+      "skip_reason": null,
+      "skipped": false
+    },
+    {
+      "check_id": "N",
+      "failures": [],
+      "failures_truncated": false,
+      "message": "",
+      "n_checked": 30,
+      "n_failed": 0,
+      "name": "unit consistency in calculations",
+      "passed": true,
+      "severity": "CRITICAL",
+      "skip_reason": null,
+      "skipped": false
+    },
+    {
+      "check_id": "O",
+      "failures": [],
+      "failures_truncated": false,
+      "message": "",
+      "n_checked": 100,
+      "n_failed": 0,
+      "name": "answer-type / schema validity",
+      "passed": true,
+      "severity": "CRITICAL",
+      "skip_reason": null,
+      "skipped": false
+    },
+    {
+      "check_id": "P",
+      "failures": [],
+      "failures_truncated": false,
+      "message": "",
+      "n_checked": 600,
+      "n_failed": 0,
+      "name": "distractor metadata completeness",
+      "passed": true,
+      "severity": "CRITICAL",
+      "skip_reason": null,
+      "skipped": false
+    },
+    {
+      "check_id": "Q",
+      "failures": [],
+      "failures_truncated": false,
+      "message": "",
+      "n_checked": 100,
+      "n_failed": 0,
+      "name": "no NaN or invalid numeric answers",
+      "passed": true,
+      "severity": "CRITICAL",
+      "skip_reason": null,
+      "skipped": false
+    },
+    {
+      "check_id": "R",
+      "failures": [],
+      "failures_truncated": false,
+      "message": "",
+      "n_checked": 600,
+      "n_failed": 0,
+      "name": "no context truncation through target evidence",
+      "passed": true,
+      "severity": "CRITICAL",
+      "skip_reason": null,
+      "skipped": false
+    },
+    {
+      "check_id": "S",
+      "failures": [],
+      "failures_truncated": false,
+      "message": "",
+      "n_checked": 600,
+      "n_failed": 0,
+      "name": "no answer leakage for unanswerable families",
+      "passed": true,
+      "severity": "CRITICAL",
+      "skip_reason": null,
+      "skipped": false
+    },
+    {
+      "check_id": "T",
+      "failures": [],
+      "failures_truncated": false,
+      "message": "",
+      "n_checked": 30,
+      "n_failed": 0,
+      "name": "calculation operands recomputable",
+      "passed": true,
+      "severity": "CRITICAL",
+      "skip_reason": null,
+      "skipped": false
+    },
+    {
+      "check_id": "U",
+      "failures": [],
+      "failures_truncated": false,
+      "message": "",
+      "n_checked": 5,
+      "n_failed": 0,
+      "name": "all five question types represented",
+      "passed": true,
+      "severity": "CRITICAL",
+      "skip_reason": null,
+      "skipped": false
+    },
+    {
+      "check_id": "V",
+      "failures": [],
+      "failures_truncated": false,
+      "message": "",
+      "n_checked": 600,
+      "n_failed": 0,
+      "name": "no duplicate answer sources in answerable contexts",
+      "passed": true,
+      "severity": "CRITICAL",
+      "skip_reason": null,
+      "skipped": false
+    },
+    {
+      "check_id": "W",
+      "failures": [],
+      "failures_truncated": false,
+      "message": "",
+      "n_checked": 600,
+      "n_failed": 0,
+      "name": "opaque display ID mapping integrity",
+      "passed": true,
+      "severity": "CRITICAL",
+      "skip_reason": null,
+      "skipped": false
+    },
+    {
+      "check_id": "X",
+      "failures": [],
+      "failures_truncated": false,
+      "message": "",
+      "n_checked": 600,
+      "n_failed": 0,
+      "name": "evidence-equivalence consistency",
+      "passed": true,
+      "severity": "CRITICAL",
+      "skip_reason": null,
+      "skipped": false
+    },
+    {
+      "check_id": "Y",
+      "failures": [],
+      "failures_truncated": false,
+      "message": "",
+      "n_checked": 600,
+      "n_failed": 0,
+      "name": "distractor taxonomy semantic constraints",
+      "passed": true,
+      "severity": "CRITICAL",
+      "skip_reason": null,
+      "skipped": false
+    },
+    {
+      "check_id": "Z",
+      "failures": [],
+      "failures_truncated": false,
+      "message": "",
+      "n_checked": 100,
+      "n_failed": 0,
+      "name": "model-facing questions do not leak answerability",
+      "passed": true,
+      "severity": "CRITICAL",
+      "skip_reason": null,
+      "skipped": false
+    }
+  ],
+  "counts": {
+    "critical_failed": 0,
+    "failed": 0,
+    "passed": 27,
+    "skipped": 0,
+    "total": 27,
+    "warning_failed": 0
+  },
+  "dataset_name": "preproduction_llama32_3b",
+  "has_critical_failures": false,
+  "stats": {
+    "chat_template_used": true,
+    "config_hash": "e2e65ac32a5ebe43",
+    "distractor_totals": {
+      "NEAR_MATCH_VALUE": 8488,
+      "OTHER_SAME_DOMAIN": 119182,
+      "WRONG_ENTITY": 48949,
+      "WRONG_FIELD": 37102,
+      "WRONG_PERIOD": 33912,
+      "WRONG_SERIES_VARIANT": 183,
+      "WRONG_UNIT": 102,
+      "WRONG_VERSION": 354
+    },
+    "families_answerable": 80,
+    "families_by_domain": {
+      "CLINICAL_TRIALS": 25,
+      "FDA": 25,
+      "FRED": 25,
+      "SEC": 25
+    },
+    "families_by_question_type": {
+      "DIRECT_RETRIEVAL": 20,
+      "ENTITY_UNIT_BINDING": 15,
+      "RETRIEVAL_CALCULATION": 30,
+      "TEMPORAL_VERSION": 15,
+      "UNANSWERABLE": 20
+    },
+    "families_unanswerable": 20,
+    "generation_tokens_reserved": 512,
+    "instances_by_domain": {
+      "CLINICAL_TRIALS": 150,
+      "FDA": 150,
+      "FRED": 150,
+      "SEC": 150
+    },
+    "instances_by_length": {
+      "131072": 100,
+      "16384": 100,
+      "32768": 100,
+      "4096": 100,
+      "65536": 100,
+      "8192": 100
+    },
+    "instances_by_question_type": {
+      "DIRECT_RETRIEVAL": 120,
+      "ENTITY_UNIT_BINDING": 90,
+      "RETRIEVAL_CALCULATION": 180,
+      "TEMPORAL_VERSION": 90,
+      "UNANSWERABLE": 120
+    },
+    "model_config_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+    "model_context_limit": 131072,
+    "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+    "n_families": 100,
+    "n_instances": 600,
+    "n_unavailable_variants": 0,
+    "normalized_records_by_domain": {
+      "CLINICAL_TRIALS": 74683,
+      "FDA": 25737,
+      "FRED": 20925,
+      "SEC": 38764
+    },
+    "prompt_hash": "4e6a3c47baa301a0",
+    "prompt_overhead_token_stats_by_length": {
+      "131072": {
+        "max": 325.0,
+        "mean": 264.6,
+        "median": 262.0,
+        "min": 239.0,
+        "n": 100,
+        "p25": 249.0,
+        "p75": 276.0
+      },
+      "16384": {
+        "max": 325.0,
+        "mean": 264.6,
+        "median": 262.0,
+        "min": 239.0,
+        "n": 100,
+        "p25": 249.0,
+        "p75": 276.0
+      },
+      "32768": {
+        "max": 325.0,
+        "mean": 264.6,
+        "median": 262.0,
+        "min": 239.0,
+        "n": 100,
+        "p25": 249.0,
+        "p75": 276.0
+      },
+      "4096": {
+        "max": 325.0,
+        "mean": 264.6,
+        "median": 262.0,
+        "min": 239.0,
+        "n": 100,
+        "p25": 249.0,
+        "p75": 276.0
+      },
+      "65536": {
+        "max": 325.0,
+        "mean": 264.6,
+        "median": 262.0,
+        "min": 239.0,
+        "n": 100,
+        "p25": 249.0,
+        "p75": 276.0
+      },
+      "8192": {
+        "max": 325.0,
+        "mean": 264.6,
+        "median": 262.0,
+        "min": 239.0,
+        "n": 100,
+        "p25": 249.0,
+        "p75": 276.0
+      }
+    },
+    "prompt_version": "llama_chat_v1",
+    "remaining_context_margin_by_length": {
+      "131072": {
+        "max": 930.0,
+        "mean": 517.0,
+        "median": 529.0,
+        "min": 123.0,
+        "n": 100,
+        "p25": 321.0,
+        "p75": 690.0
+      },
+      "16384": {
+        "max": 114205.0,
+        "mean": 114104.0,
+        "median": 114105.0,
+        "min": 114015.0,
+        "n": 100,
+        "p25": 114080.0,
+        "p75": 114136.0
+      },
+      "32768": {
+        "max": 98019.0,
+        "mean": 97873.0,
+        "median": 97885.0,
+        "min": 97710.0,
+        "n": 100,
+        "p25": 97830.0,
+        "p75": 97924.0
+      },
+      "4096": {
+        "max": 126339.0,
+        "mean": 126278.3,
+        "median": 126279.0,
+        "min": 126187.0,
+        "n": 100,
+        "p25": 126255.0,
+        "p75": 126302.0
+      },
+      "65536": {
+        "max": 65641.0,
+        "mean": 65423.5,
+        "median": 65429.0,
+        "min": 65204.0,
+        "n": 100,
+        "p25": 65313.0,
+        "p75": 65535.0
+      },
+      "8192": {
+        "max": 122288.0,
+        "mean": 122214.8,
+        "median": 122216.0,
+        "min": 122117.0,
+        "n": 100,
+        "p25": 122192.0,
+        "p75": 122241.0
+      }
+    },
+    "rendered_input_token_stats_by_length": {
+      "131072": {
+        "max": 130437.0,
+        "mean": 130043.0,
+        "median": 130050.0,
+        "min": 129630.0,
+        "n": 100,
+        "p25": 129870.0,
+        "p75": 130239.0
+      },
+      "16384": {
+        "max": 16545.0,
+        "mean": 16456.0,
+        "median": 16456.0,
+        "min": 16355.0,
+        "n": 100,
+        "p25": 16424.0,
+        "p75": 16480.0
+      },
+      "32768": {
+        "max": 32850.0,
+        "mean": 32687.0,
+        "median": 32676.0,
+        "min": 32541.0,
+        "n": 100,
+        "p25": 32636.0,
+        "p75": 32730.0
+      },
+      "4096": {
+        "max": 4373.0,
+        "mean": 4281.7,
+        "median": 4282.0,
+        "min": 4221.0,
+        "n": 100,
+        "p25": 4258.0,
+        "p75": 4305.0
+      },
+      "65536": {
+        "max": 65356.0,
+        "mean": 65136.5,
+        "median": 65134.0,
+        "min": 64919.0,
+        "n": 100,
+        "p25": 65025.0,
+        "p75": 65247.0
+      },
+      "8192": {
+        "max": 8443.0,
+        "mean": 8345.2,
+        "median": 8345.0,
+        "min": 8272.0,
+        "n": 100,
+        "p25": 8319.0,
+        "p75": 8368.0
+      }
+    },
+    "response_format_version": "json_evidence_answer_v1",
+    "seed": 20240817,
+    "target_position": {
+      "max": 0.5159,
+      "mean": 0.4999,
+      "median": 0.5001,
+      "min": 0.4823,
+      "n": 480,
+      "p25": 0.4992,
+      "p75": 0.5008
+    },
+    "token_stats_by_length": {
+      "131072": {
+        "max": 130157.0,
+        "mean": 129778.5,
+        "median": 129811.0,
+        "min": 129366.0,
+        "n": 100,
+        "p25": 129627.0,
+        "p75": 129947.0
+      },
+      "16384": {
+        "max": 16268.0,
+        "mean": 16191.5,
+        "median": 16194.0,
+        "min": 16111.0,
+        "n": 100,
+        "p25": 16161.0,
+        "p75": 16219.0
+      },
+      "32768": {
+        "max": 32544.0,
+        "mean": 32422.5,
+        "median": 32424.0,
+        "min": 32297.0,
+        "n": 100,
+        "p25": 32368.0,
+        "p75": 32463.0
+      },
+      "4096": {
+        "max": 4067.0,
+        "mean": 4017.2,
+        "median": 4019.0,
+        "min": 3961.0,
+        "n": 100,
+        "p25": 3994.0,
+        "p75": 4039.0
+      },
+      "65536": {
+        "max": 65080.0,
+        "mean": 64871.9,
+        "median": 64882.0,
+        "min": 64653.0,
+        "n": 100,
+        "p25": 64775.0,
+        "p75": 64963.0
+      },
+      "8192": {
+        "max": 8137.0,
+        "mean": 8080.6,
+        "median": 8083.0,
+        "min": 8018.0,
+        "n": 100,
+        "p25": 8054.0,
+        "p75": 8106.0
+      }
+    },
+    "tokenizer": "hf:meta-llama/Llama-3.2-3B-Instruct",
+    "tokenizer_class": "TokenizersBackend",
+    "tokenizer_is_approximate": false,
+    "tokenizer_revision": null,
+    "tokenizer_version": "transformers==5.14.1; tokenizers==0.22.2",
+    "unavailable_by_length": {},
+    "unavailable_by_reason": {}
+  }
+}

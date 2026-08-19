@@ -1,0 +1,72 @@
+{
+  "by_context": [
+    {
+      "context_length": "4K",
+      "degenerate_outputs": 0,
+      "format_failures": 0,
+      "hit_128": 0,
+      "mean_generated_tokens": 7.333333333333333,
+      "mean_inference_seconds": 0.3039215022387604,
+      "median_inference_seconds": 0.30303751677274704,
+      "p95_inference_seconds": 0.3115895092487335,
+      "total": 6,
+      "usable_outputs": 6
+    },
+    {
+      "context_length": "8K",
+      "degenerate_outputs": 0,
+      "format_failures": 0,
+      "hit_128": 0,
+      "mean_generated_tokens": 7.5,
+      "mean_inference_seconds": 0.5883436733856797,
+      "median_inference_seconds": 0.5883436733856797,
+      "p95_inference_seconds": 0.569319355301559,
+      "total": 2,
+      "usable_outputs": 2
+    },
+    {
+      "context_length": "16K",
+      "degenerate_outputs": 0,
+      "format_failures": 0,
+      "hit_128": 0,
+      "mean_generated_tokens": 8,
+      "mean_inference_seconds": 1.197737670296596,
+      "median_inference_seconds": 1.1774287158623338,
+      "p95_inference_seconds": 1.2496022256091237,
+      "total": 9,
+      "usable_outputs": 9
+    },
+    {
+      "context_length": "32K",
+      "degenerate_outputs": 0,
+      "format_failures": 0,
+      "hit_128": 0,
+      "mean_generated_tokens": 7.625,
+      "mean_inference_seconds": 2.80843324738089,
+      "median_inference_seconds": 2.7951353676617146,
+      "p95_inference_seconds": 2.85584728885442,
+      "total": 8,
+      "usable_outputs": 8
+    },
+    {
+      "context_length": "64K",
+      "degenerate_outputs": 0,
+      "format_failures": 0,
+      "hit_128": 0,
+      "mean_generated_tokens": 9,
+      "mean_inference_seconds": 7.801131550595164,
+      "median_inference_seconds": 7.885329348035157,
+      "p95_inference_seconds": 7.894998932257295,
+      "total": 5,
+      "usable_outputs": 5
+    }
+  ],
+  "degeneration_count": 0,
+  "format_failures": 0,
+  "hit_128_count": 0,
+  "passed": true,
+  "sample_size": 30,
+  "unwanted_json_or_evidence_count": 0,
+  "usable_output_rate": 1.0,
+  "usable_outputs": 30
+}

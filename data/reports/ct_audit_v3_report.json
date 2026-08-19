@@ -1,0 +1,1259 @@
+{
+  "config_hash": "a3e99a21a0d3793c",
+  "config_path": "config/ct_audit_v3.yaml",
+  "context_lengths": [
+    4096,
+    8192,
+    16384,
+    32768,
+    65536,
+    131072
+  ],
+  "dataset_name": "ct_audit_v3",
+  "distractors": {
+    "taxonomy": {
+      "NEAR_MATCH_VALUE": "Numerically within 5% of a target value while being a different fact -- a plausible-looking wrong answer.",
+      "OTHER_SAME_DOMAIN": "A real record from the same primary source with no closer relationship to the target.",
+      "WRONG_ENTITY": "Same metric and period, a different entity (other company, country, trial, product).",
+      "WRONG_FIELD": "Same entity, a different field/concept.",
+      "WRONG_PERIOD": "Same entity and metric, a different period (other year, quarter, or instant).",
+      "WRONG_SERIES_VARIANT": "Same entity, period, unit and underlying measure, but a different series variant or measurement basis such as seasonal adjustment, frequency, nominal/real basis, or transform.",
+      "WRONG_UNIT": "Same entity, metric and period, reported in a genuinely different unit.",
+      "WRONG_VERSION": "Same entity, metric, period and unit, but a different filing/revision/submission version."
+    },
+    "totals_by_type": {
+      "OTHER_SAME_DOMAIN": 10447,
+      "WRONG_ENTITY": 6851,
+      "WRONG_FIELD": 1370
+    }
+  },
+  "generated_at": "2026-08-09T19:13:42Z",
+  "git_commit": "7c848cf04dc3d16ee413ef3819f09f44ca9ad046",
+  "instances": {
+    "by_domain": {
+      "CLINICAL_TRIALS": 48
+    },
+    "by_length": {
+      "128K": 8,
+      "16K": 8,
+      "32K": 8,
+      "4K": 8,
+      "64K": 8,
+      "8K": 8
+    },
+    "by_question_type": {
+      "DIRECT_RETRIEVAL": 12,
+      "ENTITY_UNIT_BINDING": 6,
+      "RETRIEVAL_CALCULATION": 12,
+      "TEMPORAL_VERSION": 6,
+      "UNANSWERABLE": 12
+    },
+    "fill_ratio_by_length": {
+      "128K": {
+        "max": 0.9912,
+        "mean": 0.9909,
+        "median": 0.9909,
+        "min": 0.9905,
+        "n": 8,
+        "p25": 0.9908,
+        "p75": 0.9909
+      },
+      "16K": {
+        "max": 0.9908,
+        "mean": 0.9894,
+        "median": 0.9901,
+        "min": 0.9868,
+        "n": 8,
+        "p25": 0.9886,
+        "p75": 0.9904
+      },
+      "32K": {
+        "max": 0.991,
+        "mean": 0.9899,
+        "median": 0.9904,
+        "min": 0.9887,
+        "n": 8,
+        "p25": 0.989,
+        "p75": 0.9907
+      },
+      "4K": {
+        "max": 0.991,
+        "mean": 0.9827,
+        "median": 0.9836,
+        "min": 0.9746,
+        "n": 8,
+        "p25": 0.9814,
+        "p75": 0.9836
+      },
+      "64K": {
+        "max": 0.9914,
+        "mean": 0.9905,
+        "median": 0.9906,
+        "min": 0.9898,
+        "n": 8,
+        "p25": 0.99,
+        "p75": 0.9908
+      },
+      "8K": {
+        "max": 0.9901,
+        "mean": 0.9878,
+        "median": 0.9884,
+        "min": 0.9845,
+        "n": 8,
+        "p25": 0.9868,
+        "p75": 0.9891
+      }
+    },
+    "target_position_distribution": {
+      "max": 0.5098,
+      "mean": 0.5008,
+      "median": 0.5002,
+      "min": 0.4961,
+      "n": 36,
+      "p25": 0.4995,
+      "p75": 0.5018
+    },
+    "token_distribution_by_length": {
+      "128K": {
+        "max": 129922.0,
+        "mean": 129875.4,
+        "median": 129874.0,
+        "min": 129823.0,
+        "n": 8,
+        "p25": 129867.0,
+        "p75": 129879.0
+      },
+      "16K": {
+        "max": 16233.0,
+        "mean": 16209.6,
+        "median": 16221.0,
+        "min": 16168.0,
+        "n": 8,
+        "p25": 16198.0,
+        "p75": 16226.0
+      },
+      "32K": {
+        "max": 32472.0,
+        "mean": 32437.9,
+        "median": 32453.0,
+        "min": 32397.0,
+        "n": 8,
+        "p25": 32408.0,
+        "p75": 32464.0
+      },
+      "4K": {
+        "max": 4059.0,
+        "mean": 4025.1,
+        "median": 4029.0,
+        "min": 3992.0,
+        "n": 8,
+        "p25": 4020.0,
+        "p75": 4029.0
+      },
+      "64K": {
+        "max": 64970.0,
+        "mean": 64912.1,
+        "median": 64917.0,
+        "min": 64868.0,
+        "n": 8,
+        "p25": 64882.0,
+        "p75": 64931.0
+      },
+      "8K": {
+        "max": 8111.0,
+        "mean": 8091.9,
+        "median": 8097.0,
+        "min": 8065.0,
+        "n": 8,
+        "p25": 8084.0,
+        "p75": 8103.0
+      }
+    },
+    "total": 48
+  },
+  "min_fill_ratio": 0.95,
+  "normalized_records_by_domain": {
+    "CLINICAL_TRIALS": 74683
+  },
+  "position_tolerance": 0.05,
+  "question_families": {
+    "answerable": 6,
+    "by_domain": {
+      "CLINICAL_TRIALS": 8
+    },
+    "by_question_type": {
+      "DIRECT_RETRIEVAL": 2,
+      "ENTITY_UNIT_BINDING": 1,
+      "RETRIEVAL_CALCULATION": 2,
+      "TEMPORAL_VERSION": 1,
+      "UNANSWERABLE": 2
+    },
+    "by_template": {
+      "CT_ARM_TYPE_BINDING": 1,
+      "CT_DATE_FIELD_SELECTION": 1,
+      "CT_DIRECT_ENROLLMENT": 2,
+      "CT_ENROLLMENT_DIFFERENCE": 1,
+      "CT_STUDY_DURATION_DAYS": 1,
+      "CT_UNANSWERABLE_FIELD_ABSENT": 2
+    },
+    "configured_target": {
+      "CLINICAL_TRIALS": 8
+    },
+    "total": 8,
+    "unanswerable": 2
+  },
+  "representative_families": [
+    {
+      "answer_type": "INTEGER",
+      "answer_unit": "participants",
+      "answerable": true,
+      "calculation_spec": {
+        "denominator_record_id": null,
+        "formula": "minuend - subtrahend",
+        "numerator_record_id": null,
+        "operand_values": {
+          "minuend": 180.0,
+          "subtrahend": 100.0
+        },
+        "operands": {
+          "minuend": "CT-NCT03656445-enrollment-count-535dc578",
+          "subtrahend": "CT-NCT03800927-enrollment-count-5f640681"
+        },
+        "operation": "difference",
+        "raw_result": 80.0,
+        "result_unit": "participants",
+        "round_decimals": 0,
+        "rounded_result": 80.0
+      },
+      "context_variants": [
+        {
+          "context_sha256": "d2d246701d89beba",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 13,
+            "WRONG_ENTITY": 14,
+            "WRONG_FIELD": 14
+          },
+          "fill_ratio": 0.9856,
+          "instance_id": "CT_0004_4K",
+          "n_records": 43,
+          "nominal": "4K",
+          "target_evidence_tokens": [
+            1953,
+            2126
+          ],
+          "target_position_relative": 0.5052018825860788,
+          "tokens_actual": 4037
+        },
+        {
+          "context_sha256": "7ceb070dc8efbd66",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 29,
+            "WRONG_ENTITY": 26,
+            "WRONG_FIELD": 26
+          },
+          "fill_ratio": 0.9884,
+          "instance_id": "CT_0004_8K",
+          "n_records": 83,
+          "nominal": "8K",
+          "target_evidence_tokens": [
+            3958,
+            4131
+          ],
+          "target_position_relative": 0.4995059898727924,
+          "tokens_actual": 8097
+        },
+        {
+          "context_sha256": "96d5381f5d776d16",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 61,
+            "WRONG_ENTITY": 50,
+            "WRONG_FIELD": 52
+          },
+          "fill_ratio": 0.9901,
+          "instance_id": "CT_0004_16K",
+          "n_records": 165,
+          "nominal": "16K",
+          "target_evidence_tokens": [
+            7996,
+            8169
+          ],
+          "target_position_relative": 0.49827384254978113,
+          "tokens_actual": 16221
+        },
+        {
+          "context_sha256": "73f0172f482ae543",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 141,
+            "WRONG_ENTITY": 111,
+            "WRONG_FIELD": 61
+          },
+          "fill_ratio": 0.9898,
+          "instance_id": "CT_0004_32K",
+          "n_records": 315,
+          "nominal": "32K",
+          "target_evidence_tokens": [
+            16165,
+            16338
+          ],
+          "target_position_relative": 0.5010636985879016,
+          "tokens_actual": 32434
+        },
+        {
+          "context_sha256": "776261afa8f2dded",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 305,
+            "WRONG_ENTITY": 236,
+            "WRONG_FIELD": 61
+          },
+          "fill_ratio": 0.9903,
+          "instance_id": "CT_0004_64K",
+          "n_records": 604,
+          "nominal": "64K",
+          "target_evidence_tokens": [
+            32320,
+            32493
+          ],
+          "target_position_relative": 0.49932973805855163,
+          "tokens_actual": 64900
+        },
+        {
+          "context_sha256": "53295ea26e0d747b",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 645,
+            "WRONG_ENTITY": 492,
+            "WRONG_FIELD": 61
+          },
+          "fill_ratio": 0.9908,
+          "instance_id": "CT_0004_128K",
+          "n_records": 1200,
+          "nominal": "128K",
+          "target_evidence_tokens": [
+            64870,
+            65043
+          ],
+          "target_position_relative": 0.5001694014737929,
+          "tokens_actual": 129869
+        }
+      ],
+      "domain": "CLINICAL_TRIALS",
+      "gold_answer": "80",
+      "gold_answer_normalized": 80.0,
+      "gold_evidence": [
+        {
+          "concept": "Enrollment (participants) [enrollment.count]",
+          "entity": "Tranexamic Acid in Total Knee Replacement [NCT03656445]",
+          "period": null,
+          "record_id": "CT-NCT03656445-enrollment-count-535dc578",
+          "role": "minuend",
+          "source_url": "https://clinicaltrials.gov/study/NCT03656445",
+          "unit": "participants",
+          "value": 180.0,
+          "version": "lastupdate:2018-09-05"
+        },
+        {
+          "concept": "Enrollment (participants) [enrollment.count]",
+          "entity": "Long-Duration Ultrasound for Knee Osteoarthritis [NCT03800927]",
+          "period": null,
+          "record_id": "CT-NCT03800927-enrollment-count-5f640681",
+          "role": "subtrahend",
+          "source_url": "https://clinicaltrials.gov/study/NCT03800927",
+          "unit": "participants",
+          "value": 100.0,
+          "version": "lastupdate:2023-06-26"
+        }
+      ],
+      "numeric_tolerance": 0.0,
+      "question": "Using only the ClinicalTrials.gov records supplied in the context, subtract the enrollment count of trial NCT03800927 from the enrollment count of trial NCT03656445. Report the difference as an integer number of participants.",
+      "question_family_id": "CT_0004",
+      "question_type": "RETRIEVAL_CALCULATION",
+      "template_id": "CT_ENROLLMENT_DIFFERENCE",
+      "unanswerable_spec": null
+    },
+    {
+      "answer_type": "INSUFFICIENT_EVIDENCE",
+      "answer_unit": null,
+      "answerable": false,
+      "calculation_spec": null,
+      "context_variants": [
+        {
+          "context_sha256": "169b7bbdd9cfea00",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 13,
+            "WRONG_ENTITY": 11,
+            "WRONG_FIELD": 15
+          },
+          "fill_ratio": 0.9814,
+          "instance_id": "CT_0007_4K",
+          "n_records": 39,
+          "nominal": "4K",
+          "target_evidence_tokens": [
+            null,
+            null
+          ],
+          "target_position_relative": null,
+          "tokens_actual": 4020
+        },
+        {
+          "context_sha256": "a30f721e091a2cc2",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 27,
+            "WRONG_ENTITY": 25,
+            "WRONG_FIELD": 24
+          },
+          "fill_ratio": 0.9891,
+          "instance_id": "CT_0007_8K",
+          "n_records": 76,
+          "nominal": "8K",
+          "target_evidence_tokens": [
+            null,
+            null
+          ],
+          "target_position_relative": null,
+          "tokens_actual": 8103
+        },
+        {
+          "context_sha256": "3c1a28477a9901f4",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 66,
+            "WRONG_ENTITY": 55,
+            "WRONG_FIELD": 30
+          },
+          "fill_ratio": 0.9908,
+          "instance_id": "CT_0007_16K",
+          "n_records": 151,
+          "nominal": "16K",
+          "target_evidence_tokens": [
+            null,
+            null
+          ],
+          "target_position_relative": null,
+          "tokens_actual": 16233
+        },
+        {
+          "context_sha256": "261f3efdddf4e406",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 150,
+            "WRONG_ENTITY": 120,
+            "WRONG_FIELD": 30
+          },
+          "fill_ratio": 0.9907,
+          "instance_id": "CT_0007_32K",
+          "n_records": 300,
+          "nominal": "32K",
+          "target_evidence_tokens": [
+            null,
+            null
+          ],
+          "target_position_relative": null,
+          "tokens_actual": 32464
+        },
+        {
+          "context_sha256": "92220da3c459fa1f",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 322,
+            "WRONG_ENTITY": 247,
+            "WRONG_FIELD": 30
+          },
+          "fill_ratio": 0.9906,
+          "instance_id": "CT_0007_64K",
+          "n_records": 599,
+          "nominal": "64K",
+          "target_evidence_tokens": [
+            null,
+            null
+          ],
+          "target_position_relative": null,
+          "tokens_actual": 64917
+        },
+        {
+          "context_sha256": "d9385d59f65eb392",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 657,
+            "WRONG_ENTITY": 497,
+            "WRONG_FIELD": 30
+          },
+          "fill_ratio": 0.9905,
+          "instance_id": "CT_0007_128K",
+          "n_records": 1184,
+          "nominal": "128K",
+          "target_evidence_tokens": [
+            null,
+            null
+          ],
+          "target_position_relative": null,
+          "tokens_actual": 129823
+        }
+      ],
+      "domain": "CLINICAL_TRIALS",
+      "gold_answer": null,
+      "gold_answer_normalized": "INSUFFICIENT_EVIDENCE",
+      "gold_evidence": [],
+      "numeric_tolerance": null,
+      "question": "Using only the ClinicalTrials.gov records supplied in the context, what is the date on which results were first posted for trial NCT02339493 (\"Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter\")?",
+      "question_family_id": "CT_0007",
+      "question_type": "UNANSWERABLE",
+      "template_id": "CT_UNANSWERABLE_FIELD_ABSENT",
+      "unanswerable_spec": {
+        "forbidden_concept_aliases": [
+          "study.results_first_posted_date"
+        ],
+        "missing_concept": "study.results_first_posted_date",
+        "missing_entity_id": "NCT02339493",
+        "missing_period": null,
+        "reason": "The ClinicalTrials.gov v2 record for NCT02339493 does not populate study.results_first_posted_date. Verified by exhaustive scan of the normalized pool: zero records match entity_id=NCT02339493 and concept=study.results_first_posted_date. Other trials in the pool do populate this field, so its absence is a property of this trial rather than of the adapter.",
+        "reason_code": "RESULTS_NOT_POSTED",
+        "verified_absent_in_pool": true
+      }
+    },
+    {
+      "answer_type": "DATE",
+      "answer_unit": null,
+      "answerable": true,
+      "calculation_spec": null,
+      "context_variants": [
+        {
+          "context_sha256": "6aa4812c4c08b624",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 12,
+            "WRONG_ENTITY": 13,
+            "WRONG_FIELD": 14
+          },
+          "fill_ratio": 0.9746,
+          "instance_id": "CT_0006_4K",
+          "n_records": 40,
+          "nominal": "4K",
+          "target_evidence_tokens": [
+            1931,
+            2030
+          ],
+          "target_position_relative": 0.49611723446893785,
+          "tokens_actual": 3992
+        },
+        {
+          "context_sha256": "6f7d0bedd94784d6",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 26,
+            "WRONG_ENTITY": 26,
+            "WRONG_FIELD": 26
+          },
+          "fill_ratio": 0.9845,
+          "instance_id": "CT_0006_8K",
+          "n_records": 79,
+          "nominal": "8K",
+          "target_evidence_tokens": [
+            4028,
+            4127
+          ],
+          "target_position_relative": 0.5055796652200868,
+          "tokens_actual": 8065
+        },
+        {
+          "context_sha256": "c4e8be3f6a98a612",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 67,
+            "WRONG_ENTITY": 57,
+            "WRONG_FIELD": 31
+          },
+          "fill_ratio": 0.9904,
+          "instance_id": "CT_0006_16K",
+          "n_records": 156,
+          "nominal": "16K",
+          "target_evidence_tokens": [
+            8102,
+            8201
+          ],
+          "target_position_relative": 0.5023417760522586,
+          "tokens_actual": 16227
+        },
+        {
+          "context_sha256": "dcc07b1882cce5b0",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 149,
+            "WRONG_ENTITY": 119,
+            "WRONG_FIELD": 31
+          },
+          "fill_ratio": 0.9887,
+          "instance_id": "CT_0006_32K",
+          "n_records": 300,
+          "nominal": "32K",
+          "target_evidence_tokens": [
+            16188,
+            16287
+          ],
+          "target_position_relative": 0.5012038151680711,
+          "tokens_actual": 32397
+        },
+        {
+          "context_sha256": "13076169141d87f6",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 434,
+            "WRONG_ENTITY": 122,
+            "WRONG_FIELD": 31
+          },
+          "fill_ratio": 0.99,
+          "instance_id": "CT_0006_64K",
+          "n_records": 588,
+          "nominal": "64K",
+          "target_evidence_tokens": [
+            32361,
+            32460
+          ],
+          "target_position_relative": 0.49952991584723033,
+          "tokens_actual": 64882
+        },
+        {
+          "context_sha256": "5c10708e32d85042",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 999,
+            "WRONG_ENTITY": 122,
+            "WRONG_FIELD": 31
+          },
+          "fill_ratio": 0.9911,
+          "instance_id": "CT_0006_128K",
+          "n_records": 1153,
+          "nominal": "128K",
+          "target_evidence_tokens": [
+            64926,
+            65025
+          ],
+          "target_position_relative": 0.5001655017396927,
+          "tokens_actual": 129908
+        }
+      ],
+      "domain": "CLINICAL_TRIALS",
+      "gold_answer": "2018-04-25",
+      "gold_answer_normalized": "2018-04-25",
+      "gold_evidence": [
+        {
+          "concept": "Primary completion date [study.primary_completion_date]",
+          "entity": "Cancer Associated Thrombosis, a Pilot Treatment Study Using Rivaroxaban [NCT02746185]",
+          "period": "2018",
+          "record_id": "CT-NCT02746185-study-primary-completion-35ff3c07",
+          "role": "target_value",
+          "source_url": "https://clinicaltrials.gov/study/NCT02746185",
+          "unit": null,
+          "value": "2018-04-25",
+          "version": "lastupdate:2018-08-13"
+        }
+      ],
+      "numeric_tolerance": null,
+      "question": "Using only the ClinicalTrials.gov records supplied in the context, what is the PRIMARY COMPLETION DATE of trial NCT02746185 (\"Cancer Associated Thrombosis, a Pilot Treatment Study Using Rivaroxaban\")? Answer in YYYY-MM-DD form.",
+      "question_family_id": "CT_0006",
+      "question_type": "TEMPORAL_VERSION",
+      "template_id": "CT_DATE_FIELD_SELECTION",
+      "unanswerable_spec": null
+    },
+    {
+      "answer_type": "CATEGORICAL",
+      "answer_unit": null,
+      "answerable": true,
+      "calculation_spec": null,
+      "context_variants": [
+        {
+          "context_sha256": "3908590430bc9bab",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 13,
+            "WRONG_ENTITY": 11,
+            "WRONG_FIELD": 15
+          },
+          "fill_ratio": 0.9836,
+          "instance_id": "CT_0003_4K",
+          "n_records": 40,
+          "nominal": "4K",
+          "target_evidence_tokens": [
+            1966,
+            2056
+          ],
+          "target_position_relative": 0.4991312980888558,
+          "tokens_actual": 4029
+        },
+        {
+          "context_sha256": "0d9c5789b334e1c0",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 29,
+            "WRONG_ENTITY": 23,
+            "WRONG_FIELD": 25
+          },
+          "fill_ratio": 0.986,
+          "instance_id": "CT_0003_8K",
+          "n_records": 78,
+          "nominal": "8K",
+          "target_evidence_tokens": [
+            4009,
+            4099
+          ],
+          "target_position_relative": 0.5019190293425777,
+          "tokens_actual": 8077
+        },
+        {
+          "context_sha256": "f0763ce56de1981c",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 68,
+            "WRONG_ENTITY": 52,
+            "WRONG_FIELD": 27
+          },
+          "fill_ratio": 0.9899,
+          "instance_id": "CT_0003_16K",
+          "n_records": 148,
+          "nominal": "16K",
+          "target_evidence_tokens": [
+            8041,
+            8131
+          ],
+          "target_position_relative": 0.49855108206424564,
+          "tokens_actual": 16219
+        },
+        {
+          "context_sha256": "656406c78f935917",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 145,
+            "WRONG_ENTITY": 113,
+            "WRONG_FIELD": 27
+          },
+          "fill_ratio": 0.9909,
+          "instance_id": "CT_0003_32K",
+          "n_records": 286,
+          "nominal": "32K",
+          "target_evidence_tokens": [
+            16263,
+            16353
+          ],
+          "target_position_relative": 0.5022636976808649,
+          "tokens_actual": 32469
+        },
+        {
+          "context_sha256": "e0f9713570ca55a8",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 305,
+            "WRONG_ENTITY": 234,
+            "WRONG_FIELD": 27
+          },
+          "fill_ratio": 0.9914,
+          "instance_id": "CT_0003_64K",
+          "n_records": 567,
+          "nominal": "64K",
+          "target_evidence_tokens": [
+            32480,
+            32570
+          ],
+          "target_position_relative": 0.5006156687702016,
+          "tokens_actual": 64970
+        },
+        {
+          "context_sha256": "3477e2977c490729",
+          "distractor_counts": {
+            "OTHER_SAME_DOMAIN": 630,
+            "WRONG_ENTITY": 480,
+            "WRONG_FIELD": 27
+          },
+          "fill_ratio": 0.9912,
+          "instance_id": "CT_0003_128K",
+          "n_records": 1138,
+          "nominal": "128K",
+          "target_evidence_tokens": [
+            64915,
+            65005
+          ],
+          "target_position_relative": 0.4999923030741522,
+          "tokens_actual": 129922
+        }
+      ],
+      "domain": "CLINICAL_TRIALS",
+      "gold_answer": "ACTIVE_COMPARATOR",
+      "gold_answer_normalized": "ACTIVE_COMPARATOR",
+      "gold_evidence": [
+        {
+          "concept": "Arm group type: Control [arm.type]",
+          "entity": "Exercise and Metformin in Colorectal and Breast Cancer Survivors [NCT01340300]",
+          "period": null,
+          "record_id": "CT-NCT01340300-arm-type-Control-3-fc797906",
+          "role": "target_value",
+          "source_url": "https://clinicaltrials.gov/study/NCT01340300",
+          "unit": null,
+          "value": "ACTIVE_COMPARATOR",
+          "version": "lastupdate:2018-06-06"
+        }
+      ],
+      "numeric_tolerance": null,
+      "question": "Using only the ClinicalTrials.gov records supplied in the context, what is the arm-group TYPE of the arm labelled \"Control\" in trial NCT01340300 (\"Exercise and Metformin in Colorectal and Breast Cancer Survivors\")? Answer with the ClinicalTrials.gov arm type value (for example EXPERIMENTAL, ACTIVE_COMPARATOR, PLACEBO_COMPARATOR, SHAM_COMPARATOR, NO_INTERVENTION or OTHER).",
+      "question_family_id": "CT_0003",
+      "question_type": "ENTITY_UNIT_BINDING",
+      "template_id": "CT_ARM_TYPE_BINDING",
+      "unanswerable_spec": null
+    }
+  ],
+  "schema_version": "1.1.0",
+  "seed": 20240817,
+  "source_limitations": [
+    {
+      "detail": "NY.GDP.MKTP.KD [NLD..NLD]: [world_bank] GET https://api.worldbank.org/v2/country/NLD/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/NLD/indicator/NY.GDP.MKTP.KD?format=json&per_page=500",
+      "domain": "WORLD_BANK",
+      "kind": "REQUEST_ERROR"
+    },
+    {
+      "detail": "NY.GDP.MKTP.KD [SAU..SAU]: [world_bank] GET https://api.worldbank.org/v2/country/SAU/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTPSConnectionPool(host='api.worldbank.org', port=443): Read timed out. (read timeout=4.0)",
+      "domain": "WORLD_BANK",
+      "kind": "REQUEST_ERROR"
+    },
+    {
+      "detail": "NY.GDP.MKTP.KD [CHE..CHE]: [world_bank] GET https://api.worldbank.org/v2/country/CHE/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/CHE/indicator/NY.GDP.MKTP.KD?format=json&per_page=500",
+      "domain": "WORLD_BANK",
+      "kind": "REQUEST_ERROR"
+    },
+    {
+      "detail": "NY.GDP.MKTP.KD [POL..POL]: [world_bank] GET https://api.worldbank.org/v2/country/POL/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/POL/indicator/NY.GDP.MKTP.KD?format=json&per_page=500",
+      "domain": "WORLD_BANK",
+      "kind": "REQUEST_ERROR"
+    },
+    {
+      "detail": "NY.GDP.MKTP.KD [SWE..SWE]: [world_bank] GET https://api.worldbank.org/v2/country/SWE/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTPSConnectionPool(host='api.worldbank.org', port=443): Read timed out. (read timeout=4.0)",
+      "domain": "WORLD_BANK",
+      "kind": "REQUEST_ERROR"
+    },
+    {
+      "detail": "NY.GDP.PCAP.CD [FRA..FRA]: [world_bank] GET https://api.worldbank.org/v2/country/FRA/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTPSConnectionPool(host='api.worldbank.org', port=443): Read timed out. (read timeout=4.0)",
+      "domain": "WORLD_BANK",
+      "kind": "REQUEST_ERROR"
+    },
+    {
+      "detail": "NY.GDP.PCAP.CD [BRA..BRA]: [world_bank] GET https://api.worldbank.org/v2/country/BRA/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/BRA/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+      "domain": "WORLD_BANK",
+      "kind": "REQUEST_ERROR"
+    },
+    {
+      "detail": "NY.GDP.PCAP.CD [ITA..ITA]: [world_bank] GET https://api.worldbank.org/v2/country/ITA/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/ITA/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+      "domain": "WORLD_BANK",
+      "kind": "REQUEST_ERROR"
+    },
+    {
+      "detail": "NY.GDP.PCAP.CD [CAN..CAN]: [world_bank] GET https://api.worldbank.org/v2/country/CAN/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/CAN/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+      "domain": "WORLD_BANK",
+      "kind": "REQUEST_ERROR"
+    },
+    {
+      "detail": "NY.GDP.PCAP.CD [KOR..KOR]: [world_bank] GET https://api.worldbank.org/v2/country/KOR/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/KOR/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+      "domain": "WORLD_BANK",
+      "kind": "REQUEST_ERROR"
+    }
+  ],
+  "sources": [
+    {
+      "api_base": "https://clinicaltrials.gov/api/v2",
+      "api_version": "v2",
+      "blocked": false,
+      "blocker_reason": null,
+      "domain": "CLINICAL_TRIALS",
+      "errors": [],
+      "identifiers": [
+        "metformin",
+        "atorvastatin",
+        "pembrolizumab",
+        "insulin glargine",
+        "semaglutide",
+        "rivaroxaban",
+        "aspirin",
+        "tranexamic acid"
+      ],
+      "n_normalized_records": 0,
+      "n_raw_payloads": 24,
+      "n_raw_records": 2400,
+      "n_requests": 0,
+      "notes": null,
+      "retrieved_at": "2026-08-09T04:32:06Z",
+      "source": "CLINICALTRIALS_GOV_V2"
+    },
+    {
+      "api_base": "https://api.fda.gov/drug",
+      "api_version": "openfda-drugsfda",
+      "blocked": false,
+      "blocker_reason": null,
+      "domain": "FDA",
+      "errors": [],
+      "identifiers": [
+        "METFORMIN HYDROCHLORIDE",
+        "ATORVASTATIN CALCIUM",
+        "LISINOPRIL",
+        "AMLODIPINE BESYLATE",
+        "LEVOTHYROXINE SODIUM",
+        "OMEPRAZOLE",
+        "SERTRALINE HYDROCHLORIDE",
+        "GABAPENTIN",
+        "IBUPROFEN",
+        "AMOXICILLIN",
+        "PREDNISONE",
+        "WARFARIN SODIUM",
+        "MONTELUKAST SODIUM",
+        "LOSARTAN POTASSIUM",
+        "CIPROFLOXACIN HYDROCHLORIDE"
+      ],
+      "n_normalized_records": 0,
+      "n_raw_payloads": 15,
+      "n_raw_records": 960,
+      "n_requests": 0,
+      "notes": null,
+      "retrieved_at": "2026-08-09T04:32:06Z",
+      "source": "OPENFDA_DRUGSFDA"
+    },
+    {
+      "api_base": "https://data.sec.gov/api/xbrl",
+      "api_version": "xbrl-companyfacts-v1",
+      "blocked": false,
+      "blocker_reason": null,
+      "domain": "SEC",
+      "errors": [],
+      "identifiers": [
+        "0000320193",
+        "0000789019",
+        "0001018724",
+        "0000021344",
+        "0000104169",
+        "0000200406",
+        "0000078003",
+        "0000019617"
+      ],
+      "n_normalized_records": 0,
+      "n_raw_payloads": 8,
+      "n_raw_records": 259528,
+      "n_requests": 0,
+      "notes": null,
+      "retrieved_at": "2026-08-09T04:32:06Z",
+      "source": "SEC_EDGAR_XBRL_COMPANYFACTS"
+    },
+    {
+      "api_base": "https://api.worldbank.org/v2",
+      "api_version": "v2",
+      "blocked": false,
+      "blocker_reason": null,
+      "domain": "WORLD_BANK",
+      "errors": [
+        "NY.GDP.MKTP.KD [NLD..NLD]: [world_bank] GET https://api.worldbank.org/v2/country/NLD/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/NLD/indicator/NY.GDP.MKTP.KD?format=json&per_page=500",
+        "NY.GDP.MKTP.KD [SAU..SAU]: [world_bank] GET https://api.worldbank.org/v2/country/SAU/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTPSConnectionPool(host='api.worldbank.org', port=443): Read timed out. (read timeout=4.0)",
+        "NY.GDP.MKTP.KD [CHE..CHE]: [world_bank] GET https://api.worldbank.org/v2/country/CHE/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/CHE/indicator/NY.GDP.MKTP.KD?format=json&per_page=500",
+        "NY.GDP.MKTP.KD [POL..POL]: [world_bank] GET https://api.worldbank.org/v2/country/POL/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/POL/indicator/NY.GDP.MKTP.KD?format=json&per_page=500",
+        "NY.GDP.MKTP.KD [SWE..SWE]: [world_bank] GET https://api.worldbank.org/v2/country/SWE/indicator/NY.GDP.MKTP.KD failed after 2 attempts: HTTPSConnectionPool(host='api.worldbank.org', port=443): Read timed out. (read timeout=4.0)",
+        "NY.GDP.PCAP.CD [FRA..FRA]: [world_bank] GET https://api.worldbank.org/v2/country/FRA/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTPSConnectionPool(host='api.worldbank.org', port=443): Read timed out. (read timeout=4.0)",
+        "NY.GDP.PCAP.CD [BRA..BRA]: [world_bank] GET https://api.worldbank.org/v2/country/BRA/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/BRA/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.PCAP.CD [ITA..ITA]: [world_bank] GET https://api.worldbank.org/v2/country/ITA/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/ITA/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.PCAP.CD [CAN..CAN]: [world_bank] GET https://api.worldbank.org/v2/country/CAN/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/CAN/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.PCAP.CD [KOR..KOR]: [world_bank] GET https://api.worldbank.org/v2/country/KOR/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/KOR/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.PCAP.CD [MEX..MEX]: [world_bank] GET https://api.worldbank.org/v2/country/MEX/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/MEX/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.PCAP.CD [ESP..ESP]: [world_bank] GET https://api.worldbank.org/v2/country/ESP/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/ESP/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.PCAP.CD [IDN..IDN]: [world_bank] GET https://api.worldbank.org/v2/country/IDN/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/IDN/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.PCAP.CD [TUR..TUR]: [world_bank] GET https://api.worldbank.org/v2/country/TUR/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTPSConnectionPool(host='api.worldbank.org', port=443): Read timed out. (read timeout=4.0)",
+        "NY.GDP.PCAP.CD [NLD..NLD]: [world_bank] GET https://api.worldbank.org/v2/country/NLD/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/NLD/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.PCAP.CD [POL..POL]: [world_bank] GET https://api.worldbank.org/v2/country/POL/indicator/NY.GDP.PCAP.CD failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/POL/indicator/NY.GDP.PCAP.CD?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [DEU..DEU]: [world_bank] GET https://api.worldbank.org/v2/country/DEU/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/DEU/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [BRA..BRA]: [world_bank] GET https://api.worldbank.org/v2/country/BRA/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/BRA/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [ITA..ITA]: [world_bank] GET https://api.worldbank.org/v2/country/ITA/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/ITA/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [ESP..ESP]: [world_bank] GET https://api.worldbank.org/v2/country/ESP/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/ESP/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [IDN..IDN]: [world_bank] GET https://api.worldbank.org/v2/country/IDN/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/IDN/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [TUR..TUR]: [world_bank] GET https://api.worldbank.org/v2/country/TUR/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/TUR/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [NLD..NLD]: [world_bank] GET https://api.worldbank.org/v2/country/NLD/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTPSConnectionPool(host='api.worldbank.org', port=443): Read timed out. (read timeout=4.0)",
+        "NY.GDP.MKTP.KD.ZG [SAU..SAU]: [world_bank] GET https://api.worldbank.org/v2/country/SAU/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/SAU/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [CHE..CHE]: [world_bank] GET https://api.worldbank.org/v2/country/CHE/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/CHE/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [POL..POL]: [world_bank] GET https://api.worldbank.org/v2/country/POL/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/POL/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500",
+        "NY.GDP.MKTP.KD.ZG [SWE..SWE]: [world_bank] GET https://api.worldbank.org/v2/country/SWE/indicator/NY.GDP.MKTP.KD.ZG failed after 2 attempts: HTTP 502 from https://api.worldbank.org/v2/country/SWE/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=500"
+      ],
+      "identifiers": [
+        "NY.GDP.MKTP.CD",
+        "NY.GDP.MKTP.KD",
+        "NY.GDP.PCAP.CD",
+        "NY.GDP.MKTP.KD.ZG"
+      ],
+      "n_normalized_records": 0,
+      "n_raw_payloads": 53,
+      "n_raw_records": 3498,
+      "n_requests": 65,
+      "notes": null,
+      "retrieved_at": "2026-08-09T04:33:16Z",
+      "source": "WORLD_BANK_INDICATORS_V2"
+    }
+  ],
+  "target_position": 0.5,
+  "tokenizer": {
+    "id": "tiktoken:cl100k_base",
+    "is_approximate": false,
+    "version": "tiktoken==0.13.0"
+  },
+  "unavailable_variants": {
+    "by_domain": {},
+    "by_length": {},
+    "by_reason_code": {},
+    "detail": [],
+    "total": 0
+  },
+  "validation": {
+    "checks": [
+      {
+        "check_id": "A",
+        "message": "",
+        "n_checked": 56,
+        "n_failed": 0,
+        "name": "unique IDs (families and instances)",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "B",
+        "message": "",
+        "n_checked": 8,
+        "n_failed": 0,
+        "name": "no duplicate question families",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "C",
+        "message": "",
+        "n_checked": 8,
+        "n_failed": 0,
+        "name": "valid source provenance",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "D",
+        "message": "",
+        "n_checked": 8,
+        "n_failed": 0,
+        "name": "deterministic gold-answer recomputation",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "E",
+        "message": "",
+        "n_checked": 48,
+        "n_failed": 0,
+        "name": "gold evidence present in every answerable context",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "F",
+        "message": "",
+        "n_checked": 48,
+        "n_failed": 0,
+        "name": "gold evidence absent for unanswerable families",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "G",
+        "message": "",
+        "n_checked": 8,
+        "n_failed": 0,
+        "name": "identical question across context-length variants",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "H",
+        "message": "",
+        "n_checked": 8,
+        "n_failed": 0,
+        "name": "identical gold answer across context-length variants",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "I",
+        "message": "",
+        "n_checked": 8,
+        "n_failed": 0,
+        "name": "identical gold evidence across context-length variants",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "J",
+        "message": "",
+        "n_checked": 8,
+        "n_failed": 0,
+        "name": "nested-context lineage",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "K",
+        "message": "",
+        "n_checked": 48,
+        "n_failed": 0,
+        "name": "token-length compliance",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "L",
+        "message": "",
+        "n_checked": 48,
+        "n_failed": 0,
+        "name": "target-position compliance",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "M",
+        "message": "",
+        "n_checked": 48,
+        "n_failed": 0,
+        "name": "record-boundary integrity",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "N",
+        "message": "",
+        "n_checked": 2,
+        "n_failed": 0,
+        "name": "unit consistency in calculations",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "O",
+        "message": "",
+        "n_checked": 8,
+        "n_failed": 0,
+        "name": "answer-type / schema validity",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "P",
+        "message": "",
+        "n_checked": 48,
+        "n_failed": 0,
+        "name": "distractor metadata completeness",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "Q",
+        "message": "",
+        "n_checked": 8,
+        "n_failed": 0,
+        "name": "no NaN or invalid numeric answers",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "R",
+        "message": "",
+        "n_checked": 48,
+        "n_failed": 0,
+        "name": "no context truncation through target evidence",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "S",
+        "message": "",
+        "n_checked": 48,
+        "n_failed": 0,
+        "name": "no answer leakage for unanswerable families",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "T",
+        "message": "",
+        "n_checked": 2,
+        "n_failed": 0,
+        "name": "calculation operands recomputable",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "U",
+        "message": "",
+        "n_checked": 5,
+        "n_failed": 0,
+        "name": "all five question types represented",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "V",
+        "message": "",
+        "n_checked": 48,
+        "n_failed": 0,
+        "name": "no duplicate answer sources in answerable contexts",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "W",
+        "message": "",
+        "n_checked": 48,
+        "n_failed": 0,
+        "name": "opaque display ID mapping integrity",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "X",
+        "message": "",
+        "n_checked": 48,
+        "n_failed": 0,
+        "name": "evidence-equivalence consistency",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "Y",
+        "message": "",
+        "n_checked": 48,
+        "n_failed": 0,
+        "name": "distractor taxonomy semantic constraints",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      },
+      {
+        "check_id": "Z",
+        "message": "",
+        "n_checked": 8,
+        "n_failed": 0,
+        "name": "model-facing questions do not leak answerability",
+        "passed": true,
+        "severity": "CRITICAL",
+        "skipped": false
+      }
+    ],
+    "counts": {
+      "critical_failed": 0,
+      "failed": 0,
+      "passed": 26,
+      "skipped": 0,
+      "total": 26,
+      "warning_failed": 0
+    },
+    "failure_detail": {},
+    "has_critical_failures": false
+  }
+}

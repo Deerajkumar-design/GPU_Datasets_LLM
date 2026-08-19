@@ -1,0 +1,62 @@
+{
+  "composition": {
+    "coefficient": -0.0658359138692319,
+    "converged": true,
+    "formula": "hallucinatory_vs_grounded ~ context_log2",
+    "n_families": 417,
+    "n_observations": 1822,
+    "odds_ratio_ci_high": 0.9770949057212692,
+    "odds_ratio_ci_low": 0.8971785933458769,
+    "odds_ratio_per_2x_context": 0.936284482986037,
+    "outcome": "hallucinatory_vs_grounded_among_inaccurate",
+    "p_value": 0.0024909319661059067,
+    "predictor": "context_log2",
+    "robust_se": 0.021767962313857466,
+    "working_correlation": "Exchangeable"
+  },
+  "grounded_inaccuracy": {
+    "coefficient": 0.1947300446603377,
+    "converged": true,
+    "formula": "grounded_inaccuracy ~ context_log2",
+    "n_families": 500,
+    "n_observations": 2998,
+    "odds_ratio_ci_high": 1.2803789577332878,
+    "odds_ratio_ci_low": 1.1529270787346042,
+    "odds_ratio_per_2x_context": 1.214982951079025,
+    "outcome": "grounded_inaccuracy",
+    "p_value": 3.3371498939503463e-13,
+    "predictor": "context_log2",
+    "robust_se": 0.026748476296768586,
+    "working_correlation": "Exchangeable"
+  },
+  "hallucinatory_inaccuracy": {
+    "coefficient": 0.0677003267179148,
+    "converged": true,
+    "formula": "hallucinatory_inaccuracy ~ context_log2",
+    "n_families": 500,
+    "n_observations": 2998,
+    "odds_ratio_ci_high": 1.1152203888442875,
+    "odds_ratio_ci_low": 1.0266988034603421,
+    "odds_ratio_per_2x_context": 1.0700445966505356,
+    "outcome": "hallucinatory_inaccuracy",
+    "p_value": 0.0013328105869846465,
+    "predictor": "context_log2",
+    "robust_se": 0.02109820238782771,
+    "working_correlation": "Exchangeable"
+  },
+  "inaccurate": {
+    "coefficient": 0.20845498149658281,
+    "converged": true,
+    "formula": "inaccurate ~ context_log2",
+    "n_families": 500,
+    "n_observations": 2998,
+    "odds_ratio_ci_high": 1.2883074336286702,
+    "odds_ratio_ci_low": 1.177720361693054,
+    "odds_ratio_per_2x_context": 1.2317734762142785,
+    "outcome": "inaccurate",
+    "p_value": 8.655597418634078e-20,
+    "predictor": "context_log2",
+    "robust_se": 0.022895476020445695,
+    "working_correlation": "Exchangeable"
+  }
+}

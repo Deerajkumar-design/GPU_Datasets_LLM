@@ -33,3 +33,19 @@ data/production/
 
 # Generated JSON Schemas are derived from schemas.py; regenerate with `export-schemas`.
 data/schemas/
+
+# --- Public-repo additions ---
+
+# Local virtualenvs (any suffix).
+.venv*/
+
+# Claude Code machine-local permissions.
+.claude/settings.local.json
+
+# Generated instance payloads are huge (128K-token context strings) and are
+# regenerable with `build-contexts`. Only the current-generation dataset is
+# published, via Git LFS (see .gitattributes).
+data/**/instances.jsonl
+data/**/instances.parquet
+!data/preproduction_llama32_3b_500f_6ctx_v1/instances.jsonl
+!data/preproduction_llama32_3b_500f_6ctx_v1/instances.parquet

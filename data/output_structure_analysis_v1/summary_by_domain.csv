@@ -1,0 +1,5 @@
+domain,total_responses,valid_json,valid_json_pct,recoverable_malformed_json,recoverable_malformed_json_pct,usable_responses,usable_responses_pct,format_failures,format_failure_pct,hit_512_token_limit,hit_512_token_limit_pct,repetitive_degenerate_outputs,repetitive_degenerate_outputs_pct,mean_generated_tokens,median_generated_tokens
+SEC,125,47,37.6,0,0.0,47,37.6,78,62.4,75,60.0,73,58.4,327.056,512
+FDA,125,42,33.6,0,0.0,42,33.6,83,66.4,83,66.4,79,63.2,356.48,512
+CLINICAL_TRIALS,125,52,41.6,0,0.0,52,41.6,73,58.4,73,58.4,71,56.8,314.704,512
+FRED,125,71,56.8,0,0.0,71,56.8,54,43.2,53,42.4,53,42.4,238.448,42

@@ -1,0 +1,143 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Cutting Knowledge Date: December 2023
+Today Date: 09 Aug 2026
+
+Answer using only the supplied records.
+
+Identify records matching the exact entity, period, version, field, unit, product, route, dosage form, arm, series, or other conditions requested by the question.
+
+If the supplied records do not contain sufficient evidence to answer the question, return INSUFFICIENT_EVIDENCE.
+
+Do not infer or fabricate missing information.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+KNOWLEDGE RECORDS:
+
+<RECORD id="R7F365C7DCB" source="OPENFDA_DRUGSFDA">
+entity: LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE (ANDA077732, product 002) [ANDA077732/002]
+field: Strength of HYDROCHLOROTHIAZIDE [product.active_ingredient_strength]
+unit: MG
+value: 12.5MG
+dosage_form: TABLET
+route: ORAL
+sponsor: HIKMA
+</RECORD>
+<RECORD id="R90C57DFC0E" source="OPENFDA_DRUGSFDA">
+entity: LEVOTHYROXINE SODIUM (ANDA207588, product 002) [ANDA207588/002]
+field: Strength of LEVOTHYROXINE SODIUM [product.active_ingredient_strength]
+unit: MG
+value: 0.05MG **See current Annual Edition, 1.8 Description of Special Situations, Levothyroxine Sodium
+dosage_form: TABLET
+route: ORAL
+sponsor: WATSON LABS TEVA
+</RECORD>
+<RECORD id="R141295CF91" source="OPENFDA_DRUGSFDA">
+entity: AMOXICILLIN (ANDA065021, product 001) [ANDA065021/001]
+field: Dosage form [product.dosage_form]
+value: TABLET, CHEWABLE
+dosage_form: TABLET, CHEWABLE
+route: ORAL
+sponsor: SUN PHARM INDS LTD
+</RECORD>
+<RECORD id="R4B84EDC0AF" source="OPENFDA_DRUGSFDA">
+entity: GABAPENTIN (ANDA211330, product 001) [ANDA211330/001]
+field: Brand name [product.brand_name]
+value: GABAPENTIN
+dosage_form: SOLUTION
+route: ORAL
+sponsor: PAI HOLDINGS PHARM
+</RECORD>
+<RECORD id="RD72C73BF3D" source="OPENFDA_DRUGSFDA">
+entity: AMOXICILLIN (ANDA065228, product 002) [ANDA065228/002]
+field: Strength of AMOXICILLIN [product.active_ingredient_strength]
+unit: MG
+value: 875MG
+dosage_form: TABLET
+route: ORAL
+sponsor: SANDOZ
+</RECORD>
+<RECORD id="REE2F94954D" source="OPENFDA_DRUGSFDA">
+entity: SERTRALINE HYDROCHLORIDE (ANDA077663, product 003) [ANDA077663/003]
+field: Reference standard [product.reference_standard]
+value: No
+dosage_form: TABLET
+route: ORAL
+sponsor: HERITAGE PHARMA AVET
+</RECORD>
+<RECORD id="RA70B126912" source="OPENFDA_DRUGSFDA">
+entity: AMLODIPINE BESYLATE AND ATORVASTATIN CALCIUM (ANDA203874, product 011) [ANDA203874/011]
+field: Brand name [product.brand_name]
+value: AMLODIPINE BESYLATE AND ATORVA
+
+...[middle omitted in compact preview; exact prompt is reproducible from context/question/prompt hash]...
+
+ON
+route: ORAL
+sponsor: GLAXOSMITHKLINE
+</RECORD>
+<RECORD id="RC84A6C5371" source="OPENFDA_DRUGSFDA">
+entity: AMOXICILLIN (ANDA062067, product 002) [ANDA062067/002]
+field: Reference listed drug [product.reference_drug]
+value: No
+dosage_form: CAPSULE
+route: ORAL
+sponsor: MYLAN
+</RECORD>
+<RECORD id="R932483078E" source="OPENFDA_DRUGSFDA">
+entity: WARFARIN SODIUM (ANDA086118, product 001) [ANDA086118/001]
+field: Strength of WARFARIN SODIUM [product.active_ingredient_strength]
+unit: MG
+value: 7.5MG
+dosage_form: TABLET
+route: ORAL
+sponsor: WATSON LABS
+</RECORD>
+<RECORD id="R8484910B44" source="OPENFDA_DRUGSFDA">
+entity: CIPROFLOXACIN HYDROCHLORIDE (ANDA075928, product 001) [ANDA075928/001]
+field: Strength of CIPROFLOXACIN HYDROCHLORIDE [product.active_ingredient_strength]
+unit: %
+value: EQ 0.3% BASE
+dosage_form: SOLUTION/DROPS
+route: OPHTHALMIC
+sponsor: RUBICON RESEARCH
+</RECORD>
+<RECORD id="RBB33DF5209" source="OPENFDA_DRUGSFDA">
+entity: OMEPRAZOLE (ANDA075410, product 001) [ANDA075410/001]
+field: Reference listed drug [product.reference_drug]
+value: No
+dosage_form: CAPSULE, DELAYED REL PELLETS
+route: ORAL
+sponsor: LANNETT CO INC
+</RECORD>
+<RECORD id="RD56AC9A7F7" source="OPENFDA_DRUGSFDA">
+entity: ACETAMINOPHEN AND IBUPROFEN (ANDA216999, product 001) [ANDA216999/001]
+field: Brand name [product.brand_name]
+value: ACETAMINOPHEN AND IBUPROFEN
+dosage_form: TABLET
+route: ORAL
+sponsor: BIONPHARMA
+</RECORD>
+<RECORD id="R3F3DC0A6DD" source="OPENFDA_DRUGSFDA">
+entity: ZEGERID (NDA021636, product 001) [NDA021636/001]
+field: Strength of SODIUM BICARBONATE [product.active_ingredient_strength]
+unit: G
+value: 1.68GM/PACKET **Federal Register determination that product was not discontinued or withdrawn for safety or effectiveness reasons**
+dosage_form: FOR SUSPENSION
+route: ORAL
+sponsor: SALIX
+</RECORD>
+
+TARGET QUESTION:
+
+Using only the Drugs@FDA records supplied in the context, what is the listed strength of OMEPRAZOLE in product number 003 under FDA application ANDA091352 (dosage form CAPSULE, DELAYED REL PELLETS, route ORAL)? Report the strength string exactly as recorded.
+
+OUTPUT FORMAT:
+
+Return exactly one JSON object with this schema:
+{"selected_evidence":["R..."],"answer":"...","insufficient_evidence":false}
+
+For insufficient evidence, use:
+{"selected_evidence":[],"answer":"INSUFFICIENT_EVIDENCE","insufficient_evidence":true}
+
+Use only model-facing record IDs from the supplied records. Do not include reasoning.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+

@@ -1,0 +1,299 @@
+<RECORD id="R8B4BC9B6D7" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Minimum eligible age [eligibility.minimum_age]
+value: 21 Years
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>
+<RECORD id="RD6B4AFD848" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Studied condition [study.condition]
+value: Atrial Fibrillation
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>
+<RECORD id="R8D8F9B36C2" source="CLINICALTRIALS_GOV_V2">
+entity: A Research Study of a New Medicine NNC0113-6856 in Healthy Males [NCT05521256]
+field: Arm group type: NNC0113-6856 (Oral Cohort) [arm.type]
+value: EXPERIMENTAL
+version: lastupdate:2025-12-31
+arm: NNC0113-6856 (Oral Cohort)
+status: COMPLETED
+</RECORD>
+<RECORD id="RFD04FA106B" source="CLINICALTRIALS_GOV_V2">
+entity: Bioequivalence Study of Combination Tablets of Saxagliptin / Dapagliflozin / Metformin XR (Extended-release) and Dapagliflozin / Metformin XR Relative to Individual Components in Healthy Subjects [NCT03138356]
+field: Arm group type: Cohort 2 Treatment D [arm.type]
+value: EXPERIMENTAL
+version: lastupdate:2017-12-07
+arm: Cohort 2 Treatment D
+status: COMPLETED
+</RECORD>
+<RECORD id="RFC219C3ACB" source="CLINICALTRIALS_GOV_V2">
+entity: A Phase III Randomized Trial of Metformin vs Placebo in Early Stage Breast Cancer [NCT01101438]
+field: Intervention: placebo [intervention.type]
+value: OTHER
+version: lastupdate:2023-09-13
+intervention: placebo
+status: COMPLETED
+</RECORD>
+<RECORD id="R538CEF812C" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Study phase [study.phase]
+value: NA
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>
+<RECORD id="R2B3792AFFA" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Accepts healthy volunteers [eligibility.healthy_volunteers]
+value: No
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>
+<RECORD id="RFA2DBBC290" source="CLINICALTRIALS_GOV_V2">
+entity: Lantus Versus Levemir Treat-To-Target [NCT00405418]
+field: Arm group type: 1 [arm.type]
+value: EXPERIMENTAL
+version: lastupdate:2009-09-15
+arm: 1
+status: COMPLETED
+</RECORD>
+<RECORD id="R42BE609E24" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Secondary outcome timeframe: Frequency of major bleeding or clinically relevant non-major bleeding at 90 days [outcome.secondary.timeframe]
+value: 90 days
+version: lastupdate:2018-10-31
+outcome: Frequency of major bleeding or clinically relevant non-major bleeding at 90 days
+status: COMPLETED
+</RECORD>
+<RECORD id="R5DB3B62EE0" source="CLINICALTRIALS_GOV_V2">
+entity: Prevention of Recurrent Ulcer Bleeding in High-risk Aspirin Users Who Are Not Infected With Helicobacter Pylori [NCT01274767]
+field: Study start date [study.start_date]
+period: 1995
+value: 1995-01
+version: lastupdate:2017-04-24
+status: COMPLETED
+</RECORD>
+<RECORD id="RF48C834DAD" source="CLINICALTRIALS_GOV_V2">
+entity: Efficacy and Safety of Liraglutide Versus Sulphonylurea Both in Combination With Metformin During Ramadan in Subjects With Type 2 Diabetes [NCT01917656]
+field: Intervention: sulphonylurea [intervention.type]
+value: DRUG
+version: lastupdate:2017-08-24
+intervention: sulphonylurea
+status: COMPLETED
+</RECORD>
+<RECORD id="R1DED09FB40" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Last update posted date [study.last_update_posted_date]
+period: 2018
+value: 2018-10-31
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>
+<RECORD id="R574FDB39EB" source="CLINICALTRIALS_GOV_V2">
+entity: Pegylated Interferon Alfa-2a Salvage Therapy in High Risk Polycythemia Vera (PV) or Essential Thrombocythemia (ET) [NCT01259817]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 135.0
+version: lastupdate:2017-01-11
+status: COMPLETED
+</RECORD>
+<RECORD id="RDD1362FBD8" source="CLINICALTRIALS_GOV_V2">
+entity: Study to Evaluate Ibrutinib Combination Therapy in Patients With Selected Gastrointestinal and Genitourinary Tumors [NCT02599324]
+field: Overall recruitment status [study.overall_status]
+value: COMPLETED
+version: lastupdate:2023-11-18
+status: COMPLETED
+</RECORD>
+<RECORD id="REE2A18A6DD" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Secondary outcome timeframe: Frequency of all cause mortality at 90 days [outcome.secondary.timeframe]
+value: 90 days
+version: lastupdate:2018-10-31
+outcome: Frequency of all cause mortality at 90 days
+status: COMPLETED
+</RECORD>
+<RECORD id="R40AB15CD7E" source="CLINICALTRIALS_GOV_V2">
+entity: Dose Proportionality Study About Amaryl M Slow Release (SR) 1/500 mg [NCT00934323]
+field: Arm group type: TR sequential group [arm.type]
+value: EXPERIMENTAL
+version: lastupdate:2009-07-08
+arm: TR sequential group
+status: COMPLETED
+</RECORD>
+<RECORD id="R585CF4CE80" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Eligible sex [eligibility.sex]
+value: ALL
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>
+<RECORD id="R8EDC07B790" source="CLINICALTRIALS_GOV_V2">
+entity: Dose-confirmatory Bridging Study in Total Knee Replacement [NCT01206972]
+field: Arm group type: Arm 2 [arm.type]
+value: EXPERIMENTAL
+version: lastupdate:2017-01-18
+arm: Arm 2
+status: COMPLETED
+</RECORD>
+<RECORD id="RAE44578168" source="CLINICALTRIALS_GOV_V2">
+entity: Rivaroxaban vs. Warfarin for Post Cardiac Surgery Atrial Fibrillation [NCT03702582]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 100.0
+version: lastupdate:2026-05-19
+status: COMPLETED
+</RECORD>
+<RECORD id="R3AC176F900" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Overall recruitment status [study.overall_status]
+value: COMPLETED
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>
+<RECORD id="RF02BCD1D05" source="CLINICALTRIALS_GOV_V2">
+entity: Early Invasive Versus Conservative Therapy in Women With an Acute Coronary Syndrome [NCT02357212]
+field: Number of arm groups [arms.count]
+unit: arms
+value: 2.0
+version: lastupdate:2015-02-16
+status: COMPLETED
+</RECORD>
+<RECORD id="R4074174DCD" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Arm group type: Control Group [arm.type]
+value: NO_INTERVENTION
+version: lastupdate:2018-10-31
+arm: Control Group
+status: COMPLETED
+</RECORD>
+<RECORD id="RA3769F1405" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Study completion date [study.completion_date]
+period: 2018
+value: 2018-09
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>
+<RECORD id="RC726AF8E29" source="CLINICALTRIALS_GOV_V2">
+entity: Influence of ABCB1 Polymorphisms on Plasma Concentrations of New Oral Anticoagulants in Case of Serious Adverse Events [NCT02103101]
+field: Primary purpose [design.primary_purpose]
+value: DIAGNOSTIC
+version: lastupdate:2018-07-18
+status: COMPLETED
+</RECORD>
+<RECORD id="R2126029739" source="CLINICALTRIALS_GOV_V2">
+entity: A Trial Investigating the Pharmacodynamics of BC Combo THDB0207 Compared With Humalog® Mix25 and Simultaneous Injections of Humalog® and Lantus® in Healthy Chinese Volunteers [NCT05373186]
+field: Allocation [design.allocation]
+value: RANDOMIZED
+version: lastupdate:2023-10-12
+status: COMPLETED
+</RECORD>
+<RECORD id="R04CFFD2B41" source="CLINICALTRIALS_GOV_V2">
+entity: Prevention of Intraoperative Bleeding and Postoperative Swelling in Orthognathic Surgery Through the Use of Tranexamic Acid [NCT02229292]
+field: Accepts healthy volunteers [eligibility.healthy_volunteers]
+value: Yes
+version: lastupdate:2017-03-10
+status: COMPLETED
+</RECORD>
+<RECORD id="R54E9E1DA7A" source="CLINICALTRIALS_GOV_V2">
+entity: A Study in Participants With Type 2 Diabetes Mellitus [NCT01468987]
+field: Number of arm groups [arms.count]
+unit: arms
+value: 2.0
+version: lastupdate:2018-04-17
+status: COMPLETED
+</RECORD>
+<RECORD id="RE8A386EFEE" source="CLINICALTRIALS_GOV_V2">
+entity: An Efficacy and Safety Study for Rivaroxaban in Patients With Acute Coronary Syndrome [NCT00809965]
+field: Arm group type: Rivaroxaban 2.5 mg bid [arm.type]
+value: EXPERIMENTAL
+version: lastupdate:2014-09-17
+arm: Rivaroxaban 2.5 mg bid
+status: COMPLETED
+</RECORD>
+<RECORD id="R380A22A595" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Study type [study.study_type]
+value: INTERVENTIONAL
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>
+<RECORD id="R16EED40407" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Secondary outcome timeframe: Frequency of acute myocardial infarction at 90 days [outcome.secondary.timeframe]
+value: 90 days
+version: lastupdate:2018-10-31
+outcome: Frequency of acute myocardial infarction at 90 days
+status: COMPLETED
+</RECORD>
+<RECORD id="R7FEDF18B6F" source="CLINICALTRIALS_GOV_V2">
+entity: Belgian Real Life Non-interventional Study (NIS) in Patients Treated With Xarelto Following an Acute Deep Vein Thrombosis (DVT) [NCT01855100]
+field: Study completion date [study.completion_date]
+period: 2014
+value: 2014-12
+version: lastupdate:2017-01-18
+status: COMPLETED
+</RECORD>
+<RECORD id="RC629152030" source="CLINICALTRIALS_GOV_V2">
+entity: A Study to Evaluate the Drug-Drug Interaction Between Enlicitide Decanoate (MK-0616) and Atorvastatin in Healthy Adult Participants (MK-0616-024) [NCT06699355]
+field: Arm group type: Atorvastatin [arm.type]
+value: EXPERIMENTAL
+version: lastupdate:2024-11-21
+arm: Atorvastatin
+status: COMPLETED
+</RECORD>
+<RECORD id="R17A8505D0C" source="CLINICALTRIALS_GOV_V2">
+entity: Assessment of the Incidence of Hemorrhagic and Ischemic Events in Post-angioplasty in Anticoagulated Coronary Patients with Atrial Fibrillation [NCT05068414]
+field: Secondary outcome timeframe: Occurrence of peripheral embolism [outcome.secondary.timeframe]
+value: Month 1
+version: lastupdate:2025-02-13
+outcome: Occurrence of peripheral embolism
+status: COMPLETED
+</RECORD>
+<RECORD id="R3134EFF5A7" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 458.0
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>
+<RECORD id="R3617C03287" source="CLINICALTRIALS_GOV_V2">
+entity: PK/PD Biosimilarity Study of Gan & Lee Insulin Glargine Injection vs.US & EU Lantus® in Type 1 Diabetes Mellitus Patients [NCT04236895]
+field: Study start date [study.start_date]
+period: 2018
+value: 2018-07-10
+version: lastupdate:2020-01-22
+status: COMPLETED
+</RECORD>
+<RECORD id="RD4FE31E4B4" source="CLINICALTRIALS_GOV_V2">
+entity: A Clinical Trial Comparing Glycaemic Control and Safety of Insulin Degludec/Liraglutide (IDegLira) Versus Insulin Glargine (IGlar) as add-on Therapy to SGLT2i in Subjects With Type 2 Diabetes Mellitus [NCT02773368]
+field: Accepts healthy volunteers [eligibility.healthy_volunteers]
+value: No
+version: lastupdate:2020-08-11
+status: COMPLETED
+</RECORD>
+<RECORD id="R33F989CF4C" source="CLINICALTRIALS_GOV_V2">
+entity: Tranexamic Acid for The Management of Bleeding Gastrointestinal Angioectasias [NCT07125508]
+field: Studied condition [study.condition]
+value: Anemia
+version: lastupdate:2025-08-15
+status: COMPLETED
+</RECORD>
+<RECORD id="R361137F239" source="CLINICALTRIALS_GOV_V2">
+entity: The Effects of an Nutritional Intervention on PD-1 ICI in NSCLC [NCT05902260]
+field: Arm group type: Nutritional intervention [arm.type]
+value: EXPERIMENTAL
+version: lastupdate:2024-09-19
+arm: Nutritional intervention
+status: COMPLETED
+</RECORD>
+<RECORD id="R1EC759F469" source="CLINICALTRIALS_GOV_V2">
+entity: Electronic Alerts for Stroke Prevention in Patients With Atrial Fibrillation or Atrial Flutter [NCT02339493]
+field: Study start date [study.start_date]
+period: 2016
+value: 2016-05
+version: lastupdate:2018-10-31
+status: COMPLETED
+</RECORD>

@@ -1,0 +1,266 @@
+{
+  "exploratory_accuracy_by_question_type": {
+    "coefficient_context_log2": -0.3695906197775119,
+    "converged": true,
+    "formula": "answer_correct_int ~ context_log2 * C(question_type)",
+    "method": "GEE logistic regression clustered by question_family_id with exchangeable working correlation",
+    "n_families": 100,
+    "n_observations": 500,
+    "odds_ratio_95_ci": [
+      0.4915064305911015,
+      0.9715126553142192
+    ],
+    "odds_ratio_per_context_doubling": 0.6910171615000419,
+    "p_value_context_log2": 0.03348416734075524,
+    "p_values": {
+      "C(question_type)[T.ENTITY_UNIT_BINDING]": 0.21505676164655618,
+      "C(question_type)[T.RETRIEVAL_CALCULATION]": 7.59530714254017e-07,
+      "C(question_type)[T.TEMPORAL_VERSION]": 0.5857656610549433,
+      "C(question_type)[T.UNANSWERABLE]": 0.05233514547680472,
+      "Intercept": 0.0002556450568397807,
+      "context_log2": 0.03348416734075524,
+      "context_log2:C(question_type)[T.ENTITY_UNIT_BINDING]": 0.9639505712535206,
+      "context_log2:C(question_type)[T.RETRIEVAL_CALCULATION]": 0.28964302215726023,
+      "context_log2:C(question_type)[T.TEMPORAL_VERSION]": 0.0818507533675826,
+      "context_log2:C(question_type)[T.UNANSWERABLE]": 0.5225337675882098
+    },
+    "params": {
+      "C(question_type)[T.ENTITY_UNIT_BINDING]": -0.874070215286914,
+      "C(question_type)[T.RETRIEVAL_CALCULATION]": -4.133123293156286,
+      "C(question_type)[T.TEMPORAL_VERSION]": 0.45171088639018825,
+      "C(question_type)[T.UNANSWERABLE]": -1.4722449898446903,
+      "Intercept": 1.9369146392097296,
+      "context_log2": -0.3695906197775119,
+      "context_log2:C(question_type)[T.ENTITY_UNIT_BINDING]": -0.010171671606142085,
+      "context_log2:C(question_type)[T.RETRIEVAL_CALCULATION]": 0.330173541958964,
+      "context_log2:C(question_type)[T.TEMPORAL_VERSION]": -0.5142299305032462,
+      "context_log2:C(question_type)[T.UNANSWERABLE]": -0.13315099122642335
+    },
+    "standard_error_context_log2": 0.17382443697274447,
+    "standard_errors": {
+      "C(question_type)[T.ENTITY_UNIT_BINDING]": 0.7050203945752387,
+      "C(question_type)[T.RETRIEVAL_CALCULATION]": 0.835736068339899,
+      "C(question_type)[T.TEMPORAL_VERSION]": 0.8288541666531909,
+      "C(question_type)[T.UNANSWERABLE]": 0.7587457672792146,
+      "Intercept": 0.5297127828882574,
+      "context_log2": 0.17382443697274447,
+      "context_log2:C(question_type)[T.ENTITY_UNIT_BINDING]": 0.22505370488733673,
+      "context_log2:C(question_type)[T.RETRIEVAL_CALCULATION]": 0.311806559598893,
+      "context_log2:C(question_type)[T.TEMPORAL_VERSION]": 0.29552644850527077,
+      "context_log2:C(question_type)[T.UNANSWERABLE]": 0.20822914008712734
+    },
+    "status": "fit_completed"
+  },
+  "exploratory_hallucination_by_domain": {
+    "coefficient_context_log2": -0.01637971272670097,
+    "converged": true,
+    "formula": "hallucination_int ~ context_log2 * C(domain)",
+    "method": "GEE logistic regression clustered by question_family_id with exchangeable working correlation",
+    "n_families": 100,
+    "n_observations": 500,
+    "odds_ratio_95_ci": [
+      0.9311040814277669,
+      1.0393804216347746
+    ],
+    "odds_ratio_per_context_doubling": 0.9837537053247891,
+    "p_value_context_log2": 0.5594525021917206,
+    "p_values": {
+      "C(domain)[T.FDA]": 0.6091587347350818,
+      "C(domain)[T.FRED]": 0.09207452016954269,
+      "C(domain)[T.SEC]": 0.17076832580207912,
+      "Intercept": 0.4801193487391605,
+      "context_log2": 0.5594525021917206,
+      "context_log2:C(domain)[T.FDA]": 0.6310950171365072,
+      "context_log2:C(domain)[T.FRED]": 0.3562608360306688,
+      "context_log2:C(domain)[T.SEC]": 0.04145800041173034
+    },
+    "params": {
+      "C(domain)[T.FDA]": 0.29026771069826884,
+      "C(domain)[T.FRED]": -1.1060688346482772,
+      "C(domain)[T.SEC]": -0.8881876820304484,
+      "Intercept": -0.2736923470070825,
+      "context_log2": -0.01637971272670097,
+      "context_log2:C(domain)[T.FDA]": -0.04789619983606474,
+      "context_log2:C(domain)[T.FRED]": 0.12647558087547234,
+      "context_log2:C(domain)[T.SEC]": 0.25160650345383956
+    },
+    "standard_error_context_log2": 0.02806403605226572,
+    "standard_errors": {
+      "C(domain)[T.FDA]": 0.5677334007664383,
+      "C(domain)[T.FRED]": 0.6565941988280889,
+      "C(domain)[T.SEC]": 0.648435613728352,
+      "Intercept": 0.3876054824913532,
+      "context_log2": 0.02806403605226572,
+      "context_log2:C(domain)[T.FDA]": 0.09974506229343691,
+      "context_log2:C(domain)[T.FRED]": 0.1370989069409975,
+      "context_log2:C(domain)[T.SEC]": 0.12340184437272574
+    },
+    "status": "fit_completed"
+  },
+  "exploratory_hallucination_by_question_type": {
+    "coefficient_context_log2": 0.0022795359865913603,
+    "converged": true,
+    "formula": "hallucination_int ~ context_log2 * C(question_type)",
+    "method": "GEE logistic regression clustered by question_family_id with exchangeable working correlation",
+    "n_families": 100,
+    "n_observations": 500,
+    "odds_ratio_95_ci": [
+      NaN,
+      NaN
+    ],
+    "odds_ratio_per_context_doubling": 1.0022821361040601,
+    "p_value_context_log2": NaN,
+    "p_values": {
+      "C(question_type)[T.ENTITY_UNIT_BINDING]": 0.9999478429249582,
+      "C(question_type)[T.RETRIEVAL_CALCULATION]": 0.9999300138121088,
+      "C(question_type)[T.TEMPORAL_VERSION]": 0.9999497358751674,
+      "C(question_type)[T.UNANSWERABLE]": 0.9999471097915644,
+      "Intercept": 0.9999274406494082,
+      "context_log2": NaN,
+      "context_log2:C(question_type)[T.ENTITY_UNIT_BINDING]": 0.9999887141700414,
+      "context_log2:C(question_type)[T.RETRIEVAL_CALCULATION]": 0.9999976041131667,
+      "context_log2:C(question_type)[T.TEMPORAL_VERSION]": NaN,
+      "context_log2:C(question_type)[T.UNANSWERABLE]": NaN
+    },
+    "params": {
+      "C(question_type)[T.ENTITY_UNIT_BINDING]": 30.412557866512316,
+      "C(question_type)[T.RETRIEVAL_CALCULATION]": 34.13505899551606,
+      "C(question_type)[T.TEMPORAL_VERSION]": 26.579902670525666,
+      "C(question_type)[T.UNANSWERABLE]": 32.11466953336357,
+      "Intercept": -32.588545284738046,
+      "context_log2": 0.0022795359865913603,
+      "context_log2:C(question_type)[T.ENTITY_UNIT_BINDING]": -0.5653864354036215,
+      "context_log2:C(question_type)[T.RETRIEVAL_CALCULATION]": -0.15557404145372608,
+      "context_log2:C(question_type)[T.TEMPORAL_VERSION]": 1.018307024256539,
+      "context_log2:C(question_type)[T.UNANSWERABLE]": 0.49975862367810353
+    },
+    "standard_error_context_log2": NaN,
+    "standard_errors": {
+      "C(question_type)[T.ENTITY_UNIT_BINDING]": 465242.9289697163,
+      "C(question_type)[T.RETRIEVAL_CALCULATION]": 389160.16631766316,
+      "C(question_type)[T.TEMPORAL_VERSION]": 421925.0613653348,
+      "C(question_type)[T.UNANSWERABLE]": 484471.5068277022,
+      "Intercept": 358353.4981198059,
+      "context_log2": NaN,
+      "context_log2:C(question_type)[T.ENTITY_UNIT_BINDING]": 39971.63782678049,
+      "context_log2:C(question_type)[T.RETRIEVAL_CALCULATION]": 51809.67815975319,
+      "context_log2:C(question_type)[T.TEMPORAL_VERSION]": NaN,
+      "context_log2:C(question_type)[T.UNANSWERABLE]": NaN
+    },
+    "status": "fit_completed"
+  },
+  "primary_accuracy": {
+    "coefficient_context_log2": -0.3012411451929655,
+    "converged": true,
+    "formula": "answer_correct_int ~ context_log2",
+    "method": "GEE logistic regression clustered by question_family_id with exchangeable working correlation",
+    "n_families": 100,
+    "n_observations": 500,
+    "odds_ratio_95_ci": [
+      0.658506230952262,
+      0.8313528254403081
+    ],
+    "odds_ratio_per_context_doubling": 0.7398993280657924,
+    "p_value_context_log2": 4.0572426552960356e-07,
+    "p_values": {
+      "Intercept": 0.13638047974268105,
+      "context_log2": 4.0572426552960356e-07
+    },
+    "params": {
+      "Intercept": 0.3119078089217779,
+      "context_log2": -0.3012411451929655
+    },
+    "standard_error_context_log2": 0.059460352959428774,
+    "standard_errors": {
+      "Intercept": 0.20941758064159827,
+      "context_log2": 0.059460352959428774
+    },
+    "status": "fit_completed"
+  },
+  "primary_hallucination": {
+    "coefficient_context_log2": 0.05582484427435068,
+    "converged": true,
+    "formula": "hallucination_int ~ context_log2",
+    "method": "GEE logistic regression clustered by question_family_id with exchangeable working correlation",
+    "n_families": 100,
+    "n_observations": 500,
+    "odds_ratio_95_ci": [
+      0.9651113237963389,
+      1.1585410655075543
+    ],
+    "odds_ratio_per_context_doubling": 1.0574124556692233,
+    "p_value_context_log2": 0.23094533267195827,
+    "p_values": {
+      "Intercept": 0.003272681644302527,
+      "context_log2": 0.23094533267195827
+    },
+    "params": {
+      "Intercept": -0.6452009491544882,
+      "context_log2": 0.05582484427435068
+    },
+    "standard_error_context_log2": 0.046601196677383085,
+    "standard_errors": {
+      "Intercept": 0.2193895101073748,
+      "context_log2": 0.046601196677383085
+    },
+    "status": "fit_completed"
+  },
+  "sensitivity_summary": {
+    "excluding_manual_adjudication_hallucination": {
+      "coefficient_context_log2": 0.056022228565230085,
+      "converged": true,
+      "formula": "hallucination_int ~ context_log2",
+      "method": "GEE logistic regression clustered by question_family_id with exchangeable working correlation",
+      "n_families": 100,
+      "n_observations": 499,
+      "odds_ratio_95_ci": [
+        0.9652097449569962,
+        1.158880329862811
+      ],
+      "odds_ratio_per_context_doubling": 1.0576211928769976,
+      "p_value_context_log2": 0.22978673389237347,
+      "p_values": {
+        "Intercept": 0.0032721741594274223,
+        "context_log2": 0.22978673389237347
+      },
+      "params": {
+        "Intercept": -0.6451969009173656,
+        "context_log2": 0.056022228565230085
+      },
+      "standard_error_context_log2": 0.04664987635493777,
+      "standard_errors": {
+        "Intercept": 0.21938455001811022,
+        "context_log2": 0.04664987635493777
+      },
+      "status": "fit_completed"
+    },
+    "excluding_unanswerable_hallucination": {
+      "coefficient_context_log2": -0.053117494178870926,
+      "converged": true,
+      "formula": "hallucination_int ~ context_log2",
+      "method": "GEE logistic regression clustered by question_family_id with exchangeable working correlation",
+      "n_families": 80,
+      "n_observations": 400,
+      "odds_ratio_95_ci": [
+        0.867814382957227,
+        1.0361816262156123
+      ],
+      "odds_ratio_per_context_doubling": 0.9482685898973547,
+      "p_value_context_log2": 0.24029741571581253,
+      "p_values": {
+        "Intercept": 0.0026305485356156056,
+        "context_log2": 0.24029741571581253
+      },
+      "params": {
+        "Intercept": -0.7184042525275394,
+        "context_log2": -0.053117494178870926
+      },
+      "standard_error_context_log2": 0.04523549321802715,
+      "standard_errors": {
+        "Intercept": 0.23883869805337965,
+        "context_log2": 0.04523549321802715
+      },
+      "status": "fit_completed"
+    }
+  }
+}

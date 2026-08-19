@@ -111,9 +111,10 @@ class FREDDirectObservation(QuestionTemplate):
         for rec in pool:
             if len(out) >= n:
                 break
-            if (rec.entity_id, rec.concept) in seen:
+            key = (rec.entity_id, rec.concept, rec.period)
+            if key in seen:
                 continue
-            seen.add((rec.entity_id, rec.concept))
+            seen.add(key)
             value = float(rec.value_numeric)
             decimals = None if float(value).is_integer() else 3
             question = (
@@ -121,7 +122,7 @@ class FREDDirectObservation(QuestionTemplate):
                 f"most recent vintage report for {_describe(rec)}, for the observation dated "
                 f"{rec.period}"
                 + (f" ({_period_phrase(rec)})" if _period_phrase(rec) else "")
-                + "? Report the currently published figure, not a value from an earlier vintage."
+                + "? Report the currently published figure exactly."
             )
             out.append(self.make_answerable(
                 ctx,
@@ -151,21 +152,29 @@ class FREDPercentChange(QuestionTemplate):
         for r in _observations(ctx.records):
             by_series[(r.entity_id, r.concept)].append(r)
         rng = ctx.rng(self.template_id)
-        keys = sorted(k for k, v in by_series.items() if len(v) >= 24)
-        rng.shuffle(keys)
+        pairs: List[Tuple[NormalizedRecord, NormalizedRecord]] = []
+        for key, values in by_series.items():
+            series = sorted(values, key=lambda r: r.period)
+            recent = [r for r in series if r.period >= "2015-01-01"] or series[-24:]
+            if len(recent) < 2:
+                continue
+            for idx in range(1, len(recent)):
+                cur = recent[idx]
+                prev = next((r for r in reversed(recent[:idx]) if r.value_numeric), None)
+                if prev is not None and prev.value_numeric:
+                    pairs.append((cur, prev))
+        pairs.sort(key=lambda pair: (pair[0].concept, pair[0].period, pair[1].period))
+        rng.shuffle(pairs)
 
         out: List[QuestionFamily] = []
-        for key in keys:
+        seen: set = set()
+        for cur, prev in pairs:
             if len(out) >= n:
                 break
-            series = sorted(by_series[key], key=lambda r: r.period)
-            recent = [r for r in series if r.period >= "2015-01-01"] or series[-24:]
-            if len(recent) < 13:
+            key = (cur.concept, cur.period, prev.period)
+            if key in seen:
                 continue
-            cur = recent[-1]
-            prev = next((r for r in reversed(recent[:-1]) if r.value_numeric), None)
-            if prev is None or not prev.value_numeric:
-                continue
+            seen.add(key)
             try:
                 spec = build_calculation(
                     CalculationOp.GROWTH_PERCENT, {"current": cur, "previous": prev},
@@ -218,14 +227,22 @@ class FREDSpread(QuestionTemplate):
         rng = ctx.rng(self.template_id)
         out: List[QuestionFamily] = []
 
+        pair_periods: List[Tuple[str, str, str]] = []
         for a_id, b_id in self.PAIRS:
-            if len(out) >= n:
-                break
             shared = sorted({p for (c, p) in idx if c == a_id} & {p for (c, p) in idx if c == b_id})
             shared = [p for p in shared if p >= "2015-01-01"]
-            if not shared:
+            pair_periods.extend((a_id, b_id, period) for period in shared)
+        pair_periods.sort()
+        rng.shuffle(pair_periods)
+
+        seen: set = set()
+        for a_id, b_id, period in pair_periods:
+            if len(out) >= n:
+                break
+            key = (a_id, b_id, period)
+            if key in seen:
                 continue
-            period = shared[rng.randrange(len(shared))]
+            seen.add(key)
             a, b = idx[(a_id, period)], idx[(b_id, period)]
             if a.unit != b.unit or a.value_numeric == b.value_numeric:
                 continue  # a spread across different units would be meaningless
@@ -293,28 +310,21 @@ class FREDVintageSelection(QuestionTemplate):
             if len(out) >= n:
                 break
             series_id, period = key
-            if series_id in seen:
+            if key in seen:
                 continue
             vintages = sorted(by_obs[key], key=lambda r: str(r.metadata.get("vintage_date")))
             target = vintages[0]  # the earliest vintage: the value as first published here
             others = [v for v in vintages[1:] if v.value_numeric != target.value_numeric]
             if not others:
                 continue
-            seen.add(series_id)
+            seen.add(key)
             value = float(target.value_numeric)
             vdate = target.metadata.get("vintage_date")
-            later = ", ".join(
-                f"{v.metadata.get('vintage_date')} → {v.value_numeric}" for v in others[:3]
-            )
             cur = latest.get(key)
             question = (
                 f"Using only the FRED/ALFRED records supplied in the context, what value did "
                 f"{_describe(target)} show for the observation dated {period} **as of the vintage "
-                f"date {vdate}** — that is, the value as it stood in the {vdate} release, not as "
-                f"later revised? This observation was subsequently revised (later vintages report "
-                f"{later}"
-                + (f"; the current vintage reports {cur.value_numeric}" if cur else "")
-                + "), and those revised values are not the answer."
+                f"date {vdate}**? Report the value from that vintage exactly."
             )
             out.append(self.make_answerable(
                 ctx,
@@ -378,18 +388,10 @@ class FREDBasisBinding(QuestionTemplate):
             seen.add((target.entity_id, target.concept))
             value = float(target.value_numeric)
             decimals = None if float(value).is_integer() else 3
-            foils = "; ".join(
-                f"{o.concept} ({o.metadata.get('seasonal_adjustment')}, {o.unit}"
-                + (f", {o.entity_name}" if o.entity_id != target.entity_id else "")
-                + ")"
-                for o in others[:4]
-            )
             question = (
                 f"Using only the FRED records supplied in the context, report the value of "
                 f"{_describe(target)} for {target.entity_name} on the observation dated {period}. "
-                f"The context also contains other series measuring the same quantity on that same "
-                f"date — {foils} — which differ in seasonal adjustment, unit basis or geography; "
-                f"those are not the answer. Report the value for series {target.concept} exactly."
+                f"Report the value for series {target.concept} exactly."
             )
             out.append(self.make_answerable(
                 ctx,
@@ -440,7 +442,8 @@ class FREDUnanswerableMissingObservation(QuestionTemplate):
         for rec in head:
             if len(out) >= n:
                 break
-            if rec.concept in seen:
+            key = (rec.concept, rec.period)
+            if key in seen:
                 continue
             # Absence must be provable: no valued record may share these coordinates.
             present = [
@@ -450,13 +453,10 @@ class FREDUnanswerableMissingObservation(QuestionTemplate):
             ]
             if present:
                 continue
-            seen.add(rec.concept)
+            seen.add(key)
             question = (
                 f"Using only the FRED records supplied in the context, what value does FRED "
-                f"report for {_describe(rec)}, for the observation dated {rec.period}? If the "
-                f"supplied records contain no observation for that series on that date, state "
-                f"that the evidence is insufficient rather than interpolating from neighbouring "
-                f"dates or from a related series."
+                f"report for {_describe(rec)}, for the observation dated {rec.period}?"
             )
             spec = UnanswerableSpec(
                 reason_code="NO_OBSERVATION_PUBLISHED",

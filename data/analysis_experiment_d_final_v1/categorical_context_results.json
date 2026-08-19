@@ -1,0 +1,11 @@
+{
+  "grounded_inaccuracy": {
+    "omnibus_p_value": 1.4361815886262747e-11
+  },
+  "hallucinatory_inaccuracy": {
+    "omnibus_p_value": 0.0008622441113300155
+  },
+  "inaccurate": {
+    "omnibus_p_value": 2.602192127074164e-18
+  }
+}

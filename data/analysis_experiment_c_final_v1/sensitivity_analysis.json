@@ -1,0 +1,120 @@
+{
+  "all_rows_hallucination": {
+    "coefficient_context_log2": 0.05582484427435068,
+    "converged": true,
+    "formula": "hallucination_int ~ context_log2",
+    "method": "GEE logistic regression clustered by question_family_id with exchangeable working correlation",
+    "n_families": 100,
+    "n_observations": 500,
+    "odds_ratio_95_ci": [
+      0.9651113237963389,
+      1.1585410655075543
+    ],
+    "odds_ratio_per_context_doubling": 1.0574124556692233,
+    "p_value_context_log2": 0.23094533267195827,
+    "p_values": {
+      "Intercept": 0.003272681644302527,
+      "context_log2": 0.23094533267195827
+    },
+    "params": {
+      "Intercept": -0.6452009491544882,
+      "context_log2": 0.05582484427435068
+    },
+    "standard_error_context_log2": 0.046601196677383085,
+    "standard_errors": {
+      "Intercept": 0.2193895101073748,
+      "context_log2": 0.046601196677383085
+    },
+    "status": "fit_completed"
+  },
+  "categorical_context_hallucination": {
+    "coefficient_context_log2": null,
+    "converged": true,
+    "formula": "hallucination_int ~ C(context_length_label)",
+    "method": "GEE logistic regression clustered by question_family_id with exchangeable working correlation",
+    "n_families": 100,
+    "n_observations": 500,
+    "odds_ratio_95_ci": null,
+    "odds_ratio_per_context_doubling": null,
+    "p_value_context_log2": null,
+    "p_values": {
+      "C(context_length_label)[T.16K]": 0.4785438529025403,
+      "C(context_length_label)[T.32K]": 0.5925671321129635,
+      "C(context_length_label)[T.64K]": 0.10499789747162411,
+      "C(context_length_label)[T.8K]": 0.1760762041429177,
+      "Intercept": 0.0031508055314081085
+    },
+    "params": {
+      "C(context_length_label)[T.16K]": -0.08914584951826278,
+      "C(context_length_label)[T.32K]": 0.08682239465891496,
+      "C(context_length_label)[T.64K]": 0.296265816143172,
+      "C(context_length_label)[T.8K]": 0.12949098308751741,
+      "Intercept": -0.6190392084062238
+    },
+    "standard_error_context_log2": null,
+    "standard_errors": {
+      "C(context_length_label)[T.16K]": 0.12579734118355454,
+      "C(context_length_label)[T.32K]": 0.162248567800056,
+      "C(context_length_label)[T.64K]": 0.1827569354074049,
+      "C(context_length_label)[T.8K]": 0.09571112092259021,
+      "Intercept": 0.20965696734438316
+    },
+    "status": "fit_completed"
+  },
+  "excluding_manual_adjudication_hallucination": {
+    "coefficient_context_log2": 0.056022228565230085,
+    "converged": true,
+    "formula": "hallucination_int ~ context_log2",
+    "method": "GEE logistic regression clustered by question_family_id with exchangeable working correlation",
+    "n_families": 100,
+    "n_observations": 499,
+    "odds_ratio_95_ci": [
+      0.9652097449569962,
+      1.158880329862811
+    ],
+    "odds_ratio_per_context_doubling": 1.0576211928769976,
+    "p_value_context_log2": 0.22978673389237347,
+    "p_values": {
+      "Intercept": 0.0032721741594274223,
+      "context_log2": 0.22978673389237347
+    },
+    "params": {
+      "Intercept": -0.6451969009173656,
+      "context_log2": 0.056022228565230085
+    },
+    "standard_error_context_log2": 0.04664987635493777,
+    "standard_errors": {
+      "Intercept": 0.21938455001811022,
+      "context_log2": 0.04664987635493777
+    },
+    "status": "fit_completed"
+  },
+  "excluding_unanswerable_hallucination": {
+    "coefficient_context_log2": -0.053117494178870926,
+    "converged": true,
+    "formula": "hallucination_int ~ context_log2",
+    "method": "GEE logistic regression clustered by question_family_id with exchangeable working correlation",
+    "n_families": 80,
+    "n_observations": 400,
+    "odds_ratio_95_ci": [
+      0.867814382957227,
+      1.0361816262156123
+    ],
+    "odds_ratio_per_context_doubling": 0.9482685898973547,
+    "p_value_context_log2": 0.24029741571581253,
+    "p_values": {
+      "Intercept": 0.0026305485356156056,
+      "context_log2": 0.24029741571581253
+    },
+    "params": {
+      "Intercept": -0.7184042525275394,
+      "context_log2": -0.053117494178870926
+    },
+    "standard_error_context_log2": 0.04523549321802715,
+    "standard_errors": {
+      "Intercept": 0.23883869805337965,
+      "context_log2": 0.04523549321802715
+    },
+    "status": "fit_completed"
+  }
+}

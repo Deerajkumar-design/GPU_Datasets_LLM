@@ -1,0 +1,117 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Cutting Knowledge Date: December 2023
+Today Date: 09 Aug 2026
+
+Answer using only the supplied records.
+
+Identify records matching the exact entity, period, version, field, unit, product, route, dosage form, arm, series, or other conditions requested by the question.
+
+If the supplied records do not contain sufficient evidence to answer the question, return INSUFFICIENT_EVIDENCE.
+
+Do not infer or fabricate missing information.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+KNOWLEDGE RECORDS:
+
+<RECORD id="R4CAF6D7814" source="CLINICALTRIALS_GOV_V2">
+entity: A Phase III Study of BMS-512148 (Dapagliflozin) in Asian Patients With Type 2 Diabetes Who Are Not Well Controlled With Diet and Exercise [NCT01095653]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 1179.0
+version: lastupdate:2017-02-06
+status: COMPLETED
+</RECORD>
+<RECORD id="RABD9B0732F" source="CLINICALTRIALS_GOV_V2">
+entity: Efficacy and Safety of Rivaroxaban in Acute Non-neoplastic Portal Vein Thrombosis in HCV [NCT03201367]
+field: Primary purpose [design.primary_purpose]
+value: TREATMENT
+version: lastupdate:2017-06-28
+status: COMPLETED
+</RECORD>
+<RECORD id="R31E4197048" source="CLINICALTRIALS_GOV_V2">
+entity: MK-3475/BCG in High Risk Superficial Bladder Cancer [NCT02324582]
+field: Primary outcome timeframe: Number of Participants With Grade 3, 4, and 5 Treatment Related Adverse Events [outcome.primary.timeframe]
+value: change from baseline to 23 weeks
+version: lastupdate:2024-09-03
+outcome: Number of Participants With Grade 3, 4, and 5 Treatment Related Adverse Events
+status: COMPLETED
+</RECORD>
+<RECORD id="R0040611ECC" source="CLINICALTRIALS_GOV_V2">
+entity: Rivaroxaban vs. Warfarin for Post Cardiac Surgery Atrial Fibrillation [NCT03702582]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 100.0
+version: lastupdate:2026-05-19
+status: COMPLETED
+</RECORD>
+<RECORD id="RCE61291D30" source="CLINICALTRIALS_GOV_V2">
+entity: A Study of Ixekizumab (LY2439821) in Participants Aged ≥18 Years With Moderate-to-Severe Plaque or Active Psoriatic Arthritis in India [NCT05855967]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 250.0
+version: lastupdate:2025-08-22
+status: COMPLETED
+</RECORD>
+<RECORD id="R2CCFC05085" source="CLINICALTRIALS_GOV_V2">
+entity: Study to Understand the Genetics of the Acute Response to Metformin and Glipizide in Humans [NCT01762046]
+field: 
+
+...[middle omitted in compact preview; exact prompt is reproducible from context/question/prompt hash]...
+
+
+status: COMPLETED
+</RECORD>
+<RECORD id="RA2778875FA" source="CLINICALTRIALS_GOV_V2">
+entity: An Oral, Direct Factor Xa Inhibitor, BAY59-7939, for Prophylaxis Against Venous Thromboembolism After Total Knee Replacement: a Dose-Ranging Study [NCT00402467]
+field: Study phase [study.phase]
+value: PHASE2
+version: lastupdate:2014-12-23
+status: COMPLETED
+</RECORD>
+<RECORD id="RF235757431" source="CLINICALTRIALS_GOV_V2">
+entity: The ADDITION Study. Intensive Treatment in People With Screen Detected Diabetes in Primary Care. [NCT00237549]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 3057.0
+version: lastupdate:2013-12-20
+status: COMPLETED
+</RECORD>
+<RECORD id="R32D76C69CD" source="CLINICALTRIALS_GOV_V2">
+entity: A Study to Evaluate the Efficacy and Safety of Rivaroxaban Venous Thromboembolism (VTE) Prophylaxis in Ambulatory Cancer Participants [NCT02555878]
+field: Arm group type: Placebo [arm.type]
+value: EXPERIMENTAL
+version: lastupdate:2019-09-12
+arm: Placebo
+status: COMPLETED
+</RECORD>
+<RECORD id="RD611E00514" source="CLINICALTRIALS_GOV_V2">
+entity: Does Tranexamic Acid Reduce the Need for Blood Transfusions in Patients Undergoing Hip Fracture Surgery? [NCT01714336]
+field: Secondary outcome timeframe: Number of Participants With Myocardial Infarction (MI) Diagnosis [outcome.secondary.timeframe]
+value: Within 6 months of surgery
+version: lastupdate:2018-11-14
+outcome: Number of Participants With Myocardial Infarction (MI) Diagnosis
+status: COMPLETED
+</RECORD>
+<RECORD id="R469DFE2F26" source="CLINICALTRIALS_GOV_V2">
+entity: A Study Exploring Two Treatment Strategies in Patients With Atrial Fibrillation Who Undergo Catheter Ablation Therapy [NCT01729871]
+field: Enrollment (participants) [enrollment.count]
+unit: participants
+value: 253.0
+version: lastupdate:2017-03-06
+status: COMPLETED
+</RECORD>
+
+TARGET QUESTION:
+
+Using only the ClinicalTrials.gov records supplied in the context, subtract the enrollment count of trial NCT03800927 from the enrollment count of trial NCT03656445. Report the difference as an integer number of participants.
+
+OUTPUT FORMAT:
+
+Return exactly one JSON object with this schema:
+{"selected_evidence":["R..."],"answer":"...","insufficient_evidence":false}
+
+For insufficient evidence, use:
+{"selected_evidence":[],"answer":"INSUFFICIENT_EVIDENCE","insufficient_evidence":true}
+
+Use only model-facing record IDs from the supplied records. Do not include reasoning.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
