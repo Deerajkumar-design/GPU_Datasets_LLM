@@ -10,7 +10,10 @@ import os
 import platform
 import random
 import re
-import resource
+try:
+    import resource
+except ImportError:
+    resource = None
 import subprocess
 import sys
 import time
@@ -21,7 +24,6 @@ from pathlib import Path
 from typing import Any, Sequence
 
 import torch
-from huggingface_hub import HfApi
 from transformers import AutoConfig, AutoModelForCausalLM, AutoTokenizer
 
 from longctx_dataset.config import git_commit
@@ -32,7 +34,7 @@ from longctx_dataset.schemas import Instance
 from longctx_dataset.storage.io import iter_jsonl, write_json
 
 
-DATASET_DIR = Path("data/preproduction_llama32_3b_500f_6ctx_v1")
+DATASET_DIR = Path(os.environ.get("B200_DATASET_DIR", "data/preproduction_llama32_3b_500f_6ctx_v1"))
 EXPECTED_DATASET_HASH = "dc2c4194dedb090198e6883735257908ce274bebc8611b40d958dbd026aa1fe6"
 MODEL_ID = "Qwen/Qwen3.5-2B"
 MODEL_REVISION = "15852e8c16360a2fea060d615a32b45270f8a8fc"
@@ -43,7 +45,7 @@ TEMPLATE_DATE = "09 Aug 2026"
 MAX_NEW_TOKENS = 128
 EXECUTION_SEED = 20260812
 RUN_ID = "qwen35_2b_500f_6ctx_v1"
-OUT_DIR = Path("data/inference_qwen35_2b_500f_6ctx_v1")
+OUT_DIR = Path(os.environ.get("B200_QWEN_OUT_DIR", "data/inference_qwen35_2b_500f_6ctx_v1"))
 CONTEXT_LABELS = ["4K", "8K", "16K", "32K", "64K", "82K"]
 GENERATION_SETTINGS = {
     "do_sample": False,
@@ -75,12 +77,11 @@ def sha256_file(path: Path) -> str:
 
 def dataset_hash() -> str:
     h = hashlib.sha256()
-    for path in [DATASET_DIR / "question_families.jsonl", DATASET_DIR / "instances.jsonl"]:
-        h.update(path.as_posix().encode("utf-8"))
+    for name in ("question_families.jsonl", "instances.jsonl"):
+        path = DATASET_DIR / name
+        h.update(f"data/preproduction_llama32_3b_500f_6ctx_v1/{name}".encode("utf-8"))
         h.update(b"\0")
-        with path.open("rb") as handle:
-            for chunk in iter(lambda: handle.read(1024 * 1024), b""):
-                h.update(chunk)
+        h.update(path.read_bytes().replace(b"\r\n", b"\n"))
         h.update(b"\0")
     return h.hexdigest()
 
@@ -161,7 +162,7 @@ def gpu_metadata() -> dict[str, Any]:
 
 
 def ram_metadata() -> dict[str, Any]:
-    meta = {"process_peak_rss_kib": resource.getrusage(resource.RUSAGE_SELF).ru_maxrss}
+    meta = {"process_peak_rss_kib": resource.getrusage(resource.RUSAGE_SELF).ru_maxrss if resource else None}
     try:
         import psutil
 
@@ -211,21 +212,25 @@ def verify_dataset(instances: Sequence[Instance]) -> dict[str, Any]:
 
 
 def resolve_model_revision() -> str:
-    try:
-        return HfApi().model_info(MODEL_ID, revision="main").sha
-    except Exception:
-        return MODEL_REVISION
+    cfg = AutoConfig.from_pretrained(
+        MODEL_ID,
+        revision=MODEL_REVISION,
+        local_files_only=True,
+        trust_remote_code=False,
+    )
+    return getattr(cfg, "_commit_hash", None) or MODEL_REVISION
 
 
 def load_model_and_tokenizer() -> tuple[Any, Any, Any, str, dict[str, Any]]:
     resolved = resolve_model_revision()
     if resolved != MODEL_REVISION:
         raise SystemExit(f"Qwen revision drift: resolved {resolved}, expected {MODEL_REVISION}")
-    tok = AutoTokenizer.from_pretrained(MODEL_ID, revision=MODEL_REVISION, trust_remote_code=False)
-    hf_cfg = AutoConfig.from_pretrained(MODEL_ID, revision=MODEL_REVISION, trust_remote_code=False)
+    tok = AutoTokenizer.from_pretrained(MODEL_ID, revision=MODEL_REVISION, local_files_only=True, trust_remote_code=False)
+    hf_cfg = AutoConfig.from_pretrained(MODEL_ID, revision=MODEL_REVISION, local_files_only=True, trust_remote_code=False)
     model = AutoModelForCausalLM.from_pretrained(
         MODEL_ID,
         revision=MODEL_REVISION,
+        local_files_only=True,
         dtype=torch.bfloat16,
         use_safetensors=True,
         trust_remote_code=False,
@@ -462,6 +467,11 @@ def completed_ids(results_path: Path, failures_path: Path) -> set[str]:
 
 
 def verify_prompt_budget(instances: Sequence[Instance], renderer: QwenPromptRenderer, out_dir: Path, model_limit: int | None) -> dict[str, Any]:
+    reference_path = Path(__file__).resolve().parents[1] / "data" / "inference_qwen35_2b_500f_6ctx_v1" / "results.jsonl"
+    reference_tokens = {
+        row["instance_id"]: int(row["input_tokens"])
+        for row in iter_jsonl(reference_path)
+    } if reference_path.exists() else {}
     rows = []
     for idx, inst in enumerate(instances, 1):
         ids = renderer.render_token_ids(context=inst.context, question=inst.question)
@@ -470,6 +480,8 @@ def verify_prompt_budget(instances: Sequence[Instance], renderer: QwenPromptRend
             "context_length_label": inst.context_length_label,
             "source_llama_rendered_input_tokens": inst.rendered_input_tokens_actual,
             "qwen_rendered_input_tokens": len(ids),
+            "rtx4090_rendered_input_tokens": reference_tokens.get(inst.instance_id),
+            "matches_rtx4090": reference_tokens.get(inst.instance_id) == len(ids),
             "fits_model_limit": (not model_limit) or (len(ids) + MAX_NEW_TOKENS <= model_limit),
         })
         if idx % 250 == 0:
@@ -480,6 +492,8 @@ def verify_prompt_budget(instances: Sequence[Instance], renderer: QwenPromptRend
         "instances": len(rows),
         "model_context_limit": model_limit,
         "overflow_count": sum(not r["fits_model_limit"] for r in rows),
+        "rtx4090_reference_count": len(reference_tokens),
+        "rtx4090_token_mismatch_count": sum(not r["matches_rtx4090"] for r in rows),
         "max_rendered_input_tokens": max(r["qwen_rendered_input_tokens"] for r in rows),
         "by_context": token_count_stats(rows),
     }
@@ -714,6 +728,7 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--mode", choices=["preflight", "smoke", "full"], default="full")
     parser.add_argument("--resume", action="store_true")
+    parser.add_argument("--smoke-families", type=int, default=int(os.environ.get("B200_SMOKE_FAMILIES", "2")))
     args = parser.parse_args()
 
     out_dir = OUT_DIR if args.mode == "full" else OUT_DIR / args.mode
@@ -734,16 +749,25 @@ def main() -> int:
     renderer = QwenPromptRenderer(tok, load_evaluation_prompt())
     model_limit = model_meta.get("model_context_limit")
     budget = verify_prompt_budget(instances, renderer, out_dir, model_limit)
-    if budget["overflow_count"]:
+    if budget["overflow_count"] or budget["rtx4090_token_mismatch_count"]:
         raise SystemExit(f"Qwen prompt budget verification failed: {budget}")
 
     runner_hash = sha256_file(Path(__file__))
     write_environment(out_dir, model_revision, gate, runner_hash, model_meta, renderer)
     write_json(out_dir / "warmup.json", warmup(model, tok))
 
-    order = build_execution_order(instances, args.mode)
+    if args.mode == "smoke":
+        family_ids = list(dict.fromkeys(inst.question_family_id for inst in instances))[:args.smoke_families]
+        selected = [inst for inst in instances if inst.question_family_id in set(family_ids)]
+        order = [{"execution_order_index": idx, "instance_id": inst.instance_id} for idx, inst in enumerate(selected)]
+    elif args.mode == "preflight":
+        selected = [next(inst for inst in instances if inst.context_length_label == "4K")]
+        order = [{"execution_order_index": 0, "instance_id": selected[0].instance_id}]
+    else:
+        order = build_execution_order(instances, args.mode)
     write_json(out_dir / "execution_order.json", {"seed": EXECUTION_SEED, "mode": args.mode, "context_lengths": CONTEXT_LABELS, "order": order})
-    write_json(out_dir / "run_manifest.json", {
+    manifest_path = out_dir / "run_manifest.json"
+    manifest = {
         "run_id": RUN_ID,
         "mode": args.mode,
         "dataset_path": str(DATASET_DIR / "instances.jsonl"),
@@ -766,7 +790,18 @@ def main() -> int:
         "started_at": utc_now(),
         "runner_code_hash": runner_hash,
         "model_metadata": model_meta,
-    })
+    }
+    if manifest_path.exists() and args.resume:
+        previous = json.loads(manifest_path.read_text(encoding="utf-8"))
+        frozen_keys = (
+            "dataset_hash", "model_id", "model_revision", "prompt_hash",
+            "generation_settings", "runner_code_hash",
+        )
+        drift = [key for key in frozen_keys if previous.get(key) != manifest.get(key)]
+        if drift:
+            raise SystemExit(f"resume metadata mismatch: {drift}")
+    if not manifest_path.exists():
+        write_json(manifest_path, manifest)
 
     start = time.perf_counter()
     run_instances(model, tok, renderer, {inst.instance_id: inst for inst in instances}, order, model_revision, out_dir / "results.jsonl", out_dir / "failures.jsonl", model_limit, args.resume)

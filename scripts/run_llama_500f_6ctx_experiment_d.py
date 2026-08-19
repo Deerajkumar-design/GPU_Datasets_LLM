@@ -8,7 +8,10 @@ import os
 import platform
 import random
 import re
-import resource
+try:
+    import resource
+except ImportError:
+    resource = None
 import statistics
 import subprocess
 import sys
@@ -32,7 +35,7 @@ from longctx_dataset.schemas import Instance
 from longctx_dataset.storage.io import iter_jsonl, write_json
 
 
-DATASET_DIR = Path("data/preproduction_llama32_3b_500f_6ctx_v1")
+DATASET_DIR = Path(os.environ.get("B200_DATASET_DIR", "data/preproduction_llama32_3b_500f_6ctx_v1"))
 CONFIG_PATH = "config/preproduction_llama32_3b_500f_6ctx_v1.yaml"
 EXPECTED_DATASET_HASH = "dc2c4194dedb090198e6883735257908ce274bebc8611b40d958dbd026aa1fe6"
 MODEL_ID = "meta-llama/Llama-3.2-3B-Instruct"
@@ -45,7 +48,7 @@ TEMPLATE_DATE = "09 Aug 2026"
 MAX_NEW_TOKENS = 128
 EXECUTION_SEED = 20260811
 RUN_ID = "llama32_3b_500f_6ctx_v1"
-OUT_DIR = Path("data/inference_llama32_3b_500f_6ctx_v1")
+OUT_DIR = Path(os.environ.get("B200_LLAMA_OUT_DIR", "data/inference_llama32_3b_500f_6ctx_v1"))
 CONTEXT_LABELS = ["4K", "8K", "16K", "32K", "64K", "82K"]
 GENERATION_SETTINGS = {
     "do_sample": False,
@@ -77,12 +80,11 @@ def sha256_file(path: Path) -> str:
 
 def dataset_hash() -> str:
     h = hashlib.sha256()
-    for path in [DATASET_DIR / "question_families.jsonl", DATASET_DIR / "instances.jsonl"]:
-        h.update(path.as_posix().encode("utf-8"))
+    for name in ("question_families.jsonl", "instances.jsonl"):
+        path = DATASET_DIR / name
+        h.update(f"data/preproduction_llama32_3b_500f_6ctx_v1/{name}".encode("utf-8"))
         h.update(b"\0")
-        with path.open("rb") as handle:
-            for chunk in iter(lambda: handle.read(1024 * 1024), b""):
-                h.update(chunk)
+        h.update(path.read_bytes().replace(b"\r\n", b"\n"))
         h.update(b"\0")
     return h.hexdigest()
 
@@ -170,7 +172,7 @@ def gpu_metadata() -> dict[str, Any]:
 
 
 def ram_metadata() -> dict[str, Any]:
-    meta = {"process_peak_rss_kib": resource.getrusage(resource.RUSAGE_SELF).ru_maxrss}
+    meta = {"process_peak_rss_kib": resource.getrusage(resource.RUSAGE_SELF).ru_maxrss if resource else None}
     try:
         import psutil
 
@@ -448,6 +450,17 @@ def build_execution_order(instances: Sequence[Instance]) -> list[dict[str, Any]]
     return [{"execution_order_index": idx, "instance_id": inst.instance_id} for idx, inst in enumerate(rows)]
 
 
+def build_mode_order(instances: Sequence[Instance], mode: str, smoke_families: int) -> list[dict[str, Any]]:
+    if mode == "preflight":
+        selected = [next(inst for inst in instances if inst.context_length_label == "4K")]
+    elif mode == "smoke":
+        family_ids = list(dict.fromkeys(inst.question_family_id for inst in instances))[:smoke_families]
+        selected = [inst for inst in instances if inst.question_family_id in set(family_ids)]
+    else:
+        return build_execution_order(instances)
+    return [{"execution_order_index": idx, "instance_id": inst.instance_id} for idx, inst in enumerate(selected)]
+
+
 def completed_ids(results_path: Path, failures_path: Path) -> set[str]:
     ids: set[str] = set()
     for path in [results_path, failures_path]:
@@ -660,7 +673,9 @@ def summarize(result_rows: list[dict[str, Any]], failure_rows: list[dict[str, An
     return rows_by_context, structural
 
 
-def write_timing_by_instance(result_rows: list[dict[str, Any]], failure_rows: list[dict[str, Any]]) -> None:
+def write_timing_by_instance(
+    result_rows: list[dict[str, Any]], failure_rows: list[dict[str, Any]], out_dir: Path = OUT_DIR
+) -> None:
     fields = [
         "instance_id",
         "question_family_id",
@@ -679,7 +694,7 @@ def write_timing_by_instance(result_rows: list[dict[str, Any]], failure_rows: li
         "malformed_output_pattern",
     ]
     rows = [{field: row.get(field) for field in fields} for row in sorted(result_rows + failure_rows, key=lambda r: r["instance_id"])]
-    with (OUT_DIR / "timing_by_instance.csv").open("w", encoding="utf-8", newline="") as handle:
+    with (out_dir / "timing_by_instance.csv").open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=fields)
         writer.writeheader()
         writer.writerows(rows)
@@ -755,11 +770,21 @@ def integrity_report(instances: Sequence[Instance], result_rows: list[dict[str, 
 
 
 def main() -> int:
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--mode", choices=["preflight", "smoke", "full"], default="full")
+    parser.add_argument("--resume", action="store_true")
+    parser.add_argument("--smoke-families", type=int, default=int(os.environ.get("B200_SMOKE_FAMILIES", "2")))
+    args = parser.parse_args()
+    out_dir = OUT_DIR if args.mode == "full" else OUT_DIR / args.mode
+    out_dir.mkdir(parents=True, exist_ok=True)
+    if not args.resume:
+        for filename in ("results.jsonl", "failures.jsonl"):
+            if (out_dir / filename).exists():
+                raise SystemExit(f"{out_dir / filename} exists; use --resume")
     cfg = load_config(CONFIG_PATH)
     instances = load_instances(cfg)
     gate = verify_dataset(cfg, instances)
-    write_json(OUT_DIR / "pre_run_dataset_gate.json", gate)
+    write_json(out_dir / "pre_run_dataset_gate.json", gate)
     if not gate["passed"]:
         raise SystemExit(f"dataset gate failed: {gate['failures']}")
 
@@ -770,23 +795,25 @@ def main() -> int:
     if renderer.prompt_hash != PROMPT_HASH:
         raise SystemExit(f"prompt hash mismatch: {renderer.prompt_hash} != {PROMPT_HASH}")
 
-    budget = verify_prompt_budget(instances, renderer, OUT_DIR)
+    budget = verify_prompt_budget(instances, renderer, out_dir)
     if budget["mismatch_count"] or budget["overflow_82k_count"]:
         raise SystemExit(f"prompt budget verification failed: {budget}")
 
     runner_hash = sha256_file(Path(__file__))
-    write_environment(OUT_DIR, cfg, model_revision, gate, runner_hash)
-    write_json(OUT_DIR / "warmup.json", warmup(model))
+    write_environment(out_dir, cfg, model_revision, gate, runner_hash)
+    write_json(out_dir / "warmup.json", warmup(model))
 
-    order_path = OUT_DIR / "execution_order.json"
-    if order_path.exists():
+    order_path = out_dir / "execution_order.json"
+    if order_path.exists() and args.resume:
         order = json.loads(order_path.read_text(encoding="utf-8"))["order"]
     else:
-        order = build_execution_order(instances)
-        write_json(order_path, {"seed": EXECUTION_SEED, "context_lengths": CONTEXT_LABELS, "order": order})
+        order = build_mode_order(instances, args.mode, args.smoke_families)
+        write_json(order_path, {"seed": EXECUTION_SEED, "mode": args.mode, "context_lengths": CONTEXT_LABELS, "order": order})
 
-    write_json(OUT_DIR / "run_manifest.json", {
+    manifest_path = out_dir / "run_manifest.json"
+    manifest = {
         "run_id": RUN_ID,
+        "mode": args.mode,
         "dataset_path": str(DATASET_DIR / "instances.jsonl"),
         "dataset_hash": gate["dataset_hash"],
         "model_id": MODEL_ID,
@@ -803,7 +830,18 @@ def main() -> int:
         "execution_seed": EXECUTION_SEED,
         "started_at": utc_now(),
         "runner_code_hash": runner_hash,
-    })
+    }
+    if manifest_path.exists() and args.resume:
+        previous = json.loads(manifest_path.read_text(encoding="utf-8"))
+        frozen_keys = (
+            "dataset_hash", "model_id", "model_revision", "prompt_hash",
+            "generation_settings", "runner_code_hash",
+        )
+        drift = [key for key in frozen_keys if previous.get(key) != manifest.get(key)]
+        if drift:
+            raise SystemExit(f"resume metadata mismatch: {drift}")
+    if not manifest_path.exists():
+        write_json(manifest_path, manifest)
 
     start = time.perf_counter()
     oom_guard = run_instances(
@@ -813,22 +851,23 @@ def main() -> int:
         {inst.instance_id: inst for inst in instances},
         order,
         model_revision,
-        OUT_DIR / "results.jsonl",
-        OUT_DIR / "failures.jsonl",
+        out_dir / "results.jsonl",
+        out_dir / "failures.jsonl",
     )
     wall = time.perf_counter() - start
-    if not (OUT_DIR / "failures.jsonl").exists():
-        (OUT_DIR / "failures.jsonl").touch()
+    if not (out_dir / "failures.jsonl").exists():
+        (out_dir / "failures.jsonl").touch()
 
-    result_rows = list(iter_jsonl(OUT_DIR / "results.jsonl")) if (OUT_DIR / "results.jsonl").exists() else []
-    failure_rows = list(iter_jsonl(OUT_DIR / "failures.jsonl")) if (OUT_DIR / "failures.jsonl").exists() else []
+    result_rows = list(iter_jsonl(out_dir / "results.jsonl")) if (out_dir / "results.jsonl").exists() else []
+    failure_rows = list(iter_jsonl(out_dir / "failures.jsonl")) if (out_dir / "failures.jsonl").exists() else []
     timing_rows, structural = summarize(result_rows, failure_rows)
-    write_csv(OUT_DIR / "timing_by_context.csv", timing_rows)
-    write_json(OUT_DIR / "timing_summary.json", {"rows": timing_rows})
-    write_json(OUT_DIR / "structural_output_diagnostics.json", structural)
-    write_timing_by_instance(result_rows, failure_rows)
-    integrity = integrity_report(instances, result_rows, failure_rows, gate)
-    write_json(OUT_DIR / "integrity_report.json", integrity)
+    write_csv(out_dir / "timing_by_context.csv", timing_rows)
+    write_json(out_dir / "timing_summary.json", {"rows": timing_rows})
+    write_json(out_dir / "structural_output_diagnostics.json", structural)
+    write_timing_by_instance(result_rows, failure_rows, out_dir)
+    integrity_instances = instances if args.mode == "full" else [next(inst for inst in instances if inst.instance_id == row["instance_id"]) for row in order]
+    integrity = integrity_report(integrity_instances, result_rows, failure_rows, gate)
+    write_json(out_dir / "integrity_report.json", integrity)
     total_sync = sum(r.get("generation_latency_seconds") or 0 for r in result_rows)
     summary = {
         "run_id": RUN_ID,
@@ -874,7 +913,7 @@ def main() -> int:
         )
     lines.append("")
     lines.append("No grading, correctness scoring, hallucination classification, or statistical analysis was performed.")
-    (OUT_DIR / "run_summary.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    (out_dir / "run_summary.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     return 0 if integrity["passed"] else 1
 
 

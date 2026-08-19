@@ -13,7 +13,10 @@ import json
 import os
 import platform
 import random
-import resource
+try:
+    import resource
+except ImportError:  # Windows local validation; RunPod/Linux provides resource.
+    resource = None
 import subprocess
 import sys
 import time
@@ -205,7 +208,9 @@ def get_gpu_metadata() -> Dict[str, Any]:
 
 
 def get_ram_metadata() -> Dict[str, Any]:
-    meta: Dict[str, Any] = {"process_peak_rss_kib": resource.getrusage(resource.RUSAGE_SELF).ru_maxrss}
+    meta: Dict[str, Any] = {
+        "process_peak_rss_kib": resource.getrusage(resource.RUSAGE_SELF).ru_maxrss if resource else None
+    }
     try:
         import psutil  # noqa: PLC0415
         vm = psutil.virtual_memory()
