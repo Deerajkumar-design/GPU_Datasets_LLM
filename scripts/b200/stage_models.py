@@ -9,16 +9,18 @@ from pathlib import Path
 from huggingface_hub import snapshot_download
 from transformers import AutoConfig, AutoTokenizer
 
-from common import MODELS, ensure_layout, write_manifest
+from common import MODEL_CHOICES, MODELS, ensure_layout, selected_models, write_manifest
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--verify-only", action="store_true")
+    parser.add_argument("--model", choices=MODEL_CHOICES, default="all")
     args = parser.parse_args()
     layout = ensure_layout()
     records = {}
-    for name, (repo, revision) in MODELS.items():
+    for name in selected_models(args.model):
+        repo, revision = MODELS[name]
         local_dir = layout["models"] / name / revision
         if not args.verify_only:
             snapshot = Path(snapshot_download(

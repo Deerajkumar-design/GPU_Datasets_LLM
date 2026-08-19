@@ -46,6 +46,7 @@ MAX_NEW_TOKENS = 128
 EXECUTION_SEED = 20260812
 RUN_ID = "qwen35_2b_500f_6ctx_v1"
 OUT_DIR = Path(os.environ.get("B200_QWEN_OUT_DIR", "data/inference_qwen35_2b_500f_6ctx_v1"))
+MODEL_SOURCE = Path(os.environ["B200_QWEN_MODEL_PATH"]) if os.environ.get("B200_QWEN_MODEL_PATH") else MODEL_ID
 CONTEXT_LABELS = ["4K", "8K", "16K", "32K", "64K", "82K"]
 GENERATION_SETTINGS = {
     "do_sample": False,
@@ -213,8 +214,7 @@ def verify_dataset(instances: Sequence[Instance]) -> dict[str, Any]:
 
 def resolve_model_revision() -> str:
     cfg = AutoConfig.from_pretrained(
-        MODEL_ID,
-        revision=MODEL_REVISION,
+        MODEL_SOURCE,
         local_files_only=True,
         trust_remote_code=False,
     )
@@ -225,11 +225,12 @@ def load_model_and_tokenizer() -> tuple[Any, Any, Any, str, dict[str, Any]]:
     resolved = resolve_model_revision()
     if resolved != MODEL_REVISION:
         raise SystemExit(f"Qwen revision drift: resolved {resolved}, expected {MODEL_REVISION}")
-    tok = AutoTokenizer.from_pretrained(MODEL_ID, revision=MODEL_REVISION, local_files_only=True, trust_remote_code=False)
-    hf_cfg = AutoConfig.from_pretrained(MODEL_ID, revision=MODEL_REVISION, local_files_only=True, trust_remote_code=False)
+    if isinstance(MODEL_SOURCE, Path) and MODEL_SOURCE.name != MODEL_REVISION:
+        raise SystemExit(f"Qwen staged path is not pinned to {MODEL_REVISION}: {MODEL_SOURCE}")
+    tok = AutoTokenizer.from_pretrained(MODEL_SOURCE, local_files_only=True, trust_remote_code=False)
+    hf_cfg = AutoConfig.from_pretrained(MODEL_SOURCE, local_files_only=True, trust_remote_code=False)
     model = AutoModelForCausalLM.from_pretrained(
-        MODEL_ID,
-        revision=MODEL_REVISION,
+        MODEL_SOURCE,
         local_files_only=True,
         dtype=torch.bfloat16,
         use_safetensors=True,

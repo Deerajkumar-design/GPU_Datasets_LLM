@@ -16,6 +16,7 @@ MODELS = {
     "llama": ("meta-llama/Llama-3.2-3B-Instruct", "0cb88a4f764b7a12671c53f0838cd831a0843b95"),
     "qwen": ("Qwen/Qwen3.5-2B", "15852e8c16360a2fea060d615a32b45270f8a8fc"),
 }
+MODEL_CHOICES = ("llama", "qwen", "all")
 
 
 def repo_root() -> Path:
@@ -37,6 +38,38 @@ def paths() -> dict[str, Path]:
         "logs": Path(os.environ.get("B200_LOGS", root / "logs")),
         "manifests": Path(os.environ.get("B200_MANIFESTS", root / "manifests")),
     }
+
+
+def selected_models(selection: str) -> tuple[str, ...]:
+    if selection not in MODEL_CHOICES:
+        raise ValueError(f"invalid model selection {selection!r}; choose from {MODEL_CHOICES}")
+    return ("llama", "qwen") if selection == "all" else (selection,)
+
+
+def model_path(name: str, resolved: dict[str, Path] | None = None) -> Path:
+    if name not in MODELS:
+        raise ValueError(f"unknown model: {name}")
+    resolved = resolved or paths()
+    return resolved["models"] / name / MODELS[name][1]
+
+
+def output_path(name: str, resolved: dict[str, Path] | None = None) -> Path:
+    resolved = resolved or paths()
+    output_names = {
+        "llama": "inference_b200_llama32_3b_500f_6ctx_v1",
+        "qwen": "inference_b200_qwen35_2b_500f_6ctx_v1",
+    }
+    return resolved["results"] / output_names[name]
+
+
+def verify_selected_model_paths(selection: str, resolved: dict[str, Path] | None = None) -> dict[str, Path]:
+    selected = {}
+    for name in selected_models(selection):
+        path = model_path(name, resolved)
+        if not path.is_dir():
+            raise FileNotFoundError(f"{name} model is not staged at {path}")
+        selected[name] = path
+    return selected
 
 
 def normalized_sha256(path: Path) -> str:
@@ -88,6 +121,8 @@ def environment() -> dict[str, str]:
         "B200_DATASET_DIR": str(repo_root() / "data" / "preproduction_llama32_3b_500f_6ctx_v1"),
         "B200_LLAMA_OUT_DIR": str(resolved["results"] / "inference_b200_llama32_3b_500f_6ctx_v1"),
         "B200_QWEN_OUT_DIR": str(resolved["results"] / "inference_b200_qwen35_2b_500f_6ctx_v1"),
+        "B200_LLAMA_MODEL_PATH": str(model_path("llama", resolved)),
+        "B200_QWEN_MODEL_PATH": str(model_path("qwen", resolved)),
         "PYTHONPATH": str(repo_root() / "src") + os.pathsep + env.get("PYTHONPATH", ""),
     })
     return env
@@ -96,7 +131,12 @@ def environment() -> dict[str, str]:
 def write_manifest(name: str, payload: dict[str, Any]) -> Path:
     target = ensure_layout()["manifests"] / name
     payload = {"created_at": datetime.now(timezone.utc).isoformat(), **payload}
-    target.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    temporary = target.with_suffix(target.suffix + ".tmp")
+    with temporary.open("w", encoding="utf-8") as handle:
+        handle.write(json.dumps(payload, indent=2, sort_keys=True) + "\n")
+        handle.flush()
+        os.fsync(handle.fileno())
+    temporary.replace(target)
     return target
 
 
