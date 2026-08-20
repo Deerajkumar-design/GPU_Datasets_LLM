@@ -30,6 +30,15 @@ def main() -> int:
         raise SystemExit("validation manifest model selection mismatch")
     if hashes.get("model_selection") != args.model or sorted(hashes.get("models", {})) != expected_models:
         raise SystemExit("hash manifest model selection mismatch")
+    for model in expected_models:
+        report = validation["models"][model]
+        if (
+            report.get("expected") != 3000
+            or report.get("attempted") != 3000
+            or report.get("successful") != 3000
+            or report.get("runtime_failures") != 0
+        ):
+            raise SystemExit(f"{model} has not reached successful terminal completion: {report}")
     manifest = write_manifest(
         f"b200_inference_complete_{args.model}.json",
         {

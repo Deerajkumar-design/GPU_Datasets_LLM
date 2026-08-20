@@ -49,6 +49,7 @@ MAX_NEW_TOKENS = 128
 EXECUTION_SEED = 20260811
 RUN_ID = "llama32_3b_500f_6ctx_v1"
 OUT_DIR = Path(os.environ.get("B200_LLAMA_OUT_DIR", "data/inference_llama32_3b_500f_6ctx_v1"))
+MODEL_SOURCE = Path(os.environ["B200_LLAMA_MODEL_PATH"]) if os.environ.get("B200_LLAMA_MODEL_PATH") else MODEL_ID
 CONTEXT_LABELS = ["4K", "8K", "16K", "32K", "64K", "82K"]
 GENERATION_SETTINGS = {
     "do_sample": False,
@@ -231,10 +232,11 @@ def verify_dataset(cfg: Any, instances: Sequence[Instance]) -> dict[str, Any]:
 
 def load_model_and_tokenizer(cfg: Any) -> tuple[Any, Any, str]:
     tok = get_tokenizer(cfg.tokenizer)
-    hf_cfg = AutoConfig.from_pretrained(MODEL_ID, revision=MODEL_REVISION, local_files_only=True)
+    if isinstance(MODEL_SOURCE, Path) and MODEL_SOURCE.name != MODEL_REVISION:
+        raise SystemExit(f"Llama staged path is not pinned to {MODEL_REVISION}: {MODEL_SOURCE}")
+    hf_cfg = AutoConfig.from_pretrained(MODEL_SOURCE, local_files_only=True)
     model = AutoModelForCausalLM.from_pretrained(
-        MODEL_ID,
-        revision=MODEL_REVISION,
+        MODEL_SOURCE,
         local_files_only=True,
         dtype=torch.bfloat16,
         use_safetensors=True,

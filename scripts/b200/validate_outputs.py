@@ -38,7 +38,7 @@ def main() -> int:
             raise SystemExit(f"{key}: accounting failure rows={len(rows)} expected={expected}")
         if args.mode == "smoke" and {row["context_length_label"] for row in rows} != labels:
             raise SystemExit(f"{key}: smoke test did not cover all contexts")
-        if failures and args.mode != "full":
+        if failures:
             raise SystemExit(f"{key}: runtime failures: {Counter(row['status'] for row in failures)}")
         if any(not row.get("usable_answer_output") for row in successes):
             raise SystemExit(f"{key}: unusable ANSWER output")

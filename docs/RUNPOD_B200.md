@@ -43,26 +43,52 @@ Set `RUNPOD_WORKSPACE` to the Network Volume mount (`/workspace` by default):
    docker push YOUR_REGISTRY/longctx-b200:1
    ```
 
-4. Stage only the model needed now. `HF_TOKEN` is read only from the environment
-   and is never persisted by these scripts:
+4. For unattended `all` mode, stage and verify both pinned models before queueing
+   the B200. `HF_TOKEN` is read only from the environment and is never persisted:
 
    ```bash
    export RUNPOD_WORKSPACE=/workspace
    export HF_TOKEN=hf_...
-   PYTHONPATH=src python scripts/b200/stage_models.py --model qwen
+   PYTHONPATH=src python scripts/b200/stage_models.py --model all
    unset HF_TOKEN
-   HF_HUB_OFFLINE=1 PYTHONPATH=src python scripts/b200/stage_models.py --model qwen --verify-only
+   HF_HUB_OFFLINE=1 PYTHONPATH=src python scripts/b200/stage_models.py --model all --verify-only
    ```
 
-5. Confirm `manifests/staged_models.json` says `verified_offline: true` for
-   `Qwen/Qwen3.5-2B@15852e8c16360a2fea060d615a32b45270f8a8fc`.
-   Use `--model llama` or `--model all` later when staging Llama.
+5. Confirm `manifests/staged_models.json` says `verified_offline: true` for both:
+   `meta-llama/Llama-3.2-3B-Instruct@0cb88a4f764b7a12671c53f0838cd831a0843b95`
+   and `Qwen/Qwen3.5-2B@15852e8c16360a2fea060d615a32b45270f8a8fc`.
 
 ## RunPod UI
 
-Create one Secure Cloud B200 Pod using the pushed image. Attach the prepared Network
-Volume at `/workspace`; expose no ports unless SSH is needed. Set
-`RUNPOD_WORKSPACE=/workspace`. Do not set `HF_TOKEN`: inference is offline.
+For **Deploy When Available**, use:
+
+| Setting | Value |
+|---|---|
+| GPU | NVIDIA B200, one GPU |
+| Container image | `ghcr.io/deerajkumar-design/gpu_datasets_llm:2a73d0e917b3055281eb1cd67cec12fc565c3ff8` |
+| Verified image digest | `sha256:81b5049633659cf59ccd02937c1b6851546e0d20b9b87536faf012513720b418` |
+| Network Volume mount | `/workspace` |
+| Docker/Container Start Command | `bash /workspace/long-context-reliability/repo/scripts/b200/runpod_autorun.sh` |
+| `RUNPOD_WORKSPACE` | `/workspace` |
+| `RUNPOD_API_KEY` | Your RunPod API key, configured as a secret |
+
+RunPod must provide a non-empty `RUNPOD_POD_ID` to the container at runtime. The
+autorun wrapper verifies it before starting inference. Do not set `HF_TOKEN`; both
+exact model revisions are staged locally and inference forces offline Hugging Face
+mode. If the GHCR package is private, configure registry authentication in the RunPod
+template separately; do not place registry credentials in the repository or start
+command.
+
+The start command is non-interactive and does not use Codex. It records machine
+metadata and continuously tees output to:
+
+```text
+/workspace/long-context-reliability/logs/b200_autorun/
+```
+
+It runs preflight, the six-context smoke test, all 3,000 Llama instances, and all
+3,000 Qwen instances. It then validates and hashes persistent raw outputs. It does
+not run grading, statistical analysis, plots, or reports on the B200.
 
 ## First commands
 
@@ -97,21 +123,30 @@ verify `manifests/b200_inference_hashes_qwen.json` and
 `manifests/b200_inference_complete_qwen.json` exist on the Network Volume, then stop
 the B200 immediately.
 
-### Optional validated auto-stop
+### Unattended safe termination
 
-Manual stopping is the default. To request a RunPod stop only after terminal
-3,000-instance accounting, persistent validation, hashing, and completion manifests:
+The autorun path calls RunPod's Pod deletion endpoint exactly once and only after:
 
-```bash
-export RUNPOD_POD_ID="your-pod-id"
-export RUNPOD_API_KEY="your-api-key"
-./scripts/b200/run_b200_inference.sh --model qwen --auto-stop
+- preflight and smoke validation manifests pass for both models;
+- both raw output directories are readable beneath `/workspace`;
+- each model has 3,000 successful unique instance IDs and zero runtime failures;
+- both integrity reports pass and retain the pinned model revisions;
+- every recorded persistent artifact hash is recomputed successfully; and
+- the `all` completion marker exists and covers Llama and Qwen.
+
+Only then does it print `ALL GPU OUTPUTS VERIFIED ON NETWORK VOLUME` and issue:
+
+```text
+DELETE https://rest.runpod.io/v1/pods/$RUNPOD_POD_ID
 ```
 
-These values are read only from the environment and are never written to repository
-files or manifests. A preflight, smoke, inference, validation, hashing, or completion
-failure exits before the stop API can be called. If the stop request itself fails, the
-Pod remains running and the command exits non-zero.
+The API key is read from `RUNPOD_API_KEY`, never logged, and never written to a
+manifest. If any experiment or verification step fails, the wrapper prints
+`AUTOMATIC TERMINATION BLOCKED` and does not call the deletion API. If the one DELETE
+request receives no confirmed response, its outcome is recorded as unknown and the
+operator must check the RunPod console; the script never retries the destructive
+request. Rerunning the wrapper preserves partial output and uses the existing
+`--resume` behavior without duplicating completed IDs.
 
 ## CPU-only analysis
 
