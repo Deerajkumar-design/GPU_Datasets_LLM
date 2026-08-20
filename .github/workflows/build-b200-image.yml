@@ -1,0 +1,80 @@
+name: Build B200 image
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+env:
+  IMAGE_NAME: ghcr.io/deerajkumar-design/gpu_datasets_llm
+
+jobs:
+  build-validate-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Verify B200 base image
+        shell: bash
+        run: |
+          grep -Fx 'FROM nvidia/cuda:12.8.1-cudnn-runtime-ubuntu24.04' docker/Dockerfile.b200
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: docker/Dockerfile.b200
+          platforms: linux/amd64
+          load: true
+          push: false
+          tags: |
+            ${{ env.IMAGE_NAME }}:b200
+            ${{ env.IMAGE_NAME }}:${{ github.sha }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Validate pinned runtime without a GPU
+        shell: bash
+        run: |
+          docker run --rm --entrypoint python3 "${IMAGE_NAME}:b200" -c '
+          import json
+          import tokenizers
+          import torch
+          import transformers
+
+          observed = {
+              "python_works": True,
+              "torch": torch.__version__,
+              "transformers": transformers.__version__,
+              "tokenizers": tokenizers.__version__,
+              "torch_cuda_build": torch.version.cuda,
+              "cuda_backend_built": torch.backends.cuda.is_built(),
+          }
+          print(json.dumps(observed, sort_keys=True))
+          assert observed["torch"] == "2.7.1+cu128", observed
+          assert observed["transformers"] == "5.14.1", observed
+          assert observed["tokenizers"] == "0.22.2", observed
+          assert observed["torch_cuda_build"] == "12.8", observed
+          assert observed["cuda_backend_built"] is True, observed
+          '
+
+      - name: Publish validated tags
+        shell: bash
+        run: |
+          docker push "${IMAGE_NAME}:b200"
+          docker push "${IMAGE_NAME}:${GITHUB_SHA}"
