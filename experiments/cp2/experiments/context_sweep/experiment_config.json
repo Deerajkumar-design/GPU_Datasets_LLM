@@ -1,0 +1,57 @@
+{
+  "schema_version": 2,
+  "experiment_id": "qwen25_7b_cp_gpu_dataset_8k_32k_v1",
+  "source_benchmark": {
+    "name": "preproduction_llama32_3b_500f_6ctx_v1",
+    "repository": "Deerajkumar-design/GPU_Datasets_LLM",
+    "repository_commit": "b9b126a21ee3e609ff00cf5b8757668d8a16ff73",
+    "dataset_sha256": "dc2c4194dedb090198e6883735257908ce274bebc8611b40d958dbd026aa1fe6",
+    "families": 500,
+    "source_instances": 3000,
+    "selected_instances": 1500
+  },
+  "model": {
+    "repo": "Qwen/Qwen2.5-7B-Instruct-1M",
+    "revision": "e28526f7bb80e2a9c8af03b831a9af3812f18fba"
+  },
+  "hardware": {
+    "gpu_count": 3,
+    "gpu_family": "NVIDIA A100",
+    "minimum_vram_bytes_per_gpu": 80000000000
+  },
+  "software": {
+    "python": "3.12",
+    "torch": "2.12.0+cu130",
+    "transformers": "5.11",
+    "cuda": "13.0"
+  },
+  "context_labels": [
+    "8K",
+    "16K",
+    "32K"
+  ],
+  "instances_per_context": 500,
+  "max_new_tokens": 128,
+  "execution_seed": 20260812,
+  "zigzag": true,
+  "prompt": {
+    "version": "qwen25_cp_chat_v1",
+    "system_prompt_version": "evaluation_v1",
+    "template_date": "09 Aug 2026",
+    "response_format_version": "answer_only_line_v1"
+  },
+  "decoding": {
+    "strategy": "greedy",
+    "do_sample": false,
+    "num_beams": 1,
+    "batch_size": 1,
+    "dtype": "bfloat16",
+    "use_cache": false
+  },
+  "frozen_artifacts": {
+    "cp_infer.py": "e46c9440e23b7914c08d08e48961115f656ae42951a816b03aa372ffbaf7ff1e",
+    "ring_attention.py": "0a145e36a7a357e577b9494021fbcb36668159b4c1e341eb7d693891fc266e61",
+    "csrc/block_attn.cu": "446bf5999c4bf48b43a8f74ae835fee2cb96bc9b922b07a1140291e7e2aa90fa",
+    "experiments/context_sweep/evaluation_v1.txt": "7aac0f66f4faa143d3b12af18fd13eb1e1c995eff10e64f40e1bfbbba0b8f50c"
+  }
+}

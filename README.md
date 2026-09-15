@@ -530,3 +530,11 @@ Code is MIT. The *data* is not: SEC EDGAR and ClinicalTrials.gov are US public d
 openFDA is public domain but its terms note results are unvalidated, and World Bank Open
 Data is CC BY-4.0. Each normalized record and question family carries its source and
 licence note; honour them when redistributing generated datasets.
+
+## 18. Context-parallel Qwen experiment
+
+`experiments/cp2/` contains the three-A100 context-parallel Qwen 2.5 7B engine and its
+reproducible 8K/16K/32K experiment. It runs the frozen 500-family benchmark through the
+CP2 ring-attention implementation, producing 1,500 raw inference results plus timing,
+memory, validation, and hash artifacts. See
+[`experiments/cp2/experiments/context_sweep/README.md`](experiments/cp2/experiments/context_sweep/README.md).
