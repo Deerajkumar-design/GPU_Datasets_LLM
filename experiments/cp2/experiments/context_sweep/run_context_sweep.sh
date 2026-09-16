@@ -9,8 +9,9 @@ export TRANSFORMERS_OFFLINE=1
 export PYTORCH_CUDA_ALLOC_CONF="${PYTORCH_CUDA_ALLOC_CONF:-expandable_segments:True}"
 export PYTHONPATH="$SCRIPT_DIR:$REPO${PYTHONPATH:+:$PYTHONPATH}"
 
-mkdir -p "$CP_WORKSPACE/logs/qwen25_7b_cp_gpu_dataset_8k_32k_v1"
-LOG="$CP_WORKSPACE/logs/qwen25_7b_cp_gpu_dataset_8k_32k_v1/run_$(date -u +%Y%m%dT%H%M%SZ).log"
+EXPERIMENT_ID="$(python -c 'from common import load_config; print(load_config()["experiment_id"])')"
+mkdir -p "$CP_WORKSPACE/logs/$EXPERIMENT_ID"
+LOG="$CP_WORKSPACE/logs/$EXPERIMENT_ID/run_$(date -u +%Y%m%dT%H%M%SZ).log"
 exec > >(tee -a "$LOG") 2>&1
 
 echo "CONTEXT SWEEP START $(date -u +%FT%TZ)"

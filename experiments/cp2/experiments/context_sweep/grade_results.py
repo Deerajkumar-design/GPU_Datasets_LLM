@@ -31,6 +31,11 @@ def write_jsonl(path: Path, rows: list[dict]) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--gpu-datasets-repo", type=Path, required=True)
+    parser.add_argument(
+        "--dataset-dir",
+        type=Path,
+        help="Benchmark directory; defaults to <gpu-datasets-repo>/data/<configured name>",
+    )
     parser.add_argument("--results", type=Path, required=True)
     parser.add_argument("--out", type=Path, required=True)
     args = parser.parse_args()
@@ -43,7 +48,13 @@ def main() -> int:
     from longctx_dataset.grading import grade_answer_only_response
     from longctx_dataset.schemas import Instance, QuestionFamily
 
-    dataset = args.gpu_datasets_repo / "data" / config["source_benchmark"]["name"]
+    dataset = args.dataset_dir or (
+        args.gpu_datasets_repo / "data" / config["source_benchmark"]["name"]
+    )
+    for name in ("instances.jsonl", "question_families.jsonl"):
+        artifact = dataset / name
+        if not artifact.is_file():
+            raise SystemExit(f"benchmark artifact is missing: {artifact}")
     instances = {
         row["instance_id"]: Instance.model_validate(row)
         for row in read_jsonl(dataset / "instances.jsonl")
@@ -55,7 +66,9 @@ def main() -> int:
     }
     raw = read_jsonl(args.results)
     if len(raw) != len(instances) or {row["instance_id"] for row in raw} != set(instances):
-        raise SystemExit("raw result IDs do not match the frozen 1,500-instance subset")
+        raise SystemExit(
+            f"raw result IDs do not match the frozen {len(instances):,}-instance subset"
+        )
     scored = []
     for result in raw:
         instance = instances[result["instance_id"]]

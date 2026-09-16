@@ -6,6 +6,7 @@ import sys
 from pathlib import Path
 
 import pytest
+import yaml
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -24,6 +25,7 @@ def load_module(name: str, path: Path):
 common = load_module("context_sweep_common", SWEEP / "common.py")
 staging = load_module("context_sweep_staging", SWEEP / "stage_dataset.py")
 validation = load_module("context_sweep_validation", SWEEP / "validate_results.py")
+extension = load_module("context_sweep_128k_extension", SWEEP / "build_128k_dataset.py")
 
 
 def synthetic_instances(families: int = 2) -> list[dict]:
@@ -158,6 +160,17 @@ def test_launcher_runs_smoke_then_full_and_does_not_enable_bucketing():
     assert "bucket" not in launcher.lower()
 
 
+def test_64k_128k_wrappers_pin_preparation_and_launch_paths():
+    prepare = (SWEEP / "prepare_64k_128k.sh").read_text(encoding="utf-8")
+    launch = (SWEEP / "run_64k_128k.sh").read_text(encoding="utf-8")
+    assert "build_128k_dataset.py" in prepare
+    assert "stage_dataset.py\" --verify-only" in prepare
+    assert "git -C \"$REPO\" status --porcelain" in prepare
+    assert "preproduction_llama32_3b_500f_128k_v1" in launch
+    assert "CP_EXPERIMENT_CONFIG" in launch
+    assert 'exec bash "$SCRIPT_DIR/run_context_sweep.sh"' in launch
+
+
 def test_runtime_uses_answer_only_format_without_gpu_grading():
     runner = (SWEEP / "run_context_sweep.py").read_text(encoding="utf-8")
     assert "grade_answer_only_response" not in runner
@@ -181,3 +194,41 @@ def test_cp_infer_pins_model_revision_and_supports_offline_snapshot():
 def test_config_is_canonical_json():
     source = (SWEEP / "experiment_config.json").read_text(encoding="utf-8")
     assert source == json.dumps(json.loads(source), indent=2) + "\n"
+
+
+def test_external_config_supports_independent_extension(monkeypatch, tmp_path):
+    payload = common.load_config()
+    payload["experiment_id"] = "external-test"
+    external = tmp_path / "experiment.json"
+    external.write_text(json.dumps(payload), encoding="utf-8")
+    monkeypatch.setenv("CP_EXPERIMENT_CONFIG", str(external))
+    assert common.config_path() == external.resolve()
+    assert common.load_config()["experiment_id"] == "external-test"
+
+
+def test_64k_128k_template_is_unpinned_until_dataset_build():
+    template = json.loads(
+        (SWEEP / "experiment_config_64k_128k.template.json").read_text(encoding="utf-8")
+    )
+    assert template["experiment_id"] == "qwen25_7b_cp_gpu_dataset_64k_128k_v1"
+    assert template["context_labels"] == ["64K", "128K"]
+    assert template["source_benchmark"]["selected_instances"] == 1000
+    assert template["source_benchmark"]["source_instances"] == 3000
+    assert template["source_benchmark"]["dataset_sha256"] is None
+    assert template["source_benchmark"]["parent_dataset_sha256"] == (
+        "dc2c4194dedb090198e6883735257908ce274bebc8611b40d958dbd026aa1fe6"
+    )
+
+
+def test_128k_builder_derives_safe_output_config(tmp_path):
+    output = tmp_path / extension.NEW_DATASET_NAME
+    output.mkdir()
+    derived = extension.derive_pipeline_config(
+        ROOT.parents[1] / "config" / "preproduction_llama32_3b_500f_6ctx_v1.yaml",
+        output,
+    )
+    payload = yaml.safe_load(derived.read_text(encoding="utf-8"))
+    assert payload["data_root"] == str(tmp_path)
+    assert payload["output_subdir"] == extension.NEW_DATASET_NAME
+    assert payload["context"]["lengths"] == [4096, 8192, 16384, 32768, 65536, 131072]
+    assert payload["model_prompt"]["max_rendered_input_tokens"] == 131072 - 128

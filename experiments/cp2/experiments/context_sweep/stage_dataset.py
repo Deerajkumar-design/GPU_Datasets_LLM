@@ -32,8 +32,14 @@ def verify_dataset(dataset_dir: Path) -> dict:
         raise RuntimeError(f"selected instance count is {len(selected)}, expected {benchmark['selected_instances']}")
     if any(counts[label] != config["instances_per_context"] for label in config["context_labels"]):
         raise RuntimeError(f"selected context accounting mismatch: {dict(counts)}")
-    if len(selected_families) != benchmark["families"] or any(count != 3 for count in selected_families.values()):
-        raise RuntimeError("selected subset does not contain all 500 families at all three contexts")
+    expected_contexts = len(config["context_labels"])
+    if len(selected_families) != benchmark["families"] or any(
+        count != expected_contexts for count in selected_families.values()
+    ):
+        raise RuntimeError(
+            f"selected subset does not contain all {benchmark['families']} families "
+            f"at all {expected_contexts} contexts"
+        )
     return {
         "status": "PASS",
         "dataset_sha256": observed_hash,

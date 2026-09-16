@@ -40,6 +40,7 @@ def validate_rows(rows: list[dict], instances: list[dict], config: dict) -> dict
     by_id = {instance["instance_id"]: instance for instance in instances}
     expected_by_context = Counter(instance["context_length_label"] for instance in instances)
     by_context: dict[str, list[dict]] = defaultdict(list)
+    row_failures = []
     for row in rows:
         instance = by_id[row["instance_id"]]
         checks = {
@@ -65,8 +66,12 @@ def validate_rows(rows: list[dict], instances: list[dict], config: dict) -> dict
         }
         failed = [name for name, passed in checks.items() if not passed]
         if failed:
-            raise RuntimeError(f"{row['instance_id']}: validation failures: {failed}")
+            row_failures.append({"instance_id": row["instance_id"], "failed": failed})
         by_context[row["context_length_label"]].append(row)
+    if row_failures:
+        raise RuntimeError(
+            f"validation failures ({len(row_failures)} rows): {row_failures[:20]}"
+        )
 
     context_reports = {}
     for label in config["context_labels"]:

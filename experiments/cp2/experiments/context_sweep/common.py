@@ -11,7 +11,7 @@ from typing import Any
 
 HERE = Path(__file__).resolve().parent
 REPO_ROOT = HERE.parents[1]
-CONFIG_PATH = HERE / "experiment_config.json"
+DEFAULT_CONFIG_PATH = HERE / "experiment_config.json"
 RESPONSE_FORMAT_INSTRUCTIONS = """Return only one short line:
 ANSWER: <answer>
 
@@ -22,7 +22,17 @@ Do not output JSON. Do not output evidence IDs, citations, explanations, reasoni
 
 
 def load_config() -> dict[str, Any]:
-    return json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
+    return json.loads(config_path().read_text(encoding="utf-8"))
+
+
+def config_path() -> Path:
+    configured = os.environ.get("CP_EXPERIMENT_CONFIG")
+    if not configured:
+        return DEFAULT_CONFIG_PATH
+    path = Path(configured)
+    if not path.is_absolute():
+        raise RuntimeError("CP_EXPERIMENT_CONFIG must be an absolute path")
+    return path.resolve()
 
 
 def workspace_root() -> Path:
@@ -95,7 +105,7 @@ def write_manifest(name: str, payload: dict[str, Any]) -> Path:
 
 
 def config_sha256() -> str:
-    return sha256_file(CONFIG_PATH, normalize_text=True)
+    return sha256_file(config_path(), normalize_text=True)
 
 
 def evaluation_prompt() -> str:
@@ -130,7 +140,7 @@ def git_commit() -> str | None:
 
 def dataset_sha256(dataset_dir: Path) -> str:
     digest = hashlib.sha256()
-    prefix = "data/preproduction_llama32_3b_500f_6ctx_v1"
+    prefix = f"data/{dataset_dir.name}"
     for name in ("question_families.jsonl", "instances.jsonl"):
         path = dataset_dir / name
         if not path.is_file():
