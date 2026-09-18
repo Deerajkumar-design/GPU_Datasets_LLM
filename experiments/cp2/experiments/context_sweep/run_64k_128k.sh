@@ -3,7 +3,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 export CP_WORKSPACE="${CP_WORKSPACE:-/workspace/context-parallel-repro}"
-export CP_EXPERIMENT_CONFIG="$CP_WORKSPACE/datasets/preproduction_llama32_3b_500f_128k_v1/cp2_experiment_config.json"
+export CP_EXPERIMENT_CONFIG="$CP_WORKSPACE/datasets/preproduction_qwen25_7b_500f_128k_v1/cp2_experiment_config.json"
 
 if [[ ! -f "$CP_EXPERIMENT_CONFIG" ]]; then
   echo "ERROR: prepared 64K/128K configuration is missing:" >&2

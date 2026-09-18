@@ -6,7 +6,6 @@ import sys
 from pathlib import Path
 
 import pytest
-import yaml
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -18,6 +17,7 @@ def load_module(name: str, path: Path):
     spec = importlib.util.spec_from_file_location(name, path)
     assert spec and spec.loader
     module = importlib.util.module_from_spec(spec)
+    sys.modules[name] = module
     spec.loader.exec_module(module)
     return module
 
@@ -166,7 +166,8 @@ def test_64k_128k_wrappers_pin_preparation_and_launch_paths():
     assert "build_128k_dataset.py" in prepare
     assert "stage_dataset.py\" --verify-only" in prepare
     assert "git -C \"$REPO\" status --porcelain" in prepare
-    assert "preproduction_llama32_3b_500f_128k_v1" in launch
+    assert "stage_model.py" in prepare
+    assert "preproduction_qwen25_7b_500f_128k_v1" in launch
     assert "CP_EXPERIMENT_CONFIG" in launch
     assert 'exec bash "$SCRIPT_DIR/run_context_sweep.sh"' in launch
 
@@ -213,22 +214,55 @@ def test_64k_128k_template_is_unpinned_until_dataset_build():
     assert template["experiment_id"] == "qwen25_7b_cp_gpu_dataset_64k_128k_v1"
     assert template["context_labels"] == ["64K", "128K"]
     assert template["source_benchmark"]["selected_instances"] == 1000
-    assert template["source_benchmark"]["source_instances"] == 3000
+    assert template["source_benchmark"]["source_instances"] == 1000
     assert template["source_benchmark"]["dataset_sha256"] is None
     assert template["source_benchmark"]["parent_dataset_sha256"] == (
         "dc2c4194dedb090198e6883735257908ce274bebc8611b40d958dbd026aa1fe6"
     )
 
 
-def test_128k_builder_derives_safe_output_config(tmp_path):
-    output = tmp_path / extension.NEW_DATASET_NAME
-    output.mkdir()
-    derived = extension.derive_pipeline_config(
-        ROOT.parents[1] / "config" / "preproduction_llama32_3b_500f_6ctx_v1.yaml",
-        output,
+def test_128k_builder_uses_qwen_and_embedded_records():
+    assert extension.MODEL_REPO == "Qwen/Qwen2.5-7B-Instruct-1M"
+    assert extension.NEW_DATASET_NAME == "preproduction_qwen25_7b_500f_128k_v1"
+    assert extension.MIN_INPUT_TOKENS == int(128 * 1024 * 0.98)
+    assert extension.MAX_INPUT_TOKENS == 128 * 1024 - 128
+    source = (SWEEP / "build_128k_dataset.py").read_text(encoding="utf-8")
+    assert "extract_blocks" in source
+    assert "data/normalized" not in source
+    assert "meta-llama" not in source
+
+
+def test_128k_candidate_filter_prevents_answer_leakage():
+    block = extension.RecordBlock(
+        record_id="candidate",
+        display_id="RTEST",
+        domain="SEC",
+        text="<RECORD></RECORD>",
+        fields={
+            "entity_id": "entity",
+            "concept": "metric",
+            "period": "2026",
+            "unit": "USD",
+            "version": "v1",
+            "value": "42",
+        },
+        distractor=None,
     )
-    payload = yaml.safe_load(derived.read_text(encoding="utf-8"))
-    assert payload["data_root"] == str(tmp_path)
-    assert payload["output_subdir"] == extension.NEW_DATASET_NAME
-    assert payload["context"]["lengths"] == [4096, 8192, 16384, 32768, 65536, 131072]
-    assert payload["model_prompt"]["max_rendered_input_tokens"] == 131072 - 128
+    family = {
+        "answerable": True,
+        "gold_evidence_ids": ["gold"],
+        "gold_answer_normalized": 42,
+        "target_conditions": {
+            "records": [
+                {
+                    "entity_id": "entity",
+                    "concept": "metric",
+                    "period": "2026",
+                    "unit": "USD",
+                    "version": "v1",
+                }
+            ]
+        },
+        "unanswerable_spec": None,
+    }
+    assert extension.safe_candidate(block, family, set()) is False

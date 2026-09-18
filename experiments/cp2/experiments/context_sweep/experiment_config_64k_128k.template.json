@@ -2,15 +2,15 @@
   "schema_version": 3,
   "experiment_id": "qwen25_7b_cp_gpu_dataset_64k_128k_v1",
   "source_benchmark": {
-    "name": "preproduction_llama32_3b_500f_128k_v1",
+    "name": "preproduction_qwen25_7b_500f_128k_v1",
     "repository": "Deerajkumar-design/GPU_Datasets_LLM",
     "repository_commit": null,
     "dataset_sha256": null,
     "parent_name": "preproduction_llama32_3b_500f_6ctx_v1",
     "parent_dataset_sha256": "dc2c4194dedb090198e6883735257908ce274bebc8611b40d958dbd026aa1fe6",
-    "derivation": "frozen_4k_64k_plus_regenerated_128k_v1",
+    "derivation": "frozen_64k_plus_qwen_tokenized_authentic_128k_extension_v1",
     "families": 500,
-    "source_instances": 3000,
+    "source_instances": 1000,
     "selected_instances": 1000
   },
   "model": {

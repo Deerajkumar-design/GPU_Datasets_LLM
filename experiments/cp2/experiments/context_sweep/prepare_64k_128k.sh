@@ -6,9 +6,9 @@ REPO="$(cd -- "$SCRIPT_DIR/../../../.." && pwd)"
 export CP_WORKSPACE="${CP_WORKSPACE:-/workspace/context-parallel-repro}"
 
 SOURCE_DATASET="${CP_SOURCE_DATASET:-$REPO/data/preproduction_llama32_3b_500f_6ctx_v1}"
-NORMALIZED_DIR="${CP_NORMALIZED_DIR:-$REPO/data/normalized}"
-DERIVED_DATASET="$CP_WORKSPACE/datasets/preproduction_llama32_3b_500f_128k_v1"
+DERIVED_DATASET="$CP_WORKSPACE/datasets/preproduction_qwen25_7b_500f_128k_v1"
 CONFIG="$DERIVED_DATASET/cp2_experiment_config.json"
+TEMPLATE_CONFIG="$SCRIPT_DIR/experiment_config_64k_128k.template.json"
 EXPERIMENT_ID="qwen25_7b_cp_gpu_dataset_64k_128k_v1"
 
 if [[ -n "$(git -C "$REPO" status --porcelain)" ]]; then
@@ -17,20 +17,15 @@ if [[ -n "$(git -C "$REPO" status --porcelain)" ]]; then
   exit 1
 fi
 
-for name in sec.jsonl fda.jsonl clinical_trials.jsonl fred.jsonl; do
-  if [[ ! -f "$NORMALIZED_DIR/$name" ]]; then
-    echo "ERROR: missing normalized source cache: $NORMALIZED_DIR/$name" >&2
-    echo "Restore the original data/normalized cache or run fetch and normalize first." >&2
-    exit 1
-  fi
-done
-
-python -c "import pandas, pyarrow, transformers, yaml"
+python -c "import transformers"
 mkdir -p "$CP_WORKSPACE/datasets"
+
+export CP_EXPERIMENT_CONFIG="$TEMPLATE_CONFIG"
+python "$SCRIPT_DIR/stage_model.py"
+HF_HUB_OFFLINE=1 python "$SCRIPT_DIR/stage_model.py" --verify-only
 
 python "$SCRIPT_DIR/build_128k_dataset.py" \
   --source "$SOURCE_DATASET" \
-  --normalized-dir "$NORMALIZED_DIR" \
   --out "$DERIVED_DATASET"
 
 if [[ ! -f "$CONFIG" ]]; then
