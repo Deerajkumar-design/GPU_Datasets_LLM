@@ -69,6 +69,9 @@ CPU-only step using the frozen `GPU_Datasets` grader.
 
 ## 64K and 128K extension
 
+For a fresh RunPod setup, follow the canonical agent handoff document:
+[`POD_RUNBOOK.md`](POD_RUNBOOK.md). It pins every installation and stop condition.
+
 The completed `qwen25_7b_cp_gpu_dataset_8k_32k_v1` run remains frozen and unchanged.
 The additional long-context run has its own experiment ID:
 
@@ -100,11 +103,22 @@ fixed. The only model dependency is the public Qwen model/tokenizer used by CP2 
 
 ### Build the 128K benchmark on persistent storage
 
-Install the repository and Transformers:
+Create the exact CP2 environment. Do not use `requirements-b200.txt`; it pins a
+different PyTorch/CUDA stack.
 
 ```bash
 cd /workspace/long-context-reliability/repo
-python -m pip install -e '.[hf]'
+git lfs install
+git lfs pull
+conda create -n ring_atten python=3.12 -y
+conda activate ring_atten
+conda install -c nvidia cuda-toolkit=13.0 -y
+export CUDA_HOME="$CONDA_PREFIX"
+python -m pip install torch==2.12.0 \
+  --index-url https://download.pytorch.org/whl/cu130
+python -m pip install -r experiments/cp2/requirements-cp2.txt
+python -m pip install -e .
+python experiments/cp2/experiments/context_sweep/check_environment.py
 ```
 
 Build directly into the CP2 persistent workspace:
@@ -114,9 +128,11 @@ export CP_WORKSPACE=/workspace/context-parallel-repro
 bash experiments/cp2/experiments/context_sweep/prepare_64k_128k.sh
 ```
 
-The preparation wrapper stages the pinned Qwen model/tokenizer, builds all 500 extensions,
-verifies the resulting dataset, and writes the finalized config. The Git worktree must
-be clean so the manifest's repository commit contains the exact builder being executed.
+The environment check must print `PASS: CP2 SOFTWARE ENVIRONMENT`. The preparation
+wrapper repeats that check before downloading the model or building any extensions,
+then stages the pinned Qwen model/tokenizer, builds all 500 extensions, verifies the
+resulting dataset, and writes the finalized config. The Git worktree must be clean so
+the manifest's repository commit contains the exact builder being executed.
 
 ```text
 /workspace/context-parallel-repro/datasets/preproduction_qwen25_7b_500f_128k_v1/
@@ -133,6 +149,8 @@ configuration produced by the dataset build:
 
 ```bash
 export CP_WORKSPACE=/workspace/context-parallel-repro
+conda activate ring_atten
+export CUDA_HOME="$CONDA_PREFIX"
 bash experiments/cp2/experiments/context_sweep/run_64k_128k.sh
 ```
 

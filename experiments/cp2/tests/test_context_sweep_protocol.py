@@ -185,9 +185,35 @@ def test_64k_128k_wrappers_pin_preparation_and_launch_paths():
     assert "stage_dataset.py\" --verify-only" in prepare
     assert "git -C \"$REPO\" status --porcelain" in prepare
     assert "stage_model.py" in prepare
+    assert "check_environment.py" in prepare
+    assert "git lfs pull" in prepare
+    assert "30 GiB free" in prepare
     assert "preproduction_qwen25_7b_500f_128k_v1" in launch
     assert "CP_EXPERIMENT_CONFIG" in launch
     assert 'exec bash "$SCRIPT_DIR/run_context_sweep.sh"' in launch
+
+
+def test_cp2_environment_is_pinned_and_checked_before_gpu_launch():
+    requirements = (ROOT / "requirements-cp2.txt").read_text(encoding="utf-8")
+    launcher = (SWEEP / "run_context_sweep.sh").read_text(encoding="utf-8")
+    doctor = (SWEEP / "check_environment.py").read_text(encoding="utf-8")
+    assert "transformers==5.11.0" in requirements
+    assert launcher.index('check_environment.py"') < launcher.index('preflight.py"')
+    assert "torch.__version__ != expected" in doctor
+    assert 'Path(cuda_home) / "bin" / "nvcc"' in doctor
+    runbook = (SWEEP / "POD_RUNBOOK.md").read_text(encoding="utf-8")
+    assert "git lfs pull" in runbook
+    assert "torch==2.12.0" in runbook
+    assert "https://download.pytorch.org/whl/cu130" in runbook
+    assert "requirements-cp2.txt" in runbook
+    assert "COMPLETE.json" in runbook
+
+
+def test_preflight_binds_runtime_to_dataset_builder_commit():
+    source = (SWEEP / "preflight.py").read_text(encoding="utf-8")
+    assert 'config["source_benchmark"]["repository_commit"]' in source
+    assert '"status", "--porcelain"' in source
+    assert '"dataset/runtime repository commit"' in source
 
 
 def test_runtime_uses_answer_only_format_without_gpu_grading():

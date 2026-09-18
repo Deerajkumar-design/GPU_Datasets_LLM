@@ -7,7 +7,15 @@ import shutil
 import subprocess
 import sys
 
-from common import config_sha256, ensure_layout, load_config, verify_frozen_artifacts, write_manifest
+from common import (
+    REPO_ROOT,
+    config_sha256,
+    ensure_layout,
+    git_commit,
+    load_config,
+    verify_frozen_artifacts,
+    write_manifest,
+)
 from stage_dataset import verify_dataset
 
 
@@ -26,6 +34,21 @@ def main() -> int:
         import transformers
         from transformers import AutoConfig, AutoTokenizer
 
+        expected_commit = config["source_benchmark"]["repository_commit"]
+        observed_commit = git_commit()
+        status = subprocess.run(
+            ["git", "-C", str(REPO_ROOT), "status", "--porcelain"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        check("Git status command", status.returncode == 0, status.stderr.strip())
+        check("clean repository", not status.stdout.strip(), status.stdout.strip())
+        check(
+            "dataset/runtime repository commit",
+            bool(expected_commit) and observed_commit == expected_commit,
+            {"expected": expected_commit, "observed": observed_commit},
+        )
         check("frozen artifact hashes", True, verify_frozen_artifacts())
         check("frozen GPU_Datasets benchmark", True, verify_dataset(layout["dataset"]))
         check("Linux runtime", platform.system() == "Linux", platform.platform())

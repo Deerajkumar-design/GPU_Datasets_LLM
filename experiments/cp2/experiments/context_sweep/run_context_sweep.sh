@@ -4,6 +4,9 @@ set -euo pipefail
 SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 REPO="$(cd -- "$SCRIPT_DIR/../.." && pwd)"
 export CP_WORKSPACE="${CP_WORKSPACE:-/workspace/context-parallel-repro}"
+if [[ -z "${CUDA_HOME:-}" && -n "${CONDA_PREFIX:-}" && -x "$CONDA_PREFIX/bin/nvcc" ]]; then
+  export CUDA_HOME="$CONDA_PREFIX"
+fi
 export HF_HUB_OFFLINE=1
 export TRANSFORMERS_OFFLINE=1
 export PYTORCH_CUDA_ALLOC_CONF="${PYTORCH_CUDA_ALLOC_CONF:-expandable_segments:True}"
@@ -19,6 +22,7 @@ echo "repository=$REPO"
 echo "workspace=$CP_WORKSPACE"
 cd "$REPO"
 
+python "$SCRIPT_DIR/check_environment.py"
 python "$SCRIPT_DIR/preflight.py"
 torchrun --standalone --nproc_per_node=3 "$SCRIPT_DIR/run_context_sweep.py" --mode smoke
 python "$SCRIPT_DIR/validate_results.py" --mode smoke
