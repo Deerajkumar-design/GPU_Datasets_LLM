@@ -19,6 +19,8 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Iterable
 
+from common import extract_input_ids
+
 
 HERE = Path(__file__).resolve().parent
 REPOSITORY_ROOT = HERE.parents[3]
@@ -297,8 +299,8 @@ def render_input_tokens(tokenizer, evaluation_prompt: str, context: str, questio
         {"role": "system", "content": evaluation_prompt},
         {"role": "user", "content": user},
     ]
-    ids = tokenizer.apply_chat_template(messages, add_generation_prompt=True, tokenize=True)
-    return ids[0] if ids and isinstance(ids[0], list) else list(ids)
+    encoded = tokenizer.apply_chat_template(messages, add_generation_prompt=True, tokenize=True)
+    return extract_input_ids(encoded)
 
 
 def block_token_count(tokenizer, block: RecordBlock, cache: dict[str, int]) -> int:

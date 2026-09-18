@@ -24,6 +24,7 @@ from common import (
     dataset_sha256,
     ensure_layout,
     evaluation_prompt,
+    extract_input_ids,
     experiment_prompt_hash,
     expected_instance_ids,
     git_commit,
@@ -80,11 +81,10 @@ def render_input(instance: dict[str, Any]) -> tuple[list[int], str]:
         {"role": "system", "content": evaluation_prompt()},
         {"role": "user", "content": user},
     ]
-    ids = tok.apply_chat_template(messages, add_generation_prompt=True, tokenize=True)
-    if ids and isinstance(ids[0], list):
-        ids = ids[0]
+    encoded = tok.apply_chat_template(messages, add_generation_prompt=True, tokenize=True)
+    ids = extract_input_ids(encoded)
     rendered = tok.apply_chat_template(messages, add_generation_prompt=True, tokenize=False)
-    return list(ids), hashlib.sha256(rendered.encode("utf-8")).hexdigest()
+    return ids, hashlib.sha256(rendered.encode("utf-8")).hexdigest()
 
 
 def parse_answer(raw_text: str, generated_count: int) -> dict[str, Any]:

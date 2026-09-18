@@ -87,6 +87,24 @@ def test_protocol_uses_exact_gpu_datasets_subset():
     assert "question" not in config
 
 
+@pytest.mark.parametrize(
+    ("encoded", "expected"),
+    [
+        ([11, 12, 13], [11, 12, 13]),
+        ([[11, 12, 13]], [11, 12, 13]),
+        ({"input_ids": [11, 12, 13], "attention_mask": [1, 1, 1]}, [11, 12, 13]),
+        ({"input_ids": [[11, 12, 13]], "attention_mask": [[1, 1, 1]]}, [11, 12, 13]),
+    ],
+)
+def test_tokenizer_output_extracts_input_ids(encoded, expected):
+    assert common.extract_input_ids(encoded) == expected
+
+
+def test_tokenizer_output_requires_input_ids():
+    with pytest.raises(RuntimeError, match="does not contain input_ids"):
+        common.extract_input_ids({"attention_mask": [1, 1]})
+
+
 def test_protocol_pins_cp_model_and_generation():
     config = common.load_config()
     assert config["model"] == {

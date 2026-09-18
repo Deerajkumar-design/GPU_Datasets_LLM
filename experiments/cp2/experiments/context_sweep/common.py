@@ -4,6 +4,7 @@ import hashlib
 import json
 import os
 import subprocess
+from collections.abc import Mapping, Sequence
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -110,6 +111,29 @@ def config_sha256() -> str:
 
 def evaluation_prompt() -> str:
     return (HERE / "evaluation_v1.txt").read_text(encoding="utf-8")
+
+
+def extract_input_ids(encoded: Any) -> list[int]:
+    if isinstance(encoded, Mapping):
+        if "input_ids" not in encoded:
+            raise RuntimeError("tokenizer output does not contain input_ids")
+        encoded = encoded["input_ids"]
+    if hasattr(encoded, "tolist"):
+        encoded = encoded.tolist()
+    if (
+        isinstance(encoded, Sequence)
+        and not isinstance(encoded, (str, bytes))
+        and len(encoded) == 1
+        and isinstance(encoded[0], Sequence)
+        and not isinstance(encoded[0], (str, bytes))
+    ):
+        encoded = encoded[0]
+    if not isinstance(encoded, Sequence) or isinstance(encoded, (str, bytes)):
+        raise RuntimeError(f"unsupported tokenizer output type: {type(encoded).__name__}")
+    ids = list(encoded)
+    if not all(isinstance(token_id, int) and not isinstance(token_id, bool) for token_id in ids):
+        raise RuntimeError("tokenizer input_ids must be a sequence of integers")
+    return ids
 
 
 def experiment_prompt_hash() -> str:
